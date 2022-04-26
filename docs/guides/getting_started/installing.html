@@ -105,38 +105,35 @@
 <h3 id="通过-visual-studio">通过 Visual Studio</h3>
 <ol>
 <li>找到 <code>解决方案资源管理器</code> 窗口，在 Bot 项目下找到 <code>依赖项</code></li>
-<li>右键点击 <code>依赖项</code>，选择 <code>管理 NuGet 程序包</code></li>
-</ol>
-<p><img src="images/install-vs-dependencies.png" alt="img.png"></p>
-<ol>
-<li>在 <code>浏览</code> 选项卡中，搜索 <code>KaiHeiLa.Net</code></li>
-</ol>
+<li><p>右键点击 <code>依赖项</code>，选择 <code>管理 NuGet 程序包</code></p>
+<p> <img src="images/install-vs-dependencies.png" alt="img.png"></p>
+</li>
+<li><p>在 <code>浏览</code> 选项卡中，搜索 <code>KaiHeiLa.Net</code></p>
 <div class="NOTE"><h5>Note</h5><p>在正式版发布前，搜索 KaiHeiLa.Net 需勾选 <code>包括预发行版</code>，否则，该搜索结果无法展示在列表中。</p>
 </div>
-<p><img src="images/install-vs-nuget.png" alt="img.png"></p>
-<ol>
-<li>选择 <code>KaiHeiLa.Net</code>，点击 <code>安装</code></li>
+<p> <img src="images/install-vs-nuget.png" alt="img.png"></p>
+</li>
+<li><p>选择 <code>KaiHeiLa.Net</code>，点击 <code>安装</code></p>
+</li>
 </ol>
 <h3 id="通过-jetbrains-rider">通过 JetBrains Rider</h3>
 <ol>
 <li>找到 <code>Explorer</code> 窗口，在 Bot 项目下找到 <code>Dependencies</code></li>
-<li>右键点击 <code>Dependencies</code>，选择 <code>Manage NuGet Packages</code></li>
-</ol>
-<p><img src="images/install-rider-dependencies.png" alt="img.png"></p>
-<ol>
-<li>在 <code>Packages</code> 选项卡中，搜索 <code>KaiHeiLa.Net</code></li>
-</ol>
+<li><p>右键点击 <code>Dependencies</code>，选择 <code>Manage NuGet Packages</code></p>
+<p> <img src="images/install-rider-dependencies.png" alt="img.png"></p>
+</li>
+<li><p>在 <code>Packages</code> 选项卡中，搜索 <code>KaiHeiLa.Net</code></p>
 <div class="NOTE"><h5>Note</h5><p>在正式版发布前，搜索 KaiHeiLa.Net 需勾选 <code>Prerelease</code> ，否则，该搜索结果无法展示在列表中。</p>
 </div>
-<ol>
-<li>右键点击 <code>KaiHeiLa.Net</code>，点击 <code>Install KaiHeiLa.Net ...</code></li>
+</li>
+<li><p>右键点击 <code>KaiHeiLa.Net</code>，点击 <code>Install KaiHeiLa.Net ...</code></p>
+<p> <img src="images/install-rider-nuget.png" alt="img.png"></p>
+</li>
 </ol>
-<p><img src="images/install-rider-nuget.png" alt="img.png"></p>
 <h3 id="使用-visual-studio-code">使用 Visual Studio Code</h3>
 <ol>
 <li>找到 Bot 项目的 <code>*.csproj</code> 文件</li>
-<li>添加 <code>Discord.Net</code> 到 <code>*.csproj</code> 中</li>
-</ol>
+<li><p>添加 <code>Discord.Net</code> 到 <code>*.csproj</code> 中</p>
 <pre><code name="SampleProject.csproj">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
 
     &lt;!--
@@ -153,15 +150,18 @@
     &lt;/ItemGroup&gt;
 
 &lt;/Project&gt;
-</code></pre><h3 id="使用-dotnet-cli">使用 dotnet CLI</h3>
+</code></pre></li>
+</ol>
+<h3 id="使用-dotnet-cli">使用 dotnet CLI</h3>
 <ol>
 <li>启动终端</li>
 <li>导航至 Bot 项目中 <code>*.csproj</code> 文件的所在目录</li>
-<li>执行 <code>dotnet add package KaiHeiLa.Net</code></li>
-</ol>
+<li><p>执行 <code>dotnet add package KaiHeiLa.Net</code></p>
 <div class="NOTE"><h5>Note</h5><p>在正式版发布前，通过 dotnet CLI 添加 KaiHeiLa.Net 需附加 <code>--prerelease</code> 选项，
 否则，dotnet CLI 将只尝试为项目添加稳定版本的 NuGet 包。</p>
 </div>
+</li>
+</ol>
 <hr>
 <h2 id="从源代码编译">从源代码编译</h2>
 <p>要从源代码编译 KaiHeiLa.Net，请参考：</p>
