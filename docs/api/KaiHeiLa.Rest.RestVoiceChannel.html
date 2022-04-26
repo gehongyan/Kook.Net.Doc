@@ -1,0 +1,792 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RestVoiceChannel
+   | KaiHeiLa.Net Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RestVoiceChannel
+   | KaiHeiLa.Net Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="KaiHeiLa.Rest.RestVoiceChannel">
+  
+  
+  <h1 id="KaiHeiLa_Rest_RestVoiceChannel" data-uid="KaiHeiLa.Rest.RestVoiceChannel" class="text-break">Class RestVoiceChannel
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a REST-based voice channel in a guild.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="KaiHeiLa.Rest.RestEntity-1.html">RestEntity</a>&lt;<span class="xref">System.UInt64</span>&gt;</div>
+    <div class="level2"><a class="xref" href="KaiHeiLa.Rest.RestChannel.html">RestChannel</a></div>
+    <div class="level3"><a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html">RestGuildChannel</a></div>
+    <div class="level4"><span class="xref">RestVoiceChannel</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity</a>&lt;<span class="xref">System.UInt64</span>&gt;</div>
+    <div><a class="xref" href="KaiHeiLa.IUpdateable.html">IUpdateable</a></div>
+    <div><a class="xref" href="KaiHeiLa.IVoiceChannel.html">IVoiceChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.INestedChannel.html">INestedChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.IGuildChannel.html">IGuildChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.IDeletable.html">IDeletable</a></div>
+    <div><a class="xref" href="KaiHeiLa.IMentionable.html">IMentionable</a></div>
+    <div><a class="xref" href="KaiHeiLa.Rest.IRestAudioChannel.html">IRestAudioChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.IAudioChannel.html">IAudioChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.IChannel.html">IChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity</a>&lt;<span class="xref">System.UInt64</span>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_RolePermissionOverwrites">RestGuildChannel.RolePermissionOverwrites</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_UserPermissionOverwrites">RestGuildChannel.UserPermissionOverwrites</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_Type">RestGuildChannel.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_Name">RestGuildChannel.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_Position">RestGuildChannel.Position</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_GuildId">RestGuildChannel.GuildId</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_DeleteAsync_KaiHeiLa_RequestOptions_">RestGuildChannel.DeleteAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_UpdateAsync_KaiHeiLa_RequestOptions_">RestGuildChannel.UpdateAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_GetPermissionOverwrite_KaiHeiLa_IUser_">RestGuildChannel.GetPermissionOverwrite(IUser)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_GetPermissionOverwrite_KaiHeiLa_IRole_">RestGuildChannel.GetPermissionOverwrite(IRole)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_AddPermissionOverwriteAsync_KaiHeiLa_IGuildUser_KaiHeiLa_RequestOptions_">RestGuildChannel.AddPermissionOverwriteAsync(IGuildUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_AddPermissionOverwriteAsync_KaiHeiLa_IRole_KaiHeiLa_RequestOptions_">RestGuildChannel.AddPermissionOverwriteAsync(IRole, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_KaiHeiLa_IGuildUser_KaiHeiLa_RequestOptions_">RestGuildChannel.RemovePermissionOverwriteAsync(IGuildUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_KaiHeiLa_IRole_KaiHeiLa_RequestOptions_">RestGuildChannel.RemovePermissionOverwriteAsync(IRole, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_KaiHeiLa_IGuildUser_Action_KaiHeiLa_OverwritePermissions__KaiHeiLa_RequestOptions_">RestGuildChannel.ModifyPermissionOverwriteAsync(IGuildUser, Action&lt;OverwritePermissions&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_KaiHeiLa_IRole_Action_KaiHeiLa_OverwritePermissions__KaiHeiLa_RequestOptions_">RestGuildChannel.ModifyPermissionOverwriteAsync(IRole, Action&lt;OverwritePermissions&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_ToString">RestGuildChannel.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestGuildChannel.html#KaiHeiLa_Rest_RestGuildChannel_KaiHeiLa_IGuildChannel_Guild">RestGuildChannel.IGuildChannel.Guild</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestChannel.html#KaiHeiLa_Rest_RestChannel_CreateUserId">RestChannel.CreateUserId</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.RestEntity-1.html#KaiHeiLa_Rest_RestEntity_1_Id">RestEntity&lt;UInt64&gt;.Id</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="KaiHeiLa.Rest.html">KaiHeiLa.Rest</a></h6>
+  <h6><strong>Assembly</strong>: KaiHeiLa.Net.Rest.dll</h6>
+  <h5 id="KaiHeiLa_Rest_RestVoiceChannel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RestVoiceChannel : RestGuildChannel, IEntity&lt;ulong&gt;, IUpdateable, IVoiceChannel, INestedChannel, IGuildChannel, IDeletable, IMentionable, IRestAudioChannel, IAudioChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_CategoryId.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.CategoryId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L20">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_CategoryId_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.CategoryId*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_CategoryId" data-uid="KaiHeiLa.Rest.RestVoiceChannel.CategoryId">CategoryId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong? CategoryId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_CreatorId.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.CreatorId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L28">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_CreatorId_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.CreatorId*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_CreatorId" data-uid="KaiHeiLa.Rest.RestVoiceChannel.CreatorId">CreatorId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong CreatorId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_HasPassword.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.HasPassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L24">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_HasPassword_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.HasPassword*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_HasPassword" data-uid="KaiHeiLa.Rest.RestVoiceChannel.HasPassword">HasPassword</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasPassword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_IsPermissionSynced.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.IsPermissionSynced%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L26">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_IsPermissionSynced_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.IsPermissionSynced*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_IsPermissionSynced" data-uid="KaiHeiLa.Rest.RestVoiceChannel.IsPermissionSynced">IsPermissionSynced</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPermissionSynced { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_KMarkdownMention.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.KMarkdownMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L30">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_KMarkdownMention_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.KMarkdownMention*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_KMarkdownMention" data-uid="KaiHeiLa.Rest.RestVoiceChannel.KMarkdownMention">KMarkdownMention</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string KMarkdownMention { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_PlainTextMention.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.PlainTextMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L32">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_PlainTextMention_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.PlainTextMention*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_PlainTextMention" data-uid="KaiHeiLa.Rest.RestVoiceChannel.PlainTextMention">PlainTextMention</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PlainTextMention { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_ServerUrl.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.ServerUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L22">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_ServerUrl_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.ServerUrl*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_ServerUrl" data-uid="KaiHeiLa.Rest.RestVoiceChannel.ServerUrl">ServerUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ServerUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_UserLimit.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.UserLimit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L18">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_UserLimit_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.UserLimit*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_UserLimit" data-uid="KaiHeiLa.Rest.RestVoiceChannel.UserLimit">UserLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? UserLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_VoiceQuality.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.VoiceQuality%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L16">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_VoiceQuality_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.VoiceQuality*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_VoiceQuality" data-uid="KaiHeiLa.Rest.RestVoiceChannel.VoiceQuality">VoiceQuality</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VoiceQuality VoiceQuality { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.VoiceQuality.html">VoiceQuality</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_CreateInviteAsync_KaiHeiLa_InviteMaxAge_KaiHeiLa_InviteMaxUses_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.CreateInviteAsync(KaiHeiLa.InviteMaxAge%2CKaiHeiLa.InviteMaxUses%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L90">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_CreateInviteAsync_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.CreateInviteAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_CreateInviteAsync_KaiHeiLa_InviteMaxAge_KaiHeiLa_InviteMaxUses_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.CreateInviteAsync(KaiHeiLa.InviteMaxAge,KaiHeiLa.InviteMaxUses,KaiHeiLa.RequestOptions)">CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(InviteMaxAge maxAge = default(InviteMaxAge), InviteMaxUses maxUses = default(InviteMaxUses), RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.InviteMaxAge.html">InviteMaxAge</a></td>
+        <td><span class="parametername">maxAge</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.InviteMaxUses.html">InviteMaxUses</a></td>
+        <td><span class="parametername">maxUses</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.IInvite.html">IInvite</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.CreateInviteAsync(System.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L87">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_CreateInviteAsync_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.CreateInviteAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},KaiHeiLa.RequestOptions)">CreateInviteAsync(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(int? maxAge, int? maxUses = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">maxAge</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">maxUses</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.IInvite.html">IInvite</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_GetCategoryAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.GetCategoryAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L66">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_GetCategoryAsync_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.GetCategoryAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_GetCategoryAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.GetCategoryAsync(KaiHeiLa.RequestOptions)">GetCategoryAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets the parent (category) channel of this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ICategoryChannel&gt; GetCategoryAsync(RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.ICategoryChannel.html">ICategoryChannel</a>&gt;</td>
+        <td><p>A task that represents the asynchronous get operation. The task result contains the category channel
+representing the parent of this channel; <code>null</code> if none is set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_GetCreatorAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.GetCreatorAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L76">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_GetCreatorAsync_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.GetCreatorAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_GetCreatorAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.GetCreatorAsync(KaiHeiLa.RequestOptions)">GetCreatorAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets the owner of this guild.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestUser&gt; GetCreatorAsync(RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestUser.html">RestUser</a>&gt;</td>
+        <td><p>A task that represents the asynchronous get operation. The task result contains the owner of this guild.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel_GetInvitesAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel.GetInvitesAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L84">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestVoiceChannel_GetInvitesAsync_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.GetInvitesAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_RestVoiceChannel_GetInvitesAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.RestVoiceChannel.GetInvitesAsync(KaiHeiLa.RequestOptions)">GetInvitesAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;IInvite&gt;&gt; GetInvitesAsync(RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.IInvite.html">IInvite</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity&lt;TId&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IUpdateable.html">IUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IVoiceChannel.html">IVoiceChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.INestedChannel.html">INestedChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IGuildChannel.html">IGuildChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IDeletable.html">IDeletable</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IMentionable.html">IMentionable</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.Rest.IRestAudioChannel.html">IRestAudioChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IAudioChannel.html">IAudioChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IChannel.html">IChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity&lt;TId&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestVoiceChannel.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestVoiceChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            KaiHeiLa.Net (c) 2022
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

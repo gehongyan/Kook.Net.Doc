@@ -1,0 +1,1215 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class KaiHeiLaRestClient
+   | KaiHeiLa.Net Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class KaiHeiLaRestClient
+   | KaiHeiLa.Net Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient">
+  
+  
+  <h1 id="KaiHeiLa_Rest_KaiHeiLaRestClient" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient" class="text-break">Class KaiHeiLaRestClient
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html">BaseKaiHeiLaClient</a></div>
+    <div class="level2"><span class="xref">KaiHeiLaRestClient</span></div>
+      <div class="level3"><a class="xref" href="KaiHeiLa.WebSocket.KaiHeiLaSocketRestClient.html">KaiHeiLaSocketRestClient</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="KaiHeiLa.IKaiHeiLaClient.html">IKaiHeiLaClient</a></div>
+    <div><span class="xref">IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_Log">BaseKaiHeiLaClient.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_LoggedIn">BaseKaiHeiLaClient.LoggedIn</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_LoggedOut">BaseKaiHeiLaClient.LoggedOut</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_LoginState">BaseKaiHeiLaClient.LoginState</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_TokenType">BaseKaiHeiLaClient.TokenType</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_Dispose">BaseKaiHeiLaClient.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_LoginAsync_KaiHeiLa_TokenType_System_String_System_Boolean_">BaseKaiHeiLaClient.LoginAsync(TokenType, String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_LogoutAsync">BaseKaiHeiLaClient.LogoutAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_KaiHeiLa_IKaiHeiLaClient_ConnectionState">BaseKaiHeiLaClient.IKaiHeiLaClient.ConnectionState</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_KaiHeiLa_IKaiHeiLaClient_CurrentUser">BaseKaiHeiLaClient.IKaiHeiLaClient.CurrentUser</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_GetChannelAsync_System_UInt64_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_">BaseKaiHeiLaClient.GetChannelAsync(UInt64, CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_GetDMChannelAsync_Guid_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_">BaseKaiHeiLaClient.GetDMChannelAsync(Guid, CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_GetDMChannelsAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_">BaseKaiHeiLaClient.GetDMChannelsAsync(CacheMode, RequestOptions)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="KaiHeiLa.Rest.html">KaiHeiLa.Rest</a></h6>
+  <h6><strong>Assembly</strong>: KaiHeiLa.Net.Rest.dll</h6>
+  <h5 id="KaiHeiLa_Rest_KaiHeiLaRestClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KaiHeiLaRestClient : BaseKaiHeiLaClient, IKaiHeiLaClient, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient__ctor.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L19">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient__ctor_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.#ctor*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient__ctor" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.#ctor">KaiHeiLaRestClient()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KaiHeiLaRestClient()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient__ctor_KaiHeiLa_Rest_KaiHeiLaRestConfig_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.%23ctor(KaiHeiLa.Rest.KaiHeiLaRestConfig)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L21">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient__ctor_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.#ctor*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient__ctor_KaiHeiLa_Rest_KaiHeiLaRestConfig_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.#ctor(KaiHeiLa.Rest.KaiHeiLaRestConfig)">KaiHeiLaRestClient(KaiHeiLaRestConfig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KaiHeiLaRestClient(KaiHeiLaRestConfig config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Rest.KaiHeiLaRestConfig.html">KaiHeiLaRestConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_CurrentUser.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.CurrentUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L17">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_CurrentUser_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.CurrentUser*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_CurrentUser" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.CurrentUser">CurrentUser</h4>
+  <div class="markdown level1 summary"><p>Gets the logged-in user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RestSelfUser CurrentUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Rest.RestSelfUser.html">RestSelfUser</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_AddDirectMessageReactionAsync_Guid_KaiHeiLa_IEmote_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.AddDirectMessageReactionAsync(Guid%2CKaiHeiLa.IEmote%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L100">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_AddDirectMessageReactionAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.AddDirectMessageReactionAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_AddDirectMessageReactionAsync_Guid_KaiHeiLa_IEmote_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.AddDirectMessageReactionAsync(Guid,KaiHeiLa.IEmote,KaiHeiLa.RequestOptions)">AddDirectMessageReactionAsync(Guid, IEmote, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task AddDirectMessageReactionAsync(Guid messageId, IEmote emote, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">messageId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IEmote.html">IEmote</a></td>
+        <td><span class="parametername">emote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_AddReactionAsync_Guid_KaiHeiLa_IEmote_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.AddReactionAsync(Guid%2CKaiHeiLa.IEmote%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L95">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_AddReactionAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.AddReactionAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_AddReactionAsync_Guid_KaiHeiLa_IEmote_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.AddReactionAsync(Guid,KaiHeiLa.IEmote,KaiHeiLa.RequestOptions)">AddReactionAsync(Guid, IEmote, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task AddReactionAsync(Guid messageId, IEmote emote, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">messageId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IEmote.html">IEmote</a></td>
+        <td><span class="parametername">emote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_AddRoleAsync_System_UInt64_System_UInt64_System_UInt32_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.AddRoleAsync(System.UInt64%2CSystem.UInt64%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L77">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_AddRoleAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.AddRoleAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_AddRoleAsync_System_UInt64_System_UInt64_System_UInt32_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.AddRoleAsync(System.UInt64,System.UInt64,System.UInt32)">AddRoleAsync(UInt64, UInt64, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task AddRoleAsync(ulong guildId, ulong userId, uint roleId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">guildId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">roleId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_CreateAssetAsync_Stream_System_String_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.CreateAssetAsync(Stream%2CSystem.String%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L111">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_CreateAssetAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.CreateAssetAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_CreateAssetAsync_Stream_System_String_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.CreateAssetAsync(Stream,System.String,KaiHeiLa.RequestOptions)">CreateAssetAsync(Stream, String, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; CreateAssetAsync(Stream stream, string fileName, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_CreateAssetAsync_System_String_System_String_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.CreateAssetAsync(System.String%2CSystem.String%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L109">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_CreateAssetAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.CreateAssetAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_CreateAssetAsync_System_String_System_String_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.CreateAssetAsync(System.String,System.String,KaiHeiLa.RequestOptions)">CreateAssetAsync(String, String, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; CreateAssetAsync(string path, string fileName, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_CreateGameAsync_System_String_System_String_System_String_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.CreateGameAsync(System.String%2CSystem.String%2CSystem.String%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L120">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_CreateGameAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.CreateGameAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_CreateGameAsync_System_String_System_String_System_String_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.CreateGameAsync(System.String,System.String,System.String,KaiHeiLa.RequestOptions)">CreateGameAsync(String, String, String, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestGame&gt; CreateGameAsync(string name, string processName, string iconUrl, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">processName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">iconUrl</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestGame.html">RestGame</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_GetChannelAsync_System_UInt64_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.GetChannelAsync(System.UInt64%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L66">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetChannelAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetChannelAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetChannelAsync_System_UInt64_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetChannelAsync(System.UInt64,KaiHeiLa.RequestOptions)">GetChannelAsync(UInt64, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestChannel&gt; GetChannelAsync(ulong id, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestChannel.html">RestChannel</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_GetDMChannelAsync_Guid_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.GetDMChannelAsync(Guid%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L68">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetDMChannelAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetDMChannelAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetDMChannelAsync_Guid_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetDMChannelAsync(Guid,KaiHeiLa.RequestOptions)">GetDMChannelAsync(Guid, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestDMChannel&gt; GetDMChannelAsync(Guid chatCode, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">chatCode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestDMChannel.html">RestDMChannel</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_GetDMChannelsAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.GetDMChannelsAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L70">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetDMChannelsAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetDMChannelsAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetDMChannelsAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetDMChannelsAsync(KaiHeiLa.RequestOptions)">GetDMChannelsAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestDMChannel&gt;&gt; GetDMChannelsAsync(RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestDMChannel.html">RestDMChannel</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_GetGamesAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.GetGamesAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L118">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetGamesAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetGamesAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetGamesAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetGamesAsync(KaiHeiLa.RequestOptions)">GetGamesAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestGame&gt;&gt; GetGamesAsync(RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestGame.html">RestGame</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_GetGuildAsync_System_UInt64_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.GetGuildAsync(System.UInt64%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L57">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetGuildAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetGuildAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetGuildAsync_System_UInt64_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetGuildAsync(System.UInt64,KaiHeiLa.RequestOptions)">GetGuildAsync(UInt64, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestGuild&gt; GetGuildAsync(ulong id, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestGuild.html">RestGuild</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_GetGuildsAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.GetGuildsAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L59">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetGuildsAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetGuildsAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetGuildsAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetGuildsAsync(KaiHeiLa.RequestOptions)">GetGuildsAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestGuild&gt;&gt; GetGuildsAsync(RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestGuild.html">RestGuild</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_GetGuildUserAsync_System_UInt64_System_UInt64_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.GetGuildUserAsync(System.UInt64%2CSystem.UInt64%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L88">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetGuildUserAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetGuildUserAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetGuildUserAsync_System_UInt64_System_UInt64_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetGuildUserAsync(System.UInt64,System.UInt64,KaiHeiLa.RequestOptions)">GetGuildUserAsync(UInt64, UInt64, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestGuildUser&gt; GetGuildUserAsync(ulong guildId, ulong id, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">guildId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestGuildUser.html">RestGuildUser</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_GetUserAsync_System_UInt64_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.GetUserAsync(System.UInt64%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L86">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetUserAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetUserAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_GetUserAsync_System_UInt64_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.GetUserAsync(System.UInt64,KaiHeiLa.RequestOptions)">GetUserAsync(UInt64, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestUser&gt; GetUserAsync(ulong id, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestUser.html">RestUser</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_RemoveDirectMessageReactionAsync_Guid_System_UInt64_KaiHeiLa_IEmote_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.RemoveDirectMessageReactionAsync(Guid%2CSystem.UInt64%2CKaiHeiLa.IEmote%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L102">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_RemoveDirectMessageReactionAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.RemoveDirectMessageReactionAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_RemoveDirectMessageReactionAsync_Guid_System_UInt64_KaiHeiLa_IEmote_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.RemoveDirectMessageReactionAsync(Guid,System.UInt64,KaiHeiLa.IEmote,KaiHeiLa.RequestOptions)">RemoveDirectMessageReactionAsync(Guid, UInt64, IEmote, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task RemoveDirectMessageReactionAsync(Guid messageId, ulong userId, IEmote emote, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">messageId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IEmote.html">IEmote</a></td>
+        <td><span class="parametername">emote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_RemoveReactionAsync_Guid_System_UInt64_KaiHeiLa_IEmote_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.RemoveReactionAsync(Guid%2CSystem.UInt64%2CKaiHeiLa.IEmote%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L97">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_RemoveReactionAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.RemoveReactionAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_RemoveReactionAsync_Guid_System_UInt64_KaiHeiLa_IEmote_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.RemoveReactionAsync(Guid,System.UInt64,KaiHeiLa.IEmote,KaiHeiLa.RequestOptions)">RemoveReactionAsync(Guid, UInt64, IEmote, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task RemoveReactionAsync(Guid messageId, ulong userId, IEmote emote, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">messageId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IEmote.html">IEmote</a></td>
+        <td><span class="parametername">emote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient_RemoveRoleAsync_System_UInt64_System_UInt64_System_UInt32_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient.RemoveRoleAsync(System.UInt64%2CSystem.UInt64%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L79">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_KaiHeiLaRestClient_RemoveRoleAsync_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.RemoveRoleAsync*"></a>
+  <h4 id="KaiHeiLa_Rest_KaiHeiLaRestClient_RemoveRoleAsync_System_UInt64_System_UInt64_System_UInt32_" data-uid="KaiHeiLa.Rest.KaiHeiLaRestClient.RemoveRoleAsync(System.UInt64,System.UInt64,System.UInt32)">RemoveRoleAsync(UInt64, UInt64, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task RemoveRoleAsync(ulong guildId, ulong userId, uint roleId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">guildId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">roleId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="KaiHeiLa.IKaiHeiLaClient.html">IKaiHeiLaClient</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_KaiHeiLaRestClient.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.KaiHeiLaRestClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/KaiHeiLaRestClient.cs/#L7" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            KaiHeiLa.Net (c) 2022
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

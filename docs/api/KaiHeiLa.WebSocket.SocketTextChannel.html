@@ -1,0 +1,1787 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SocketTextChannel
+   | KaiHeiLa.Net Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SocketTextChannel
+   | KaiHeiLa.Net Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="KaiHeiLa.WebSocket.SocketTextChannel">
+  
+  
+  <h1 id="KaiHeiLa_WebSocket_SocketTextChannel" data-uid="KaiHeiLa.WebSocket.SocketTextChannel" class="text-break">Class SocketTextChannel
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a WebSocket-based channel in a guild that can send and receive messages.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="KaiHeiLa.WebSocket.SocketEntity-1.html">SocketEntity</a>&lt;<span class="xref">System.UInt64</span>&gt;</div>
+    <div class="level2"><a class="xref" href="KaiHeiLa.WebSocket.SocketChannel.html">SocketChannel</a></div>
+    <div class="level3"><a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html">SocketGuildChannel</a></div>
+    <div class="level4"><span class="xref">SocketTextChannel</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity</a>&lt;<span class="xref">System.UInt64</span>&gt;</div>
+    <div><a class="xref" href="KaiHeiLa.ITextChannel.html">ITextChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.INestedChannel.html">INestedChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.IGuildChannel.html">IGuildChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.IDeletable.html">IDeletable</a></div>
+    <div><a class="xref" href="KaiHeiLa.IMentionable.html">IMentionable</a></div>
+    <div><a class="xref" href="KaiHeiLa.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.IMessageChannel.html">IMessageChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.IChannel.html">IChannel</a></div>
+    <div><a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity</a>&lt;<span class="xref">System.UInt64</span>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_Guild">SocketGuildChannel.Guild</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_Name">SocketGuildChannel.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_Position">SocketGuildChannel.Position</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_Type">SocketGuildChannel.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_RolePermissionOverwrites">SocketGuildChannel.RolePermissionOverwrites</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_UserPermissionOverwrites">SocketGuildChannel.UserPermissionOverwrites</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_DeleteAsync_KaiHeiLa_RequestOptions_">SocketGuildChannel.DeleteAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_GetPermissionOverwrite_KaiHeiLa_IUser_">SocketGuildChannel.GetPermissionOverwrite(IUser)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_GetPermissionOverwrite_KaiHeiLa_IRole_">SocketGuildChannel.GetPermissionOverwrite(IRole)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_AddPermissionOverwriteAsync_KaiHeiLa_IGuildUser_KaiHeiLa_RequestOptions_">SocketGuildChannel.AddPermissionOverwriteAsync(IGuildUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_AddPermissionOverwriteAsync_KaiHeiLa_IRole_KaiHeiLa_RequestOptions_">SocketGuildChannel.AddPermissionOverwriteAsync(IRole, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_RemovePermissionOverwriteAsync_KaiHeiLa_IGuildUser_KaiHeiLa_RequestOptions_">SocketGuildChannel.RemovePermissionOverwriteAsync(IGuildUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_RemovePermissionOverwriteAsync_KaiHeiLa_IRole_KaiHeiLa_RequestOptions_">SocketGuildChannel.RemovePermissionOverwriteAsync(IRole, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_ModifyPermissionOverwriteAsync_KaiHeiLa_IGuildUser_Action_KaiHeiLa_OverwritePermissions__KaiHeiLa_RequestOptions_">SocketGuildChannel.ModifyPermissionOverwriteAsync(IGuildUser, Action&lt;OverwritePermissions&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_ModifyPermissionOverwriteAsync_KaiHeiLa_IRole_Action_KaiHeiLa_OverwritePermissions__KaiHeiLa_RequestOptions_">SocketGuildChannel.ModifyPermissionOverwriteAsync(IRole, Action&lt;OverwritePermissions&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_ToString">SocketGuildChannel.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_KaiHeiLa_IGuildChannel_Guild">SocketGuildChannel.IGuildChannel.Guild</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketEntity-1.html#KaiHeiLa_WebSocket_SocketEntity_1_Id">SocketEntity&lt;UInt64&gt;.Id</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="KaiHeiLa.WebSocket.html">KaiHeiLa.WebSocket</a></h6>
+  <h6><strong>Assembly</strong>: KaiHeiLa.Net.WebSocket.dll</h6>
+  <h5 id="KaiHeiLa_WebSocket_SocketTextChannel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SocketTextChannel : SocketGuildChannel, IEntity&lt;ulong&gt;, ITextChannel, INestedChannel, IGuildChannel, IDeletable, IMentionable, ISocketMessageChannel, IMessageChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_CachedMessages.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.CachedMessages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L60">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_CachedMessages_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.CachedMessages*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_CachedMessages" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.CachedMessages">CachedMessages</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; CachedMessages { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_Category.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.Category%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L37">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_Category_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.Category*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_Category" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.Category">Category</h4>
+  <div class="markdown level1 summary"><p>Gets the parent (category) of this channel in the guild&apos;s channel list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICategoryChannel Category { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.ICategoryChannel.html">ICategoryChannel</a></td>
+        <td><p>An <a class="xref" href="KaiHeiLa.ICategoryChannel.html">ICategoryChannel</a> representing the parent of this channel; <code>null</code> if none is set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_CategoryId.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.CategoryId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L30">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_CategoryId_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.CategoryId*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_CategoryId" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.CategoryId">CategoryId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong? CategoryId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_Creator.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.Creator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L54">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_Creator_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.Creator*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_Creator" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.Creator">Creator</h4>
+  <div class="markdown level1 summary"><p>Gets the creator of this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SocketGuildUser Creator { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.WebSocket.SocketGuildUser.html">SocketGuildUser</a></td>
+        <td><p>A task that represents the asynchronous get operation. The task result contains the creator of this channel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KaiHeiLa_WebSocket_SocketTextChannel_Creator_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method will try to get the user as a member of this channel. If the user is not a member of this guild,
+this method will return <code>null</code>. To get the creator under this circumstance, use
+<a class="xref" href="KaiHeiLa.Rest.KaiHeiLaRestClient.html#KaiHeiLa_Rest_KaiHeiLaRestClient_GetUserAsync_System_UInt64_KaiHeiLa_RequestOptions_">GetUserAsync(UInt64, RequestOptions)</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_CreatorId.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.CreatorId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L42">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_CreatorId_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.CreatorId*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_CreatorId" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.CreatorId">CreatorId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong CreatorId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_IsPermissionSynced.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.IsPermissionSynced%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L40">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_IsPermissionSynced_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.IsPermissionSynced*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_IsPermissionSynced" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.IsPermissionSynced">IsPermissionSynced</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPermissionSynced { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_KMarkdownMention.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.KMarkdownMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L56">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_KMarkdownMention_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.KMarkdownMention*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_KMarkdownMention" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.KMarkdownMention">KMarkdownMention</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string KMarkdownMention { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_PlainTextMention.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.PlainTextMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L58">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_PlainTextMention_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.PlainTextMention*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_PlainTextMention" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.PlainTextMention">PlainTextMention</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PlainTextMention { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_SlowModeInterval.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.SlowModeInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L28">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_SlowModeInterval_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SlowModeInterval*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_SlowModeInterval" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SlowModeInterval">SlowModeInterval</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SlowModeInterval { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_Topic.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.Topic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L26">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_Topic_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.Topic*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_Topic" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.Topic">Topic</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Topic { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_Users.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.Users%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L62">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_Users_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.Users*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_Users" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.Users">Users</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of users that are able to view the channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IReadOnlyCollection&lt;SocketGuildUser&gt; Users { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</td>
+        <td><p>A read-only collection of users that can access the channel (i.e. the users seen in the user list).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_Users">SocketGuildChannel.Users</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_CreateInviteAsync_KaiHeiLa_InviteMaxAge_KaiHeiLa_InviteMaxUses_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.CreateInviteAsync(KaiHeiLa.InviteMaxAge%2CKaiHeiLa.InviteMaxUses%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L231">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_CreateInviteAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.CreateInviteAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_CreateInviteAsync_KaiHeiLa_InviteMaxAge_KaiHeiLa_InviteMaxUses_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.CreateInviteAsync(KaiHeiLa.InviteMaxAge,KaiHeiLa.InviteMaxUses,KaiHeiLa.RequestOptions)">CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(InviteMaxAge maxAge = default(InviteMaxAge), InviteMaxUses maxUses = default(InviteMaxUses), RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.InviteMaxAge.html">InviteMaxAge</a></td>
+        <td><span class="parametername">maxAge</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.InviteMaxUses.html">InviteMaxUses</a></td>
+        <td><span class="parametername">maxUses</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.IInvite.html">IInvite</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.CreateInviteAsync(System.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L228">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_CreateInviteAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.CreateInviteAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},KaiHeiLa.RequestOptions)">CreateInviteAsync(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(int? maxAge, int? maxUses = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">maxAge</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">maxUses</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.IInvite.html">IInvite</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_DeleteMessageAsync_Guid_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.DeleteMessageAsync(Guid%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L214">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_DeleteMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.DeleteMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_DeleteMessageAsync_Guid_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.DeleteMessageAsync(Guid,KaiHeiLa.RequestOptions)">DeleteMessageAsync(Guid, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task DeleteMessageAsync(Guid messageId, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">messageId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_DeleteMessageAsync_KaiHeiLa_IMessage_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.DeleteMessageAsync(KaiHeiLa.IMessage%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L217">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_DeleteMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.DeleteMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_DeleteMessageAsync_KaiHeiLa_IMessage_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.DeleteMessageAsync(KaiHeiLa.IMessage,KaiHeiLa.RequestOptions)">DeleteMessageAsync(IMessage, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task DeleteMessageAsync(IMessage message, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IMessage.html">IMessage</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_GetCachedMessage_Guid_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.GetCachedMessage(Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L100">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_GetCachedMessage_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetCachedMessage*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_GetCachedMessage_Guid_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetCachedMessage(Guid)">GetCachedMessage(Guid)</h4>
+  <div class="markdown level1 summary"><p>Gets a cached message from this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SocketMessage GetCachedMessage(Guid id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The Guid of the message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html">SocketMessage</a></td>
+        <td><p>A WebSocket-based message object; <code>null</code> if it does not exist in the cache or if caching is not
+enabled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KaiHeiLa_WebSocket_SocketTextChannel_GetCachedMessage_Guid__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><div class="WARNING"><h5>warning</h5><p>
+    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+    this method will always return <code>null</code>. Please refer to
+<a class="xref" href="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.html#KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+</p></div>
+<p>
+    This method retrieves the message from the local WebSocket cache and does not send any additional
+    request to KaiHeiLa. This message may be a message that has been deleted.
+</p></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_GetInvitesAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.GetInvitesAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L225">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_GetInvitesAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetInvitesAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_GetInvitesAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetInvitesAsync(KaiHeiLa.RequestOptions)">GetInvitesAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;IInvite&gt;&gt; GetInvitesAsync(RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.IInvite.html">IInvite</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_GetMessageAsync_Guid_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.GetMessageAsync(Guid%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L115">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessageAsync_Guid_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetMessageAsync(Guid,KaiHeiLa.RequestOptions)">GetMessageAsync(Guid, RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets a message from this message channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IMessage&gt; GetMessageAsync(Guid id, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The identifier of the message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.IMessage.html">IMessage</a>&gt;</td>
+        <td><p>A task that represents an asynchronous get operation for retrieving the message. The task result contains
+the retrieved message; <code>null</code> if no message is found with the specified identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessageAsync_Guid_KaiHeiLa_RequestOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="KaiHeiLa.IMessageChannel.html#KaiHeiLa_IMessageChannel_GetMessageAsync_Guid_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_">GetMessageAsync(Guid, CacheMode, RequestOptions)</a>.
+Please visit its documentation for more details on this method.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_Guid_KaiHeiLa_Direction_System_Int32_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.GetMessagesAsync(Guid%2CKaiHeiLa.Direction%2CSystem.Int32%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L150">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetMessagesAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_Guid_KaiHeiLa_Direction_System_Int32_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetMessagesAsync(Guid,KaiHeiLa.Direction,System.Int32,KaiHeiLa.RequestOptions)">GetMessagesAsync(Guid, Direction, Int32, RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">referenceMessageId</span></td>
+        <td><p>The ID of the starting message to get the messages from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Direction.html">Direction</a></td>
+        <td><span class="parametername">dir</span></td>
+        <td><p>The direction of the messages to be gotten from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The numbers of message to be gotten from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.IMessage.html">IMessage</a>&gt;&gt;</td>
+        <td><p>Paged collection of messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_Guid_KaiHeiLa_Direction_System_Int32_KaiHeiLa_RequestOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <see cref="!:IMessageChannel.GetMessagesAsync(ulong, Direction, int, CacheMode, RequestOptions)"></see>.
+Please visit its documentation for more details on this method.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_KaiHeiLa_IMessage_KaiHeiLa_Direction_System_Int32_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.GetMessagesAsync(KaiHeiLa.IMessage%2CKaiHeiLa.Direction%2CSystem.Int32%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L166">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetMessagesAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_KaiHeiLa_IMessage_KaiHeiLa_Direction_System_Int32_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetMessagesAsync(KaiHeiLa.IMessage,KaiHeiLa.Direction,System.Int32,KaiHeiLa.RequestOptions)">GetMessagesAsync(IMessage, Direction, Int32, RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IMessage.html">IMessage</a></td>
+        <td><span class="parametername">referenceMessage</span></td>
+        <td><p>The starting message to get the messages from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Direction.html">Direction</a></td>
+        <td><span class="parametername">dir</span></td>
+        <td><p>The direction of the messages to be gotten from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The numbers of message to be gotten from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.IMessage.html">IMessage</a>&gt;&gt;</td>
+        <td><p>Paged collection of messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_KaiHeiLa_IMessage_KaiHeiLa_Direction_System_Int32_KaiHeiLa_RequestOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <see cref="!:IMessageChannel.GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions)"></see>.
+Please visit its documentation for more details on this method.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_System_Int32_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.GetMessagesAsync(System.Int32%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L134">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetMessagesAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_System_Int32_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetMessagesAsync(System.Int32,KaiHeiLa.RequestOptions)">GetMessagesAsync(Int32, RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(int limit = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The numbers of message to be gotten from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.IMessage.html">IMessage</a>&gt;&gt;</td>
+        <td><p>Paged collection of messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KaiHeiLa_WebSocket_SocketTextChannel_GetMessagesAsync_System_Int32_KaiHeiLa_RequestOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <see cref="!:IMessageChannel.GetMessagesAsync(int, CacheMode, RequestOptions)"></see>.
+Please visit its documentation for more details on this method.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_GetPinnedMessagesAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.GetPinnedMessagesAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L168">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_GetPinnedMessagesAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetPinnedMessagesAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_GetPinnedMessagesAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetPinnedMessagesAsync(KaiHeiLa.RequestOptions)">GetPinnedMessagesAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetPinnedMessagesAsync(RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestMessage.html">RestMessage</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_GetUser_System_UInt64_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.GetUser(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L241">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_GetUser_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetUser*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_GetUser_System_UInt64_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.GetUser(System.UInt64)">GetUser(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override SocketGuildUser GetUser(ulong id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.WebSocket.SocketGuildUser.html">SocketGuildUser</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_GetUser_System_UInt64_">SocketGuildChannel.GetUser(UInt64)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_ModifyMessageAsync_Guid_Action_KaiHeiLa_MessageProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.ModifyMessageAsync(Guid%2CAction%7BKaiHeiLa.MessageProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L210">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_ModifyMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.ModifyMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_ModifyMessageAsync_Guid_Action_KaiHeiLa_MessageProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.ModifyMessageAsync(Guid,Action{KaiHeiLa.MessageProperties},KaiHeiLa.RequestOptions)">ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ModifyMessageAsync(Guid messageId, Action&lt;MessageProperties&gt; func, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">messageId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.MessageProperties.html">MessageProperties</a>&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_SendCardMessageAsync_IEnumerable_KaiHeiLa_ICard__KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.SendCardMessageAsync(IEnumerable%7BKaiHeiLa.ICard%7D%2CKaiHeiLa.Quote%2CKaiHeiLa.IUser%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L200">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_SendCardMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendCardMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_SendCardMessageAsync_IEnumerable_KaiHeiLa_ICard__KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendCardMessageAsync(IEnumerable{KaiHeiLa.ICard},KaiHeiLa.Quote,KaiHeiLa.IUser,KaiHeiLa.RequestOptions)">SendCardMessageAsync(IEnumerable&lt;ICard&gt;, Quote, IUser, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; SendCardMessageAsync(IEnumerable&lt;ICard&gt; cards, Quote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="KaiHeiLa.ICard.html">ICard</a>&gt;</td>
+        <td><span class="parametername">cards</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Quote.html">Quote</a></td>
+        <td><span class="parametername">quote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IUser.html">IUser</a></td>
+        <td><span class="parametername">ephemeralUser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_SendCardMessageAsync_KaiHeiLa_ICard_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.SendCardMessageAsync(KaiHeiLa.ICard%2CKaiHeiLa.Quote%2CKaiHeiLa.IUser%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L206">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_SendCardMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendCardMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_SendCardMessageAsync_KaiHeiLa_ICard_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendCardMessageAsync(KaiHeiLa.ICard,KaiHeiLa.Quote,KaiHeiLa.IUser,KaiHeiLa.RequestOptions)">SendCardMessageAsync(ICard, Quote, IUser, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; SendCardMessageAsync(ICard card, Quote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.ICard.html">ICard</a></td>
+        <td><span class="parametername">card</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Quote.html">Quote</a></td>
+        <td><span class="parametername">quote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IUser.html">IUser</a></td>
+        <td><span class="parametername">ephemeralUser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_SendFileMessageAsync_System_String_System_String_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.SendFileMessageAsync(System.String%2CSystem.String%2CKaiHeiLa.Quote%2CKaiHeiLa.IUser%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L185">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_SendFileMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendFileMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_SendFileMessageAsync_System_String_System_String_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendFileMessageAsync(System.String,System.String,KaiHeiLa.Quote,KaiHeiLa.IUser,KaiHeiLa.RequestOptions)">SendFileMessageAsync(String, String, Quote, IUser, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; SendFileMessageAsync(string path, string fileName = null, Quote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Quote.html">Quote</a></td>
+        <td><span class="parametername">quote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IUser.html">IUser</a></td>
+        <td><span class="parametername">ephemeralUser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_SendImageMessageAsync_System_String_System_String_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.SendImageMessageAsync(System.String%2CSystem.String%2CKaiHeiLa.Quote%2CKaiHeiLa.IUser%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L173">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_SendImageMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendImageMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_SendImageMessageAsync_System_String_System_String_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendImageMessageAsync(System.String,System.String,KaiHeiLa.Quote,KaiHeiLa.IUser,KaiHeiLa.RequestOptions)">SendImageMessageAsync(String, String, Quote, IUser, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; SendImageMessageAsync(string path, string fileName = null, Quote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Quote.html">Quote</a></td>
+        <td><span class="parametername">quote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IUser.html">IUser</a></td>
+        <td><span class="parametername">ephemeralUser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_SendKMarkdownMessageAsync_System_String_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.SendKMarkdownMessageAsync(System.String%2CKaiHeiLa.Quote%2CKaiHeiLa.IUser%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L197">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_SendKMarkdownMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendKMarkdownMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_SendKMarkdownMessageAsync_System_String_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendKMarkdownMessageAsync(System.String,KaiHeiLa.Quote,KaiHeiLa.IUser,KaiHeiLa.RequestOptions)">SendKMarkdownMessageAsync(String, Quote, IUser, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; SendKMarkdownMessageAsync(string text, Quote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Quote.html">Quote</a></td>
+        <td><span class="parametername">quote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IUser.html">IUser</a></td>
+        <td><span class="parametername">ephemeralUser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_SendTextMessageAsync_System_String_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.SendTextMessageAsync(System.String%2CKaiHeiLa.Quote%2CKaiHeiLa.IUser%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L171">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_SendTextMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendTextMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_SendTextMessageAsync_System_String_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendTextMessageAsync(System.String,KaiHeiLa.Quote,KaiHeiLa.IUser,KaiHeiLa.RequestOptions)">SendTextMessageAsync(String, Quote, IUser, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; SendTextMessageAsync(string text, Quote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Quote.html">Quote</a></td>
+        <td><span class="parametername">quote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IUser.html">IUser</a></td>
+        <td><span class="parametername">ephemeralUser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel_SendVideoMessageAsync_System_String_System_String_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel.SendVideoMessageAsync(System.String%2CSystem.String%2CKaiHeiLa.Quote%2CKaiHeiLa.IUser%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L179">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketTextChannel_SendVideoMessageAsync_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendVideoMessageAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketTextChannel_SendVideoMessageAsync_System_String_System_String_KaiHeiLa_Quote_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketTextChannel.SendVideoMessageAsync(System.String,System.String,KaiHeiLa.Quote,KaiHeiLa.IUser,KaiHeiLa.RequestOptions)">SendVideoMessageAsync(String, String, Quote, IUser, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; SendVideoMessageAsync(string path, string fileName = null, Quote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Quote.html">Quote</a></td>
+        <td><span class="parametername">quote</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IUser.html">IUser</a></td>
+        <td><span class="parametername">ephemeralUser</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity&lt;TId&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.ITextChannel.html">ITextChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.INestedChannel.html">INestedChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IGuildChannel.html">IGuildChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IDeletable.html">IDeletable</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IMentionable.html">IMentionable</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IMessageChannel.html">IMessageChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IChannel.html">IChannel</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity&lt;TId&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketTextChannel.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketTextChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            KaiHeiLa.Net (c) 2022
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
