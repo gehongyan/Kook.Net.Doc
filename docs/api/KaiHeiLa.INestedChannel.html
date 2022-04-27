@@ -96,7 +96,7 @@
   
   <h1 id="KaiHeiLa_INestedChannel" data-uid="KaiHeiLa.INestedChannel" class="text-break">Interface INestedChannel
   </h1>
-  <div class="markdown level0 summary"><p>分组内的频道</p>
+  <div class="markdown level0 summary"><p>Represents a type of guild channel that can be nested within a category.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
@@ -175,11 +175,11 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_INestedChannel_CategoryId.md&amp;value=---%0Auid%3A%20KaiHeiLa.INestedChannel.CategoryId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L13">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L17">View Source</a>
   </span>
   <a id="KaiHeiLa_INestedChannel_CategoryId_" data-uid="KaiHeiLa.INestedChannel.CategoryId*"></a>
   <h4 id="KaiHeiLa_INestedChannel_CategoryId" data-uid="KaiHeiLa.INestedChannel.CategoryId">CategoryId</h4>
-  <div class="markdown level1 summary"><p>所属分组的 ID</p>
+  <div class="markdown level1 summary"><p>Gets the parent (category) ID of this channel in the guild&apos;s channel list.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -197,7 +197,9 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;</td>
-        <td></td>
+        <td><p>A <see cref="!:System.UInt64"></see> representing the identifier of the parent of this channel;
+<code>null</code> if none is set.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -206,11 +208,11 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_INestedChannel_CreatorId.md&amp;value=---%0Auid%3A%20KaiHeiLa.INestedChannel.CreatorId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L23">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L33">View Source</a>
   </span>
   <a id="KaiHeiLa_INestedChannel_CreatorId_" data-uid="KaiHeiLa.INestedChannel.CreatorId*"></a>
   <h4 id="KaiHeiLa_INestedChannel_CreatorId" data-uid="KaiHeiLa.INestedChannel.CreatorId">CreatorId</h4>
-  <div class="markdown level1 summary"><p>创建者用户ID</p>
+  <div class="markdown level1 summary"><p>Gets the identifier of the user who created this channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -228,7 +230,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
-        <td></td>
+        <td><p>A <see cref="!:System.UInt64"></see> representing the identifier of the user who created this channel.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -237,11 +240,11 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_INestedChannel_IsPermissionSynced.md&amp;value=---%0Auid%3A%20KaiHeiLa.INestedChannel.IsPermissionSynced%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L18">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L25">View Source</a>
   </span>
   <a id="KaiHeiLa_INestedChannel_IsPermissionSynced_" data-uid="KaiHeiLa.INestedChannel.IsPermissionSynced*"></a>
   <h4 id="KaiHeiLa_INestedChannel_IsPermissionSynced" data-uid="KaiHeiLa.INestedChannel.IsPermissionSynced">IsPermissionSynced</h4>
-  <div class="markdown level1 summary"><p>权限设置是否与分组同步</p>
+  <div class="markdown level1 summary"><p>Specifies whether the permissions of this channel is synchronized with its parent channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -259,7 +262,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>A <see cref="!:System.Boolean"></see> indicating whether the permissions of this channel is synchronized with its parent channel.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -270,7 +274,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_INestedChannel_CreateInviteAsync_KaiHeiLa_InviteMaxAge_KaiHeiLa_InviteMaxUses_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.INestedChannel.CreateInviteAsync(KaiHeiLa.InviteMaxAge%2CKaiHeiLa.InviteMaxUses%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L70">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L80">View Source</a>
   </span>
   <a id="KaiHeiLa_INestedChannel_CreateInviteAsync_" data-uid="KaiHeiLa.INestedChannel.CreateInviteAsync*"></a>
   <h4 id="KaiHeiLa_INestedChannel_CreateInviteAsync_KaiHeiLa_InviteMaxAge_KaiHeiLa_InviteMaxUses_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.INestedChannel.CreateInviteAsync(KaiHeiLa.InviteMaxAge,KaiHeiLa.InviteMaxUses,KaiHeiLa.RequestOptions)">CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)</h4>
@@ -333,7 +337,7 @@ metadata object containing information for the created invite.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_INestedChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.INestedChannel.CreateInviteAsync(System.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L82">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L92">View Source</a>
   </span>
   <a id="KaiHeiLa_INestedChannel_CreateInviteAsync_" data-uid="KaiHeiLa.INestedChannel.CreateInviteAsync*"></a>
   <h4 id="KaiHeiLa_INestedChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.INestedChannel.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},KaiHeiLa.RequestOptions)">CreateInviteAsync(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, RequestOptions)</h4>
@@ -396,7 +400,7 @@ metadata object containing information for the created invite.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_INestedChannel_GetCategoryAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.INestedChannel.GetCategoryAsync(KaiHeiLa.CacheMode%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L34">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L44">View Source</a>
   </span>
   <a id="KaiHeiLa_INestedChannel_GetCategoryAsync_" data-uid="KaiHeiLa.INestedChannel.GetCategoryAsync*"></a>
   <h4 id="KaiHeiLa_INestedChannel_GetCategoryAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.INestedChannel.GetCategoryAsync(KaiHeiLa.CacheMode,KaiHeiLa.RequestOptions)">GetCategoryAsync(CacheMode, RequestOptions)</h4>
@@ -453,7 +457,7 @@ representing the parent of this channel; <code>null</code> if none is set.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_INestedChannel_GetCreatorAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.INestedChannel.GetCreatorAsync(KaiHeiLa.CacheMode%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L44">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L54">View Source</a>
   </span>
   <a id="KaiHeiLa_INestedChannel_GetCreatorAsync_" data-uid="KaiHeiLa.INestedChannel.GetCreatorAsync*"></a>
   <h4 id="KaiHeiLa_INestedChannel_GetCreatorAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.INestedChannel.GetCreatorAsync(KaiHeiLa.CacheMode,KaiHeiLa.RequestOptions)">GetCreatorAsync(CacheMode, RequestOptions)</h4>
@@ -509,7 +513,7 @@ representing the parent of this channel; <code>null</code> if none is set.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_INestedChannel_GetInvitesAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.INestedChannel.GetInvitesAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L58">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/INestedChannel.cs/#L68">View Source</a>
   </span>
   <a id="KaiHeiLa_INestedChannel_GetInvitesAsync_" data-uid="KaiHeiLa.INestedChannel.GetInvitesAsync*"></a>
   <h4 id="KaiHeiLa_INestedChannel_GetInvitesAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.INestedChannel.GetInvitesAsync(KaiHeiLa.RequestOptions)">GetInvitesAsync(RequestOptions)</h4>
