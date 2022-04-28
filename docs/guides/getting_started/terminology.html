@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#23433;&#35013; KaiHeiLa.Net | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>&#26415;&#35821; | KaiHeiLa.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#23433;&#35013; KaiHeiLa.Net | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="&#26415;&#35821; | KaiHeiLa.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -89,98 +89,21 @@
                           </div>
                         </div>
 
-                    <article class="content wrap" id="_content" data-uid="Guides.GettingStarted.Installation">
-<h1 id="安装-kaiheilanet">安装 KaiHeiLa.Net</h1>
+                    <article class="content wrap" id="_content" data-uid="Guides.GettingStarted.Terminology">
+<h1 id="术语">术语</h1>
 
-<p>KaiHeiLa.Net 通过 NuGet 分发，推荐通过 NuGet 包管理工具安装，
-如有需要，也可从源代码进行编译。</p>
-<h2 id="支持的平台">支持的平台</h2>
-<p>KaiHeiLa.Net 目前仅支持 <a href="https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-6">.NET 6.0</a>，版本稳定后将会扩展到较旧的平台。</p>
-<h2 id="通过-nuget-包管理器安装">通过 NuGet 包管理器安装</h2>
-<p>支持的 NuGet 源有：</p>
-<ul>
-<li><a href="https://nuget.org">NuGet Gallery</a></li>
-<li><a href="https://github.com/gehongyan?tab=packages&amp;repo_name=KaiHeiLa.Net">GitHub Packages</a></li>
-</ul>
-<h3 id="使用-visual-studio">使用 Visual Studio</h3>
-<ol>
-<li>找到 <code>解决方案资源管理器</code> 窗口，在 Bot 项目下找到 <code>依赖项</code></li>
-<li><p>右键点击 <code>依赖项</code>，选择 <code>管理 NuGet 程序包</code></p>
-<p> <img src="images/install-vs-dependencies.png" alt="img.png"></p>
-</li>
-<li><p>在 <code>浏览</code> 选项卡中，搜索 <code>KaiHeiLa.Net</code></p>
-<div class="NOTE"><h5>Note</h5><p>在正式版发布前，搜索 KaiHeiLa.Net 需勾选 <code>包括预发行版</code>，否则，该搜索结果无法展示在列表中。</p>
-</div>
-<p> <img src="images/install-vs-nuget.png" alt="img.png"></p>
-</li>
-<li><p>选择 <code>KaiHeiLa.Net</code>，点击 <code>安装</code></p>
-</li>
-</ol>
-<h3 id="使用-jetbrains-rider">使用 JetBrains Rider</h3>
-<ol>
-<li>找到 <code>Explorer</code> 窗口，在 Bot 项目下找到 <code>Dependencies</code></li>
-<li><p>右键点击 <code>Dependencies</code>，选择 <code>Manage NuGet Packages</code></p>
-<p> <img src="images/install-rider-dependencies.png" alt="img.png"></p>
-</li>
-<li><p>在 <code>Packages</code> 选项卡中，搜索 <code>KaiHeiLa.Net</code></p>
-<div class="NOTE"><h5>Note</h5><p>在正式版发布前，搜索 KaiHeiLa.Net 需勾选 <code>Prerelease</code> ，否则，该搜索结果无法展示在列表中。</p>
-</div>
-</li>
-<li><p>右键点击 <code>KaiHeiLa.Net</code>，点击 <code>Install KaiHeiLa.Net ...</code></p>
-<p> <img src="images/install-rider-nuget.png" alt="img.png"></p>
-</li>
-</ol>
-<h3 id="使用-visual-studio-code">使用 Visual Studio Code</h3>
-<ol>
-<li>找到 Bot 项目的 <code>*.csproj</code> 文件</li>
-<li><p>添加 <code>Discord.Net</code> 到 <code>*.csproj</code> 中</p>
-<pre><code name="SampleProject.csproj">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
-
-    &lt;!--
-        &#30446;&#26631;&#26694;&#26550;&#19982; KaiHeiLa.Net &#29256;&#26412;&#21487;&#33021;&#20250;&#38543;&#30528;&#26410;&#26469;&#30340;&#24320;&#21457;&#32780;&#21457;&#29983;&#21464;&#21270;
-    --&gt;
-
-    &lt;PropertyGroup&gt;
-        &lt;OutputType&gt;Exe&lt;/OutputType&gt;
-        &lt;TargetFramework&gt;net6.0&lt;/TargetFramework&gt;
-    &lt;/PropertyGroup&gt;
-
-    &lt;ItemGroup&gt;
-        &lt;PackageReference Include=&quot;KaiHeiLa.Net&quot; Version=&quot;0.0.18-alpha&quot; /&gt;
-    &lt;/ItemGroup&gt;
-
-&lt;/Project&gt;
-</code></pre></li>
-</ol>
-<h3 id="使用-dotnet-cli">使用 dotnet CLI</h3>
-<ol>
-<li>启动终端</li>
-<li>导航至 Bot 项目中 <code>*.csproj</code> 文件的所在目录</li>
-<li><p>执行 <code>dotnet add package KaiHeiLa.Net</code></p>
-<div class="NOTE"><h5>Note</h5><p>在正式版发布前，使用 dotnet CLI 添加 KaiHeiLa.Net 需附加 <code>--prerelease</code> 选项，
-否则，dotnet CLI 将只尝试为项目添加稳定版本的 NuGet 包。</p>
-</div>
-</li>
-</ol>
-<hr>
-<h2 id="从源代码编译">从源代码编译</h2>
-<p>要从源代码编译 KaiHeiLa.Net，请参考：</p>
-<h3 id="使用-visual-studio-1">使用 Visual Studio</h3>
-<ul>
-<li><a href="https://visualstudio.microsoft.com/zh-hans/vs/">Visual Studio 2022</a> 或更新版本。</li>
-<li><a href="https://dotnet.microsoft.com/download">.NET 6 SDK</a></li>
-</ul>
-<p>安装 Visual Studio 期间需选择 .NET 6 工作负载。</p>
-<h3 id="使用-jetbrains-rider-1">使用 JetBrains Rider</h3>
-<ul>
-<li><a href="https://www.jetbrains.com.cn/rider/">JetBrains 2021.3</a> 或更新版本。</li>
-<li><a href="https://dotnet.microsoft.com/download">.NET 6 SDK</a></li>
-</ul>
-<h3 id="使用-command-line">使用 Command Line</h3>
-<ul>
-<li><a href="https://dotnet.microsoft.com/download">.NET 6 SDK</a></li>
-</ul>
-<hr>
+<h2 id="实现指定实体类">实现指定实体类</h2>
+<p>KaiHeiLa.Net 分为核心库与两个不同的实现：<code>KaiHeiLa.Net.Core</code>、
+<code>KaiHeiLa.Net.Rest</code> 和 <code>KaiHeiLa.Net.WebSocket</code>。作为 Bot 的开发者，
+您只需要了解如何使用 <code>KaiHeiLa.Net.WebSocket</code> ，但也需要了解它们之间的区别。</p>
+<p><code>KaiHeiLa.Net.Core</code> 提供了一组抽象化开黑啦 API 的接口，这些接口保证了 
+KaiHeiLa.Net 中的所有实现都保持一致。如果您正在编写与实现无关的库，可仅依赖
+核心库来确保您的库能够与 KaiHeiLa.Net 一起在任何类型的实现中都能正常工作。</p>
+<p><code>KaiHeiLa.Net.Rest</code> 提供了一组具体的类，用于实现开黑啦 API 中的 HTTP 接口部分。
+该实现中的实体以 <code>Rest</code> 为前缀，例如 <code>RestChannel</code>。</p>
+<p><code>KaiHeiLa.Net.WebSocket</code> 提供了一组具体的类，用于实现开黑啦 API 中的 WebSocket 接口部分，
+并支持实体的缓存。开发 Bot 时，您应使用此实现。该实现中的实体以 <code>Socket</code> 为前缀，
+例如 <code>SocketChannel</code>。</p>
 </article>
                 </div>
 
