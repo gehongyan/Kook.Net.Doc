@@ -114,6 +114,7 @@
     <div><a class="xref" href="KaiHeiLa.IUser.html">IUser</a></div>
     <div><a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity</a>&lt;<span class="xref">System.UInt64</span>&gt;</div>
     <div><a class="xref" href="KaiHeiLa.IMentionable.html">IMentionable</a></div>
+    <div><a class="xref" href="KaiHeiLa.IPresence.html">IPresence</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -125,7 +126,7 @@
   <h6><strong>Assembly</strong>: KaiHeiLa.Net.WebSocket.dll</h6>
   <h5 id="KaiHeiLa_WebSocket_SocketUser_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SocketUser : SocketEntity&lt;ulong&gt;, IEntity&lt;ulong&gt;, IUser, IEntity&lt;ulong&gt;, IMentionable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SocketUser : SocketEntity&lt;ulong&gt;, IEntity&lt;ulong&gt;, IUser, IEntity&lt;ulong&gt;, IMentionable, IPresence</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -134,7 +135,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser__ctor_KaiHeiLa_WebSocket_KaiHeiLaSocketClient_System_UInt64_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.%23ctor(KaiHeiLa.WebSocket.KaiHeiLaSocketClient%2CSystem.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L31">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L36">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser__ctor_" data-uid="KaiHeiLa.WebSocket.SocketUser.#ctor*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser__ctor_KaiHeiLa_WebSocket_KaiHeiLaSocketClient_System_UInt64_" data-uid="KaiHeiLa.WebSocket.SocketUser.#ctor(KaiHeiLa.WebSocket.KaiHeiLaSocketClient,System.UInt64)">SocketUser(KaiHeiLaSocketClient, UInt64)</h4>
@@ -170,10 +171,40 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_ActiveClient.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.ActiveClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L34">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketUser_ActiveClient_" data-uid="KaiHeiLa.WebSocket.SocketUser.ActiveClient*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketUser_ActiveClient" data-uid="KaiHeiLa.WebSocket.SocketUser.ActiveClient">ActiveClient</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientType? ActiveClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="KaiHeiLa.ClientType.html">ClientType</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_Avatar.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.Avatar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L20">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L19">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_Avatar_" data-uid="KaiHeiLa.WebSocket.SocketUser.Avatar*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_Avatar" data-uid="KaiHeiLa.WebSocket.SocketUser.Avatar">Avatar</h4>
@@ -263,7 +294,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_IsBanned.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.IsBanned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L18">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L17">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_IsBanned_" data-uid="KaiHeiLa.WebSocket.SocketUser.IsBanned*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_IsBanned" data-uid="KaiHeiLa.WebSocket.SocketUser.IsBanned">IsBanned</h4>
@@ -293,7 +324,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_IsBot.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.IsBot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L17">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L16">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_IsBot_" data-uid="KaiHeiLa.WebSocket.SocketUser.IsBot*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_IsBot" data-uid="KaiHeiLa.WebSocket.SocketUser.IsBot">IsBot</h4>
@@ -323,7 +354,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_IsDenoiseEnabled.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.IsDenoiseEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L22">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L21">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_IsDenoiseEnabled_" data-uid="KaiHeiLa.WebSocket.SocketUser.IsDenoiseEnabled*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_IsDenoiseEnabled" data-uid="KaiHeiLa.WebSocket.SocketUser.IsDenoiseEnabled">IsDenoiseEnabled</h4>
@@ -353,7 +384,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_IsOnline.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.IsOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L16">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L32">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_IsOnline_" data-uid="KaiHeiLa.WebSocket.SocketUser.IsOnline*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_IsOnline" data-uid="KaiHeiLa.WebSocket.SocketUser.IsOnline">IsOnline</h4>
@@ -361,7 +392,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract bool? IsOnline { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool? IsOnline { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,7 +414,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_IsVIP.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.IsVIP%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L19">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L18">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_IsVIP_" data-uid="KaiHeiLa.WebSocket.SocketUser.IsVIP*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_IsVIP" data-uid="KaiHeiLa.WebSocket.SocketUser.IsVIP">IsVIP</h4>
@@ -503,7 +534,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_UserTag.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.UserTag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L23">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L22">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_UserTag_" data-uid="KaiHeiLa.WebSocket.SocketUser.UserTag*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_UserTag" data-uid="KaiHeiLa.WebSocket.SocketUser.UserTag">UserTag</h4>
@@ -533,7 +564,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_VIPAvatar.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.VIPAvatar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L21">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L20">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_VIPAvatar_" data-uid="KaiHeiLa.WebSocket.SocketUser.VIPAvatar*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_VIPAvatar" data-uid="KaiHeiLa.WebSocket.SocketUser.VIPAvatar">VIPAvatar</h4>
@@ -565,7 +596,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_CreateDMChannelAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.CreateDMChannelAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L117">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L128">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_CreateDMChannelAsync_" data-uid="KaiHeiLa.WebSocket.SocketUser.CreateDMChannelAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_CreateDMChannelAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketUser.CreateDMChannelAsync(KaiHeiLa.RequestOptions)">CreateDMChannelAsync(RequestOptions)</h4>
@@ -612,7 +643,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_GetIntimacyAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.GetIntimacyAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L128">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L139">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_GetIntimacyAsync_" data-uid="KaiHeiLa.WebSocket.SocketUser.GetIntimacyAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_GetIntimacyAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketUser.GetIntimacyAsync(KaiHeiLa.RequestOptions)">GetIntimacyAsync(RequestOptions)</h4>
@@ -663,7 +694,7 @@ contains the intimacy information associated with this user.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_ToString.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L143">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L154">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_ToString_" data-uid="KaiHeiLa.WebSocket.SocketUser.ToString*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_ToString" data-uid="KaiHeiLa.WebSocket.SocketUser.ToString">ToString()</h4>
@@ -695,7 +726,7 @@ contains the intimacy information associated with this user.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUser_UpdateIntimacyAsync_Action_KaiHeiLa_IntimacyProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUser.UpdateIntimacyAsync(Action%7BKaiHeiLa.IntimacyProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L132">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketUser.cs/#L143">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUser_UpdateIntimacyAsync_" data-uid="KaiHeiLa.WebSocket.SocketUser.UpdateIntimacyAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUser_UpdateIntimacyAsync_Action_KaiHeiLa_IntimacyProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketUser.UpdateIntimacyAsync(Action{KaiHeiLa.IntimacyProperties},KaiHeiLa.RequestOptions)">UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt;, RequestOptions)</h4>
@@ -754,6 +785,9 @@ contains the intimacy information associated with this user.</p>
   </div>
   <div>
       <a class="xref" href="KaiHeiLa.IMentionable.html">IMentionable</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IPresence.html">IPresence</a>
   </div>
 </article>
                 </div>

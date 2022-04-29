@@ -96,7 +96,8 @@
   
   <h1 id="KaiHeiLa_ISelfUser" data-uid="KaiHeiLa.ISelfUser" class="text-break">Interface ISelfUser
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents the logged-in Discord user.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -108,9 +109,6 @@
     </div>
     <div>
       <a class="xref" href="KaiHeiLa.IUser.html#KaiHeiLa_IUser_IdentifyNumberValue">IUser.IdentifyNumberValue</a>
-    </div>
-    <div>
-      <a class="xref" href="KaiHeiLa.IUser.html#KaiHeiLa_IUser_IsOnline">IUser.IsOnline</a>
     </div>
     <div>
       <a class="xref" href="KaiHeiLa.IUser.html#KaiHeiLa_IUser_IsBot">IUser.IsBot</a>
@@ -146,17 +144,23 @@
       <a class="xref" href="KaiHeiLa.IEntity-1.html#KaiHeiLa_IEntity_1_Id">IEntity&lt;UInt64&gt;.Id</a>
     </div>
     <div>
+      <a class="xref" href="KaiHeiLa.IMentionable.html#KaiHeiLa_IMentionable_PlainTextMention">IMentionable.PlainTextMention</a>
+    </div>
+    <div>
       <a class="xref" href="KaiHeiLa.IMentionable.html#KaiHeiLa_IMentionable_KMarkdownMention">IMentionable.KMarkdownMention</a>
     </div>
     <div>
-      <a class="xref" href="KaiHeiLa.IMentionable.html#KaiHeiLa_IMentionable_PlainTextMention">IMentionable.PlainTextMention</a>
+      <a class="xref" href="KaiHeiLa.IPresence.html#KaiHeiLa_IPresence_IsOnline">IPresence.IsOnline</a>
+    </div>
+    <div>
+      <a class="xref" href="KaiHeiLa.IPresence.html#KaiHeiLa_IPresence_ActiveClient">IPresence.ActiveClient</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="KaiHeiLa.html">KaiHeiLa</a></h6>
   <h6><strong>Assembly</strong>: KaiHeiLa.Net.Core.dll</h6>
   <h5 id="KaiHeiLa_ISelfUser_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISelfUser : IUser, IEntity&lt;ulong&gt;, IMentionable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ISelfUser : IUser, IEntity&lt;ulong&gt;, IMentionable, IPresence</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -165,11 +169,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_ISelfUser_InvitedCount.md&amp;value=---%0Auid%3A%20KaiHeiLa.ISelfUser.InvitedCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L9">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L19">View Source</a>
   </span>
   <a id="KaiHeiLa_ISelfUser_InvitedCount_" data-uid="KaiHeiLa.ISelfUser.InvitedCount*"></a>
   <h4 id="KaiHeiLa_ISelfUser_InvitedCount" data-uid="KaiHeiLa.ISelfUser.InvitedCount">InvitedCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>// TODO: To be documented.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -195,11 +200,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_ISelfUser_IsMobileVerified.md&amp;value=---%0Auid%3A%20KaiHeiLa.ISelfUser.IsMobileVerified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L11">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L23">View Source</a>
   </span>
   <a id="KaiHeiLa_ISelfUser_IsMobileVerified_" data-uid="KaiHeiLa.ISelfUser.IsMobileVerified*"></a>
   <h4 id="KaiHeiLa_ISelfUser_IsMobileVerified" data-uid="KaiHeiLa.ISelfUser.IsMobileVerified">IsMobileVerified</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets whether the mobile number of the logged-in user is verified.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -225,11 +231,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_ISelfUser_Mobile.md&amp;value=---%0Auid%3A%20KaiHeiLa.ISelfUser.Mobile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L7">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L15">View Source</a>
   </span>
   <a id="KaiHeiLa_ISelfUser_Mobile_" data-uid="KaiHeiLa.ISelfUser.Mobile*"></a>
   <h4 id="KaiHeiLa_ISelfUser_Mobile" data-uid="KaiHeiLa.ISelfUser.Mobile">Mobile</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the mobile number of the logged-in user.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -255,11 +262,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_ISelfUser_MobilePrefix.md&amp;value=---%0Auid%3A%20KaiHeiLa.ISelfUser.MobilePrefix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L5">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L11">View Source</a>
   </span>
   <a id="KaiHeiLa_ISelfUser_MobilePrefix_" data-uid="KaiHeiLa.ISelfUser.MobilePrefix*"></a>
   <h4 id="KaiHeiLa_ISelfUser_MobilePrefix" data-uid="KaiHeiLa.ISelfUser.MobilePrefix">MobilePrefix</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the mobile prefix of the logged-in user.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -287,7 +295,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_ISelfUser_StartPlayingAsync_KaiHeiLa_IGame_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.ISelfUser.StartPlayingAsync(KaiHeiLa.IGame%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L21">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L33">View Source</a>
   </span>
   <a id="KaiHeiLa_ISelfUser_StartPlayingAsync_" data-uid="KaiHeiLa.ISelfUser.StartPlayingAsync*"></a>
   <h4 id="KaiHeiLa_ISelfUser_StartPlayingAsync_KaiHeiLa_IGame_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.ISelfUser.StartPlayingAsync(KaiHeiLa.IGame,KaiHeiLa.RequestOptions)">StartPlayingAsync(IGame, RequestOptions)</h4>
@@ -343,7 +351,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_ISelfUser_StopPlayingAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.ISelfUser.StopPlayingAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L30">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Users/ISelfUser.cs/#L42">View Source</a>
   </span>
   <a id="KaiHeiLa_ISelfUser_StopPlayingAsync_" data-uid="KaiHeiLa.ISelfUser.StopPlayingAsync*"></a>
   <h4 id="KaiHeiLa_ISelfUser_StopPlayingAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.ISelfUser.StopPlayingAsync(KaiHeiLa.RequestOptions)">StopPlayingAsync(RequestOptions)</h4>

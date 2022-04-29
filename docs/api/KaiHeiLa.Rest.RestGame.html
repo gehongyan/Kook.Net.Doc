@@ -108,6 +108,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity</a>&lt;<span class="xref">System.Int32</span>&gt;</div>
     <div><a class="xref" href="KaiHeiLa.IGame.html">IGame</a></div>
+    <div><a class="xref" href="KaiHeiLa.IActivity.html">IActivity</a></div>
     <div><a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity</a>&lt;<span class="xref">System.Int32</span>&gt;</div>
     <div><a class="xref" href="KaiHeiLa.IDeletable.html">IDeletable</a></div>
   </div>
@@ -121,7 +122,7 @@
   <h6><strong>Assembly</strong>: KaiHeiLa.Net.Rest.dll</h6>
   <h5 id="KaiHeiLa_Rest_RestGame_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RestGame : RestEntity&lt;int&gt;, IEntity&lt;int&gt;, IGame, IEntity&lt;int&gt;, IDeletable</code></pre>
+    <pre><code class="lang-csharp hljs">public class RestGame : RestEntity&lt;int&gt;, IEntity&lt;int&gt;, IGame, IActivity, IEntity&lt;int&gt;, IDeletable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -151,36 +152,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestGame_KmHookAdmin.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestGame.KmHookAdmin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Games/RestGame.cs/#L14">View Source</a>
-  </span>
-  <a id="KaiHeiLa_Rest_RestGame_KmHookAdmin_" data-uid="KaiHeiLa.Rest.RestGame.KmHookAdmin*"></a>
-  <h4 id="KaiHeiLa_Rest_RestGame_KmHookAdmin" data-uid="KaiHeiLa.Rest.RestGame.KmHookAdmin">KmHookAdmin</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool KmHookAdmin { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -307,18 +278,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestGame_Type.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestGame.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestGame_RequireAdminPrivilege.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestGame.RequireAdminPrivilege%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Games/RestGame.cs/#L12">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Games/RestGame.cs/#L14">View Source</a>
   </span>
-  <a id="KaiHeiLa_Rest_RestGame_Type_" data-uid="KaiHeiLa.Rest.RestGame.Type*"></a>
-  <h4 id="KaiHeiLa_Rest_RestGame_Type" data-uid="KaiHeiLa.Rest.RestGame.Type">Type</h4>
+  <a id="KaiHeiLa_Rest_RestGame_RequireAdminPrivilege_" data-uid="KaiHeiLa.Rest.RestGame.RequireAdminPrivilege*"></a>
+  <h4 id="KaiHeiLa_Rest_RestGame_RequireAdminPrivilege" data-uid="KaiHeiLa.Rest.RestGame.RequireAdminPrivilege">RequireAdminPrivilege</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameType Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool RequireAdminPrivilege { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -330,7 +301,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="KaiHeiLa.GameType.html">GameType</a></td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Rest_RestGame_Type.md&amp;value=---%0Auid%3A%20KaiHeiLa.Rest.RestGame.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/Games/RestGame.cs/#L12">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Rest_RestGame_Type_" data-uid="KaiHeiLa.Rest.RestGame.Type*"></a>
+  <h4 id="KaiHeiLa_Rest_RestGame_Type" data-uid="KaiHeiLa.Rest.RestGame.Type">Type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActivityType Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.ActivityType.html">ActivityType</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -442,6 +443,9 @@
   </div>
   <div>
       <a class="xref" href="KaiHeiLa.IGame.html">IGame</a>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IActivity.html">IActivity</a>
   </div>
   <div>
       <a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity&lt;TId&gt;</a>
