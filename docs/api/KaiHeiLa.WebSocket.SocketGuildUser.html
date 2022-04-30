@@ -656,7 +656,7 @@ permissions this user has in the guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuildUser_Roles.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuildUser.Roles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L174">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L192">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuildUser_Roles_" data-uid="KaiHeiLa.WebSocket.SocketGuildUser.Roles*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuildUser_Roles" data-uid="KaiHeiLa.WebSocket.SocketGuildUser.Roles">Roles</h4>
@@ -682,6 +682,13 @@ permissions this user has in the guild.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="KaiHeiLa_WebSocket_SocketGuildUser_Roles_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+    Due to the lack of events which should be raised when a role is added or removed from a user,
+    this property may not be completely accurate. To ensure the most accurate results,
+    it is recommended to call <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildUser.html#KaiHeiLa_WebSocket_SocketGuildUser_ReloadAsync_KaiHeiLa_RequestOptions_">ReloadAsync(RequestOptions)</a> before this property is used.
+</p></div>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuildUser_Username.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuildUser.Username%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -1088,7 +1095,7 @@ permissions this user has in the guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuildUser_GetPermissions_KaiHeiLa_IGuildChannel_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuildUser.GetPermissions(KaiHeiLa.IGuildChannel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L178">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L196">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuildUser_GetPermissions_" data-uid="KaiHeiLa.WebSocket.SocketGuildUser.GetPermissions*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuildUser_GetPermissions_KaiHeiLa_IGuildChannel_" data-uid="KaiHeiLa.WebSocket.SocketGuildUser.GetPermissions(KaiHeiLa.IGuildChannel)">GetPermissions(IGuildChannel)</h4>
@@ -1277,6 +1284,57 @@ specified channel.</p>
       <tr>
         <td><span class="xref">Task</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuildUser_ReloadAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuildUser.ReloadAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L179">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketGuildUser_ReloadAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuildUser.ReloadAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketGuildUser_ReloadAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuildUser.ReloadAsync(KaiHeiLa.RequestOptions)">ReloadAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Fetches the users data from the REST API to update this object,
+especially the <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildUser.html#KaiHeiLa_WebSocket_SocketGuildUser_Roles">Roles</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ReloadAsync(RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>A task that represents the asynchronous reloading operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1589,7 +1647,7 @@ specified channel.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuildUser_KaiHeiLa_IGuildUser_Guild.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuildUser.KaiHeiLa%23IGuildUser%23Guild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L186">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L204">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuildUser_KaiHeiLa_IGuildUser_Guild_" data-uid="KaiHeiLa.WebSocket.SocketGuildUser.KaiHeiLa#IGuildUser#Guild*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuildUser_KaiHeiLa_IGuildUser_Guild" data-uid="KaiHeiLa.WebSocket.SocketGuildUser.KaiHeiLa#IGuildUser#Guild">IGuildUser.Guild</h4>
