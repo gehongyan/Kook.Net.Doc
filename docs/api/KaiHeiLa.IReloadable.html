@@ -5,10 +5,10 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Interface IUpdateable
+      <title>Interface IReloadable
      | KaiHeiLa.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Interface IUpdateable
+      <meta name="title" content="Interface IReloadable
      | KaiHeiLa.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
@@ -91,37 +91,37 @@
                           </div>
                         </div>
 
-                    <article class="content wrap" id="_content" data-uid="KaiHeiLa.IUpdateable">
+                    <article class="content wrap" id="_content" data-uid="KaiHeiLa.IReloadable">
   
   
-  <h1 id="KaiHeiLa_IUpdateable" data-uid="KaiHeiLa.IUpdateable" class="text-break">Interface IUpdateable
+  <h1 id="KaiHeiLa_IReloadable" data-uid="KaiHeiLa.IReloadable" class="text-break">Interface IReloadable
   </h1>
-  <div class="markdown level0 summary"><p>Defines whether the object is updateable or not.</p>
+  <div class="markdown level0 summary"><p>Defines whether the object is reloadable or not.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="KaiHeiLa.html">KaiHeiLa</a></h6>
-  <h6><strong>Assembly</strong>: KaiHeiLa.Net.Rest.dll</h6>
-  <h5 id="KaiHeiLa_IUpdateable_syntax">Syntax</h5>
+  <h6><strong>Assembly</strong>: KaiHeiLa.Net.Core.dll</h6>
+  <h5 id="KaiHeiLa_IReloadable_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IUpdateable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IReloadable</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IUpdateable_UpdateAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IUpdateable.UpdateAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IReloadable_ReloadAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IReloadable.ReloadAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Rest/Entities/IUpdateable.cs/#L14">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/IReloadable.cs/#L21">View Source</a>
   </span>
-  <a id="KaiHeiLa_IUpdateable_UpdateAsync_" data-uid="KaiHeiLa.IUpdateable.UpdateAsync*"></a>
-  <h4 id="KaiHeiLa_IUpdateable_UpdateAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IUpdateable.UpdateAsync(KaiHeiLa.RequestOptions)">UpdateAsync(RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Updates this object&apos;s properties with its current state.</p>
+  <a id="KaiHeiLa_IReloadable_ReloadAsync_" data-uid="KaiHeiLa.IReloadable.ReloadAsync*"></a>
+  <h4 id="KaiHeiLa_IReloadable_ReloadAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IReloadable.ReloadAsync(KaiHeiLa.RequestOptions)">ReloadAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Reload this object&apos;s properties with its current state.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task UpdateAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task ReloadAsync(RequestOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,10 +152,17 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span></td>
-        <td></td>
+        <td><p>A task that represents an asynchronous reloading operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="KaiHeiLa_IReloadable_ReloadAsync_KaiHeiLa_RequestOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+    This method will fetch the latest data from REST API,
+    and replace the current object&apos;s properties with the new data.
+</p></div>
+</div>
 </article>
                 </div>
 

@@ -137,9 +137,6 @@
       <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_UserPermissionOverwrites">SocketGuildChannel.UserPermissionOverwrites</a>
     </div>
     <div>
-      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_Users">SocketGuildChannel.Users</a>
-    </div>
-    <div>
       <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_DeleteAsync_KaiHeiLa_RequestOptions_">SocketGuildChannel.DeleteAsync(RequestOptions)</a>
     </div>
     <div>
@@ -167,9 +164,6 @@
       <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_ModifyPermissionOverwriteAsync_KaiHeiLa_IRole_Action_KaiHeiLa_OverwritePermissions__KaiHeiLa_RequestOptions_">SocketGuildChannel.ModifyPermissionOverwriteAsync(IRole, Action&lt;OverwritePermissions&gt;, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_GetUser_System_UInt64_">SocketGuildChannel.GetUser(UInt64)</a>
-    </div>
-    <div>
       <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_ToString">SocketGuildChannel.ToString()</a>
     </div>
     <div>
@@ -185,6 +179,126 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class SocketCategoryChannel : SocketGuildChannel, IEntity&lt;ulong&gt;, ICategoryChannel, IGuildChannel, IChannel, IEntity&lt;ulong&gt;, IDeletable</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketCategoryChannel_Channels.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketCategoryChannel.Channels%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketCategoryChannel.cs/#L29">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketCategoryChannel_Channels_" data-uid="KaiHeiLa.WebSocket.SocketCategoryChannel.Channels*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketCategoryChannel_Channels" data-uid="KaiHeiLa.WebSocket.SocketCategoryChannel.Channels">Channels</h4>
+  <div class="markdown level1 summary"><p>Gets the child channels of this category.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketGuildChannel&gt; Channels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html">SocketGuildChannel</a>&gt;</td>
+        <td><p>A read-only collection of <a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html">SocketGuildChannel</a> whose
+<a class="xref" href="KaiHeiLa.INestedChannel.html#KaiHeiLa_INestedChannel_CategoryId">CategoryId</a> matches the identifier of this category channel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketCategoryChannel_Users.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketCategoryChannel.Users%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketCategoryChannel.cs/#L17">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketCategoryChannel_Users_" data-uid="KaiHeiLa.WebSocket.SocketCategoryChannel.Users*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketCategoryChannel_Users" data-uid="KaiHeiLa.WebSocket.SocketCategoryChannel.Users">Users</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of users that are able to view the channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IReadOnlyCollection&lt;SocketGuildUser&gt; Users { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</td>
+        <td><p>A read-only collection of users that can access the channel (i.e. the users seen in the user list).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_Users">SocketGuildChannel.Users</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketCategoryChannel_GetUser_System_UInt64_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketCategoryChannel.GetUser(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/SocketCategoryChannel.cs/#L48">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketCategoryChannel_GetUser_" data-uid="KaiHeiLa.WebSocket.SocketCategoryChannel.GetUser*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketCategoryChannel_GetUser_System_UInt64_" data-uid="KaiHeiLa.WebSocket.SocketCategoryChannel.GetUser(System.UInt64)">GetUser(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override SocketGuildUser GetUser(ulong id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.WebSocket.SocketGuildUser.html">SocketGuildUser</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="KaiHeiLa.WebSocket.SocketGuildChannel.html#KaiHeiLa_WebSocket_SocketGuildChannel_GetUser_System_UInt64_">SocketGuildChannel.GetUser(UInt64)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity&lt;TId&gt;</a>

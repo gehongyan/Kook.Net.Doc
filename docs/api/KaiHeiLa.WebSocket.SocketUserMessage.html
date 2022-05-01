@@ -109,7 +109,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity</a>&lt;<span class="xref">Guid</span>&gt;</div>
-    <div><a class="xref" href="KaiHeiLa.IUpdateable.html">IUpdateable</a></div>
+    <div><a class="xref" href="KaiHeiLa.IReloadable.html">IReloadable</a></div>
     <div><a class="xref" href="KaiHeiLa.IUserMessage.html">IUserMessage</a></div>
     <div><a class="xref" href="KaiHeiLa.IMessage.html">IMessage</a></div>
     <div><a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity</a>&lt;<span class="xref">Guid</span>&gt;</div>
@@ -151,7 +151,7 @@
       <a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html#KaiHeiLa_WebSocket_SocketMessage_DeleteAsync_KaiHeiLa_RequestOptions_">SocketMessage.DeleteAsync(RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html#KaiHeiLa_WebSocket_SocketMessage_UpdateAsync_KaiHeiLa_RequestOptions_">SocketMessage.UpdateAsync(RequestOptions)</a>
+      <a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html#KaiHeiLa_WebSocket_SocketMessage_ReloadAsync_KaiHeiLa_RequestOptions_">SocketMessage.ReloadAsync(RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html#KaiHeiLa_WebSocket_SocketMessage_AddReactionAsync_KaiHeiLa_IEmote_KaiHeiLa_RequestOptions_">SocketMessage.AddReactionAsync(IEmote, RequestOptions)</a>
@@ -185,7 +185,7 @@
   <h6><strong>Assembly</strong>: KaiHeiLa.Net.WebSocket.dll</h6>
   <h5 id="KaiHeiLa_WebSocket_SocketUserMessage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SocketUserMessage : SocketMessage, IEntity&lt;Guid&gt;, IUpdateable, IUserMessage, IMessage, IEntity&lt;Guid&gt;, IDeletable</code></pre>
+    <pre><code class="lang-csharp hljs">public class SocketUserMessage : SocketMessage, IEntity&lt;Guid&gt;, IReloadable, IUserMessage, IMessage, IEntity&lt;Guid&gt;, IDeletable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -194,11 +194,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_Attachment.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.Attachment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L34">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L42">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_Attachment_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Attachment*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_Attachment" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Attachment">Attachment</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the attachment included in this message.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -226,11 +227,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_Cards.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.Cards%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L36">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L44">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_Cards_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Cards*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_Cards" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Cards">Cards</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all cards included in this message.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -247,7 +249,8 @@
     <tbody>
       <tr>
         <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.ICard.html">ICard</a>&gt;</td>
-        <td></td>
+        <td><p>Collection of card objects.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -258,11 +261,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_Embeds.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.Embeds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L38">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L46">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_Embeds_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Embeds*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_Embeds" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Embeds">Embeds</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all embeds included in this message.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -279,7 +283,8 @@
     <tbody>
       <tr>
         <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.IEmbed.html">IEmbed</a>&gt;</td>
-        <td></td>
+        <td><p>Collection of embed objects.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -290,11 +295,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_Guild.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.Guild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L29">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L37">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_Guild_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Guild*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_Guild" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Guild">Guild</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="KaiHeiLa.WebSocket.SocketGuild.html">SocketGuild</a> that the message was sent from.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -311,7 +317,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="KaiHeiLa.WebSocket.SocketGuild.html">SocketGuild</a></td>
-        <td></td>
+        <td><p>The <a class="xref" href="KaiHeiLa.WebSocket.SocketGuild.html">SocketGuild</a> that the message was sent from.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -320,11 +327,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_IsPinned.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.IsPinned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L31">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L39">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_IsPinned_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.IsPinned*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_IsPinned" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.IsPinned">IsPinned</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the value that indicates whether this message is pinned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -341,7 +349,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
+        <td><p><code>true</code> if this message was added to its channel&apos;s pinned messages; otherwise <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -350,7 +359,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_MentionedEveryone.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.MentionedEveryone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L42">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L50">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_MentionedEveryone_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.MentionedEveryone*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_MentionedEveryone" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.MentionedEveryone">MentionedEveryone</h4>
@@ -382,7 +391,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_MentionedHere.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.MentionedHere%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L44">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L52">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_MentionedHere_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.MentionedHere*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_MentionedHere" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.MentionedHere">MentionedHere</h4>
@@ -414,7 +423,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_MentionedRoles.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.MentionedRoles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L40">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L48">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_MentionedRoles_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.MentionedRoles*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_MentionedRoles" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.MentionedRoles">MentionedRoles</h4>
@@ -448,11 +457,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_Quote.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.Quote%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L28">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L30">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_Quote_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Quote*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_Quote" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Quote">Quote</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the message quote.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -469,7 +479,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="KaiHeiLa.Quote.html">Quote</a></td>
-        <td></td>
+        <td><p>The message quote.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -478,7 +489,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_Tags.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.Tags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L46">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L54">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_Tags_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Tags*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_Tags" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Tags">Tags</h4>
@@ -512,7 +523,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_ModifyAsync_Action_KaiHeiLa_MessageProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.ModifyAsync(Action%7BKaiHeiLa.MessageProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L211">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L219">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_ModifyAsync_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.ModifyAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_ModifyAsync_Action_KaiHeiLa_MessageProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.ModifyAsync(Action{KaiHeiLa.MessageProperties},KaiHeiLa.RequestOptions)">ModifyAsync(Action&lt;MessageProperties&gt;, RequestOptions)</h4>
@@ -564,7 +575,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_Resolve_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.Resolve(KaiHeiLa.TagHandling%2CKaiHeiLa.TagHandling%2CKaiHeiLa.TagHandling%2CKaiHeiLa.TagHandling%2CKaiHeiLa.TagHandling)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L218">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L228">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_Resolve_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Resolve*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_Resolve_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Resolve(KaiHeiLa.TagHandling,KaiHeiLa.TagHandling,KaiHeiLa.TagHandling,KaiHeiLa.TagHandling,KaiHeiLa.TagHandling)">Resolve(TagHandling, TagHandling, TagHandling, TagHandling, TagHandling)</h4>
@@ -631,11 +642,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_Resolve_System_Int32_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.Resolve(System.Int32%2CKaiHeiLa.TagHandling%2CKaiHeiLa.TagHandling%2CKaiHeiLa.TagHandling%2CKaiHeiLa.TagHandling%2CKaiHeiLa.TagHandling)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L214">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L224">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_Resolve_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Resolve*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_Resolve_System_Int32_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_KaiHeiLa_TagHandling_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.Resolve(System.Int32,KaiHeiLa.TagHandling,KaiHeiLa.TagHandling,KaiHeiLa.TagHandling,KaiHeiLa.TagHandling,KaiHeiLa.TagHandling)">Resolve(Int32, TagHandling, TagHandling, TagHandling, TagHandling, TagHandling)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Transforms this message&apos;s text into a human-readable form by resolving its tags.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -654,7 +666,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">startIndex</span></td>
-        <td></td>
+        <td><p>The zero-based index at which to begin the resolving for the specified value.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="KaiHeiLa.TagHandling.html">TagHandling</a></td>
@@ -705,11 +718,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketUserMessage_KaiHeiLa_IUserMessage_Quote.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketUserMessage.KaiHeiLa%23IUserMessage%23Quote%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L228">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Messages/SocketUserMessage.cs/#L240">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketUserMessage_KaiHeiLa_IUserMessage_Quote_" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.KaiHeiLa#IUserMessage#Quote*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketUserMessage_KaiHeiLa_IUserMessage_Quote" data-uid="KaiHeiLa.WebSocket.SocketUserMessage.KaiHeiLa#IUserMessage#Quote">IUserMessage.Quote</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the message quote.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -726,7 +740,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="KaiHeiLa.IQuote.html">IQuote</a></td>
-        <td></td>
+        <td><p>The message quote.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -735,7 +750,7 @@
       <a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity&lt;TId&gt;</a>
   </div>
   <div>
-      <a class="xref" href="KaiHeiLa.IUpdateable.html">IUpdateable</a>
+      <a class="xref" href="KaiHeiLa.IReloadable.html">IReloadable</a>
   </div>
   <div>
       <a class="xref" href="KaiHeiLa.IUserMessage.html">IUserMessage</a>

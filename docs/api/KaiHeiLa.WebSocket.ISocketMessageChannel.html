@@ -162,6 +162,40 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface ISocketMessageChannel : IMessageChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_ISocketMessageChannel_CachedMessages.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.ISocketMessageChannel.CachedMessages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L16">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_ISocketMessageChannel_CachedMessages_" data-uid="KaiHeiLa.WebSocket.ISocketMessageChannel.CachedMessages*"></a>
+  <h4 id="KaiHeiLa_WebSocket_ISocketMessageChannel_CachedMessages" data-uid="KaiHeiLa.WebSocket.ISocketMessageChannel.CachedMessages">CachedMessages</h4>
+  <div class="markdown level1 summary"><p>Gets all messages in this channel&apos;s cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;SocketMessage&gt; CachedMessages { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</td>
+        <td><p>A read-only collection of WebSocket-based messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -169,7 +203,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessage_Guid_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessage(Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L29">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L36">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessage_" data-uid="KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessage*"></a>
   <h4 id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessage_Guid_" data-uid="KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessage(Guid)">GetCachedMessage(Guid)</h4>
@@ -224,6 +258,219 @@ enabled.</p>
 <p>
     This method retrieves the message from the local WebSocket cache and does not send any additional
     request to KaiHeiLa. This message may be a message that has been deleted.
+</p></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_Guid_KaiHeiLa_Direction_System_Int32_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessages(Guid%2CKaiHeiLa.Direction%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L82">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_" data-uid="KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessages*"></a>
+  <h4 id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_Guid_KaiHeiLa_Direction_System_Int32_" data-uid="KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessages(Guid,KaiHeiLa.Direction,System.Int32)">GetCachedMessages(Guid, Direction, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the last N cached messages starting from a certain message in this message channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(Guid fromMessageId, Direction dir, int limit = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">fromMessageId</span></td>
+        <td><p>The message ID to start the fetching from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Direction.html">Direction</a></td>
+        <td><span class="parametername">dir</span></td>
+        <td><p>The direction of which the message should be gotten from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The number of messages to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</td>
+        <td><p>A read-only collection of WebSocket-based messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_Guid_KaiHeiLa_Direction_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><div class="WARNING"><h5>warning</h5><p>
+    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+    this method will always return an empty collection. Please refer to
+<a class="xref" href="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.html#KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+</p></div>
+<p>
+    This method retrieves the message(s) from the local WebSocket cache and does not send any additional
+    request to KaiHeiLa. This read-only collection may include messages that have been deleted. The
+    maximum number of messages that can be retrieved from this method depends on the
+<a class="xref" href="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.html#KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
+</p></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_KaiHeiLa_IMessage_KaiHeiLa_Direction_System_Int32_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessages(KaiHeiLa.IMessage%2CKaiHeiLa.Direction%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L105">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_" data-uid="KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessages*"></a>
+  <h4 id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_KaiHeiLa_IMessage_KaiHeiLa_Direction_System_Int32_" data-uid="KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessages(KaiHeiLa.IMessage,KaiHeiLa.Direction,System.Int32)">GetCachedMessages(IMessage, Direction, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the last N cached messages starting from a certain message in this message channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(IMessage fromMessage, Direction dir, int limit = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IMessage.html">IMessage</a></td>
+        <td><span class="parametername">fromMessage</span></td>
+        <td><p>The message to start the fetching from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.Direction.html">Direction</a></td>
+        <td><span class="parametername">dir</span></td>
+        <td><p>The direction of which the message should be gotten from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The number of messages to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</td>
+        <td><p>A read-only collection of WebSocket-based messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_KaiHeiLa_IMessage_KaiHeiLa_Direction_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><div class="WARNING"><h5>warning</h5><p>
+    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+    this method will always return an empty collection. Please refer to
+<a class="xref" href="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.html#KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+</p></div>
+<p>
+    This method retrieves the message(s) from the local WebSocket cache and does not send any additional
+    request to KaiHeiLa. This read-only collection may include messages that have been deleted. The
+    maximum number of messages that can be retrieved from this method depends on the
+<a class="xref" href="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.html#KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
+</p></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Int32_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessages(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L58">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_" data-uid="KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessages*"></a>
+  <h4 id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Int32_" data-uid="KaiHeiLa.WebSocket.ISocketMessageChannel.GetCachedMessages(System.Int32)">GetCachedMessages(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the last N cached messages from this message channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(int limit = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The number of messages to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</td>
+        <td><p>A read-only collection of WebSocket-based messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KaiHeiLa_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><div class="WARNING"><h5>warning</h5><p>
+    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+    this method will always return an empty collection. Please refer to
+<a class="xref" href="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.html#KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+</p></div>
+<p>
+    This method retrieves the message(s) from the local WebSocket cache and does not send any additional
+    request to KaiHeiLa. This read-only collection may include messages that have been deleted. The
+    maximum number of messages that can be retrieved from this method depends on the
+<a class="xref" href="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.html#KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
 </p></p>
 </div>
 </article>
