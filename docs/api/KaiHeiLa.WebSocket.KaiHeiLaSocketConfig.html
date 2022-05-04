@@ -175,7 +175,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_KaiHeiLaSocketConfig__ctor.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L85">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L93">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig__ctor_" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.#ctor*"></a>
   <h4 id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig__ctor" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.#ctor">KaiHeiLaSocketConfig()</h4>
@@ -225,7 +225,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L27">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_HeartbeatIntervalMilliseconds" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.HeartbeatIntervalMilliseconds">HeartbeatIntervalMilliseconds</h4>
-  <div class="markdown level1 summary"><p>心跳间隔毫秒</p>
+  <div class="markdown level1 summary"><p>Gets the heartbeat interval of WebSocket connection in milliseconds.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -254,7 +254,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_AlwaysDownloadUsers.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.AlwaysDownloadUsers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L54">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L62">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_AlwaysDownloadUsers_" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.AlwaysDownloadUsers*"></a>
   <h4 id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_AlwaysDownloadUsers" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.AlwaysDownloadUsers">AlwaysDownloadUsers</h4>
@@ -280,6 +280,13 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_AlwaysDownloadUsers_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+    Please note that it can be difficult to fill the cache completely on large guilds depending on the
+    traffic. If you are experiencing issues, try setting this to <code>false</code> and manually call
+<a class="xref" href="KaiHeiLa.WebSocket.KaiHeiLaSocketClient.html#KaiHeiLa_WebSocket_KaiHeiLaSocketClient_DownloadUsersAsync_IEnumerable_KaiHeiLa_IGuild__">DownloadUsersAsync(IEnumerable&lt;IGuild&gt;)</a> on the guilds you want.
+</p></div>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_ConnectionTimeout.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.ConnectionTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -289,7 +296,7 @@
   </span>
   <a id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_ConnectionTimeout_" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.ConnectionTimeout*"></a>
   <h4 id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_ConnectionTimeout" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.ConnectionTimeout">ConnectionTimeout</h4>
-  <div class="markdown level1 summary"><p>超时毫秒</p>
+  <div class="markdown level1 summary"><p>Gets or sets the time, in milliseconds, to wait for a connection to complete before aborting.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -348,11 +355,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_HandlerTimeout.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.HandlerTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L32">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L33">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_HandlerTimeout_" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.HandlerTimeout*"></a>
   <h4 id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_HandlerTimeout" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.HandlerTimeout">HandlerTimeout</h4>
-  <div class="markdown level1 summary"><p>处理程序超时毫秒</p>
+  <div class="markdown level1 summary"><p>Gets or sets the timeout for event handlers, in milliseconds, after which a warning will be logged.
+Setting this property to <code>null</code>disables this check.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -379,7 +387,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_LargeThreshold.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.LargeThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L44">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L45">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_LargeThreshold_" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.LargeThreshold*"></a>
   <h4 id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_LargeThreshold" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.LargeThreshold">LargeThreshold</h4>
@@ -411,7 +419,7 @@ packet. The maximum value allowed is 250.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MaxWaitBetweenGuildAvailablesBeforeReady.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.MaxWaitBetweenGuildAvailablesBeforeReady%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L69">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L77">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MaxWaitBetweenGuildAvailablesBeforeReady_" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.MaxWaitBetweenGuildAvailablesBeforeReady*"></a>
   <h4 id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MaxWaitBetweenGuildAvailablesBeforeReady" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.MaxWaitBetweenGuildAvailablesBeforeReady">MaxWaitBetweenGuildAvailablesBeforeReady</h4>
@@ -449,7 +457,7 @@ before firing READY.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MessageCacheSize.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.MessageCacheSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L38">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L39">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MessageCacheSize_" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.MessageCacheSize*"></a>
   <h4 id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_MessageCacheSize" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.MessageCacheSize">MessageCacheSize</h4>
@@ -481,7 +489,7 @@ disables the message cache entirely.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_WebSocketProvider.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.WebSocketProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L49">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/KaiHeiLaSocketConfig.cs/#L50">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_WebSocketProvider_" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.WebSocketProvider*"></a>
   <h4 id="KaiHeiLa_WebSocket_KaiHeiLaSocketConfig_WebSocketProvider" data-uid="KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.WebSocketProvider">WebSocketProvider</h4>

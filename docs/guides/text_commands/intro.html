@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>&#25991;&#26412;&#21629;&#20196;&#26694;&#26550;&#20837;&#38376; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="&#25991;&#26412;&#21629;&#20196;&#26694;&#26550;&#20837;&#38376; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="generator" content="docfx 2.56.7.0">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../styles/config.css">
+      <link rel="stylesheet" href="../../styles/discord.css">
+      <link rel="stylesheet" href="../../styles/singulink.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+      
+      <meta property="docfx:rel" content="../../">
+      
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../../index.html">
+              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../../index.html">
+                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                        </a>  </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+                  KaiHeiLa.Net (c) 2022
+                  
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="Guides.TextCommands.Intro">
+<h1 id="文本命令框架">文本命令框架</h1>
+
+<p><a class="xref" href="../../api/KaiHeiLa.Commands.html">KaiHeiLa.Commands</a> 命名空间提供了一组基于特性标签的文本命令服务。</p>
+<h2 id="入门">入门</h2>
+<p>要使用文本命令框架，需要先创建 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html">CommandService</a> 及命令处理程序。</p>
+<p>下面的代码演示了如何创建命令服务和命令处理程序的最小程序，可在此基础上扩展功能模块。</p>
+<div class="NOTE"><h5>Note</h5><p><code>CommandService</code> 可接收一个 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandServiceConfig.html">CommandServiceConfig</a> 类型的可选参数用于命令服务的配置，
+如果不提供此参数，则使用默认配置。建议在使用配置时，通过 IDE 的自动提示与代码注释
+浏览并了解各项属性与默认参数值，并在需要时修改。</p>
+</div>
+<pre><code class="lang-csharp" name="Command Handler">public class CommandHandler
+{
+    private readonly KaiHeiLaSocketClient _client;
+    private readonly CommandService _commands;
+
+    // &#20174;&#26500;&#36896;&#20989;&#25968;&#20013;&#33719;&#21462; KaiHeiLaSocketClient &#19982; CommandService &#30340;&#31034;&#20363;
+    public CommandHandler(KaiHeiLaSocketClient client, CommandService commands)
+    {
+        _commands = commands;
+        _client = client;
+    }
+    
+    public async Task InstallCommandsAsync()
+    {
+        // &#23558;&#21629;&#20196;&#26381;&#21153;&#22788;&#29702;&#31243;&#24207;&#35746;&#38405;&#33267; MessageReceived &#20107;&#20214;
+        _client.MessageReceived += HandleCommandAsync;
+
+        // &#36890;&#36807;&#21453;&#23556;&#26597;&#25214;&#25152;&#26377;&#21629;&#20196;&#27169;&#22359;&#24182;&#21152;&#36733;&#33267;&#21629;&#20196;&#26381;&#21153;
+        // &#22914;&#19981;&#20351;&#29992;&#20381;&#36182;&#27880;&#20837;&#65292;services &#21442;&#25968;&#20256; null
+        // &#22914;&#26377;&#38656;&#35201;&#21487;&#21442;&#32771;&#20381;&#36182;&#27880;&#20837;&#25351;&#21335;
+        await _commands.AddModulesAsync(assembly: Assembly.GetEntryAssembly(), 
+                                        services: null);
+    }
+
+    private async Task HandleCommandAsync(SocketMessage messageParam)
+    {
+        // &#36807;&#28388;&#31995;&#32479;&#20449;&#24687;
+        var message = messageParam as SocketUserMessage;
+        if (message == null) return;
+
+        // &#36861;&#36394;&#28040;&#24687;&#21069;&#32512;&#32467;&#26463;&#21363;&#25991;&#26412;&#21629;&#20196;&#24320;&#22987;&#30340;&#20301;&#32622;
+        int argPos = 0;
+
+        // &#36807;&#28388;&#26469;&#33258; Bot &#30340;&#28040;&#24687;&#65292;&#36807;&#28388;&#21069;&#32512;&#19981;&#21512;&#21629;&#20196;&#35302;&#21457;&#35268;&#21017;&#30340;&#28040;&#24687;
+        if (!(message.HasCharPrefix(&#39;!&#39;, ref argPos) || 
+            message.HasMentionPrefix(_client.CurrentUser, ref argPos)) ||
+            message.Author.IsBot)
+            return;
+
+        // &#22522;&#20110;&#27492;&#28040;&#24687;&#21019;&#24314;&#21629;&#20196;&#19978;&#19979;&#25991;
+        var context = new SocketCommandContext(_client, message);
+
+        // &#25191;&#34892;&#21629;&#20196;
+        await _commands.ExecuteAsync(
+            context: context, 
+            argPos: argPos,
+            services: null);
+    }
+}
+</code></pre><h2 id="使用特性">使用特性</h2>
+<p>文本命令框架支持通过特性标签来预先定义命令，也可以在运行时通过命令构建类来定义命令。</p>
+<p>绝大多数情况下，Bot 的命令服务的确定的，因此推荐使用特性标签来定义命令。</p>
+<h3 id="模块">模块</h3>
+<p>命令的功能由模块定义，在不同的类中可以分别定义不同的命令功能，在启动时可以一并加载。</p>
+<p>要使模块能够被自动发现，模块需要满足：</p>
+<ul>
+<li>公开</li>
+<li>继承自 <a class="xref" href="../../api/KaiHeiLa.Commands.ModuleBase-1.html">ModuleBase</a></li>
+</ul>
+<p>则模块类的声明形如：</p>
+<pre><code class="lang-csharp" name="Empty Module">using KaiHeiLa.Commands;
+
+// &#27169;&#22359;&#31867; **&#24517;&#39035;** &#20026;&#20844;&#24320;&#31867;&#65292;&#19988;&#32487;&#25215;&#33258; ModuleBase
+// &#21542;&#21017;&#65292;AddModulesAsync &#23558;&#26080;&#27861;&#21457;&#29616;&#27492;&#27169;&#22359;
+public class InfoModule : ModuleBase&lt;SocketCommandContext&gt;
+{
+    
+}
+</code></pre><div class="NOTE"><h5>Note</h5><p><a class="xref" href="../../api/KaiHeiLa.Commands.ModuleBase-1.html">ModuleBase</a> 是一个抽象类，可根据需要进行派生或重写。
+模块可以继承自 ModuleBase 的任何派生类。</p>
+</div>
+<h3 id="添加创建命令">添加/创建命令</h3>
+<div class="WARNING"><h5>Warning</h5><p>尽量避免模型内代码运行耗时过长，这可能会导致网关线程的阻塞，进而中断 Bot 与开黑啦服务端的连接。</p>
+</div>
+<p>创建命令的处理程序，方法的返回类型必须是 <code>Task</code> 或 <code>Task&lt;RuntimeResult&gt;</code>，按需标记 <code>async</code> 关键字。</p>
+<p>对该方法标记 [CommandAttribute] 特性标签，并指定命令的名称。</p>
+<p>如该方法是 <a href="#模块组">模块组</a> 中的命令，名称可以留空。</p>
+<h3 id="命令参数">命令参数</h3>
+<p>命令处理函数的参数即为命令的参数，例如：</p>
+<ul>
+<li>整型作为参数：<code>int num</code></li>
+<li>用户作为参数：<code>IUser user</code></li>
+</ul>
+<p>命令参数几乎可以是任何类型的，默认支持读取的类型列表参见 @Guides.TextCommands.TypeReaders 。</p>
+<h4 id="可选参数">可选参数</h4>
+<p>默认地，命令参数为必选参数，要设置为可选参数，需为其指定默认值，例如：<code>int num = 0</code>。</p>
+<h4 id="参数中的空格">参数中的空格</h4>
+<p>如要接收一个以空格分隔的列表，可指定可变参数关键字 <code>params</code>，例如：<code>params int[]</code>。</p>
+<p>如果实参包含空格，在调用命令时，该实参应以双引号进行包装，
+例如：对于参数 <code>string food</code>，可通过 <code>!favoritefood &quot;Key Lime Pie&quot;</code> 的形式进行调用。</p>
+<p>如果某个参数可以包含空格地持续读取到命令末尾，可以为该参数标记 <a class="xref" href="../../api/KaiHeiLa.Commands.RemainderAttribute.html">RemainderAttribute</a>，
+用户在调用时便不必将实参包装在双引号中。</p>
+<h3 id="命令重载">命令重载</h3>
+<p>命令处理函数支持重载，命令解析过程将自动地选择类型匹配的方法。</p>
+<p>如果两个命令处理函数间在调用时会存在不明确的引用，
+可为应优先尝试进行类型匹配的重载标记 <a class="xref" href="../../api/KaiHeiLa.Commands.PriorityAttribute.html">PriorityAttribute</a> 。</p>
+<h3 id="命令上下文">命令上下文</h3>
+<p>每个命令都可以通过 <a class="xref" href="../../api/KaiHeiLa.Commands.ModuleBase-1.html">ModuleBase</a> 上的 [Context] 属性访问执行上下文。
+<code>ICommandContext</code> 支持访问消息、频道、服务器、用户、以及调用命令的底层开黑啦客户端。</p>
+<p>使用 <a class="xref" href="../../api/KaiHeiLa.Commands.ModuleBase-1.html">ModuleBase</a> 的派生类可以指定不同类型的上下文。
+例如，[SocketCommandContext] 中的上下文中的属性为是 Socket 实体，不再需要进行强制类型转换。</p>
+<p>回复消息也可通过调用以 <code>Reply</code> 为前缀的方法完成，无需调用上下文中频道内发送消息的方法来回复命令。</p>
+<div class="WARNING"><h5>Warning</h5><p>上下文的类型不应该混合使用，使用 <code>CommandContext</code> 上下文的模块与使用 <code>SocketCommandContext</code> 
+的模块不可同时使用。</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>模块的完整代码示例：</p>
+<pre><code class="lang-csharp" name="Example Module">// &#26080;&#21069;&#32512;&#30340;&#27169;&#22359;
+public class InfoModule : ModuleBase&lt;SocketCommandContext&gt;
+{
+    // !say hello world -&gt; hello world
+    [Command(&quot;say&quot;)]
+    [Summary(&quot;&#22238;&#26174;&#28040;&#24687;&quot;)]
+    public Task SayAsync([Remainder] [Summary(&quot;&#35201;&#22238;&#26174;&#30340;&#28040;&#24687;&quot;)] string echo)
+        =&gt; ReplyTextAsync(echo);
+		
+    // ReplyTextAsync &#20026; ModuleBase &#19978;&#30340;&#26041;&#27861;
+}
+
+// &#21019;&#24314;&#21069;&#32512;&#20026; &#39;sample&#39; &#30340;&#27169;&#22359;
+[Group(&quot;sample&quot;)]
+public class SampleModule : ModuleBase&lt;SocketCommandContext&gt;
+{
+    // !sample square 20 -&gt; 400
+    [Command(&quot;square&quot;)]
+    [Summary(&quot;&#35745;&#31639;&#32473;&#23450;&#25968;&#23383;&#30340;&#24179;&#26041;&quot;)]
+    public async Task SquareAsync(
+        [Summary(&quot;&#35201;&#35745;&#31639;&#30340;&#25968;&#23383;&quot;)]) 
+        int num)
+    {
+        // &#20063;&#21487;&#36890;&#36807;&#21629;&#20196;&#19978;&#19979;&#25991;&#35775;&#38382;&#39057;&#36947;&#23646;&#24615;
+        await Context.Channel.SendTextMessageAsync($&quot;{num}^2 = {Math.Pow(num, 2)}&quot;);
+    }
+
+    // !sample userinfo --&gt; &#25096;&#23567;&#33655;#0439
+    // !sample userinfo @&#25096;&#23567;&#33655; --&gt; &#25096;&#23567;&#33655;#0439
+    // !sample userinfo &#25096;&#23567;&#33655;#0439 --&gt; &#25096;&#23567;&#33655;#0439
+    // !sample userinfo &#25096;&#23567;&#33655; --&gt; &#25096;&#23567;&#33655;#0439
+    // !sample userinfo 2810246202 --&gt; &#25096;&#23567;&#33655;#0439
+    // !sample whois 2810246202 --&gt; &#25096;&#23567;&#33655;#0439
+    [Command(&quot;userinfo&quot;)]
+    [Summary(&quot;&#25171;&#21360;&#24403;&#21069;&#29992;&#25143;&#30340;&#20449;&#24687;&#65292;&#25110;&#29992;&#25143;&#21442;&#25968;&#25351;&#23450;&#30340;&#29992;&#25143;&#20449;&#24687;&quot;)]
+    [Alias(&quot;user&quot;, &quot;whois&quot;)]
+    public async Task UserInfoAsync(
+        [Summary(&quot;&#35201;&#33719;&#21462;&#20449;&#24687;&#30340;&#29992;&#25143;&quot;)]
+        SocketUser user = null)
+    {
+        var userInfo = user ?? Context.Client.CurrentUser;
+        await ReplyTextAsync($&quot;{userInfo.Username}#{userInfo.IdentifyNumber}&quot;);
+    }
+}
+</code></pre></div>
+<h4 id="自动加载模块">自动加载模块</h4>
+<p>命令服务可以自动发现并加载程序集内继承自 <a class="xref" href="../../api/KaiHeiLa.Commands.ModuleBase-1.html">ModuleBase</a> 的类，调用 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_AddModulesAsync_">CommandService.AddModulesAsync</a>
+可以进行自动发现与模块加载。如果要指定某个模块跳过自动加载，可对其标记特性 <a class="xref" href="../../api/KaiHeiLa.Commands.DontAutoLoadAttribute.html">DontAutoLoadAttribute</a>。</p>
+<h4 id="手动加载模块">手动加载模块</h4>
+<p>要手动加载模块，可调用 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_AddModuleAsync_">CommandService.AddModuleAsync</a>，模块的类通过泛型传递。
+如有需要，也可以向该方法传入 IServiceProvider.</p>
+<h3 id="模块构造函数">模块构造函数</h3>
+<p>模块通过 <a href="xref:Guides.TextCommands.DI">依赖注入</a> 进行构造，
+构造函数内的任何参数都应先注入服务容器中。</p>
+<div class="TIP"><h5>Tip</h5><p>模块构造函数也可以将 <code>IServiceProvider</code> 作为参数，并从中抽取所需服务，但并不推荐。</p>
+</div>
+<h3 id="模块属性">模块属性</h3>
+<p>具有公共 <code>set</code> 访问器属性的模块在模块构造后会被服务容器中，详细信息可参考 @Guides.Commands.DI 。</p>
+<h3 id="模块组">模块组</h3>
+<p>模块组为一组具有相同名称前缀的命令，要声明模块组，可标记特性 <a class="xref" href="../../api/KaiHeiLa.Commands.GroupAttribute.html">GroupAttribute</a> 。</p>
+<p>在模块组内，如果命令的 CommandAttribute 特性标签中不传入名称参数，则为创建以该组名称作为命令名称的命令。</p>
+<h3 id="子模块">子模块</h3>
+<p>子模块是模块内的模块，可用于创建嵌套组。</p>
+<pre><code class="lang-csharp" name="Groups and Submodules">[Group(&quot;admin&quot;)]
+public class AdminModule : ModuleBase&lt;SocketCommandContext&gt;
+{
+    [Group(&quot;ban&quot;)]
+    public class CleanModule : ModuleBase&lt;SocketCommandContext&gt;
+    {
+        // !admin ban @&#25096;&#23567;&#33655;
+        [Command]
+        public Task BanAsync(IGuildUser user) =&gt; 
+            Context.Guild.AddBanAsync(user);
+        
+        // !admin ban clean @&#25096;&#23567;&#33655; 7
+        [Command(&quot;clean&quot;)]
+        public Task BanAsync(IGuildUser user, int pruneDays) =&gt; 
+            Context.Guild.AddBanAsync(user, pruneDays);
+        
+        // !admin ban list
+        [Command(&quot;list&quot;)]
+        public async Task ListBansAsync()
+        {
+            var bans = await Context.Guild.GetBansAsync();
+            var banInfo = bans.Select(ban =&gt; $&quot;&gt; {ban.User.Username}#{ban.User.IdentifyNumber} &quot; +
+                                             $&quot;({ban.CreatedAt:yyyy&#39;/&#39;M&#39;/&#39;d HH&#39;:&#39;mm}, {ban.Reason})&quot;)
+                .Aggregate((a, b) =&gt; $&quot;{a}\n{b}&quot;);
+            await ReplyKMarkdownAsync($&quot;{bans.Count} &#26465;&#23553;&#31105;&#65306;\n{banInfo}&quot;);
+        }
+    }
+    // !admin kick @&#25096;&#23567;&#33655;
+    [Command(&quot;kick&quot;)]
+    public Task KickAsync(IGuildUser user) =&gt;
+        user.KickAsync();
+}
+</code></pre></article>
+                </div>
+
+            </main>
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../styles/singulink.js"></script>
+        <script type="text/javascript" src="../../styles/main.js"></script>    </body>
+</html>
