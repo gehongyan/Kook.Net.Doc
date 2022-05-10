@@ -130,11 +130,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_ModifyVoiceChannelProperties_UserLimit.md&amp;value=---%0Auid%3A%20KaiHeiLa.ModifyVoiceChannelProperties.UserLimit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/ModifyVoiceChannelProperties.cs/#L17">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/ModifyVoiceChannelProperties.cs/#L27">View Source</a>
   </span>
   <a id="KaiHeiLa_ModifyVoiceChannelProperties_UserLimit_" data-uid="KaiHeiLa.ModifyVoiceChannelProperties.UserLimit*"></a>
   <h4 id="KaiHeiLa_ModifyVoiceChannelProperties_UserLimit" data-uid="KaiHeiLa.ModifyVoiceChannelProperties.UserLimit">UserLimit</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the maximum number of users that can be present in a channel, or <code>null</code> if none.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum number of users that can be present in a channel, or <code>0</code> if none;
+<code>null</code> if not set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -161,11 +162,12 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_ModifyVoiceChannelProperties_VoiceQuality.md&amp;value=---%0Auid%3A%20KaiHeiLa.ModifyVoiceChannelProperties.VoiceQuality%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/ModifyVoiceChannelProperties.cs/#L12">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/ModifyVoiceChannelProperties.cs/#L21">View Source</a>
   </span>
   <a id="KaiHeiLa_ModifyVoiceChannelProperties_VoiceQuality_" data-uid="KaiHeiLa.ModifyVoiceChannelProperties.VoiceQuality*"></a>
   <h4 id="KaiHeiLa_ModifyVoiceChannelProperties_VoiceQuality" data-uid="KaiHeiLa.ModifyVoiceChannelProperties.VoiceQuality">VoiceQuality</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the voice quality that the clients in this voice channel are requested to use.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the voice quality that the clients in this voice channel are requested to use;
+<code>null</code> if not set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -187,6 +189,14 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="KaiHeiLa_ModifyVoiceChannelProperties_VoiceQuality_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+    This property cannot be set to the quality equivalent or higher than
+<a class="xref" href="KaiHeiLa.VoiceQuality.html#KaiHeiLa_VoiceQuality__128kbps">_128kbps</a> via KaiHeiLa REST API
+because of the server-side limitation despite of the fact that
+the voice channel exists in a boosted guild. 
+</p></div>
+</div>
 </article>
                 </div>
 
