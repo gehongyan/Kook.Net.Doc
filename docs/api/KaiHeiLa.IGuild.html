@@ -836,10 +836,73 @@ This boolean is used to determine if the guild is currently connected to the Web
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_CreateCategoryChannelAsync_System_String_Action_KaiHeiLa_CreateGuildChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.CreateCategoryChannelAsync(System.String%2CAction%7BKaiHeiLa.CreateGuildChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L363">View Source</a>
+  </span>
+  <a id="KaiHeiLa_IGuild_CreateCategoryChannelAsync_" data-uid="KaiHeiLa.IGuild.CreateCategoryChannelAsync*"></a>
+  <h4 id="KaiHeiLa_IGuild_CreateCategoryChannelAsync_System_String_Action_KaiHeiLa_CreateGuildChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.CreateCategoryChannelAsync(System.String,Action{KaiHeiLa.CreateGuildChannelProperties},KaiHeiLa.RequestOptions)">CreateCategoryChannelAsync(String, Action&lt;CreateGuildChannelProperties&gt;, RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new channel category in this guild.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ICategoryChannel&gt; CreateCategoryChannelAsync(string name, Action&lt;CreateGuildChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The new name for the category.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.CreateGuildChannelProperties.html">CreateGuildChannelProperties</a>&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td><p>The delegate containing the properties to be applied to the channel upon its creation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.ICategoryChannel.html">ICategoryChannel</a>&gt;</td>
+        <td><p>A task that represents the asynchronous creation operation. The task result contains the newly created
+category channel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_CreateEmoteAsync_System_String_KaiHeiLa_Image_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.CreateEmoteAsync(System.String%2CKaiHeiLa.Image%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L528">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L539">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_CreateEmoteAsync_" data-uid="KaiHeiLa.IGuild.CreateEmoteAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_CreateEmoteAsync_System_String_KaiHeiLa_Image_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.CreateEmoteAsync(System.String,KaiHeiLa.Image,KaiHeiLa.RequestOptions)">CreateEmoteAsync(String, Image, RequestOptions)</h4>
@@ -901,7 +964,7 @@ This boolean is used to determine if the guild is currently connected to the Web
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_CreateInviteAsync_KaiHeiLa_InviteMaxAge_KaiHeiLa_InviteMaxUses_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.CreateInviteAsync(KaiHeiLa.InviteMaxAge%2CKaiHeiLa.InviteMaxUses%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L378">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L389">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_CreateInviteAsync_" data-uid="KaiHeiLa.IGuild.CreateInviteAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_CreateInviteAsync_KaiHeiLa_InviteMaxAge_KaiHeiLa_InviteMaxUses_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.CreateInviteAsync(KaiHeiLa.InviteMaxAge,KaiHeiLa.InviteMaxUses,KaiHeiLa.RequestOptions)">CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)</h4>
@@ -964,7 +1027,7 @@ metadata object containing information for the created invite.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.CreateInviteAsync(System.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L390">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L401">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_CreateInviteAsync_" data-uid="KaiHeiLa.IGuild.CreateInviteAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},KaiHeiLa.RequestOptions)">CreateInviteAsync(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, RequestOptions)</h4>
@@ -1027,7 +1090,7 @@ metadata object containing information for the created invite.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_CreateRoleAsync_System_String_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.CreateRoleAsync(System.String%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L412">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L423">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_CreateRoleAsync_" data-uid="KaiHeiLa.IGuild.CreateRoleAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_CreateRoleAsync_System_String_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.CreateRoleAsync(System.String,KaiHeiLa.RequestOptions)">CreateRoleAsync(String, RequestOptions)</h4>
@@ -1080,19 +1143,19 @@ metadata object containing information for the created invite.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_CreateTextChannelAsync_System_String_Action_KaiHeiLa_TextChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.CreateTextChannelAsync(System.String%2CAction%7BKaiHeiLa.TextChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_CreateTextChannelAsync_System_String_Action_KaiHeiLa_CreateTextChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.CreateTextChannelAsync(System.String%2CAction%7BKaiHeiLa.CreateTextChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L341">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_CreateTextChannelAsync_" data-uid="KaiHeiLa.IGuild.CreateTextChannelAsync*"></a>
-  <h4 id="KaiHeiLa_IGuild_CreateTextChannelAsync_System_String_Action_KaiHeiLa_TextChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.CreateTextChannelAsync(System.String,Action{KaiHeiLa.TextChannelProperties},KaiHeiLa.RequestOptions)">CreateTextChannelAsync(String, Action&lt;TextChannelProperties&gt;, RequestOptions)</h4>
+  <h4 id="KaiHeiLa_IGuild_CreateTextChannelAsync_System_String_Action_KaiHeiLa_CreateTextChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.CreateTextChannelAsync(System.String,Action{KaiHeiLa.CreateTextChannelProperties},KaiHeiLa.RequestOptions)">CreateTextChannelAsync(String, Action&lt;CreateTextChannelProperties&gt;, RequestOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a new text channel in this guild.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ITextChannel&gt; CreateTextChannelAsync(string name, Action&lt;TextChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ITextChannel&gt; CreateTextChannelAsync(string name, Action&lt;CreateTextChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1111,7 +1174,7 @@ metadata object containing information for the created invite.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.TextChannelProperties.html">TextChannelProperties</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.CreateTextChannelProperties.html">CreateTextChannelProperties</a>&gt;</td>
         <td><span class="parametername">func</span></td>
         <td><p>The delegate containing the properties to be applied to the channel upon its creation.</p>
 </td>
@@ -1143,19 +1206,19 @@ text channel.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_CreateVoiceChannelAsync_System_String_Action_KaiHeiLa_VoiceChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.CreateVoiceChannelAsync(System.String%2CAction%7BKaiHeiLa.VoiceChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_CreateVoiceChannelAsync_System_String_Action_KaiHeiLa_CreateVoiceChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.CreateVoiceChannelAsync(System.String%2CAction%7BKaiHeiLa.CreateVoiceChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L352">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_CreateVoiceChannelAsync_" data-uid="KaiHeiLa.IGuild.CreateVoiceChannelAsync*"></a>
-  <h4 id="KaiHeiLa_IGuild_CreateVoiceChannelAsync_System_String_Action_KaiHeiLa_VoiceChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.CreateVoiceChannelAsync(System.String,Action{KaiHeiLa.VoiceChannelProperties},KaiHeiLa.RequestOptions)">CreateVoiceChannelAsync(String, Action&lt;VoiceChannelProperties&gt;, RequestOptions)</h4>
+  <h4 id="KaiHeiLa_IGuild_CreateVoiceChannelAsync_System_String_Action_KaiHeiLa_CreateVoiceChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.CreateVoiceChannelAsync(System.String,Action{KaiHeiLa.CreateVoiceChannelProperties},KaiHeiLa.RequestOptions)">CreateVoiceChannelAsync(String, Action&lt;CreateVoiceChannelProperties&gt;, RequestOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a new voice channel in this guild.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IVoiceChannel&gt; CreateVoiceChannelAsync(string name, Action&lt;VoiceChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IVoiceChannel&gt; CreateVoiceChannelAsync(string name, Action&lt;CreateVoiceChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1174,7 +1237,7 @@ text channel.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.VoiceChannelProperties.html">VoiceChannelProperties</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.CreateVoiceChannelProperties.html">CreateVoiceChannelProperties</a>&gt;</td>
         <td><span class="parametername">func</span></td>
         <td><p>The delegate containing the properties to be applied to the channel upon its creation.</p>
 </td>
@@ -1209,7 +1272,7 @@ voice channel.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_DeleteEmoteAsync_KaiHeiLa_GuildEmote_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.DeleteEmoteAsync(KaiHeiLa.GuildEmote%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L550">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L561">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_DeleteEmoteAsync_" data-uid="KaiHeiLa.IGuild.DeleteEmoteAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_DeleteEmoteAsync_KaiHeiLa_GuildEmote_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.DeleteEmoteAsync(KaiHeiLa.GuildEmote,KaiHeiLa.RequestOptions)">DeleteEmoteAsync(GuildEmote, RequestOptions)</h4>
@@ -1265,7 +1328,7 @@ voice channel.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_DownloadUsersAsync.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.DownloadUsersAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L477">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L488">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_DownloadUsersAsync_" data-uid="KaiHeiLa.IGuild.DownloadUsersAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_DownloadUsersAsync" data-uid="KaiHeiLa.IGuild.DownloadUsersAsync">DownloadUsersAsync()</h4>
@@ -1300,7 +1363,7 @@ voice channel.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_GetBadgeAsync_KaiHeiLa_BadgeStyle_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.GetBadgeAsync(KaiHeiLa.BadgeStyle%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L589">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L600">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_GetBadgeAsync_" data-uid="KaiHeiLa.IGuild.GetBadgeAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_GetBadgeAsync_KaiHeiLa_BadgeStyle_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.GetBadgeAsync(KaiHeiLa.BadgeStyle,KaiHeiLa.RequestOptions)">GetBadgeAsync(BadgeStyle, RequestOptions)</h4>
@@ -1700,7 +1763,7 @@ generic channels found within this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_GetCurrentUserAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.GetCurrentUserAsync(KaiHeiLa.CacheMode%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L458">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L469">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_GetCurrentUserAsync_" data-uid="KaiHeiLa.IGuild.GetCurrentUserAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_GetCurrentUserAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.GetCurrentUserAsync(KaiHeiLa.CacheMode,KaiHeiLa.RequestOptions)">GetCurrentUserAsync(CacheMode, RequestOptions)</h4>
@@ -1814,7 +1877,7 @@ user within this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_GetEmoteAsync_System_String_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.GetEmoteAsync(System.String%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L518">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L529">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_GetEmoteAsync_" data-uid="KaiHeiLa.IGuild.GetEmoteAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_GetEmoteAsync_System_String_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.GetEmoteAsync(System.String,KaiHeiLa.RequestOptions)">GetEmoteAsync(String, RequestOptions)</h4>
@@ -1871,7 +1934,7 @@ specified <code data-dev-comment-type="paramref" class="paramref">id</code>; <sp
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_GetEmotesAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.GetEmotesAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L508">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L519">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_GetEmotesAsync_" data-uid="KaiHeiLa.IGuild.GetEmotesAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_GetEmotesAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.GetEmotesAsync(KaiHeiLa.RequestOptions)">GetEmotesAsync(RequestOptions)</h4>
@@ -1922,7 +1985,7 @@ of emotes found within the guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_GetInvitesAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.GetInvitesAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L366">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L377">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_GetInvitesAsync_" data-uid="KaiHeiLa.IGuild.GetInvitesAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_GetInvitesAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.GetInvitesAsync(KaiHeiLa.RequestOptions)">GetInvitesAsync(RequestOptions)</h4>
@@ -1973,7 +2036,7 @@ invite, each representing information for an invite found within this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_GetMutedDeafenedUsersAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.GetMutedDeafenedUsersAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L573">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L584">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_GetMutedDeafenedUsersAsync_" data-uid="KaiHeiLa.IGuild.GetMutedDeafenedUsersAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_GetMutedDeafenedUsersAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.GetMutedDeafenedUsersAsync(KaiHeiLa.RequestOptions)">GetMutedDeafenedUsersAsync(RequestOptions)</h4>
@@ -2024,7 +2087,7 @@ the collection of muted or deafened users in this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_GetOwnerAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.GetOwnerAsync(KaiHeiLa.CacheMode%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L467">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L478">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_GetOwnerAsync_" data-uid="KaiHeiLa.IGuild.GetOwnerAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_GetOwnerAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.GetOwnerAsync(KaiHeiLa.CacheMode,KaiHeiLa.RequestOptions)">GetOwnerAsync(CacheMode, RequestOptions)</h4>
@@ -2080,7 +2143,7 @@ the collection of muted or deafened users in this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_GetRole_System_UInt32_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.GetRole(System.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L403">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L414">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_GetRole_" data-uid="KaiHeiLa.IGuild.GetRole*"></a>
   <h4 id="KaiHeiLa_IGuild_GetRole_System_UInt32_" data-uid="KaiHeiLa.IGuild.GetRole(System.UInt32)">GetRole(UInt32)</h4>
@@ -2250,7 +2313,7 @@ message channels found within this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_GetUserAsync_System_UInt64_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.GetUserAsync(System.UInt64%2CKaiHeiLa.CacheMode%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L448">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L459">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_GetUserAsync_" data-uid="KaiHeiLa.IGuild.GetUserAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_GetUserAsync_System_UInt64_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.GetUserAsync(System.UInt64,KaiHeiLa.CacheMode,KaiHeiLa.RequestOptions)">GetUserAsync(UInt64, CacheMode, RequestOptions)</h4>
@@ -2320,7 +2383,7 @@ associated with the specified <code data-dev-comment-type="paramref" class="para
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_GetUsersAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.GetUsersAsync(KaiHeiLa.CacheMode%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L430">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L441">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_GetUsersAsync_" data-uid="KaiHeiLa.IGuild.GetUsersAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_GetUsersAsync_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.GetUsersAsync(KaiHeiLa.CacheMode,KaiHeiLa.RequestOptions)">GetUsersAsync(CacheMode, RequestOptions)</h4>
@@ -2556,7 +2619,7 @@ voice channels found within this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_ModifyEmoteNameAsync_KaiHeiLa_GuildEmote_Action_System_String__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.ModifyEmoteNameAsync(KaiHeiLa.GuildEmote%2CAction%7BSystem.String%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L540">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L551">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_ModifyEmoteNameAsync_" data-uid="KaiHeiLa.IGuild.ModifyEmoteNameAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_ModifyEmoteNameAsync_KaiHeiLa_GuildEmote_Action_System_String__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.ModifyEmoteNameAsync(KaiHeiLa.GuildEmote,Action{System.String},KaiHeiLa.RequestOptions)">ModifyEmoteNameAsync(GuildEmote, Action&lt;String&gt;, RequestOptions)</h4>
@@ -2619,7 +2682,7 @@ emote.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_MoveUsersAsync_IEnumerable_KaiHeiLa_IGuildUser__KaiHeiLa_IVoiceChannel_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.MoveUsersAsync(IEnumerable%7BKaiHeiLa.IGuildUser%7D%2CKaiHeiLa.IVoiceChannel%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L563">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L574">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_MoveUsersAsync_" data-uid="KaiHeiLa.IGuild.MoveUsersAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_MoveUsersAsync_IEnumerable_KaiHeiLa_IGuildUser__KaiHeiLa_IVoiceChannel_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.MoveUsersAsync(IEnumerable{KaiHeiLa.IGuildUser},KaiHeiLa.IVoiceChannel,KaiHeiLa.RequestOptions)">MoveUsersAsync(IEnumerable&lt;IGuildUser&gt;, IVoiceChannel, RequestOptions)</h4>
@@ -2793,7 +2856,7 @@ emote.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_IGuild_SearchUsersAsync_Action_KaiHeiLa_SearchGuildMemberProperties__System_Int32_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.IGuild.SearchUsersAsync(Action%7BKaiHeiLa.SearchGuildMemberProperties%7D%2CSystem.Int32%2CKaiHeiLa.CacheMode%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L494">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Guilds/IGuild.cs/#L505">View Source</a>
   </span>
   <a id="KaiHeiLa_IGuild_SearchUsersAsync_" data-uid="KaiHeiLa.IGuild.SearchUsersAsync*"></a>
   <h4 id="KaiHeiLa_IGuild_SearchUsersAsync_Action_KaiHeiLa_SearchGuildMemberProperties__System_Int32_KaiHeiLa_CacheMode_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.IGuild.SearchUsersAsync(Action{KaiHeiLa.SearchGuildMemberProperties},System.Int32,KaiHeiLa.CacheMode,KaiHeiLa.RequestOptions)">SearchUsersAsync(Action&lt;SearchGuildMemberProperties&gt;, Int32, CacheMode, RequestOptions)</h4>

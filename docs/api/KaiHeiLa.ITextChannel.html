@@ -144,6 +144,9 @@
       <a class="xref" href="KaiHeiLa.IGuildChannel.html#KaiHeiLa_IGuildChannel_UserPermissionOverwrites">IGuildChannel.UserPermissionOverwrites</a>
     </div>
     <div>
+      <a class="xref" href="KaiHeiLa.IGuildChannel.html#KaiHeiLa_IGuildChannel_ModifyAsync_Action_KaiHeiLa_ModifyGuildChannelProperties__KaiHeiLa_RequestOptions_">IGuildChannel.ModifyAsync(Action&lt;ModifyGuildChannelProperties&gt;, RequestOptions)</a>
+    </div>
+    <div>
       <a class="xref" href="KaiHeiLa.IGuildChannel.html#KaiHeiLa_IGuildChannel_GetPermissionOverwrite_KaiHeiLa_IRole_">IGuildChannel.GetPermissionOverwrite(IRole)</a>
     </div>
     <div>
@@ -316,7 +319,7 @@
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_ITextChannel_GetPinnedMessagesAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.ITextChannel.GetPinnedMessagesAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/ITextChannel.cs/#L36">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/ITextChannel.cs/#L47">View Source</a>
   </span>
   <a id="KaiHeiLa_ITextChannel_GetPinnedMessagesAsync_" data-uid="KaiHeiLa.ITextChannel.GetPinnedMessagesAsync*"></a>
   <h4 id="KaiHeiLa_ITextChannel_GetPinnedMessagesAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.ITextChannel.GetPinnedMessagesAsync(KaiHeiLa.RequestOptions)">GetPinnedMessagesAsync(RequestOptions)</h4>
@@ -362,6 +365,66 @@ The task result contains a collection of messages found in the pinned messages.<
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_ITextChannel_ModifyAsync_Action_KaiHeiLa_ModifyTextChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.ITextChannel.ModifyAsync(Action%7BKaiHeiLa.ModifyTextChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Core/Entities/Channels/ITextChannel.cs/#L35">View Source</a>
+  </span>
+  <a id="KaiHeiLa_ITextChannel_ModifyAsync_" data-uid="KaiHeiLa.ITextChannel.ModifyAsync*"></a>
+  <h4 id="KaiHeiLa_ITextChannel_ModifyAsync_Action_KaiHeiLa_ModifyTextChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.ITextChannel.ModifyAsync(Action{KaiHeiLa.ModifyTextChannelProperties},KaiHeiLa.RequestOptions)">ModifyAsync(Action&lt;ModifyTextChannelProperties&gt;, RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Modifies this text channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ModifyAsync(Action&lt;ModifyTextChannelProperties&gt; func, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.ModifyTextChannelProperties.html">ModifyTextChannelProperties</a>&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td><p>The delegate containing the properties to modify the channel with.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>A task that represents the asynchronous modification operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="KaiHeiLa_ITextChannel_ModifyAsync_Action_KaiHeiLa_ModifyTextChannelProperties__KaiHeiLa_RequestOptions__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="KaiHeiLa.ModifyTextChannelProperties.html">ModifyTextChannelProperties</a></div>
+  </div>
 </article>
                 </div>
 

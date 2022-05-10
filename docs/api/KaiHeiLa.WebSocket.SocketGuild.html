@@ -111,6 +111,7 @@
     <div><a class="xref" href="KaiHeiLa.IGuild.html">IGuild</a></div>
     <div><a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity</a>&lt;<span class="xref">System.UInt64</span>&gt;</div>
     <div><span class="xref">IDisposable</span></div>
+    <div><a class="xref" href="KaiHeiLa.IUpdateable.html">IUpdateable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -122,7 +123,7 @@
   <h6><strong>Assembly</strong>: KaiHeiLa.Net.WebSocket.dll</h6>
   <h5 id="KaiHeiLa_WebSocket_SocketGuild_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SocketGuild : SocketEntity&lt;ulong&gt;, IEntity&lt;ulong&gt;, IGuild, IEntity&lt;ulong&gt;, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class SocketGuild : SocketEntity&lt;ulong&gt;, IEntity&lt;ulong&gt;, IGuild, IEntity&lt;ulong&gt;, IDisposable, IUpdateable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -897,7 +898,7 @@ between that and this property.
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_Roles.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.Roles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L210">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L218">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_Roles_" data-uid="KaiHeiLa.WebSocket.SocketGuild.Roles*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_Roles" data-uid="KaiHeiLa.WebSocket.SocketGuild.Roles">Roles</h4>
@@ -924,6 +925,14 @@ between that and this property.
       </tr>
     </tbody>
   </table>
+  <h5 id="KaiHeiLa_WebSocket_SocketGuild_Roles_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+    Due to the lack of event args which should contains the reordered roles data
+    when roles are reordered, this property may not be completely accurate.
+    To ensure the most accurate results, it is recommended to
+    call <a class="xref" href="KaiHeiLa.WebSocket.SocketGuild.html#KaiHeiLa_WebSocket_SocketGuild_UpdateAsync_KaiHeiLa_RequestOptions_">UpdateAsync(RequestOptions)</a> before this property is used.
+</p></div>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_Status.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.Status%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -1133,7 +1142,7 @@ between that and this property.
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_AddBanAsync_KaiHeiLa_IUser_System_Int32_System_String_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.AddBanAsync(KaiHeiLa.IUser%2CSystem.Int32%2CSystem.String%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L353">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L366">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_AddBanAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.AddBanAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_AddBanAsync_KaiHeiLa_IUser_System_Int32_System_String_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.AddBanAsync(KaiHeiLa.IUser,System.Int32,System.String,KaiHeiLa.RequestOptions)">AddBanAsync(IUser, Int32, String, RequestOptions)</h4>
@@ -1195,7 +1204,7 @@ between that and this property.
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_AddBanAsync_System_UInt64_System_Int32_System_String_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.AddBanAsync(System.UInt64%2CSystem.Int32%2CSystem.String%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L356">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L369">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_AddBanAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.AddBanAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_AddBanAsync_System_UInt64_System_Int32_System_String_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.AddBanAsync(System.UInt64,System.Int32,System.String,KaiHeiLa.RequestOptions)">AddBanAsync(UInt64, Int32, String, RequestOptions)</h4>
@@ -1254,10 +1263,73 @@ between that and this property.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_CreateCategoryChannelAsync_System_String_Action_KaiHeiLa_CreateGuildChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.CreateCategoryChannelAsync(System.String%2CAction%7BKaiHeiLa.CreateGuildChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L459">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketGuild_CreateCategoryChannelAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.CreateCategoryChannelAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketGuild_CreateCategoryChannelAsync_System_String_Action_KaiHeiLa_CreateGuildChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.CreateCategoryChannelAsync(System.String,Action{KaiHeiLa.CreateGuildChannelProperties},KaiHeiLa.RequestOptions)">CreateCategoryChannelAsync(String, Action&lt;CreateGuildChannelProperties&gt;, RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new channel category in this guild.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestCategoryChannel&gt; CreateCategoryChannelAsync(string name, Action&lt;CreateGuildChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The new name for the category.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.CreateGuildChannelProperties.html">CreateGuildChannelProperties</a>&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td><p>The delegate containing the properties to be applied to the channel upon its creation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="KaiHeiLa.Rest.RestCategoryChannel.html">RestCategoryChannel</a>&gt;</td>
+        <td><p>A task that represents the asynchronous creation operation. The task result contains the newly created
+category channel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_CreateRoleAsync_System_String_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.CreateRoleAsync(System.String%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L506">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L532">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_CreateRoleAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.CreateRoleAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_CreateRoleAsync_System_String_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.CreateRoleAsync(System.String,KaiHeiLa.RequestOptions)">CreateRoleAsync(String, RequestOptions)</h4>
@@ -1311,19 +1383,19 @@ role.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_CreateTextChannelAsync_System_String_Action_KaiHeiLa_TextChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.CreateTextChannelAsync(System.String%2CAction%7BKaiHeiLa.TextChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_CreateTextChannelAsync_System_String_Action_KaiHeiLa_CreateTextChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.CreateTextChannelAsync(System.String%2CAction%7BKaiHeiLa.CreateTextChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L420">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L433">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_CreateTextChannelAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.CreateTextChannelAsync*"></a>
-  <h4 id="KaiHeiLa_WebSocket_SocketGuild_CreateTextChannelAsync_System_String_Action_KaiHeiLa_TextChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.CreateTextChannelAsync(System.String,Action{KaiHeiLa.TextChannelProperties},KaiHeiLa.RequestOptions)">CreateTextChannelAsync(String, Action&lt;TextChannelProperties&gt;, RequestOptions)</h4>
+  <h4 id="KaiHeiLa_WebSocket_SocketGuild_CreateTextChannelAsync_System_String_Action_KaiHeiLa_CreateTextChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.CreateTextChannelAsync(System.String,Action{KaiHeiLa.CreateTextChannelProperties},KaiHeiLa.RequestOptions)">CreateTextChannelAsync(String, Action&lt;CreateTextChannelProperties&gt;, RequestOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a new text channel in this guild.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestTextChannel&gt; CreateTextChannelAsync(string name, Action&lt;TextChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestTextChannel&gt; CreateTextChannelAsync(string name, Action&lt;CreateTextChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1342,7 +1414,7 @@ role.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.TextChannelProperties.html">TextChannelProperties</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.CreateTextChannelProperties.html">CreateTextChannelProperties</a>&gt;</td>
         <td><span class="parametername">func</span></td>
         <td><p>The delegate containing the properties to be applied to the channel upon its creation.</p>
 </td>
@@ -1374,19 +1446,19 @@ text channel.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_CreateVoiceChannelAsync_System_String_Action_KaiHeiLa_VoiceChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.CreateVoiceChannelAsync(System.String%2CAction%7BKaiHeiLa.VoiceChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_CreateVoiceChannelAsync_System_String_Action_KaiHeiLa_CreateVoiceChannelProperties__KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.CreateVoiceChannelAsync(System.String%2CAction%7BKaiHeiLa.CreateVoiceChannelProperties%7D%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L433">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L446">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_CreateVoiceChannelAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.CreateVoiceChannelAsync*"></a>
-  <h4 id="KaiHeiLa_WebSocket_SocketGuild_CreateVoiceChannelAsync_System_String_Action_KaiHeiLa_VoiceChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.CreateVoiceChannelAsync(System.String,Action{KaiHeiLa.VoiceChannelProperties},KaiHeiLa.RequestOptions)">CreateVoiceChannelAsync(String, Action&lt;VoiceChannelProperties&gt;, RequestOptions)</h4>
+  <h4 id="KaiHeiLa_WebSocket_SocketGuild_CreateVoiceChannelAsync_System_String_Action_KaiHeiLa_CreateVoiceChannelProperties__KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.CreateVoiceChannelAsync(System.String,Action{KaiHeiLa.CreateVoiceChannelProperties},KaiHeiLa.RequestOptions)">CreateVoiceChannelAsync(String, Action&lt;CreateVoiceChannelProperties&gt;, RequestOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a new voice channel in this guild.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestVoiceChannel&gt; CreateVoiceChannelAsync(string name, Action&lt;VoiceChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestVoiceChannel&gt; CreateVoiceChannelAsync(string name, Action&lt;CreateVoiceChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1405,7 +1477,7 @@ text channel.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.VoiceChannelProperties.html">VoiceChannelProperties</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="KaiHeiLa.CreateVoiceChannelProperties.html">CreateVoiceChannelProperties</a>&gt;</td>
         <td><span class="parametername">func</span></td>
         <td><p>The delegate containing the properties to be applied to the channel upon its creation.</p>
 </td>
@@ -1440,7 +1512,7 @@ voice channel.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_GetBanAsync_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.GetBanAsync(KaiHeiLa.IUser%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L346">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L359">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_GetBanAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetBanAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_GetBanAsync_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetBanAsync(KaiHeiLa.IUser,KaiHeiLa.RequestOptions)">GetBanAsync(IUser, RequestOptions)</h4>
@@ -1497,7 +1569,7 @@ contains the user information and the reason for the ban; <span class="xref">nul
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_GetBanAsync_System_UInt64_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.GetBanAsync(System.UInt64%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L349">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L362">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_GetBanAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetBanAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_GetBanAsync_System_UInt64_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetBanAsync(System.UInt64,KaiHeiLa.RequestOptions)">GetBanAsync(UInt64, RequestOptions)</h4>
@@ -1549,7 +1621,7 @@ contains the user information and the reason for the ban; <span class="xref">nul
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_GetBansAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.GetBansAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L343">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L356">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_GetBansAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetBansAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_GetBansAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetBansAsync(KaiHeiLa.RequestOptions)">GetBansAsync(RequestOptions)</h4>
@@ -1601,7 +1673,7 @@ behind the ban.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_GetChannel_System_UInt64_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.GetChannel(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L376">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L389">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_GetChannel_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetChannel*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_GetChannel_System_UInt64_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetChannel(System.UInt64)">GetChannel(UInt64)</h4>
@@ -1651,7 +1723,7 @@ behind the ban.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_GetMutedDeafenedUsersAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.GetMutedDeafenedUsersAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L564">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L590">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_GetMutedDeafenedUsersAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetMutedDeafenedUsersAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_GetMutedDeafenedUsersAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetMutedDeafenedUsersAsync(KaiHeiLa.RequestOptions)">GetMutedDeafenedUsersAsync(RequestOptions)</h4>
@@ -1702,7 +1774,7 @@ the collection of muted or deafened users in this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_GetRole_System_UInt32_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.GetRole(System.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L489">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L515">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_GetRole_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetRole*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_GetRole_System_UInt32_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetRole(System.UInt32)">GetRole(UInt32)</h4>
@@ -1752,7 +1824,7 @@ the collection of muted or deafened users in this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_GetTextChannel_System_UInt64_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.GetTextChannel(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L390">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L403">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_GetTextChannel_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetTextChannel*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_GetTextChannel_System_UInt64_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetTextChannel(System.UInt64)">GetTextChannel(UInt64)</h4>
@@ -1802,7 +1874,7 @@ the collection of muted or deafened users in this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_GetUser_System_UInt64_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.GetUser(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L549">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L575">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_GetUser_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetUser*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_GetUser_System_UInt64_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetUser(System.UInt64)">GetUser(UInt64)</h4>
@@ -1859,7 +1931,7 @@ the collection of muted or deafened users in this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_GetVoiceChannel_System_UInt64_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.GetVoiceChannel(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L399">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L412">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_GetVoiceChannel_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetVoiceChannel*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_GetVoiceChannel_System_UInt64_" data-uid="KaiHeiLa.WebSocket.SocketGuild.GetVoiceChannel(System.UInt64)">GetVoiceChannel(UInt64)</h4>
@@ -1909,7 +1981,7 @@ the collection of muted or deafened users in this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_LeaveAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.LeaveAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L336">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L349">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_LeaveAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.LeaveAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_LeaveAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.LeaveAsync(KaiHeiLa.RequestOptions)">LeaveAsync(RequestOptions)</h4>
@@ -1956,7 +2028,7 @@ the collection of muted or deafened users in this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_RemoveBanAsync_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.RemoveBanAsync(KaiHeiLa.IUser%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L360">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L373">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_RemoveBanAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.RemoveBanAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_RemoveBanAsync_KaiHeiLa_IUser_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.RemoveBanAsync(KaiHeiLa.IUser,KaiHeiLa.RequestOptions)">RemoveBanAsync(IUser, RequestOptions)</h4>
@@ -2008,7 +2080,7 @@ the collection of muted or deafened users in this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_RemoveBanAsync_System_UInt64_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.RemoveBanAsync(System.UInt64%2CKaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L363">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L376">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_RemoveBanAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.RemoveBanAsync*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_RemoveBanAsync_System_UInt64_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.RemoveBanAsync(System.UInt64,KaiHeiLa.RequestOptions)">RemoveBanAsync(UInt64, RequestOptions)</h4>
@@ -2060,7 +2132,7 @@ the collection of muted or deafened users in this guild.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_ToString.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L329">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L341">View Source</a>
   </span>
   <a id="KaiHeiLa_WebSocket_SocketGuild_ToString_" data-uid="KaiHeiLa.WebSocket.SocketGuild.ToString*"></a>
   <h4 id="KaiHeiLa_WebSocket_SocketGuild_ToString" data-uid="KaiHeiLa.WebSocket.SocketGuild.ToString">ToString()</h4>
@@ -2087,6 +2159,53 @@ the collection of muted or deafened users in this guild.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_SocketGuild_UpdateAsync_KaiHeiLa_RequestOptions_.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.SocketGuild.UpdateAsync(KaiHeiLa.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L330">View Source</a>
+  </span>
+  <a id="KaiHeiLa_WebSocket_SocketGuild_UpdateAsync_" data-uid="KaiHeiLa.WebSocket.SocketGuild.UpdateAsync*"></a>
+  <h4 id="KaiHeiLa_WebSocket_SocketGuild_UpdateAsync_KaiHeiLa_RequestOptions_" data-uid="KaiHeiLa.WebSocket.SocketGuild.UpdateAsync(KaiHeiLa.RequestOptions)">UpdateAsync(RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task UpdateAsync(RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="KaiHeiLa.IEntity-1.html">IEntity&lt;TId&gt;</a>
@@ -2099,6 +2218,9 @@ the collection of muted or deafened users in this guild.</p>
   </div>
   <div>
       <span class="xref">IDisposable</span>
+  </div>
+  <div>
+      <a class="xref" href="KaiHeiLa.IUpdateable.html">IUpdateable</a>
   </div>
 </article>
                 </div>

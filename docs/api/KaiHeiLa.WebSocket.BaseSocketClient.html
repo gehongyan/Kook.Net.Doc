@@ -743,7 +743,7 @@ found.</p>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_CurrentUserUpdated.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.CurrentUserUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L368">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L374">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_CurrentUserUpdated" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.CurrentUserUpdated">CurrentUserUpdated</h4>
   <div class="markdown level1 summary"><p>Fired when the connected account is updated. </p>
@@ -867,7 +867,7 @@ derived classes of <a class="xref" href="KaiHeiLa.WebSocket.SocketMessage.html">
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_DirectMessageUpdated.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.DirectMessageUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L283">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L289">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_DirectMessageUpdated" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.DirectMessageUpdated">DirectMessageUpdated</h4>
   <div class="markdown level1 summary"><p>Fired when a message is updated. </p>
@@ -911,13 +911,19 @@ that the message cannot be retrieved, the ID of the message is preserved in the
     The source channel of the updated message will be passed into the 
 <a class="xref" href="KaiHeiLa.IDMChannel.html">IDMChannel</a> parameter.
 </p>
+<p>
+<div class="WARNING"><h5>warning</h5><p>
+    Due to the lack of REST API for direct message info getting, this event may fire but
+    the message entity will be null.
+</p></div>
+</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_GuildMemberOffline.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.GuildMemberOffline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L389">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L395">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_GuildMemberOffline" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.GuildMemberOffline">GuildMemberOffline</h4>
   <div class="markdown level1 summary"><p>Fired when a guild member is offline. </p>
@@ -947,7 +953,7 @@ that the message cannot be retrieved, the ID of the message is preserved in the
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_GuildMemberOnline.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.GuildMemberOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L382">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L388">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_GuildMemberOnline" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.GuildMemberOnline">GuildMemberOnline</h4>
   <div class="markdown level1 summary"><p>Fired when a guild member is online. </p>
@@ -977,7 +983,7 @@ that the message cannot be retrieved, the ID of the message is preserved in the
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_GuildMemberUpdated.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.GuildMemberUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L375">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L381">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_GuildMemberUpdated" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.GuildMemberUpdated">GuildMemberUpdated</h4>
   <div class="markdown level1 summary"><p>Fired when a guild member is updated. </p>
@@ -1007,7 +1013,7 @@ that the message cannot be retrieved, the ID of the message is preserved in the
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_GuildUpdated.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.GuildUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L459">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L465">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_GuildUpdated" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.GuildUpdated">GuildUpdated</h4>
   <div class="markdown level1 summary"><p>Fired when a guild is updated. </p>
@@ -1037,7 +1043,7 @@ that the message cannot be retrieved, the ID of the message is preserved in the
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_JoinedGuild.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.JoinedGuild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L445">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L451">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_JoinedGuild" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.JoinedGuild">JoinedGuild</h4>
   <div class="markdown level1 summary"><p>Fired when the connected account joins a guild. </p>
@@ -1067,7 +1073,7 @@ that the message cannot be retrieved, the ID of the message is preserved in the
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_LeftGuild.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.LeftGuild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L452">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L458">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_LeftGuild" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.LeftGuild">LeftGuild</h4>
   <div class="markdown level1 summary"><p>Fired when the connected account leaves a guild. </p>
@@ -1347,7 +1353,7 @@ ulong.
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_RoleCreated.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.RoleCreated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L419">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L425">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_RoleCreated" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.RoleCreated">RoleCreated</h4>
   <div class="markdown level1 summary"></div>
@@ -1376,7 +1382,7 @@ ulong.
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_RoleDeleted.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.RoleDeleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L426">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L432">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_RoleDeleted" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.RoleDeleted">RoleDeleted</h4>
   <div class="markdown level1 summary"><p>Fired when a role is deleted. </p>
@@ -1406,7 +1412,7 @@ ulong.
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_RoleUpdated.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.RoleUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L433">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L439">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_RoleUpdated" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.RoleUpdated">RoleUpdated</h4>
   <div class="markdown level1 summary"><p>Fired when a role is updated. </p>
@@ -1436,7 +1442,7 @@ ulong.
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_UserBanned.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.UserBanned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L328">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L334">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_UserBanned" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.UserBanned">UserBanned</h4>
   <div class="markdown level1 summary"><p>Fired when a user is banned from a guild. </p>
@@ -1485,7 +1491,7 @@ and a <a class="xref" href="KaiHeiLa.WebSocket.SocketGuild.html">SocketGuild</a>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_UserConnected.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.UserConnected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L401">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L407">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_UserConnected" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.UserConnected">UserConnected</h4>
   <div class="markdown level1 summary"><p>Fired when a user connected to a voice channel. </p>
@@ -1515,7 +1521,7 @@ and a <a class="xref" href="KaiHeiLa.WebSocket.SocketGuild.html">SocketGuild</a>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_UserDisconnected.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.UserDisconnected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L408">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L414">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_UserDisconnected" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.UserDisconnected">UserDisconnected</h4>
   <div class="markdown level1 summary"><p>Fired when a user disconnected to a voice channel. </p>
@@ -1545,7 +1551,7 @@ and a <a class="xref" href="KaiHeiLa.WebSocket.SocketGuild.html">SocketGuild</a>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_UserJoined.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.UserJoined%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L295">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L301">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_UserJoined" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.UserJoined">UserJoined</h4>
   <div class="markdown level1 summary"><p>Fired when a user joins a guild. </p>
@@ -1575,7 +1581,7 @@ and a <a class="xref" href="KaiHeiLa.WebSocket.SocketGuild.html">SocketGuild</a>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_UserLeft.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.UserLeft%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L302">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L308">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_UserLeft" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.UserLeft">UserLeft</h4>
   <div class="markdown level1 summary"><p>Fired when a user leaves a guild. </p>
@@ -1605,7 +1611,7 @@ and a <a class="xref" href="KaiHeiLa.WebSocket.SocketGuild.html">SocketGuild</a>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_UserUnbanned.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.UserUnbanned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L354">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L360">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_UserUnbanned" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.UserUnbanned">UserUnbanned</h4>
   <div class="markdown level1 summary"><p>Fired when a user is unbanned from a guild. </p>
@@ -1654,7 +1660,7 @@ and a <a class="xref" href="KaiHeiLa.WebSocket.SocketGuild.html">SocketGuild</a>
     <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_WebSocket_BaseSocketClient_UserUpdated.md&amp;value=---%0Auid%3A%20KaiHeiLa.WebSocket.BaseSocketClient.UserUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L361">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.WebSocket/BaseSocketClient.Event.cs/#L367">View Source</a>
   </span>
   <h4 id="KaiHeiLa_WebSocket_BaseSocketClient_UserUpdated" data-uid="KaiHeiLa.WebSocket.BaseSocketClient.UserUpdated">UserUpdated</h4>
   <div class="markdown level1 summary"><p>Fired when a user is updated. </p>
