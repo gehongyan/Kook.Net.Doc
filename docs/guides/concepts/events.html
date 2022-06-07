@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>&#20107;&#20214; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="&#20107;&#20214; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="generator" content="docfx 2.56.7.0">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../styles/config.css">
+      <link rel="stylesheet" href="../../styles/discord.css">
+      <link rel="stylesheet" href="../../styles/singulink.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+      
+      <meta property="docfx:rel" content="../../">
+      
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../../index.html">
+              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../../index.html">
+                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                        </a>  </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+                  KaiHeiLa.Net (c) 2022
+                  
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="Guides.Concepts.Events">
+<h1 id="kaiheilanet-中的事件">KaiHeiLa.Net 中的事件</h1>
+
+<p>KaiHeiLa.Net 中的事件采用与标准 .NET 事件模式类似的方式实现，
+不同的是，KaiHeiLa.Net 中的事件类型都为 <a href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>，
+事件参数传递不使用 <a href="https://docs.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>，而是直接传递到事件处理程序中。</p>
+<p>这使得事件处理程序可以直接在异步上下文中执行，事件返回类型为 
+<a href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>，而不是 <code>async void</code>。</p>
+<h2 id="用法">用法</h2>
+<p>要从事件中接收数据，只需通过 C# 委托的事件模式进行订阅。</p>
+<p>订阅事件支持命名函数，也支持匿名函数（Lambda 表达式）。</p>
+<h2 id="线程安全性">线程安全性</h2>
+<p>所有的事件都被设计为线程安全的，所有的事件都拥有与网关线程相同的上下文，
+在网关线程之外的任务上同步运行，</p>
+<p>但这样做也会存在副作用，这可能会导致网关现成死锁并终止连接。
+经验之谈，任何耗时超过 3 秒的任务都<strong>不应该</strong>直接在事件上下文中等待，
+而是应该包装在 <code>Task.Run</code> 中执行，或是卸载到另外一个任务中。</p>
+<p>这意味着您不应该在与事件相同的上下文中通过开黑啦网关请求数据，
+由于网关线程将等待所有被调用的事件处理程序完成，然后才会处理所有来自网关的任何其它数据，
+这将导致一个无法恢复的死锁。</p>
+<h2 id="常见模式">常见模式</h2>
+<p>KaiHeiLa.Net 中的事件签名都是形如 <code>Func&lt;T1, ..., Task&gt;</code> 的模式，没有额外定义名称，
+因此，有关方法签名的详细信息，请参考 IntelliSense 智能提示，或直接浏览 API 文档。</p>
+<p>不过，KaiHeiLa.Net 中的事件签名大多遵循类似的模式，还是可以让您从中推断参数定义。</p>
+<h3 id="实体变更">实体变更</h3>
+<p>具有 <code>Func&lt;Entity, Entity, Task&gt;</code> 签名的事件处理程序通常表示一个实体中的信息发生了变更，
+两个实体中，前者为发生变更前实体的副本，后者为变更执行完成后的实体。</p>
+<p>此模式通常仅在 <code>EntityUpdated</code> 事件中出现。</p>
+<h3 id="缓存实体">缓存实体</h3>
+<p>具有 <code>Func&lt;Cacheable, Entity, Task&gt;</code> 签名的事件处理程序则通常表示 API
+或网关并未提供实体发生变更前的状态，因此它可以从客户端的缓存中提取或从 API 中下载。</p>
+<p>有关此对象的更多信息，请参阅 <a class="xref" href="../../api/KaiHeiLa.Cacheable-2.html">Cacheable</a> 文档。</p>
+<div class="NOTE"><h5>Note</h5><p>许多与消息相关的实体（例如：<code>MessageUpdated</code> 和 <code>ReactionAdded</code>）依赖于客户端的消息缓存，
+该特性默认<strong>不启用</strong>，因此，如果您需要使用它，请在 <a class="xref" href="../../api/KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.html">KaiHeiLaSocketConfig</a>
+中通过设置 <code>MessageCacheSize</code> 的值来启用该消息缓存。</p>
+</div>
+<h2 id="示例">示例</h2>
+<pre><code class="lang-csharp" name="Event Sample">using KaiHeiLa;
+using KaiHeiLa.WebSocket;
+
+public class Program
+{
+    private KaiHeiLaSocketClient _client;
+    static void Main(string[] args) =&gt; new Program().MainAsync().GetAwaiter().GetResult();
+	
+    public async Task MainAsync()
+    {
+        // &#22914;&#38656;&#20351;&#29992;&#20107;&#20214;&#20013;&#30340; Cacheable&lt;IMessage, Guid&gt; &#23454;&#20307;&#65292;
+        // &#24744;&#21487;&#33021;&#38656;&#35201;&#22312;&#23458;&#25143;&#31471;&#37197;&#32622;&#20013;&#21551;&#29992;&#28040;&#24687;&#32531;&#23384;&#12290;
+        var _config = new KaiHeiLaSocketConfig { MessageCacheSize = 100 };
+        _client = new KaiHeiLaSocketClient(_config);
+
+        await _client.LoginAsync(TokenType.Bot, Environment.GetEnvironmentVariable(&quot;KaiHeiLaToken&quot;));
+        await _client.StartAsync();
+
+        _client.MessageUpdated += MessageUpdated;
+        _client.Ready += () =&gt; 
+        {
+            Console.WriteLine(&quot;Bot is connected!&quot;);
+            return Task.CompletedTask;
+        }
+		
+        await Task.Delay(-1);
+    }
+
+    private async Task MessageUpdated(Cacheable&lt;IMessage, Guid&gt; before, SocketMessage after, ISocketMessageChannel channel)
+    {
+        // &#22914;&#26524;&#27809;&#26377;&#21551;&#29992;&#28040;&#24687;&#32531;&#23384;&#65292;&#28040;&#24687;&#19979;&#36733;&#26041;&#27861;&#21487;&#33021;&#20250;&#33719;&#24471;&#19982; `after` &#23436;&#20840;&#30456;&#21516;&#30340;&#23454;&#20307;
+        var message = await before.GetOrDownloadAsync();
+        Console.WriteLine($&quot;{message} -&gt; {after}&quot;);
+    }
+}
+</code></pre></article>
+                </div>
+
+            </main>
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../styles/singulink.js"></script>
+        <script type="text/javascript" src="../../styles/main.js"></script>    </body>
+</html>
