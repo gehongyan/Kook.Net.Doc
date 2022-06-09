@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>&#23454;&#20307;&#31616;&#20171; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="&#23454;&#20307;&#31616;&#20171; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="generator" content="docfx 2.56.7.0">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../styles/config.css">
+      <link rel="stylesheet" href="../../styles/discord.css">
+      <link rel="stylesheet" href="../../styles/singulink.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+      
+      <meta property="docfx:rel" content="../../">
+      
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../../index.html">
+              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../../index.html">
+                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                        </a>  </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+                  KaiHeiLa.Net (c) 2022
+                  
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="Guides.Entities.Intro">
+<h1 id="kaiheilanet-中的实体">KaiHeiLa.Net 中的实体</h1>
+
+<p>KaiHeiLa.Net 提供了一系列多用途的实体类，来表示来自开黑啦 API 或网关的数据。</p>
+<div class="TIP"><h5>Tip</h5><p>在使用 <code>Get***</code> 系列方法来获取包含详细信息的实例实体时，需要为方法指定正确的 ID，
+因此，建议您启用开黑啦的开发者模式，以便于获取实体的 ID，开发者模式可在
+“用户设置 - 高级设置 - 开发者模式” 处启用。</p>
+</div>
+<h2 id="实体的变体与继承">实体的变体与继承</h2>
+<p>由于同一对象可能会在开黑啦 API 或网关不同的接口或事件中出现，
+在不同的数据上下文中包含不同的字段，因此，KaiHeiLa.Net 中的部分实体拥有多种变体，
+例如：<code>IUser</code> 和 <code>IGuildUser</code> 分别表示通用的用户实体和服务器内的用户实体。</p>
+<p>尽管部分实体包含的信息很简略，但所有的实体模型都有一个包含尽可能详细的信息的实体变体与之对应。</p>
+<h2 id="socket-与-rest">Socket 与 REST</h2>
+<p>REST 实体通过 HTTP API 获取，其在被使用后会被销毁释放。每一个 REST
+实体的获取都会引起一次 API 请求，短时间内发起大量 API 请求可能会触发速率限制，
+因此，请尽可能少地通过 REST 获取实体。</p>
+<ul>
+<li><a href="https://restfulapi.net/">有关 REST 的更多信息</a></li>
+</ul>
+<p>Socket 实体中的大多数都是通过 <code>KaiHeiLaSocketClient</code> 的网关连接中的各种事件创建的，
+仅当客户端初始化或事件包含的数据过于简略时，客户端才会进一步通过 API 获取的 REST 实体补全信息。
+这些 Socket 实体都会进入到客户端的全局缓存中，以在业务逻辑中使用。</p>
+<p>以 <code>MessageReceived</code> 事件为例，事件所传递的数据为 <code>SocketMessage</code> 实体，
+实体内指示消息所来源的频道的属性为 <code>SocketMessageChannel</code> 实体。
+所有的消息都来源于支持发送消息的频道类型，
+因此，频道的这种实体变体可以覆盖全部需要发送消息的频道的情况。</p>
+<p>但这并不是说消息不能来源于 <code>SocketTextChannel</code>（<code>SocketTextChannel</code> 表示服务器内的文本频道），
+如果要从一个消息实体获取消息所在服务器的信息，则需要将其频道实体类型转换为 <code>SocketTextChannel</code>。</p>
+<div class="NOTE"><h5>Note</h5><p>有关各种实体的继承关系及其定义，请参阅 <a class="xref" href="glossary.html">实体词汇表</a>。</p>
+</div>
+<h2 id="导航属性">导航属性</h2>
+<p>多数 Socket 实体都有一个内部的导航属性，以便于实体向其父类或派生类的转换与访问。</p>
+<h2 id="访问-socket-实体">访问 Socket 实体</h2>
+<p>实体最基本的形式形如 <code>SocketGuild</code>、<code>SocketUser</code>、<code>SocketChannel</code> 等，
+这些实体可以从 <code>KaiHeiLaSocketClient</code> 的全局缓存中获取，
+也可以在 <code>KaiHeiLaSocketClient</code> 上通过相应的 <code>Get***</code> 方法获取。</p>
+<p>在这些实体上进一步调用 <code>Get***</code> 方法可以获得包含更多信息的实体变体，例如：
+<code>SocketGuild.GetUser</code> 可以获得 <code>SocketGuildUser</code> 实体，
+<code>SocketGuild.GetChannel</code> 可以获得 <code>SocketGuildChannel</code> 实体。
+按业务逻辑的需要，将这些实体进行进一步的类型转换便可获得实体的其它变体。</p>
+<h3 id="示例">示例</h3>
+<pre><code class="lang-csharp" name="Socket Sample">public string GetChannelTopic(ulong id)
+{
+    var channel = _client.GetChannel(8708013346475345) as SocketTextChannel;
+    return channel?.Topic;
+}
+
+public SocketGuildUser GetGuildOwner(SocketChannel channel)
+{
+    var guild = (channel as SocketGuildChannel)?.Guild;
+    return guild?.Owner;
+}
+</code></pre><h2 id="访问-rest-实体">访问 REST 实体</h2>
+<p>REST 实体的工作方式几乎与 Socket 实体相同，只是在每一次获取时都会发起一次
+API 请求，因此较少使用。</p>
+<p>访问 REST 实体需要通过 <code>KaiHeiLaRestClient</code> 的 <code>Rest</code> 属性进行，
+或是创建一个新的 <a class="xref" href="../../api/KaiHeiLa.Rest.KaiHeiLaRestClient.html">KaiHeiLaRestClient</a> 实例，可以独立于网关线程。</p>
+<h3 id="示例-1">示例</h3>
+<pre><code class="lang-csharp" name="Rest Sample">// &#22312; GetUserAsync &#30340;&#32467;&#26524;&#20013;&#65292;RestUser &#23454;&#20307;&#21253;&#21547;&#20102;&#29992;&#25143;&#30331;&#24405;&#24320;&#40657;&#21862;&#30340;&#36830;&#25509;&#26041;&#24335;&#65292;
+// &#32780;&#22312; RestGuild &#19978;&#30340; GetUsersAsync &#32467;&#26524;&#20013;&#30340; RestUser &#19981;&#21253;&#21547;&#27492;&#20449;&#24687;&#12290;
+// Socket &#24314;&#31435;&#36830;&#25509;&#21518;&#65292;&#22914;&#26524;&#37197;&#32622;&#25351;&#31034;&#23458;&#25143;&#31471;&#22987;&#32456;&#19979;&#36733;&#20840;&#37096;&#29992;&#25143;&#20449;&#24687;&#65292;
+// &#23458;&#25143;&#31471;&#21017;&#20250;&#36890;&#36807; RestGuild.GetUsersAsync &#25152;&#23454;&#38469;&#35843;&#29992;&#30340; API &#33719;&#21462;&#26381;&#21153;&#22120;&#29992;&#25143;&#20449;&#24687;&#65292;
+// &#23613;&#31649;&#22914;&#27492;&#65292;&#20840;&#23616;&#32531;&#23384;&#20013;&#20063;&#19981;&#20250;&#21253;&#21547;&#21487;&#38752;&#30340;&#29992;&#25143;&#36830;&#25509;&#26041;&#24335;&#30340;&#20449;&#24687;&#12290;
+// &#22312;&#36825;&#31181;&#23569;&#25968;&#24773;&#20917;&#19979;&#65292;&#21017;&#38656;&#35201;&#36890;&#36807;&#35775;&#38382; GetUserAsync &#36820;&#22238;&#30340; RestUser &#25165;&#33021;&#33719;&#21462;&#25152;&#38656;&#35201;&#30340;&#36830;&#25509;&#26041;&#24335;&#20449;&#24687;&#12290;
+public static async Task&lt;ClientType?&gt; GetUserClientType(IUser user, KaiHeiLaRestClient restClient)
+{
+    var restUser = await restClient.GetUserAsync(user.Id);
+    return restUser.ActiveClient;
+}
+</code></pre></article>
+                </div>
+
+            </main>
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../styles/singulink.js"></script>
+        <script type="text/javascript" src="../../styles/main.js"></script>    </body>
+</html>
