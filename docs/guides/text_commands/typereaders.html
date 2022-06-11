@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#20107;&#20214; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>&#31867;&#22411;&#35299;&#26512; | KaiHeiLa.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#20107;&#20214; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="&#31867;&#22411;&#35299;&#26512; | KaiHeiLa.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -89,76 +89,84 @@
                           </div>
                         </div>
 
-                    <article class="content wrap" id="_content" data-uid="Guides.Concepts.Events">
-<h1 id="kaiheilanet-中的事件">KaiHeiLa.Net 中的事件</h1>
+                    <article class="content wrap" id="_content" data-uid="Guides.TextCommands.TypeReaders">
+<h1 id="类型解析">类型解析</h1>
 
-<p>KaiHeiLa.Net 中的事件采用与标准 .NET 事件模式类似的方式实现，
-不同的是，KaiHeiLa.Net 中的事件类型都为 <a href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>，
-事件参数传递不使用 <a href="https://docs.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>，而是直接传递到事件处理程序中。</p>
-<p>这使得事件处理程序可以直接在异步上下文中执行，事件返回类型为 
-<a href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>，而不是 <code>async void</code>。</p>
-<h2 id="用法">用法</h2>
-<p>要从事件中接收数据，只需通过 C# 委托的事件模式进行订阅。</p>
-<p>订阅事件支持命名函数，也支持匿名函数（Lambda 表达式）。</p>
-<h2 id="线程安全性">线程安全性</h2>
-<p>所有的事件都被设计为线程安全的，所有的事件都拥有与网关线程相同的上下文，
-在网关线程之外的任务上同步运行，</p>
-<p>但这样做也会存在副作用，这可能会导致网关现成死锁并终止连接。
-经验之谈，任何耗时超过 3 秒的任务都<strong>不应该</strong>直接在事件上下文中等待，
-而是应该包装在 <code>Task.Run</code> 中执行，或是卸载到另外一个任务中。</p>
-<p>这意味着您不应该在与事件相同的上下文中通过开黑啦网关请求数据，
-由于网关线程将等待所有被调用的事件处理程序完成，然后才会处理所有来自网关的任何其它数据，
-这将导致一个无法恢复的死锁。</p>
-<h2 id="常见模式">常见模式</h2>
-<p>KaiHeiLa.Net 中的事件签名都是形如 <code>Func&lt;T1, ..., Task&gt;</code> 的模式，没有额外定义名称，
-因此，有关方法签名的详细信息，请参考 IntelliSense 智能提示，或直接浏览 API 文档。</p>
-<p>不过，KaiHeiLa.Net 中的事件签名大多遵循类似的模式，还是可以让您从中推断参数定义。</p>
-<h3 id="实体变更">实体变更</h3>
-<p>具有 <code>Func&lt;Entity, Entity, Task&gt;</code> 签名的事件处理程序通常表示一个实体中的信息发生了变更，
-两个实体中，前者为发生变更前实体的副本，后者为变更执行完成后的实体。</p>
-<p>此模式通常仅在 <code>EntityUpdated</code> 事件中出现。</p>
-<h3 id="缓存实体">缓存实体</h3>
-<p>具有 <code>Func&lt;Cacheable, Entity, Task&gt;</code> 签名的事件处理程序则通常表示 API
-或网关并未提供实体发生变更前的状态，因此它可以从客户端的缓存中提取或从 API 中下载。</p>
-<p>有关此对象的更多信息，请参阅 <a class="xref" href="../../api/KaiHeiLa.Cacheable-2.html">Cacheable</a> 文档。</p>
-<div class="NOTE"><h5>Note</h5><p>许多与消息相关的实体（例如：<code>MessageUpdated</code> 和 <code>ReactionAdded</code>）依赖于客户端的消息缓存，
-该特性默认<strong>不启用</strong>，因此，如果您需要使用它，请在 <a class="xref" href="../../api/KaiHeiLa.WebSocket.KaiHeiLaSocketConfig.html">KaiHeiLaSocketConfig</a>
-中通过设置 <code>MessageCacheSize</code> 的值来启用该消息缓存。</p>
+<p>通过类型解析，命令中传入的各种参数可以被自动转换为各种类型。</p>
+<p>默认支持的类型解析包括：</p>
+<ul>
+<li><code>bool</code></li>
+<li><code>char</code></li>
+<li><code>sbyte</code>/<code>byte</code></li>
+<li><code>ushort</code>/<code>short</code></li>
+<li><code>uint</code>/<code>int</code></li>
+<li><code>ulong</code>/<code>long</code></li>
+<li><code>float</code>, <code>double</code>, <code>decimal</code></li>
+<li><code>string</code></li>
+<li><code>enum</code></li>
+<li><code>DateTime</code>/<code>DateTimeOffset</code>/<code>TimeSpan</code></li>
+<li>任何可空的值类型 (例如：<code>int?</code>, <code>bool?</code>)</li>
+<li>任何 <code>IChannel</code>/<code>IMessage</code>/<code>IUser</code>/<code>IRole</code> 的实现类</li>
+</ul>
+<h2 id="自定义类型解析">自定义类型解析</h2>
+<p>要自定义类型解析，可以创建一个类，引入 <a class="xref" href="../../api/KaiHeiLa.html">KaiHeiLa</a> 和 <a class="xref" href="../../api/KaiHeiLa.Commands.html">KaiHeiLa.Commands</a>
+命名空间，继承 @KaiHeiLa.Commands.TypeReader&#65292;&#24182;&#37325;&#20889; <a class="xref" href="../../api/KaiHeiLa.Commands.TypeReader.html#KaiHeiLa_Commands_TypeReader_ReadAsync_">ReadAsync</a> 方法，
+该方法内为将输入的字符串解析为指定类型的逻辑。</p>
+<p>如果类型解析成功，请将解析结果传入 <a class="xref" href="../../api/KaiHeiLa.Commands.TypeReaderResult.html#KaiHeiLa_Commands_TypeReaderResult_FromSuccess_">TypeReaderResult.FromSuccess</a> 返回；
+如果类型解析失败，请将错误信息传入 <a class="xref" href="../../api/KaiHeiLa.Commands.TypeReaderResult.html#KaiHeiLa_Commands_TypeReaderResult_FromError_">TypeReaderResult.FromError</a> 返回。</p>
+<div class="NOTE"><h5>Note</h5><p>Visual Studio、JetBrains Rider 等集成开发环境中的 IntelliSense 
+智能提示可以帮助您添加抽象类的实现中缺失的成员。</p>
 </div>
-<h2 id="示例">示例</h2>
-<pre><code class="lang-csharp" name="Event Sample">using KaiHeiLa;
-using KaiHeiLa.WebSocket;
+<h3 id="示例">示例</h3>
+<pre><code class="lang-csharp" name="TypeReaders">// &#26412;&#31867;&#24211;&#24050;&#23545;&#22810;&#25968;&#22522;&#26412;&#31867;&#22411;&#30340;&#31867;&#22411;&#35299;&#26512;&#36827;&#34892;&#20102;&#23454;&#29616;
+// &#26412;&#31034;&#20363;&#20165;&#29992;&#26469;&#23637;&#31034;&#22914;&#20309;&#21019;&#24314;&#19968;&#20010;&#31616;&#21333;&#30340;&#33258;&#23450;&#20041;&#31867;&#22411;&#35299;&#26512;
+using KaiHeiLa;
+using KaiHeiLa.Commands;
 
-public class Program
+public class BooleanTypeReader : TypeReader
 {
-    private KaiHeiLaSocketClient _client;
-    public static Task Main(string[] args) =&gt; new Program().MainAsync();
-	
-    public async Task MainAsync()
+    public override Task&lt;TypeReaderResult&gt; ReadAsync(ICommandContext context, string input, IServiceProvider services)
     {
-        // &#22914;&#38656;&#20351;&#29992;&#20107;&#20214;&#20013;&#30340; Cacheable&lt;IMessage, Guid&gt; &#23454;&#20307;&#65292;
-        // &#24744;&#21487;&#33021;&#38656;&#35201;&#22312;&#23458;&#25143;&#31471;&#37197;&#32622;&#20013;&#21551;&#29992;&#28040;&#24687;&#32531;&#23384;&#12290;
-        var _config = new KaiHeiLaSocketConfig { MessageCacheSize = 100 };
-        _client = new KaiHeiLaSocketClient(_config);
+        bool result;
+        if (bool.TryParse(input, out result))
+            return Task.FromResult(TypeReaderResult.FromSuccess(result));
 
-        await _client.LoginAsync(TokenType.Bot, Environment.GetEnvironmentVariable(&quot;KaiHeiLaToken&quot;));
-        await _client.StartAsync();
+        return Task.FromResult(TypeReaderResult.FromError(CommandError.ParseFailed, &quot;Input could not be parsed as a boolean.&quot;));
+    }
+}
+</code></pre><h2 id="注册自定义类型解析">注册自定义类型解析</h2>
+<p>自定义类型解析无法被文本命令服务自动发现，需要显式注册。</p>
+<p>要添加自定义类型解析，请调用 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_AddTypeReader_">CommandService.AddTypeReader</a> 方法。</p>
+<div class="IMPORTANT"><h5>Important</h5><p>自定义类型解析注册需要在模块发现前进行，否则自定义类型接解析无法正常工作。</p>
+</div>
+<h3 id="示例-1">示例</h3>
+<pre><code class="lang-csharp" name="Adding TypeReaders">public class CommandHandler
+{
+    private readonly CommandService _commands;
+    private readonly KaiHeiLaSocketClient _client;
+    private readonly IServiceProvider _services;
 
-        _client.MessageUpdated += MessageUpdated;
-        _client.Ready += () =&gt; 
-        {
-            Console.WriteLine(&quot;Bot is connected!&quot;);
-            return Task.CompletedTask;
-        }
-		
-        await Task.Delay(Timeout.Infinite);
+    public CommandHandler(CommandService commands, KaiHeiLaSocketClient client, IServiceProvider services)
+    {
+        _commands = commands;
+        _client = client;
+        _services = services;
     }
 
-    private async Task MessageUpdated(Cacheable&lt;IMessage, Guid&gt; before, SocketMessage after, ISocketMessageChannel channel)
+    public async Task SetupAsync()
     {
-        // &#22914;&#26524;&#27809;&#26377;&#21551;&#29992;&#28040;&#24687;&#32531;&#23384;&#65292;&#28040;&#24687;&#19979;&#36733;&#26041;&#27861;&#21487;&#33021;&#20250;&#33719;&#24471;&#19982; `after` &#23436;&#20840;&#30456;&#21516;&#30340;&#23454;&#20307;
-        var message = await before.GetOrDownloadAsync();
-        Console.WriteLine($&quot;{message} -&gt; {after}&quot;);
+        _client.MessageReceived += CommandHandleAsync;
+
+        // &#28155;&#21152; BooleanTypeReader &#26469;&#35299;&#26512; `bool` &#31867;&#22411;&#30340;&#21442;&#25968;
+        _commands.AddTypeReader(typeof(bool), new BooleanTypeReader());
+
+        // &#27880;&#20876;&#27169;&#22359;
+        await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _services);
+    }
+
+    public async Task CommandHandleAsync(SocketMessage msg)
+    {
+        // ...
     }
 }
 </code></pre></article>

@@ -5,10 +5,10 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class PreconditionAttribute
+      <title>Class RequireUserAttribute
      | KaiHeiLa.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class PreconditionAttribute
+      <meta name="title" content="Class RequireUserAttribute
      | KaiHeiLa.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
@@ -91,40 +91,129 @@
                           </div>
                         </div>
 
-                    <article class="content wrap" id="_content" data-uid="KaiHeiLa.Commands.PreconditionAttribute">
+                    <article class="content wrap" id="_content" data-uid="KaiHeiLa.Commands.RequireUserAttribute">
   
   
-  <h1 id="KaiHeiLa_Commands_PreconditionAttribute" data-uid="KaiHeiLa.Commands.PreconditionAttribute" class="text-break">Class PreconditionAttribute
+  <h1 id="KaiHeiLa_Commands_RequireUserAttribute" data-uid="KaiHeiLa.Commands.RequireUserAttribute" class="text-break">Class RequireUserAttribute
   </h1>
-  <div class="markdown level0 summary"><p>Requires the module or class to pass the specified precondition before execution can begin.</p>
+  <div class="markdown level0 summary"><p>Requires the command to be invoked by the specified user.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">PreconditionAttribute</span></div>
-      <div class="level2"><a class="xref" href="KaiHeiLa.Commands.RequireBotPermissionAttribute.html">RequireBotPermissionAttribute</a></div>
-      <div class="level2"><a class="xref" href="KaiHeiLa.Commands.RequireContextAttribute.html">RequireContextAttribute</a></div>
-      <div class="level2"><a class="xref" href="KaiHeiLa.Commands.RequireUserAttribute.html">RequireUserAttribute</a></div>
-      <div class="level2"><a class="xref" href="KaiHeiLa.Commands.RequireUserPermissionAttribute.html">RequireUserPermissionAttribute</a></div>
+    <div class="level1"><a class="xref" href="KaiHeiLa.Commands.PreconditionAttribute.html">PreconditionAttribute</a></div>
+    <div class="level2"><span class="xref">RequireUserAttribute</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="KaiHeiLa.Commands.PreconditionAttribute.html#KaiHeiLa_Commands_PreconditionAttribute_Group">PreconditionAttribute.Group</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="KaiHeiLa.Commands.html">KaiHeiLa.Commands</a></h6>
   <h6><strong>Assembly</strong>: KaiHeiLa.Net.Commands.dll</h6>
-  <h5 id="KaiHeiLa_Commands_PreconditionAttribute_syntax">Syntax</h5>
+  <h5 id="KaiHeiLa_Commands_RequireUserAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class PreconditionAttribute : Attribute</code></pre>
+    <pre><code class="lang-csharp hljs">public class RequireUserAttribute : PreconditionAttribute</code></pre>
   </div>
+  <h5 id="KaiHeiLa_Commands_RequireUserAttribute_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This precondition will restrict the access of the command or module to a specified user.
+If the precondition fails to be met, an erroneous <a class="xref" href="KaiHeiLa.Commands.PreconditionResult.html">PreconditionResult</a> will be returned with the
+message &quot;Command can only be run by the specified user.&quot; For example, you can pass the owner of this bot
+application to restrict the command to the bot owner to be able to use it.</p>
+</div>
+  <h5 id="KaiHeiLa_Commands_RequireUserAttribute_examples"><strong>Examples</strong></h5>
+  <p>The following example restricts the command to a set of sensitive commands that only the specified user
+should be able to access.</p>
+<pre><code class="lang-cs">[RequireUser(2810246202)]
+[Group(&quot;admin&quot;)]
+public class AdminModule : ModuleBase
+{
+    [Command(&quot;exit&quot;)]
+    public async Task ExitAsync()
+    {
+        Environment.Exit(0);
+    }
+}</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Commands_RequireUserAttribute__ctor_KaiHeiLa_IUser_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Commands.RequireUserAttribute.%23ctor(KaiHeiLa.IUser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L41">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Commands_RequireUserAttribute__ctor_" data-uid="KaiHeiLa.Commands.RequireUserAttribute.#ctor*"></a>
+  <h4 id="KaiHeiLa_Commands_RequireUserAttribute__ctor_KaiHeiLa_IUser_" data-uid="KaiHeiLa.Commands.RequireUserAttribute.#ctor(KaiHeiLa.IUser)">RequireUserAttribute(IUser)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RequireUserAttribute(IUser user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="KaiHeiLa.IUser.html">IUser</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Commands_RequireUserAttribute__ctor_System_UInt64_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Commands.RequireUserAttribute.%23ctor(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L36">View Source</a>
+  </span>
+  <a id="KaiHeiLa_Commands_RequireUserAttribute__ctor_" data-uid="KaiHeiLa.Commands.RequireUserAttribute.#ctor*"></a>
+  <h4 id="KaiHeiLa_Commands_RequireUserAttribute__ctor_System_UInt64_" data-uid="KaiHeiLa.Commands.RequireUserAttribute.#ctor(System.UInt64)">RequireUserAttribute(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RequireUserAttribute(ulong userId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Commands_PreconditionAttribute_ErrorMessage.md&amp;value=---%0Auid%3A%20KaiHeiLa.Commands.PreconditionAttribute.ErrorMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Commands_RequireUserAttribute_ErrorMessage.md&amp;value=---%0Auid%3A%20KaiHeiLa.Commands.RequireUserAttribute.ErrorMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Commands/Attributes/PreconditionAttribute.cs/#L29">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L47">View Source</a>
   </span>
-  <a id="KaiHeiLa_Commands_PreconditionAttribute_ErrorMessage_" data-uid="KaiHeiLa.Commands.PreconditionAttribute.ErrorMessage*"></a>
-  <h4 id="KaiHeiLa_Commands_PreconditionAttribute_ErrorMessage" data-uid="KaiHeiLa.Commands.PreconditionAttribute.ErrorMessage">ErrorMessage</h4>
+  <a id="KaiHeiLa_Commands_RequireUserAttribute_ErrorMessage_" data-uid="KaiHeiLa.Commands.RequireUserAttribute.ErrorMessage*"></a>
+  <h4 id="KaiHeiLa_Commands_RequireUserAttribute_ErrorMessage" data-uid="KaiHeiLa.Commands.RequireUserAttribute.ErrorMessage">ErrorMessage</h4>
   <div class="markdown level1 summary"><p>When overridden in a derived class, uses the supplied string
 as the error message if the precondition doesn&apos;t pass.
 Setting this for a class that doesn&apos;t override
@@ -133,7 +222,7 @@ this property is a no-op.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ErrorMessage { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override string ErrorMessage { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,59 +239,25 @@ this property is a no-op.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Commands_PreconditionAttribute_Group.md&amp;value=---%0Auid%3A%20KaiHeiLa.Commands.PreconditionAttribute.Group%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Commands/Attributes/PreconditionAttribute.cs/#L21">View Source</a>
-  </span>
-  <a id="KaiHeiLa_Commands_PreconditionAttribute_Group_" data-uid="KaiHeiLa.Commands.PreconditionAttribute.Group*"></a>
-  <h4 id="KaiHeiLa_Commands_PreconditionAttribute_Group" data-uid="KaiHeiLa.Commands.PreconditionAttribute.Group">Group</h4>
-  <div class="markdown level1 summary"><p>Specifies a group that this precondition belongs to.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Group { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="KaiHeiLa_Commands_PreconditionAttribute_Group_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><a class="xref" href="KaiHeiLa.Preconditions.html">Preconditions</a> of the same group require only one of the preconditions to pass in order to
-be successful (A || B). Specifying <a class="xref" href="KaiHeiLa.Commands.PreconditionAttribute.html#KaiHeiLa_Commands_PreconditionAttribute_Group">Group</a> = <code>null</code> or not at all will
-require <em>all</em> preconditions to pass, just like normal (A &amp;&amp; B).</p>
-</div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="KaiHeiLa.Commands.PreconditionAttribute.html#KaiHeiLa_Commands_PreconditionAttribute_ErrorMessage">PreconditionAttribute.ErrorMessage</a></div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Commands_PreconditionAttribute_CheckPermissionsAsync_KaiHeiLa_Commands_ICommandContext_KaiHeiLa_Commands_CommandInfo_IServiceProvider_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Commands.PreconditionAttribute.CheckPermissionsAsync(KaiHeiLa.Commands.ICommandContext%2CKaiHeiLa.Commands.CommandInfo%2CIServiceProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/new/master/apiSpec/new?filename=KaiHeiLa_Commands_RequireUserAttribute_CheckPermissionsAsync_KaiHeiLa_Commands_ICommandContext_KaiHeiLa_Commands_CommandInfo_IServiceProvider_.md&amp;value=---%0Auid%3A%20KaiHeiLa.Commands.RequireUserAttribute.CheckPermissionsAsync(KaiHeiLa.Commands.ICommandContext%2CKaiHeiLa.Commands.CommandInfo%2CIServiceProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Commands/Attributes/PreconditionAttribute.cs/#L37">View Source</a>
+    <a href="https://github.com/gehongyan/KaiHeiLa.Net/blob/master/src/KaiHeiLa.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L50">View Source</a>
   </span>
-  <a id="KaiHeiLa_Commands_PreconditionAttribute_CheckPermissionsAsync_" data-uid="KaiHeiLa.Commands.PreconditionAttribute.CheckPermissionsAsync*"></a>
-  <h4 id="KaiHeiLa_Commands_PreconditionAttribute_CheckPermissionsAsync_KaiHeiLa_Commands_ICommandContext_KaiHeiLa_Commands_CommandInfo_IServiceProvider_" data-uid="KaiHeiLa.Commands.PreconditionAttribute.CheckPermissionsAsync(KaiHeiLa.Commands.ICommandContext,KaiHeiLa.Commands.CommandInfo,IServiceProvider)">CheckPermissionsAsync(ICommandContext, CommandInfo, IServiceProvider)</h4>
+  <a id="KaiHeiLa_Commands_RequireUserAttribute_CheckPermissionsAsync_" data-uid="KaiHeiLa.Commands.RequireUserAttribute.CheckPermissionsAsync*"></a>
+  <h4 id="KaiHeiLa_Commands_RequireUserAttribute_CheckPermissionsAsync_KaiHeiLa_Commands_ICommandContext_KaiHeiLa_Commands_CommandInfo_IServiceProvider_" data-uid="KaiHeiLa.Commands.RequireUserAttribute.CheckPermissionsAsync(KaiHeiLa.Commands.ICommandContext,KaiHeiLa.Commands.CommandInfo,IServiceProvider)">CheckPermissionsAsync(ICommandContext, CommandInfo, IServiceProvider)</h4>
   <div class="markdown level1 summary"><p>Checks if the <code data-dev-comment-type="paramref" class="paramref">command</code> has the sufficient permission to be executed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;PreconditionResult&gt; CheckPermissionsAsync(ICommandContext context, CommandInfo command, IServiceProvider services)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;PreconditionResult&gt; CheckPermissionsAsync(ICommandContext context, CommandInfo command, IServiceProvider services)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -249,10 +304,8 @@ require <em>all</em> preconditions to pass, just like normal (A &amp;&amp; B).</
       </tr>
     </tbody>
   </table>
-  <h3 id="seealso">See Also</h3>
-  <div class="seealso">
-      <div><a class="xref" href="KaiHeiLa.Commands.ParameterPreconditionAttribute.html">ParameterPreconditionAttribute</a></div>
-  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="KaiHeiLa.Commands.PreconditionAttribute.html#KaiHeiLa_Commands_PreconditionAttribute_CheckPermissionsAsync_KaiHeiLa_Commands_ICommandContext_KaiHeiLa_Commands_CommandInfo_IServiceProvider_">PreconditionAttribute.CheckPermissionsAsync(ICommandContext, CommandInfo, IServiceProvider)</a></div>
 </article>
                 </div>
 
