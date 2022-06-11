@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#23433;&#35013; KaiHeiLa.Net | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>Serilog | KaiHeiLa.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#23433;&#35013; KaiHeiLa.Net | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="Serilog | KaiHeiLa.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -89,98 +89,108 @@
                           </div>
                         </div>
 
-                    <article class="content wrap" id="_content" data-uid="Guides.GettingStarted.Installation">
-<h1 id="安装-kaiheilanet">安装 KaiHeiLa.Net</h1>
+                    <article class="content wrap" id="_content" data-uid="Guides.OtherLibs.Serilog">
+<h1 id="日志框架-serilog">日志框架 Serilog</h1>
 
-<p>KaiHeiLa.Net 通过 NuGet 分发，推荐通过 NuGet 包管理工具安装，
-如有需要，也可从源代码进行编译。</p>
-<h2 id="支持的平台">支持的平台</h2>
-<p>KaiHeiLa.Net 目前仅支持 <a href="https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-6">.NET 6.0</a>，版本稳定后将会扩展到较旧的平台。</p>
-<h2 id="通过-nuget-包管理器安装">通过 NuGet 包管理器安装</h2>
-<p>支持的 NuGet 源有：</p>
+<h2 id="先决条件">先决条件</h2>
 <ul>
-<li><a href="https://nuget.org">NuGet Gallery</a></li>
-<li><a href="https://github.com/gehongyan?tab=packages&amp;repo_name=KaiHeiLa.Net">GitHub Packages</a></li>
+<li>如 <a class="xref" href="../getting_started/first-bot.html">使用 KaiHeiLa.Net 构建你的第一个 Bot</a> 中所描述的带有日志处理方法的 Bot 客户端程序。</li>
 </ul>
-<h3 id="使用-visual-studio">使用 Visual Studio</h3>
-<ol>
-<li>找到 <code>解决方案资源管理器</code> 窗口，在 Bot 项目下找到 <code>依赖项</code></li>
-<li><p>右键点击 <code>依赖项</code>，选择 <code>管理 NuGet 程序包</code></p>
-<p> <img src="images/install/install-vs-dependencies.png" alt="img.png"></p>
-</li>
-<li><p>在 <code>浏览</code> 选项卡中，搜索 <code>KaiHeiLa.Net</code></p>
-<div class="NOTE"><h5>Note</h5><p>在正式版发布前，搜索 KaiHeiLa.Net 需勾选 <code>包括预发行版</code>，否则，该搜索结果无法展示在列表中。</p>
+<h2 id="安装-serilog-类库">安装 Serilog 类库</h2>
+<p>可通过集成开发环境的用户界面或 dotnet CLI 安装以下类库：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Serilog.Extensions.Logging</code></td>
+<td><a href="https://www.nuget.org/packages/Serilog.Extensions.Logging">链接</a></td>
+</tr>
+<tr>
+<td><code>Serilog.Sinks.Console</code></td>
+<td><a href="https://www.nuget.org/packages/Serilog.Sinks.Console">链接</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="配置-serilog">配置 Serilog</h2>
+<p>Serilog 需在异步函数入口点的顶部进行配置：</p>
+<pre><code class="lang-csharp" name="Configuring serilog">using KaiHeiLa;
+using Serilog;
+using Serilog.Events;
+
+public class Program
+{
+    private KaiHeiLaSocketClient _client;
+    public static Task Main(string[] args) =&gt; new Program().MainAsync();
+
+    public async Task MainAsync()
+    {
+        Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Verbose()
+            .Enrich.FromLogContext()
+            .WriteTo.Console()
+            .CreateLogger();
+
+        _client = new KaiHeiLaSocketClient();
+
+        _client.Log += LogAsync;
+
+        //  &#23558; Token &#20889;&#20837;&#23383;&#31526;&#20018;&#21464;&#37327;&#65292;&#29992;&#20110; Bot &#30331;&#24405;&#36807;&#31243;&#30340;&#36523;&#20221;&#35748;&#35777;
+        //  &#36825;&#24456;&#19981;&#23433;&#20840;&#65292;&#23588;&#20854;&#26159;&#22312;&#26377;&#20844;&#24320;&#28304;&#20195;&#30721;&#30340;&#24773;&#20917;&#19979;&#65292;&#19981;&#24212;&#35813;&#36825;&#20040;&#20570;
+        var token = &quot;token&quot;;
+
+        // &#19968;&#20123;&#20854;&#23427;&#23384;&#20648; Token &#30340;&#26041;&#26696;&#65292;&#22914;&#29615;&#22659;&#21464;&#37327;&#12289;&#25991;&#20214;&#31561;
+        // var token = Environment.GetEnvironmentVariable(&quot;NameOfYourEnvironmentVariable&quot;);
+        // var token = File.ReadAllText(&quot;token.txt&quot;);
+        // var token = JsonConvert.DeserializeObject&lt;AConfigurationClass&gt;(File.ReadAllText(&quot;config.json&quot;)).Token;
+
+        await _client.LoginAsync(TokenType.Bot, token);
+        await _client.StartAsync();
+
+        // Block this task until the program is closed.
+        await Task.Delay(Timeout.Infinite);
+    }
+}
+</code></pre><h2 id="修改日志方法">修改日志方法</h2>
+<p>要想让 Serilog 能够正确地记录开黑啦的日志，需要将 KaiHeiLa.Net 的 <code>LogSeverity</code>
+映射到 Serilog 的 <code>LogEventLevel</code>，映射的示例如下：</p>
+<pre><code class="lang-csharp" name="MappingLogLevel">private static async Task LogAsync(LogMessage message)
+{
+    var severity = message.Severity switch
+    {
+        LogSeverity.Critical =&gt; LogEventLevel.Fatal,
+        LogSeverity.Error =&gt; LogEventLevel.Error,
+        LogSeverity.Warning =&gt; LogEventLevel.Warning,
+        LogSeverity.Info =&gt; LogEventLevel.Information,
+        LogSeverity.Verbose =&gt; LogEventLevel.Verbose,
+        LogSeverity.Debug =&gt; LogEventLevel.Debug,
+        _ =&gt; LogEventLevel.Information
+    };
+    Log.Write(severity, message.Exception, &quot;[{Source}] {Message}&quot;, message.Source, message.Message);
+    await Task.CompletedTask;
+}
+</code></pre><h2 id="测试">测试</h2>
+<p>如果现在运行程序，应该会看到以下输出：</p>
+<p><img src="images/serilog-output.png" alt="Serilog output"></p>
+<h2 id="在其它位置使用此日志记录器">在其它位置使用此日志记录器</h2>
+<p>至此，Serilog 已配置完毕，要想使用此日志记录器，只需按如下方式调用：</p>
+<p>Now that you have set up Serilog, you can use it everywhere in your application by simply calling</p>
+<pre><code class="lang-csharp" name="Log debug sample">Log.Debug(&quot;Your log message, with {Variables}!&quot;, 10); 
+// &#36825;&#23558;&#36755;&#20986;&#20449;&#24687;&#65306;&quot;[20:36:00 DBG] Your log message, with 10!&quot;
+</code></pre><div class="NOTE"><h5>Note</h5><p>根据所配置的日志级别，部分日志消息可能不会输出。有关日志级别的更多信息，请参见
+<a href="https://github.com/serilog/serilog/wiki/Configuration-Basics#minimum-level">Serilog 文档</a>。</p>
 </div>
-<p> <img src="images/install/install-vs-nuget.png" alt="img.png"></p>
-</li>
-<li><p>选择 <code>KaiHeiLa.Net</code>，点击 <code>安装</code></p>
-</li>
-</ol>
-<h3 id="使用-jetbrains-rider">使用 JetBrains Rider</h3>
-<ol>
-<li>找到 <code>Explorer</code> 窗口，在 Bot 项目下找到 <code>Dependencies</code></li>
-<li><p>右键点击 <code>Dependencies</code>，选择 <code>Manage NuGet Packages</code></p>
-<p> <img src="images/install/install-rider-dependencies.png" alt="img.png"></p>
-</li>
-<li><p>在 <code>Packages</code> 选项卡中，搜索 <code>KaiHeiLa.Net</code></p>
-<div class="NOTE"><h5>Note</h5><p>在正式版发布前，搜索 KaiHeiLa.Net 需勾选 <code>Prerelease</code> ，否则，该搜索结果无法展示在列表中。</p>
+<div class="NOTE"><h5>Note</h5><p>KaiHeiLa.Net 与 Serilog 对日志级别的定义不完全一致，要简化最低输出日志级别控制，有两种可选策略：</p>
+<ul>
+<li>将 Serilog 的 <code>MinimumLevel</code> 配置为 <code>Verbose</code>，转而在 KaiHeiLa.Net 的 <code>KaiHeiLaConfig</code> 中配置 <code>LogLevel</code></li>
+<li>在 KaiHeiLa.Net 的 <code>KaiHeiLaConfig</code> 中配置 <code>LogLevel</code> 为 <code>Debug</code>，转而在 Serilog 中配置 <code>MinimumLevel</code></li>
+</ul>
+<p>同时配置两侧的最低日志级别可能会导致预期之外的最低日志级别控制结果。</p>
 </div>
-</li>
-<li><p>右键点击 <code>KaiHeiLa.Net</code>，点击 <code>Install KaiHeiLa.Net ...</code></p>
-<p> <img src="images/install/install-rider-nuget.png" alt="img.png"></p>
-</li>
-</ol>
-<h3 id="使用-visual-studio-code">使用 Visual Studio Code</h3>
-<ol>
-<li>找到 Bot 项目的 <code>*.csproj</code> 文件</li>
-<li><p>添加 <code>KaiHeiLa.Net</code> 到 <code>*.csproj</code> 中</p>
-<pre><code name="SampleProject.csproj">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
-
-    &lt;!--
-        &#30446;&#26631;&#26694;&#26550;&#19982; KaiHeiLa.Net &#29256;&#26412;&#21487;&#33021;&#20250;&#38543;&#30528;&#26410;&#26469;&#30340;&#24320;&#21457;&#32780;&#21457;&#29983;&#21464;&#21270;
-    --&gt;
-
-    &lt;PropertyGroup&gt;
-        &lt;OutputType&gt;Exe&lt;/OutputType&gt;
-        &lt;TargetFramework&gt;net6.0&lt;/TargetFramework&gt;
-    &lt;/PropertyGroup&gt;
-
-    &lt;ItemGroup&gt;
-        &lt;PackageReference Include=&quot;KaiHeiLa.Net&quot; Version=&quot;0.0.18-alpha&quot; /&gt;
-    &lt;/ItemGroup&gt;
-
-&lt;/Project&gt;
-</code></pre></li>
-</ol>
-<h3 id="使用-dotnet-cli">使用 dotnet CLI</h3>
-<ol>
-<li>启动终端</li>
-<li>导航至 Bot 项目中 <code>*.csproj</code> 文件的所在目录</li>
-<li><p>执行 <code>dotnet add package KaiHeiLa.Net</code></p>
-<div class="NOTE"><h5>Note</h5><p>在正式版发布前，使用 dotnet CLI 添加 KaiHeiLa.Net 需附加 <code>--prerelease</code> 选项，
-否则，dotnet CLI 将只尝试为项目添加稳定版本的 NuGet 包。</p>
-</div>
-</li>
-</ol>
-<hr>
-<h2 id="从源代码编译">从源代码编译</h2>
-<p>要从源代码编译 KaiHeiLa.Net，请参考：</p>
-<h3 id="使用-visual-studio-1">使用 Visual Studio</h3>
-<ul>
-<li><a href="https://visualstudio.microsoft.com/zh-hans/vs/">Visual Studio 2022</a> 或更新版本。</li>
-<li><a href="https://dotnet.microsoft.com/download">.NET 6 SDK</a></li>
-</ul>
-<p>安装 Visual Studio 期间需选择 .NET 6 工作负载。</p>
-<h3 id="使用-jetbrains-rider-1">使用 JetBrains Rider</h3>
-<ul>
-<li><a href="https://www.jetbrains.com.cn/rider/">JetBrains 2021.3</a> 或更新版本。</li>
-<li><a href="https://dotnet.microsoft.com/download">.NET 6 SDK</a></li>
-</ul>
-<h3 id="使用-command-line">使用 Command Line</h3>
-<ul>
-<li><a href="https://dotnet.microsoft.com/download">.NET 6 SDK</a></li>
-</ul>
-<hr>
 </article>
                 </div>
 

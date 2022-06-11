@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#23433;&#35013; KaiHeiLa.Net | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>Entity Framework Core | KaiHeiLa.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#23433;&#35013; KaiHeiLa.Net | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="Entity Framework Core | KaiHeiLa.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -89,98 +89,121 @@
                           </div>
                         </div>
 
-                    <article class="content wrap" id="_content" data-uid="Guides.GettingStarted.Installation">
-<h1 id="安装-kaiheilanet">安装 KaiHeiLa.Net</h1>
+                    <article class="content wrap" id="_content" data-uid="Guides.OtherLibs.EFCore">
+<h1 id="对象关系映射框架-entity-framework-core">对象关系映射框架 Entity Framework Core</h1>
 
-<p>KaiHeiLa.Net 通过 NuGet 分发，推荐通过 NuGet 包管理工具安装，
-如有需要，也可从源代码进行编译。</p>
-<h2 id="支持的平台">支持的平台</h2>
-<p>KaiHeiLa.Net 目前仅支持 <a href="https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-6">.NET 6.0</a>，版本稳定后将会扩展到较旧的平台。</p>
-<h2 id="通过-nuget-包管理器安装">通过 NuGet 包管理器安装</h2>
-<p>支持的 NuGet 源有：</p>
+<p>本向导可以指引您配置并基于 SQL Server 数据库使用 Entity Framework Core，本文末尾罗列了其它数据库的信息。</p>
+<h2 id="先决条件">先决条件</h2>
 <ul>
-<li><a href="https://nuget.org">NuGet Gallery</a></li>
-<li><a href="https://github.com/gehongyan?tab=packages&amp;repo_name=KaiHeiLa.Net">GitHub Packages</a></li>
+<li>配置好依赖注入服务的 Bot 客户端程序</li>
+<li>SQL Server 数据库实例</li>
+<li><a href="https://docs.microsoft.com/ef/core/cli/dotnet#installing-the-tools">EF Core CLI 工具</a></li>
 </ul>
-<h3 id="使用-visual-studio">使用 Visual Studio</h3>
-<ol>
-<li>找到 <code>解决方案资源管理器</code> 窗口，在 Bot 项目下找到 <code>依赖项</code></li>
-<li><p>右键点击 <code>依赖项</code>，选择 <code>管理 NuGet 程序包</code></p>
-<p> <img src="images/install/install-vs-dependencies.png" alt="img.png"></p>
-</li>
-<li><p>在 <code>浏览</code> 选项卡中，搜索 <code>KaiHeiLa.Net</code></p>
-<div class="NOTE"><h5>Note</h5><p>在正式版发布前，搜索 KaiHeiLa.Net 需勾选 <code>包括预发行版</code>，否则，该搜索结果无法展示在列表中。</p>
+<h2 id="安装所需类库">安装所需类库</h2>
+<p>可通过集成开发环境的用户界面或 dotnet CLI 安装以下类库：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Microsoft.EntityFrameworkCore</code></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.EntityFrameworkCore">链接</a></td>
+</tr>
+<tr>
+<td><code>Microsoft.EntityFrameworkCore.SqlServer</code></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer">链接</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="配置-dbcontext">配置 DbContext</h2>
+<p>EF Core 中的 DbContext 是一个抽象类，它提供了一系列方法来操作数据库。数据库上下文及其包装的实体示例如下：</p>
+<pre><code class="lang-csharp" name="DBContext Sample">// ApplicationDbContext.cs
+using Microsoft.EntityFrameworkCore;
+
+public class ApplicationDbContext : DbContext
+{
+    public ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options) : base(options)
+    {
+
+    }
+
+    public DbSet&lt;UserEntity&gt; Users { get; set; }
+}
+
+// UserEntity.cs
+public class UserEntity
+{
+    public ulong Id { get; set; }
+    public string Name { get; set; }
+}
+</code></pre><div class="NOTE"><h5>Note</h5><p>有关创建用于 EF Core 的实体模型，请参阅 <a href="https://docs.microsoft.com/ef/core/get-started/overview/first-app?tabs=netcore-cli#create-the-model">EF Core 文档</a>。</p>
 </div>
-<p> <img src="images/install/install-vs-nuget.png" alt="img.png"></p>
-</li>
-<li><p>选择 <code>KaiHeiLa.Net</code>，点击 <code>安装</code></p>
-</li>
-</ol>
-<h3 id="使用-jetbrains-rider">使用 JetBrains Rider</h3>
-<ol>
-<li>找到 <code>Explorer</code> 窗口，在 Bot 项目下找到 <code>Dependencies</code></li>
-<li><p>右键点击 <code>Dependencies</code>，选择 <code>Manage NuGet Packages</code></p>
-<p> <img src="images/install/install-rider-dependencies.png" alt="img.png"></p>
-</li>
-<li><p>在 <code>Packages</code> 选项卡中，搜索 <code>KaiHeiLa.Net</code></p>
-<div class="NOTE"><h5>Note</h5><p>在正式版发布前，搜索 KaiHeiLa.Net 需勾选 <code>Prerelease</code> ，否则，该搜索结果无法展示在列表中。</p>
+<h2 id="将数据库上下文添加到依赖注入服务容器中">将数据库上下文添加到依赖注入服务容器中</h2>
+<p>要将此数据库上下文添加到依赖注入服务容器中，只需调用 EF Core 中所提供的扩展方法，示例如下：</p>
+<pre><code class="lang-csharp" name="DBContext Dependency Injection">private static ServiceProvider ConfigureServices()
+{
+    return new ServiceCollection()
+        .AddDbContext&lt;ApplicationDbContext&gt;(
+            optionsBuilder =&gt; optionsBuilder.UseSqlServer(&quot;&#25968;&#25454;&#24211;&#36830;&#25509;&#23383;&#31526;&#20018;&quot;)
+        )
+        // ...
+        .BuildServiceProvider();
+}
+</code></pre><div class="NOTE"><h5>Note</h5><p>有关如何书写数据库连接字符串，可参考 <a href="https://docs.microsoft.com/ef/core/miscellaneous/connection-strings">EF Core 文档</a>。</p>
 </div>
-</li>
-<li><p>右键点击 <code>KaiHeiLa.Net</code>，点击 <code>Install KaiHeiLa.Net ...</code></p>
-<p> <img src="images/install/install-rider-nuget.png" alt="img.png"></p>
-</li>
-</ol>
-<h3 id="使用-visual-studio-code">使用 Visual Studio Code</h3>
-<ol>
-<li>找到 Bot 项目的 <code>*.csproj</code> 文件</li>
-<li><p>添加 <code>KaiHeiLa.Net</code> 到 <code>*.csproj</code> 中</p>
-<pre><code name="SampleProject.csproj">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+<h2 id="迁移">迁移</h2>
+<p>在使用数据库上下文前，需要将代码中的更改迁移到实际的数据库中。有关迁移的更多信息，请参阅
+<a href="https://docs.microsoft.com/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli">EF Core 文档</a>。</p>
+<h2 id="使用数据库上下文">使用数据库上下文</h2>
+<p>要使用数据库上下文，请通过依赖注入服务将其注入到要使用的类中，示例如下：</p>
+<pre><code class="lang-csharp" name="DBContext Injection Demo">using KaiHeiLa.Commands;
 
-    &lt;!--
-        &#30446;&#26631;&#26694;&#26550;&#19982; KaiHeiLa.Net &#29256;&#26412;&#21487;&#33021;&#20250;&#38543;&#30528;&#26410;&#26469;&#30340;&#24320;&#21457;&#32780;&#21457;&#29983;&#21464;&#21270;
-    --&gt;
+public class DatabaseModule : ModuleBase&lt;SocketCommandContext&gt;
+{
+    private readonly ApplicationDbContext _dbContext;
 
-    &lt;PropertyGroup&gt;
-        &lt;OutputType&gt;Exe&lt;/OutputType&gt;
-        &lt;TargetFramework&gt;net6.0&lt;/TargetFramework&gt;
-    &lt;/PropertyGroup&gt;
-
-    &lt;ItemGroup&gt;
-        &lt;PackageReference Include=&quot;KaiHeiLa.Net&quot; Version=&quot;0.0.18-alpha&quot; /&gt;
-    &lt;/ItemGroup&gt;
-
-&lt;/Project&gt;
-</code></pre></li>
-</ol>
-<h3 id="使用-dotnet-cli">使用 dotnet CLI</h3>
-<ol>
-<li>启动终端</li>
-<li>导航至 Bot 项目中 <code>*.csproj</code> 文件的所在目录</li>
-<li><p>执行 <code>dotnet add package KaiHeiLa.Net</code></p>
-<div class="NOTE"><h5>Note</h5><p>在正式版发布前，使用 dotnet CLI 添加 KaiHeiLa.Net 需附加 <code>--prerelease</code> 选项，
-否则，dotnet CLI 将只尝试为项目添加稳定版本的 NuGet 包。</p>
-</div>
-</li>
-</ol>
-<hr>
-<h2 id="从源代码编译">从源代码编译</h2>
-<p>要从源代码编译 KaiHeiLa.Net，请参考：</p>
-<h3 id="使用-visual-studio-1">使用 Visual Studio</h3>
-<ul>
-<li><a href="https://visualstudio.microsoft.com/zh-hans/vs/">Visual Studio 2022</a> 或更新版本。</li>
-<li><a href="https://dotnet.microsoft.com/download">.NET 6 SDK</a></li>
-</ul>
-<p>安装 Visual Studio 期间需选择 .NET 6 工作负载。</p>
-<h3 id="使用-jetbrains-rider-1">使用 JetBrains Rider</h3>
-<ul>
-<li><a href="https://www.jetbrains.com.cn/rider/">JetBrains 2021.3</a> 或更新版本。</li>
-<li><a href="https://dotnet.microsoft.com/download">.NET 6 SDK</a></li>
-</ul>
-<h3 id="使用-command-line">使用 Command Line</h3>
-<ul>
-<li><a href="https://dotnet.microsoft.com/download">.NET 6 SDK</a></li>
-</ul>
-<hr>
+    public SampleModule(ApplicationDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+    
+    [Command(&quot;sample&quot;)]
+    public async Task Sample()
+    {
+        // &#22312;&#21629;&#20196;&#30340;&#19994;&#21153;&#36923;&#36753;&#20013;&#20351;&#29992;&#25152;&#27880;&#20837;&#30340;&#25968;&#25454;&#24211;&#19978;&#19979;&#25991;
+        var user = _dbContext.Users.SingleOrDefault(x =&gt; x.Id == Context.User.Id);
+        // ...
+    }
+}
+</code></pre><h2 id="使用其它数据库提供程序">使用其它数据库提供程序</h2>
+<p>此处有一些 EF Core 可用的主流的数据库提供程序，及其相关的文档，通常来说，与上文示例代码中不同的仅有
+<code>DbContextOptions</code> / <code>DbContextOptionsBuilder</code> 中进行配置的部分。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MySQL</td>
+<td><a href="https://dev.mysql.com/doc/connector-net/en/connector-net-entityframework-core-example.html">链接</a></td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td><a href="https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli">链接</a></td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td><a href="https://www.npgsql.org/efcore/">链接</a></td>
+</tr>
+</tbody>
+</table>
 </article>
                 </div>
 

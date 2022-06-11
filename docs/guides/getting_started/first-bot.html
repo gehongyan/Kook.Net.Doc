@@ -137,7 +137,7 @@
 <h3 id="异步启动">异步启动</h3>
 <p>KaiHeiLa.Net 广泛采用 .NET 的 <a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/async">异步编程模型</a>，绝大多数操作都是以异步方式完成，
 请尽可能地在异步上下文中等待这些操作。</p>
-<p>可以通过这样的方式创建异步的入口点方法，来建立一个在异步上下文中启动的程序：</p>
+<p>可以通过这样的方式创建异步的入口点函数，来建立一个在异步上下文中启动的程序：</p>
 <pre><code class="lang-csharp" name="Async Main">public class Program
 {
     public static Task Main(string[] args) =&gt; new Program().MainAsync();

@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>MediatR | KaiHeiLa.Net &#25991;&#26723; </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="MediatR | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="generator" content="docfx 2.56.7.0">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../styles/config.css">
+      <link rel="stylesheet" href="../../styles/discord.css">
+      <link rel="stylesheet" href="../../styles/singulink.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+      
+      <meta property="docfx:rel" content="../../">
+      
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../../index.html">
+              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../../index.html">
+                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                        </a>  </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+                  KaiHeiLa.Net (c) 2022
+                  
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="Guides.OtherLibs.MediatR">
+<h1 id="中介者模式-mediatr">中介者模式 MediatR</h1>
+
+<h2 id="先决条件">先决条件</h2>
+<ul>
+<li>配置好依赖注入服务的 Bot 客户端程序</li>
+</ul>
+<h2 id="安装所需类库">安装所需类库</h2>
+<p>可通过集成开发环境的用户界面或 dotnet CLI 安装以下类库：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MediatR</code></td>
+<td><a href="https://www.nuget.org/packages/MediatR">链接</a></td>
+</tr>
+<tr>
+<td><code>MediatR.Extensions.Microsoft.DependencyInjection</code></td>
+<td><a href="https://www.nuget.org/packages/MediatR.Extensions.Microsoft.DependencyInjection">链接</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="将-mediatr-添加到依赖注入服务容器中">将 MediatR 添加到依赖注入服务容器中</h2>
+<p><code>MediatR.Extensions.Microsoft.DependencyInjection</code> 提供了方法 <code>.AddMediatR()</code> 允许您以将
+MediatR 便捷地添加到依赖注入服务容器中，其参数可以是事件处理程序中将会用到地任何类型，代码示例片段如下：</p>
+<pre><code class="lang-csharp" name="Configuring MediatR">.AddMediatR(typeof(Bot))
+</code></pre><h2 id="创建消息通知">创建消息通知</h2>
+<p>MediatR 基于消息通知和其处理程序传递事件。下面的示例创建了一个消息通知来处理 <code>KaiHeiLaSocketClient</code>
+中的 <code>MessageReceived</code> 事件。</p>
+<pre><code class="lang-csharp" name="Creating a notification">// MessageReceivedNotification.cs
+
+using KaiHeiLa.WebSocket;
+using MediatR;
+
+namespace MediatRSample.Notifications;
+
+public class MessageReceivedNotification : INotification
+{
+    public MessageReceivedNotification(SocketMessage message)
+    {
+        Message = message ?? throw new ArgumentNullException(nameof(message));
+    }
+
+    public SocketMessage Message { get; }
+}
+</code></pre><h2 id="创建事件发布者与订阅者">创建事件发布者与订阅者</h2>
+<p>在 MediatR 中，事件发布者所发布的事件需要通过订阅者的监听来使用，下面的示例创建了一个事件订阅者来监听
+<code>KaiHeiLaSocketClient</code> 中的 <code>MessageReceived</code> 事件：</p>
+<pre><code class="lang-csharp" name="Creating an event listener">// KaiHeiLaEventListener.cs
+
+using KaiHeiLa.WebSocket;
+using MediatR;
+using MediatRSample.Notifications;
+using Microsoft.Extensions.DependencyInjection;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace MediatRSample;
+
+public class KaiHeiLaEventListener
+{
+    private readonly CancellationToken _cancellationToken;
+
+    private readonly KaiHeiLaSocketClient _client;
+    private readonly IServiceScopeFactory _serviceScope;
+
+    public KaiHeiLaEventListener(KaiHeiLaSocketClient client, IServiceScopeFactory serviceScope)
+    {
+        _client = client;
+        _serviceScope = serviceScope;
+        _cancellationToken = new CancellationTokenSource().Token;
+    }
+
+    private IMediator Mediator
+    {
+        get
+        {
+            var scope = _serviceScope.CreateScope();
+            return scope.ServiceProvider.GetRequiredService&lt;IMediator&gt;();
+        }
+    }
+
+    public async Task StartAsync()
+    {
+        _client.MessageReceived += OnMessageReceivedAsync;
+
+        await Task.CompletedTask;
+    }
+
+    private Task OnMessageReceivedAsync(SocketMessage arg)
+    {
+        return Mediator.Publish(new MessageReceivedNotification(arg), _cancellationToken);
+    }
+}
+</code></pre><p>此示例代码中，<code>KaiHeiLaEventListener</code> 首先从依赖注入服务中接收 <code>KaiHeiLaSocketClient</code>
+实例用于订阅事件，本示例仅演示了 <code>MessageReceived</code>，其他事件也可以使用同样的方式，
+但事件处理程序使用了 MediatR 将事件发布到所有监听此事件的的消息通知处理程序。</p>
+<h2 id="添加事件订阅者添加到依赖注入服务容器中">添加事件订阅者添加到依赖注入服务容器中</h2>
+<p>要开始监听事件，需在入口点函数内调用 <code>KaiHeiLaEventListener</code> 类的 <code>StartAsync()</code> 
+方法，在此之前，需在依赖注入容器中注册 <code>KaiHeiLaEventListener</code> 类，并在入口点函数中获取对它的引用。</p>
+<pre><code class="lang-csharp" name="Starting the event listener">// Program.cs
+
+var listener = services.GetRequiredService&lt;KaiHeiLaEventListener&gt;();
+await listener.StartAsync();
+</code></pre><h2 id="创建消息通知处理程序">创建消息通知处理程序</h2>
+<p>MediatR 将消息通知发布到所有监听此消息通知的事件订阅者，下面的示例创建了一个消息通知处理程序：</p>
+<pre><code class="lang-csharp" name="Creating an event listener">// MessageReceivedHandler.cs
+
+using System;
+using MediatR;
+using MediatRSample.Notifications;
+
+namespace MediatRSample;
+
+public class MessageReceivedHandler : INotificationHandler&lt;MessageReceivedNotification&gt;
+{
+    public async Task Handle(MessageReceivedNotification notification, CancellationToken cancellationToken)
+    {
+        Console.WriteLine($&quot;MediatR works! (Received a message by {notification.Message.Author.Username})&quot;);
+
+        // ...
+    }
+}
+</code></pre><p>此示例代码实现了 MediatR 提供的 <code>INotificationHandler&lt;&gt;</code> 接口，这告知了 MediatR 需要将
+<code>MessageReceivedNotification</code> 通知发送到此消息通知处理程序类。</p>
+<div class="NOTE"><h5>Note</h5><p>您可根据需要为同一消息通知创建任意数量的消息通知处理程序。</p>
+</div>
+<h2 id="测试">测试</h2>
+<p>要测试 MediatR 是否正常工作，可以启动此 Bot 客户端，并在开黑啦客户端中向此 Bot
+可访问的文字频道内发送消息，应该能看到之前在 <code>MessageReceivedHandler</code> 中定义的输出信息：</p>
+<p><img src="images/mediatr-output.png" alt="MediatR output"></p>
+<h2 id="添加更多的事件类型">添加更多的事件类型</h2>
+<p>要添加更多的事件类型，可遵循以下步骤：</p>
+<ol>
+<li>为事件创建消息通知类，其应包含该事件所传递的所有参数（例如：<code>MessageReceived</code>
+事件接收一个 <code>SocketMessage</code> 对象作为参数，则消息通知类也应该映射此参数）</li>
+<li>将此事件注册到 <code>KaiHeiLaEventListener</code> 类</li>
+<li>创建消息通知处理程序来处理此消息通知</li>
+</ol>
+</article>
+                </div>
+
+            </main>
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../styles/singulink.js"></script>
+        <script type="text/javascript" src="../../styles/main.js"></script>    </body>
+</html>
