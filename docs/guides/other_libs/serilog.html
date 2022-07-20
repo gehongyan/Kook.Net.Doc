@@ -166,8 +166,9 @@ public class Program
         LogSeverity.Error =&gt; LogEventLevel.Error,
         LogSeverity.Warning =&gt; LogEventLevel.Warning,
         LogSeverity.Info =&gt; LogEventLevel.Information,
-        LogSeverity.Verbose =&gt; LogEventLevel.Verbose,
-        LogSeverity.Debug =&gt; LogEventLevel.Debug,
+        // Serilog &#20013;&#65292;LogEventLevel.Verbose &#30456;&#27604; LogEventLevel.Debug &#20250;&#36755;&#20986;&#26356;&#22810;&#30340;&#20449;&#24687;
+        LogSeverity.Verbose =&gt; LogEventLevel.Debug,
+        LogSeverity.Debug =&gt; LogEventLevel.Verbose,
         _ =&gt; LogEventLevel.Information
     };
     Log.Write(severity, message.Exception, &quot;[{Source}] {Message}&quot;, message.Source, message.Message);
