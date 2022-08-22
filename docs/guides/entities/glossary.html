@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#23454;&#20307;&#35789;&#27719;&#34920;&#19982;&#22270;&#34920; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>&#23454;&#20307;&#35789;&#27719;&#34920;&#19982;&#22270;&#34920; | Kook.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#23454;&#20307;&#35789;&#27719;&#34920;&#19982;&#22270;&#34920; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="&#23454;&#20307;&#35789;&#27719;&#34920;&#19982;&#22270;&#34920; | Kook.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -32,8 +32,8 @@
 
             
             <a class="brand" href="../../index.html">
-              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+              <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
             </a>        </div>
 
         <div class="body-content">
@@ -46,8 +46,8 @@
                       <div class="mobile-hide">
                         
                         <a class="brand" href="../../index.html">
-                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                          <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
                         </a>  </div>
 
                       <div class="sidesearch">
@@ -66,7 +66,7 @@
                         </div>
                 </div>
                 <div class="footer">
-                  KaiHeiLa.Net (c) 2022
+                  Kook.Net (c) 2022
                   
                 </div>            </nav>
 
@@ -92,65 +92,65 @@
                     <article class="content wrap" id="_content" data-uid="Guides.Entities.Glossary">
 <h1 id="实体类型">实体类型</h1>
 
-<p>所有 KaiHeiLa.Net 实体的列表及其之间的继承关系，来表示哪些类型之间可以进行相互转换。</p>
+<p>所有 Kook.Net 实体的列表及其之间的继承关系，来表示哪些类型之间可以进行相互转换。</p>
 <div class="NOTE"><h5>Note</h5><p>Socket 和 Rest 实体的所有接口都具有相同的继承树，其中，图中被标记为红色的实体是其所在工程所独有的。</p>
 </div>
-<h2 id="频道-ichannel">频道 <a class="xref" href="../../api/KaiHeiLa.IChannel.html">IChannel</a></h2>
+<h2 id="频道-ichannel">频道 <a class="xref" href="../../api/Kook.IChannel.html">IChannel</a></h2>
 <p><img src="images/IChannel.png" alt="IChannelChart"></p>
 <h3 id="消息频道">消息频道</h3>
 <ul>
-<li><strong>服务器文字频道</strong> (<a class="xref" href="../../api/KaiHeiLa.ITextChannel.html">ITextChannel</a>)：服务器内的消息频道</li>
-<li><strong>私聊频道</strong> (<a class="xref" href="../../api/KaiHeiLa.IDMChannel.html">IDMChannel</a>)：私信聊天会话频道<ul>
-<li>KaiHeiLa.Net 中的私信聊天会话也被抽象为一个频道</li>
+<li><strong>服务器文字频道</strong> (<a class="xref" href="../../api/Kook.ITextChannel.html">ITextChannel</a>)：服务器内的消息频道</li>
+<li><strong>私聊频道</strong> (<a class="xref" href="../../api/Kook.IDMChannel.html">IDMChannel</a>)：私信聊天会话频道<ul>
+<li>Kook.Net 中的私信聊天会话也被抽象为一个频道</li>
 </ul>
 </li>
-<li><strong>私有频道</strong> (<a class="xref" href="../../api/KaiHeiLa.IPrivateChannel.html">IPrivateChannel</a>)：非服务器内的消息频道<ul>
-<li>由于开黑啦暂不支持讨论组，所以目前私有频道也只有私聊频道</li>
+<li><strong>私有频道</strong> (<a class="xref" href="../../api/Kook.IPrivateChannel.html">IPrivateChannel</a>)：非服务器内的消息频道<ul>
+<li>由于 KOOK 暂不支持讨论组，所以目前私有频道也只有私聊频道</li>
 </ul>
 </li>
-<li><strong>消息频道</strong> (<a class="xref" href="../../api/KaiHeiLa.IMessageChannel.html">IMessageChannel</a>)：可以发送文字消息的频道</li>
+<li><strong>消息频道</strong> (<a class="xref" href="../../api/Kook.IMessageChannel.html">IMessageChannel</a>)：可以发送文字消息的频道</li>
 </ul>
 <h3 id="其它频道">其它频道</h3>
 <ul>
-<li><strong>服务器频道</strong> (<a class="xref" href="../../api/KaiHeiLa.IGuildChannel.html">IGuildChannel</a>)：服务器内的频道<ul>
+<li><strong>服务器频道</strong> (<a class="xref" href="../../api/Kook.IGuildChannel.html">IGuildChannel</a>)：服务器内的频道<ul>
 <li>这可以是能出现在服务器内的任何一种频道类型</li>
 </ul>
 </li>
-<li><strong>音频频道</strong> (<a class="xref" href="../../api/KaiHeiLa.IAudioChannel.html">IAudioChannel</a>)：音频频道</li>
-<li><strong>语音频道</strong> (<a class="xref" href="../../api/KaiHeiLa.IVoiceChannel.html">IVoiceChannel</a>)：服务器内的语音频道</li>
-<li><strong>分组频道</strong> (<a class="xref" href="../../api/KaiHeiLa.ICategoryChannel.html">ICategoryChannel</a>)：服务器内的分组频道，可以包含多个子频道</li>
-<li><strong>嵌套频道</strong> (<a class="xref" href="../../api/KaiHeiLa.INestedChannel.html">INestedChannel</a>)：可以出现在分组频道下的频道</li>
+<li><strong>音频频道</strong> (<a class="xref" href="../../api/Kook.IAudioChannel.html">IAudioChannel</a>)：音频频道</li>
+<li><strong>语音频道</strong> (<a class="xref" href="../../api/Kook.IVoiceChannel.html">IVoiceChannel</a>)：服务器内的语音频道</li>
+<li><strong>分组频道</strong> (<a class="xref" href="../../api/Kook.ICategoryChannel.html">ICategoryChannel</a>)：服务器内的分组频道，可以包含多个子频道</li>
+<li><strong>嵌套频道</strong> (<a class="xref" href="../../api/Kook.INestedChannel.html">INestedChannel</a>)：可以出现在分组频道下的频道</li>
 </ul>
-<h2 id="消息-imessage">消息 <a class="xref" href="../../api/KaiHeiLa.IMessage.html">IMessage</a></h2>
+<h2 id="消息-imessage">消息 <a class="xref" href="../../api/Kook.IMessage.html">IMessage</a></h2>
 <p><img src="images/IMessage.png" alt="IMessageChart"></p>
 <ul>
-<li><strong>用户消息</strong> (<a class="xref" href="../../api/KaiHeiLa.IUserMessage.html">IUserMessage</a>)：用户所发送的消息</li>
-<li><strong>系统消息</strong> (<a class="xref" href="../../api/KaiHeiLa.ISystemMessage.html">ISystemMessage</a>)：开黑啦系统用户发送的消息</li>
-<li><strong>消息</strong> (<a class="xref" href="../../api/KaiHeiLa.IMessage.html">IMessage</a>)：所有消息的基本类型接口</li>
+<li><strong>用户消息</strong> (<a class="xref" href="../../api/Kook.IUserMessage.html">IUserMessage</a>)：用户所发送的消息</li>
+<li><strong>系统消息</strong> (<a class="xref" href="../../api/Kook.ISystemMessage.html">ISystemMessage</a>)：KOOK 系统用户发送的消息</li>
+<li><strong>消息</strong> (<a class="xref" href="../../api/Kook.IMessage.html">IMessage</a>)：所有消息的基本类型接口</li>
 </ul>
-<h2 id="用户-iuser">用户 <a class="xref" href="../../api/KaiHeiLa.IUser.html">IUser</a></h2>
+<h2 id="用户-iuser">用户 <a class="xref" href="../../api/Kook.IUser.html">IUser</a></h2>
 <p><img src="images/IUser.png" alt="IUserChart"></p>
 <ul>
-<li><strong>用户状态</strong> (<a class="xref" href="../../api/KaiHeiLa.IPresence.html">IPresence</a>)：用户的状态信息</li>
-<li><strong>服务器用户</strong> (<a class="xref" href="../../api/KaiHeiLa.IGuildUser.html">IGuildUser</a>)：服务器内的用户</li>
-<li><strong>Bot 登录用户</strong> (<a class="xref" href="../../api/KaiHeiLa.ISelfUser.html">ISelfUser</a>)：当前客户端登录到开黑啦的机器人用户</li>
-<li><strong>用户</strong> (<a class="xref" href="../../api/KaiHeiLa.IUser.html">IUser</a>)：所有用户的基本类型接口</li>
+<li><strong>用户状态</strong> (<a class="xref" href="../../api/Kook.IPresence.html">IPresence</a>)：用户的状态信息</li>
+<li><strong>服务器用户</strong> (<a class="xref" href="../../api/Kook.IGuildUser.html">IGuildUser</a>)：服务器内的用户</li>
+<li><strong>Bot 登录用户</strong> (<a class="xref" href="../../api/Kook.ISelfUser.html">ISelfUser</a>)：当前客户端登录到 KOOK 的机器人用户</li>
+<li><strong>用户</strong> (<a class="xref" href="../../api/Kook.IUser.html">IUser</a>)：所有用户的基本类型接口</li>
 </ul>
 <h2 id="其它类型">其它类型</h2>
-<h3 id="表情符号-iemote">表情符号 <a class="xref" href="../../api/KaiHeiLa.IEmote.html">IEmote</a></h3>
+<h3 id="表情符号-iemote">表情符号 <a class="xref" href="../../api/Kook.IEmote.html">IEmote</a></h3>
 <ul>
-<li><strong>Emote</strong> (<a class="xref" href="../../api/KaiHeiLa.Emote.html">Emote</a>)：服务器内创建的自定义表情<ul>
+<li><strong>Emote</strong> (<a class="xref" href="../../api/Kook.Emote.html">Emote</a>)：服务器内创建的自定义表情<ul>
 <li>Example: <code>(emj)kaiheila-logo(emj)[1990044438283387/8BZCdG49cL069069]</code></li>
 </ul>
 </li>
-<li><strong>Emoji</strong> (<a class="xref" href="../../api/KaiHeiLa.Emoji.html">Emoji</a>)：Unicode 表示的 Emoji 表情符号<ul>
+<li><strong>Emoji</strong> (<a class="xref" href="../../api/Kook.Emoji.html">Emoji</a>)：Unicode 表示的 Emoji 表情符号<ul>
 <li>Example: <code>👍</code></li>
 </ul>
 </li>
 </ul>
-<h3 id="用户动态-iactivity">用户动态 <a class="xref" href="../../api/KaiHeiLa.IActivity.html">IActivity</a></h3>
+<h3 id="用户动态-iactivity">用户动态 <a class="xref" href="../../api/Kook.IActivity.html">IActivity</a></h3>
 <ul>
-<li><strong>游戏</strong> (<a class="xref" href="../../api/KaiHeiLa.IGame.html">IGame</a>)：代表用户的游戏活动</li>
+<li><strong>游戏</strong> (<a class="xref" href="../../api/Kook.IGame.html">IGame</a>)：代表用户的游戏活动</li>
 </ul>
 </article>
                 </div>

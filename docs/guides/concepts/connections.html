@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#31649;&#29702;&#36830;&#25509; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>&#31649;&#29702;&#36830;&#25509; | Kook.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#31649;&#29702;&#36830;&#25509; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="&#31649;&#29702;&#36830;&#25509; | Kook.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -32,8 +32,8 @@
 
             
             <a class="brand" href="../../index.html">
-              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+              <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
             </a>        </div>
 
         <div class="body-content">
@@ -46,8 +46,8 @@
                       <div class="mobile-hide">
                         
                         <a class="brand" href="../../index.html">
-                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                          <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
                         </a>  </div>
 
                       <div class="sidesearch">
@@ -66,7 +66,7 @@
                         </div>
                 </div>
                 <div class="footer">
-                  KaiHeiLa.Net (c) 2022
+                  Kook.Net (c) 2022
                   
                 </div>            </nav>
 
@@ -90,10 +90,10 @@
                         </div>
 
                     <article class="content wrap" id="_content" data-uid="Guides.Concepts.ManageConnections">
-<h1 id="管理-kaiheilanet-中的连接">管理 KaiHeiLa.Net 中的连接</h1>
+<h1 id="管理-kooknet-中的连接">管理 Kook.Net 中的连接</h1>
 
-<p>在 KaiHeiLa.Net 中，一旦客户端启动，除非客户端被手动关闭，
-否则其与开黑啦网关之间将会尝试一直保持连接。</p>
+<p>在 Kook.Net 中，一旦客户端启动，除非客户端被手动关闭，
+否则其与 KOOK 网关之间将会尝试一直保持连接。</p>
 <h2 id="用法">用法</h2>
 <p>要启动连接，请在客户端上调用 <code>StartAsync</code> 方法，这会启动一个 WebSocket 连接。
 要终止连接，请在客户端上调用 <code>StopAsync</code> 方法，这会关闭任何已经打开的 WebSocket 连接。</p>
@@ -101,19 +101,19 @@
 启动/终止连接的操作是异步执行的，因此<strong>这些方法会在启动/终止操作真正被执行前返回</strong>。</p>
 <p>因此，您需要订阅基于连接状态的事件，来准确地了解客户端何时启动/终止了连接。</p>
 <p>所有的客户端都提供了 <code>Connected</code> 和 <code>Disconnected</code> 事件，
-分别在连接启动或关闭时触发。需要注意的是，在 <a class="xref" href="../../api/KaiHeiLa.WebSocket.KaiHeiLaSocketClient.html">KaiHeiLaSocketClient</a> 中，
+分别在连接启动或关闭时触发。需要注意的是，在 <a class="xref" href="../../api/Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> 中，
 <code>Connected</code> 并不代表客户端完成了初始化以供业务逻辑进行调用。</p>
-<p><a class="xref" href="../../api/KaiHeiLa.WebSocket.KaiHeiLaSocketClient.html">KaiHeiLaSocketClient</a> 上提供了一个单独的事件 <code>Ready</code>，
+<p><a class="xref" href="../../api/Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> 上提供了一个单独的事件 <code>Ready</code>，
 仅当客户端下载完成所有必要的数据（如：服务器频道信息等），且拥有了完整了数据缓存，
 该事件才会被触发。</p>
 <h2 id="重连">重连</h2>
 <div class="TIP"><h5>Tip</h5><p>避免在网关现成上运行耗时代码！如果网关发生了如事件章节中所描述的死锁，
 连接管理器将无法恢复并重新连接。</p>
 </div>
-<p>假设客户端由于网络波动、开黑啦服务端的重连请求或错误导致客户端断开连接，
+<p>假设客户端由于网络波动、KOOK 服务端的重连请求或错误导致客户端断开连接，
 而不是业务逻辑代码造成的死锁，客户端将会一直尝试重连并继续之前的会话。</p>
 <p>不必担心如何维护连接，连接管理器的设计保证了重连机制的正常运行。
-如果您的客户端没能成功地重连，或许这是一个 Bug，快来 <a href="https://kaihei.co/EvxnOb">开黑啦 KaiHeiLa.Net 社区</a> 找我反馈吧！</p>
+如果您的客户端没能成功地重连，或许这是一个 Bug，快来 <a href="https://kaihei.co/EvxnOb">KOOK Kook.Net 社区</a> 找我反馈吧！</p>
 </article>
                 </div>
 

@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#21629;&#21517;&#21442;&#25968; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>&#21629;&#21517;&#21442;&#25968; | Kook.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#21629;&#21517;&#21442;&#25968; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="&#21629;&#21517;&#21442;&#25968; | Kook.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -32,8 +32,8 @@
 
             
             <a class="brand" href="../../index.html">
-              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+              <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
             </a>        </div>
 
         <div class="body-content">
@@ -46,8 +46,8 @@
                       <div class="mobile-hide">
                         
                         <a class="brand" href="../../index.html">
-                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                          <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
                         </a>  </div>
 
                       <div class="sidesearch">
@@ -66,7 +66,7 @@
                         </div>
                 </div>
                 <div class="footer">
-                  KaiHeiLa.Net (c) 2022
+                  Kook.Net (c) 2022
                   
                 </div>            </nav>
 
@@ -96,7 +96,7 @@
 如果定义了多个可选参数，对于用户来说，只设置想要传入的可选参数而不全部一一写出会更加方便。</p>
 <h2 id="设置参数名称">设置参数名称</h2>
 <p>要想用户能够通过指定参数名称来设置对应的参数，您需要创建一个可选参数容器类，
-其中需包含了命令会用到的所有可选参数，并为其添加 <a class="xref" href="../../api/KaiHeiLa.Commands.NamedArgumentTypeAttribute.html">NamedArgumentTypeAttribute</a> 特性标签。</p>
+其中需包含了命令会用到的所有可选参数，并为其添加 <a class="xref" href="../../api/Kook.Commands.NamedArgumentTypeAttribute.html">NamedArgumentTypeAttribute</a> 特性标签。</p>
 <h3 id="示例">示例</h3>
 <pre><code class="lang-csharp">[NamedArgumentType]
 public class NamableArguments
@@ -113,9 +113,9 @@ public async Task Act(int requiredArg, NamableArguments namedArgs)
 </code></pre><p>该命令则可以按如下方式调用：</p>
 <p><code>.act 42 first: Hello fourth: &quot;A string with spaces must be wrapped in quotes&quot; second: World</code></p>
 <p>可选参数容器类的类型解析是自动注册的，无需对该容器类创建并注册自定义类型解析。</p>
-<div class="IMPORTANT"><h5>Important</h5><p>一个命令<strong>只能</strong>有用一个被 <a class="xref" href="../../api/KaiHeiLa.Commands.NamedArgumentTypeAttribute.html">NamedArgumentTypeAttribute</a>
+<div class="IMPORTANT"><h5>Important</h5><p>一个命令<strong>只能</strong>有用一个被 <a class="xref" href="../../api/Kook.Commands.NamedArgumentTypeAttribute.html">NamedArgumentTypeAttribute</a>
 特性标注的可选参数容器类，且<strong>必须</strong>位于参数列表的末位。
-被该特性标注的类会在解析参数是自动应用 <a href="xref:KaiHeiLa.Commands.RemainderAttributes">RemainderAttribute</a> 特性的效果。</p>
+被该特性标注的类会在解析参数是自动应用 <a href="xref:Kook.Commands.RemainderAttributes">RemainderAttribute</a> 特性的效果。</p>
 </div>
 <h2 id="复杂类型">复杂类型</h2>
 <p>可选参数容器类中的每个属性在进行匹配时，所有注册到文本命令服务内的类型解析都会如以往正常匹配。</p>
@@ -125,7 +125,7 @@ public async Task Act(int requiredArg, NamableArguments namedArgs)
 </code></pre><p>那么该命令可以以如下的方式调用：</p>
 <p><code>.cmd numbers: &quot;1, 2, 4, 8, 16, 32&quot;</code></p>
 <h2 id="补充说明">补充说明</h2>
-<p>可选参数容器类中的属性也可以使用 <a class="xref" href="../../api/KaiHeiLa.Commands.OverrideTypeReaderAttribute.html">OverrideTypeReader</a>。</p>
+<p>可选参数容器类中的属性也可以使用 <a class="xref" href="../../api/Kook.Commands.OverrideTypeReaderAttribute.html">OverrideTypeReader</a>。</p>
 </article>
                 </div>
 

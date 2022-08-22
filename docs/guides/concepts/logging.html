@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#26085;&#24535; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>&#26085;&#24535; | Kook.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#26085;&#24535; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="&#26085;&#24535; | Kook.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -32,8 +32,8 @@
 
             
             <a class="brand" href="../../index.html">
-              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+              <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
             </a>        </div>
 
         <div class="body-content">
@@ -46,8 +46,8 @@
                       <div class="mobile-hide">
                         
                         <a class="brand" href="../../index.html">
-                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                          <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
                         </a>  </div>
 
                       <div class="sidesearch">
@@ -66,7 +66,7 @@
                         </div>
                 </div>
                 <div class="footer">
-                  KaiHeiLa.Net (c) 2022
+                  Kook.Net (c) 2022
                   
                 </div>            </nav>
 
@@ -90,28 +90,28 @@
                         </div>
 
                     <article class="content wrap" id="_content" data-uid="Guides.Concepts.Logging">
-<h1 id="在-kaiheilanet-中记录日志">在 KaiHeiLa.Net 中记录日志</h1>
+<h1 id="在-kooknet-中记录日志">在 Kook.Net 中记录日志</h1>
 
-<p>KaiHeiLa.Net 中提供了一个日志事件，所有的日志消息都会通过此事件传递。</p>
-<p>有关 KaiHeiLa.Net 中的事件，请参阅 <a class="xref" href="events.html">事件</a> 章节。</p>
-<div class="WARNING"><h5>Warning</h5><p>KaiHeiLa.Net 中所有的日志实现处理程序都将在网关线程上同步执行， 
-如果您要将日志消息输出到 Web API 中（例如：Sentry、Stackdriver、开黑啦频道等），
+<p>Kook.Net 中提供了一个日志事件，所有的日志消息都会通过此事件传递。</p>
+<p>有关 Kook.Net 中的事件，请参阅 <a class="xref" href="events.html">事件</a> 章节。</p>
+<div class="WARNING"><h5>Warning</h5><p>Kook.Net 中所有的日志实现处理程序都将在网关线程上同步执行， 
+如果您要将日志消息输出到 Web API 中（例如：Sentry、Stackdriver、KOOK 频道等），
 建议将输出程序包装在 <code>Task.Run</code> 中，以避免网关线程在等待数据日志输出时阻塞。</p>
 </div>
 <h2 id="在客户端中记录日志">在客户端中记录日志</h2>
-<p>要处理日志，只需将日志处理程序订阅至 <a class="xref" href="../../api/KaiHeiLa.Rest.BaseKaiHeiLaClient.html#KaiHeiLa_Rest_BaseKaiHeiLaClient_Log">Log</a> 事件，
-日志处理程序需接收一个 <a class="xref" href="../../api/KaiHeiLa.LogMessage.html">LogMessage</a> 对象，返回 <code>Task</code> 对象。</p>
+<p>要处理日志，只需将日志处理程序订阅至 <a class="xref" href="../../api/Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_Log">Log</a> 事件，
+日志处理程序需接收一个 <a class="xref" href="../../api/Kook.LogMessage.html">LogMessage</a> 对象，返回 <code>Task</code> 对象。</p>
 <h2 id="在命令中记录日志">在命令中记录日志</h2>
-<p>KaiHeiLa.Net 的 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html">CommandService</a> 也提供了 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_Log">Log</a>
+<p>Kook.Net 的 <a class="xref" href="../../api/Kook.Commands.CommandService.html">CommandService</a> 也提供了 <a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_Log">Log</a>
 事件，其签名与其它日志事件相同。</p>
-<p>通过日志事件记录的数据往往与 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandException.html">CommandException</a> 相结合使用，其中包含了命令上下文与异常信息。</p>
+<p>通过日志事件记录的数据往往与 <a class="xref" href="../../api/Kook.Commands.CommandException.html">CommandException</a> 相结合使用，其中包含了命令上下文与异常信息。</p>
 <h2 id="示例">示例</h2>
-<pre><code class="lang-csharp" name="Logging Sample">using KaiHeiLa;
-using KaiHeiLa.WebSocket;
+<pre><code class="lang-csharp" name="Logging Sample">using Kook;
+using Kook.WebSocket;
 
 public class LoggingService
 {
-    public LoggingService(KaiHeiLaSocketClient client, CommandService command)
+    public LoggingService(KookSocketClient client, CommandService command)
     {
         client.Log += LogAsync;
         command.Log += LogAsync;

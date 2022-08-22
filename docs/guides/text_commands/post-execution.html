@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#21518;&#22788;&#29702;&#31243;&#24207; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>&#21518;&#22788;&#29702;&#31243;&#24207; | Kook.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#21518;&#22788;&#29702;&#31243;&#24207; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="&#21518;&#22788;&#29702;&#31243;&#24207; | Kook.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -32,8 +32,8 @@
 
             
             <a class="brand" href="../../index.html">
-              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+              <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
             </a>        </div>
 
         <div class="body-content">
@@ -46,8 +46,8 @@
                       <div class="mobile-hide">
                         
                         <a class="brand" href="../../index.html">
-                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                          <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
                         </a>  </div>
 
                       <div class="sidesearch">
@@ -66,7 +66,7 @@
                         </div>
                 </div>
                 <div class="footer">
-                  KaiHeiLa.Net (c) 2022
+                  Kook.Net (c) 2022
                   
                 </div>            </nav>
 
@@ -92,16 +92,16 @@
                     <article class="content wrap" id="_content" data-uid="Guides.TextCommands.PostExecution">
 <h1 id="文本命令执行的后处理程序">文本命令执行的后处理程序</h1>
 
-<p>在开发命令时，您可能想要在执行命令后执行一些操作，KaiHeiLa.Net
+<p>在开发命令时，您可能想要在执行命令后执行一些操作，Kook.Net
 提供了一些命令执行后处理工作流来实现这个目的。</p>
 <p><a class="xref" href="intro.html">文本命令框架入门</a> 中展示了下面的示例来执行并处理命令及其内的数据：</p>
 <pre><code name="Command Handler">public class CommandHandler
 {
-    private readonly KaiHeiLaSocketClient _client;
+    private readonly KookSocketClient _client;
     private readonly CommandService _commands;
 
-    // &#20174;&#26500;&#36896;&#20989;&#25968;&#20013;&#33719;&#21462; KaiHeiLaSocketClient &#19982; CommandService &#30340;&#31034;&#20363;
-    public CommandHandler(KaiHeiLaSocketClient client, CommandService commands)
+    // &#20174;&#26500;&#36896;&#20989;&#25968;&#20013;&#33719;&#21462; KookSocketClient &#19982; CommandService &#30340;&#31034;&#20363;
+    public CommandHandler(KookSocketClient client, CommandService commands)
     {
         _commands = commands;
         _client = client;
@@ -144,7 +144,7 @@
             services: null);
     }
 }
-</code></pre><p>示例中，<a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_ExecuteAsync_">ExecuteAsync</a> 方法的运行结果会返回一个 <code>Task&lt;IResult&gt;</code>
+</code></pre><p>示例中，<a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_ExecuteAsync_">ExecuteAsync</a> 方法的运行结果会返回一个 <code>Task&lt;IResult&gt;</code>
 对象，要将结果打印到聊天中，可以采用以下的代码示例：</p>
 <pre><code name="Basic Command Handler">// &#27492;&#37096;&#20998;&#20195;&#30721;&#22788;&#29702;&#21629;&#20196;&#30452;&#25509;&#32467;&#26524;&#30340;&#26041;&#24335;&#19981;&#21463;&#25512;&#33616;
 // &#35831;&#19981;&#35201;&#30450;&#30446;&#36171;&#20540;&#26412;&#31034;&#20363;&#30340;&#20195;&#30721;
@@ -163,10 +163,10 @@ if (result.Error != null)
     }
 </code></pre><p>然而，这种处理方式中，命令执行后处理程序被嵌入到了基本的命令执行逻辑中，
 这样会导致命令执行逻辑部分的代码更混乱，且可能违反了单一职责原则（SRP），不受推荐。</p>
-<p>另一个主要的问题是，如果命令的处理程序被 <code>RunMode.Async</code> 标记为异步模式运行，<a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_ExecuteAsync_">ExecuteAsync</a>
-将<strong>总是</strong>返回包含执行成功信息的 <a class="xref" href="../../api/KaiHeiLa.Commands.ExecuteResult.html">ExecuteResult</a>，而非真正的执行结果。</p>
+<p>另一个主要的问题是，如果命令的处理程序被 <code>RunMode.Async</code> 标记为异步模式运行，<a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_ExecuteAsync_">ExecuteAsync</a>
+将<strong>总是</strong>返回包含执行成功信息的 <a class="xref" href="../../api/Kook.Commands.ExecuteResult.html">ExecuteResult</a>，而非真正的执行结果。</p>
 <h2 id="commandexecuted-事件">CommandExecuted 事件</h2>
-<p>当命令执行完成时，无论其结果如何，都会触发 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_CommandExecuted">CommandExecuted</a> 事件。
+<p>当命令执行完成时，无论其结果如何，都会触发 <a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_CommandExecuted">CommandExecuted</a> 事件。
 该事件可以简化前面示例中混乱的结构，且可以避免 <code>RunMode.Async</code> 模式的问题。</p>
 <p>采用事件模式的代码示例如下：</p>
 <pre><code name="CommandExecuted demo">public async Task SetupAsync()
@@ -205,13 +205,13 @@ public async Task HandleCommandAsync(SocketMessage msg)
     await _commands.ExecuteAsync(context, argPos, _services);
 }
 </code></pre><p>So now we have a streamlined post-execution pipeline, great! What&#39;s
-next? We can take this further by using <a class="xref" href="../../api/KaiHeiLa.Commands.RuntimeResult.html">RuntimeResult</a>.</p>
+next? We can take this further by using <a class="xref" href="../../api/Kook.Commands.RuntimeResult.html">RuntimeResult</a>.</p>
 <h3 id="runtimeresult">RuntimeResult</h3>
 <p>命令执行完成后可以返回 <code>RuntimeResult</code> 对象，<code>RuntimeResult</code>
 是一个结果类，可以用来表示命令执行结果的逻辑。</p>
-<p>由于 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_ExecuteAsync_">ExecuteAsync</a> 中异步执行的命令始终无法返回错误信息，<a class="xref" href="../../api/KaiHeiLa.Commands.RuntimeResult.html">RuntimeResult</a>
-往往不应与 <a class="xref" href="../../api/KaiHeiLa.Commands.ExecuteResult.html">ExecuteResult</a> 共同使用，而应在 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_CommandExecuted">CommandExecuted</a> 事件处理程序中使用。
-在实践中，您可以基于 <a class="xref" href="../../api/KaiHeiLa.Commands.RuntimeResult.html">RuntimeResult</a> 派生自定义的结果类，以记录更多的结果信息及逻辑。</p>
+<p>由于 <a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_ExecuteAsync_">ExecuteAsync</a> 中异步执行的命令始终无法返回错误信息，<a class="xref" href="../../api/Kook.Commands.RuntimeResult.html">RuntimeResult</a>
+往往不应与 <a class="xref" href="../../api/Kook.Commands.ExecuteResult.html">ExecuteResult</a> 共同使用，而应在 <a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_CommandExecuted">CommandExecuted</a> 事件处理程序中使用。
+在实践中，您可以基于 <a class="xref" href="../../api/Kook.Commands.RuntimeResult.html">RuntimeResult</a> 派生自定义的结果类，以记录更多的结果信息及逻辑。</p>
 <p>下面的示例创建了一个 <code>RuntimeResult</code> 的最小派生类：</p>
 <pre><code name="Base Use">public class MyCustomResult : RuntimeResult
 {
@@ -250,7 +250,7 @@ next? We can take this further by using <a class="xref" href="../../api/KaiHeiLa
         return MyCustomResult.FromSuccess($&quot;Give me the {food}!&quot;).
     }
 }
-</code></pre><p>进而可以在 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_CommandExecuted">CommandExecuted</a> 的事件处理程序中使用该结果类：</p>
+</code></pre><p>进而可以在 <a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_CommandExecuted">CommandExecuted</a> 的事件处理程序中使用该结果类：</p>
 <pre><code name="Usage">public async Task OnCommandExecutedAsync(Optional&lt;CommandInfo&gt; command, ICommandContext context, IResult result)
 {
     switch(result)
@@ -265,10 +265,10 @@ next? We can take this further by using <a class="xref" href="../../api/KaiHeiLa
     }
 }
 </code></pre><h2 id="commandservicelog-事件">CommandService.Log 事件</h2>
-<p><a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_Log">CommandService.Log</a> 事件可以记录命令执行过程中发生的异常信息,
+<p><a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_Log">CommandService.Log</a> 事件可以记录命令执行过程中发生的异常信息,
 而这些信息由于业务逻辑抛出异常而中断执行，无法被传递到正常的命令执行后处理程序中。</p>
-<p>所有命令执行过程中发生的异常信息都会被捕获并传入 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandException.html">CommandException</a> 类内的
-<a class="xref" href="../../api/KaiHeiLa.LogMessage.html#KaiHeiLa_LogMessage_Exception">LogMessage.Exception</a> 属性中，<a class="xref" href="../../api/KaiHeiLa.Commands.CommandException.html">CommandException</a> 类记录了抛出的异常及命令执行的上下文。</p>
+<p>所有命令执行过程中发生的异常信息都会被捕获并传入 <a class="xref" href="../../api/Kook.Commands.CommandException.html">CommandException</a> 类内的
+<a class="xref" href="../../api/Kook.LogMessage.html#Kook_LogMessage_Exception">LogMessage.Exception</a> 属性中，<a class="xref" href="../../api/Kook.Commands.CommandException.html">CommandException</a> 类记录了抛出的异常及命令执行的上下文。</p>
 <pre><code name="Logger Sample">public async Task LogAsync(LogMessage logMessage)
 {
     if (logMessage.Exception is CommandException cmdException)

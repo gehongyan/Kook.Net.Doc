@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Serilog | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>Serilog | Kook.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Serilog | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="Serilog | Kook.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -32,8 +32,8 @@
 
             
             <a class="brand" href="../../index.html">
-              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+              <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
             </a>        </div>
 
         <div class="body-content">
@@ -46,8 +46,8 @@
                       <div class="mobile-hide">
                         
                         <a class="brand" href="../../index.html">
-                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                          <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
                         </a>  </div>
 
                       <div class="sidesearch">
@@ -66,7 +66,7 @@
                         </div>
                 </div>
                 <div class="footer">
-                  KaiHeiLa.Net (c) 2022
+                  Kook.Net (c) 2022
                   
                 </div>            </nav>
 
@@ -94,7 +94,7 @@
 
 <h2 id="先决条件">先决条件</h2>
 <ul>
-<li>如 <a class="xref" href="../getting_started/first-bot.html">使用 KaiHeiLa.Net 构建你的第一个 Bot</a> 中所描述的带有日志处理方法的 Bot 客户端程序。</li>
+<li>如 <a class="xref" href="../getting_started/first-bot.html">使用 Kook.Net 构建你的第一个 Bot</a> 中所描述的带有日志处理方法的 Bot 客户端程序。</li>
 </ul>
 <h2 id="安装-serilog-类库">安装 Serilog 类库</h2>
 <p>可通过集成开发环境的用户界面或 dotnet CLI 安装以下类库：</p>
@@ -118,13 +118,13 @@
 </table>
 <h2 id="配置-serilog">配置 Serilog</h2>
 <p>Serilog 需在异步函数入口点的顶部进行配置：</p>
-<pre><code class="lang-csharp" name="Configuring serilog">using KaiHeiLa;
+<pre><code class="lang-csharp" name="Configuring serilog">using Kook;
 using Serilog;
 using Serilog.Events;
 
 public class Program
 {
-    private KaiHeiLaSocketClient _client;
+    private KookSocketClient _client;
     public static Task Main(string[] args) =&gt; new Program().MainAsync();
 
     public async Task MainAsync()
@@ -135,7 +135,7 @@ public class Program
             .WriteTo.Console()
             .CreateLogger();
 
-        _client = new KaiHeiLaSocketClient();
+        _client = new KookSocketClient();
 
         _client.Log += LogAsync;
 
@@ -156,7 +156,7 @@ public class Program
     }
 }
 </code></pre><h2 id="修改日志方法">修改日志方法</h2>
-<p>要想让 Serilog 能够正确地记录开黑啦的日志，需要将 KaiHeiLa.Net 的 <code>LogSeverity</code>
+<p>要想让 Serilog 能够正确地记录 KOOK 的日志，需要将 Kook.Net 的 <code>LogSeverity</code>
 映射到 Serilog 的 <code>LogEventLevel</code>，映射的示例如下：</p>
 <pre><code class="lang-csharp" name="MappingLogLevel">private static async Task LogAsync(LogMessage message)
 {
@@ -185,10 +185,10 @@ public class Program
 </code></pre><div class="NOTE"><h5>Note</h5><p>根据所配置的日志级别，部分日志消息可能不会输出。有关日志级别的更多信息，请参见
 <a href="https://github.com/serilog/serilog/wiki/Configuration-Basics#minimum-level">Serilog 文档</a>。</p>
 </div>
-<div class="NOTE"><h5>Note</h5><p>KaiHeiLa.Net 与 Serilog 对日志级别的定义不完全一致，要简化最低输出日志级别控制，有两种可选策略：</p>
+<div class="NOTE"><h5>Note</h5><p>Kook.Net 与 Serilog 对日志级别的定义不完全一致，要简化最低输出日志级别控制，有两种可选策略：</p>
 <ul>
-<li>将 Serilog 的 <code>MinimumLevel</code> 配置为 <code>Verbose</code>，转而在 KaiHeiLa.Net 的 <code>KaiHeiLaConfig</code> 中配置 <code>LogLevel</code></li>
-<li>在 KaiHeiLa.Net 的 <code>KaiHeiLaConfig</code> 中配置 <code>LogLevel</code> 为 <code>Debug</code>，转而在 Serilog 中配置 <code>MinimumLevel</code></li>
+<li>将 Serilog 的 <code>MinimumLevel</code> 配置为 <code>Verbose</code>，转而在 Kook.Net 的 <code>KookConfig</code> 中配置 <code>LogLevel</code></li>
+<li>在 Kook.Net 的 <code>KookConfig</code> 中配置 <code>LogLevel</code> 为 <code>Debug</code>，转而在 Serilog 中配置 <code>MinimumLevel</code></li>
 </ul>
 <p>同时配置两侧的最低日志级别可能会导致预期之外的最低日志级别控制结果。</p>
 </div>

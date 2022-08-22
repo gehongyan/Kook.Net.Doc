@@ -1,0 +1,1717 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class BaseSocketClient
+     | Kook.Net &#25991;&#26723; </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class BaseSocketClient
+     | Kook.Net &#25991;&#26723; ">
+      <meta name="generator" content="docfx 2.56.7.0">
+      
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+      
+      <meta property="docfx:rel" content="../">
+      
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../index.html">
+              <img src="../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../index.html">
+                          <img src="../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
+                        </a>  </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+                  Kook.Net (c) 2022
+                  
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="Kook.WebSocket.BaseSocketClient">
+  
+  
+  <h1 id="Kook_WebSocket_BaseSocketClient" data-uid="Kook.WebSocket.BaseSocketClient" class="text-break">Class BaseSocketClient
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kook.Rest.BaseKookClient.html">BaseKookClient</a></div>
+    <div class="level2"><span class="xref">BaseSocketClient</span></div>
+      <div class="level3"><a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kook.IKookClient.html">IKookClient</a></div>
+    <div><span class="xref">IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_Log">BaseKookClient.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LoggedIn">BaseKookClient.LoggedIn</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LoggedOut">BaseKookClient.LoggedOut</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LoginState">BaseKookClient.LoginState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_TokenType">BaseKookClient.TokenType</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_Dispose">BaseKookClient.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LoginAsync_Kook_TokenType_System_String_System_Boolean_">BaseKookClient.LoginAsync(TokenType, String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LogoutAsync">BaseKookClient.LogoutAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_Kook_IKookClient_ConnectionState">BaseKookClient.IKookClient.ConnectionState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_Kook_IKookClient_CurrentUser">BaseKookClient.IKookClient.CurrentUser</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_GetChannelAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_">BaseKookClient.GetChannelAsync(UInt64, CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_GetDMChannelAsync_Guid_Kook_CacheMode_Kook_RequestOptions_">BaseKookClient.GetDMChannelAsync(Guid, CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_GetDMChannelsAsync_Kook_CacheMode_Kook_RequestOptions_">BaseKookClient.GetDMChannelsAsync(CacheMode, RequestOptions)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kook.WebSocket.html">Kook.WebSocket</a></h6>
+  <h6><strong>Assembly</strong>: Kook.Net.WebSocket.dll</h6>
+  <h5 id="Kook_WebSocket_BaseSocketClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BaseSocketClient : BaseKookClient, IKookClient, IDisposable</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_BaseConfig.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.BaseConfig%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L8">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_BaseConfig" data-uid="Kook.WebSocket.BaseSocketClient.BaseConfig">BaseConfig</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly KookSocketConfig BaseConfig</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_CurrentUser.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.CurrentUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L29">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_BaseSocketClient_CurrentUser_" data-uid="Kook.WebSocket.BaseSocketClient.CurrentUser*"></a>
+  <h4 id="Kook_WebSocket_BaseSocketClient_CurrentUser" data-uid="Kook.WebSocket.BaseSocketClient.CurrentUser">CurrentUser</h4>
+  <div class="markdown level1 summary"><p>Gets the current logged-in user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual SocketSelfUser CurrentUser { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_Guilds.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.Guilds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L41">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_BaseSocketClient_Guilds_" data-uid="Kook.WebSocket.BaseSocketClient.Guilds*"></a>
+  <h4 id="Kook_WebSocket_BaseSocketClient_Guilds" data-uid="Kook.WebSocket.BaseSocketClient.Guilds">Guilds</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of guilds that the user is currently in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IReadOnlyCollection&lt;SocketGuild&gt; Guilds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>&gt;</td>
+        <td><p>A read-only collection of guilds that the current user is in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_Latency.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.Latency%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L17">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_BaseSocketClient_Latency_" data-uid="Kook.WebSocket.BaseSocketClient.Latency*"></a>
+  <h4 id="Kook_WebSocket_BaseSocketClient_Latency" data-uid="Kook.WebSocket.BaseSocketClient.Latency">Latency</h4>
+  <div class="markdown level1 summary"><p>Gets the estimated round-trip latency, in milliseconds, to the gateway server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract int Latency { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>An int that represents the round-trip latency to the WebSocket server. Please
+note that this value does not represent a &quot;true&quot; latency for operations such as sending a message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_Rest.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.Rest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L22">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_BaseSocketClient_Rest_" data-uid="Kook.WebSocket.BaseSocketClient.Rest*"></a>
+  <h4 id="Kook_WebSocket_BaseSocketClient_Rest" data-uid="Kook.WebSocket.BaseSocketClient.Rest">Rest</h4>
+  <div class="markdown level1 summary"><p>Provides access to a REST-only client with a shared state from this client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract KookSocketRestClient Rest { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.WebSocket.KookSocketRestClient.html">KookSocketRestClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_GetChannel_System_UInt64_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.GetChannel(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L59">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_BaseSocketClient_GetChannel_" data-uid="Kook.WebSocket.BaseSocketClient.GetChannel*"></a>
+  <h4 id="Kook_WebSocket_BaseSocketClient_GetChannel_System_UInt64_" data-uid="Kook.WebSocket.BaseSocketClient.GetChannel(System.UInt64)">GetChannel(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract SocketChannel GetChannel(ulong id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_GetGuild_System_UInt64_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.GetGuild(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L54">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_BaseSocketClient_GetGuild_" data-uid="Kook.WebSocket.BaseSocketClient.GetGuild*"></a>
+  <h4 id="Kook_WebSocket_BaseSocketClient_GetGuild_System_UInt64_" data-uid="Kook.WebSocket.BaseSocketClient.GetGuild(System.UInt64)">GetGuild(UInt64)</h4>
+  <div class="markdown level1 summary"><p>Gets a guild.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract SocketGuild GetGuild(ulong id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The guild identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a></td>
+        <td><p>A WebSocket-based guild associated with the identifier; <code>null</code> when the guild cannot be
+found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_GetUser_System_String_System_String_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.GetUser(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L106">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_BaseSocketClient_GetUser_" data-uid="Kook.WebSocket.BaseSocketClient.GetUser*"></a>
+  <h4 id="Kook_WebSocket_BaseSocketClient_GetUser_System_String_System_String_" data-uid="Kook.WebSocket.BaseSocketClient.GetUser(System.String,System.String)">GetUser(String, String)</h4>
+  <div class="markdown level1 summary"><p>Gets a user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract SocketUser GetUser(string username, string identifyNumber)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">username</span></td>
+        <td><p>The name of the user.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">identifyNumber</span></td>
+        <td><p>The identify value of the user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a></td>
+        <td><p>A generic WebSocket-based user; <code>null</code> when the user cannot be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_GetUser_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method gets the user present in the WebSocket cache with the given condition.
+<div class="WARNING"><h5>warning</h5><p>
+    Sometimes a user may return <code>null</code> due to Kook not sending offline users in large guilds
+    (i.e. guild with 100+ members) actively. To download users on startup and to see more information
+    about this subject, see <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">AlwaysDownloadUsers</a>.
+</p></div>
+<div class="NOTE"><h5>note</h5><p>
+    This method does not attempt to fetch users that the logged-in user does not have access to (i.e.
+    users who don&apos;t share mutual guild(s) with the current user). If you wish to get a user that you do
+    not have access to, consider using the REST implementation of
+<see cref="!:KookRestClient.GetUserAsync(System.UInt64,Kook.RequestOptions)"></see>.
+</p></div></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_GetUser_System_UInt64_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.GetUser(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L82">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_BaseSocketClient_GetUser_" data-uid="Kook.WebSocket.BaseSocketClient.GetUser*"></a>
+  <h4 id="Kook_WebSocket_BaseSocketClient_GetUser_System_UInt64_" data-uid="Kook.WebSocket.BaseSocketClient.GetUser(System.UInt64)">GetUser(UInt64)</h4>
+  <div class="markdown level1 summary"><p>Gets a generic user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract SocketUser GetUser(ulong id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The user ID.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a></td>
+        <td><p>A generic WebSocket-based user; <code>null</code> when the user cannot be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_GetUser_System_UInt64__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method gets the user present in the WebSocket cache with the given condition.
+<div class="WARNING"><h5>warning</h5><p>
+    Sometimes a user may return <code>null</code> due to Kook not sending offline users in large guilds
+    (i.e. guild with 100+ members) actively. To download users on startup and to see more information
+    about this subject, see <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">AlwaysDownloadUsers</a>.
+</p></div>
+<div class="NOTE"><h5>note</h5><p>
+    This method does not attempt to fetch users that the logged-in user does not have access to (i.e.
+    users who don&apos;t share mutual guild(s) with the current user). If you wish to get a user that you do
+    not have access to, consider using the REST implementation of
+<see cref="!:KookRestClient.GetUserAsync(System.UInt64,Kook.RequestOptions)"></see>.
+</p></div></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_StartAsync.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.StartAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L56">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_BaseSocketClient_StartAsync_" data-uid="Kook.WebSocket.BaseSocketClient.StartAsync*"></a>
+  <h4 id="Kook_WebSocket_BaseSocketClient_StartAsync" data-uid="Kook.WebSocket.BaseSocketClient.StartAsync">StartAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task StartAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_StopAsync.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.StopAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L57">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_BaseSocketClient_StopAsync_" data-uid="Kook.WebSocket.BaseSocketClient.StopAsync*"></a>
+  <h4 id="Kook_WebSocket_BaseSocketClient_StopAsync" data-uid="Kook.WebSocket.BaseSocketClient.StopAsync">StopAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task StopAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_ChannelCreated.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.ChannelCreated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L22">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_ChannelCreated" data-uid="Kook.WebSocket.BaseSocketClient.ChannelCreated">ChannelCreated</h4>
+  <div class="markdown level1 summary"><p>Fired when a channel is created. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketChannel, Task&gt; ChannelCreated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_ChannelCreated_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a generic channel has been created. The event handler must return a
+<see cref="!:Task"></see> and accept a <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> as its parameter.
+</p>
+<p>
+    The newly created channel is passed into the event handler parameter. The given channel type may
+    include, but not limited to, Private Channels (DM, Group), Guild Channels (Text, Voice, Category);
+    see the derived classes of <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> for more details.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_ChannelDestroyed.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.ChannelDestroyed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L40">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_ChannelDestroyed" data-uid="Kook.WebSocket.BaseSocketClient.ChannelDestroyed">ChannelDestroyed</h4>
+  <div class="markdown level1 summary"><p>Fired when a channel is destroyed. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketChannel, Task&gt; ChannelDestroyed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_ChannelDestroyed_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a generic channel has been destroyed. The event handler must return a
+<see cref="!:Task"></see> and accept a <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> as its parameter.
+</p>
+<p>
+    The destroyed channel is passed into the event handler parameter. The given channel type may
+    include, but not limited to, Private Channels (DM, Group), Guild Channels (Text, Voice, Category);
+    see the derived classes of <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> for more details.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_ChannelUpdated.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.ChannelUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L59">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_ChannelUpdated" data-uid="Kook.WebSocket.BaseSocketClient.ChannelUpdated">ChannelUpdated</h4>
+  <div class="markdown level1 summary"><p>Fired when a channel is updated. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketChannel, SocketChannel, Task&gt; ChannelUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a>, <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_ChannelUpdated_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a generic channel has been updated. The event handler must return a
+<see cref="!:Task"></see> and accept 2 <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> as its parameters.
+</p>
+<p>
+    The original (prior to update) channel is passed into the first <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a>, while
+    the updated channel is passed into the second. The given channel type may include, but not limited
+    to, Private Channels (DM, Group), Guild Channels (Text, Voice, Category); see the derived classes of
+<a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> for more details.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_CurrentUserUpdated.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.CurrentUserUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L379">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_CurrentUserUpdated" data-uid="Kook.WebSocket.BaseSocketClient.CurrentUserUpdated">CurrentUserUpdated</h4>
+  <div class="markdown level1 summary"><p>Fired when the connected account is updated. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketSelfUser, SocketSelfUser, Task&gt; CurrentUserUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a>, <a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_DirectMessageDeleted.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.DirectMessageDeleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L255">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_DirectMessageDeleted" data-uid="Kook.WebSocket.BaseSocketClient.DirectMessageDeleted">DirectMessageDeleted</h4>
+  <div class="markdown level1 summary"><p>Fired when a message is deleted. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;IDMChannel, Guid&gt;, Task&gt; DirectMessageDeleted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <span class="xref">Guid</span>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a>, <span class="xref">Guid</span>&gt;, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_DirectMessageDeleted_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a message is deleted. The event handler must return a
+<see cref="!:Task"></see> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> and 
+<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a> as its parameters.
+</p>
+<p>
+<div class="IMPORTANT"><h5>important</h5><p>
+    It is not possible to retrieve the message via
+<a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the message cannot be retrieved by Kook
+after the message has been deleted.
+</p></div>
+If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+<a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the deleted message; otherwise, in event
+that the message cannot be retrieved, the ID of the message is preserved in the 
+<see cref="!:Guid"></see>.
+</p>
+<p>
+    The source channel of the removed message will be passed into the 
+<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a> parameter.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_DirectMessageReceived.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.DirectMessageReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L226">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_DirectMessageReceived" data-uid="Kook.WebSocket.BaseSocketClient.DirectMessageReceived">DirectMessageReceived</h4>
+  <div class="markdown level1 summary"><p>Fired when a message is received. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketMessage, Task&gt; DirectMessageReceived</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_DirectMessageReceived_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a message is received. The event handler must return a
+<see cref="!:Task"></see> and accept a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> as its parameter.
+</p>
+<p>
+    The message that is sent to the client is passed into the event handler parameter as
+<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>. This message may be a system message (i.e.
+<a class="xref" href="Kook.WebSocket.SocketSystemMessage.html">SocketSystemMessage</a>) or a user message (i.e. <a class="xref" href="Kook.WebSocket.SocketUserMessage.html">SocketUserMessage</a>. See the
+derived classes of <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> for more details.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_DirectMessageUpdated.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.DirectMessageUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L289">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_DirectMessageUpdated" data-uid="Kook.WebSocket.BaseSocketClient.DirectMessageUpdated">DirectMessageUpdated</h4>
+  <div class="markdown level1 summary"><p>Fired when a message is updated. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, SocketMessage, IDMChannel, Task&gt; DirectMessageUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <span class="xref">Guid</span>&gt;, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="Kook.IDMChannel.html">IDMChannel</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_DirectMessageUpdated_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a message is updated. The event handler must return a
+<see cref="!:Task"></see> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>,
+and <a class="xref" href="Kook.IDMChannel.html">IDMChannel</a> as its parameters.
+</p>
+<p>
+    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+<a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+that the message cannot be retrieved, the ID of the message is preserved in the 
+<see cref="!:Guid"></see>.
+</p>
+<p>
+    The updated message will be passed into the <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> parameter.
+</p>
+<p>
+    The source channel of the updated message will be passed into the 
+<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a> parameter.
+</p>
+<p>
+<div class="WARNING"><h5>warning</h5><p>
+    Due to the lack of REST API for direct message info getting, this event may fire but
+    the message entity will be null.
+</p></div>
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_GuildMemberOffline.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.GuildMemberOffline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L400">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_GuildMemberOffline" data-uid="Kook.WebSocket.BaseSocketClient.GuildMemberOffline">GuildMemberOffline</h4>
+  <div class="markdown level1 summary"><p>Fired when a guild member is offline. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;IReadOnlyCollection&lt;SocketGuildUser&gt;, DateTimeOffset, Task&gt; GuildMemberOffline</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;, <span class="xref">DateTimeOffset</span>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_GuildMemberOnline.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.GuildMemberOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L393">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_GuildMemberOnline" data-uid="Kook.WebSocket.BaseSocketClient.GuildMemberOnline">GuildMemberOnline</h4>
+  <div class="markdown level1 summary"><p>Fired when a guild member is online. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;IReadOnlyCollection&lt;SocketGuildUser&gt;, DateTimeOffset, Task&gt; GuildMemberOnline</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;, <span class="xref">DateTimeOffset</span>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_GuildMemberUpdated.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.GuildMemberUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L386">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_GuildMemberUpdated" data-uid="Kook.WebSocket.BaseSocketClient.GuildMemberUpdated">GuildMemberUpdated</h4>
+  <div class="markdown level1 summary"><p>Fired when a guild member is updated. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;SocketGuildUser, ulong&gt;, SocketGuildUser, Task&gt; GuildMemberUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <span class="xref">System.UInt64</span>&gt;, <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_GuildUpdated.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.GuildUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L470">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_GuildUpdated" data-uid="Kook.WebSocket.BaseSocketClient.GuildUpdated">GuildUpdated</h4>
+  <div class="markdown level1 summary"><p>Fired when a guild is updated. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketGuild, SocketGuild, Task&gt; GuildUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_JoinedGuild.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.JoinedGuild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L456">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_JoinedGuild" data-uid="Kook.WebSocket.BaseSocketClient.JoinedGuild">JoinedGuild</h4>
+  <div class="markdown level1 summary"><p>Fired when the connected account joins a guild. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketGuild, Task&gt; JoinedGuild</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_LeftGuild.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.LeftGuild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L463">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_LeftGuild" data-uid="Kook.WebSocket.BaseSocketClient.LeftGuild">LeftGuild</h4>
+  <div class="markdown level1 summary"><p>Fired when the connected account leaves a guild. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketGuild, Task&gt; LeftGuild</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_MessageDeleted.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.MessageDeleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L111">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_MessageDeleted" data-uid="Kook.WebSocket.BaseSocketClient.MessageDeleted">MessageDeleted</h4>
+  <div class="markdown level1 summary"><p>Fired when a message is deleted. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;IMessageChannel, ulong&gt;, Task&gt; MessageDeleted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <span class="xref">Guid</span>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessageChannel.html">IMessageChannel</a>, <span class="xref">System.UInt64</span>&gt;, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_MessageDeleted_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a message is deleted. The event handler must return a
+<see cref="!:Task"></see> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> and 
+<a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a> as its parameters.
+</p>
+<p>
+<div class="IMPORTANT"><h5>important</h5><p>
+    It is not possible to retrieve the message via
+<a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the message cannot be retrieved by Kook
+after the message has been deleted.
+</p></div>
+If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+<a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the deleted message; otherwise, in event
+that the message cannot be retrieved, the ID of the message is preserved in the 
+<see cref="!:Guid"></see>.
+</p>
+<p>
+    The source channel of the removed message will be passed into the 
+<a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a> parameter.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_MessagePinned.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.MessagePinned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L170">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_MessagePinned" data-uid="Kook.WebSocket.BaseSocketClient.MessagePinned">MessagePinned</h4>
+  <div class="markdown level1 summary"><p>Fired when a message is pinned. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, SocketMessage, ISocketMessageChannel, SocketGuildUser, Task&gt; MessagePinned</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <span class="xref">Guid</span>&gt;, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a>, <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_MessagePinned_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a message is pinned. The event handler must return a
+<see cref="!:Task"></see> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>,
+and <a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a> as its parameters.
+</p>
+<p>
+    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+<a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+that the message cannot be retrieved, the ID of the message is preserved in the 
+<see cref="!:Guid"></see>.
+</p>
+<p>
+    The updated message will be passed into the <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> parameter.
+</p>
+<p>
+    The source channel of the updated message will be passed into the 
+<a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a> parameter.
+</p>
+<p>
+    The operator who pinned the message will be passed into the <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> parameter.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_MessageReceived.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.MessageReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L82">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_MessageReceived" data-uid="Kook.WebSocket.BaseSocketClient.MessageReceived">MessageReceived</h4>
+  <div class="markdown level1 summary"><p>Fired when a message is received. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketMessage, Task&gt; MessageReceived</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_MessageReceived_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a message is received. The event handler must return a
+<see cref="!:Task"></see> and accept a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> as its parameter.
+</p>
+<p>
+    The message that is sent to the client is passed into the event handler parameter as
+<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>. This message may be a system message (i.e.
+<a class="xref" href="Kook.WebSocket.SocketSystemMessage.html">SocketSystemMessage</a>) or a user message (i.e. <a class="xref" href="Kook.WebSocket.SocketUserMessage.html">SocketUserMessage</a>. See the
+derived classes of <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> for more details.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_MessageUnpinned.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.MessageUnpinned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L201">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_MessageUnpinned" data-uid="Kook.WebSocket.BaseSocketClient.MessageUnpinned">MessageUnpinned</h4>
+  <div class="markdown level1 summary"><p>Fired when a message is unpinned. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, SocketMessage, ISocketMessageChannel, SocketGuildUser, Task&gt; MessageUnpinned</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <span class="xref">Guid</span>&gt;, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a>, <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_MessageUnpinned_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a message is unpinned. The event handler must return a
+<see cref="!:Task"></see> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>,
+and <a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a> as its parameters.
+</p>
+<p>
+    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+<a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+that the message cannot be retrieved, the ID of the message is preserved in the 
+<see cref="!:Guid"></see>.
+</p>
+<p>
+    The updated message will be passed into the <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> parameter.
+</p>
+<p>
+    The source channel of the updated message will be passed into the 
+<a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a> parameter.
+</p>
+<p>
+    The operator who unpinned the message will be passed into the <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> parameter.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_MessageUpdated.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.MessageUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L139">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_MessageUpdated" data-uid="Kook.WebSocket.BaseSocketClient.MessageUpdated">MessageUpdated</h4>
+  <div class="markdown level1 summary"><p>Fired when a message is updated. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, SocketMessage, ISocketMessageChannel, Task&gt; MessageUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <span class="xref">Guid</span>&gt;, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_MessageUpdated_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a message is updated. The event handler must return a
+<see cref="!:Task"></see> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>,
+and <a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a> as its parameters.
+</p>
+<p>
+    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+<a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+that the message cannot be retrieved, the ID of the message is preserved in the 
+<see cref="!:Guid"></see>.
+</p>
+<p>
+    The updated message will be passed into the <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> parameter.
+</p>
+<p>
+    The source channel of the updated message will be passed into the 
+<a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a> parameter.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_RoleCreated.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.RoleCreated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L430">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_RoleCreated" data-uid="Kook.WebSocket.BaseSocketClient.RoleCreated">RoleCreated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketRole, Task&gt; RoleCreated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_RoleDeleted.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.RoleDeleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L437">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_RoleDeleted" data-uid="Kook.WebSocket.BaseSocketClient.RoleDeleted">RoleDeleted</h4>
+  <div class="markdown level1 summary"><p>Fired when a role is deleted. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketRole, Task&gt; RoleDeleted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_RoleUpdated.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.RoleUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L444">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_RoleUpdated" data-uid="Kook.WebSocket.BaseSocketClient.RoleUpdated">RoleUpdated</h4>
+  <div class="markdown level1 summary"><p>Fired when a role is updated. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketRole, SocketRole, Task&gt; RoleUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>, <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_UserBanned.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.UserBanned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L339">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_UserBanned" data-uid="Kook.WebSocket.BaseSocketClient.UserBanned">UserBanned</h4>
+  <div class="markdown level1 summary"><p>Fired when a user is banned from a guild. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;IReadOnlyCollection&lt;SocketUser&gt;, SocketUser, SocketGuild, Task&gt; UserBanned</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_UserBanned_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a user is banned. The event handler must return a
+<see cref="!:Task"></see> and accept an <see cref="!:IReadOnlyCollection&lt;T>"></see>, a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>
+and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+</p>
+<p>
+    The users that are banned are passed into the event handler parameter as
+<see cref="!:IReadOnlyCollection&lt;T>"></see>.
+</p>
+<p>
+    The user who operated the bans is passed into the event handler parameter as
+<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>.
+</p>
+<p>
+    The guild where the banning action takes place is passed in the event handler parameter as
+<a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_UserConnected.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.UserConnected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L412">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_UserConnected" data-uid="Kook.WebSocket.BaseSocketClient.UserConnected">UserConnected</h4>
+  <div class="markdown level1 summary"><p>Fired when a user connected to a voice channel. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketUser, SocketVoiceChannel, SocketGuild, DateTimeOffset, Task&gt; UserConnected</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>, <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <span class="xref">DateTimeOffset</span>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_UserDisconnected.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.UserDisconnected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L419">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_UserDisconnected" data-uid="Kook.WebSocket.BaseSocketClient.UserDisconnected">UserDisconnected</h4>
+  <div class="markdown level1 summary"><p>Fired when a user disconnected to a voice channel. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketUser, SocketVoiceChannel, SocketGuild, DateTimeOffset, Task&gt; UserDisconnected</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>, <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <span class="xref">DateTimeOffset</span>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_UserJoined.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.UserJoined%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L306">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_UserJoined" data-uid="Kook.WebSocket.BaseSocketClient.UserJoined">UserJoined</h4>
+  <div class="markdown level1 summary"><p>Fired when a user joins a guild. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketGuildUser, DateTimeOffset, Task&gt; UserJoined</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <span class="xref">DateTimeOffset</span>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_UserJoined_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+    It is reported that this event will not be fired if a guild contains more than 2000 members.
+</p></div>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_UserLeft.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.UserLeft%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L313">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_UserLeft" data-uid="Kook.WebSocket.BaseSocketClient.UserLeft">UserLeft</h4>
+  <div class="markdown level1 summary"><p>Fired when a user leaves a guild. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketGuild, SocketUser, DateTimeOffset, Task&gt; UserLeft</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <span class="xref">DateTimeOffset</span>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_UserUnbanned.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.UserUnbanned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L365">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_UserUnbanned" data-uid="Kook.WebSocket.BaseSocketClient.UserUnbanned">UserUnbanned</h4>
+  <div class="markdown level1 summary"><p>Fired when a user is unbanned from a guild. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketUser, SocketGuild, Task&gt; UserUnbanned</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_BaseSocketClient_UserUnbanned_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This event is fired when a user is banned. The event handler must return a
+<see cref="!:Task"></see> and accept an <see cref="!:IReadOnlyCollection&lt;T>"></see>, a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>
+and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+</p>
+<p>
+    The users that are unbanned are passed into the event handler parameter as
+<see cref="!:IReadOnlyCollection&lt;T>"></see>.
+</p>
+<p>
+    The user who operated the bans is passed into the event handler parameter as
+<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>.
+</p>
+<p>
+    The guild where the unbanning action takes place is passed in the event handler parameter as
+<a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_BaseSocketClient_UserUpdated.md&amp;value=---%0Auid%3A%20Kook.WebSocket.BaseSocketClient.UserUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L372">View Source</a>
+  </span>
+  <h4 id="Kook_WebSocket_BaseSocketClient_UserUpdated" data-uid="Kook.WebSocket.BaseSocketClient.UserUpdated">UserUpdated</h4>
+  <div class="markdown level1 summary"><p>Fired when a user is updated. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;SocketUser, SocketUser, Task&gt; UserUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kook.IKookClient.html">IKookClient</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+</article>
+                </div>
+
+            </main>
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>    </body>
+</html>

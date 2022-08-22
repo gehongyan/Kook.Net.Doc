@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#23454;&#20307;&#31616;&#20171; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>&#23454;&#20307;&#31616;&#20171; | Kook.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#23454;&#20307;&#31616;&#20171; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="&#23454;&#20307;&#31616;&#20171; | Kook.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -32,8 +32,8 @@
 
             
             <a class="brand" href="../../index.html">
-              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+              <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
             </a>        </div>
 
         <div class="body-content">
@@ -46,8 +46,8 @@
                       <div class="mobile-hide">
                         
                         <a class="brand" href="../../index.html">
-                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                          <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
                         </a>  </div>
 
                       <div class="sidesearch">
@@ -66,7 +66,7 @@
                         </div>
                 </div>
                 <div class="footer">
-                  KaiHeiLa.Net (c) 2022
+                  Kook.Net (c) 2022
                   
                 </div>            </nav>
 
@@ -90,16 +90,16 @@
                         </div>
 
                     <article class="content wrap" id="_content" data-uid="Guides.Entities.Intro">
-<h1 id="kaiheilanet-中的实体">KaiHeiLa.Net 中的实体</h1>
+<h1 id="kooknet-中的实体">Kook.Net 中的实体</h1>
 
-<p>KaiHeiLa.Net 提供了一系列多用途的实体类，来表示来自开黑啦 API 或网关的数据。</p>
+<p>Kook.Net 提供了一系列多用途的实体类，来表示来自 KOOK API 或网关的数据。</p>
 <div class="TIP"><h5>Tip</h5><p>在使用 <code>Get***</code> 系列方法来获取包含详细信息的实例实体时，需要为方法指定正确的 ID，
-因此，建议您启用开黑啦的开发者模式，以便于获取实体的 ID，开发者模式可在
+因此，建议您启用 KOOK 的开发者模式，以便于获取实体的 ID，开发者模式可在
 “用户设置 - 高级设置 - 开发者模式” 处启用。</p>
 </div>
 <h2 id="实体的变体与继承">实体的变体与继承</h2>
-<p>由于同一对象可能会在开黑啦 API 或网关不同的接口或事件中出现，
-在不同的数据上下文中包含不同的字段，因此，KaiHeiLa.Net 中的部分实体拥有多种变体，
+<p>由于同一对象可能会在 KOOK API 或网关不同的接口或事件中出现，
+在不同的数据上下文中包含不同的字段，因此，Kook.Net 中的部分实体拥有多种变体，
 例如：<code>IUser</code> 和 <code>IGuildUser</code> 分别表示通用的用户实体和服务器内的用户实体。</p>
 <p>尽管部分实体包含的信息很简略，但所有的实体模型都有一个包含尽可能详细的信息的实体变体与之对应。</p>
 <h2 id="socket-与-rest">Socket 与 REST</h2>
@@ -109,7 +109,7 @@
 <ul>
 <li><a href="https://restfulapi.net/">有关 REST 的更多信息</a></li>
 </ul>
-<p>Socket 实体中的大多数都是通过 <code>KaiHeiLaSocketClient</code> 的网关连接中的各种事件创建的，
+<p>Socket 实体中的大多数都是通过 <code>KookSocketClient</code> 的网关连接中的各种事件创建的，
 仅当客户端初始化或事件包含的数据过于简略时，客户端才会进一步通过 API 获取的 REST 实体补全信息。
 这些 Socket 实体都会进入到客户端的全局缓存中，以在业务逻辑中使用。</p>
 <p>以 <code>MessageReceived</code> 事件为例，事件所传递的数据为 <code>SocketMessage</code> 实体，
@@ -124,8 +124,8 @@
 <p>多数 Socket 实体都有一个内部的导航属性，以便于实体向其父类或派生类的转换与访问。</p>
 <h2 id="访问-socket-实体">访问 Socket 实体</h2>
 <p>实体最基本的形式形如 <code>SocketGuild</code>、<code>SocketUser</code>、<code>SocketChannel</code> 等，
-这些实体可以从 <code>KaiHeiLaSocketClient</code> 的全局缓存中获取，
-也可以在 <code>KaiHeiLaSocketClient</code> 上通过相应的 <code>Get***</code> 方法获取。</p>
+这些实体可以从 <code>KookSocketClient</code> 的全局缓存中获取，
+也可以在 <code>KookSocketClient</code> 上通过相应的 <code>Get***</code> 方法获取。</p>
 <p>在这些实体上进一步调用 <code>Get***</code> 方法可以获得包含更多信息的实体变体，例如：
 <code>SocketGuild.GetUser</code> 可以获得 <code>SocketGuildUser</code> 实体，
 <code>SocketGuild.GetChannel</code> 可以获得 <code>SocketGuildChannel</code> 实体。
@@ -145,16 +145,16 @@ public SocketGuildUser GetGuildOwner(SocketChannel channel)
 </code></pre><h2 id="访问-rest-实体">访问 REST 实体</h2>
 <p>REST 实体的工作方式几乎与 Socket 实体相同，只是在每一次获取时都会发起一次
 API 请求，因此较少使用。</p>
-<p>访问 REST 实体需要通过 <code>KaiHeiLaRestClient</code> 的 <code>Rest</code> 属性进行，
-或是创建一个新的 <a class="xref" href="../../api/KaiHeiLa.Rest.KaiHeiLaRestClient.html">KaiHeiLaRestClient</a> 实例，可以独立于网关线程。</p>
+<p>访问 REST 实体需要通过 <code>KookRestClient</code> 的 <code>Rest</code> 属性进行，
+或是创建一个新的 <a class="xref" href="../../api/Kook.Rest.KookRestClient.html">KookRestClient</a> 实例，可以独立于网关线程。</p>
 <h3 id="示例-1">示例</h3>
-<pre><code class="lang-csharp" name="Rest Sample">// &#22312; GetUserAsync &#30340;&#32467;&#26524;&#20013;&#65292;RestUser &#23454;&#20307;&#21253;&#21547;&#20102;&#29992;&#25143;&#30331;&#24405;&#24320;&#40657;&#21862;&#30340;&#36830;&#25509;&#26041;&#24335;&#65292;
+<pre><code class="lang-csharp" name="Rest Sample">// &#22312; GetUserAsync &#30340;&#32467;&#26524;&#20013;&#65292;RestUser &#23454;&#20307;&#21253;&#21547;&#20102;&#29992;&#25143;&#30331;&#24405; KOOK &#30340;&#36830;&#25509;&#26041;&#24335;&#65292;
 // &#32780;&#22312; RestGuild &#19978;&#30340; GetUsersAsync &#32467;&#26524;&#20013;&#30340; RestUser &#19981;&#21253;&#21547;&#27492;&#20449;&#24687;&#12290;
 // Socket &#24314;&#31435;&#36830;&#25509;&#21518;&#65292;&#22914;&#26524;&#37197;&#32622;&#25351;&#31034;&#23458;&#25143;&#31471;&#22987;&#32456;&#19979;&#36733;&#20840;&#37096;&#29992;&#25143;&#20449;&#24687;&#65292;
 // &#23458;&#25143;&#31471;&#21017;&#20250;&#36890;&#36807; RestGuild.GetUsersAsync &#25152;&#23454;&#38469;&#35843;&#29992;&#30340; API &#33719;&#21462;&#26381;&#21153;&#22120;&#29992;&#25143;&#20449;&#24687;&#65292;
 // &#23613;&#31649;&#22914;&#27492;&#65292;&#20840;&#23616;&#32531;&#23384;&#20013;&#20063;&#19981;&#20250;&#21253;&#21547;&#21487;&#38752;&#30340;&#29992;&#25143;&#36830;&#25509;&#26041;&#24335;&#30340;&#20449;&#24687;&#12290;
 // &#22312;&#36825;&#31181;&#23569;&#25968;&#24773;&#20917;&#19979;&#65292;&#21017;&#38656;&#35201;&#36890;&#36807;&#35775;&#38382; GetUserAsync &#36820;&#22238;&#30340; RestUser &#25165;&#33021;&#33719;&#21462;&#25152;&#38656;&#35201;&#30340;&#36830;&#25509;&#26041;&#24335;&#20449;&#24687;&#12290;
-public static async Task&lt;ClientType?&gt; GetUserClientType(IUser user, KaiHeiLaRestClient restClient)
+public static async Task&lt;ClientType?&gt; GetUserClientType(IUser user, KookRestClient restClient)
 {
     var restUser = await restClient.GetUserAsync(user.Id);
     return restUser.ActiveClient;

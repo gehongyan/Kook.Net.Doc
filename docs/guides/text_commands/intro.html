@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>&#25991;&#26412;&#21629;&#20196;&#26694;&#26550;&#20837;&#38376; | KaiHeiLa.Net &#25991;&#26723; </title>
+      <title>&#25991;&#26412;&#21629;&#20196;&#26694;&#26550;&#20837;&#38376; | Kook.Net &#25991;&#26723; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="&#25991;&#26412;&#21629;&#20196;&#26694;&#26550;&#20837;&#38376; | KaiHeiLa.Net &#25991;&#26723; ">
+      <meta name="title" content="&#25991;&#26412;&#21629;&#20196;&#26694;&#26550;&#20837;&#38376; | Kook.Net &#25991;&#26723; ">
       <meta name="generator" content="docfx 2.56.7.0">
       
       <link rel="shortcut icon" href="../../favicon.ico">
@@ -32,8 +32,8 @@
 
             
             <a class="brand" href="../../index.html">
-              <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+              <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
             </a>        </div>
 
         <div class="body-content">
@@ -46,8 +46,8 @@
                       <div class="mobile-hide">
                         
                         <a class="brand" href="../../index.html">
-                          <img src="../../logo.svg" alt="KaiHeiLa.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">KaiHeiLa.Net &#25991;&#26723;</span>
+                          <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
                         </a>  </div>
 
                       <div class="sidesearch">
@@ -66,7 +66,7 @@
                         </div>
                 </div>
                 <div class="footer">
-                  KaiHeiLa.Net (c) 2022
+                  Kook.Net (c) 2022
                   
                 </div>            </nav>
 
@@ -92,21 +92,21 @@
                     <article class="content wrap" id="_content" data-uid="Guides.TextCommands.Intro">
 <h1 id="文本命令框架">文本命令框架</h1>
 
-<p><a class="xref" href="../../api/KaiHeiLa.Commands.html">KaiHeiLa.Commands</a> 命名空间提供了一组基于特性标签的文本命令服务。</p>
+<p><a class="xref" href="../../api/Kook.Commands.html">Kook.Commands</a> 命名空间提供了一组基于特性标签的文本命令服务。</p>
 <h2 id="入门">入门</h2>
-<p>要使用文本命令框架，需要先创建 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html">CommandService</a> 及命令处理程序。</p>
+<p>要使用文本命令框架，需要先创建 <a class="xref" href="../../api/Kook.Commands.CommandService.html">CommandService</a> 及命令处理程序。</p>
 <p>下面的代码演示了如何创建命令服务和命令处理程序的最小程序，可在此基础上扩展功能模块。</p>
-<div class="NOTE"><h5>Note</h5><p><code>CommandService</code> 可接收一个 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandServiceConfig.html">CommandServiceConfig</a> 类型的可选参数用于命令服务的配置，
+<div class="NOTE"><h5>Note</h5><p><code>CommandService</code> 可接收一个 <a class="xref" href="../../api/Kook.Commands.CommandServiceConfig.html">CommandServiceConfig</a> 类型的可选参数用于命令服务的配置，
 如果不提供此参数，则使用默认配置。建议在使用配置时，通过 IDE 的自动提示与代码注释
 浏览并了解各项属性与默认参数值，并在需要时修改。</p>
 </div>
 <pre><code class="lang-csharp" name="Command Handler">public class CommandHandler
 {
-    private readonly KaiHeiLaSocketClient _client;
+    private readonly KookSocketClient _client;
     private readonly CommandService _commands;
 
-    // &#20174;&#26500;&#36896;&#20989;&#25968;&#20013;&#33719;&#21462; KaiHeiLaSocketClient &#19982; CommandService &#30340;&#31034;&#20363;
-    public CommandHandler(KaiHeiLaSocketClient client, CommandService commands)
+    // &#20174;&#26500;&#36896;&#20989;&#25968;&#20013;&#33719;&#21462; KookSocketClient &#19982; CommandService &#30340;&#31034;&#20363;
+    public CommandHandler(KookSocketClient client, CommandService commands)
     {
         _commands = commands;
         _client = client;
@@ -157,10 +157,10 @@
 <p>要使模块能够被自动发现，模块需要满足：</p>
 <ul>
 <li>公开</li>
-<li>继承自 <a class="xref" href="../../api/KaiHeiLa.Commands.ModuleBase-1.html">ModuleBase</a></li>
+<li>继承自 <a class="xref" href="../../api/Kook.Commands.ModuleBase-1.html">ModuleBase</a></li>
 </ul>
 <p>则模块类的声明形如：</p>
-<pre><code class="lang-csharp" name="Empty Module">using KaiHeiLa.Commands;
+<pre><code class="lang-csharp" name="Empty Module">using Kook.Commands;
 
 // &#27169;&#22359;&#31867; **&#24517;&#39035;** &#20026;&#20844;&#24320;&#31867;&#65292;&#19988;&#32487;&#25215;&#33258; ModuleBase
 // &#21542;&#21017;&#65292;AddModulesAsync &#23558;&#26080;&#27861;&#21457;&#29616;&#27492;&#27169;&#22359;
@@ -168,11 +168,11 @@ public class InfoModule : ModuleBase&lt;SocketCommandContext&gt;
 {
     
 }
-</code></pre><div class="NOTE"><h5>Note</h5><p><a class="xref" href="../../api/KaiHeiLa.Commands.ModuleBase-1.html">ModuleBase</a> 是一个抽象类，可根据需要进行派生或重写。
+</code></pre><div class="NOTE"><h5>Note</h5><p><a class="xref" href="../../api/Kook.Commands.ModuleBase-1.html">ModuleBase</a> 是一个抽象类，可根据需要进行派生或重写。
 模块可以继承自 ModuleBase 的任何派生类。</p>
 </div>
 <h3 id="添加创建命令">添加/创建命令</h3>
-<div class="WARNING"><h5>Warning</h5><p>尽量避免模型内代码运行耗时过长，这可能会导致网关线程的阻塞，进而中断 Bot 与开黑啦服务端的连接。</p>
+<div class="WARNING"><h5>Warning</h5><p>尽量避免模型内代码运行耗时过长，这可能会导致网关线程的阻塞，进而中断 Bot 与 KOOK 服务端的连接。</p>
 </div>
 <p>创建命令的处理程序，方法的返回类型必须是 <code>Task</code> 或 <code>Task&lt;RuntimeResult&gt;</code>，按需标记 <code>async</code> 关键字。</p>
 <p>对该方法标记 [CommandAttribute] 特性标签，并指定命令的名称。</p>
@@ -190,16 +190,16 @@ public class InfoModule : ModuleBase&lt;SocketCommandContext&gt;
 <p>如要接收一个以空格分隔的列表，可指定可变参数关键字 <code>params</code>，例如：<code>params int[]</code>。</p>
 <p>如果实参包含空格，在调用命令时，该实参应以双引号进行包装，
 例如：对于参数 <code>string food</code>，可通过 <code>!favoritefood &quot;Key Lime Pie&quot;</code> 的形式进行调用。</p>
-<p>如果某个参数可以包含空格地持续读取到命令末尾，可以为该参数标记 <a class="xref" href="../../api/KaiHeiLa.Commands.RemainderAttribute.html">RemainderAttribute</a>，
+<p>如果某个参数可以包含空格地持续读取到命令末尾，可以为该参数标记 <a class="xref" href="../../api/Kook.Commands.RemainderAttribute.html">RemainderAttribute</a>，
 用户在调用时便不必将实参包装在双引号中。</p>
 <h3 id="命令重载">命令重载</h3>
 <p>命令处理函数支持重载，命令解析过程将自动地选择类型匹配的方法。</p>
 <p>如果两个命令处理函数间在调用时会存在不明确的引用，
-可为应优先尝试进行类型匹配的重载标记 <a class="xref" href="../../api/KaiHeiLa.Commands.PriorityAttribute.html">PriorityAttribute</a> 。</p>
+可为应优先尝试进行类型匹配的重载标记 <a class="xref" href="../../api/Kook.Commands.PriorityAttribute.html">PriorityAttribute</a> 。</p>
 <h3 id="命令上下文">命令上下文</h3>
-<p>每个命令都可以通过 <a class="xref" href="../../api/KaiHeiLa.Commands.ModuleBase-1.html">ModuleBase</a> 上的 [Context] 属性访问执行上下文。
-<code>ICommandContext</code> 支持访问消息、频道、服务器、用户、以及调用命令的底层开黑啦客户端。</p>
-<p>使用 <a class="xref" href="../../api/KaiHeiLa.Commands.ModuleBase-1.html">ModuleBase</a> 的派生类可以指定不同类型的上下文。
+<p>每个命令都可以通过 <a class="xref" href="../../api/Kook.Commands.ModuleBase-1.html">ModuleBase</a> 上的 [Context] 属性访问执行上下文。
+<code>ICommandContext</code> 支持访问消息、频道、服务器、用户、以及调用命令的底层 KOOK 客户端。</p>
+<p>使用 <a class="xref" href="../../api/Kook.Commands.ModuleBase-1.html">ModuleBase</a> 的派生类可以指定不同类型的上下文。
 例如，[SocketCommandContext] 中的上下文中的属性为是 Socket 实体，不再需要进行强制类型转换。</p>
 <p>回复消息也可通过调用以 <code>Reply</code> 为前缀的方法完成，无需调用上下文中频道内发送消息的方法来回复命令。</p>
 <div class="WARNING"><h5>Warning</h5><p>上下文的类型不应该混合使用，使用 <code>CommandContext</code> 上下文的模块与使用 <code>SocketCommandContext</code> 
@@ -252,10 +252,10 @@ public class SampleModule : ModuleBase&lt;SocketCommandContext&gt;
 }
 </code></pre></div>
 <h4 id="自动加载模块">自动加载模块</h4>
-<p>命令服务可以自动发现并加载程序集内继承自 <a class="xref" href="../../api/KaiHeiLa.Commands.ModuleBase-1.html">ModuleBase</a> 的类，调用 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_AddModulesAsync_">CommandService.AddModulesAsync</a>
-可以进行自动发现与模块加载。如果要指定某个模块跳过自动加载，可对其标记特性 <a class="xref" href="../../api/KaiHeiLa.Commands.DontAutoLoadAttribute.html">DontAutoLoadAttribute</a>。</p>
+<p>命令服务可以自动发现并加载程序集内继承自 <a class="xref" href="../../api/Kook.Commands.ModuleBase-1.html">ModuleBase</a> 的类，调用 <a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_AddModulesAsync_">CommandService.AddModulesAsync</a>
+可以进行自动发现与模块加载。如果要指定某个模块跳过自动加载，可对其标记特性 <a class="xref" href="../../api/Kook.Commands.DontAutoLoadAttribute.html">DontAutoLoadAttribute</a>。</p>
 <h4 id="手动加载模块">手动加载模块</h4>
-<p>要手动加载模块，可调用 <a class="xref" href="../../api/KaiHeiLa.Commands.CommandService.html#KaiHeiLa_Commands_CommandService_AddModuleAsync_">CommandService.AddModuleAsync</a>，模块的类通过泛型传递。
+<p>要手动加载模块，可调用 <a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_AddModuleAsync_">CommandService.AddModuleAsync</a>，模块的类通过泛型传递。
 如有需要，也可以向该方法传入 IServiceProvider.</p>
 <h3 id="模块构造函数">模块构造函数</h3>
 <p>模块通过 <a class="xref" href="dependency-injection.html">依赖注入</a> 进行构造，
@@ -265,7 +265,7 @@ public class SampleModule : ModuleBase&lt;SocketCommandContext&gt;
 <h3 id="模块属性">模块属性</h3>
 <p>具有公共 <code>set</code> 访问器属性的模块在模块构造后会被服务容器中，详细信息可参考 <a class="xref" href="dependency-injection.html">&#20381;&#36182;&#27880;&#20837;</a> 。</p>
 <h3 id="模块组">模块组</h3>
-<p>模块组为一组具有相同名称前缀的命令，要声明模块组，可标记特性 <a class="xref" href="../../api/KaiHeiLa.Commands.GroupAttribute.html">GroupAttribute</a> 。</p>
+<p>模块组为一组具有相同名称前缀的命令，要声明模块组，可标记特性 <a class="xref" href="../../api/Kook.Commands.GroupAttribute.html">GroupAttribute</a> 。</p>
 <p>在模块组内，如果命令的 CommandAttribute 特性标签中不传入名称参数，则为创建以该组名称作为命令名称的命令。</p>
 <h3 id="子模块">子模块</h3>
 <p>子模块是模块内的模块，可用于创建嵌套组。</p>
