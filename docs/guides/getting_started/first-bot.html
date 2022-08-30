@@ -172,7 +172,7 @@
 Kook.Net 中的事件与 C# 中的任何其他事件的工作机制类似。</p>
 <p>使用 <a class="xref" href="../../api/Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LoginAsync_">LoginAsync</a> 方法登录到 KOOK 服务端，登录过程采用的身份认证信息为机器人的 Token。</p>
 <p><img src="images/intro/intro-bot-token.png" alt="img.png"></p>
-<p>通过调用客户端的 <a href="xref:Kook.WebSocket.KookSocketClient.StartAsync*">StartAsync</a> 方法，客户端启动与服务端的连接/重连机制，
+<p>通过调用客户端的 <a class="xref" href="../../api/Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_StartAsync_">StartAsync</a> 方法，客户端启动与服务端的连接/重连机制，
 <strong>该方法会在连接/重连机制启动后立刻返回</strong>，因此，任何依赖于客户端状态的方法
 都应以事件处理程序的形式执行。</p>
 <p>为了阻止程序在运行期间的异步入口点返回，请在 <code>MainAsync</code> 方法退出前等待一个无限时长的延迟，
