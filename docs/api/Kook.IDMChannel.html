@@ -135,9 +135,6 @@
       <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendKMarkdownMessageAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendKMarkdownMessageAsync(String, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendCardMessageAsync_Kook_ICard_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendCardMessageAsync(ICard, IQuote, IUser, RequestOptions)</a>
-    </div>
-    <div>
       <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendCardMessageAsync_IEnumerable_Kook_ICard__Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendCardMessageAsync(IEnumerable&lt;ICard&gt;, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
@@ -335,7 +332,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_SendCardMessageAsync_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.SendCardMessageAsync(IEnumerable%7BKook.ICard%7D%2CKook.IQuote%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L197">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L188">View Source</a>
   </span>
   <a id="Kook_IDMChannel_SendCardMessageAsync_" data-uid="Kook.IDMChannel.SendCardMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_SendCardMessageAsync_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.IDMChannel.SendCardMessageAsync(IEnumerable{Kook.ICard},Kook.IQuote,Kook.RequestOptions)">SendCardMessageAsync(IEnumerable&lt;ICard&gt;, IQuote, RequestOptions)</h4>
@@ -359,66 +356,6 @@
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</td>
         <td><span class="parametername">cards</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.IQuote.html">IQuote</a></td>
-        <td><span class="parametername">quote</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_SendCardMessageAsync_Kook_ICard_Kook_IQuote_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.SendCardMessageAsync(Kook.ICard%2CKook.IQuote%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L188">View Source</a>
-  </span>
-  <a id="Kook_IDMChannel_SendCardMessageAsync_" data-uid="Kook.IDMChannel.SendCardMessageAsync*"></a>
-  <h4 id="Kook_IDMChannel_SendCardMessageAsync_Kook_ICard_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.IDMChannel.SendCardMessageAsync(Kook.ICard,Kook.IQuote,Kook.RequestOptions)">SendCardMessageAsync(ICard, IQuote, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; SendCardMessageAsync(ICard card, IQuote quote = null, RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.ICard.html">ICard</a></td>
-        <td><span class="parametername">card</span></td>
         <td></td>
       </tr>
       <tr>
@@ -1147,7 +1084,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendCardMessageAsync_IEnumerable_Kook_ICard__Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendCardMessageAsync(IEnumerable%7BKook.ICard%7D%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L261">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L252">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendCardMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendCardMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendCardMessageAsync_IEnumerable_Kook_ICard__Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendCardMessageAsync(IEnumerable{Kook.ICard},Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendCardMessageAsync(IEnumerable&lt;ICard&gt;, IQuote, IUser, RequestOptions)</h4>
@@ -1213,79 +1150,10 @@ contains the identifier and timestamp of the sent message.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendCardMessageAsync_Kook_ICard_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendCardMessageAsync(Kook.ICard%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L265">View Source</a>
-  </span>
-  <a id="Kook_IDMChannel_Kook_IMessageChannel_SendCardMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendCardMessageAsync*"></a>
-  <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendCardMessageAsync_Kook_ICard_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendCardMessageAsync(Kook.ICard,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendCardMessageAsync(ICard, IQuote, IUser, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; IMessageChannel.SendCardMessageAsync(ICard card, IQuote quote, IUser ephemeralUser, RequestOptions options)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.ICard.html">ICard</a></td>
-        <td><span class="parametername">card</span></td>
-        <td><p>The card to be sent.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.IQuote.html">IQuote</a></td>
-        <td><span class="parametername">quote</span></td>
-        <td><p>The message quote to be included. Used to reply to specific messages.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.IUser.html">IUser</a></td>
-        <td><span class="parametername">ephemeralUser</span></td>
-        <td><p>The user only who can see the message. Leave null to let everyone see the message.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendFileMessageAsync_Stream_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendFileMessageAsync(Stream%2CSystem.String%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L237">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L228">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendFileMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendFileMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendFileMessageAsync_Stream_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendFileMessageAsync(Stream,System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendFileMessageAsync(Stream, String, IQuote, IUser, RequestOptions)</h4>
@@ -1363,7 +1231,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendFileMessageAsync_System_String_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendFileMessageAsync(System.String%2CSystem.String%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L233">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L224">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendFileMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendFileMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendFileMessageAsync_System_String_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendFileMessageAsync(System.String,System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendFileMessageAsync(String, String, IQuote, IUser, RequestOptions)</h4>
@@ -1441,7 +1309,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendFileMessageAsync_Uri_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendFileMessageAsync(Uri%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L241">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L232">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendFileMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendFileMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendFileMessageAsync_Uri_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendFileMessageAsync(Uri,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendFileMessageAsync(Uri, IQuote, IUser, RequestOptions)</h4>
@@ -1513,7 +1381,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendImageMessageAsync_Stream_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendImageMessageAsync(Stream%2CSystem.String%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L213">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L204">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendImageMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendImageMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendImageMessageAsync_Stream_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendImageMessageAsync(Stream,System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendImageMessageAsync(Stream, String, IQuote, IUser, RequestOptions)</h4>
@@ -1591,7 +1459,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendImageMessageAsync_System_String_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendImageMessageAsync(System.String%2CSystem.String%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L209">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L200">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendImageMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendImageMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendImageMessageAsync_System_String_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendImageMessageAsync(System.String,System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendImageMessageAsync(String, String, IQuote, IUser, RequestOptions)</h4>
@@ -1669,7 +1537,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendImageMessageAsync_Uri_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendImageMessageAsync(Uri%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L217">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L208">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendImageMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendImageMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendImageMessageAsync_Uri_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendImageMessageAsync(Uri,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendImageMessageAsync(Uri, IQuote, IUser, RequestOptions)</h4>
@@ -1741,7 +1609,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendKMarkdownMessageAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendKMarkdownMessageAsync(System.String%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L257">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L248">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendKMarkdownMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendKMarkdownMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendKMarkdownMessageAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendKMarkdownMessageAsync(System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendKMarkdownMessageAsync(String, IQuote, IUser, RequestOptions)</h4>
@@ -1810,7 +1678,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendTextMessageAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendTextMessageAsync(System.String%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L205">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L196">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendTextMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendTextMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendTextMessageAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendTextMessageAsync(System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendTextMessageAsync(String, IQuote, IUser, RequestOptions)</h4>
@@ -1879,7 +1747,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendVideoMessageAsync_Stream_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendVideoMessageAsync(Stream%2CSystem.String%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L225">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L216">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendVideoMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendVideoMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendVideoMessageAsync_Stream_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendVideoMessageAsync(Stream,System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendVideoMessageAsync(Stream, String, IQuote, IUser, RequestOptions)</h4>
@@ -1957,7 +1825,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendVideoMessageAsync_System_String_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendVideoMessageAsync(System.String%2CSystem.String%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L221">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L212">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendVideoMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendVideoMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendVideoMessageAsync_System_String_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendVideoMessageAsync(System.String,System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendVideoMessageAsync(String, String, IQuote, IUser, RequestOptions)</h4>
@@ -2035,7 +1903,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IDMChannel_Kook_IMessageChannel_SendVideoMessageAsync_Uri_Kook_IQuote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IDMChannel.Kook%23IMessageChannel%23SendVideoMessageAsync(Uri%2CKook.IQuote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L229">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L220">View Source</a>
   </span>
   <a id="Kook_IDMChannel_Kook_IMessageChannel_SendVideoMessageAsync_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendVideoMessageAsync*"></a>
   <h4 id="Kook_IDMChannel_Kook_IMessageChannel_SendVideoMessageAsync_Uri_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IDMChannel.Kook#IMessageChannel#SendVideoMessageAsync(Uri,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">IMessageChannel.SendVideoMessageAsync(Uri, IQuote, IUser, RequestOptions)</h4>

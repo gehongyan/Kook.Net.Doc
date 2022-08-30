@@ -136,12 +136,6 @@
       <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_Type">SocketGuildChannel.Type</a>
     </div>
     <div>
-      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_CreatorId">SocketGuildChannel.CreatorId</a>
-    </div>
-    <div>
-      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_Creator">SocketGuildChannel.Creator</a>
-    </div>
-    <div>
       <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_RolePermissionOverwrites">SocketGuildChannel.RolePermissionOverwrites</a>
     </div>
     <div>
@@ -203,7 +197,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_CachedMessages.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.CachedMessages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L50">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L61">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_CachedMessages_" data-uid="Kook.WebSocket.SocketTextChannel.CachedMessages*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_CachedMessages" data-uid="Kook.WebSocket.SocketTextChannel.CachedMessages">CachedMessages</h4>
@@ -292,6 +286,73 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_Creator.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.Creator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L55">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_SocketTextChannel_Creator_" data-uid="Kook.WebSocket.SocketTextChannel.Creator*"></a>
+  <h4 id="Kook_WebSocket_SocketTextChannel_Creator" data-uid="Kook.WebSocket.SocketTextChannel.Creator">Creator</h4>
+  <div class="markdown level1 summary"><p>Gets the creator of this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SocketGuildUser Creator { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a></td>
+        <td><p>A task that represents the asynchronous get operation. The task result contains the creator of this channel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_SocketTextChannel_Creator_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method will try to get the user as a member of this channel. If the user is not a member of this guild,
+this method will return <code>null</code>. To get the creator under this circumstance, use
+<a class="xref" href="Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetUserAsync_System_UInt64_Kook_RequestOptions_">GetUserAsync(UInt64, RequestOptions)</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_CreatorId.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.CreatorId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L43">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_SocketTextChannel_CreatorId_" data-uid="Kook.WebSocket.SocketTextChannel.CreatorId*"></a>
+  <h4 id="Kook_WebSocket_SocketTextChannel_CreatorId" data-uid="Kook.WebSocket.SocketTextChannel.CreatorId">CreatorId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong CreatorId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_IsPermissionSynced.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.IsPermissionSynced%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -325,7 +386,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_KMarkdownMention.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.KMarkdownMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L46">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L57">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_KMarkdownMention_" data-uid="Kook.WebSocket.SocketTextChannel.KMarkdownMention*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_KMarkdownMention" data-uid="Kook.WebSocket.SocketTextChannel.KMarkdownMention">KMarkdownMention</h4>
@@ -355,7 +416,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_PlainTextMention.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.PlainTextMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L48">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L59">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_PlainTextMention_" data-uid="Kook.WebSocket.SocketTextChannel.PlainTextMention*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_PlainTextMention" data-uid="Kook.WebSocket.SocketTextChannel.PlainTextMention">PlainTextMention</h4>
@@ -445,7 +506,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_Users.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.Users%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L53">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L64">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_Users_" data-uid="Kook.WebSocket.SocketTextChannel.Users*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_Users" data-uid="Kook.WebSocket.SocketTextChannel.Users">Users</h4>
@@ -481,7 +542,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.CreateInviteAsync(Kook.InviteMaxAge%2CKook.InviteMaxUses%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L311">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L323">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_CreateInviteAsync_" data-uid="Kook.WebSocket.SocketTextChannel.CreateInviteAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.CreateInviteAsync(Kook.InviteMaxAge,Kook.InviteMaxUses,Kook.RequestOptions)">CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)</h4>
@@ -538,7 +599,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.CreateInviteAsync(System.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L308">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L320">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_CreateInviteAsync_" data-uid="Kook.WebSocket.SocketTextChannel.CreateInviteAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},Kook.RequestOptions)">CreateInviteAsync(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, RequestOptions)</h4>
@@ -595,7 +656,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_DeleteMessageAsync_Guid_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.DeleteMessageAsync(Guid%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L289">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L301">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_DeleteMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.DeleteMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_DeleteMessageAsync_Guid_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.DeleteMessageAsync(Guid,Kook.RequestOptions)">DeleteMessageAsync(Guid, RequestOptions)</h4>
@@ -647,7 +708,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.DeleteMessageAsync(Kook.IMessage%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L292">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L304">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_DeleteMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.DeleteMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.DeleteMessageAsync(Kook.IMessage,Kook.RequestOptions)">DeleteMessageAsync(IMessage, RequestOptions)</h4>
@@ -699,7 +760,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetCachedMessage_Guid_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetCachedMessage(Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L89">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L101">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetCachedMessage_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessage*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetCachedMessage_Guid_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessage(Guid)">GetCachedMessage(Guid)</h4>
@@ -761,7 +822,7 @@ enabled.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetCachedMessages_Guid_Kook_Direction_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetCachedMessages(Guid%2CKook.Direction%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L161">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L173">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessages*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_Guid_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessages(Guid,Kook.Direction,System.Int32)">GetCachedMessages(Guid, Direction, Int32)</h4>
@@ -836,7 +897,7 @@ enabled.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetCachedMessages(Kook.IMessage%2CKook.Direction%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L164">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L176">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessages*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessages(Kook.IMessage,Kook.Direction,System.Int32)">GetCachedMessages(IMessage, Direction, Int32)</h4>
@@ -911,7 +972,7 @@ enabled.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetCachedMessages_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetCachedMessages(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L158">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L170">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessages*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_System_Int32_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessages(System.Int32)">GetCachedMessages(Int32)</h4>
@@ -974,7 +1035,7 @@ enabled.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetInvitesAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetInvitesAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L305">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L317">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetInvitesAsync_" data-uid="Kook.WebSocket.SocketTextChannel.GetInvitesAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetInvitesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetInvitesAsync(Kook.RequestOptions)">GetInvitesAsync(RequestOptions)</h4>
@@ -1021,7 +1082,7 @@ enabled.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetMessageAsync_Guid_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetMessageAsync(Guid%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L104">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L116">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetMessageAsync_Guid_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessageAsync(Guid,Kook.RequestOptions)">GetMessageAsync(Guid, RequestOptions)</h4>
@@ -1082,7 +1143,7 @@ Please visit its documentation for more details on this method.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetMessagesAsync_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetMessagesAsync(Guid%2CKook.Direction%2CSystem.Int32%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L139">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L151">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessagesAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessagesAsync(Guid,Kook.Direction,System.Int32,Kook.RequestOptions)">GetMessagesAsync(Guid, Direction, Int32, RequestOptions)</h4>
@@ -1154,7 +1215,7 @@ Please visit its documentation for more details on this method.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetMessagesAsync(Kook.IMessage%2CKook.Direction%2CSystem.Int32%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L155">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L167">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessagesAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)">GetMessagesAsync(IMessage, Direction, Int32, RequestOptions)</h4>
@@ -1226,7 +1287,7 @@ Please visit its documentation for more details on this method.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetMessagesAsync(System.Int32%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L123">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L135">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessagesAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)">GetMessagesAsync(Int32, RequestOptions)</h4>
@@ -1286,7 +1347,7 @@ Please visit its documentation for more details on this method.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetPinnedMessagesAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L167">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L179">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetPinnedMessagesAsync_" data-uid="Kook.WebSocket.SocketTextChannel.GetPinnedMessagesAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetPinnedMessagesAsync(Kook.RequestOptions)">GetPinnedMessagesAsync(RequestOptions)</h4>
@@ -1337,7 +1398,7 @@ The task result contains a collection of messages found in the pinned messages.<
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_GetUser_System_UInt64_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.GetUser(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L321">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L333">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_GetUser_" data-uid="Kook.WebSocket.SocketTextChannel.GetUser*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketTextChannel.GetUser(System.UInt64)">GetUser(UInt64)</h4>
@@ -1386,7 +1447,7 @@ The task result contains a collection of messages found in the pinned messages.<
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_ModifyAsync_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.ModifyAsync(Action%7BKook.ModifyTextChannelProperties%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L81">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L93">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_ModifyAsync_" data-uid="Kook.WebSocket.SocketTextChannel.ModifyAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_ModifyAsync_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.ModifyAsync(Action{Kook.ModifyTextChannelProperties},Kook.RequestOptions)">ModifyAsync(Action&lt;ModifyTextChannelProperties&gt;, RequestOptions)</h4>
@@ -1438,7 +1499,7 @@ The task result contains a collection of messages found in the pinned messages.<
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_ModifyMessageAsync_Guid_Action_Kook_MessageProperties__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.ModifyMessageAsync(Guid%2CAction%7BKook.MessageProperties%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L285">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L297">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_ModifyMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.ModifyMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_ModifyMessageAsync_Guid_Action_Kook_MessageProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.ModifyMessageAsync(Guid,Action{Kook.MessageProperties},Kook.RequestOptions)">ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)</h4>
@@ -1495,7 +1556,7 @@ The task result contains a collection of messages found in the pinned messages.<
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendCardMessageAsync_IEnumerable_Kook_ICard__Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendCardMessageAsync(IEnumerable%7BKook.ICard%7D%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L264">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L276">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendCardMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendCardMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendCardMessageAsync_IEnumerable_Kook_ICard__Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendCardMessageAsync(IEnumerable{Kook.ICard},Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendCardMessageAsync(IEnumerable&lt;ICard&gt;, Quote, IUser, RequestOptions)</h4>
@@ -1557,7 +1618,7 @@ The task result contains a collection of messages found in the pinned messages.<
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendCardMessageAsync_Kook_ICard_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendCardMessageAsync(Kook.ICard%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L281">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L293">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendCardMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendCardMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendCardMessageAsync_Kook_ICard_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendCardMessageAsync(Kook.ICard,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendCardMessageAsync(ICard, Quote, IUser, RequestOptions)</h4>
@@ -1626,7 +1687,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendFileMessageAsync_Stream_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendFileMessageAsync(Stream%2CSystem.String%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L224">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L236">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendFileMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendFileMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendFileMessageAsync_Stream_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendFileMessageAsync(Stream,System.String,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendFileMessageAsync(Stream, String, Quote, IUser, RequestOptions)</h4>
@@ -1693,7 +1754,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendFileMessageAsync_System_String_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendFileMessageAsync(System.String%2CSystem.String%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L217">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L229">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendFileMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendFileMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendFileMessageAsync_System_String_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendFileMessageAsync(System.String,System.String,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendFileMessageAsync(String, String, Quote, IUser, RequestOptions)</h4>
@@ -1760,7 +1821,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendFileMessageAsync_Uri_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendFileMessageAsync(Uri%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L231">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L243">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendFileMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendFileMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendFileMessageAsync_Uri_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendFileMessageAsync(Uri,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendFileMessageAsync(Uri, Quote, IUser, RequestOptions)</h4>
@@ -1822,7 +1883,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendImageMessageAsync_Stream_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendImageMessageAsync(Stream%2CSystem.String%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L180">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L192">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendImageMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendImageMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendImageMessageAsync_Stream_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendImageMessageAsync(Stream,System.String,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendImageMessageAsync(Stream, String, Quote, IUser, RequestOptions)</h4>
@@ -1889,7 +1950,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendImageMessageAsync_System_String_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendImageMessageAsync(System.String%2CSystem.String%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L173">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L185">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendImageMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendImageMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendImageMessageAsync_System_String_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendImageMessageAsync(System.String,System.String,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendImageMessageAsync(String, String, Quote, IUser, RequestOptions)</h4>
@@ -1956,7 +2017,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendImageMessageAsync_Uri_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendImageMessageAsync(Uri%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L187">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L199">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendImageMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendImageMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendImageMessageAsync_Uri_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendImageMessageAsync(Uri,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendImageMessageAsync(Uri, Quote, IUser, RequestOptions)</h4>
@@ -2018,7 +2079,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendKMarkdownMessageAsync_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendKMarkdownMessageAsync(System.String%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L261">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L273">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendKMarkdownMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendKMarkdownMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendKMarkdownMessageAsync_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendKMarkdownMessageAsync(System.String,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendKMarkdownMessageAsync(String, Quote, IUser, RequestOptions)</h4>
@@ -2080,7 +2141,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendTextMessageAsync_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendTextMessageAsync(System.String%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L170">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L182">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendTextMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendTextMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendTextMessageAsync_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendTextMessageAsync(System.String,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendTextMessageAsync(String, Quote, IUser, RequestOptions)</h4>
@@ -2142,7 +2203,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendVideoMessageAsync_Stream_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendVideoMessageAsync(Stream%2CSystem.String%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L202">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L214">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendVideoMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendVideoMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendVideoMessageAsync_Stream_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendVideoMessageAsync(Stream,System.String,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendVideoMessageAsync(Stream, String, Quote, IUser, RequestOptions)</h4>
@@ -2209,7 +2270,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendVideoMessageAsync_System_String_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendVideoMessageAsync(System.String%2CSystem.String%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L195">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L207">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendVideoMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendVideoMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendVideoMessageAsync_System_String_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendVideoMessageAsync(System.String,System.String,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendVideoMessageAsync(String, String, Quote, IUser, RequestOptions)</h4>
@@ -2276,7 +2337,7 @@ contains the identifier and timestamp of the sent message.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SendVideoMessageAsync_Uri_Kook_Quote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SendVideoMessageAsync(Uri%2CKook.Quote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L209">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L221">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketTextChannel_SendVideoMessageAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendVideoMessageAsync*"></a>
   <h4 id="Kook_WebSocket_SocketTextChannel_SendVideoMessageAsync_Uri_Kook_Quote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendVideoMessageAsync(Uri,Kook.Quote,Kook.IUser,Kook.RequestOptions)">SendVideoMessageAsync(Uri, Quote, IUser, RequestOptions)</h4>
@@ -2329,53 +2390,6 @@ contains the identifier and timestamp of the sent message.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketTextChannel_SyncPermissionsAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketTextChannel.SyncPermissionsAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L43">View Source</a>
-  </span>
-  <a id="Kook_WebSocket_SocketTextChannel_SyncPermissionsAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SyncPermissionsAsync*"></a>
-  <h4 id="Kook_WebSocket_SocketTextChannel_SyncPermissionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SyncPermissionsAsync(Kook.RequestOptions)">SyncPermissionsAsync(RequestOptions)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task SyncPermissionsAsync(RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
