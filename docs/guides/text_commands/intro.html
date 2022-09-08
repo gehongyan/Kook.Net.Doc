@@ -230,7 +230,7 @@ public class SampleModule : ModuleBase&lt;SocketCommandContext&gt;
         int num)
     {
         // &#20063;&#21487;&#36890;&#36807;&#21629;&#20196;&#19978;&#19979;&#25991;&#35775;&#38382;&#39057;&#36947;&#23646;&#24615;
-        await Context.Channel.SendTextMessageAsync($&quot;{num}^2 = {Math.Pow(num, 2)}&quot;);
+        await Context.Channel.SendTextAsync($&quot;{num}^2 = {Math.Pow(num, 2)}&quot;);
     }
 
     // !sample userinfo --&gt; &#25096;&#23567;&#33655;#0439
@@ -293,7 +293,7 @@ public class AdminModule : ModuleBase&lt;SocketCommandContext&gt;
             var banInfo = bans.Select(ban =&gt; $&quot;&gt; {ban.User.Username}#{ban.User.IdentifyNumber} &quot; +
                                              $&quot;({ban.CreatedAt:yyyy&#39;/&#39;M&#39;/&#39;d HH&#39;:&#39;mm}, {ban.Reason})&quot;)
                 .Aggregate((a, b) =&gt; $&quot;{a}\n{b}&quot;);
-            await ReplyKMarkdownAsync($&quot;{bans.Count} &#26465;&#23553;&#31105;&#65306;\n{banInfo}&quot;);
+            await ReplyTextAsync($&quot;{bans.Count} &#26465;&#23553;&#31105;&#65306;\n{banInfo}&quot;);
         }
     }
     // !admin kick @&#25096;&#23567;&#33655;

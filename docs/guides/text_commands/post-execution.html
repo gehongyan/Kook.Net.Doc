@@ -153,11 +153,11 @@ if (result.Error != null)
     switch (result.Error)
     {
         case CommandError.BadArgCount:
-            await context.Channel.SendKMarkdownMessageAsync(
+            await context.Channel.SendTextAsync(
                 &quot;Parameter count does not match any command&#39;s.&quot;);
             break;
         default:
-            await context.Channel.SendKMarkdownMessageAsync(
+            await context.Channel.SendTextAsync(
                 $&quot;An error has occurred {result.ErrorReason}&quot;);
             break;
     }
@@ -184,7 +184,7 @@ public async Task OnCommandExecutedAsync(Optional&lt;CommandInfo&gt; command, IC
     // &#21487;&#20197;&#21578;&#30693;&#21629;&#20196;&#35843;&#29992;&#32773;&#24322;&#24120;&#20449;&#24687;
     if (!string.IsNullOrEmpty(result?.ErrorReason))
     {
-        await context.Channel.SendKMarkdownMessageAsync(result.ErrorReason);
+        await context.Channel.SendTextAsync(result.ErrorReason);
     }
 
     // &#25110;&#32773;&#21487;&#20197;&#23558;&#32467;&#26524;&#35760;&#20837;&#26085;&#24535;&#31995;&#32479;

@@ -131,19 +131,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_Attachment.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.Attachment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_Attachments.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.Attachments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L63">View Source</a>
   </span>
-  <a id="Kook_WebSocket_SocketMessage_Attachment_" data-uid="Kook.WebSocket.SocketMessage.Attachment*"></a>
-  <h4 id="Kook_WebSocket_SocketMessage_Attachment" data-uid="Kook.WebSocket.SocketMessage.Attachment">Attachment</h4>
+  <a id="Kook_WebSocket_SocketMessage_Attachments_" data-uid="Kook.WebSocket.SocketMessage.Attachments*"></a>
+  <h4 id="Kook_WebSocket_SocketMessage_Attachments" data-uid="Kook.WebSocket.SocketMessage.Attachments">Attachments</h4>
   <div class="markdown level1 summary"><p>Gets the attachment included in this message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Attachment Attachment { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IReadOnlyCollection&lt;Attachment&gt; Attachments { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,7 +155,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kook.Attachment.html">Attachment</a></td>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.Attachment.html">Attachment</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -473,7 +473,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_MentionedRoles.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.MentionedRoles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L86">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L93">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_MentionedRoles_" data-uid="Kook.WebSocket.SocketMessage.MentionedRoles*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_MentionedRoles" data-uid="Kook.WebSocket.SocketMessage.MentionedRoles">MentionedRoles</h4>
@@ -505,7 +505,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_MentionedUsers.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.MentionedUsers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L93">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L100">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_MentionedUsers_" data-uid="Kook.WebSocket.SocketMessage.MentionedUsers*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_MentionedUsers" data-uid="Kook.WebSocket.SocketMessage.MentionedUsers">MentionedUsers</h4>
@@ -528,6 +528,38 @@
       <tr>
         <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>&gt;</td>
         <td><p>Collection of WebSocket-based users.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_Pokes.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.Pokes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L85">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_SocketMessage_Pokes_" data-uid="Kook.WebSocket.SocketMessage.Pokes*"></a>
+  <h4 id="Kook_WebSocket_SocketMessage_Pokes" data-uid="Kook.WebSocket.SocketMessage.Pokes">Pokes</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of the <a class="xref" href="Kook.IPokeAction.html">IPokeAction</a>&apos;s on the message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IReadOnlyCollection&lt;IPokeAction&gt; Pokes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IPokeAction.html">IPokeAction</a>&gt;</td>
+        <td><p>Collection of poke action objects.</p>
 </td>
       </tr>
     </tbody>
@@ -571,7 +603,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_Reactions.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.Reactions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L97">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L104">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_Reactions_" data-uid="Kook.WebSocket.SocketMessage.Reactions*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_Reactions" data-uid="Kook.WebSocket.SocketMessage.Reactions">Reactions</h4>
@@ -632,7 +664,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_Tags.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.Tags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L95">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L102">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_Tags_" data-uid="Kook.WebSocket.SocketMessage.Tags*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_Tags" data-uid="Kook.WebSocket.SocketMessage.Tags">Tags</h4>
@@ -725,7 +757,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_AddReactionAsync_Kook_IEmote_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.AddReactionAsync(Kook.IEmote%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L250">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L257">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_AddReactionAsync_" data-uid="Kook.WebSocket.SocketMessage.AddReactionAsync*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_AddReactionAsync_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketMessage.AddReactionAsync(Kook.IEmote,Kook.RequestOptions)">AddReactionAsync(IEmote, RequestOptions)</h4>
@@ -777,7 +809,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_DeleteAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.DeleteAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L223">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L230">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_DeleteAsync_" data-uid="Kook.WebSocket.SocketMessage.DeleteAsync*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_DeleteAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketMessage.DeleteAsync(Kook.RequestOptions)">DeleteAsync(RequestOptions)</h4>
@@ -824,7 +856,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_GetReactionUsersAsync_Kook_IEmote_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.GetReactionUsersAsync(Kook.IEmote%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L283">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L290">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_GetReactionUsersAsync_" data-uid="Kook.WebSocket.SocketMessage.GetReactionUsersAsync*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_GetReactionUsersAsync_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketMessage.GetReactionUsersAsync(Kook.IEmote,Kook.RequestOptions)">GetReactionUsersAsync(IEmote, RequestOptions)</h4>
@@ -876,7 +908,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_RemoveReactionAsync_Kook_IEmote_Kook_IUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.RemoveReactionAsync(Kook.IEmote%2CKook.IUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L261">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L268">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_RemoveReactionAsync_" data-uid="Kook.WebSocket.SocketMessage.RemoveReactionAsync*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_RemoveReactionAsync_Kook_IEmote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketMessage.RemoveReactionAsync(Kook.IEmote,Kook.IUser,Kook.RequestOptions)">RemoveReactionAsync(IEmote, IUser, RequestOptions)</h4>
@@ -933,7 +965,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_RemoveReactionAsync_Kook_IEmote_System_UInt64_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.RemoveReactionAsync(Kook.IEmote%2CSystem.UInt64%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L272">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L279">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_RemoveReactionAsync_" data-uid="Kook.WebSocket.SocketMessage.RemoveReactionAsync*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_RemoveReactionAsync_Kook_IEmote_System_UInt64_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketMessage.RemoveReactionAsync(Kook.IEmote,System.UInt64,Kook.RequestOptions)">RemoveReactionAsync(IEmote, UInt64, RequestOptions)</h4>
@@ -990,7 +1022,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_ToString.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L301">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L308">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_ToString_" data-uid="Kook.WebSocket.SocketMessage.ToString*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_ToString" data-uid="Kook.WebSocket.SocketMessage.ToString">ToString()</h4>
@@ -1022,7 +1054,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_UpdateAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.UpdateAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L246">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L253">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_UpdateAsync_" data-uid="Kook.WebSocket.SocketMessage.UpdateAsync*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketMessage.UpdateAsync(Kook.RequestOptions)">UpdateAsync(RequestOptions)</h4>
@@ -1068,42 +1100,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_Kook_IMessage_Attachment.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.Kook%23IMessage%23Attachment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L315">View Source</a>
-  </span>
-  <a id="Kook_WebSocket_SocketMessage_Kook_IMessage_Attachment_" data-uid="Kook.WebSocket.SocketMessage.Kook#IMessage#Attachment*"></a>
-  <h4 id="Kook_WebSocket_SocketMessage_Kook_IMessage_Attachment" data-uid="Kook.WebSocket.SocketMessage.Kook#IMessage#Attachment">IMessage.Attachment</h4>
-  <div class="markdown level1 summary"><p>Gets the attachment included in this message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAttachment IMessage.Attachment { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IAttachment.html">IAttachment</a></td>
-        <td><p>The attachment included in this message;</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_Kook_IMessage_Author.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.Kook%23IMessage%23Author%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L307">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L314">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_Kook_IMessage_Author_" data-uid="Kook.WebSocket.SocketMessage.Kook#IMessage#Author*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_Kook_IMessage_Author" data-uid="Kook.WebSocket.SocketMessage.Kook#IMessage#Author">IMessage.Author</h4>
@@ -1134,7 +1134,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketMessage_Kook_IMessage_Channel.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketMessage.Kook%23IMessage%23Channel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L309">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Messages/SocketMessage.cs/#L316">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketMessage_Kook_IMessage_Channel_" data-uid="Kook.WebSocket.SocketMessage.Kook#IMessage#Channel*"></a>
   <h4 id="Kook_WebSocket_SocketMessage_Kook_IMessage_Channel" data-uid="Kook.WebSocket.SocketMessage.Kook#IMessage#Channel">IMessage.Channel</h4>

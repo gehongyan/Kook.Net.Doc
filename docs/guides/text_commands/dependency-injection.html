@@ -191,7 +191,7 @@ public class DatabaseModule : ModuleBase&lt;SocketCommandContext&gt;
     [Command(&quot;read&quot;)]
     public async Task ReadFromDbAsync()
     {
-        await ReplyKMarkdownAsync(_database.GetData());
+        await ReplyTextAsync(_database.GetData());
     }
 }
 
@@ -203,7 +203,7 @@ public class DatabaseModule : ModuleBase&lt;SocketCommandContext&gt;
     [Command(&quot;read&quot;)]
     public async Task ReadFromDbAsync()
     {
-        await ReplyKMarkdownAsync(DbService.GetData());
+        await ReplyTextAsync(DbService.GetData());
     }
 }
 </code></pre><pre><code class="lang-csharp" name="Disallow Dependency Injection">// &#36890;&#36807;&#20381;&#36182;&#27880;&#20837;&#26381;&#21153;&#27880;&#20837;&#21487;&#20844;&#20849;&#20889;&#23646;&#24615;&#26377;&#26102;&#26159;&#39044;&#26399;&#20043;&#22806;&#30340;

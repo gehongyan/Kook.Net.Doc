@@ -318,92 +318,19 @@ await msg.AddReactionsAsync(new[] { A, B });</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyCardsAsync_Kook_IUserMessage_IEnumerable_Kook_ICard__System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyCardsAsync(Kook.IUserMessage%2CIEnumerable%7BKook.ICard%7D%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyCardAsync_Kook_IUserMessage_Kook_ICard_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyCardAsync(Kook.IUserMessage%2CKook.ICard%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L292">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L165">View Source</a>
   </span>
-  <a id="Kook_MessageExtensions_ReplyCardsAsync_" data-uid="Kook.MessageExtensions.ReplyCardsAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyCardsAsync_Kook_IUserMessage_IEnumerable_Kook_ICard__System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyCardsAsync(Kook.IUserMessage,IEnumerable{Kook.ICard},System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyCardsAsync(IUserMessage, IEnumerable&lt;ICard&gt;, Boolean, Boolean, RequestOptions)</h4>
+  <a id="Kook_MessageExtensions_ReplyCardAsync_" data-uid="Kook.MessageExtensions.ReplyCardAsync*"></a>
+  <h4 id="Kook_MessageExtensions_ReplyCardAsync_Kook_IUserMessage_Kook_ICard_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyCardAsync(Kook.IUserMessage,Kook.ICard,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyCardAsync(IUserMessage, ICard, Boolean, Boolean, RequestOptions)</h4>
   <div class="markdown level1 summary"><p>Sends a card message to the source channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyCardsAsync(this IUserMessage message, IEnumerable&lt;ICard&gt; cards, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message that is being replied on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</td>
-        <td><span class="parametername">cards</span></td>
-        <td><p>The cards to be sent.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isQuote</span></td>
-        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isEphemeral</span></td>
-        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The request options for this <span class="xref">async</span> request.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyCardsAsync_Kook_IUserMessage_Kook_ICard_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyCardsAsync(Kook.IUserMessage%2CKook.ICard%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L306">View Source</a>
-  </span>
-  <a id="Kook_MessageExtensions_ReplyCardsAsync_" data-uid="Kook.MessageExtensions.ReplyCardsAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyCardsAsync_Kook_IUserMessage_Kook_ICard_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyCardsAsync(Kook.IUserMessage,Kook.ICard,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyCardsAsync(IUserMessage, ICard, Boolean, Boolean, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends a card message to the source channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyCardsAsync(this IUserMessage message, ICard card, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyCardAsync(this IUserMessage message, ICard card, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -457,26 +384,172 @@ await msg.AddReactionsAsync(new[] { A, B });</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Stream_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage%2CStream%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyCardsAsync_Kook_IUserMessage_IEnumerable_Kook_ICard__System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyCardsAsync(Kook.IUserMessage%2CIEnumerable%7BKook.ICard%7D%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L250">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L150">View Source</a>
+  </span>
+  <a id="Kook_MessageExtensions_ReplyCardsAsync_" data-uid="Kook.MessageExtensions.ReplyCardsAsync*"></a>
+  <h4 id="Kook_MessageExtensions_ReplyCardsAsync_Kook_IUserMessage_IEnumerable_Kook_ICard__System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyCardsAsync(Kook.IUserMessage,IEnumerable{Kook.ICard},System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyCardsAsync(IUserMessage, IEnumerable&lt;ICard&gt;, Boolean, Boolean, RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Sends a card message to the source channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyCardsAsync(this IUserMessage message, IEnumerable&lt;ICard&gt; cards, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message that is being replied on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</td>
+        <td><span class="parametername">cards</span></td>
+        <td><p>The cards to be sent.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isQuote</span></td>
+        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isEphemeral</span></td>
+        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The request options for this <span class="xref">async</span> request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Kook_FileAttachment_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage%2CKook.FileAttachment%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L122">View Source</a>
   </span>
   <a id="Kook_MessageExtensions_ReplyFileAsync_" data-uid="Kook.MessageExtensions.ReplyFileAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Stream_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage,Stream,System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyFileAsync(IUserMessage, Stream, String, Boolean, Boolean, RequestOptions)</h4>
+  <h4 id="Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Kook_FileAttachment_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage,Kook.FileAttachment,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyFileAsync(IUserMessage, FileAttachment, Boolean, Boolean, RequestOptions)</h4>
   <div class="markdown level1 summary"><p>Sends an inline reply of file that references a message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyFileAsync(this IUserMessage message, Stream stream, string fileName = null, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyFileAsync(this IUserMessage message, FileAttachment attachment, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message that is being replied on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kook.FileAttachment.html">FileAttachment</a></td>
+        <td><span class="parametername">attachment</span></td>
+        <td><p>The attachment containing the file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isQuote</span></td>
+        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isEphemeral</span></td>
+        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>. </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Stream_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage%2CStream%2CSystem.String%2CKook.AttachmentType%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L107">View Source</a>
+  </span>
+  <a id="Kook_MessageExtensions_ReplyFileAsync_" data-uid="Kook.MessageExtensions.ReplyFileAsync*"></a>
+  <h4 id="Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Stream_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage,Stream,System.String,Kook.AttachmentType,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyFileAsync(IUserMessage, Stream, String, AttachmentType, Boolean, Boolean, RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Sends an inline reply of file that references a message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyFileAsync(this IUserMessage message, Stream stream, string fileName = null, AttachmentType type = AttachmentType.File, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -507,6 +580,12 @@ await msg.AddReactionsAsync(new[] { A, B });</code></pre>
 </td>
       </tr>
       <tr>
+        <td><a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of the file.</p>
+</td>
+      </tr>
+      <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">isQuote</span></td>
         <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>. </p>
@@ -536,26 +615,26 @@ await msg.AddReactionsAsync(new[] { A, B });</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_System_String_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_System_String_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage%2CSystem.String%2CSystem.String%2CKook.AttachmentType%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L235">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L90">View Source</a>
   </span>
   <a id="Kook_MessageExtensions_ReplyFileAsync_" data-uid="Kook.MessageExtensions.ReplyFileAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_System_String_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage,System.String,System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyFileAsync(IUserMessage, String, String, Boolean, Boolean, RequestOptions)</h4>
+  <h4 id="Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_System_String_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage,System.String,System.String,Kook.AttachmentType,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyFileAsync(IUserMessage, String, String, AttachmentType, Boolean, Boolean, RequestOptions)</h4>
   <div class="markdown level1 summary"><p>Sends an inline reply of file that references a message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyFileAsync(this IUserMessage message, string path, string fileName = null, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyFileAsync(this IUserMessage message, string path, string fileName = null, AttachmentType type = AttachmentType.File, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -586,76 +665,9 @@ await msg.AddReactionsAsync(new[] { A, B });</code></pre>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isQuote</span></td>
-        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isEphemeral</span></td>
-        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Uri_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage%2CUri%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L264">View Source</a>
-  </span>
-  <a id="Kook_MessageExtensions_ReplyFileAsync_" data-uid="Kook.MessageExtensions.ReplyFileAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Uri_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage,Uri,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyFileAsync(IUserMessage, Uri, Boolean, Boolean, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends an inline reply of file that references a message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyFileAsync(this IUserMessage message, Uri uri, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message that is being replied on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Uri</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td><p>URI of the file to be sent.</p>
+        <td><a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of the file.</p>
 </td>
       </tr>
       <tr>
@@ -688,257 +700,26 @@ await msg.AddReactionsAsync(new[] { A, B });</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyImageAsync_Kook_IUserMessage_Stream_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyImageAsync(Kook.IUserMessage%2CStream%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyTextAsync_Kook_IUserMessage_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyTextAsync(Kook.IUserMessage%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L118">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L136">View Source</a>
   </span>
-  <a id="Kook_MessageExtensions_ReplyImageAsync_" data-uid="Kook.MessageExtensions.ReplyImageAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyImageAsync_Kook_IUserMessage_Stream_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyImageAsync(Kook.IUserMessage,Stream,System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyImageAsync(IUserMessage, Stream, String, Boolean, Boolean, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends an inline reply of image that references a message.</p>
+  <a id="Kook_MessageExtensions_ReplyTextAsync_" data-uid="Kook.MessageExtensions.ReplyTextAsync*"></a>
+  <h4 id="Kook_MessageExtensions_ReplyTextAsync_Kook_IUserMessage_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyTextAsync(Kook.IUserMessage,System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyTextAsync(IUserMessage, String, Boolean, Boolean, RequestOptions)</h4>
+  <div class="markdown level1 summary"><p>Sends an inline reply of text that references a message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyImageAsync(this IUserMessage message, Stream stream, string fileName = null, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message that is being replied on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Stream</span></td>
-        <td><span class="parametername">stream</span></td>
-        <td><p>Stream of the image file to be sent.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">fileName</span></td>
-        <td><p>The name of the image file.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isQuote</span></td>
-        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isEphemeral</span></td>
-        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyImageAsync_Kook_IUserMessage_System_String_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyImageAsync(Kook.IUserMessage%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L103">View Source</a>
-  </span>
-  <a id="Kook_MessageExtensions_ReplyImageAsync_" data-uid="Kook.MessageExtensions.ReplyImageAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyImageAsync_Kook_IUserMessage_System_String_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyImageAsync(Kook.IUserMessage,System.String,System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyImageAsync(IUserMessage, String, String, Boolean, Boolean, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends an inline reply of image that references a message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyImageAsync(this IUserMessage message, string path, string fileName = null, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message that is being replied on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">path</span></td>
-        <td><p>The file path of the image file.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">fileName</span></td>
-        <td><p>The name of the image file.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isQuote</span></td>
-        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isEphemeral</span></td>
-        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyImageAsync_Kook_IUserMessage_Uri_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyImageAsync(Kook.IUserMessage%2CUri%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L132">View Source</a>
-  </span>
-  <a id="Kook_MessageExtensions_ReplyImageAsync_" data-uid="Kook.MessageExtensions.ReplyImageAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyImageAsync_Kook_IUserMessage_Uri_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyImageAsync(Kook.IUserMessage,Uri,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyImageAsync(IUserMessage, Uri, Boolean, Boolean, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends an inline reply of image that references a message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyImageAsync(this IUserMessage message, Uri uri, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message that is being replied on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Uri</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td><p>URI of the image file to be sent.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isQuote</span></td>
-        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isEphemeral</span></td>
-        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyKMarkdownAsync_Kook_IUserMessage_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyKMarkdownAsync(Kook.IUserMessage%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L278">View Source</a>
-  </span>
-  <a id="Kook_MessageExtensions_ReplyKMarkdownAsync_" data-uid="Kook.MessageExtensions.ReplyKMarkdownAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyKMarkdownAsync_Kook_IUserMessage_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyKMarkdownAsync(Kook.IUserMessage,System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyKMarkdownAsync(IUserMessage, String, Boolean, Boolean, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends an inline reply of KMarkdown that references a message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyKMarkdownAsync(this IUserMessage message, string content, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyTextAsync(this IUserMessage message, string content, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -992,311 +773,7 @@ await msg.AddReactionsAsync(new[] { A, B });</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyTextAsync_Kook_IUserMessage_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyTextAsync(Kook.IUserMessage%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L88">View Source</a>
-  </span>
-  <a id="Kook_MessageExtensions_ReplyTextAsync_" data-uid="Kook.MessageExtensions.ReplyTextAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyTextAsync_Kook_IUserMessage_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyTextAsync(Kook.IUserMessage,System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyTextAsync(IUserMessage, String, Boolean, Boolean, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends an inline reply of plain text that references a message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyTextAsync(this IUserMessage message, string text, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message that is being replied on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>The message to be sent.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isQuote</span></td>
-        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isEphemeral</span></td>
-        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyVideoAsync_Kook_IUserMessage_Stream_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyVideoAsync(Kook.IUserMessage%2CStream%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L162">View Source</a>
-  </span>
-  <a id="Kook_MessageExtensions_ReplyVideoAsync_" data-uid="Kook.MessageExtensions.ReplyVideoAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyVideoAsync_Kook_IUserMessage_Stream_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyVideoAsync(Kook.IUserMessage,Stream,System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyVideoAsync(IUserMessage, Stream, String, Boolean, Boolean, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends an inline reply of video that references a message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyVideoAsync(this IUserMessage message, Stream stream, string fileName = null, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message that is being replied on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Stream</span></td>
-        <td><span class="parametername">stream</span></td>
-        <td><p>Stream of the video file to be sent.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">fileName</span></td>
-        <td><p>The name of the video file.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isQuote</span></td>
-        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isEphemeral</span></td>
-        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyVideoAsync_Kook_IUserMessage_System_String_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyVideoAsync(Kook.IUserMessage%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L147">View Source</a>
-  </span>
-  <a id="Kook_MessageExtensions_ReplyVideoAsync_" data-uid="Kook.MessageExtensions.ReplyVideoAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyVideoAsync_Kook_IUserMessage_System_String_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyVideoAsync(Kook.IUserMessage,System.String,System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyVideoAsync(IUserMessage, String, String, Boolean, Boolean, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends an inline reply of video that references a message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyVideoAsync(this IUserMessage message, string path, string fileName = null, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message that is being replied on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">path</span></td>
-        <td><p>The file path of the video file.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">fileName</span></td>
-        <td><p>The name of the video file.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isQuote</span></td>
-        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isEphemeral</span></td>
-        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_MessageExtensions_ReplyVideoAsync_Kook_IUserMessage_Uri_System_Boolean_System_Boolean_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.MessageExtensions.ReplyVideoAsync(Kook.IUserMessage%2CUri%2CSystem.Boolean%2CSystem.Boolean%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L176">View Source</a>
-  </span>
-  <a id="Kook_MessageExtensions_ReplyVideoAsync_" data-uid="Kook.MessageExtensions.ReplyVideoAsync*"></a>
-  <h4 id="Kook_MessageExtensions_ReplyVideoAsync_Kook_IUserMessage_Uri_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyVideoAsync(Kook.IUserMessage,Uri,System.Boolean,System.Boolean,Kook.RequestOptions)">ReplyVideoAsync(IUserMessage, Uri, Boolean, Boolean, RequestOptions)</h4>
-  <div class="markdown level1 summary"><p>Sends an inline reply of video that references a message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(Guid MessageId, DateTimeOffset MessageTimestamp)&gt; ReplyVideoAsync(this IUserMessage message, Uri uri, bool isQuote = false, bool isEphemeral = false, RequestOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message that is being replied on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Uri</span></td>
-        <td><span class="parametername">uri</span></td>
-        <td><p>URI of the video file to be sent.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isQuote</span></td>
-        <td><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isEphemeral</span></td>
-        <td><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>. </p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">Guid</span>, <span class="xref">DateTimeOffset</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>

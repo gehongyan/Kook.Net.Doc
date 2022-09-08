@@ -113,7 +113,7 @@
 <h3 id="示例">示例</h3>
 <pre><code class="lang-csharp" name="Precondition Usage">[RequireOwner]
 [Command(&quot;echo&quot;)]
-public Task EchoAsync(string input) =&gt; ReplyKMarkdownAsync(input);
+public Task EchoAsync(string input) =&gt; ReplyTextAsync(input);
 </code></pre><h2 id="先决条件的析取">先决条件的析取</h2>
 <p>命令的先决条件可以存在多个，如果想要其中的部分先决条件满足任一即可被是作为先决条件校验通过，
 则需要为先决条件进行分组来表示先决条件的析取。</p>

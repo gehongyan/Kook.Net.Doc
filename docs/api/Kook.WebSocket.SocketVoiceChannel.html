@@ -148,9 +148,6 @@
       <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_UserPermissionOverwrites">SocketGuildChannel.UserPermissionOverwrites</a>
     </div>
     <div>
-      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_Users">SocketGuildChannel.Users</a>
-    </div>
-    <div>
       <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_UpdateAsync_Kook_RequestOptions_">SocketGuildChannel.UpdateAsync(RequestOptions)</a>
     </div>
     <div>
@@ -182,9 +179,6 @@
     </div>
     <div>
       <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_">SocketGuildChannel.ModifyPermissionOverwriteAsync(IRole, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_GetUser_System_UInt64_">SocketGuildChannel.GetUser(UInt64)</a>
     </div>
     <div>
       <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_ToString">SocketGuildChannel.ToString()</a>
@@ -268,6 +262,48 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketVoiceChannel_ConnectedUsers.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketVoiceChannel.ConnectedUsers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L66">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_SocketVoiceChannel_ConnectedUsers_" data-uid="Kook.WebSocket.SocketVoiceChannel.ConnectedUsers*"></a>
+  <h4 id="Kook_WebSocket_SocketVoiceChannel_ConnectedUsers" data-uid="Kook.WebSocket.SocketVoiceChannel.ConnectedUsers">ConnectedUsers</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of users that are currently connected to this voice channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketGuildUser&gt; ConnectedUsers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</td>
+        <td><p>A read-only collection of users that are currently connected to this voice channel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_SocketVoiceChannel_ConnectedUsers_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+    This property may not always return all the members that are connected to this voice channel,
+    because uses may connected this voice channel before the bot has connected to the gateway.
+    To ensure accuracy, you may need to enable <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadVoiceStates">AlwaysDownloadVoiceStates</a>
+    to fetch the full voice states upon startup, or use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadVoiceStatesAsync_Kook_RequestOptions_">DownloadVoiceStatesAsync(RequestOptions)</a>
+    on the guild this voice channel belongs to to manually download the users voice states,
+    or use <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html#Kook_WebSocket_SocketVoiceChannel_GetConnectedUsersAsync_Kook_CacheMode_Kook_RequestOptions_">GetConnectedUsersAsync(CacheMode, RequestOptions)</a> to fetch the connected users from the API.
+</p></div>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketVoiceChannel_HasPassword.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketVoiceChannel.HasPassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -309,7 +345,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPermissionSynced { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool? IsPermissionSynced { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -321,7 +357,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -448,6 +484,44 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketVoiceChannel_Users.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketVoiceChannel.Users%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L46">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_SocketVoiceChannel_Users_" data-uid="Kook.WebSocket.SocketVoiceChannel.Users*"></a>
+  <h4 id="Kook_WebSocket_SocketVoiceChannel_Users" data-uid="Kook.WebSocket.SocketVoiceChannel.Users">Users</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of users that are able to view the channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IReadOnlyCollection&lt;SocketGuildUser&gt; Users { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</td>
+        <td><p>A read-only collection of users that can access the channel (i.e. the users seen in the user list).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_Users">SocketGuildChannel.Users</a></div>
+  <h5 id="Kook_WebSocket_SocketVoiceChannel_Users_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html#Kook_WebSocket_SocketVoiceChannel_ConnectedUsers">ConnectedUsers</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketVoiceChannel_VoiceQuality.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketVoiceChannel.VoiceQuality%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -483,7 +557,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketVoiceChannel_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketVoiceChannel.CreateInviteAsync(Kook.InviteMaxAge%2CKook.InviteMaxUses%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L103">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L124">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketVoiceChannel_CreateInviteAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.CreateInviteAsync*"></a>
   <h4 id="Kook_WebSocket_SocketVoiceChannel_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.CreateInviteAsync(Kook.InviteMaxAge,Kook.InviteMaxUses,Kook.RequestOptions)">CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)</h4>
@@ -540,7 +614,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketVoiceChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketVoiceChannel.CreateInviteAsync(System.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L100">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L121">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketVoiceChannel_CreateInviteAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.CreateInviteAsync*"></a>
   <h4 id="Kook_WebSocket_SocketVoiceChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},Kook.RequestOptions)">CreateInviteAsync(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, RequestOptions)</h4>
@@ -594,10 +668,62 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketVoiceChannel_GetConnectedUsersAsync_Kook_CacheMode_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketVoiceChannel.GetConnectedUsersAsync(Kook.CacheMode%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L105">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_SocketVoiceChannel_GetConnectedUsersAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetConnectedUsersAsync*"></a>
+  <h4 id="Kook_WebSocket_SocketVoiceChannel_GetConnectedUsersAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetConnectedUsersAsync(Kook.CacheMode,Kook.RequestOptions)">GetConnectedUsersAsync(CacheMode, RequestOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;SocketGuildUser&gt;&gt; GetConnectedUsersAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.CacheMode.html">CacheMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketVoiceChannel_GetInvitesAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketVoiceChannel.GetInvitesAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L97">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L118">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketVoiceChannel_GetInvitesAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetInvitesAsync*"></a>
   <h4 id="Kook_WebSocket_SocketVoiceChannel_GetInvitesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetInvitesAsync(Kook.RequestOptions)">GetInvitesAsync(RequestOptions)</h4>
@@ -641,10 +767,59 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketVoiceChannel_GetUser_System_UInt64_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketVoiceChannel.GetUser(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L93">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_SocketVoiceChannel_GetUser_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetUser*"></a>
+  <h4 id="Kook_WebSocket_SocketVoiceChannel_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetUser(System.UInt64)">GetUser(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override SocketGuildUser GetUser(ulong id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_GetUser_System_UInt64_">SocketGuildChannel.GetUser(UInt64)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketVoiceChannel_ModifyAsync_Action_Kook_ModifyVoiceChannelProperties__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketVoiceChannel.ModifyAsync(Action%7BKook.ModifyVoiceChannelProperties%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L80">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L102">View Source</a>
   </span>
   <a id="Kook_WebSocket_SocketVoiceChannel_ModifyAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.ModifyAsync*"></a>
   <h4 id="Kook_WebSocket_SocketVoiceChannel_ModifyAsync_Action_Kook_ModifyVoiceChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.ModifyAsync(Action{Kook.ModifyVoiceChannelProperties},Kook.RequestOptions)">ModifyAsync(Action&lt;ModifyVoiceChannelProperties&gt;, RequestOptions)</h4>

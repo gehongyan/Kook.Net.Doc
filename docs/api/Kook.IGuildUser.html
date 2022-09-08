@@ -117,13 +117,13 @@
       <a class="xref" href="Kook.IUser.html#Kook_IUser_IsBanned">IUser.IsBanned</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IUser.html#Kook_IUser_IsVIP">IUser.IsVIP</a>
+      <a class="xref" href="Kook.IUser.html#Kook_IUser_HasBuff">IUser.HasBuff</a>
     </div>
     <div>
       <a class="xref" href="Kook.IUser.html#Kook_IUser_Avatar">IUser.Avatar</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IUser.html#Kook_IUser_VIPAvatar">IUser.VIPAvatar</a>
+      <a class="xref" href="Kook.IUser.html#Kook_IUser_BuffAvatar">IUser.BuffAvatar</a>
     </div>
     <div>
       <a class="xref" href="Kook.IUser.html#Kook_IUser_IsDenoiseEnabled">IUser.IsDenoiseEnabled</a>
@@ -155,12 +155,21 @@
     <div>
       <a class="xref" href="Kook.IPresence.html#Kook_IPresence_ActiveClient">IPresence.ActiveClient</a>
     </div>
+    <div>
+      <a class="xref" href="Kook.IVoiceState.html#Kook_IVoiceState_IsDeafened">IVoiceState.IsDeafened</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IVoiceState.html#Kook_IVoiceState_IsMuted">IVoiceState.IsMuted</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IVoiceState.html#Kook_IVoiceState_VoiceChannel">IVoiceState.VoiceChannel</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kook.html">Kook</a></h6>
   <h6><strong>Assembly</strong>: Kook.Net.Core.dll</h6>
   <h5 id="Kook_IGuildUser_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IGuildUser : IUser, IEntity&lt;ulong&gt;, IMentionable, IPresence</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IGuildUser : IUser, IEntity&lt;ulong&gt;, IMentionable, IPresence, IVoiceState</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -804,7 +813,7 @@ implementation, only a collection of identifiers can be retrieved instead of the
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IGuildUser_GetConnectedVoiceChannelsAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IGuildUser.GetConnectedVoiceChannelsAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Users/IGuildUser.cs/#L258">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Core/Entities/Users/IGuildUser.cs/#L261">View Source</a>
   </span>
   <a id="Kook_IGuildUser_GetConnectedVoiceChannelsAsync_" data-uid="Kook.IGuildUser.GetConnectedVoiceChannelsAsync*"></a>
   <h4 id="Kook_IGuildUser_GetConnectedVoiceChannelsAsync_Kook_RequestOptions_" data-uid="Kook.IGuildUser.GetConnectedVoiceChannelsAsync(Kook.RequestOptions)">GetConnectedVoiceChannelsAsync(RequestOptions)</h4>
@@ -828,7 +837,8 @@ implementation, only a collection of identifiers can be retrieved instead of the
       <tr>
         <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p>The options to be used when sending the request.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -843,7 +853,9 @@ implementation, only a collection of identifiers can be retrieved instead of the
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IVoiceChannel.html">IVoiceChannel</a>&gt;&gt;</td>
-        <td></td>
+        <td><p>A task that represents the asynchronous get operation. The task result contains a collection of
+voice channels the user is connected to.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1383,43 +1395,22 @@ specified channel.</p>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendTextMessageAsync_Kook_IUser_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendTextMessageAsync(IUser, String, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, String, String, AttachmentType, IQuote, RequestOptions)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendImageMessageAsync_Kook_IUser_System_String_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendImageMessageAsync(IUser, String, String, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, Stream, String, AttachmentType, IQuote, RequestOptions)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendImageMessageAsync_Kook_IUser_Stream_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendImageMessageAsync(IUser, Stream, String, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, FileAttachment, IQuote, RequestOptions)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendImageMessageAsync_Kook_IUser_Uri_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendImageMessageAsync(IUser, Uri, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendTextAsync_Kook_IUser_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendTextAsync(IUser, String, IQuote, RequestOptions)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendVideoMessageAsync_Kook_IUser_System_String_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendVideoMessageAsync(IUser, String, String, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardsAsync_Kook_IUser_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardsAsync(IUser, IEnumerable&lt;ICard&gt;, IQuote, RequestOptions)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendVideoMessageAsync_Kook_IUser_Stream_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendVideoMessageAsync(IUser, Stream, String, IQuote, RequestOptions)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendVideoMessageAsync_Kook_IUser_Uri_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendVideoMessageAsync(IUser, Uri, IQuote, RequestOptions)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileMessageAsync_Kook_IUser_System_String_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileMessageAsync(IUser, String, String, IQuote, RequestOptions)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileMessageAsync_Kook_IUser_Stream_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileMessageAsync(IUser, Stream, String, IQuote, RequestOptions)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileMessageAsync_Kook_IUser_Uri_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileMessageAsync(IUser, Uri, IQuote, RequestOptions)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendKMarkdownMessageAsync_Kook_IUser_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendKMarkdownMessageAsync(IUser, String, IQuote, RequestOptions)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_ReplyCardsAsync_Kook_IUser_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_">UserExtensions.ReplyCardsAsync(IUser, IEnumerable&lt;ICard&gt;, IQuote, RequestOptions)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_ReplyCardsAsync_Kook_IUser_Kook_ICard_Kook_IQuote_Kook_RequestOptions_">UserExtensions.ReplyCardsAsync(IUser, ICard, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardAsync_Kook_IUser_Kook_ICard_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardAsync(IUser, ICard, IQuote, RequestOptions)</a>
   </div>
   <div>
       <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_BanAsync_Kook_IGuildUser_System_Int32_System_String_Kook_RequestOptions_">UserExtensions.BanAsync(IGuildUser, Int32, String, RequestOptions)</a>

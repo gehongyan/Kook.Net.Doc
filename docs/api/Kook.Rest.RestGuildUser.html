@@ -115,6 +115,7 @@
     <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<span class="xref">System.UInt64</span>&gt;</div>
     <div><a class="xref" href="Kook.IMentionable.html">IMentionable</a></div>
     <div><a class="xref" href="Kook.IPresence.html">IPresence</a></div>
+    <div><a class="xref" href="Kook.IVoiceState.html">IVoiceState</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -131,13 +132,13 @@
       <a class="xref" href="Kook.Rest.RestUser.html#Kook_Rest_RestUser_IsBanned">RestUser.IsBanned</a>
     </div>
     <div>
-      <a class="xref" href="Kook.Rest.RestUser.html#Kook_Rest_RestUser_IsVIP">RestUser.IsVIP</a>
+      <a class="xref" href="Kook.Rest.RestUser.html#Kook_Rest_RestUser_HasBuff">RestUser.HasBuff</a>
     </div>
     <div>
       <a class="xref" href="Kook.Rest.RestUser.html#Kook_Rest_RestUser_Avatar">RestUser.Avatar</a>
     </div>
     <div>
-      <a class="xref" href="Kook.Rest.RestUser.html#Kook_Rest_RestUser_VIPAvatar">RestUser.VIPAvatar</a>
+      <a class="xref" href="Kook.Rest.RestUser.html#Kook_Rest_RestUser_BuffAvatar">RestUser.BuffAvatar</a>
     </div>
     <div>
       <a class="xref" href="Kook.Rest.RestUser.html#Kook_Rest_RestUser_IsDenoiseEnabled">RestUser.IsDenoiseEnabled</a>
@@ -177,7 +178,7 @@
   <h6><strong>Assembly</strong>: Kook.Net.Rest.dll</h6>
   <h5 id="Kook_Rest_RestGuildUser_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RestGuildUser : RestUser, IEntity&lt;ulong&gt;, IUpdateable, IGuildUser, IUser, IEntity&lt;ulong&gt;, IMentionable, IPresence</code></pre>
+    <pre><code class="lang-csharp hljs">public class RestGuildUser : RestUser, IEntity&lt;ulong&gt;, IUpdateable, IGuildUser, IUser, IEntity&lt;ulong&gt;, IMentionable, IPresence, IVoiceState</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -1402,6 +1403,39 @@ specified channel.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildUser_Kook_IVoiceState_VoiceChannel.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildUser.Kook%23IVoiceState%23VoiceChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L209">View Source</a>
+  </span>
+  <a id="Kook_Rest_RestGuildUser_Kook_IVoiceState_VoiceChannel_" data-uid="Kook.Rest.RestGuildUser.Kook#IVoiceState#VoiceChannel*"></a>
+  <h4 id="Kook_Rest_RestGuildUser_Kook_IVoiceState_VoiceChannel" data-uid="Kook.Rest.RestGuildUser.Kook#IVoiceState#VoiceChannel">IVoiceState.VoiceChannel</h4>
+  <div class="markdown level1 summary"><p>Gets the voice channel this user is currently in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IVoiceChannel IVoiceState.VoiceChannel { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kook.IVoiceChannel.html">IVoiceChannel</a></td>
+        <td><p>A generic voice channel object representing the voice channel that the user is currently in; <code>null</code>
+if none.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kook.IEntity-1.html">IEntity&lt;TId&gt;</a>
@@ -1423,6 +1457,9 @@ specified channel.</p>
   </div>
   <div>
       <a class="xref" href="Kook.IPresence.html">IPresence</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.IVoiceState.html">IVoiceState</a>
   </div>
 </article>
                 </div>
