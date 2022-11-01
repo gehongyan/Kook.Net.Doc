@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>&#34920;&#24773;&#31526;&#21495; | Kook.Net &#25991;&#26723; </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="&#34920;&#24773;&#31526;&#21495; | Kook.Net &#25991;&#26723; ">
+      <meta name="generator" content="docfx 2.56.7.0">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../styles/config.css">
+      <link rel="stylesheet" href="../../styles/discord.css">
+      <link rel="stylesheet" href="../../styles/singulink.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+      
+      <meta property="docfx:rel" content="../../">
+      
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../../index.html">
+              <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../../index.html">
+                          <img src="../../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
+                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
+                        </a>  </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+                  Kook.Net (c) 2022
+                  
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="Guides.Emoji">
+<h1 id="kooknet-中的表情符号">Kook.Net 中的表情符号</h1>
+
+<p>KOOK 中的表情符号包含两种形式，即 Emoji 表情与服务器自定义表情，在 Kook.Net
+中分别以 <a class="xref" href="../../api/Kook.Emoji.html">Emoji</a> 与 <a class="xref" href="../../api/Kook.Emote.html">Emote</a> 表示，这两个类都实现了 <a class="xref" href="../../api/Kook.IEmote.html">IEmote</a> 接口。</p>
+<h2 id="emoji">Emoji</h2>
+<p>Emoji 是一种通用的表情符号，是 Unicode 标准中的一部分，可以在任何支持 Unicode
+标准的平台上使用。因此，诸如 <code>👌</code>、<code>♥</code>、<code>👀</code> 等的字符串都会被 KOOK 解析为 Emoji
+表情符号。</p>
+<p>每个被 KOOK 所支持的 Emoji 表情符号都有其对应的短代码，其为由两个冒号及其所包围的别名组成，例如
+<code>👌</code>、<code>♥</code>、<code>👀</code> 可分别被表示为 <code>:ok_hand:</code>、<code>:heart:</code>、<code>:eyes:</code>。KOOK API 处理有关
+Emoji 表情符号的消息时会自动将短代码转换为对应的 Emoji 表情符号。</p>
+<p>有关 KOOK 所受支持的短代码，可参考<a class="xref" href="emoji-list.html">此页面</a>。</p>
+<h3 id="声明-emoji">声明 Emoji</h3>
+<p>要创建 <a class="xref" href="../../api/Kook.Emoji.html">Emoji</a> 对象，可将 Emoji 表情符号或其 Unicode 传入 <a class="xref" href="../../api/Kook.Emoji.html">Emoji</a> 的构造函数中，例如
+<code>new Emoji(&quot;👌&quot;);</code> 或 <code>new Emoji(&quot;\uD83D\uDC4C&quot;);</code>，也可以通过使用 <a class="xref" href="../../api/Kook.Emoji.html#Kook_Emoji_Parse_">Parse</a> 或
+<a class="xref" href="../../api/Kook.Emoji.html#Kook_Emoji_TryParse_">TryParse</a> 解析 Emoji 表情符号或其短代码的方式创建 <a class="xref" href="../../api/Kook.Emoji.html">Emoji</a> 对象，例如
+<code>Emoji.Parse(&quot;👌&quot;)</code>、<code>Emoji.Parse(&quot;:ok_hand:&quot;)</code>、<code>Emoji.TryParse(&quot;:ok_hand:&quot;, out var emoji)</code>。</p>
+<p>为消息添加 Emoji 表情符号的代码示例：</p>
+<pre><code class="lang-csharp" name="Emoji Sample">public async Task ReactAsync(SocketUserMessage userMsg)
+{
+    // &#20351;&#29992;&#34920;&#24773;&#31526;&#21495;&#26412;&#36523;
+    await userMsg.AddReactionAsync(new Emoji(&quot;&#128076;&quot;));
+    // &#20351;&#29992; Unicode
+    await userMsg.AddReactionAsync(new Emoji(&quot;\uD83D\uDC4C&quot;));
+    // &#20351;&#29992;&#30701;&#20195;&#30721;
+    await userMsg.AddReactionAsync(Emoji.Parse(&quot;:ok_hand:&quot;));
+}
+</code></pre><h2 id="emote">Emote</h2>
+<p>Kook.Net 中的 Emote 指代 KOOK 中添加到服务器内的自定义表情符号，其在 KMarkdown 中的完全限定形式形如：
+<code>(emj)kook-logo(emj)[1591057729615250/9nG5PxHkZE074074]</code>。
+其中，<code>kook-logo</code> 为表情符号的别名，<code>1591057729615250/9nG5PxHkZE074074</code> 为表情符号的 ID。</p>
+<p>目前 KOOK 中尚未提供便捷获取自定义表情符号的完全限定形式的方法，要获取自定义表情符号的完全限定形式，可通过一下几种方式：</p>
+<ol>
+<li>Kook.Net 对消息体中的表情符号部分进行了解析，可通过 <a class="xref" href="../../api/Kook.IMessage.html#Kook_IMessage_Tags">Tags</a> 获取 <a class="xref" href="../../api/Kook.ITag.html#Kook_ITag_Type">Type</a> 为
+<a class="xref" href="../../api/Kook.TagType.html#Kook_TagType_Emoji">Emoji</a> 的 <a class="xref" href="../../api/Kook.Emote.html">Emote</a> 对象，通过 <a class="xref" href="../../api/Kook.Emote.html#Kook_Emote_ToKMarkdownString_">ToKMarkdownString</a> 方法获取完全限定形式。</li>
+<li>通过 <a class="xref" href="../../api/Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_Emotes">Emotes</a> 属性获取服务器中的全部自定义表情符号，从而获取其完全限定形式。</li>
+<li>通过 <a class="xref" href="../../api/Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_GetEmotesAsync_">GetEmotesAsync</a> 方法获取服务器中的全部自定义表情符号，从而获取其完全限定形式。</li>
+<li>在 KOOK 网页端或桌面客户端中启用开发者工具 (Ctrl+Alt+Shift+O)，通过跟踪与表情符号相关的网络请求负载或相应获取其完全限定形式。</li>
+</ol>
+<h3 id="声明-emote">声明 Emote</h3>
+<p>要通过服务器自定义表情符号的完全限定形式创建 <a class="xref" href="../../api/Kook.Emote.html">Emote</a> 对象，请使用 <a class="xref" href="../../api/Kook.Emote.html#Kook_Emote_Parse_">Parse</a> 或
+<a class="xref" href="../../api/Kook.Emote.html#Kook_Emote_TryParse_">TryParse</a> 方法，例如 <code>Emote.Parse(&quot;(emj)kook-logo(emj)[1591057729615250/9nG5PxHkZE074074]&quot;)</code>。</p>
+<pre><code name="Emote Sample">public async Task ReactAsync(SocketUserMessage userMsg)
+{
+    if (Emote.TryParse(emoteString, out var emote))
+    {
+        await userMsg.AddReactionAsync(emote);
+    }
+}
+</code></pre><div class="TIP"><h5>Tip</h5><p>要在 Socket 客户端中通过表情符号名称获取指定的表情符号，可以访问 <a class="xref" href="../../api/Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_Emotes">Emotes</a> 属性。</p>
+<pre><code class="lang-csharp" name="Socket emote sample">private readonly KookSocketClient _client;
+
+public async Task ReactAsync(SocketUserMessage userMsg, string emoteName)
+{
+    var emote = _client.Guilds
+        .SelectMany(x =&gt; x.Emotes)
+        .FirstOrDefault(x =&gt; x.Name.IndexOf(
+            emoteName, StringComparison.OrdinalIgnoreCase) != -1);
+    if (emote is null) return;
+    await userMsg.AddReactionAsync(emote);
+}
+</code></pre></div>
+<div class="TIP"><h5>Tip</h5><p>KOOK 中，激活 BUFF 的用户可以跨服务器使用表情符号，因此，Bot 可能会收到来自 Bot 自身并未加入的服务器的表情符号。
+虽然 KOOK Bot API 允许 Bot 跨服务器使用表情符号，但不能使用未加入的服务器的表情符号。
+为了安全起见，若在 Socket 客户端中要在消息中引用、或添加新回应时采用未知来源的表情符号，应当访问所有服务器的
+<a class="xref" href="../../api/Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_Emotes">Emotes</a> 属性来确定表情符号是否存在于 Bot 所加入的服务器中，或捕获可能的异常。</p>
+</div>
+<h2 id="更多信息">更多信息</h2>
+<p>要进一步了解如何使用 Emoji 和 Emote，请参阅 <a class="xref" href="../../api/Kook.IEmote.html">IEmote</a> 文档。</p>
+</article>
+                </div>
+
+            </main>
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../styles/singulink.js"></script>
+        <script type="text/javascript" src="../../styles/main.js"></script>    </body>
+</html>
