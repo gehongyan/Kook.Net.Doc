@@ -190,7 +190,7 @@ var client = new KookSocketClient(config);</code></pre>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_KookSocketConfig__ctor.md&amp;value=---%0Auid%3A%20Kook.WebSocket.KookSocketConfig.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L121">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L140">View Source</a>
   </span>
   <a id="Kook_WebSocket_KookSocketConfig__ctor_" data-uid="Kook.WebSocket.KookSocketConfig.#ctor*"></a>
   <h4 id="Kook_WebSocket_KookSocketConfig__ctor" data-uid="Kook.WebSocket.KookSocketConfig.#ctor">KookSocketConfig()</h4>
@@ -266,10 +266,51 @@ var client = new KookSocketClient(config);</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions.md&amp;value=---%0Auid%3A%20Kook.WebSocket.KookSocketConfig.AlwaysDownloadBoostSubscriptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L112">View Source</a>
+  </span>
+  <a id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions_" data-uid="Kook.WebSocket.KookSocketConfig.AlwaysDownloadBoostSubscriptions*"></a>
+  <h4 id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions" data-uid="Kook.WebSocket.KookSocketConfig.AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether or not all boost subscriptions should be downloaded as guilds come available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AlwaysDownloadBoostSubscriptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+    Setting this property to <code>true</code> will cause the client to download all boost subscriptions
+    for all guilds upon startup and when <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildUpdated">GuildUpdated</a> is triggered with
+    changes occurring to <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a>.
+    Please note that it can be difficult to fill the cache completely on large guilds depending on the
+    traffic. If you are experiencing issues, try setting this to <code>false</code> and manually call
+<a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a> on the guilds you want.
+</p></div>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers.md&amp;value=---%0Auid%3A%20Kook.WebSocket.KookSocketConfig.AlwaysDownloadUsers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L81">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L83">View Source</a>
   </span>
   <a id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers_" data-uid="Kook.WebSocket.KookSocketConfig.AlwaysDownloadUsers*"></a>
   <h4 id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers" data-uid="Kook.WebSocket.KookSocketConfig.AlwaysDownloadUsers">AlwaysDownloadUsers</h4>
@@ -297,9 +338,11 @@ var client = new KookSocketClient(config);</code></pre>
   </table>
   <h5 id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+    Setting this property to <code>true</code> will cause the client to download all users
+    for all guilds upon startup.
     Please note that it can be difficult to fill the cache completely on large guilds depending on the
     traffic. If you are experiencing issues, try setting this to <code>false</code> and manually call
-<a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadUsersAsync_IEnumerable_Kook_IGuild__">DownloadUsersAsync(IEnumerable&lt;IGuild&gt;)</a> on the guilds you want.
+<a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadUsersAsync_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadUsersAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a> on the guilds you want.
 </p></div>
 </div>
   <span class="small pull-right mobile-hide">
@@ -307,7 +350,7 @@ var client = new KookSocketClient(config);</code></pre>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_KookSocketConfig_AlwaysDownloadVoiceStates.md&amp;value=---%0Auid%3A%20Kook.WebSocket.KookSocketConfig.AlwaysDownloadVoiceStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L93">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L97">View Source</a>
   </span>
   <a id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadVoiceStates_" data-uid="Kook.WebSocket.KookSocketConfig.AlwaysDownloadVoiceStates*"></a>
   <h4 id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadVoiceStates" data-uid="Kook.WebSocket.KookSocketConfig.AlwaysDownloadVoiceStates">AlwaysDownloadVoiceStates</h4>
@@ -335,9 +378,11 @@ var client = new KookSocketClient(config);</code></pre>
   </table>
   <h5 id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadVoiceStates_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+    Setting this property to <code>true</code> will cause the client to download all voice states
+    for all guilds upon startup.
     Please note that it can be difficult to fill the cache completely on large guilds depending on the
     traffic. If you are experiencing issues, try setting this to <code>false</code> and manually call
-<a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadVoiceStatesAsync_IEnumerable_Kook_IGuild__">DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt;)</a> on the guilds you want.
+<a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadVoiceStatesAsync_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a> on the guilds you want.
 </p></div>
 </div>
   <span class="small pull-right mobile-hide">
@@ -440,7 +485,7 @@ Setting this property to <code>null</code>disables this check.</p>
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_KookSocketConfig_MaxWaitBetweenGuildAvailablesBeforeReady.md&amp;value=---%0Auid%3A%20Kook.WebSocket.KookSocketConfig.MaxWaitBetweenGuildAvailablesBeforeReady%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L108">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/master/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L127">View Source</a>
   </span>
   <a id="Kook_WebSocket_KookSocketConfig_MaxWaitBetweenGuildAvailablesBeforeReady_" data-uid="Kook.WebSocket.KookSocketConfig.MaxWaitBetweenGuildAvailablesBeforeReady*"></a>
   <h4 id="Kook_WebSocket_KookSocketConfig_MaxWaitBetweenGuildAvailablesBeforeReady" data-uid="Kook.WebSocket.KookSocketConfig.MaxWaitBetweenGuildAvailablesBeforeReady">MaxWaitBetweenGuildAvailablesBeforeReady</h4>
