@@ -92,13 +92,46 @@
                     <article class="content wrap" id="_content" data-uid="Changelog">
 <h1 id="变更日志">变更日志</h1>
 
+<h2 id="v020-2022-12-25">v0.2.0 [2022-12-25]</h2>
+<h2 id="更新路线">更新路线</h2>
+<p>此版本将非官方列出的接口实现分离到单独的包中，即 <code>INestedChannel.SyncPermissionsAsync</code>，使用此接口的开发者现在应该安装
+Kook.Net.Experimental 包。</p>
+<h2 id="移除">移除</h2>
+<ul>
+<li>移除了接口定义上的方法 <code>INestedChannel.SyncPermissionsAsync</code>，接口的实现现已移动至 Kook.Net.Experimental 包中</li>
+</ul>
+<h2 id="新增">新增</h2>
+<ul>
+<li>新增 Kook.Net.Experimental 包，用于实现非官方列出的接口</li>
+</ul>
+<h2 id="修复">修复</h2>
+<ul>
+<li>修复了 <code>IGuild.OpenId</code> 为空时可能导致的空引用异常</li>
+</ul>
+<h2 id="其它">其它</h2>
+<ul>
+<li>修复了不正确的代码缩进</li>
+</ul>
+<h2 id="v012-2022-12-18">v0.1.2 [2022-12-18]</h2>
+<h2 id="更新路线-1">更新路线</h2>
+<p>此版本将 <code>SocketGuild.MemberCount</code> 的类型从 <code>int</code> 更改为 <code>int?</code>，其中 <code>null</code> 值表示未知的服务器成员数量。此外，类似的更改发生也在
+<code>SocketGuild.HasAllMembers</code> 上。所有依赖这两个属性的用法都需要更新。</p>
+<h2 id="变更">变更</h2>
+<ul>
+<li><code>AlwaysDownloadUsers</code> 也将定义是否在启动时加载服务器成员数量</li>
+</ul>
+<h2 id="修复-1">修复</h2>
+<ul>
+<li>修复了修改语音频道时应用的不正确的先决条件</li>
+<li>修复了不正确的文档</li>
+</ul>
 <h2 id="v011-2022-11-20">v0.1.1 [2022-11-20]</h2>
-<h3 id="新增">新增</h3>
+<h3 id="新增-1">新增</h3>
 <ul>
 <li>新增 @Kook.IGuild.GetActiveBoostSubscriptionsAsync</li>
 <li>JSON 反序列化失败时将输出报文本体至日志管理器</li>
 </ul>
-<h3 id="修复">修复</h3>
+<h3 id="修复-2">修复</h3>
 <ul>
 <li>修复 <a class="xref" href="../api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserUnbanned">UserUnbanned</a> 未能正常触发的问题</li>
 <li>修复 <a class="xref" href="../api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildAvailable">GuildAvailable</a> 事件触发时 <a class="xref" href="../api/Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadVoiceStatesAsync_">DownloadVoiceStatesAsync</a>
