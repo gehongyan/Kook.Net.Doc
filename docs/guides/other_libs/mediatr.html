@@ -192,7 +192,7 @@ public class KookEventListener
 实例用于订阅事件，本示例仅演示了 <code>MessageReceived</code>，其他事件也可以使用同样的方式，
 但事件处理程序使用了 MediatR 将事件发布到所有监听此事件的的消息通知处理程序。</p>
 <h2 id="添加事件订阅者添加到依赖注入服务容器中">添加事件订阅者添加到依赖注入服务容器中</h2>
-<p>要开始监听事件，需在入口点函数内调用 <code>KookEventListener</code> 类的 <code>StartAsync()</code> 
+<p>要开始监听事件，需在入口点函数内调用 <code>KookEventListener</code> 类的 <code>StartAsync()</code>
 方法，在此之前，需在依赖注入容器中注册 <code>KookEventListener</code> 类，并在入口点函数中获取对它的引用。</p>
 <pre><code class="lang-csharp" name="Starting the event listener">// Program.cs
 

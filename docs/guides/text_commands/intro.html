@@ -202,7 +202,7 @@ public class InfoModule : ModuleBase&lt;SocketCommandContext&gt;
 <p>使用 <a class="xref" href="../../api/Kook.Commands.ModuleBase-1.html">ModuleBase</a> 的派生类可以指定不同类型的上下文。
 例如，[SocketCommandContext] 中的上下文中的属性为是 Socket 实体，不再需要进行强制类型转换。</p>
 <p>回复消息也可通过调用以 <code>Reply</code> 为前缀的方法完成，无需调用上下文中频道内发送消息的方法来回复命令。</p>
-<div class="WARNING"><h5>Warning</h5><p>上下文的类型不应该混合使用，使用 <code>CommandContext</code> 上下文的模块与使用 <code>SocketCommandContext</code> 
+<div class="WARNING"><h5>Warning</h5><p>上下文的类型不应该混合使用，使用 <code>CommandContext</code> 上下文的模块与使用 <code>SocketCommandContext</code>
 的模块不可同时使用。</p>
 </div>
 <div class="TIP"><h5>Tip</h5><p>模块的完整代码示例：</p>
@@ -263,7 +263,7 @@ public class SampleModule : ModuleBase&lt;SocketCommandContext&gt;
 <div class="TIP"><h5>Tip</h5><p>模块构造函数也可以将 <code>IServiceProvider</code> 作为参数，并从中手动抽取所需服务，但并不推荐。</p>
 </div>
 <h3 id="模块属性">模块属性</h3>
-<p>具有公共 <code>set</code> 访问器属性的模块在模块构造后会被服务容器中，详细信息可参考 <a class="xref" href="dependency-injection.html">&#20381;&#36182;&#27880;&#20837;</a> 。</p>
+<p>具有公共 <code>set</code> 访问器属性的模块在模块构造后会被依赖服务注入，详细信息可参考 <a class="xref" href="dependency-injection.html">&#20381;&#36182;&#27880;&#20837;</a> 。</p>
 <h3 id="模块组">模块组</h3>
 <p>模块组为一组具有相同名称前缀的命令，要声明模块组，可标记特性 <a class="xref" href="../../api/Kook.Commands.GroupAttribute.html">GroupAttribute</a> 。</p>
 <p>在模块组内，如果命令的 CommandAttribute 特性标签中不传入名称参数，则为创建以该组名称作为命令名称的命令。</p>

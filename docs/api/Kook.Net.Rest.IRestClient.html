@@ -112,7 +112,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_Rest_IRestClient_SendAsync_HttpMethod_System_String_CancellationToken_System_String_IEnumerable_KeyValuePair_System_String_IEnumerable_System_String____.md&amp;value=---%0Auid%3A%20Kook.Net.Rest.IRestClient.SendAsync(HttpMethod%2CSystem.String%2CCancellationToken%2CSystem.String%2CIEnumerable%7BKeyValuePair%7BSystem.String%2CIEnumerable%7BSystem.String%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/0a4be857dd5b400397a7683146ce0a7aed16eab9/src/Kook.Net.Core/Net/Rest/IRestClient.cs/#L29">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/d3656d4520938c69d3263698d98b5d8f898c4b0b/src/Kook.Net.Core/Net/Rest/IRestClient.cs/#L30">View Source</a>
   </span>
   <a id="Kook_Net_Rest_IRestClient_SendAsync_" data-uid="Kook.Net.Rest.IRestClient.SendAsync*"></a>
   <h4 id="Kook_Net_Rest_IRestClient_SendAsync_HttpMethod_System_String_CancellationToken_System_String_IEnumerable_KeyValuePair_System_String_IEnumerable_System_String____" data-uid="Kook.Net.Rest.IRestClient.SendAsync(HttpMethod,System.String,CancellationToken,System.String,IEnumerable{KeyValuePair{System.String,IEnumerable{System.String}}})">SendAsync(HttpMethod, String, CancellationToken, String, IEnumerable&lt;KeyValuePair&lt;String, IEnumerable&lt;String&gt;&gt;&gt;)</h4>
@@ -136,7 +136,7 @@
       <tr>
         <td><span class="xref">HttpMethod</span></td>
         <td><span class="parametername">method</span></td>
-        <td><p>The method used to send this request (i.e. HTTP verb such as <code>GET</code>, <code>POST</code>).</p>
+        <td><p>The method used to send this request (see <see cref="!:HttpMethod"></see>).</p>
 </td>
       </tr>
       <tr>
@@ -176,7 +176,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Net.Rest.RestResponse.html">RestResponse</a>&gt;</td>
-        <td></td>
+        <td><p>A task that represents an asynchronous send operation. The task result contains the REST response of the request. </p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -185,11 +186,12 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_Rest_IRestClient_SendAsync_HttpMethod_System_String_IReadOnlyDictionary_System_String_System_Object__CancellationToken_System_String_IEnumerable_KeyValuePair_System_String_IEnumerable_System_String____.md&amp;value=---%0Auid%3A%20Kook.Net.Rest.IRestClient.SendAsync(HttpMethod%2CSystem.String%2CIReadOnlyDictionary%7BSystem.String%2CSystem.Object%7D%2CCancellationToken%2CSystem.String%2CIEnumerable%7BKeyValuePair%7BSystem.String%2CIEnumerable%7BSystem.String%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/0a4be857dd5b400397a7683146ce0a7aed16eab9/src/Kook.Net.Core/Net/Rest/IRestClient.cs/#L33">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/d3656d4520938c69d3263698d98b5d8f898c4b0b/src/Kook.Net.Core/Net/Rest/IRestClient.cs/#L56">View Source</a>
   </span>
   <a id="Kook_Net_Rest_IRestClient_SendAsync_" data-uid="Kook.Net.Rest.IRestClient.SendAsync*"></a>
   <h4 id="Kook_Net_Rest_IRestClient_SendAsync_HttpMethod_System_String_IReadOnlyDictionary_System_String_System_Object__CancellationToken_System_String_IEnumerable_KeyValuePair_System_String_IEnumerable_System_String____" data-uid="Kook.Net.Rest.IRestClient.SendAsync(HttpMethod,System.String,IReadOnlyDictionary{System.String,System.Object},CancellationToken,System.String,IEnumerable{KeyValuePair{System.String,IEnumerable{System.String}}})">SendAsync(HttpMethod, String, IReadOnlyDictionary&lt;String, Object&gt;, CancellationToken, String, IEnumerable&lt;KeyValuePair&lt;String, IEnumerable&lt;String&gt;&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a REST request with multipart parameters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -208,32 +210,38 @@
       <tr>
         <td><span class="xref">HttpMethod</span></td>
         <td><span class="parametername">method</span></td>
-        <td></td>
+        <td><p>The method used to send this request (see <see cref="!:HttpMethod"></see>).</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">endpoint</span></td>
-        <td></td>
+        <td><p>The endpoint to send this request to.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">IReadOnlyDictionary</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
         <td><span class="parametername">multipartParams</span></td>
-        <td></td>
+        <td><p>The multipart parameters.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancelToken</span></td>
-        <td></td>
+        <td><p>The cancellation token used to cancel the task.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">reason</span></td>
-        <td></td>
+        <td><p>The audit log reason.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;&gt;</td>
         <td><span class="parametername">requestHeaders</span></td>
-        <td></td>
+        <td><p>Additional headers to be sent with the request.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -248,7 +256,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Net.Rest.RestResponse.html">RestResponse</a>&gt;</td>
-        <td></td>
+        <td><p>A task that represents an asynchronous send operation. The task result contains the REST response of the request. </p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -257,11 +266,12 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_Rest_IRestClient_SendAsync_HttpMethod_System_String_System_String_CancellationToken_System_String_IEnumerable_KeyValuePair_System_String_IEnumerable_System_String____.md&amp;value=---%0Auid%3A%20Kook.Net.Rest.IRestClient.SendAsync(HttpMethod%2CSystem.String%2CSystem.String%2CCancellationToken%2CSystem.String%2CIEnumerable%7BKeyValuePair%7BSystem.String%2CIEnumerable%7BSystem.String%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/0a4be857dd5b400397a7683146ce0a7aed16eab9/src/Kook.Net.Core/Net/Rest/IRestClient.cs/#L31">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/d3656d4520938c69d3263698d98b5d8f898c4b0b/src/Kook.Net.Core/Net/Rest/IRestClient.cs/#L43">View Source</a>
   </span>
   <a id="Kook_Net_Rest_IRestClient_SendAsync_" data-uid="Kook.Net.Rest.IRestClient.SendAsync*"></a>
   <h4 id="Kook_Net_Rest_IRestClient_SendAsync_HttpMethod_System_String_System_String_CancellationToken_System_String_IEnumerable_KeyValuePair_System_String_IEnumerable_System_String____" data-uid="Kook.Net.Rest.IRestClient.SendAsync(HttpMethod,System.String,System.String,CancellationToken,System.String,IEnumerable{KeyValuePair{System.String,IEnumerable{System.String}}})">SendAsync(HttpMethod, String, String, CancellationToken, String, IEnumerable&lt;KeyValuePair&lt;String, IEnumerable&lt;String&gt;&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a REST request with a JSON body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -280,32 +290,38 @@
       <tr>
         <td><span class="xref">HttpMethod</span></td>
         <td><span class="parametername">method</span></td>
-        <td></td>
+        <td><p>The method used to send this request (see <see cref="!:HttpMethod"></see>).</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">endpoint</span></td>
-        <td></td>
+        <td><p>The endpoint to send this request to.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">json</span></td>
-        <td></td>
+        <td><p>The JSON body of the request.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancelToken</span></td>
-        <td></td>
+        <td><p>The cancellation token used to cancel the task.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">reason</span></td>
-        <td></td>
+        <td><p>The audit log reason.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;&gt;</td>
         <td><span class="parametername">requestHeaders</span></td>
-        <td></td>
+        <td><p>Additional headers to be sent with the request.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -320,7 +336,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Net.Rest.RestResponse.html">RestResponse</a>&gt;</td>
-        <td></td>
+        <td><p>A task that represents an asynchronous send operation. The task result contains the REST response of the request. </p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -329,7 +346,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_Rest_IRestClient_SetCancelToken_CancellationToken_.md&amp;value=---%0Auid%3A%20Kook.Net.Rest.IRestClient.SetCancelToken(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/0a4be857dd5b400397a7683146ce0a7aed16eab9/src/Kook.Net.Core/Net/Rest/IRestClient.cs/#L18">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/d3656d4520938c69d3263698d98b5d8f898c4b0b/src/Kook.Net.Core/Net/Rest/IRestClient.cs/#L19">View Source</a>
   </span>
   <a id="Kook_Net_Rest_IRestClient_SetCancelToken_" data-uid="Kook.Net.Rest.IRestClient.SetCancelToken*"></a>
   <h4 id="Kook_Net_Rest_IRestClient_SetCancelToken_CancellationToken_" data-uid="Kook.Net.Rest.IRestClient.SetCancelToken(CancellationToken)">SetCancelToken(CancellationToken)</h4>
@@ -363,7 +380,7 @@
     <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_Rest_IRestClient_SetHeader_System_String_System_String_.md&amp;value=---%0Auid%3A%20Kook.Net.Rest.IRestClient.SetHeader(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/0a4be857dd5b400397a7683146ce0a7aed16eab9/src/Kook.Net.Core/Net/Rest/IRestClient.cs/#L13">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/d3656d4520938c69d3263698d98b5d8f898c4b0b/src/Kook.Net.Core/Net/Rest/IRestClient.cs/#L13">View Source</a>
   </span>
   <a id="Kook_Net_Rest_IRestClient_SetHeader_" data-uid="Kook.Net.Rest.IRestClient.SetHeader*"></a>
   <h4 id="Kook_Net_Rest_IRestClient_SetHeader_System_String_System_String_" data-uid="Kook.Net.Rest.IRestClient.SetHeader(System.String,System.String)">SetHeader(String, String)</h4>

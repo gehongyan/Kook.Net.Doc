@@ -94,7 +94,7 @@
 
 <p>Kook.Net 中提供了一个日志事件，所有的日志消息都会通过此事件传递。</p>
 <p>有关 Kook.Net 中的事件，请参阅 <a class="xref" href="events.html">事件</a> 章节。</p>
-<div class="WARNING"><h5>Warning</h5><p>Kook.Net 中所有的日志实现处理程序都将在网关线程上同步执行， 
+<div class="WARNING"><h5>Warning</h5><p>Kook.Net 中所有的日志实现处理程序都将在网关线程上同步执行，
 如果您要将日志消息输出到 Web API 中（例如：Sentry、Stackdriver、KOOK 频道等），
 建议将输出程序包装在 <code>Task.Run</code> 中，以避免网关线程在等待数据日志输出时阻塞。</p>
 </div>

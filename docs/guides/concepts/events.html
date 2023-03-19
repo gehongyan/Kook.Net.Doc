@@ -95,7 +95,7 @@
 <p>Kook.Net 中的事件采用与标准 .NET 事件模式类似的方式实现，
 不同的是，Kook.Net 中的事件类型都为 <a href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>，
 事件参数传递不使用 <a href="https://docs.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>，而是直接传递到事件处理程序中。</p>
-<p>这使得事件处理程序可以直接在异步上下文中执行，事件返回类型为 
+<p>这使得事件处理程序可以直接在异步上下文中执行，事件返回类型为
 <a href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>，而不是 <code>async void</code>。</p>
 <h2 id="用法">用法</h2>
 <p>要从事件中接收数据，只需通过 C# 委托的事件模式进行订阅。</p>
