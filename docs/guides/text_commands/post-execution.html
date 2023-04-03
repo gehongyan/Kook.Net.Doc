@@ -204,9 +204,7 @@ public async Task HandleCommandAsync(SocketMessage msg)
     var context = new SocketCommandContext(_client, message);
     await _commands.ExecuteAsync(context, argPos, _services);
 }
-</code></pre><p>So now we have a streamlined post-execution pipeline, great! What&#39;s
-next? We can take this further by using <a class="xref" href="../../api/Kook.Commands.RuntimeResult.html">RuntimeResult</a>.</p>
-<h3 id="runtimeresult">RuntimeResult</h3>
+</code></pre><h3 id="runtimeresult">RuntimeResult</h3>
 <p>命令执行完成后可以返回 <code>RuntimeResult</code> 对象，<code>RuntimeResult</code>
 是一个结果类，可以用来表示命令执行结果的逻辑。</p>
 <p>由于 <a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_ExecuteAsync_">ExecuteAsync</a> 中异步执行的命令始终无法返回错误信息，<a class="xref" href="../../api/Kook.Commands.RuntimeResult.html">RuntimeResult</a>

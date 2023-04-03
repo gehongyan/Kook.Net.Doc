@@ -92,19 +92,177 @@
                     <article class="content wrap" id="_content" data-uid="Changelog">
 <h1 id="变更日志">变更日志</h1>
 
-<h2 id="v031-2023-03-19">v0.3.1 [2023-03-19]</h2>
+<h2 id="v040-2023-04-03">v0.4.0 [2023-04-03]</h2>
+<h3 id="更新路线">更新路线</h3>
+<p>出于以下几项原因，此版本对 <code>BaseSocketClient</code> 中的部分事件所传递的参数类型进行了调整：</p>
+<ul>
+<li>部分参数必定可取，无需使用 <code>Cacheable</code> 进行封装，例如 <code>MessageDeleted</code> 与 <code>UserConnected</code>；</li>
+<li>网关所下发的数据不完整，导致部分事件传递的参数存在缺失的情况，此类事件参数已调整为 <code>Cacheable</code> 封装的实体，修复实体
+ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题；</li>
+<li>网关所下发的数据不完整，原处理逻辑为通过 Rest 客户端发起 API
+请求获取完整数据，在大型服务器内可能会导致性能不佳或超速等问题，例如 <code>GuildMemberOnline</code> 与
+<code>GuildMemberOffline</code>，此类事件参数已调整为 <code>Cacheable</code> 封装的实体，可通过 <code>GetOrDownloadAsync</code> 方法按需获取完整数据；</li>
+<li>部分事件所传递的参数类型过于具体，导致类型不匹配而传递空值，例如 <code>ReactionAdded</code>；</li>
+<li>部分事件所传递的参数类型过于宽泛，例如 <code>MessageDeleted</code> 与 <code>UserConnected</code>，可以避免不必要的模式匹配</li>
+<li>部分事件传递参数缺失，例如 <code>UserBanned</code></li>
+<li>部分事件传递了过度冗余的参数，例如 <code>MessageButtonClicked</code></li>
+</ul>
+<p>事件参数所发生的具体变更可参阅文末的附录，对涉及到的事件的应用都需要进行相应的更新。</p>
+<p>KMarkdown 格式化帮助类 <code>Format</code> 中的各格式化方法皆已变更为扩展方法，并新增可选参数
+<code>sanitize</code>，以支持是否对文本内的特殊字符进行转义，默认为 <code>true</code>。扩展方法的调用方式仍然兼容原有的静态方法调用方式。
+默认情况下，各格式化方法会对文本内与 KMarkdown 语法冲突的特殊字符进行转义，以避免 KMarkdown 语法解析错误。
+此特性默认启用，可通过 <code>sanitize</code> 参数禁用。所有涉及到传入此方法的文本参数如已对特殊字符进行转义，
+则应将 <code>sanitize</code> 参数设置为 <code>false</code>，或调整传入参数为未转义的原始文本。</p>
+<p><code>CardJsonExtension</code> 类中的 <code>Parse</code> 与 <code>TryParse</code> 方法已重命名为 <code>ParseSingle</code> 与 <code>TryParseSingle</code>，
+以避免与解析多个卡片时使用的 <code>ParseMany</code> 与 <code>TryParseMany</code> 方法产生冲突。所有涉及到此方法的调用都需要进行相应的更新。</p>
+<p><code>IGuild</code> 及 <code>IRecommendInfo</code> 的 <code>Features</code> 属性类型原为 <code>object[]</code>，现已实现为 <code>GuildFeatures</code>
+类型，所有涉及到此属性的调用都需要进行相应的更新。</p>
+<p><code>RestPresence</code> 命名空间已修正为 <code>Kook.Rest</code>。所有涉及到 <code>RestPresence</code> 的调用都需要进行命名空间引用的更新。</p>
 <h3 id="新增">新增</h3>
+<ul>
+<li>新增好友管理与用户屏蔽管理相关方法，变更详情参见文末的附录</li>
+<li>为 <code>Cacheable</code> 与 <code>Qupte</code> 类新增调试显示文本</li>
+<li><code>KookSocketConfig</code> 新增 <code>MaxJoinedGuildDataFetchingRetryTimes</code> 与 <code>JoinedGuildDataFetchingRetryDelay</code>
+属性，控制加入服务器时的数据获取重试次数与重试间隔</li>
+<li><code>CardJsonExtension</code> 新增 <code>ParseMany</code> 与 <code>TryParseMany</code> 方法</li>
+<li>（实验性功能）新增 <code>IVoiceRegion.MinimumBoostLevel</code> 属性</li>
+<li>（实验性功能）<code>KookRestClient</code> 新增 <code>ValidateCardAsync</code> 与 <code>ValidateCardsAsync</code> 方法</li>
+</ul>
+<h3 id="变更">变更</h3>
+<ul>
+<li>变更 <code>BaseSocketClient</code> 中的部分事件所传递的参数类型，变更详情参见文末的附录</li>
+<li><code>Format</code> 帮助类各格式化方法已变更为扩展方法，并新增可选参数 <code>sanitize</code>，以支持是否对文本内的特殊字符进行转义，默认为 <code>true</code></li>
+<li>重命名 <code>CardJsonExtension</code> 的 <code>Parse</code> 与 <code>TryParse</code> 为 <code>ParseSingle</code> 与 <code>TryParseSingle</code></li>
+<li>实现 <code>IGuild</code> 及 <code>IRecommendInfo</code> 的 <code>Features</code> 属性为 <code>GuildFeatures</code> 类型</li>
+<li>修正 <code>RestPresence</code> 命名空间为 <code>Kook.Rest</code></li>
+<li>（实验性功能）<code>KookRestClient.GetAdminGuildsAsync</code> 方法现已支持 Bot 类型认证</li>
+</ul>
+<h3 id="修复">修复</h3>
+<ul>
+<li>修复 <code>Format.Quote</code> 与 <code>Format.BlockQuote</code> 方法结果在 KOOK 中显示异常的问题</li>
+<li>修复 <code>CountdownModuleBuilder.Build</code> 抛出异常时的错误信息错误的问题</li>
+<li>修复 <code>BaseSocketClient.DirectMessageUpdated</code> 可能会传递错误的用户实体的问题</li>
+<li>修复 <code>BaseSocketClient</code> 与消息相关的事件在传递包含引用的消息实体时 <code>Author</code> 属性在用户未缓存时为空的问题</li>
+<li>修复 <code>IGuild.OwnerId</code> 为 <code>0</code> 的问题</li>
+<li>修复 <code>BaseSocketClient.Pinned</code> 与 <code>BaseSocketClient.Unpinned</code> 事件所传递的消息未正确设置 <code>IsPinned</code> 属性的问题</li>
+<li>修复 <code>IPresence.ActiveClient</code> 属性可能会被意外清空的问题</li>
+<li>修复 <code>IPresence</code> 的调试显示信息格式不正确的问题</li>
+<li>修复 <code>IRestClient</code> 的默认实现在源代码启用 <code>DEBUG_REST</code> 预处理器指令调试高并发请求时可能会抛出异常的问题</li>
+<li>修复 <code>Quote.Empty</code> 不为静态属性的问题</li>
+</ul>
+<h3 id="优化">优化</h3>
+<ul>
+<li>修复 <code>KookRestApiClient</code> 缺失预处理器指令的问题</li>
+<li>优化 <code>SocketUser.UpdateIntimacyAsync</code> 方法对 <code>IUser</code> 接口的实现</li>
+<li>优化 <code>NumberBooleanConverter</code> 的使用</li>
+<li><code>KookSocketClient</code> 接收乱序报文或对所接收的事件报文处理不正确时将报文内容到日志</li>
+<li><code>KookSocketClient</code> 打印异常报文时将使用传入的 <code>serializerOptions</code> 序列化选项</li>
+<li>完善 <code>BaseSocketClient</code> 事件的 XML 文档</li>
+</ul>
+<h3 id="其他">其他</h3>
+<ul>
+<li>由于 KOOK 服务端已修复创建角色时部分字段值缺失的问题，相关提交已还原</li>
+<li>修正部分文档内容错误</li>
+<li>修正集成测试所创建的测试服务器未被正确删除的问题</li>
+</ul>
+<h3 id="附录">附录</h3>
+<p><strong>新增接口列表：</strong></p>
+<ul>
+<li>获取所有好友：<code>IKookClient.GetFriendsAsync</code></li>
+<li>请求添加好友：<code>IUser.RequestFriendAsync</code></li>
+<li>删除好友：<code>IUser.RemoveFriendAsync</code></li>
+<li>获取所有好友请求：<code>IKookClient.GetFriendRequestsAsync</code></li>
+<li>接受好友请求：<code>IFriendRequest.AcceptAsync</code></li>
+<li>拒绝好友请求：<code>IFriendRequest.DeclineAsync</code></li>
+<li>获取所有被屏蔽用户：<code>IKookClient.GetBlockedUsersAsync</code></li>
+<li>屏蔽用户：<code>IUser.BlockAsync</code></li>
+<li>取消屏蔽用户：<code>IUser.UnblockAsync</code></li>
+</ul>
+<p><strong><code>BaseSocketClient</code> 中变更参数的事件列表：</strong></p>
+<p><code>ReactionAdded</code> 与 <code>ReactionRemoved</code></p>
+<ul>
+<li><code>Cacheable&lt;IUserMessage, Guid&gt;</code> → <code>Cacheable&lt;IMessage, ulong&gt;</code></li>
+<li><code>Cacheable&lt;IMessageChannel, ulong&gt;</code> → <code>ISocketMessageChannel</code></li>
+</ul>
+<p><code>DirectReactionAdded</code> 与 <code>DirectReactionRemoved</code></p>
+<ul>
+<li><code>Cacheable&lt;IUserMessage, Guid&gt;</code> → <code>Cacheable&lt;IMessage, ulong&gt;</code></li>
+</ul>
+<p><code>MessageDeleted</code></p>
+<ul>
+<li><code>Cacheable&lt;IMessageChannel, ulong&gt;</code> → <code>ISocketMessageChannel</code></li>
+</ul>
+<p><code>MessageUpdated</code></p>
+<ul>
+<li><code>Cacheable&lt;IMessage, Guid&gt;</code> → <code>Cacheable&lt;SocketMessage, Guid&gt;</code></li>
+<li><code>SocketMessage</code> → <code>Cacheable&lt;SocketMessage, Guid&gt;</code></li>
+</ul>
+<p><code>MessagePinned</code> 与 <code>MessageUnpinned</code></p>
+<ul>
+<li><code>Cacheable&lt;IMessage, Guid&gt;</code> → <code>Cacheable&lt;SocketMessage, Guid&gt;</code></li>
+<li><code>SocketMessage</code> → <code>Cacheable&lt;SocketMessage, Guid&gt;</code></li>
+<li><code>SocketGuildUser</code> → <code>Cacheable&lt;SocketGuildUser, ulong&gt;</code></li>
+</ul>
+<p><code>DirectMessageUpdated</code></p>
+<ul>
+<li><code>SocketMessage</code> → <code>Cacheable&lt;SocketMessage, Guid&gt;</code></li>
+</ul>
+<p><code>UserLeft</code></p>
+<ul>
+<li><code>SocketUser</code> → <code>Cacheable&lt;SocketUser, ulong&gt;</code></li>
+</ul>
+<p><code>UserBanned</code></p>
+<ul>
+<li><code>IReadOnlyCollection&lt;SocketUser&gt;</code> → <code>IReadOnlyCollection&lt;Cacheable&lt;SocketUser, ulong&gt;&gt;</code></li>
+<li><code>SocketUser</code> → <code>Cacheable&lt;SocketUser, ulong&gt;</code></li>
+<li>新增 <code>string</code> 参数表示加入黑名单的原因</li>
+</ul>
+<p><code>UserUnbanned</code></p>
+<ul>
+<li><code>IReadOnlyCollection&lt;SocketUser&gt;</code> → <code>IReadOnlyCollection&lt;Cacheable&lt;SocketUser, ulong&gt;&gt;</code></li>
+<li><code>SocketUser</code> → <code>Cacheable&lt;SocketUser, ulong&gt;</code></li>
+</ul>
+<p><code>UserUpdated</code></p>
+<ul>
+<li><code>SocketUser</code> → <code>Cacheable&lt;SocketUser, ulong&gt;</code></li>
+</ul>
+<p><code>GuildMemberUpdated</code></p>
+<ul>
+<li><code>SocketGuildUser</code> → <code>Cacheable&lt;SocketGuildUser, ulong&gt;</code></li>
+</ul>
+<p><code>GuildMemberOnline</code> 与 <code>GuildMemberOffline</code></p>
+<ul>
+<li><code>IReadOnlyCollection&lt;SocketGuildUser&gt;</code> → <code>IReadOnlyCollection&lt;Cacheable&lt;SocketGuildUser, ulong&gt;&gt;</code></li>
+</ul>
+<p><code>UserConnected</code> 与 <code>UserDisconnected</code></p>
+<ul>
+<li><code>SocketUser</code> → <code>Cacheable&lt;SocketGuildUser, ulong&gt;</code></li>
+<li>移除 <code>SocketGuild</code> 参数，请从 <code>SocketVoiceChannel.Guild</code> 获取</li>
+</ul>
+<p><code>MessageButtonClicked</code></p>
+<ul>
+<li><code>SocketUser</code> → <code>Cacheable&lt;SocketGuildUser, ulong&gt;</code></li>
+<li><code>IMessage</code> → <code>Cacheable&lt;IMessage, Guid&gt;</code></li>
+<li>移除 <code>SocketGuild</code> 参数，请从 <code>SocketTextChannel.Guild</code> 获取</li>
+</ul>
+<p><code>DirectMessageButtonClicked</code></p>
+<ul>
+<li><code>SocketUser</code> → <code>Cacheable&lt;SocketUser, ulong&gt;</code></li>
+<li><code>IMessage</code> → <code>Cacheable&lt;IMessage, Guid&gt;</code></li>
+</ul>
+<h2 id="v031-2023-03-19">v0.3.1 [2023-03-19]</h2>
+<h3 id="新增-1">新增</h3>
 <ul>
 <li>新增 <a href="xref:Kook.Rest.CardJsonExtension.ToJsonString(Kook.ICard,System.Boolean)">ICard.ToJsonString</a> 及
 <a href="xref:Kook.Rest.CardJsonExtension.ToJsonString(Kook.ICardBuilder,System.Boolean)">ICardBuilder.ToJsonString</a> 以支持卡片 JSON
-序列化，新增 <a href="xref:Kook.Rest.CardJsonExtension.Parse(System.String)">CardJsonExtension.Parse</a> 及
-<a href="xref:Kook.Rest.CardJsonExtension.TryParse(System.String,Kook.ICardBuilder@)">CardJsonExtension.TryParse</a> 以支持卡片 JSON 反序列化</li>
+序列化，新增 <a href="xref:Kook.Rest.CardJsonExtension.ParseSingle(System.String)">CardJsonExtension.Parse</a> 及
+<a href="xref:Kook.Rest.CardJsonExtension.TryParseSingle(System.String,Kook.ICardBuilder@)">CardJsonExtension.TryParse</a> 以支持卡片 JSON 反序列化</li>
 </ul>
 <h2 id="v030-2023-03-19">v0.3.0 [2023-03-19]</h2>
-<h3 id="更新路线">更新路线</h3>
-<p>此版本将 <a class="xref" href="../api/Kook.IGuild.html#Kook_IGuild_CreateRoleAsync_">IGuild.CreateRoleAsync</a> 中的默认参数 <code>everyoneHandling</code>
+<h3 id="更新路线-1">更新路线</h3>
+<p>此版本将 <a class="xref" href="../api/Kook.IUserMessage.html#Kook_IUserMessage_Resolve_">IUserMessage.Resolve</a> 中的默认参数 <code>everyoneHandling</code>
 变更为 <a class="xref" href="../api/Kook.TagHandling.html#Kook_TagHandling_Name">TagHandling.Name</a>，所有使用此方法的用法都需要留意此变更。</p>
-<h3 id="新增-1">新增</h3>
+<h3 id="新增-2">新增</h3>
 <ul>
 <li><a class="xref" href="../api/Kook.IKookClient.html">IKookClient</a> 接口新增方法重载
 <a class="xref" href="../api/Kook.IKookClient.html#Kook_IKookClient_GetUserAsync_System_String_System_String_Kook_RequestOptions_">GetUserAsync</a>，并为
@@ -112,7 +270,7 @@
 <li>新增支持通过 <a class="xref" href="../api/Kook.KookConfig.html#Kook_KookConfig_FormatUsersInBidirectionalUnicode">KookConfig.FormatUsersInBidirectionalUnicode</a>
 禁用针对双向 Unicode 格式化用户名字符串</li>
 </ul>
-<h3 id="修复">修复</h3>
+<h3 id="修复-1">修复</h3>
 <ul>
 <li>修复 <a class="xref" href="../api/Kook.IUserMessage.html#Kook_IUserMessage_Resolve_">IUserMessage.Resolve</a> 对全体成员与在线成员标签文本化不正确的问题</li>
 <li>修复 <a class="xref" href="../api/Kook.IGuild.html#Kook_IGuild_CreateRoleAsync_">IGuild.CreateRoleAsync</a> 反序列化结果失败的问题</li>
@@ -126,46 +284,46 @@
 <li>应用代码样式</li>
 </ul>
 <h2 id="v025-2023-03-16">v0.2.5 [2023-03-16]</h2>
-<h3 id="更新路线-1">更新路线</h3>
+<h3 id="更新路线-2">更新路线</h3>
 <p>此版本为 <a class="xref" href="../api/Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetGamesAsync_">KookRestClient.GetGamesAsync</a> 方法签名新增了可选可空参数
 <a class="xref" href="../api/Kook.GameCreationSource.html">GameCreationSource</a>，以支持获取指定创建来源的游戏信息。所有在向此方法传递位置实参
 <a class="xref" href="../api/Kook.RequestOptions.html">RequestOptions</a> 的用法都需要更新。</p>
-<h3 id="新增-2">新增</h3>
+<h3 id="新增-3">新增</h3>
 <ul>
 <li>为方法 <a class="xref" href="../api/Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetGamesAsync_">KookRestClient.GetGamesAsync</a>
 新增可选可空参数 <a class="xref" href="../api/Kook.GameCreationSource.html">GameCreationSource</a></li>
 </ul>
 <h2 id="v024-2023-03-09">v0.2.4 [2023-03-09]</h2>
-<h3 id="新增-3">新增</h3>
+<h3 id="新增-4">新增</h3>
 <ul>
 <li>新增支持解析角色 <a class="xref" href="../api/Kook.IRole.html">IRole</a> 的颜色类型 <a class="xref" href="../api/Kook.ColorType.html">ColorType</a> 及渐变色信息 <a class="xref" href="../api/Kook.GradientColor.html">GradientColor</a></li>
 </ul>
 <h2 id="v023-2023-01-19">v0.2.3 [2023-01-19]</h2>
-<h3 id="新增-4">新增</h3>
+<h3 id="新增-5">新增</h3>
 <ul>
 <li>为 Bearer 类型认证新增支持 <a class="xref" href="../api/Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_GetAdminGuildsAsync_">KookRestClient.GetAdminGuildsAsync</a></li>
 <li>新增 <a class="xref" href="../api/Kook.Format.html#Kook_Format_Colorize_">Format.Colorize</a> 用于 KMarkdown 文本颜色格式化</li>
 </ul>
-<h3 id="修复-1">修复</h3>
+<h3 id="修复-2">修复</h3>
 <ul>
 <li>修复 <a class="xref" href="../api/Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetGuildsAsync_">KookRestClient.GetGuildsAsync</a> 在服务器数量较大时下载数据过慢的问题</li>
 <li>（实验性功能）修复 <a class="xref" href="../api/Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetGuildsAsync_">KookRestClient.GetGuildsAsync</a> 在 Bearer 类型认证下构造对象失败的问题</li>
 <li>修复 <a class="xref" href="../api/Kook.Color.html">Color</a> 部分值不正确的问题</li>
 </ul>
 <h2 id="v022-2022-12-30">v0.2.2 [2022-12-30]</h2>
-<h3 id="修复-2">修复</h3>
+<h3 id="修复-3">修复</h3>
 <ul>
 <li>修复了 <a class="xref" href="../api/Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendCardAsync_">SocketTextChannel.SendCardAsync</a>
 与 <a class="xref" href="../api/Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendCardsAsync_">SocketTextChannel.SendCardsAsync</a>
 设置 <code>ephemeralUser</code> 参数不生效的问题</li>
 </ul>
 <h2 id="v021-2022-12-25">v0.2.1 [2022-12-25]</h2>
-<h3 id="修复-3">修复</h3>
+<h3 id="修复-4">修复</h3>
 <ul>
 <li>修复了导致启动失败的 JSON 转换器错误</li>
 </ul>
 <h2 id="v020-2022-12-25">v0.2.0 [2022-12-25]</h2>
-<h3 id="更新路线-2">更新路线</h3>
+<h3 id="更新路线-3">更新路线</h3>
 <p>此版本将非官方列出的接口实现分离到单独的包中，即
 <a class="xref" href="../api/Kook.Rest.RestTextChannelExperimentalExtensions.html#Kook_Rest_RestTextChannelExperimentalExtensions_SyncPermissionsAsync_">INestedChannel.SyncPermissionsAsync</a>
 等，使用此接口的开发者现在应该安装 Kook.Net.Experimental 包。</p>
@@ -173,11 +331,11 @@
 <ul>
 <li>移除了接口定义上的方法 <code>INestedChannel.SyncPermissionsAsync</code>，接口的实现现已移动至 Kook.Net.Experimental 包中</li>
 </ul>
-<h3 id="新增-5">新增</h3>
+<h3 id="新增-6">新增</h3>
 <ul>
 <li>新增 Kook.Net.Experimental 包，用于实现非官方列出的接口</li>
 </ul>
-<h3 id="修复-4">修复</h3>
+<h3 id="修复-5">修复</h3>
 <ul>
 <li>修复了 <a class="xref" href="../api/Kook.IGuild.html#Kook_IGuild_OpenId">IGuild.OpenId</a> 为空时可能导致的空引用异常</li>
 </ul>
@@ -186,25 +344,25 @@
 <li>修正了不正确的代码缩进</li>
 </ul>
 <h2 id="v012-2022-12-18">v0.1.2 [2022-12-18]</h2>
-<h3 id="更新路线-3">更新路线</h3>
+<h3 id="更新路线-4">更新路线</h3>
 <p>此版本将 <a class="xref" href="../api/Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_MemberCount">SocketGuild.MemberCount</a> 的类型从 <code>int</code> 更改为 <code>int?</code>，其中 <code>null</code> 值表示未知的服务器成员数量。此外，类似的更改发生也在
 <a class="xref" href="../api/Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_HasAllMembers">SocketGuild.HasAllMembers</a> 上。所有依赖这两个属性的用法都需要更新。</p>
-<h3 id="变更">变更</h3>
+<h3 id="变更-1">变更</h3>
 <ul>
 <li><a class="xref" href="../api/Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">KookSocketConfig.AlwaysDownloadUsers</a> 也将定义是否在启动时加载服务器成员数量</li>
 </ul>
-<h3 id="修复-5">修复</h3>
+<h3 id="修复-6">修复</h3>
 <ul>
 <li>修复了修改语音频道时应用的不正确的先决条件</li>
 <li>修复了不正确的文档</li>
 </ul>
 <h2 id="v011-2022-11-20">v0.1.1 [2022-11-20]</h2>
-<h3 id="新增-6">新增</h3>
+<h3 id="新增-7">新增</h3>
 <ul>
 <li>新增 <a class="xref" href="../api/Kook.IGuild.html#Kook_IGuild_GetActiveBoostSubscriptionsAsync_">IGuild.GetActiveBoostSubscriptionsAsync</a></li>
 <li>JSON 反序列化失败时将输出报文本体至日志管理器</li>
 </ul>
-<h3 id="修复-6">修复</h3>
+<h3 id="修复-7">修复</h3>
 <ul>
 <li>修复 <a class="xref" href="../api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserUnbanned">BaseSocketClient.UserUnbanned</a> 未能正常触发的问题</li>
 <li>修复 <a class="xref" href="../api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildAvailable">BaseSocketClient.GuildAvailable</a> 事件触发时
