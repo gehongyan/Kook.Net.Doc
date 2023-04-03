@@ -112,7 +112,11 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <code>sanitize</code>，以支持是否对文本内的特殊字符进行转义，默认为 <code>true</code>。扩展方法的调用方式仍然兼容原有的静态方法调用方式。
 默认情况下，各格式化方法会对文本内与 KMarkdown 语法冲突的特殊字符进行转义，以避免 KMarkdown 语法解析错误。
 此特性默认启用，可通过 <code>sanitize</code> 参数禁用。所有涉及到传入此方法的文本参数如已对特殊字符进行转义，
-则应将 <code>sanitize</code> 参数设置为 <code>false</code>，或调整传入参数为未转义的原始文本。</p>
+则应将 <code>sanitize</code> 参数设置为 <code>false</code>，或调整传入参数为未转义的原始文本。另外，<code>Format.Quote</code> 与
+<code>Format.BlockQuote</code> 方法的逻辑已调整，现在会在文本内按需插入换行符与零宽连字符，以保持文本在 KOOK
+客户端中的显示效果。其中，<code>Format.BlockQuote</code> 方法的格式化结果可以保证整段文本在 KOOK
+客户端中的显示为一段引用块，而 <code>Format.Quote</code> 方法的格式化结果则将文本按空行分割为多个引用块，
+空行不会包括在引用块内。</p>
 <p><code>CardJsonExtension</code> 类中的 <code>Parse</code> 与 <code>TryParse</code> 方法已重命名为 <code>ParseSingle</code> 与 <code>TryParseSingle</code>，
 以避免与解析多个卡片时使用的 <code>ParseMany</code> 与 <code>TryParseMany</code> 方法产生冲突。所有涉及到此方法的调用都需要进行相应的更新。</p>
 <p><code>IGuild</code> 及 <code>IRecommendInfo</code> 的 <code>Features</code> 属性类型原为 <code>object[]</code>，现已实现为 <code>GuildFeatures</code>
