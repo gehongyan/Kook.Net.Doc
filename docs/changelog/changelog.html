@@ -92,6 +92,12 @@
                     <article class="content wrap" id="_content" data-uid="Changelog">
 <h1 id="变更日志">变更日志</h1>
 
+<h2 id="v041-2023-04-05">v0.4.1 [2023-04-05]</h2>
+<h3 id="修复">修复</h3>
+<ul>
+<li>修复用户离开服务器或角色被删除时，<code>SocketGuildChannel.UserPermissionOverwrites</code> 与
+<code>SocketGuildChannel.RolePermissionOverwrites</code> 属性未移除对应的权限覆盖项的问题</li>
+</ul>
 <h2 id="v040-2023-04-03">v0.4.0 [2023-04-03]</h2>
 <h3 id="更新路线">更新路线</h3>
 <p>出于以下几项原因，此版本对 <code>BaseSocketClient</code> 中的部分事件所传递的参数类型进行了调整：</p>
@@ -125,7 +131,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <h3 id="新增">新增</h3>
 <ul>
 <li>新增好友管理与用户屏蔽管理相关方法，变更详情参见文末的附录</li>
-<li>为 <code>Cacheable</code> 与 <code>Qupte</code> 类新增调试显示文本</li>
+<li>为 <code>Cacheable</code> 与 <code>Quote</code> 类新增调试显示文本</li>
 <li><code>KookSocketConfig</code> 新增 <code>MaxJoinedGuildDataFetchingRetryTimes</code> 与 <code>JoinedGuildDataFetchingRetryDelay</code>
 属性，控制加入服务器时的数据获取重试次数与重试间隔</li>
 <li><code>CardJsonExtension</code> 新增 <code>ParseMany</code> 与 <code>TryParseMany</code> 方法</li>
@@ -141,7 +147,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <li>修正 <code>RestPresence</code> 命名空间为 <code>Kook.Rest</code></li>
 <li>（实验性功能）<code>KookRestClient.GetAdminGuildsAsync</code> 方法现已支持 Bot 类型认证</li>
 </ul>
-<h3 id="修复">修复</h3>
+<h3 id="修复-1">修复</h3>
 <ul>
 <li>修复 <code>Format.Quote</code> 与 <code>Format.BlockQuote</code> 方法结果在 KOOK 中显示异常的问题</li>
 <li>修复 <code>CountdownModuleBuilder.Build</code> 抛出异常时的错误信息错误的问题</li>
@@ -274,7 +280,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <li>新增支持通过 <a class="xref" href="../api/Kook.KookConfig.html#Kook_KookConfig_FormatUsersInBidirectionalUnicode">KookConfig.FormatUsersInBidirectionalUnicode</a>
 禁用针对双向 Unicode 格式化用户名字符串</li>
 </ul>
-<h3 id="修复-1">修复</h3>
+<h3 id="修复-2">修复</h3>
 <ul>
 <li>修复 <a class="xref" href="../api/Kook.IUserMessage.html#Kook_IUserMessage_Resolve_">IUserMessage.Resolve</a> 对全体成员与在线成员标签文本化不正确的问题</li>
 <li>修复 <a class="xref" href="../api/Kook.IGuild.html#Kook_IGuild_CreateRoleAsync_">IGuild.CreateRoleAsync</a> 反序列化结果失败的问题</li>
@@ -308,21 +314,21 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <li>为 Bearer 类型认证新增支持 <a class="xref" href="../api/Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_GetAdminGuildsAsync_">KookRestClient.GetAdminGuildsAsync</a></li>
 <li>新增 <a class="xref" href="../api/Kook.Format.html#Kook_Format_Colorize_">Format.Colorize</a> 用于 KMarkdown 文本颜色格式化</li>
 </ul>
-<h3 id="修复-2">修复</h3>
+<h3 id="修复-3">修复</h3>
 <ul>
 <li>修复 <a class="xref" href="../api/Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetGuildsAsync_">KookRestClient.GetGuildsAsync</a> 在服务器数量较大时下载数据过慢的问题</li>
 <li>（实验性功能）修复 <a class="xref" href="../api/Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetGuildsAsync_">KookRestClient.GetGuildsAsync</a> 在 Bearer 类型认证下构造对象失败的问题</li>
 <li>修复 <a class="xref" href="../api/Kook.Color.html">Color</a> 部分值不正确的问题</li>
 </ul>
 <h2 id="v022-2022-12-30">v0.2.2 [2022-12-30]</h2>
-<h3 id="修复-3">修复</h3>
+<h3 id="修复-4">修复</h3>
 <ul>
 <li>修复了 <a class="xref" href="../api/Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendCardAsync_">SocketTextChannel.SendCardAsync</a>
 与 <a class="xref" href="../api/Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendCardsAsync_">SocketTextChannel.SendCardsAsync</a>
 设置 <code>ephemeralUser</code> 参数不生效的问题</li>
 </ul>
 <h2 id="v021-2022-12-25">v0.2.1 [2022-12-25]</h2>
-<h3 id="修复-4">修复</h3>
+<h3 id="修复-5">修复</h3>
 <ul>
 <li>修复了导致启动失败的 JSON 转换器错误</li>
 </ul>
@@ -339,7 +345,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <ul>
 <li>新增 Kook.Net.Experimental 包，用于实现非官方列出的接口</li>
 </ul>
-<h3 id="修复-5">修复</h3>
+<h3 id="修复-6">修复</h3>
 <ul>
 <li>修复了 <a class="xref" href="../api/Kook.IGuild.html#Kook_IGuild_OpenId">IGuild.OpenId</a> 为空时可能导致的空引用异常</li>
 </ul>
@@ -355,7 +361,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <ul>
 <li><a class="xref" href="../api/Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">KookSocketConfig.AlwaysDownloadUsers</a> 也将定义是否在启动时加载服务器成员数量</li>
 </ul>
-<h3 id="修复-6">修复</h3>
+<h3 id="修复-7">修复</h3>
 <ul>
 <li>修复了修改语音频道时应用的不正确的先决条件</li>
 <li>修复了不正确的文档</li>
@@ -366,7 +372,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <li>新增 <a class="xref" href="../api/Kook.IGuild.html#Kook_IGuild_GetActiveBoostSubscriptionsAsync_">IGuild.GetActiveBoostSubscriptionsAsync</a></li>
 <li>JSON 反序列化失败时将输出报文本体至日志管理器</li>
 </ul>
-<h3 id="修复-7">修复</h3>
+<h3 id="修复-8">修复</h3>
 <ul>
 <li>修复 <a class="xref" href="../api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserUnbanned">BaseSocketClient.UserUnbanned</a> 未能正常触发的问题</li>
 <li>修复 <a class="xref" href="../api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildAvailable">BaseSocketClient.GuildAvailable</a> 事件触发时
