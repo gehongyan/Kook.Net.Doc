@@ -1,382 +1,507 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RequestOptions
+   | Kook.Net &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RequestOptions
+   | Kook.Net &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.56.7.0">
     
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class RequestOptions
-     | Kook.Net &#25991;&#26723; </title>
-      <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class RequestOptions
-     | Kook.Net &#25991;&#26723; ">
-      <meta name="generator" content="docfx 2.56.7.0">
-      
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
-      <link rel="stylesheet" href="../styles/config.css">
-      <link rel="stylesheet" href="../styles/discord.css">
-      <link rel="stylesheet" href="../styles/singulink.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-      
-      <meta property="docfx:rel" content="../">
-      
-    </head>
-    <body>
-        <div class="top-navbar">
-            <a class="burger-icon" onclick="toggleMenu()">
-                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
-            </a>
-
-            
-            <a class="brand" href="../index.html">
-              <img src="../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
-            </a>        </div>
-
-        <div class="body-content">
-            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
-
-            <nav id="sidebar" role="navigation">
-                <div class="sidebar">
-                    
-                    <div>
-                      <div class="mobile-hide">
-                        
-                        <a class="brand" href="../index.html">
-                          <img src="../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
-                        </a>  </div>
-
-                      <div class="sidesearch">
-                        <form id="search" role="search" class="search">
-                            <i class="bi bi-search search-icon"></i>
-                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
-                        </form>
-                      </div>
-                    
-                      <div id="navbar">
-                      </div>
-                    </div>                    <div class="sidebar-item-separator"></div>
-                        
-                        <div id="sidetoggle">
-                          <div id="sidetoc"></div>
-                        </div>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
                 </div>
-                <div class="footer">
-                  Kook.Net (c) 2022-2023
-                  
-                </div>            </nav>
-
-            <main class="main-panel">
-                
-                <div id="search-results" style="display: none;">
-                  <h1 class="search-list">Search Results for <span></span></h1>
-                  <div class="sr-items">
-                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
-                  </div>
-                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
-                </div>
-                <div role="main" class="hide-when-search">
-                        
-                        <div class="subnav navbar navbar-default">
-                          <div class="container hide-when-search" id="breadcrumb">
-                            <ul class="breadcrumb">
-                              <li></li>
-                            </ul>
-                          </div>
-                        </div>
-
-                    <article class="content wrap" id="_content" data-uid="Kook.RequestOptions">
-  
-  
-  <h1 id="Kook_RequestOptions" data-uid="Kook.RequestOptions" class="text-break">Class RequestOptions
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kook.RequestOptions">
+  <h1 id="Kook_RequestOptions" data-uid="Kook.RequestOptions">Class RequestOptions
   </h1>
   <div class="markdown level0 summary"><p>Represents options that should be used when sending a request.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">RequestOptions</span></div>
   </div>
+  
+  
+  
   <h6><strong>Namespace</strong>: <a class="xref" href="Kook.html">Kook</a></h6>
   <h6><strong>Assembly</strong>: Kook.Net.Core.dll</h6>
+  
   <h5 id="Kook_RequestOptions_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class RequestOptions : object</code></pre>
   </div>
+
+  
+  
+  
+  
   <h3 id="constructors">Constructors
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions__ctor.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions__ctor.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Core/RequestOptions.cs/#L79">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L79" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_RequestOptions__ctor_" data-uid="Kook.RequestOptions.#ctor*"></a>
-  <h4 id="Kook_RequestOptions__ctor" data-uid="Kook.RequestOptions.#ctor">RequestOptions()</h4>
+  
+  <h4 id="Kook_RequestOptions__ctor" data-uid="Kook.RequestOptions.#ctor"><a href="#collapsible-Kook_RequestOptions__ctor" class="expander" data-toggle="collapse">RequestOptions()</a></h4>
+  
+  <div id="collapsible-Kook_RequestOptions__ctor" class="collapse in">
   <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> class with the default request timeout set in
 <a class="xref" href="Kook.KookConfig.html">KookConfig</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RequestOptions()</code></pre>
   </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
   <h3 id="properties">Properties
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_AuditLogReason.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.AuditLogReason%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_AuditLogReason.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.AuditLogReason%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Core/RequestOptions.cs/#L48">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L48" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_RequestOptions_AuditLogReason_" data-uid="Kook.RequestOptions.AuditLogReason*"></a>
-  <h4 id="Kook_RequestOptions_AuditLogReason" data-uid="Kook.RequestOptions.AuditLogReason">AuditLogReason</h4>
+  
+  <h4 id="Kook_RequestOptions_AuditLogReason" data-uid="Kook.RequestOptions.AuditLogReason"><a href="#collapsible-Kook_RequestOptions_AuditLogReason" class="expander" data-toggle="collapse">AuditLogReason</a></h4>
+  
+  <div id="collapsible-Kook_RequestOptions_AuditLogReason" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the reason for this action in the guild&apos;s audit log.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string AuditLogReason { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
   <h5 id="Kook_RequestOptions_AuditLogReason_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Gets or sets the reason that will be written to the guild&apos;s audit log if applicable. This may not apply
 to all actions.</p>
 </div>
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_CancelToken.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.CancelToken%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_CancelToken.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.CancelToken%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Core/RequestOptions.cs/#L34">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L34" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_RequestOptions_CancelToken_" data-uid="Kook.RequestOptions.CancelToken*"></a>
-  <h4 id="Kook_RequestOptions_CancelToken" data-uid="Kook.RequestOptions.CancelToken">CancelToken</h4>
+  
+  <h4 id="Kook_RequestOptions_CancelToken" data-uid="Kook.RequestOptions.CancelToken"><a href="#collapsible-Kook_RequestOptions_CancelToken" class="expander" data-toggle="collapse">CancelToken</a></h4>
+  
+  <div id="collapsible-Kook_RequestOptions_CancelToken" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the cancellation token for this request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CancellationToken CancelToken { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><p>A <see cref="!:CancellationToken"></see> for this request.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">CancellationToken</span>
+        <p><p>A <see cref="!:CancellationToken"></see> for this request.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_Default.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.Default%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_Default.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.Default%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Core/RequestOptions.cs/#L13">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L13" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_RequestOptions_Default_" data-uid="Kook.RequestOptions.Default*"></a>
-  <h4 id="Kook_RequestOptions_Default" data-uid="Kook.RequestOptions.Default">Default</h4>
+  
+  <h4 id="Kook_RequestOptions_Default" data-uid="Kook.RequestOptions.Default"><a href="#collapsible-Kook_RequestOptions_Default" class="expander" data-toggle="collapse">Default</a></h4>
+  
+  <div id="collapsible-Kook_RequestOptions_Default" class="collapse in">
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> class with its default settings.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static RequestOptions Default { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_RatelimitCallback.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.RatelimitCallback%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_RatelimitCallback.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.RatelimitCallback%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Core/RequestOptions.cs/#L53">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L53" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_RequestOptions_RatelimitCallback_" data-uid="Kook.RequestOptions.RatelimitCallback*"></a>
-  <h4 id="Kook_RequestOptions_RatelimitCallback" data-uid="Kook.RequestOptions.RatelimitCallback">RatelimitCallback</h4>
+  
+  <h4 id="Kook_RequestOptions_RatelimitCallback" data-uid="Kook.RequestOptions.RatelimitCallback"><a href="#collapsible-Kook_RequestOptions_RatelimitCallback" class="expander" data-toggle="collapse">RatelimitCallback</a></h4>
+  
+  <div id="collapsible-Kook_RequestOptions_RatelimitCallback" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the callback to execute regarding ratelimits for this request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Func&lt;IRateLimitInfo, Task&gt; RatelimitCallback { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.IRateLimitInfo.html">IRateLimitInfo</a>, <span class="xref">Task</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Func</span>&lt;<a class="xref" href="Kook.IRateLimitInfo.html">IRateLimitInfo</a>, <span class="xref">Task</span>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_RetryMode.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.RetryMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_RetryMode.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.RetryMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Core/RequestOptions.cs/#L39">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L39" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_RequestOptions_RetryMode_" data-uid="Kook.RequestOptions.RetryMode*"></a>
-  <h4 id="Kook_RequestOptions_RetryMode" data-uid="Kook.RequestOptions.RetryMode">RetryMode</h4>
+  
+  <h4 id="Kook_RequestOptions_RetryMode" data-uid="Kook.RequestOptions.RetryMode"><a href="#collapsible-Kook_RequestOptions_RetryMode" class="expander" data-toggle="collapse">RetryMode</a></h4>
+  
+  <div id="collapsible-Kook_RequestOptions_RetryMode" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the retry behavior when the request fails.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RetryMode? RetryMode { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Kook.RetryMode.html">RetryMode</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Kook.RetryMode.html">RetryMode</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_Timeout.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.Timeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_Timeout.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.Timeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Core/RequestOptions.cs/#L26">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L26" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_RequestOptions_Timeout_" data-uid="Kook.RequestOptions.Timeout*"></a>
-  <h4 id="Kook_RequestOptions_Timeout" data-uid="Kook.RequestOptions.Timeout">Timeout</h4>
+  
+  <h4 id="Kook_RequestOptions_Timeout" data-uid="Kook.RequestOptions.Timeout"><a href="#collapsible-Kook_RequestOptions_Timeout" class="expander" data-toggle="collapse">Timeout</a></h4>
+  
+  <div id="collapsible-Kook_RequestOptions_Timeout" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the maximum time to wait for this request to complete.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int? Timeout { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
-        <td><p>An int in milliseconds for when the request times out.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;
+        <p><p>An int in milliseconds for when the request times out.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
   <h5 id="Kook_RequestOptions_Timeout_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Gets or set the max time, in milliseconds, to wait for this request to complete. If
 <code>null</code>, a request will not time out. If a rate limit has been triggered for this request&apos;s bucket
 and will not be unpaused in time, this request will fail immediately.</p>
 </div>
+  
+  
+  
+  </div>
   <h3 id="methods">Methods
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_Clone.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions_Clone.md&amp;value=---%0Auid%3A%20Kook.RequestOptions.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Core/RequestOptions.cs/#L89">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L89" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_RequestOptions_Clone_" data-uid="Kook.RequestOptions.Clone*"></a>
-  <h4 id="Kook_RequestOptions_Clone" data-uid="Kook.RequestOptions.Clone">Clone()</h4>
+  
+  <h4 id="Kook_RequestOptions_Clone" data-uid="Kook.RequestOptions.Clone"><a href="#collapsible-Kook_RequestOptions_Clone" class="expander" data-toggle="collapse">Clone()</a></h4>
+  
+  <div id="collapsible-Kook_RequestOptions_Clone" class="collapse in">
   <div class="markdown level1 summary"><p>Memberwise clones this <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RequestOptions Clone()</code></pre>
   </div>
+
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><p>A cloned <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> object. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>
+        <p><p>A cloned <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> object. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
+  
 </article>
-                </div>
-
-            </main>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_RequestOptions.md&amp;value=---%0Auid%3A%20Kook.RequestOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L8" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-        
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-        <script type="text/javascript" src="../styles/jquery.twbsPagination.js"></script>
-        <script type="text/javascript" src="../styles/url.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-        <script type="text/javascript" src="../styles/docfx.js"></script>
-        <script type="text/javascript" src="../styles/singulink.js"></script>
-        <script type="text/javascript" src="../styles/main.js"></script>    </body>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Kook.Net (c) 2022-2023
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
 </html>

@@ -52,6 +52,18 @@ references:
 - uid: Guides.OtherLibs.Serilog
   name: Serilog
   href: guides/other_libs/serilog.html
+- uid: Guides.QuickReference
+  name: 快速参考指南
+  href: quick_reference/index.html
+- uid: Guides.QuickReference.Http.Channel
+  name: 频道相关接口列表
+  href: quick_reference/http_api/channel.html
+- uid: Guides.QuickReference.Http.Guild
+  name: 服务器相关接口列表
+  href: quick_reference/http_api/guild.html
+- uid: Guides.QuickReference.Startup
+  name: 登录与启动
+  href: quick_reference/startup.html
 - uid: Guides.TextCommands.DI
   name: 依赖注入
   href: guides/text_commands/dependency-injection.html
@@ -10217,12 +10229,12 @@ references:
   commentId: T:Kook.GuildFeature
   fullName: Kook.GuildFeature
   nameWithType: GuildFeature
-- uid: Kook.GuildFeature.Ka
-  name: Ka
-  href: api/Kook.GuildFeature.html#Kook_GuildFeature_Ka
-  commentId: F:Kook.GuildFeature.Ka
-  fullName: Kook.GuildFeature.Ka
-  nameWithType: GuildFeature.Ka
+- uid: Kook.GuildFeature.KeyAccount
+  name: KeyAccount
+  href: api/Kook.GuildFeature.html#Kook_GuildFeature_KeyAccount
+  commentId: F:Kook.GuildFeature.KeyAccount
+  fullName: Kook.GuildFeature.KeyAccount
+  nameWithType: GuildFeature.KeyAccount
 - uid: Kook.GuildFeature.None
   name: None
   href: api/Kook.GuildFeature.html#Kook_GuildFeature_None
@@ -10235,6 +10247,12 @@ references:
   commentId: F:Kook.GuildFeature.Official
   fullName: Kook.GuildFeature.Official
   nameWithType: GuildFeature.Official
+- uid: Kook.GuildFeature.Partner
+  name: Partner
+  href: api/Kook.GuildFeature.html#Kook_GuildFeature_Partner
+  commentId: F:Kook.GuildFeature.Partner
+  fullName: Kook.GuildFeature.Partner
+  nameWithType: GuildFeature.Partner
 - uid: Kook.GuildFeatures
   name: GuildFeatures
   href: api/Kook.GuildFeatures.html
@@ -10260,19 +10278,19 @@ references:
   isSpec: "True"
   fullName: Kook.GuildFeatures.HasFeature
   nameWithType: GuildFeatures.HasFeature
-- uid: Kook.GuildFeatures.IsKa
-  name: IsKa
-  href: api/Kook.GuildFeatures.html#Kook_GuildFeatures_IsKa
-  commentId: P:Kook.GuildFeatures.IsKa
-  fullName: Kook.GuildFeatures.IsKa
-  nameWithType: GuildFeatures.IsKa
-- uid: Kook.GuildFeatures.IsKa*
-  name: IsKa
-  href: api/Kook.GuildFeatures.html#Kook_GuildFeatures_IsKa_
-  commentId: Overload:Kook.GuildFeatures.IsKa
+- uid: Kook.GuildFeatures.IsKeyAccount
+  name: IsKeyAccount
+  href: api/Kook.GuildFeatures.html#Kook_GuildFeatures_IsKeyAccount
+  commentId: P:Kook.GuildFeatures.IsKeyAccount
+  fullName: Kook.GuildFeatures.IsKeyAccount
+  nameWithType: GuildFeatures.IsKeyAccount
+- uid: Kook.GuildFeatures.IsKeyAccount*
+  name: IsKeyAccount
+  href: api/Kook.GuildFeatures.html#Kook_GuildFeatures_IsKeyAccount_
+  commentId: Overload:Kook.GuildFeatures.IsKeyAccount
   isSpec: "True"
-  fullName: Kook.GuildFeatures.IsKa
-  nameWithType: GuildFeatures.IsKa
+  fullName: Kook.GuildFeatures.IsKeyAccount
+  nameWithType: GuildFeatures.IsKeyAccount
 - uid: Kook.GuildFeatures.IsOfficial
   name: IsOfficial
   href: api/Kook.GuildFeatures.html#Kook_GuildFeatures_IsOfficial
@@ -10286,6 +10304,19 @@ references:
   isSpec: "True"
   fullName: Kook.GuildFeatures.IsOfficial
   nameWithType: GuildFeatures.IsOfficial
+- uid: Kook.GuildFeatures.IsPartner
+  name: IsPartner
+  href: api/Kook.GuildFeatures.html#Kook_GuildFeatures_IsPartner
+  commentId: P:Kook.GuildFeatures.IsPartner
+  fullName: Kook.GuildFeatures.IsPartner
+  nameWithType: GuildFeatures.IsPartner
+- uid: Kook.GuildFeatures.IsPartner*
+  name: IsPartner
+  href: api/Kook.GuildFeatures.html#Kook_GuildFeatures_IsPartner_
+  commentId: Overload:Kook.GuildFeatures.IsPartner
+  isSpec: "True"
+  fullName: Kook.GuildFeatures.IsPartner
+  nameWithType: GuildFeatures.IsPartner
 - uid: Kook.GuildFeatures.RawValues
   name: RawValues
   href: api/Kook.GuildFeatures.html#Kook_GuildFeatures_RawValues
@@ -12136,6 +12167,19 @@ references:
   isSpec: "True"
   fullName: Kook.IGuild.Available
   nameWithType: IGuild.Available
+- uid: Kook.IGuild.Banner
+  name: Banner
+  href: api/Kook.IGuild.html#Kook_IGuild_Banner
+  commentId: P:Kook.IGuild.Banner
+  fullName: Kook.IGuild.Banner
+  nameWithType: IGuild.Banner
+- uid: Kook.IGuild.Banner*
+  name: Banner
+  href: api/Kook.IGuild.html#Kook_IGuild_Banner_
+  commentId: Overload:Kook.IGuild.Banner
+  isSpec: "True"
+  fullName: Kook.IGuild.Banner
+  nameWithType: IGuild.Banner
 - uid: Kook.IGuild.BoostLevel
   name: BoostLevel
   href: api/Kook.IGuild.html#Kook_IGuild_BoostLevel
@@ -15452,6 +15496,19 @@ references:
   isSpec: "True"
   fullName: Kook.INestedChannel.IsPermissionSynced
   nameWithType: INestedChannel.IsPermissionSynced
+- uid: Kook.INestedChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  name: SyncPermissionsAsync(RequestOptions)
+  href: api/Kook.INestedChannel.html#Kook_INestedChannel_SyncPermissionsAsync_Kook_RequestOptions_
+  commentId: M:Kook.INestedChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  fullName: Kook.INestedChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  nameWithType: INestedChannel.SyncPermissionsAsync(RequestOptions)
+- uid: Kook.INestedChannel.SyncPermissionsAsync*
+  name: SyncPermissionsAsync
+  href: api/Kook.INestedChannel.html#Kook_INestedChannel_SyncPermissionsAsync_
+  commentId: Overload:Kook.INestedChannel.SyncPermissionsAsync
+  isSpec: "True"
+  fullName: Kook.INestedChannel.SyncPermissionsAsync
+  nameWithType: INestedChannel.SyncPermissionsAsync
 - uid: Kook.IntimacyImage
   name: IntimacyImage
   href: api/Kook.IntimacyImage.html
@@ -23800,6 +23857,19 @@ references:
   isSpec: "True"
   fullName: Kook.Rest.RestGuild.AutoDeleteTime
   nameWithType: RestGuild.AutoDeleteTime
+- uid: Kook.Rest.RestGuild.Banner
+  name: Banner
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_Banner
+  commentId: P:Kook.Rest.RestGuild.Banner
+  fullName: Kook.Rest.RestGuild.Banner
+  nameWithType: RestGuild.Banner
+- uid: Kook.Rest.RestGuild.Banner*
+  name: Banner
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_Banner_
+  commentId: Overload:Kook.Rest.RestGuild.Banner
+  isSpec: "True"
+  fullName: Kook.Rest.RestGuild.Banner
+  nameWithType: RestGuild.Banner
 - uid: Kook.Rest.RestGuild.BoostLevel
   name: BoostLevel
   href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_BoostLevel
@@ -23839,6 +23909,19 @@ references:
   isSpec: "True"
   fullName: Kook.Rest.RestGuild.BufferBoostSubscriptionCount
   nameWithType: RestGuild.BufferBoostSubscriptionCount
+- uid: Kook.Rest.RestGuild.CategoryChannels
+  name: CategoryChannels
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_CategoryChannels
+  commentId: P:Kook.Rest.RestGuild.CategoryChannels
+  fullName: Kook.Rest.RestGuild.CategoryChannels
+  nameWithType: RestGuild.CategoryChannels
+- uid: Kook.Rest.RestGuild.CategoryChannels*
+  name: CategoryChannels
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_CategoryChannels_
+  commentId: Overload:Kook.Rest.RestGuild.CategoryChannels
+  isSpec: "True"
+  fullName: Kook.Rest.RestGuild.CategoryChannels
+  nameWithType: RestGuild.CategoryChannels
 - uid: Kook.Rest.RestGuild.Channels
   name: Channels
   href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_Channels
@@ -23948,6 +24031,45 @@ references:
   isSpec: "True"
   fullName: Kook.Rest.RestGuild.CreateVoiceChannelAsync
   nameWithType: RestGuild.CreateVoiceChannelAsync
+- uid: Kook.Rest.RestGuild.CurrentUserDisplayName
+  name: CurrentUserDisplayName
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_CurrentUserDisplayName
+  commentId: P:Kook.Rest.RestGuild.CurrentUserDisplayName
+  fullName: Kook.Rest.RestGuild.CurrentUserDisplayName
+  nameWithType: RestGuild.CurrentUserDisplayName
+- uid: Kook.Rest.RestGuild.CurrentUserDisplayName*
+  name: CurrentUserDisplayName
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_CurrentUserDisplayName_
+  commentId: Overload:Kook.Rest.RestGuild.CurrentUserDisplayName
+  isSpec: "True"
+  fullName: Kook.Rest.RestGuild.CurrentUserDisplayName
+  nameWithType: RestGuild.CurrentUserDisplayName
+- uid: Kook.Rest.RestGuild.CurrentUserNickname
+  name: CurrentUserNickname
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_CurrentUserNickname
+  commentId: P:Kook.Rest.RestGuild.CurrentUserNickname
+  fullName: Kook.Rest.RestGuild.CurrentUserNickname
+  nameWithType: RestGuild.CurrentUserNickname
+- uid: Kook.Rest.RestGuild.CurrentUserNickname*
+  name: CurrentUserNickname
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_CurrentUserNickname_
+  commentId: Overload:Kook.Rest.RestGuild.CurrentUserNickname
+  isSpec: "True"
+  fullName: Kook.Rest.RestGuild.CurrentUserNickname
+  nameWithType: RestGuild.CurrentUserNickname
+- uid: Kook.Rest.RestGuild.CurrentUserRoles
+  name: CurrentUserRoles
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_CurrentUserRoles
+  commentId: P:Kook.Rest.RestGuild.CurrentUserRoles
+  fullName: Kook.Rest.RestGuild.CurrentUserRoles
+  nameWithType: RestGuild.CurrentUserRoles
+- uid: Kook.Rest.RestGuild.CurrentUserRoles*
+  name: CurrentUserRoles
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_CurrentUserRoles_
+  commentId: Overload:Kook.Rest.RestGuild.CurrentUserRoles
+  isSpec: "True"
+  fullName: Kook.Rest.RestGuild.CurrentUserRoles
+  nameWithType: RestGuild.CurrentUserRoles
 - uid: Kook.Rest.RestGuild.DefaultChannelId
   name: DefaultChannelId
   href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_DefaultChannelId
@@ -24575,6 +24697,19 @@ references:
   isSpec: "True"
   fullName: Kook.Rest.RestGuild.Status
   nameWithType: RestGuild.Status
+- uid: Kook.Rest.RestGuild.TextChannels
+  name: TextChannels
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_TextChannels
+  commentId: P:Kook.Rest.RestGuild.TextChannels
+  fullName: Kook.Rest.RestGuild.TextChannels
+  nameWithType: RestGuild.TextChannels
+- uid: Kook.Rest.RestGuild.TextChannels*
+  name: TextChannels
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_TextChannels_
+  commentId: Overload:Kook.Rest.RestGuild.TextChannels
+  isSpec: "True"
+  fullName: Kook.Rest.RestGuild.TextChannels
+  nameWithType: RestGuild.TextChannels
 - uid: Kook.Rest.RestGuild.Topic
   name: Topic
   href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_Topic
@@ -24614,6 +24749,19 @@ references:
   isSpec: "True"
   fullName: Kook.Rest.RestGuild.UpdateAsync
   nameWithType: RestGuild.UpdateAsync
+- uid: Kook.Rest.RestGuild.VoiceChannels
+  name: VoiceChannels
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_VoiceChannels
+  commentId: P:Kook.Rest.RestGuild.VoiceChannels
+  fullName: Kook.Rest.RestGuild.VoiceChannels
+  nameWithType: RestGuild.VoiceChannels
+- uid: Kook.Rest.RestGuild.VoiceChannels*
+  name: VoiceChannels
+  href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_VoiceChannels_
+  commentId: Overload:Kook.Rest.RestGuild.VoiceChannels
+  isSpec: "True"
+  fullName: Kook.Rest.RestGuild.VoiceChannels
+  nameWithType: RestGuild.VoiceChannels
 - uid: Kook.Rest.RestGuild.WelcomeChannelId
   name: WelcomeChannelId
   href: api/Kook.Rest.RestGuild.html#Kook_Rest_RestGuild_WelcomeChannelId
@@ -26881,6 +27029,19 @@ references:
   isSpec: "True"
   fullName: Kook.Rest.RestTextChannel.SlowModeInterval
   nameWithType: RestTextChannel.SlowModeInterval
+- uid: Kook.Rest.RestTextChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  name: SyncPermissionsAsync(RequestOptions)
+  href: api/Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SyncPermissionsAsync_Kook_RequestOptions_
+  commentId: M:Kook.Rest.RestTextChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  fullName: Kook.Rest.RestTextChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  nameWithType: RestTextChannel.SyncPermissionsAsync(RequestOptions)
+- uid: Kook.Rest.RestTextChannel.SyncPermissionsAsync*
+  name: SyncPermissionsAsync
+  href: api/Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SyncPermissionsAsync_
+  commentId: Overload:Kook.Rest.RestTextChannel.SyncPermissionsAsync
+  isSpec: "True"
+  fullName: Kook.Rest.RestTextChannel.SyncPermissionsAsync
+  nameWithType: RestTextChannel.SyncPermissionsAsync
 - uid: Kook.Rest.RestTextChannel.Topic
   name: Topic
   href: api/Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_Topic
@@ -27609,6 +27770,19 @@ references:
   isSpec: "True"
   fullName: Kook.Rest.RestVoiceChannel.ServerUrl
   nameWithType: RestVoiceChannel.ServerUrl
+- uid: Kook.Rest.RestVoiceChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  name: SyncPermissionsAsync(RequestOptions)
+  href: api/Kook.Rest.RestVoiceChannel.html#Kook_Rest_RestVoiceChannel_SyncPermissionsAsync_Kook_RequestOptions_
+  commentId: M:Kook.Rest.RestVoiceChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  fullName: Kook.Rest.RestVoiceChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  nameWithType: RestVoiceChannel.SyncPermissionsAsync(RequestOptions)
+- uid: Kook.Rest.RestVoiceChannel.SyncPermissionsAsync*
+  name: SyncPermissionsAsync
+  href: api/Kook.Rest.RestVoiceChannel.html#Kook_Rest_RestVoiceChannel_SyncPermissionsAsync_
+  commentId: Overload:Kook.Rest.RestVoiceChannel.SyncPermissionsAsync
+  isSpec: "True"
+  fullName: Kook.Rest.RestVoiceChannel.SyncPermissionsAsync
+  nameWithType: RestVoiceChannel.SyncPermissionsAsync
 - uid: Kook.Rest.RestVoiceChannel.UserLimit
   name: UserLimit
   href: api/Kook.Rest.RestVoiceChannel.html#Kook_Rest_RestVoiceChannel_UserLimit
@@ -29409,6 +29583,22 @@ references:
   commentId: E:Kook.WebSocket.BaseSocketClient.DirectReactionRemoved
   fullName: Kook.WebSocket.BaseSocketClient.DirectReactionRemoved
   nameWithType: BaseSocketClient.DirectReactionRemoved
+- uid: Kook.WebSocket.BaseSocketClient.DownloadBoostSubscriptionsAsync(IEnumerable{Kook.IGuild},Kook.RequestOptions)
+  name: DownloadBoostSubscriptionsAsync(IEnumerable<IGuild>, RequestOptions)
+  href: api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DownloadBoostSubscriptionsAsync_IEnumerable_Kook_IGuild__Kook_RequestOptions_
+  commentId: M:Kook.WebSocket.BaseSocketClient.DownloadBoostSubscriptionsAsync(IEnumerable{Kook.IGuild},Kook.RequestOptions)
+  name.vb: DownloadBoostSubscriptionsAsync(IEnumerable(Of IGuild), RequestOptions)
+  fullName: Kook.WebSocket.BaseSocketClient.DownloadBoostSubscriptionsAsync(IEnumerable<Kook.IGuild>, Kook.RequestOptions)
+  fullName.vb: Kook.WebSocket.BaseSocketClient.DownloadBoostSubscriptionsAsync(IEnumerable(Of Kook.IGuild), Kook.RequestOptions)
+  nameWithType: BaseSocketClient.DownloadBoostSubscriptionsAsync(IEnumerable<IGuild>, RequestOptions)
+  nameWithType.vb: BaseSocketClient.DownloadBoostSubscriptionsAsync(IEnumerable(Of IGuild), RequestOptions)
+- uid: Kook.WebSocket.BaseSocketClient.DownloadBoostSubscriptionsAsync*
+  name: DownloadBoostSubscriptionsAsync
+  href: api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DownloadBoostSubscriptionsAsync_
+  commentId: Overload:Kook.WebSocket.BaseSocketClient.DownloadBoostSubscriptionsAsync
+  isSpec: "True"
+  fullName: Kook.WebSocket.BaseSocketClient.DownloadBoostSubscriptionsAsync
+  nameWithType: BaseSocketClient.DownloadBoostSubscriptionsAsync
 - uid: Kook.WebSocket.BaseSocketClient.DownloadUsersAsync(IEnumerable{Kook.IGuild},Kook.RequestOptions)
   name: DownloadUsersAsync(IEnumerable<IGuild>, RequestOptions)
   href: api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DownloadUsersAsync_IEnumerable_Kook_IGuild__Kook_RequestOptions_
@@ -29425,6 +29615,22 @@ references:
   isSpec: "True"
   fullName: Kook.WebSocket.BaseSocketClient.DownloadUsersAsync
   nameWithType: BaseSocketClient.DownloadUsersAsync
+- uid: Kook.WebSocket.BaseSocketClient.DownloadVoiceStatesAsync(IEnumerable{Kook.IGuild},Kook.RequestOptions)
+  name: DownloadVoiceStatesAsync(IEnumerable<IGuild>, RequestOptions)
+  href: api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DownloadVoiceStatesAsync_IEnumerable_Kook_IGuild__Kook_RequestOptions_
+  commentId: M:Kook.WebSocket.BaseSocketClient.DownloadVoiceStatesAsync(IEnumerable{Kook.IGuild},Kook.RequestOptions)
+  name.vb: DownloadVoiceStatesAsync(IEnumerable(Of IGuild), RequestOptions)
+  fullName: Kook.WebSocket.BaseSocketClient.DownloadVoiceStatesAsync(IEnumerable<Kook.IGuild>, Kook.RequestOptions)
+  fullName.vb: Kook.WebSocket.BaseSocketClient.DownloadVoiceStatesAsync(IEnumerable(Of Kook.IGuild), Kook.RequestOptions)
+  nameWithType: BaseSocketClient.DownloadVoiceStatesAsync(IEnumerable<IGuild>, RequestOptions)
+  nameWithType.vb: BaseSocketClient.DownloadVoiceStatesAsync(IEnumerable(Of IGuild), RequestOptions)
+- uid: Kook.WebSocket.BaseSocketClient.DownloadVoiceStatesAsync*
+  name: DownloadVoiceStatesAsync
+  href: api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DownloadVoiceStatesAsync_
+  commentId: Overload:Kook.WebSocket.BaseSocketClient.DownloadVoiceStatesAsync
+  isSpec: "True"
+  fullName: Kook.WebSocket.BaseSocketClient.DownloadVoiceStatesAsync
+  nameWithType: BaseSocketClient.DownloadVoiceStatesAsync
 - uid: Kook.WebSocket.BaseSocketClient.EmoteCreated
   name: EmoteCreated
   href: api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_EmoteCreated
@@ -30863,6 +31069,19 @@ references:
   isSpec: "True"
   fullName: Kook.WebSocket.SocketGuild.AutoDeleteTime
   nameWithType: SocketGuild.AutoDeleteTime
+- uid: Kook.WebSocket.SocketGuild.Banner
+  name: Banner
+  href: api/Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_Banner
+  commentId: P:Kook.WebSocket.SocketGuild.Banner
+  fullName: Kook.WebSocket.SocketGuild.Banner
+  nameWithType: SocketGuild.Banner
+- uid: Kook.WebSocket.SocketGuild.Banner*
+  name: Banner
+  href: api/Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_Banner_
+  commentId: Overload:Kook.WebSocket.SocketGuild.Banner
+  isSpec: "True"
+  fullName: Kook.WebSocket.SocketGuild.Banner
+  nameWithType: SocketGuild.Banner
 - uid: Kook.WebSocket.SocketGuild.BoostLevel
   name: BoostLevel
   href: api/Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostLevel
@@ -34462,6 +34681,19 @@ references:
   isSpec: "True"
   fullName: Kook.WebSocket.SocketTextChannel.SlowModeInterval
   nameWithType: SocketTextChannel.SlowModeInterval
+- uid: Kook.WebSocket.SocketTextChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  name: SyncPermissionsAsync(RequestOptions)
+  href: api/Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SyncPermissionsAsync_Kook_RequestOptions_
+  commentId: M:Kook.WebSocket.SocketTextChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  fullName: Kook.WebSocket.SocketTextChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  nameWithType: SocketTextChannel.SyncPermissionsAsync(RequestOptions)
+- uid: Kook.WebSocket.SocketTextChannel.SyncPermissionsAsync*
+  name: SyncPermissionsAsync
+  href: api/Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SyncPermissionsAsync_
+  commentId: Overload:Kook.WebSocket.SocketTextChannel.SyncPermissionsAsync
+  isSpec: "True"
+  fullName: Kook.WebSocket.SocketTextChannel.SyncPermissionsAsync
+  nameWithType: SocketTextChannel.SyncPermissionsAsync
 - uid: Kook.WebSocket.SocketTextChannel.Topic
   name: Topic
   href: api/Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_Topic
@@ -34488,25 +34720,6 @@ references:
   isSpec: "True"
   fullName: Kook.WebSocket.SocketTextChannel.Users
   nameWithType: SocketTextChannel.Users
-- uid: Kook.WebSocket.SocketTextChannelExperimentalExtensions
-  name: SocketTextChannelExperimentalExtensions
-  href: api/Kook.WebSocket.SocketTextChannelExperimentalExtensions.html
-  commentId: T:Kook.WebSocket.SocketTextChannelExperimentalExtensions
-  fullName: Kook.WebSocket.SocketTextChannelExperimentalExtensions
-  nameWithType: SocketTextChannelExperimentalExtensions
-- uid: Kook.WebSocket.SocketTextChannelExperimentalExtensions.SyncPermissionsAsync(SocketTextChannel,RequestOptions)
-  name: SyncPermissionsAsync(SocketTextChannel, RequestOptions)
-  href: api/Kook.WebSocket.SocketTextChannelExperimentalExtensions.html#Kook_WebSocket_SocketTextChannelExperimentalExtensions_SyncPermissionsAsync_SocketTextChannel_RequestOptions_
-  commentId: M:Kook.WebSocket.SocketTextChannelExperimentalExtensions.SyncPermissionsAsync(SocketTextChannel,RequestOptions)
-  fullName: Kook.WebSocket.SocketTextChannelExperimentalExtensions.SyncPermissionsAsync(SocketTextChannel, RequestOptions)
-  nameWithType: SocketTextChannelExperimentalExtensions.SyncPermissionsAsync(SocketTextChannel, RequestOptions)
-- uid: Kook.WebSocket.SocketTextChannelExperimentalExtensions.SyncPermissionsAsync*
-  name: SyncPermissionsAsync
-  href: api/Kook.WebSocket.SocketTextChannelExperimentalExtensions.html#Kook_WebSocket_SocketTextChannelExperimentalExtensions_SyncPermissionsAsync_
-  commentId: Overload:Kook.WebSocket.SocketTextChannelExperimentalExtensions.SyncPermissionsAsync
-  isSpec: "True"
-  fullName: Kook.WebSocket.SocketTextChannelExperimentalExtensions.SyncPermissionsAsync
-  nameWithType: SocketTextChannelExperimentalExtensions.SyncPermissionsAsync
 - uid: Kook.WebSocket.SocketUnknownUser
   name: SocketUnknownUser
   href: api/Kook.WebSocket.SocketUnknownUser.html
@@ -35365,6 +35578,19 @@ references:
   isSpec: "True"
   fullName: Kook.WebSocket.SocketVoiceChannel.ServerUrl
   nameWithType: SocketVoiceChannel.ServerUrl
+- uid: Kook.WebSocket.SocketVoiceChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  name: SyncPermissionsAsync(RequestOptions)
+  href: api/Kook.WebSocket.SocketVoiceChannel.html#Kook_WebSocket_SocketVoiceChannel_SyncPermissionsAsync_Kook_RequestOptions_
+  commentId: M:Kook.WebSocket.SocketVoiceChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  fullName: Kook.WebSocket.SocketVoiceChannel.SyncPermissionsAsync(Kook.RequestOptions)
+  nameWithType: SocketVoiceChannel.SyncPermissionsAsync(RequestOptions)
+- uid: Kook.WebSocket.SocketVoiceChannel.SyncPermissionsAsync*
+  name: SyncPermissionsAsync
+  href: api/Kook.WebSocket.SocketVoiceChannel.html#Kook_WebSocket_SocketVoiceChannel_SyncPermissionsAsync_
+  commentId: Overload:Kook.WebSocket.SocketVoiceChannel.SyncPermissionsAsync
+  isSpec: "True"
+  fullName: Kook.WebSocket.SocketVoiceChannel.SyncPermissionsAsync
+  nameWithType: SocketVoiceChannel.SyncPermissionsAsync
 - uid: Kook.WebSocket.SocketVoiceChannel.UserLimit
   name: UserLimit
   href: api/Kook.WebSocket.SocketVoiceChannel.html#Kook_WebSocket_SocketVoiceChannel_UserLimit
@@ -35423,19 +35649,6 @@ references:
   isSpec: "True"
   fullName: Kook.WebSocket.SocketVoiceChannelExperimentalExtensions.DisconnectUserAsync
   nameWithType: SocketVoiceChannelExperimentalExtensions.DisconnectUserAsync
-- uid: Kook.WebSocket.SocketVoiceChannelExperimentalExtensions.SyncPermissionsAsync(SocketVoiceChannel,RequestOptions)
-  name: SyncPermissionsAsync(SocketVoiceChannel, RequestOptions)
-  href: api/Kook.WebSocket.SocketVoiceChannelExperimentalExtensions.html#Kook_WebSocket_SocketVoiceChannelExperimentalExtensions_SyncPermissionsAsync_SocketVoiceChannel_RequestOptions_
-  commentId: M:Kook.WebSocket.SocketVoiceChannelExperimentalExtensions.SyncPermissionsAsync(SocketVoiceChannel,RequestOptions)
-  fullName: Kook.WebSocket.SocketVoiceChannelExperimentalExtensions.SyncPermissionsAsync(SocketVoiceChannel, RequestOptions)
-  nameWithType: SocketVoiceChannelExperimentalExtensions.SyncPermissionsAsync(SocketVoiceChannel, RequestOptions)
-- uid: Kook.WebSocket.SocketVoiceChannelExperimentalExtensions.SyncPermissionsAsync*
-  name: SyncPermissionsAsync
-  href: api/Kook.WebSocket.SocketVoiceChannelExperimentalExtensions.html#Kook_WebSocket_SocketVoiceChannelExperimentalExtensions_SyncPermissionsAsync_
-  commentId: Overload:Kook.WebSocket.SocketVoiceChannelExperimentalExtensions.SyncPermissionsAsync
-  isSpec: "True"
-  fullName: Kook.WebSocket.SocketVoiceChannelExperimentalExtensions.SyncPermissionsAsync
-  nameWithType: SocketVoiceChannelExperimentalExtensions.SyncPermissionsAsync
 - uid: Kook.WebSocket.SocketVoiceState
   name: SocketVoiceState
   href: api/Kook.WebSocket.SocketVoiceState.html

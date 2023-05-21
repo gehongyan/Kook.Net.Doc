@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#30331;&#24405;&#19982;&#21551;&#21160; | Kook.Net &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#30331;&#24405;&#19982;&#21551;&#21160; | Kook.Net &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.QuickReference.Startup">
+<h1 id="登录与启动">登录与启动</h1>
+
+<p>预声明变量</p>
+<pre><code class="lang-csharp">readonly KookRestClient _restClient;
+readonly KookSocketClient _socketClient;
+</code></pre><h3 id="rest-客户端">Rest 客户端</h3>
+<pre><code class="lang-csharp">// 使用默认配置创建 Rest 客户端
+_restClient = new KookRestClient();
+// 使用自定义配置创建 Rest 客户端
+_restClient = new KookRestClient(new KookRestConfig()
+{
+    // 请求头 Accept-Language
+    AcceptLanguage = &quot;zh-CN&quot;,
+    // 默认重试模式
+    DefaultRetryMode = RetryMode.AlwaysRetry,
+    // 默认超速回调
+    DefaultRatelimitCallback = info =&gt; Task.CompletedTask,
+    // 日志级别
+    LogLevel = LogSeverity.Info,
+    // 双向文稿格式化用户名
+    FormatUsersInBidirectionalUnicode = true,
+    // Rest 客户端提供程序
+    RestClientProvider = DefaultRestClientProvider.Instance
+});
+
+// Token
+string token = null;
+// 登录
+await _restClient.LoginAsync(TokenType.Bot, token);
+// 登出
+await _restClient.LogoutAsync();
+</code></pre><h3 id="websocket-客户端">WebSocket 客户端</h3>
+<pre><code class="lang-csharp">// 使用默认配置创建 WebSocket 客户端
+_socketClient = new KookRestClient();
+// 使用自定义配置创建 WebSocket 客户端
+_socketClient = new KookSocketClient(new KookRestConfig()
+{
+    // 请求头 Accept-Language
+    AcceptLanguage = &quot;zh-CN&quot;,
+    // 默认重试模式
+    DefaultRetryMode = RetryMode.AlwaysRetry,
+    // 默认超速回调
+    DefaultRatelimitCallback = info =&gt; Task.CompletedTask,
+    // 日志级别
+    LogLevel = LogSeverity.Info,
+    // 双向文稿格式化用户名
+    FormatUsersInBidirectionalUnicode = true,
+    // Rest 客户端提供程序
+    RestClientProvider = DefaultRestClientProvider.Instance,
+    // 显示指定网关地址
+    GatewayHost = null,
+    // 连接超时（毫秒）
+    ConnectionTimeout = 6000,
+    // 处理程序警告耗时阈值（毫秒）
+    HandlerTimeout = 3000,
+    // 消息缓存数量
+    MessageCacheSize = 10,
+    // WebSocket 客户端提供程序
+    WebSocketProvider = DefaultWebSocketProvider.Instance,
+    // UDP 客户端提供程序
+    UdpSocketProvider = DefaultUdpSocketProvider.Instance,
+    // 自动下载服务器用户信息
+    AlwaysDownloadUsers = false,
+    // 自动下载服务器用户语音状态信息
+    AlwaysDownloadVoiceStates = false,
+    // 自动下载服务器助力信息
+    AlwaysDownloadBoostSubscriptions = false,
+    // 等待服务器可用状态超时（毫秒）
+    MaxWaitBetweenGuildAvailablesBeforeReady = 10000,
+    // 最大获取新加入服务器信息重试次数
+    MaxJoinedGuildDataFetchingRetryTimes = 10,
+    // 获取新加入服务器信息重试延迟（毫秒）
+    JoinedGuildDataFetchingRetryDelay = 500
+});
+
+// Token
+string token = null;
+// 登录
+await _socketClient.LoginAsync(TokenType.Bot, token);
+// 启动
+await _socketClient.StartAsync();
+// 停止
+await _socketClient.StopAsync();
+// 登出
+await _socketClient.LogoutAsync();
+// 登出
+await _socketClient.LogoutAsync();
+</code></pre></article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/quick_reference/startup.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Kook.Net (c) 2022-2023
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

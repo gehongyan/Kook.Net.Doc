@@ -1,1042 +1,1289 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RestUser
+   | Kook.Net &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RestUser
+   | Kook.Net &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.56.7.0">
     
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class RestUser
-     | Kook.Net &#25991;&#26723; </title>
-      <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class RestUser
-     | Kook.Net &#25991;&#26723; ">
-      <meta name="generator" content="docfx 2.56.7.0">
-      
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
-      <link rel="stylesheet" href="../styles/config.css">
-      <link rel="stylesheet" href="../styles/discord.css">
-      <link rel="stylesheet" href="../styles/singulink.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-      
-      <meta property="docfx:rel" content="../">
-      
-    </head>
-    <body>
-        <div class="top-navbar">
-            <a class="burger-icon" onclick="toggleMenu()">
-                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
-            </a>
-
-            
-            <a class="brand" href="../index.html">
-              <img src="../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
-            </a>        </div>
-
-        <div class="body-content">
-            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
-
-            <nav id="sidebar" role="navigation">
-                <div class="sidebar">
-                    
-                    <div>
-                      <div class="mobile-hide">
-                        
-                        <a class="brand" href="../index.html">
-                          <img src="../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
-                        </a>  </div>
-
-                      <div class="sidesearch">
-                        <form id="search" role="search" class="search">
-                            <i class="bi bi-search search-icon"></i>
-                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
-                        </form>
-                      </div>
-                    
-                      <div id="navbar">
-                      </div>
-                    </div>                    <div class="sidebar-item-separator"></div>
-                        
-                        <div id="sidetoggle">
-                          <div id="sidetoc"></div>
-                        </div>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
                 </div>
-                <div class="footer">
-                  Kook.Net (c) 2022-2023
-                  
-                </div>            </nav>
-
-            <main class="main-panel">
-                
-                <div id="search-results" style="display: none;">
-                  <h1 class="search-list">Search Results for <span></span></h1>
-                  <div class="sr-items">
-                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
-                  </div>
-                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
-                </div>
-                <div role="main" class="hide-when-search">
-                        
-                        <div class="subnav navbar navbar-default">
-                          <div class="container hide-when-search" id="breadcrumb">
-                            <ul class="breadcrumb">
-                              <li></li>
-                            </ul>
-                          </div>
-                        </div>
-
-                    <article class="content wrap" id="_content" data-uid="Kook.Rest.RestUser">
-  
-  
-  <h1 id="Kook_Rest_RestUser" data-uid="Kook.Rest.RestUser" class="text-break">Class RestUser
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kook.Rest.RestUser">
+  <h1 id="Kook_Rest_RestUser" data-uid="Kook.Rest.RestUser">Class RestUser
   </h1>
   <div class="markdown level0 summary"><p>Represents a REST-based user.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="Kook.Rest.RestEntity-1.html">RestEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</div>
     <div class="level2"><span class="xref">RestUser</span></div>
+  </div>
+  
       <div class="level3"><a class="xref" href="Kook.Rest.RestGuildUser.html">RestGuildUser</a></div>
       <div class="level3"><a class="xref" href="Kook.Rest.RestSelfUser.html">RestSelfUser</a></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</div>
-    <div><a class="xref" href="Kook.IUser.html">IUser</a></div>
-    <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</div>
-    <div><a class="xref" href="Kook.IMentionable.html">IMentionable</a></div>
-    <div><a class="xref" href="Kook.IPresence.html">IPresence</a></div>
-    <div><a class="xref" href="Kook.IUpdateable.html">IUpdateable</a></div>
-  </div>
+  
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="Kook.Rest.RestEntity-1.html#Kook_Rest_RestEntity_1_Id">RestEntity&lt;UInt64&gt;.Id</a>
     </div>
   </div>
+  
   <h6><strong>Namespace</strong>: <a class="xref" href="Kook.Rest.html">Kook.Rest</a></h6>
   <h6><strong>Assembly</strong>: Kook.Net.Rest.dll</h6>
+  
   <h5 id="Kook_Rest_RestUser_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class RestUser : RestEntity&lt;ulong&gt;, IEntity&lt;ulong&gt;, IUser, IEntity&lt;ulong&gt;, IMentionable, IPresence, IUpdateable</code></pre>
   </div>
+
+  
+  
+  
+  
   <h3 id="properties">Properties
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_ActiveClient.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.ActiveClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_ActiveClient.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.ActiveClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L60">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L60" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_ActiveClient_" data-uid="Kook.Rest.RestUser.ActiveClient*"></a>
-  <h4 id="Kook_Rest_RestUser_ActiveClient" data-uid="Kook.Rest.RestUser.ActiveClient">ActiveClient</h4>
+  
+  <h4 id="Kook_Rest_RestUser_ActiveClient" data-uid="Kook.Rest.RestUser.ActiveClient"><a href="#collapsible-Kook_Rest_RestUser_ActiveClient" class="expander" data-toggle="collapse">ActiveClient</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_ActiveClient" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ClientType? ActiveClient { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Kook.ClientType.html">ClientType</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Kook.ClientType.html">ClientType</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_Avatar.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.Avatar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_Avatar.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.Avatar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L31">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L31" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_Avatar_" data-uid="Kook.Rest.RestUser.Avatar*"></a>
-  <h4 id="Kook_Rest_RestUser_Avatar" data-uid="Kook.Rest.RestUser.Avatar">Avatar</h4>
+  
+  <h4 id="Kook_Rest_RestUser_Avatar" data-uid="Kook.Rest.RestUser.Avatar"><a href="#collapsible-Kook_Rest_RestUser_Avatar" class="expander" data-toggle="collapse">Avatar</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_Avatar" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Avatar { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_Banner.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.Banner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_Banner.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.Banner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L37">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L37" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_Banner_" data-uid="Kook.Rest.RestUser.Banner*"></a>
-  <h4 id="Kook_Rest_RestUser_Banner" data-uid="Kook.Rest.RestUser.Banner">Banner</h4>
+  
+  <h4 id="Kook_Rest_RestUser_Banner" data-uid="Kook.Rest.RestUser.Banner"><a href="#collapsible-Kook_Rest_RestUser_Banner" class="expander" data-toggle="collapse">Banner</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_Banner" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Banner { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_BuffAvatar.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.BuffAvatar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_BuffAvatar.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.BuffAvatar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L34">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L34" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_BuffAvatar_" data-uid="Kook.Rest.RestUser.BuffAvatar*"></a>
-  <h4 id="Kook_Rest_RestUser_BuffAvatar" data-uid="Kook.Rest.RestUser.BuffAvatar">BuffAvatar</h4>
+  
+  <h4 id="Kook_Rest_RestUser_BuffAvatar" data-uid="Kook.Rest.RestUser.BuffAvatar"><a href="#collapsible-Kook_Rest_RestUser_BuffAvatar" class="expander" data-toggle="collapse">BuffAvatar</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_BuffAvatar" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string BuffAvatar { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_HasBuff.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.HasBuff%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_HasBuff.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.HasBuff%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L28">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L28" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_HasBuff_" data-uid="Kook.Rest.RestUser.HasBuff*"></a>
-  <h4 id="Kook_Rest_RestUser_HasBuff" data-uid="Kook.Rest.RestUser.HasBuff">HasBuff</h4>
+  
+  <h4 id="Kook_Rest_RestUser_HasBuff" data-uid="Kook.Rest.RestUser.HasBuff"><a href="#collapsible-Kook_Rest_RestUser_HasBuff" class="expander" data-toggle="collapse">HasBuff</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_HasBuff" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool? HasBuff { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IdentifyNumber.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IdentifyNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IdentifyNumber.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IdentifyNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L46">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L46" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_IdentifyNumber_" data-uid="Kook.Rest.RestUser.IdentifyNumber*"></a>
-  <h4 id="Kook_Rest_RestUser_IdentifyNumber" data-uid="Kook.Rest.RestUser.IdentifyNumber">IdentifyNumber</h4>
+  
+  <h4 id="Kook_Rest_RestUser_IdentifyNumber" data-uid="Kook.Rest.RestUser.IdentifyNumber"><a href="#collapsible-Kook_Rest_RestUser_IdentifyNumber" class="expander" data-toggle="collapse">IdentifyNumber</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_IdentifyNumber" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string IdentifyNumber { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IdentifyNumberValue.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IdentifyNumberValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IdentifyNumberValue.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IdentifyNumberValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L19">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L19" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_IdentifyNumberValue_" data-uid="Kook.Rest.RestUser.IdentifyNumberValue*"></a>
-  <h4 id="Kook_Rest_RestUser_IdentifyNumberValue" data-uid="Kook.Rest.RestUser.IdentifyNumberValue">IdentifyNumberValue</h4>
+  
+  <h4 id="Kook_Rest_RestUser_IdentifyNumberValue" data-uid="Kook.Rest.RestUser.IdentifyNumberValue"><a href="#collapsible-Kook_Rest_RestUser_IdentifyNumberValue" class="expander" data-toggle="collapse">IdentifyNumberValue</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_IdentifyNumberValue" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ushort? IdentifyNumberValue { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IsBanned.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IsBanned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IsBanned.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IsBanned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L25">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L25" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_IsBanned_" data-uid="Kook.Rest.RestUser.IsBanned*"></a>
-  <h4 id="Kook_Rest_RestUser_IsBanned" data-uid="Kook.Rest.RestUser.IsBanned">IsBanned</h4>
+  
+  <h4 id="Kook_Rest_RestUser_IsBanned" data-uid="Kook.Rest.RestUser.IsBanned"><a href="#collapsible-Kook_Rest_RestUser_IsBanned" class="expander" data-toggle="collapse">IsBanned</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_IsBanned" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool? IsBanned { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IsBot.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IsBot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IsBot.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IsBot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L22">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L22" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_IsBot_" data-uid="Kook.Rest.RestUser.IsBot*"></a>
-  <h4 id="Kook_Rest_RestUser_IsBot" data-uid="Kook.Rest.RestUser.IsBot">IsBot</h4>
+  
+  <h4 id="Kook_Rest_RestUser_IsBot" data-uid="Kook.Rest.RestUser.IsBot"><a href="#collapsible-Kook_Rest_RestUser_IsBot" class="expander" data-toggle="collapse">IsBot</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_IsBot" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool? IsBot { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IsDenoiseEnabled.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IsDenoiseEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IsDenoiseEnabled.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IsDenoiseEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L40">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L40" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_IsDenoiseEnabled_" data-uid="Kook.Rest.RestUser.IsDenoiseEnabled*"></a>
-  <h4 id="Kook_Rest_RestUser_IsDenoiseEnabled" data-uid="Kook.Rest.RestUser.IsDenoiseEnabled">IsDenoiseEnabled</h4>
+  
+  <h4 id="Kook_Rest_RestUser_IsDenoiseEnabled" data-uid="Kook.Rest.RestUser.IsDenoiseEnabled"><a href="#collapsible-Kook_Rest_RestUser_IsDenoiseEnabled" class="expander" data-toggle="collapse">IsDenoiseEnabled</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_IsDenoiseEnabled" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool? IsDenoiseEnabled { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IsOnline.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IsOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_IsOnline.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.IsOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L57">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L57" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_IsOnline_" data-uid="Kook.Rest.RestUser.IsOnline*"></a>
-  <h4 id="Kook_Rest_RestUser_IsOnline" data-uid="Kook.Rest.RestUser.IsOnline">IsOnline</h4>
+  
+  <h4 id="Kook_Rest_RestUser_IsOnline" data-uid="Kook.Rest.RestUser.IsOnline"><a href="#collapsible-Kook_Rest_RestUser_IsOnline" class="expander" data-toggle="collapse">IsOnline</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_IsOnline" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool? IsOnline { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_KMarkdownMention.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.KMarkdownMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_KMarkdownMention.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.KMarkdownMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L49">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L49" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_KMarkdownMention_" data-uid="Kook.Rest.RestUser.KMarkdownMention*"></a>
-  <h4 id="Kook_Rest_RestUser_KMarkdownMention" data-uid="Kook.Rest.RestUser.KMarkdownMention">KMarkdownMention</h4>
+  
+  <h4 id="Kook_Rest_RestUser_KMarkdownMention" data-uid="Kook.Rest.RestUser.KMarkdownMention"><a href="#collapsible-Kook_Rest_RestUser_KMarkdownMention" class="expander" data-toggle="collapse">KMarkdownMention</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_KMarkdownMention" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string KMarkdownMention { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_PlainTextMention.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.PlainTextMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_PlainTextMention.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.PlainTextMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L52">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L52" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_PlainTextMention_" data-uid="Kook.Rest.RestUser.PlainTextMention*"></a>
-  <h4 id="Kook_Rest_RestUser_PlainTextMention" data-uid="Kook.Rest.RestUser.PlainTextMention">PlainTextMention</h4>
+  
+  <h4 id="Kook_Rest_RestUser_PlainTextMention" data-uid="Kook.Rest.RestUser.PlainTextMention"><a href="#collapsible-Kook_Rest_RestUser_PlainTextMention" class="expander" data-toggle="collapse">PlainTextMention</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_PlainTextMention" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string PlainTextMention { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_Username.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.Username%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_Username.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.Username%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L16">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L16" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_Username_" data-uid="Kook.Rest.RestUser.Username*"></a>
-  <h4 id="Kook_Rest_RestUser_Username" data-uid="Kook.Rest.RestUser.Username">Username</h4>
+  
+  <h4 id="Kook_Rest_RestUser_Username" data-uid="Kook.Rest.RestUser.Username"><a href="#collapsible-Kook_Rest_RestUser_Username" class="expander" data-toggle="collapse">Username</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_Username" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Username { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_UserTag.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.UserTag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_UserTag.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.UserTag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L43">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L43" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_UserTag_" data-uid="Kook.Rest.RestUser.UserTag*"></a>
-  <h4 id="Kook_Rest_RestUser_UserTag" data-uid="Kook.Rest.RestUser.UserTag">UserTag</h4>
+  
+  <h4 id="Kook_Rest_RestUser_UserTag" data-uid="Kook.Rest.RestUser.UserTag"><a href="#collapsible-Kook_Rest_RestUser_UserTag" class="expander" data-toggle="collapse">UserTag</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_UserTag" class="collapse in">
   <div class="markdown level1 summary"><p>Get the tag this user has.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public UserTag UserTag { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.UserTag.html">UserTag</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.UserTag.html">UserTag</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Kook.IUser.html#Kook_IUser_UserTag">IUser.UserTag</a></div>
+  
+  
+  
+  
+  </div>
   <h3 id="methods">Methods
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_BlockAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.BlockAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_BlockAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.BlockAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L153">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L153" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_BlockAsync_" data-uid="Kook.Rest.RestUser.BlockAsync*"></a>
-  <h4 id="Kook_Rest_RestUser_BlockAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.BlockAsync(Kook.RequestOptions)">BlockAsync(RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestUser_BlockAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.BlockAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestUser_BlockAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">BlockAsync(RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_BlockAsync_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task BlockAsync(RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_CreateDMChannelAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.CreateDMChannelAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_CreateDMChannelAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.CreateDMChannelAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L134">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L134" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_CreateDMChannelAsync_" data-uid="Kook.Rest.RestUser.CreateDMChannelAsync*"></a>
-  <h4 id="Kook_Rest_RestUser_CreateDMChannelAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.CreateDMChannelAsync(Kook.RequestOptions)">CreateDMChannelAsync(RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestUser_CreateDMChannelAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.CreateDMChannelAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestUser_CreateDMChannelAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">CreateDMChannelAsync(RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_CreateDMChannelAsync_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"><p>Creates a direct message channel to this user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;RestDMChannel&gt; CreateDMChannelAsync(RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p><p>The options to be used when sending the request.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Rest.RestDMChannel.html">RestDMChannel</a>&gt;</td>
-        <td><p>A task that represents the asynchronous get operation. The task result contains a rest DM channel where the user is the recipient.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Rest.RestDMChannel.html">RestDMChannel</a>&gt;
+        <p><p>A task that represents the asynchronous get operation. The task result contains a rest DM channel where the user is the recipient.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_GetIntimacyAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.GetIntimacyAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_GetIntimacyAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.GetIntimacyAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L145">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L145" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_GetIntimacyAsync_" data-uid="Kook.Rest.RestUser.GetIntimacyAsync*"></a>
-  <h4 id="Kook_Rest_RestUser_GetIntimacyAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.GetIntimacyAsync(Kook.RequestOptions)">GetIntimacyAsync(RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestUser_GetIntimacyAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.GetIntimacyAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestUser_GetIntimacyAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetIntimacyAsync(RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_GetIntimacyAsync_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the intimacy information with this user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;RestIntimacy&gt; GetIntimacyAsync(RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p><p>The options to be used when sending the request.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Rest.RestIntimacy.html">RestIntimacy</a>&gt;</td>
-        <td><p>A task that represents the asynchronous operation for getting the intimacy information. The task result
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Rest.RestIntimacy.html">RestIntimacy</a>&gt;
+        <p><p>A task that represents the asynchronous operation for getting the intimacy information. The task result
 contains the intimacy information associated with this user.</p>
-</td>
-      </tr>
-    </tbody>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_RemoveFriendAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.RemoveFriendAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_RemoveFriendAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.RemoveFriendAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L165">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L165" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_RemoveFriendAsync_" data-uid="Kook.Rest.RestUser.RemoveFriendAsync*"></a>
-  <h4 id="Kook_Rest_RestUser_RemoveFriendAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.RemoveFriendAsync(Kook.RequestOptions)">RemoveFriendAsync(RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestUser_RemoveFriendAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.RemoveFriendAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestUser_RemoveFriendAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">RemoveFriendAsync(RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_RemoveFriendAsync_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task RemoveFriendAsync(RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_RequestFriendAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.RequestFriendAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_RequestFriendAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.RequestFriendAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L161">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L161" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_RequestFriendAsync_" data-uid="Kook.Rest.RestUser.RequestFriendAsync*"></a>
-  <h4 id="Kook_Rest_RestUser_RequestFriendAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.RequestFriendAsync(Kook.RequestOptions)">RequestFriendAsync(RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestUser_RequestFriendAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.RequestFriendAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestUser_RequestFriendAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">RequestFriendAsync(RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_RequestFriendAsync_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual Task RequestFriendAsync(RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_ToString.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_ToString.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L176">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L176" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_ToString_" data-uid="Kook.Rest.RestUser.ToString*"></a>
-  <h4 id="Kook_Rest_RestUser_ToString" data-uid="Kook.Rest.RestUser.ToString">ToString()</h4>
+  
+  <h4 id="Kook_Rest_RestUser_ToString" data-uid="Kook.Rest.RestUser.ToString"><a href="#collapsible-Kook_Rest_RestUser_ToString" class="expander" data-toggle="collapse">ToString()</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_ToString" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the Username#IdentifyNumber of the user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
+
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>A string that resolves to Username#IdentifyNumber of the user.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p><p>A string that resolves to Username#IdentifyNumber of the user.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_UnblockAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.UnblockAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_UnblockAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.UnblockAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L157">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L157" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_UnblockAsync_" data-uid="Kook.Rest.RestUser.UnblockAsync*"></a>
-  <h4 id="Kook_Rest_RestUser_UnblockAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.UnblockAsync(Kook.RequestOptions)">UnblockAsync(RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestUser_UnblockAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.UnblockAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestUser_UnblockAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">UnblockAsync(RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_UnblockAsync_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task UnblockAsync(RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_UpdateAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.UpdateAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_UpdateAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.UpdateAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L115">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L115" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_UpdateAsync_" data-uid="Kook.Rest.RestUser.UpdateAsync*"></a>
-  <h4 id="Kook_Rest_RestUser_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.UpdateAsync(Kook.RequestOptions)">UpdateAsync(RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestUser_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.UpdateAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestUser_UpdateAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">UpdateAsync(RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_UpdateAsync_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual Task UpdateAsync(RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_UpdateIntimacyAsync_Action_Kook_IntimacyProperties__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.UpdateIntimacyAsync(Action%7BKook.IntimacyProperties%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser_UpdateIntimacyAsync_Action_Kook_IntimacyProperties__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser.UpdateIntimacyAsync(Action%7BKook.IntimacyProperties%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L149">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L149" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestUser_UpdateIntimacyAsync_" data-uid="Kook.Rest.RestUser.UpdateIntimacyAsync*"></a>
-  <h4 id="Kook_Rest_RestUser_UpdateIntimacyAsync_Action_Kook_IntimacyProperties__Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.UpdateIntimacyAsync(Action{Kook.IntimacyProperties},Kook.RequestOptions)">UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt;, RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestUser_UpdateIntimacyAsync_Action_Kook_IntimacyProperties__Kook_RequestOptions_" data-uid="Kook.Rest.RestUser.UpdateIntimacyAsync(Action{Kook.IntimacyProperties},Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestUser_UpdateIntimacyAsync_Action_Kook_IntimacyProperties__Kook_RequestOptions_" class="expander" data-toggle="collapse">UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt;, RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestUser_UpdateIntimacyAsync_Action_Kook_IntimacyProperties__Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt; func, RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="Kook.IntimacyProperties.html">IntimacyProperties</a>&gt;</td>
-        <td><span class="parametername">func</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">Action</span>&lt;<a class="xref" href="Kook.IntimacyProperties.html">IntimacyProperties</a>&gt;</span>
+        <span class="parametername">func</span>
+        <p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p>
+      </td>
+    </tr>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kook.IEntity-1.html">IEntity&lt;TId&gt;</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   </div>
-  <div>
-      <a class="xref" href="Kook.IUser.html">IUser</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.IEntity-1.html">IEntity&lt;TId&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.IMentionable.html">IMentionable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.IPresence.html">IPresence</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.IUpdateable.html">IUpdateable</a>
-  </div>
+  
+  
 </article>
-                </div>
-
-            </main>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestUser.md&amp;value=---%0Auid%3A%20Kook.Rest.RestUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestUser.cs/#L10" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-        
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-        <script type="text/javascript" src="../styles/jquery.twbsPagination.js"></script>
-        <script type="text/javascript" src="../styles/url.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-        <script type="text/javascript" src="../styles/docfx.js"></script>
-        <script type="text/javascript" src="../styles/singulink.js"></script>
-        <script type="text/javascript" src="../styles/main.js"></script>    </body>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Kook.Net (c) 2022-2023
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
 </html>

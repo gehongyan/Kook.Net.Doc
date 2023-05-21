@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#26381;&#21153;&#22120;&#30456;&#20851;&#25509;&#21475;&#21015;&#34920; | Kook.Net &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#26381;&#21153;&#22120;&#30456;&#20851;&#25509;&#21475;&#21015;&#34920; | Kook.Net &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="Kook.Net &#25991;&#26723;">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.QuickReference.Http.Guild">
+<h1 id="服务器相关接口列表">服务器相关接口列表</h1>
+
+<p>预声明变量</p>
+<pre><code class="lang-csharp">readonly KookSocketClient _socketClient = null;
+readonly KookRestClient _restClient = null;
+
+SocketGuild socketGuild = null;
+RestGuild restGuild = null;
+IGuild guild = null;
+IGuildUser guildUser = null;
+</code></pre><h3 id="获取当前用户加入的服务器列表"><a href="https://developer.kookapp.cn/doc/http/guild#获取当前用户加入的服务器列表">获取当前用户加入的服务器列表</a></h3>
+<p>GET <code>/api/v3/guild/list</code></p>
+<pre><code class="lang-csharp">// 缓存获取加入的所有服务器
+IReadOnlyCollection&lt;SocketGuild&gt; socketGuilds = _socketClient.Guilds;
+// API 请求
+IReadOnlyCollection&lt;RestGuild&gt; restGuilds = await _socketClient.Rest.GetGuildsAsync();
+IReadOnlyCollection&lt;RestGuild&gt; restGuilds = await _restClient.GetGuildsAsync();
+</code></pre><h3 id="获取服务器详情"><a href="https://developer.kookapp.cn/doc/http/guild#获取服务器详情">获取服务器详情</a></h3>
+<p>GET <code>/api/v3/guild/view</code></p>
+<pre><code class="lang-csharp">// 服务器 ID
+ulong guildId = 0;
+// 缓存获取指定服务器
+SocketGuild socketGuild = _socketClient.GetGuild(guildId);
+// API 请求
+RestGuild restGuild = await _socketClient.Rest.GetGuildAsync(guildId);
+RestGuild restGuild = await _restClient.GetGuildAsync(guildId);
+</code></pre><h3 id="获取服务器中的用户列表"><a href="https://developer.kookapp.cn/doc/http/guild#获取服务器中的用户列表">获取服务器中的用户列表</a></h3>
+<p>GET <code>/api/v3/guild/user-list</code></p>
+<pre><code class="lang-csharp">// 要在启动时缓存服务器用户列表，请设置 AlwaysDownloadUsers = true
+// 主动更新所有服务器用户列表缓存
+await _socketClient.DownloadUsersAsync();
+// 主动更新部分服务器用户列表缓存
+IEnumerable&lt;IGuild&gt; guilds = Enumerable.Empty&lt;IGuild&gt;();
+await _socketClient.DownloadUsersAsync(guilds);
+// 主动更新指定服务器用户列表缓存
+await socketGuild.DownloadUsersAsync();
+
+// 服务器 ID
+ulong guildId = 0;
+// 缓存获取 SocketGuild 对象
+SocketGuild socketGuild = _socketClient.GetGuild(guildId);
+// 缓存获取用户列表
+IReadOnlyCollection&lt;SocketGuildUser&gt; socketUsers = socketGuild.Users;
+// 调用异步方法获取用户列表，在缓存中包含所有用户的情况下，直接返回缓存的用户列表，否则会发起 API 请求获取分页结果
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IGuildUser&gt;&gt; pagedGuildUsers = socketGuild.GetUsersAsync();
+// 合并分页结果
+IEnumerable&lt;IGuildUser&gt; guildUsers = await pagedGuildUsers.FlattenAsync();
+
+// API 请求
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestGuildUser&gt;&gt; pagedRestGuildUsers = restGuild.GetUsersAsync();
+// 合并分页结果
+IEnumerable&lt;RestGuildUser&gt; restGuildUsers = await pagedRestGuildUsers.FlattenAsync();
+
+// 如果 IGuild 对象是 SocketGuild，且缓存中包含所有用户，则直接返回缓存的用户列表，否则会发起 API 请求获取全部用户信息
+IReadOnlyCollection&lt;IGuildUser&gt; guildUsers = await guild.GetUsersAsync();
+</code></pre><h3 id="修改服务器中用户的昵称"><a href="https://developer.kookapp.cn/doc/http/guild#修改服务器中用户的昵称">修改服务器中用户的昵称</a></h3>
+<p>POST <code>/api/v3/guild/nickname</code></p>
+<pre><code class="lang-csharp">// 要设置的昵称，如要清空昵称，请传入 `null`、`string.Empty` 或该用户的 `IUser.Username`
+string nickname = null;
+// API 请求
+await guildUser.ModifyNicknameAsync(nickname);
+</code></pre><h3 id="离开服务器"><a href="https://developer.kookapp.cn/doc/http/guild#离开服务器">离开服务器</a></h3>
+<p>POST <code>/api/v3/guild/leave</code></p>
+<pre><code class="lang-csharp">// API 请求
+await guild.LeaveAsync();
+</code></pre><h3 id="踢出服务器"><a href="https://developer.kookapp.cn/doc/http/guild#踢出服务器">踢出服务器</a></h3>
+<p>POST <code>/api/v3/guild/kickout</code></p>
+<pre><code class="lang-csharp">// API 请求
+await guildUser.KickAsync();
+</code></pre><h3 id="服务器静音闭麦列表"><a href="https://developer.kookapp.cn/doc/http/guild#服务器静音闭麦列表">服务器静音闭麦列表</a></h3>
+<p>GET <code>/api/v3/guild-mute/list</code></p>
+<pre><code class="lang-csharp">// 要在启动时缓存语音状态信息，请设置 AlwaysDownloadVoiceStates = true
+// 主动更新所有服务器语音状态信息缓存
+await _socketClient.DownloadVoiceStatesAsync();
+// 主动更新部分服务器语音状态信息缓存
+IEnumerable&lt;IGuild&gt; guilds = Enumerable.Empty&lt;IGuild&gt;();
+await _socketClient.DownloadVoiceStatesAsync(guilds);
+// 主动更新指定服务器语音状态信息缓存
+await socketGuild.DownloadVoiceStatesAsync();
+
+// 缓存获取服务器内的所有语音状态信息
+Dictionary&lt;SocketGuildUser, SocketVoiceState?&gt; voiceStates = socketGuild.Users.ToDictionary(x =&gt; x, x =&gt; x.VoiceState);
+// 缓存获取被服务器闭麦的用户列表
+IEnumerable&lt;SocketGuildUser&gt; mutedUsers = socketGuild.Users.Where(x =&gt; x.VoiceState?.IsMuted == true);
+// 缓存获取被服务器静音的用户列表
+IEnumerable&lt;SocketGuildUser&gt; deafenedUsers = socketGuild.Users.Where(x =&gt; x.VoiceState?.IsDeafened == true);
+</code></pre><h3 id="添加服务器静音或闭麦"><a href="https://developer.kookapp.cn/doc/http/guild#添加服务器静音或闭麦">添加服务器静音或闭麦</a></h3>
+<p>POST <code>/api/v3/guild-mute/create</code></p>
+<pre><code class="lang-csharp">// API 请求
+await guildUser.MuteAsync();
+await guildUser.DeafenAsync();
+</code></pre><h3 id="删除服务器静音或闭麦"><a href="https://developer.kookapp.cn/doc/http/guild#删除服务器静音或闭麦">删除服务器静音或闭麦</a></h3>
+<p>POST <code>/api/v3/guild-mute/delete</code></p>
+<pre><code class="lang-csharp">// API 请求
+await guildUser.UnmuteAsync();
+await guildUser.UndeafenAsync();
+</code></pre><h3 id="服务器助力历史"><a href="https://developer.kookapp.cn/doc/http/guild#服务器助力历史">服务器助力历史</a></h3>
+<p>GET <code>/api/v3/guild-boost/history</code></p>
+<pre><code class="lang-csharp">// 要在启动时缓存服务器助力信息，请设置 AlwaysDownloadBoostSubscriptions = true
+// 主动更新所有服务器服务器助力信息缓存
+await _socketClient.DownloadBoostSubscriptionsAsync();
+// 主动更新部分服务器服务器助力信息缓存
+IEnumerable&lt;IGuild&gt; guilds = Enumerable.Empty&lt;IGuild&gt;();
+await _socketClient.DownloadBoostSubscriptionsAsync(guilds);
+// 主动更新指定服务器服务器助力信息缓存
+await socketGuild.DownloadBoostSubscriptionsAsync();
+
+// 缓存获取服务器内的所有服务器助力信息
+ImmutableDictionary&lt;IUser,IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt; boostSubscriptions = socketGuild.BoostSubscriptions;
+ImmutableDictionary&lt;IUser,IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt; validBoostSubscriptions = socketGuild.ValidBoostSubscriptions;
+// 缓存获取服务器用户的服务器服务器助力信息
+IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt; boostSubscriptions = socketGuildUser.BoostSubscriptions;
+
+// API 请求，获取服务器内的助力信息
+ImmutableDictionary&lt;IUser,IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt; boostSubscriptions = await guild.GetBoostSubscriptionsAsync();
+ImmutableDictionary&lt;IUser,IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt; boostSubscriptions = await guild.GetActiveBoostSubscriptionsAsync();
+// API 请求，获取服务器用户的助力信息
+IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt; boostSubscriptions = await guildUser.GetBoostSubscriptionsAsync();
+</code></pre></article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/quick_reference/http_api/guild.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Kook.Net (c) 2022-2023
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,1102 +1,1300 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RestGuildChannel
+   | Kook.Net &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RestGuildChannel
+   | Kook.Net &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.56.7.0">
     
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class RestGuildChannel
-     | Kook.Net &#25991;&#26723; </title>
-      <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class RestGuildChannel
-     | Kook.Net &#25991;&#26723; ">
-      <meta name="generator" content="docfx 2.56.7.0">
-      
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
-      <link rel="stylesheet" href="../styles/config.css">
-      <link rel="stylesheet" href="../styles/discord.css">
-      <link rel="stylesheet" href="../styles/singulink.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-      
-      <meta property="docfx:rel" content="../">
-      
-    </head>
-    <body>
-        <div class="top-navbar">
-            <a class="burger-icon" onclick="toggleMenu()">
-                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
-            </a>
-
-            
-            <a class="brand" href="../index.html">
-              <img src="../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
-            </a>        </div>
-
-        <div class="body-content">
-            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
-
-            <nav id="sidebar" role="navigation">
-                <div class="sidebar">
-                    
-                    <div>
-                      <div class="mobile-hide">
-                        
-                        <a class="brand" href="../index.html">
-                          <img src="../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
-                        </a>  </div>
-
-                      <div class="sidesearch">
-                        <form id="search" role="search" class="search">
-                            <i class="bi bi-search search-icon"></i>
-                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
-                        </form>
-                      </div>
-                    
-                      <div id="navbar">
-                      </div>
-                    </div>                    <div class="sidebar-item-separator"></div>
-                        
-                        <div id="sidetoggle">
-                          <div id="sidetoc"></div>
-                        </div>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
                 </div>
-                <div class="footer">
-                  Kook.Net (c) 2022-2023
-                  
-                </div>            </nav>
-
-            <main class="main-panel">
-                
-                <div id="search-results" style="display: none;">
-                  <h1 class="search-list">Search Results for <span></span></h1>
-                  <div class="sr-items">
-                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
-                  </div>
-                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
-                </div>
-                <div role="main" class="hide-when-search">
-                        
-                        <div class="subnav navbar navbar-default">
-                          <div class="container hide-when-search" id="breadcrumb">
-                            <ul class="breadcrumb">
-                              <li></li>
-                            </ul>
-                          </div>
-                        </div>
-
-                    <article class="content wrap" id="_content" data-uid="Kook.Rest.RestGuildChannel">
-  
-  
-  <h1 id="Kook_Rest_RestGuildChannel" data-uid="Kook.Rest.RestGuildChannel" class="text-break">Class RestGuildChannel
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kook.Rest.RestGuildChannel">
+  <h1 id="Kook_Rest_RestGuildChannel" data-uid="Kook.Rest.RestGuildChannel">Class RestGuildChannel
   </h1>
   <div class="markdown level0 summary"><p>Represents a REST-based guild channel in a guild.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="Kook.Rest.RestEntity-1.html">RestEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</div>
     <div class="level2"><a class="xref" href="Kook.Rest.RestChannel.html">RestChannel</a></div>
     <div class="level3"><span class="xref">RestGuildChannel</span></div>
+  </div>
+  
       <div class="level4"><a class="xref" href="Kook.Rest.RestCategoryChannel.html">RestCategoryChannel</a></div>
       <div class="level4"><a class="xref" href="Kook.Rest.RestTextChannel.html">RestTextChannel</a></div>
       <div class="level4"><a class="xref" href="Kook.Rest.RestVoiceChannel.html">RestVoiceChannel</a></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</div>
-    <div><a class="xref" href="Kook.IUpdateable.html">IUpdateable</a></div>
-    <div><a class="xref" href="Kook.IGuildChannel.html">IGuildChannel</a></div>
-    <div><a class="xref" href="Kook.IChannel.html">IChannel</a></div>
-    <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</div>
-    <div><a class="xref" href="Kook.IDeletable.html">IDeletable</a></div>
-  </div>
+  
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="Kook.Rest.RestEntity-1.html#Kook_Rest_RestEntity_1_Id">RestEntity&lt;UInt64&gt;.Id</a>
     </div>
   </div>
+  
   <h6><strong>Namespace</strong>: <a class="xref" href="Kook.Rest.html">Kook.Rest</a></h6>
   <h6><strong>Assembly</strong>: Kook.Net.Rest.dll</h6>
+  
   <h5 id="Kook_Rest_RestGuildChannel_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class RestGuildChannel : RestChannel, IEntity&lt;ulong&gt;, IUpdateable, IGuildChannel, IChannel, IEntity&lt;ulong&gt;, IDeletable</code></pre>
   </div>
+
+  
+  
+  
+  
   <h3 id="properties">Properties
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_CreatorId.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.CreatorId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_CreatorId.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.CreatorId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L44">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L44" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_CreatorId_" data-uid="Kook.Rest.RestGuildChannel.CreatorId*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_CreatorId" data-uid="Kook.Rest.RestGuildChannel.CreatorId">CreatorId</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_CreatorId" data-uid="Kook.Rest.RestGuildChannel.CreatorId"><a href="#collapsible-Kook_Rest_RestGuildChannel_CreatorId" class="expander" data-toggle="collapse">CreatorId</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_CreatorId" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ulong CreatorId { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_GuildId.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.GuildId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_GuildId.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.GuildId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L41">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L41" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_GuildId_" data-uid="Kook.Rest.RestGuildChannel.GuildId*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_GuildId" data-uid="Kook.Rest.RestGuildChannel.GuildId">GuildId</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_GuildId" data-uid="Kook.Rest.RestGuildChannel.GuildId"><a href="#collapsible-Kook_Rest_RestGuildChannel_GuildId" class="expander" data-toggle="collapse">GuildId</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_GuildId" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ulong GuildId { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_Name.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_Name.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L35">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L35" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_Name_" data-uid="Kook.Rest.RestGuildChannel.Name*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_Name" data-uid="Kook.Rest.RestGuildChannel.Name">Name</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_Name" data-uid="Kook.Rest.RestGuildChannel.Name"><a href="#collapsible-Kook_Rest_RestGuildChannel_Name" class="expander" data-toggle="collapse">Name</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_Name" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_Position.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.Position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_Position.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.Position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L38">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L38" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_Position_" data-uid="Kook.Rest.RestGuildChannel.Position*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_Position" data-uid="Kook.Rest.RestGuildChannel.Position">Position</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_Position" data-uid="Kook.Rest.RestGuildChannel.Position"><a href="#collapsible-Kook_Rest_RestGuildChannel_Position" class="expander" data-toggle="collapse">Position</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_Position" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int? Position { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_RolePermissionOverwrites.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.RolePermissionOverwrites%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_RolePermissionOverwrites.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.RolePermissionOverwrites%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L18">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L18" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_RolePermissionOverwrites_" data-uid="Kook.Rest.RestGuildChannel.RolePermissionOverwrites*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_RolePermissionOverwrites" data-uid="Kook.Rest.RestGuildChannel.RolePermissionOverwrites">RolePermissionOverwrites</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_RolePermissionOverwrites" data-uid="Kook.Rest.RestGuildChannel.RolePermissionOverwrites"><a href="#collapsible-Kook_Rest_RestGuildChannel_RolePermissionOverwrites" class="expander" data-toggle="collapse">RolePermissionOverwrites</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_RolePermissionOverwrites" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual IReadOnlyCollection&lt;RolePermissionOverwrite&gt; RolePermissionOverwrites { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.RolePermissionOverwrite.html">RolePermissionOverwrite</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.RolePermissionOverwrite.html">RolePermissionOverwrite</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_Type.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_Type.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L32">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L32" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_Type_" data-uid="Kook.Rest.RestGuildChannel.Type*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_Type" data-uid="Kook.Rest.RestGuildChannel.Type">Type</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_Type" data-uid="Kook.Rest.RestGuildChannel.Type"><a href="#collapsible-Kook_Rest_RestGuildChannel_Type" class="expander" data-toggle="collapse">Type</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_Type" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the type of this channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ChannelType Type { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.ChannelType.html">ChannelType</a></td>
-        <td><p>A <a class="xref" href="Kook.ChannelType.html">ChannelType</a> representing the type of this channel.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.ChannelType.html">ChannelType</a>
+        <p><p>A <a class="xref" href="Kook.ChannelType.html">ChannelType</a> representing the type of this channel.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_Type">IGuildChannel.Type</a></div>
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_UserPermissionOverwrites.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.UserPermissionOverwrites%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_UserPermissionOverwrites.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.UserPermissionOverwrites%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L21">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L21" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_UserPermissionOverwrites_" data-uid="Kook.Rest.RestGuildChannel.UserPermissionOverwrites*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_UserPermissionOverwrites" data-uid="Kook.Rest.RestGuildChannel.UserPermissionOverwrites">UserPermissionOverwrites</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_UserPermissionOverwrites" data-uid="Kook.Rest.RestGuildChannel.UserPermissionOverwrites"><a href="#collapsible-Kook_Rest_RestGuildChannel_UserPermissionOverwrites" class="expander" data-toggle="collapse">UserPermissionOverwrites</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_UserPermissionOverwrites" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual IReadOnlyCollection&lt;UserPermissionOverwrite&gt; UserPermissionOverwrites { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.UserPermissionOverwrite.html">UserPermissionOverwrite</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.UserPermissionOverwrite.html">UserPermissionOverwrite</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
   <h3 id="methods">Methods
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.AddPermissionOverwriteAsync(Kook.IGuildUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.AddPermissionOverwriteAsync(Kook.IGuildUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L170">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L170" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_" data-uid="Kook.Rest.RestGuildChannel.AddPermissionOverwriteAsync*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.AddPermissionOverwriteAsync(Kook.IGuildUser,Kook.RequestOptions)">AddPermissionOverwriteAsync(IGuildUser, RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.AddPermissionOverwriteAsync(Kook.IGuildUser,Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_" class="expander" data-toggle="collapse">AddPermissionOverwriteAsync(IGuildUser, RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"><p>Adds the permission overwrite for the given user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task AddPermissionOverwriteAsync(IGuildUser user, RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IGuildUser.html">IGuildUser</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>The user to add the overwrite to.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.IGuildUser.html">IGuildUser</a></span>
+        <span class="parametername">user</span>
+        <p><p>The user to add the overwrite to.</p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p><p>The options to be used when sending the request.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td><p>A task representing the asynchronous permission operation for adding the specified permissions to the channel.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p><p>A task representing the asynchronous permission operation for adding the specified permissions to the channel.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.AddPermissionOverwriteAsync(Kook.IRole%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.AddPermissionOverwriteAsync(Kook.IRole%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L184">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L184" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_" data-uid="Kook.Rest.RestGuildChannel.AddPermissionOverwriteAsync*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.AddPermissionOverwriteAsync(Kook.IRole,Kook.RequestOptions)">AddPermissionOverwriteAsync(IRole, RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.AddPermissionOverwriteAsync(Kook.IRole,Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_" class="expander" data-toggle="collapse">AddPermissionOverwriteAsync(IRole, RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_AddPermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"><p>Adds the permission overwrite for the given role.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task AddPermissionOverwriteAsync(IRole role, RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IRole.html">IRole</a></td>
-        <td><span class="parametername">role</span></td>
-        <td><p>The role to add the overwrite to.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.IRole.html">IRole</a></span>
+        <span class="parametername">role</span>
+        <p><p>The role to add the overwrite to.</p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p><p>The options to be used when sending the request.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td><p>A task representing the asynchronous permission operation for adding the specified permissions to the channel.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p><p>A task representing the asynchronous permission operation for adding the specified permissions to the channel.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_DeleteAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.DeleteAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_DeleteAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.DeleteAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L120">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L120" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_DeleteAsync_" data-uid="Kook.Rest.RestGuildChannel.DeleteAsync*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_DeleteAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.DeleteAsync(Kook.RequestOptions)">DeleteAsync(RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_DeleteAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.DeleteAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestGuildChannel_DeleteAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">DeleteAsync(RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_DeleteAsync_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task DeleteAsync(RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_GetCreatorAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.GetCreatorAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_GetCreatorAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.GetCreatorAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L116">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L116" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_GetCreatorAsync_" data-uid="Kook.Rest.RestGuildChannel.GetCreatorAsync*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_GetCreatorAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.GetCreatorAsync(Kook.RequestOptions)">GetCreatorAsync(RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_GetCreatorAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.GetCreatorAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestGuildChannel_GetCreatorAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetCreatorAsync(RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_GetCreatorAsync_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the creator of this channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;RestUser&gt; GetCreatorAsync(RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p><p>The options to be used when sending the request.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Kook.Rest.RestUser.html">RestUser</a>&gt;</td>
-        <td><p>A task that represents the asynchronous get operation. The task result contains the creator of this channel.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Rest.RestUser.html">RestUser</a>&gt;
+        <p><p>A task that represents the asynchronous get operation. The task result contains the creator of this channel.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
   <h5 id="Kook_Rest_RestGuildChannel_GetCreatorAsync_Kook_RequestOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This method will try to get the user as a global user. To get the creator as a guild member,
 you will need to get the user through
 <see cref="!:IGuild.GetUserAsync(ulong,CacheMode,RequestOptions)"></see>.&quot;/&gt;</p>
 </div>
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IRole_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.GetPermissionOverwrite(Kook.IRole)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IRole_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.GetPermissionOverwrite(Kook.IRole)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L153">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L153" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_GetPermissionOverwrite_" data-uid="Kook.Rest.RestGuildChannel.GetPermissionOverwrite*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IRole_" data-uid="Kook.Rest.RestGuildChannel.GetPermissionOverwrite(Kook.IRole)">GetPermissionOverwrite(IRole)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IRole_" data-uid="Kook.Rest.RestGuildChannel.GetPermissionOverwrite(Kook.IRole)"><a href="#collapsible-Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IRole_" class="expander" data-toggle="collapse">GetPermissionOverwrite(IRole)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IRole_" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the permission overwrite for a specific role.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public OverwritePermissions? GetPermissionOverwrite(IRole role)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IRole.html">IRole</a></td>
-        <td><span class="parametername">role</span></td>
-        <td><p>The role to get the overwrite from.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.IRole.html">IRole</a></span>
+        <span class="parametername">role</span>
+        <p><p>The role to get the overwrite from.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>&gt;</td>
-        <td><p>An overwrite object for the targeted role; <code>null</code> if none is set.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>&gt;
+        <p><p>An overwrite object for the targeted role; <code>null</code> if none is set.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IUser_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.GetPermissionOverwrite(Kook.IUser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IUser_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.GetPermissionOverwrite(Kook.IUser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L137">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L137" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_GetPermissionOverwrite_" data-uid="Kook.Rest.RestGuildChannel.GetPermissionOverwrite*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IUser_" data-uid="Kook.Rest.RestGuildChannel.GetPermissionOverwrite(Kook.IUser)">GetPermissionOverwrite(IUser)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IUser_" data-uid="Kook.Rest.RestGuildChannel.GetPermissionOverwrite(Kook.IUser)"><a href="#collapsible-Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IUser_" class="expander" data-toggle="collapse">GetPermissionOverwrite(IUser)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IUser_" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the permission overwrite for a specific user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public OverwritePermissions? GetPermissionOverwrite(IUser user)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IUser.html">IUser</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>The user to get the overwrite from.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.IUser.html">IUser</a></span>
+        <span class="parametername">user</span>
+        <p><p>The user to get the overwrite from.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>&gt;</td>
-        <td><p>An overwrite object for the targeted user; <code>null</code> if none is set.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>&gt;
+        <p><p>An overwrite object for the targeted user; <code>null</code> if none is set.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_ModifyAsync_Action_Kook_ModifyGuildChannelProperties__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.ModifyAsync(Action%7BKook.ModifyGuildChannelProperties%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_ModifyAsync_Action_Kook_ModifyGuildChannelProperties__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.ModifyAsync(Action%7BKook.ModifyGuildChannelProperties%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L98">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L98" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_ModifyAsync_" data-uid="Kook.Rest.RestGuildChannel.ModifyAsync*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_ModifyAsync_Action_Kook_ModifyGuildChannelProperties__Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.ModifyAsync(Action{Kook.ModifyGuildChannelProperties},Kook.RequestOptions)">ModifyAsync(Action&lt;ModifyGuildChannelProperties&gt;, RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_ModifyAsync_Action_Kook_ModifyGuildChannelProperties__Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.ModifyAsync(Action{Kook.ModifyGuildChannelProperties},Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestGuildChannel_ModifyAsync_Action_Kook_ModifyGuildChannelProperties__Kook_RequestOptions_" class="expander" data-toggle="collapse">ModifyAsync(Action&lt;ModifyGuildChannelProperties&gt;, RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_ModifyAsync_Action_Kook_ModifyGuildChannelProperties__Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task ModifyAsync(Action&lt;ModifyGuildChannelProperties&gt; func, RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="Kook.ModifyGuildChannelProperties.html">ModifyGuildChannelProperties</a>&gt;</td>
-        <td><span class="parametername">func</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">Action</span>&lt;<a class="xref" href="Kook.ModifyGuildChannelProperties.html">ModifyGuildChannelProperties</a>&gt;</span>
+        <span class="parametername">func</span>
+        <p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IGuildUser_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.ModifyPermissionOverwriteAsync(Kook.IGuildUser%2CFunc%7BKook.OverwritePermissions%2CKook.OverwritePermissions%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IGuildUser_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.ModifyPermissionOverwriteAsync(Kook.IGuildUser%2CFunc%7BKook.OverwritePermissions%2CKook.OverwritePermissions%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L239">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L239" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_" data-uid="Kook.Rest.RestGuildChannel.ModifyPermissionOverwriteAsync*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IGuildUser_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.ModifyPermissionOverwriteAsync(Kook.IGuildUser,Func{Kook.OverwritePermissions,Kook.OverwritePermissions},Kook.RequestOptions)">ModifyPermissionOverwriteAsync(IGuildUser, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IGuildUser_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.ModifyPermissionOverwriteAsync(Kook.IGuildUser,Func{Kook.OverwritePermissions,Kook.OverwritePermissions},Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IGuildUser_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_" class="expander" data-toggle="collapse">ModifyPermissionOverwriteAsync(IGuildUser, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IGuildUser_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"><p>Updates the permission overwrite for the given user, if one exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task ModifyPermissionOverwriteAsync(IGuildUser user, Func&lt;OverwritePermissions, OverwritePermissions&gt; func, RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IGuildUser.html">IGuildUser</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>The user to modify the overwrite for.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>, <a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>&gt;</td>
-        <td><span class="parametername">func</span></td>
-        <td><p>A delegate containing the values to modify the permission overwrite with.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.IGuildUser.html">IGuildUser</a></span>
+        <span class="parametername">user</span>
+        <p><p>The user to modify the overwrite for.</p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">Func</span>&lt;<a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>, <a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>&gt;</span>
+        <span class="parametername">func</span>
+        <p><p>A delegate containing the values to modify the permission overwrite with.</p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p><p>The options to be used when sending the request.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td><p>A task representing the asynchronous operation for removing the specified permissions from the channel.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p><p>A task representing the asynchronous operation for removing the specified permissions from the channel.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.ModifyPermissionOverwriteAsync(Kook.IRole%2CFunc%7BKook.OverwritePermissions%2CKook.OverwritePermissions%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.ModifyPermissionOverwriteAsync(Kook.IRole%2CFunc%7BKook.OverwritePermissions%2CKook.OverwritePermissions%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L262">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L262" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_" data-uid="Kook.Rest.RestGuildChannel.ModifyPermissionOverwriteAsync*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.ModifyPermissionOverwriteAsync(Kook.IRole,Func{Kook.OverwritePermissions,Kook.OverwritePermissions},Kook.RequestOptions)">ModifyPermissionOverwriteAsync(IRole, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.ModifyPermissionOverwriteAsync(Kook.IRole,Func{Kook.OverwritePermissions,Kook.OverwritePermissions},Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_" class="expander" data-toggle="collapse">ModifyPermissionOverwriteAsync(IRole, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"><p>Updates the permission overwrite for the given role, if one exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task ModifyPermissionOverwriteAsync(IRole role, Func&lt;OverwritePermissions, OverwritePermissions&gt; func, RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IRole.html">IRole</a></td>
-        <td><span class="parametername">role</span></td>
-        <td><p>The role to remove the overwrite for.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>, <a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>&gt;</td>
-        <td><span class="parametername">func</span></td>
-        <td><p>A delegate containing the values to modify the permission overwrite with.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.IRole.html">IRole</a></span>
+        <span class="parametername">role</span>
+        <p><p>The role to remove the overwrite for.</p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">Func</span>&lt;<a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>, <a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a>&gt;</span>
+        <span class="parametername">func</span>
+        <p><p>A delegate containing the values to modify the permission overwrite with.</p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p><p>The options to be used when sending the request.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td><p>A task representing the asynchronous operation for removing the specified permissions from the channel.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p><p>A task representing the asynchronous operation for removing the specified permissions from the channel.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.RemovePermissionOverwriteAsync(Kook.IGuildUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.RemovePermissionOverwriteAsync(Kook.IGuildUser%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L198">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L198" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_" data-uid="Kook.Rest.RestGuildChannel.RemovePermissionOverwriteAsync*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.RemovePermissionOverwriteAsync(Kook.IGuildUser,Kook.RequestOptions)">RemovePermissionOverwriteAsync(IGuildUser, RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.RemovePermissionOverwriteAsync(Kook.IGuildUser,Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_" class="expander" data-toggle="collapse">RemovePermissionOverwriteAsync(IGuildUser, RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"><p>Removes the permission overwrite for the given user, if one exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task RemovePermissionOverwriteAsync(IGuildUser user, RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IGuildUser.html">IGuildUser</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>The user to remove the overwrite from.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.IGuildUser.html">IGuildUser</a></span>
+        <span class="parametername">user</span>
+        <p><p>The user to remove the overwrite from.</p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p><p>The options to be used when sending the request.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td><p>A task representing the asynchronous operation for removing the specified permissions from the channel.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p><p>A task representing the asynchronous operation for removing the specified permissions from the channel.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.RemovePermissionOverwriteAsync(Kook.IRole%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.RemovePermissionOverwriteAsync(Kook.IRole%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L218">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L218" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_" data-uid="Kook.Rest.RestGuildChannel.RemovePermissionOverwriteAsync*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.RemovePermissionOverwriteAsync(Kook.IRole,Kook.RequestOptions)">RemovePermissionOverwriteAsync(IRole, RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.RemovePermissionOverwriteAsync(Kook.IRole,Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_" class="expander" data-toggle="collapse">RemovePermissionOverwriteAsync(IRole, RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_RemovePermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"><p>Removes the permission overwrite for the given role, if one exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task RemovePermissionOverwriteAsync(IRole role, RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IRole.html">IRole</a></td>
-        <td><span class="parametername">role</span></td>
-        <td><p>The role to remove the overwrite from.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to be used when sending the request.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.IRole.html">IRole</a></span>
+        <span class="parametername">role</span>
+        <p><p>The role to remove the overwrite from.</p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p><p>The options to be used when sending the request.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td><p>A task representing the asynchronous operation for removing the specified permissions from the channel.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p><p>A task representing the asynchronous operation for removing the specified permissions from the channel.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_ToString.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_ToString.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L281">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L281" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_ToString_" data-uid="Kook.Rest.RestGuildChannel.ToString*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_ToString" data-uid="Kook.Rest.RestGuildChannel.ToString">ToString()</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_ToString" data-uid="Kook.Rest.RestGuildChannel.ToString"><a href="#collapsible-Kook_Rest_RestGuildChannel_ToString" class="expander" data-toggle="collapse">ToString()</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_ToString" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the name of this channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
+
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>A string that is the name of this channel.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p><p>A string that is the name of this channel.</p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_UpdateAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.UpdateAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_UpdateAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.UpdateAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L124">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L124" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_UpdateAsync_" data-uid="Kook.Rest.RestGuildChannel.UpdateAsync*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.UpdateAsync(Kook.RequestOptions)">UpdateAsync(RequestOptions)</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildChannel.UpdateAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_Rest_RestGuildChannel_UpdateAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">UpdateAsync(RequestOptions)</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_UpdateAsync_Kook_RequestOptions_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override Task UpdateAsync(RequestOptions options = null)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
+        <span class="parametername">options</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">Task</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kook.Rest.RestChannel.html#Kook_Rest_RestChannel_UpdateAsync_Kook_RequestOptions_">RestChannel.UpdateAsync(RequestOptions)</a></div>
+  
+  
+  
+  
+  
+  </div>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_Kook_IGuildChannel_Guild.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.Kook%23IGuildChannel%23Guild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel_Kook_IGuildChannel_Guild.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel.Kook%23IGuildChannel%23Guild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L288">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L288" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Rest_RestGuildChannel_Kook_IGuildChannel_Guild_" data-uid="Kook.Rest.RestGuildChannel.Kook#IGuildChannel#Guild*"></a>
-  <h4 id="Kook_Rest_RestGuildChannel_Kook_IGuildChannel_Guild" data-uid="Kook.Rest.RestGuildChannel.Kook#IGuildChannel#Guild">IGuildChannel.Guild</h4>
+  
+  <h4 id="Kook_Rest_RestGuildChannel_Kook_IGuildChannel_Guild" data-uid="Kook.Rest.RestGuildChannel.Kook#IGuildChannel#Guild"><a href="#collapsible-Kook_Rest_RestGuildChannel_Kook_IGuildChannel_Guild" class="expander" data-toggle="collapse">IGuildChannel.Guild</a></h4>
+  
+  <div id="collapsible-Kook_Rest_RestGuildChannel_Kook_IGuildChannel_Guild" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the guild associated with this channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IGuild IGuildChannel.Guild { get; }</code></pre>
   </div>
+
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.IGuild.html">IGuild</a></td>
-        <td><p>A guild object that this channel belongs to.</p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.IGuild.html">IGuild</a>
+        <p><p>A guild object that this channel belongs to.</p>
+</p>
+      </td>
+    </tr>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kook.IEntity-1.html">IEntity&lt;TId&gt;</a>
+  
+  
+  
+  
+  
+  
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_Guild">IGuildChannel.Guild</a></div>
+  
+  
+  
+  
   </div>
-  <div>
-      <a class="xref" href="Kook.IUpdateable.html">IUpdateable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.IGuildChannel.html">IGuildChannel</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.IChannel.html">IChannel</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.IEntity-1.html">IEntity&lt;TId&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.IDeletable.html">IDeletable</a>
-  </div>
+  
+  
 </article>
-                </div>
-
-            </main>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestGuildChannel.md&amp;value=---%0Auid%3A%20Kook.Rest.RestGuildChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestGuildChannel.cs/#L10" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-        
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-        <script type="text/javascript" src="../styles/jquery.twbsPagination.js"></script>
-        <script type="text/javascript" src="../styles/url.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-        <script type="text/javascript" src="../styles/docfx.js"></script>
-        <script type="text/javascript" src="../styles/singulink.js"></script>
-        <script type="text/javascript" src="../styles/main.js"></script>    </body>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Kook.Net (c) 2022-2023
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
 </html>

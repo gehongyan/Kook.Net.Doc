@@ -1,1040 +1,1271 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CommandBuilder
+   | Kook.Net &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CommandBuilder
+   | Kook.Net &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.56.7.0">
     
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class CommandBuilder
-     | Kook.Net &#25991;&#26723; </title>
-      <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class CommandBuilder
-     | Kook.Net &#25991;&#26723; ">
-      <meta name="generator" content="docfx 2.56.7.0">
-      
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
-      <link rel="stylesheet" href="../styles/config.css">
-      <link rel="stylesheet" href="../styles/discord.css">
-      <link rel="stylesheet" href="../styles/singulink.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-      
-      <meta property="docfx:rel" content="../">
-      
-    </head>
-    <body>
-        <div class="top-navbar">
-            <a class="burger-icon" onclick="toggleMenu()">
-                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
-            </a>
-
-            
-            <a class="brand" href="../index.html">
-              <img src="../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
-              <span class="brand-title">Kook.Net &#25991;&#26723;</span>
-            </a>        </div>
-
-        <div class="body-content">
-            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
-
-            <nav id="sidebar" role="navigation">
-                <div class="sidebar">
-                    
-                    <div>
-                      <div class="mobile-hide">
-                        
-                        <a class="brand" href="../index.html">
-                          <img src="../logo.svg" alt="Kook.Net &#25991;&#26723;" class="logomark">
-                          <span class="brand-title">Kook.Net &#25991;&#26723;</span>
-                        </a>  </div>
-
-                      <div class="sidesearch">
-                        <form id="search" role="search" class="search">
-                            <i class="bi bi-search search-icon"></i>
-                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
-                        </form>
-                      </div>
-                    
-                      <div id="navbar">
-                      </div>
-                    </div>                    <div class="sidebar-item-separator"></div>
-                        
-                        <div id="sidetoggle">
-                          <div id="sidetoc"></div>
-                        </div>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
                 </div>
-                <div class="footer">
-                  Kook.Net (c) 2022-2023
-                  
-                </div>            </nav>
-
-            <main class="main-panel">
-                
-                <div id="search-results" style="display: none;">
-                  <h1 class="search-list">Search Results for <span></span></h1>
-                  <div class="sr-items">
-                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
-                  </div>
-                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
-                </div>
-                <div role="main" class="hide-when-search">
-                        
-                        <div class="subnav navbar navbar-default">
-                          <div class="container hide-when-search" id="breadcrumb">
-                            <ul class="breadcrumb">
-                              <li></li>
-                            </ul>
-                          </div>
-                        </div>
-
-                    <article class="content wrap" id="_content" data-uid="Kook.Commands.Builders.CommandBuilder">
-  
-  
-  <h1 id="Kook_Commands_Builders_CommandBuilder" data-uid="Kook.Commands.Builders.CommandBuilder" class="text-break">Class CommandBuilder
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kook.Commands.Builders.CommandBuilder">
+  <h1 id="Kook_Commands_Builders_CommandBuilder" data-uid="Kook.Commands.Builders.CommandBuilder">Class CommandBuilder
   </h1>
   <div class="markdown level0 summary"><p>Represents a command builder.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">CommandBuilder</span></div>
   </div>
+  
+  
+  
   <h6><strong>Namespace</strong>: <a class="xref" href="Kook.Commands.Builders.html">Kook.Commands.Builders</a></h6>
   <h6><strong>Assembly</strong>: Kook.Net.Commands.dll</h6>
+  
   <h5 id="Kook_Commands_Builders_CommandBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class CommandBuilder : object</code></pre>
   </div>
+
+  
+  
+  
+  
   <h3 id="properties">Properties
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Aliases.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Aliases%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Aliases.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Aliases%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L78">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L78" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_Aliases_" data-uid="Kook.Commands.Builders.CommandBuilder.Aliases*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_Aliases" data-uid="Kook.Commands.Builders.CommandBuilder.Aliases">Aliases</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_Aliases" data-uid="Kook.Commands.Builders.CommandBuilder.Aliases"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_Aliases" class="expander" data-toggle="collapse">Aliases</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_Aliases" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the aliases of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; Aliases { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Attributes.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Attributes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Attributes.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Attributes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L73">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L73" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_Attributes_" data-uid="Kook.Commands.Builders.CommandBuilder.Attributes*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_Attributes" data-uid="Kook.Commands.Builders.CommandBuilder.Attributes">Attributes</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_Attributes" data-uid="Kook.Commands.Builders.CommandBuilder.Attributes"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_Attributes" class="expander" data-toggle="collapse">Attributes</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_Attributes" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the attributes of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Attribute&gt; Attributes { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">Attribute</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">IReadOnlyList</span>&lt;<span class="xref">Attribute</span>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_IgnoreExtraArgs.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.IgnoreExtraArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_IgnoreExtraArgs.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.IgnoreExtraArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L58">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L58" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_IgnoreExtraArgs_" data-uid="Kook.Commands.Builders.CommandBuilder.IgnoreExtraArgs*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_IgnoreExtraArgs" data-uid="Kook.Commands.Builders.CommandBuilder.IgnoreExtraArgs">IgnoreExtraArgs</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_IgnoreExtraArgs" data-uid="Kook.Commands.Builders.CommandBuilder.IgnoreExtraArgs"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_IgnoreExtraArgs" class="expander" data-toggle="collapse">IgnoreExtraArgs</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_IgnoreExtraArgs" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets whether the extra arguments should be ignored.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IgnoreExtraArgs { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Module.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Module%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Module.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Module%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L18">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L18" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_Module_" data-uid="Kook.Commands.Builders.CommandBuilder.Module*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_Module" data-uid="Kook.Commands.Builders.CommandBuilder.Module">Module</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_Module" data-uid="Kook.Commands.Builders.CommandBuilder.Module"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_Module" class="expander" data-toggle="collapse">Module</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_Module" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the module builder that this command builder belongs to.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ModuleBuilder Module { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.ModuleBuilder.html">ModuleBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.ModuleBuilder.html">ModuleBuilder</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Name.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Name.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L28">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L28" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_Name_" data-uid="Kook.Commands.Builders.CommandBuilder.Name*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_Name" data-uid="Kook.Commands.Builders.CommandBuilder.Name">Name</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_Name" data-uid="Kook.Commands.Builders.CommandBuilder.Name"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_Name" class="expander" data-toggle="collapse">Name</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_Name" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the name of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Parameters.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Parameters%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Parameters.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Parameters%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L68">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L68" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_Parameters_" data-uid="Kook.Commands.Builders.CommandBuilder.Parameters*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_Parameters" data-uid="Kook.Commands.Builders.CommandBuilder.Parameters">Parameters</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_Parameters" data-uid="Kook.Commands.Builders.CommandBuilder.Parameters"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_Parameters" class="expander" data-toggle="collapse">Parameters</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_Parameters" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the parameters of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;ParameterBuilder&gt; Parameters { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Kook.Commands.Builders.ParameterBuilder.html">ParameterBuilder</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Kook.Commands.Builders.ParameterBuilder.html">ParameterBuilder</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Preconditions.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Preconditions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Preconditions.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Preconditions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L63">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L63" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_Preconditions_" data-uid="Kook.Commands.Builders.CommandBuilder.Preconditions*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_Preconditions" data-uid="Kook.Commands.Builders.CommandBuilder.Preconditions">Preconditions</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_Preconditions" data-uid="Kook.Commands.Builders.CommandBuilder.Preconditions"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_Preconditions" class="expander" data-toggle="collapse">Preconditions</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_Preconditions" class="collapse in">
   <div class="markdown level1 summary"><p>Gets the preconditions of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;PreconditionAttribute&gt; Preconditions { get; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Kook.Commands.PreconditionAttribute.html">PreconditionAttribute</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Kook.Commands.PreconditionAttribute.html">PreconditionAttribute</a>&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_PrimaryAlias.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.PrimaryAlias%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_PrimaryAlias.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.PrimaryAlias%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L43">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L43" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_PrimaryAlias_" data-uid="Kook.Commands.Builders.CommandBuilder.PrimaryAlias*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_PrimaryAlias" data-uid="Kook.Commands.Builders.CommandBuilder.PrimaryAlias">PrimaryAlias</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_PrimaryAlias" data-uid="Kook.Commands.Builders.CommandBuilder.PrimaryAlias"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_PrimaryAlias" class="expander" data-toggle="collapse">PrimaryAlias</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_PrimaryAlias" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the primary alias of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string PrimaryAlias { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Priority.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Priority%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Priority.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Priority%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L53">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L53" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_Priority_" data-uid="Kook.Commands.Builders.CommandBuilder.Priority*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_Priority" data-uid="Kook.Commands.Builders.CommandBuilder.Priority">Priority</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_Priority" data-uid="Kook.Commands.Builders.CommandBuilder.Priority"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_Priority" class="expander" data-toggle="collapse">Priority</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_Priority" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the priority of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int Priority { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Remarks.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Remarks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Remarks.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Remarks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L38">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L38" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_Remarks_" data-uid="Kook.Commands.Builders.CommandBuilder.Remarks*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_Remarks" data-uid="Kook.Commands.Builders.CommandBuilder.Remarks">Remarks</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_Remarks" data-uid="Kook.Commands.Builders.CommandBuilder.Remarks"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_Remarks" class="expander" data-toggle="collapse">Remarks</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_Remarks" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the remarks of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Remarks { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_RunMode.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.RunMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_RunMode.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.RunMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L48">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L48" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_RunMode_" data-uid="Kook.Commands.Builders.CommandBuilder.RunMode*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_RunMode" data-uid="Kook.Commands.Builders.CommandBuilder.RunMode">RunMode</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_RunMode" data-uid="Kook.Commands.Builders.CommandBuilder.RunMode"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_RunMode" class="expander" data-toggle="collapse">RunMode</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_RunMode" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the run mode of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RunMode RunMode { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.RunMode.html">RunMode</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.RunMode.html">RunMode</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Summary.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Summary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_Summary.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.Summary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L33">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L33" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_Summary_" data-uid="Kook.Commands.Builders.CommandBuilder.Summary*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_Summary" data-uid="Kook.Commands.Builders.CommandBuilder.Summary">Summary</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_Summary" data-uid="Kook.Commands.Builders.CommandBuilder.Summary"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_Summary" class="expander" data-toggle="collapse">Summary</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_Summary" class="collapse in">
   <div class="markdown level1 summary"><p>Gets or sets the summary of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Summary { get; set; }</code></pre>
   </div>
+
+  
+  
+  
+  
   <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  </div>
   <h3 id="methods">Methods
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_AddAliases_System_String___.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.AddAliases(System.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_AddAliases_System_String___.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.AddAliases(System.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L179">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L179" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_AddAliases_" data-uid="Kook.Commands.Builders.CommandBuilder.AddAliases*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_AddAliases_System_String___" data-uid="Kook.Commands.Builders.CommandBuilder.AddAliases(System.String[])">AddAliases(String[])</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_AddAliases_System_String___" data-uid="Kook.Commands.Builders.CommandBuilder.AddAliases(System.String[])"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_AddAliases_System_String___" class="expander" data-toggle="collapse">AddAliases(String[])</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_AddAliases_System_String___" class="collapse in">
   <div class="markdown level1 summary"><p>Adds aliases to this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandBuilder AddAliases(params string[] aliases)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td><span class="parametername">aliases</span></td>
-        <td><p>An array containing the aliases to add. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</span>
+        <span class="parametername">aliases</span>
+        <p><p>An array containing the aliases to add. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a></td>
-        <td><p>This command builder. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a>
+        <p><p>This command builder. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_AddAttributes_Attribute___.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.AddAttributes(Attribute%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_AddAttributes_Attribute___.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.AddAttributes(Attribute%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L195">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L195" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_AddAttributes_" data-uid="Kook.Commands.Builders.CommandBuilder.AddAttributes*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_AddAttributes_Attribute___" data-uid="Kook.Commands.Builders.CommandBuilder.AddAttributes(Attribute[])">AddAttributes(Attribute[])</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_AddAttributes_Attribute___" data-uid="Kook.Commands.Builders.CommandBuilder.AddAttributes(Attribute[])"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_AddAttributes_Attribute___" class="expander" data-toggle="collapse">AddAttributes(Attribute[])</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_AddAttributes_Attribute___" class="collapse in">
   <div class="markdown level1 summary"><p>Adds attributes to this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandBuilder AddAttributes(params Attribute[] attributes)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Attribute</span>[]</td>
-        <td><span class="parametername">attributes</span></td>
-        <td><p>An array containing the attributes to add. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">Attribute</span>[]</span>
+        <span class="parametername">attributes</span>
+        <p><p>An array containing the attributes to add. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a></td>
-        <td><p>This command builder. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a>
+        <p><p>This command builder. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_AddParameter_System_String_Type_Action_Kook_Commands_Builders_ParameterBuilder__.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.AddParameter(System.String%2CType%2CAction%7BKook.Commands.Builders.ParameterBuilder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_AddParameter_System_String_Type_Action_Kook_Commands_Builders_ParameterBuilder__.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.AddParameter(System.String%2CType%2CAction%7BKook.Commands.Builders.ParameterBuilder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L234">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L234" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_AddParameter_" data-uid="Kook.Commands.Builders.CommandBuilder.AddParameter*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_AddParameter_System_String_Type_Action_Kook_Commands_Builders_ParameterBuilder__" data-uid="Kook.Commands.Builders.CommandBuilder.AddParameter(System.String,Type,Action{Kook.Commands.Builders.ParameterBuilder})">AddParameter(String, Type, Action&lt;ParameterBuilder&gt;)</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_AddParameter_System_String_Type_Action_Kook_Commands_Builders_ParameterBuilder__" data-uid="Kook.Commands.Builders.CommandBuilder.AddParameter(System.String,Type,Action{Kook.Commands.Builders.ParameterBuilder})"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_AddParameter_System_String_Type_Action_Kook_Commands_Builders_ParameterBuilder__" class="expander" data-toggle="collapse">AddParameter(String, Type, Action&lt;ParameterBuilder&gt;)</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_AddParameter_System_String_Type_Action_Kook_Commands_Builders_ParameterBuilder__" class="collapse in">
   <div class="markdown level1 summary"><p>Adds a parameter to this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandBuilder AddParameter(string name, Type type, Action&lt;ParameterBuilder&gt; createFunc)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>The name of the parameter. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The type of the parameter. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="Kook.Commands.Builders.ParameterBuilder.html">ParameterBuilder</a>&gt;</td>
-        <td><span class="parametername">createFunc</span></td>
-        <td><p>An action delegate that is invoked to create the parameter. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
+        <span class="parametername">name</span>
+        <p><p>The name of the parameter. </p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">Type</span></span>
+        <span class="parametername">type</span>
+        <p><p>The type of the parameter. </p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">Action</span>&lt;<a class="xref" href="Kook.Commands.Builders.ParameterBuilder.html">ParameterBuilder</a>&gt;</span>
+        <span class="parametername">createFunc</span>
+        <p><p>An action delegate that is invoked to create the parameter. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a></td>
-        <td><p>This command builder. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a>
+        <p><p>This command builder. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_AddParameter__1_System_String_Action_Kook_Commands_Builders_ParameterBuilder__.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.AddParameter%60%601(System.String%2CAction%7BKook.Commands.Builders.ParameterBuilder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_AddParameter__1_System_String_Action_Kook_Commands_Builders_ParameterBuilder__.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.AddParameter%60%601(System.String%2CAction%7BKook.Commands.Builders.ParameterBuilder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L219">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L219" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_AddParameter_" data-uid="Kook.Commands.Builders.CommandBuilder.AddParameter*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_AddParameter__1_System_String_Action_Kook_Commands_Builders_ParameterBuilder__" data-uid="Kook.Commands.Builders.CommandBuilder.AddParameter``1(System.String,Action{Kook.Commands.Builders.ParameterBuilder})">AddParameter&lt;T&gt;(String, Action&lt;ParameterBuilder&gt;)</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_AddParameter__1_System_String_Action_Kook_Commands_Builders_ParameterBuilder__" data-uid="Kook.Commands.Builders.CommandBuilder.AddParameter``1(System.String,Action{Kook.Commands.Builders.ParameterBuilder})"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_AddParameter__1_System_String_Action_Kook_Commands_Builders_ParameterBuilder__" class="expander" data-toggle="collapse">AddParameter&lt;T&gt;(String, Action&lt;ParameterBuilder&gt;)</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_AddParameter__1_System_String_Action_Kook_Commands_Builders_ParameterBuilder__" class="collapse in">
   <div class="markdown level1 summary"><p>Adds a parameter to this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandBuilder AddParameter&lt;T&gt;(string name, Action&lt;ParameterBuilder&gt; createFunc)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>The name of the parameter. </p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="Kook.Commands.Builders.ParameterBuilder.html">ParameterBuilder</a>&gt;</td>
-        <td><span class="parametername">createFunc</span></td>
-        <td><p>An action delegate that is invoked to create the parameter. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
+        <span class="parametername">name</span>
+        <p><p>The name of the parameter. </p>
+</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">Action</span>&lt;<a class="xref" href="Kook.Commands.Builders.ParameterBuilder.html">ParameterBuilder</a>&gt;</span>
+        <span class="parametername">createFunc</span>
+        <p><p>An action delegate that is invoked to create the parameter. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a></td>
-        <td><p>This command builder. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a>
+        <p><p>This command builder. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The type of the parameter. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="parametername">T</span>
+        <p><p>The type of the parameter. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_AddPrecondition_Kook_Commands_PreconditionAttribute_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.AddPrecondition(Kook.Commands.PreconditionAttribute)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_AddPrecondition_Kook_Commands_PreconditionAttribute_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.AddPrecondition(Kook.Commands.PreconditionAttribute)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L206">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L206" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_AddPrecondition_" data-uid="Kook.Commands.Builders.CommandBuilder.AddPrecondition*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_AddPrecondition_Kook_Commands_PreconditionAttribute_" data-uid="Kook.Commands.Builders.CommandBuilder.AddPrecondition(Kook.Commands.PreconditionAttribute)">AddPrecondition(PreconditionAttribute)</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_AddPrecondition_Kook_Commands_PreconditionAttribute_" data-uid="Kook.Commands.Builders.CommandBuilder.AddPrecondition(Kook.Commands.PreconditionAttribute)"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_AddPrecondition_Kook_Commands_PreconditionAttribute_" class="expander" data-toggle="collapse">AddPrecondition(PreconditionAttribute)</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_AddPrecondition_Kook_Commands_PreconditionAttribute_" class="collapse in">
   <div class="markdown level1 summary"><p>Adds a precondition to this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandBuilder AddPrecondition(PreconditionAttribute precondition)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.PreconditionAttribute.html">PreconditionAttribute</a></td>
-        <td><span class="parametername">precondition</span></td>
-        <td><p>The precondition to add. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.Commands.PreconditionAttribute.html">PreconditionAttribute</a></span>
+        <span class="parametername">precondition</span>
+        <p><p>The precondition to add. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a></td>
-        <td><p>This command builder. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a>
+        <p><p>This command builder. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_WithName_System_String_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.WithName(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_WithName_System_String_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.WithName(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L124">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L124" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_WithName_" data-uid="Kook.Commands.Builders.CommandBuilder.WithName*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_WithName_System_String_" data-uid="Kook.Commands.Builders.CommandBuilder.WithName(System.String)">WithName(String)</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_WithName_System_String_" data-uid="Kook.Commands.Builders.CommandBuilder.WithName(System.String)"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_WithName_System_String_" class="expander" data-toggle="collapse">WithName(String)</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_WithName_System_String_" class="collapse in">
   <div class="markdown level1 summary"><p>Sets the name of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandBuilder WithName(string name)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>The name of this command. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
+        <span class="parametername">name</span>
+        <p><p>The name of this command. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a></td>
-        <td><p>This command builder. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a>
+        <p><p>This command builder. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_WithPriority_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.WithPriority(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_WithPriority_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.WithPriority(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L168">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L168" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_WithPriority_" data-uid="Kook.Commands.Builders.CommandBuilder.WithPriority*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_WithPriority_System_Int32_" data-uid="Kook.Commands.Builders.CommandBuilder.WithPriority(System.Int32)">WithPriority(Int32)</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_WithPriority_System_Int32_" data-uid="Kook.Commands.Builders.CommandBuilder.WithPriority(System.Int32)"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_WithPriority_System_Int32_" class="expander" data-toggle="collapse">WithPriority(Int32)</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_WithPriority_System_Int32_" class="collapse in">
   <div class="markdown level1 summary"><p>Sets the priority of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandBuilder WithPriority(int priority)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">priority</span></td>
-        <td><p>The priority of this command. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
+        <span class="parametername">priority</span>
+        <p><p>The priority of this command. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a></td>
-        <td><p>This command builder. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a>
+        <p><p>This command builder. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_WithRemarks_System_String_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.WithRemarks(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_WithRemarks_System_String_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.WithRemarks(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L146">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L146" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_WithRemarks_" data-uid="Kook.Commands.Builders.CommandBuilder.WithRemarks*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_WithRemarks_System_String_" data-uid="Kook.Commands.Builders.CommandBuilder.WithRemarks(System.String)">WithRemarks(String)</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_WithRemarks_System_String_" data-uid="Kook.Commands.Builders.CommandBuilder.WithRemarks(System.String)"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_WithRemarks_System_String_" class="expander" data-toggle="collapse">WithRemarks(String)</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_WithRemarks_System_String_" class="collapse in">
   <div class="markdown level1 summary"><p>Sets the remarks of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandBuilder WithRemarks(string remarks)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">remarks</span></td>
-        <td><p>The remarks of this command. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
+        <span class="parametername">remarks</span>
+        <p><p>The remarks of this command. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a></td>
-        <td><p>This command builder. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a>
+        <p><p>This command builder. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_WithRunMode_Kook_Commands_RunMode_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.WithRunMode(Kook.Commands.RunMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_WithRunMode_Kook_Commands_RunMode_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.WithRunMode(Kook.Commands.RunMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L157">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L157" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_WithRunMode_" data-uid="Kook.Commands.Builders.CommandBuilder.WithRunMode*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_WithRunMode_Kook_Commands_RunMode_" data-uid="Kook.Commands.Builders.CommandBuilder.WithRunMode(Kook.Commands.RunMode)">WithRunMode(RunMode)</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_WithRunMode_Kook_Commands_RunMode_" data-uid="Kook.Commands.Builders.CommandBuilder.WithRunMode(Kook.Commands.RunMode)"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_WithRunMode_Kook_Commands_RunMode_" class="expander" data-toggle="collapse">WithRunMode(RunMode)</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_WithRunMode_Kook_Commands_RunMode_" class="collapse in">
   <div class="markdown level1 summary"><p>Sets the run mode of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandBuilder WithRunMode(RunMode runMode)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.RunMode.html">RunMode</a></td>
-        <td><span class="parametername">runMode</span></td>
-        <td><p>The run mode of this command. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="Kook.Commands.RunMode.html">RunMode</a></span>
+        <span class="parametername">runMode</span>
+        <p><p>The run mode of this command. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a></td>
-        <td><p>This command builder. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a>
+        <p><p>This command builder. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_WithSummary_System_String_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.WithSummary(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder_WithSummary_System_String_.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder.WithSummary(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/68e6a01206cc3445f1b27266b37c05f4704bec43/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L135">View Source</a>
+    <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L135" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="Kook_Commands_Builders_CommandBuilder_WithSummary_" data-uid="Kook.Commands.Builders.CommandBuilder.WithSummary*"></a>
-  <h4 id="Kook_Commands_Builders_CommandBuilder_WithSummary_System_String_" data-uid="Kook.Commands.Builders.CommandBuilder.WithSummary(System.String)">WithSummary(String)</h4>
+  
+  <h4 id="Kook_Commands_Builders_CommandBuilder_WithSummary_System_String_" data-uid="Kook.Commands.Builders.CommandBuilder.WithSummary(System.String)"><a href="#collapsible-Kook_Commands_Builders_CommandBuilder_WithSummary_System_String_" class="expander" data-toggle="collapse">WithSummary(String)</a></h4>
+  
+  <div id="collapsible-Kook_Commands_Builders_CommandBuilder_WithSummary_System_String_" class="collapse in">
   <div class="markdown level1 summary"><p>Sets the summary of this command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandBuilder WithSummary(string summary)</code></pre>
   </div>
+
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">summary</span></td>
-        <td><p>The summary of this command. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
+        <span class="parametername">summary</span>
+        <p><p>The summary of this command. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a></td>
-        <td><p>This command builder. </p>
-</td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="Kook.Commands.Builders.CommandBuilder.html">CommandBuilder</a>
+        <p><p>This command builder. </p>
+</p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
+  
 </article>
-                </div>
-
-            </main>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_Builders_CommandBuilder.md&amp;value=---%0Auid%3A%20Kook.Commands.Builders.CommandBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L6" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-        
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-        <script type="text/javascript" src="../styles/jquery.twbsPagination.js"></script>
-        <script type="text/javascript" src="../styles/url.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-        <script type="text/javascript" src="../styles/docfx.js"></script>
-        <script type="text/javascript" src="../styles/singulink.js"></script>
-        <script type="text/javascript" src="../styles/main.js"></script>    </body>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Kook.Net (c) 2022-2023
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
 </html>
