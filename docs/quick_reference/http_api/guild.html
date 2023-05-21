@@ -96,8 +96,8 @@ IReadOnlyCollection&lt;RestGuild&gt; restGuilds = await _socketClient.Rest.GetGu
 IReadOnlyCollection&lt;RestGuild&gt; restGuilds = await _restClient.GetGuildsAsync();
 </code></pre><h3 id="获取服务器详情"><a href="https://developer.kookapp.cn/doc/http/guild#获取服务器详情">获取服务器详情</a></h3>
 <p>GET <code>/api/v3/guild/view</code></p>
-<pre><code class="lang-csharp">// 服务器 ID
-ulong guildId = 0;
+<pre><code class="lang-csharp">ulong guildId = default; // 服务器 ID
+
 // 缓存获取指定服务器
 SocketGuild socketGuild = _socketClient.GetGuild(guildId);
 // API 请求
@@ -105,7 +105,9 @@ RestGuild restGuild = await _socketClient.Rest.GetGuildAsync(guildId);
 RestGuild restGuild = await _restClient.GetGuildAsync(guildId);
 </code></pre><h3 id="获取服务器中的用户列表"><a href="https://developer.kookapp.cn/doc/http/guild#获取服务器中的用户列表">获取服务器中的用户列表</a></h3>
 <p>GET <code>/api/v3/guild/user-list</code></p>
-<pre><code class="lang-csharp">// 要在启动时缓存服务器用户列表，请设置 AlwaysDownloadUsers = true
+<pre><code class="lang-csharp">ulong guildId = default; // 服务器 ID
+
+// 要在启动时缓存服务器用户列表，请设置 AlwaysDownloadUsers = true
 // 主动更新所有服务器用户列表缓存
 await _socketClient.DownloadUsersAsync();
 // 主动更新部分服务器用户列表缓存
@@ -114,8 +116,6 @@ await _socketClient.DownloadUsersAsync(guilds);
 // 主动更新指定服务器用户列表缓存
 await socketGuild.DownloadUsersAsync();
 
-// 服务器 ID
-ulong guildId = 0;
 // 缓存获取 SocketGuild 对象
 SocketGuild socketGuild = _socketClient.GetGuild(guildId);
 // 缓存获取用户列表
