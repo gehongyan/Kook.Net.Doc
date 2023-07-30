@@ -93,8 +93,8 @@ IUserMessage userMessage = null;
 <p>GET <code>/api/v3/message/list</code></p>
 <pre><code class="lang-csharp">IMessage referenceMessage = null; // 获取消息列表所根据的参考消息位置的
 Guid referenceMessageId = default; // 获取消息列表所根据的参考消息位置的 ID
-Direction direction = Direction.Before; // 获取消息列表的方向
-int limit = 25; // 获取消息列表的数量
+Direction direction = default; // 获取消息列表的方向
+int limit = default; // 获取消息列表的数量
 
 // 要缓存文字频道聊天消息，请设置 MessageCacheSize 的值
 // 缓存获取文字频道的聊天消息列表
@@ -145,7 +145,7 @@ Cacheable&lt;IUserMessage,Guid&gt; textMessage = await textChannel.SendTextAsync
 // API 请求，发送文件消息
 Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromPath = await textChannel.SendFileAsync(filePath, fileName, fileType, quote, ephemeralUser);
 Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromStream = await textChannel.SendFileAsync(stream, fileName, fileType, quote, ephemeralUser);
-Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromAttachment = await textChannel.SendFileAsync(attachment, fileName, fileType, quote, ephemeralUser);
+Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromAttachment = await textChannel.SendFileAsync(attachment, quote, ephemeralUser);
 // API 请求，发送单卡片消息
 Cacheable&lt;IUserMessage,Guid&gt; cardMessage = await textChannel.SendCardAsync(card, quote, ephemeralUser);
 // API 请求，发送多卡片消息
@@ -169,7 +169,7 @@ await userMessage.ModifyAsync(x =&gt;
 <p>POST <code>/api/v3/message/delete</code></p>
 <pre><code class="lang-csharp">// API 请求
 await userMessage.DeleteAsync();
-</code></pre><h3 id="获取频道消息某个回应的用户列表"><a href="https://developer.kookapp.cn/doc/http/message#获取频道消息某个回应的用户列表">获取频道消息某个回应的用户列表</a></h3>
+</code></pre><h3 id="获取频道消息某回应的用户列表"><a href="https://developer.kookapp.cn/doc/http/message#获取频道消息某回应的用户列表">获取频道消息某回应的用户列表</a></h3>
 <p>GET <code>/api/v3/message/reaction-list</code></p>
 <pre><code class="lang-csharp">IEmote emoji = null; // 要获取用户列表的回应的表情
 
@@ -180,7 +180,7 @@ IReadOnlyDictionary&lt;IEmote,ReactionMetadata&gt; cachedReactions = socketUserM
 IReadOnlyCollection&lt;IUser&gt; reactionUsers = await userMessage.GetReactionUsersAsync(emoji);
 </code></pre><h3 id="给某个消息添加回应"><a href="https://developer.kookapp.cn/doc/http/message#给某个消息添加回应">给某个消息添加回应</a></h3>
 <p>POST <code>/api/v3/message/add-reaction</code></p>
-<p>有关 Emoji 的详细信息，请参考 <a class="xref" href="../../guides/emoji/emoji.html">表情符号</a>。</p>
+<p>有关如何构造 Emoji，请参考 <a class="xref" href="../../guides/emoji/emoji.html">表情符号</a>。</p>
 <pre><code>IEmote emoji = null; // 要添加的回应的表情
 IEnumerable&lt;IEmote&gt; emojis = null; // 要添加的回应的表情列表
 

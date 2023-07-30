@@ -82,18 +82,37 @@
 <p>预声明变量</p>
 <pre><code class="lang-csharp">readonly KookSocketClient _socketClient = null;
 readonly KookRestClient _restClient = null;
+readonly IKookClient _client = null;
 </code></pre><h3 id="获取私信聊天会话列表"><a href="https://developer.kookapp.cn/doc/http/channel-user#获取私信聊天会话列表">获取私信聊天会话列表</a></h3>
 <p>GET <code>/api/v3/user-chat/list</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">// 缓存获取私信聊天会话列表
+IReadOnlyCollection&lt;SocketDMChannel&gt; cachedDmChannels = _socketClient.DMChannels;
+
+// API 请求
+IReadOnlyCollection&lt;IDMChannel&gt; dmChannels = await _client.GetDMChannelsAsync();
 </code></pre><h3 id="获取私信聊天会话详情"><a href="https://developer.kookapp.cn/doc/http/channel-user#获取私信聊天会话详情">获取私信聊天会话详情</a></h3>
 <p>GET <code>/api/v3/user-chat/view</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">Guid chatCode = default; // 要获取详情的私信聊天会话的 ChatCode
+ulong userId = default; // 要获取详情的私信聊天会话的 UserId
+
+// 缓存获取私信聊天会话详情
+SocketDMChannel dmChannelByChatCode = _socketClient.GetDMChannel(chatCode);
+SocketDMChannel dmChannelByUserId = _socketClient.GetDMChannel(userId);
+
+// API 请求
+IDMChannel dmChannel = await _client.GetDMChannelAsync(chatCode);
 </code></pre><h3 id="创建私信聊天会话"><a href="https://developer.kookapp.cn/doc/http/channel-user#创建私信聊天会话">创建私信聊天会话</a></h3>
 <p>POST <code>/api/v3/user-chat/create</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">IUser user = null; // 要创建私信聊天会话的用户
+
+// API 请求
+IDMChannel dmChannel = await user.CreateDMChannelAsync();
 </code></pre><h3 id="删除私信聊天会话"><a href="https://developer.kookapp.cn/doc/http/channel-user#删除私信聊天会话">删除私信聊天会话</a></h3>
 <p>POST <code>/api/v3/user-chat/delete</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">IDMChannel dmChannel = null; // 要删除的私信聊天会话
+
+// API 请求
+await dmChannel.CloseAsync()
 </code></pre></article>
           </div>
           <div class="contribution-panel mobile-hide">

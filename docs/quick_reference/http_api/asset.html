@@ -84,7 +84,15 @@
 readonly KookRestClient _restClient = null;
 </code></pre><h3 id="上传文件图片"><a href="https://developer.kookapp.cn/doc/http/asset#%上传媒体文件">上传文件/图片</a></h3>
 <p>POST <code>/api/v3/asset/create</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">Stream stream = null; // 文件流
+string path = null; // 文件路径
+string fileName = null; // 文件名
+
+// API 请求
+string assertUri = await _socketClient.Rest.CreateAssetAsync(stream, fileName);
+string assertUri = await _socketClient.Rest.CreateAssetAsync(path, fileName);
+string assertUri = await _restClient.CreateAssetAsync(stream, fileName);
+string assertUri = await _restClient.CreateAssetAsync(path, fileName);
 </code></pre></article>
           </div>
           <div class="contribution-panel mobile-hide">
