@@ -82,30 +82,120 @@
 <p>预声明变量</p>
 <pre><code class="lang-csharp">readonly KookSocketClient _socketClient = null;
 readonly KookRestClient _restClient = null;
+
+SocketTextChannel socketTextChannel = null;
+
+RestTextChannel restTextChannel = null;
+
+ITextChannel textChannel = null;
+IUserMessage userMessage = null;
 </code></pre><h3 id="获取频道聊天消息列表"><a href="https://developer.kookapp.cn/doc/http/message#获取频道聊天消息列表">获取频道聊天消息列表</a></h3>
 <p>GET <code>/api/v3/message/list</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">IMessage referenceMessage = null; // 获取消息列表所根据的参考消息位置的
+Guid referenceMessageId = default; // 获取消息列表所根据的参考消息位置的 ID
+Direction direction = Direction.Before; // 获取消息列表的方向
+int limit = 25; // 获取消息列表的数量
+
+// 要缓存文字频道聊天消息，请设置 MessageCacheSize 的值
+// 缓存获取文字频道的聊天消息列表
+IReadOnlyCollection&lt;SocketMessage&gt; cachedMessages = socketTextChannel.CachedMessages;
+IReadOnlyCollection&lt;SocketMessage&gt; conditionalCachedMessages = socketTextChannel.GetCachedMessages(referenceMessage, direction, limit);
+IReadOnlyCollection&lt;SocketMessage&gt; conditionalCachedMessagesById = socketTextChannel.GetCachedMessages(referenceMessageId, direction, limit);
+
+// API 请求
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; pagedMessages = socketTextChannel.GetMessagesAsync(referenceMessage, direction, limit);
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; pagedMessagesById = socketTextChannel.GetMessagesAsync(referenceMessageId, direction, limit);
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; pagedRestMessages = restTextChannel.GetMessagesAsync(referenceMessage, direction, limit);
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; pagedRestMessagesById = restTextChannel.GetMessagesAsync(referenceMessageId, direction, limit);
+
+// 在 ITextChannel 上进行调用
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; pagedMessages = textChannel.GetMessagesAsync(referenceMessage, direction, limit);
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; pagedMessagesById = textChannel.GetMessagesAsync(referenceMessageId, direction, limit);
 </code></pre><h3 id="获取频道聊天消息详情"><a href="https://developer.kookapp.cn/doc/http/message#获取频道聊天消息详情">获取频道聊天消息详情</a></h3>
 <p>GET <code>/api/v3/message/view</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">Guid messageId = default; // 要获取详情的消息 ID
+
+// 要缓存文字频道聊天消息，请设置 MessageCacheSize 的值
+// 缓存获取文字频道的聊天消息详情
+SocketMessage cachedMessage = socketTextChannel.GetCachedMessage(messageId);
+
+// 调用异步方法获取消息详情，在缓存中包含指定的消息对象的情况下，直接返回缓存的消息对象，否则会发起 API 请求获取消息对象
+IMessage messageAsync = await socketTextChannel.GetMessageAsync(messageId);
+
+// API 请求
+IMessage message = await restTextChannel.GetMessageAsync(messageId);
+
+// 在 ITextChannel 上进行调用
+IMessage message = await textChannel.GetMessageAsync(messageId);
 </code></pre><h3 id="发送频道聊天消息"><a href="https://developer.kookapp.cn/doc/http/message#发送频道聊天消息">发送频道聊天消息</a></h3>
 <p>POST <code>/api/v3/message/create</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">string text = null; // 要发送的文字消息
+IQuote quote = null; // 被引用的消息
+IUser ephemeralUser = null; // 瞬态消息的可见用户
+string filePath = null; // 要发送的文件的路径
+string fileName = null; // 要发送的文件的名称
+AttachmentType fileType = default; // 要发送的文件的类型
+Stream stream = null; // 要发送的文件的流
+FileAttachment attachment = default; // 要发送的文件的附件
+ICard card = null; // 要发送的卡片
+IEnumerable&lt;ICard&gt; cards = null; // 要发送的卡片列表
+
+// API 请求，发送文本消息
+Cacheable&lt;IUserMessage,Guid&gt; textMessage = await textChannel.SendTextAsync(text, quote, ephemeralUser);
+// API 请求，发送文件消息
+Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromPath = await textChannel.SendFileAsync(filePath, fileName, fileType, quote, ephemeralUser);
+Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromStream = await textChannel.SendFileAsync(stream, fileName, fileType, quote, ephemeralUser);
+Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromAttachment = await textChannel.SendFileAsync(attachment, fileName, fileType, quote, ephemeralUser);
+// API 请求，发送单卡片消息
+Cacheable&lt;IUserMessage,Guid&gt; cardMessage = await textChannel.SendCardAsync(card, quote, ephemeralUser);
+// API 请求，发送多卡片消息
+Cacheable&lt;IUserMessage,Guid&gt; cardsMessage = await textChannel.SendCardsAsync(cards, quote, ephemeralUser);
 </code></pre><h3 id="更新频道聊天消息"><a href="https://developer.kookapp.cn/doc/http/message#更新频道聊天消息">更新频道聊天消息</a></h3>
 <p>POST <code>/api/v3/message/update</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">string content = null; // 要更新的消息的文本
+IEnumerable&lt;ICard&gt; cards = null; // 要更新的消息的卡片
+IQuote quote = null; // 要更新的消息的引用
+IUser ephemeralUser = null; // 要更新的瞬态消息的可见用户
+
+// API 请求
+await userMessage.ModifyAsync(x =&gt;
+{
+    x.Content = content;
+    x.Cards = cards;
+    x.Quote = quote; // 要清除引用，请设置为 Quote.Empty
+    x.EphemeralUser = ephemeralUser;
+});
 </code></pre><h3 id="删除频道聊天消息"><a href="https://developer.kookapp.cn/doc/http/message#删除频道聊天消息">删除频道聊天消息</a></h3>
 <p>POST <code>/api/v3/message/delete</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">// API 请求
+await userMessage.DeleteAsync();
 </code></pre><h3 id="获取频道消息某个回应的用户列表"><a href="https://developer.kookapp.cn/doc/http/message#获取频道消息某个回应的用户列表">获取频道消息某个回应的用户列表</a></h3>
 <p>GET <code>/api/v3/message/reaction-list</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">IEmote emoji = null; // 要获取用户列表的回应的表情
+
+// 缓存获取消息的回应概要，但不包含用户列表
+IReadOnlyDictionary&lt;IEmote,ReactionMetadata&gt; cachedReactions = socketUserMessage.Reactions;
+
+// API 请求
+IReadOnlyCollection&lt;IUser&gt; reactionUsers = await userMessage.GetReactionUsersAsync(emoji);
 </code></pre><h3 id="给某个消息添加回应"><a href="https://developer.kookapp.cn/doc/http/message#给某个消息添加回应">给某个消息添加回应</a></h3>
 <p>POST <code>/api/v3/message/add-reaction</code></p>
-<pre><code class="lang-csharp">
+<p>有关 Emoji 的详细信息，请参考 <a class="xref" href="../../guides/emoji/emoji.html">表情符号</a>。</p>
+<pre><code>IEmote emoji = null; // 要添加的回应的表情
+IEnumerable&lt;IEmote&gt; emojis = null; // 要添加的回应的表情列表
+
+// API 请求
+await userMessage.AddReactionAsync(emoji);
+await userMessage.AddReactionsAsync(emojis);
 </code></pre><h3 id="删除消息的某个回应"><a href="https://developer.kookapp.cn/doc/http/message#删除消息的某个回应">删除消息的某个回应</a></h3>
 <p>POST <code>/api/v3/message/delete-reaction</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">IEmote emoji = null;
+IEnumerable&lt;IEmote&gt; emojis = null;
+IUser user = null;
+
+// API 请求
+await userMessage.RemoveReactionAsync(emoji, user);
+await userMessage.RemoveReactionsAsync(user, emojis);
 </code></pre></article>
           </div>
           <div class="contribution-panel mobile-hide">
