@@ -82,12 +82,31 @@
 <p>预声明变量</p>
 <pre><code class="lang-csharp">readonly KookSocketClient _socketClient = null;
 readonly KookRestClient _restClient = null;
+
+SocketUser socketUser = null;
+
+RestUser restUser = null;
+
+IUser user = null;
 </code></pre><h3 id="获取用户的亲密度"><a href="https://developer.kookapp.cn/doc/http/intimacy#获取用户的亲密度">获取用户的亲密度</a></h3>
 <p>GET <code>/api/v3/intimacy/index</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">// API 请求
+RestIntimacy intimacyFromSocket = await socketUser.GetIntimacyAsync();
+RestIntimacy intimacyFromRest = await restUser.GetIntimacyAsync();
+IIntimacy intimacy = await user.GetIntimacyAsync();
 </code></pre><h3 id="更新用户的亲密度"><a href="https://developer.kookapp.cn/doc/http/intimacy#更新用户的亲密度">更新用户的亲密度</a></h3>
 <p>POST <code>/api/v3/intimacy/update</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">string socialInfo = null; // 社交信息
+uint imageId = default; // 形象图片 ID
+int score = default; // 亲密度
+
+// API 请求
+await user.UpdateIntimacyAsync(x =&gt;
+{
+    x.SocialInfo = socialInfo;
+    x.ImageId = imageId;
+    x.Score = score;
+});
 </code></pre></article>
           </div>
           <div class="contribution-panel mobile-hide">

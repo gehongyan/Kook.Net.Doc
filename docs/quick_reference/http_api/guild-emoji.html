@@ -82,18 +82,44 @@
 <p>预声明变量</p>
 <pre><code class="lang-csharp">readonly KookSocketClient _socketClient = null;
 readonly KookRestClient _restClient = null;
+
+SocketGuild socketGuild = null;
+
+RestGuild restGuild = null;
+
+IGuild guild = null;
 </code></pre><h3 id="获取服务器表情列表"><a href="https://developer.kookapp.cn/doc/http/guild-emoji#获取服务器表情列表">获取服务器表情列表</a></h3>
 <p>GET <code>/api/v3/guild-emoji/list</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">string emoteId = null; // 表情符号 ID
+
+// 缓存中获取表情符号列表
+IReadOnlyCollection&lt;GuildEmote&gt; cachedGuildEmotes = guild.Emotes;
+// 缓存获取指定 ID 的表情符号
+GuildEmote cachedGuildEmote = socketGuild.GetEmote(emoteId);
+
+// API 请求获取表情符号列表
+IReadOnlyCollection&lt;GuildEmote&gt; guildEmotes = await guild.GetEmotesAsync();
+GuildEmote guildEmote = await guild.GetEmoteAsync(emoteId);
 </code></pre><h3 id="创建服务器表情"><a href="https://developer.kookapp.cn/doc/http/guild-emoji#创建服务器表情">创建服务器表情</a></h3>
 <p>POST <code>/api/v3/guild-emoji/create</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">string name = null; // 表情符号名称
+Image image = default; // 表情符号图片
+
+// API 请求
+GuildEmote emote = await guild.CreateEmoteAsync(name, image);
 </code></pre><h3 id="更新服务器表情"><a href="https://developer.kookapp.cn/doc/http/guild-emoji#更新服务器表情">更新服务器表情</a></h3>
 <p>POST <code>/api/v3/guild-emoji/update</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">GuildEmote emote = null; // 表情符号
+string name = null; // 表情符号名称
+
+// API 请求
+await guild.ModifyEmoteNameAsync(emote, name);
 </code></pre><h3 id="删除服务器表情"><a href="https://developer.kookapp.cn/doc/http/guild-emoji#删除服务器表情">删除服务器表情</a></h3>
 <p>POST <code>/api/v3/guild-emoji/delete</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">GuildEmote emote = null; // 表情符号
+
+// API 请求
+await guild.DeleteEmoteAsync(emote);
 </code></pre></article>
           </div>
           <div class="contribution-panel mobile-hide">

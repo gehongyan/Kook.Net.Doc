@@ -82,15 +82,25 @@
 <p>预声明变量</p>
 <pre><code class="lang-csharp">readonly KookSocketClient _socketClient = null;
 readonly KookRestClient _restClient = null;
+
+IGuild guild = null;
 </code></pre><h3 id="获取邀请列表"><a href="https://developer.kookapp.cn/doc/http/invite#获取邀请列表">获取邀请列表</a></h3>
 <p>GET <code>/api/v3/invite/list</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">// API 请求
+IReadOnlyCollection&lt;IInvite&gt; invites = await guild.GetInvitesAsync();
 </code></pre><h3 id="创建邀请链接"><a href="https://developer.kookapp.cn/doc/http/invite#创建邀请链接">创建邀请链接</a></h3>
 <p>POST <code>/api/v3/invite/create</code></p>
-<pre><code class="lang-csharp">
-</code></pre><p>POST <a href="https://developer.kookapp.cn/doc/http/invite#删除邀请链接">删除邀请链接</a></p>
-<p>GET <code>/api/v3/invite/delete</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">InviteMaxAge maxAge = default; // 有效期
+InviteMaxUses maxUses = default; // 最大使用次数
+
+// API 请求
+IInvite invite = await guild.CreateInviteAsync(maxAge, maxUses);
+</code></pre><h3 id="删除邀请链接"><a href="https://developer.kookapp.cn/doc/http/invite#删除邀请链接">删除邀请链接</a></h3>
+<p>POST <code>/api/v3/invite/delete</code></p>
+<pre><code class="lang-csharp">IInvite invite = null; // 邀请
+
+// API 请求
+await invite.DeleteAsync();
 </code></pre></article>
           </div>
           <div class="contribution-panel mobile-hide">

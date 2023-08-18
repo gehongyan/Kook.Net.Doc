@@ -82,9 +82,14 @@
 <p>预声明变量</p>
 <pre><code class="lang-csharp">readonly KookSocketClient _socketClient = null;
 readonly KookRestClient _restClient = null;
+
+IGuild guild = null;
 </code></pre><h3 id="获取服务器-badge"><a href="https://developer.kookapp.cn/doc/http/badge#获取服务器%20Badge">获取服务器 Badge</a></h3>
 <p>GET <code>/api/v3/badge/guild</code></p>
-<pre><code class="lang-csharp">
+<pre><code class="lang-csharp">BadgeStyle style = default; // 样式
+
+// API 请求
+Stream badge = await guild.GetBadgeAsync(style);
 </code></pre></article>
           </div>
           <div class="contribution-panel mobile-hide">

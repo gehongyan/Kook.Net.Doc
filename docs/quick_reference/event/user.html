@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>OAuth 2.0 &#30456;&#20851;&#25509;&#21475; | Kook.Net &#25991;&#26723; </title>
+    <title>&#26381;&#21153;&#22120;&#30456;&#20851;&#20107;&#20214; | Kook.Net &#25991;&#26723; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="OAuth 2.0 &#30456;&#20851;&#25509;&#21475; | Kook.Net &#25991;&#26723; ">
+    <meta name="title" content="&#26381;&#21153;&#22120;&#30456;&#20851;&#20107;&#20214; | Kook.Net &#25991;&#26723; ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -76,24 +76,29 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Guides.QuickReference.Http.OAuth">
-<h1 id="频道用户相关">频道用户相关</h1>
+            <article class="content wrap" id="_content" data-uid="Guides.QuickReference.Event.Guild">
+<h1 id="用户相关事件列表">用户相关事件列表</h1>
 
 <p>预声明变量</p>
-<pre><code class="lang-csharp">readonly KookSocketClient _socketClient = null;
-readonly KookRestClient _restClient = null;
-</code></pre><h3 id="获取-accesstoken"><a href="https://developer.kookapp.cn/doc/http/oauth#获取AccessToken">获取 AccessToken</a></h3>
-<p>POST <code>/api/oauth2/token</code></p>
-<p>无公开 API，请使用 <code>AspNet.Security.OAuth.Kook</code>，请参考：</p>
-<ul>
-<li>NuGet: <a href="https://www.nuget.org/packages/AspNet.Security.OAuth.Kook/">https://www.nuget.org/packages/AspNet.Security.OAuth.Kook/</a></li>
-<li>GitHub: <a href="https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers">https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers</a></li>
-<li>文档：<a href="https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/blob/dev/docs/kook.md">https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/blob/dev/docs/kook.md</a></li>
-</ul>
-</article>
+<pre><code class="lang-csharp">readonly KookSocketClient _client = null;
+</code></pre><h3 id="用户加入语音频道"><a href="https://developer.kookapp.cn/doc/event/user#用户加入语音频道">用户加入语音频道</a></h3>
+<pre><code class="lang-csharp">_client.UserConnected += (user, channel, time) =&gt; Task.CompletedTask;
+</code></pre><h3 id="用户退出语音频道"><a href="https://developer.kookapp.cn/doc/event/user#用户退出语音频道">用户退出语音频道</a></h3>
+<pre><code class="lang-csharp">_client.UserDisconnected += (user, channel, time) =&gt; Task.CompletedTask;
+</code></pre><h3 id="用户信息更新"><a href="https://developer.kookapp.cn/doc/event/user#用户信息更新">用户信息更新</a></h3>
+<pre><code class="lang-csharp">_client.UserUpdated += (before, after) =&gt; Task.CompletedTask;
+_client.CurrentUserUpdated += (before, after) =&gt; Task.CompletedTask;
+</code></pre><h3 id="自己新加入服务器"><a href="https://developer.kookapp.cn/doc/event/user#自己新加入服务器">自己新加入服务器</a></h3>
+<pre><code class="lang-csharp">_client.JoinedGuild += guild =&gt; Task.CompletedTask;
+</code></pre><h3 id="自己退出服务器"><a href="https://developer.kookapp.cn/doc/event/user#自己退出服务器">自己退出服务器</a></h3>
+<pre><code class="lang-csharp">_client.LeftGuild += guild =&gt; Task.CompletedTask;
+</code></pre><h3 id="card-消息中的-button-点击事件"><a href="https://developer.kookapp.cn/doc/event/user#Card%20消息中的%20Button%20点击事件">Card 消息中的 Button 点击事件</a></h3>
+<pre><code class="lang-csharp">_client.MessageButtonClicked += (value, user, message, channel) =&gt; Task.CompletedTask;
+_client.DirectMessageButtonClicked += (value, user, message, channel) =&gt; Task.CompletedTask;
+</code></pre></article>
           </div>
           <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/quick_reference/http_api/oauth.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/quick_reference/event/user.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

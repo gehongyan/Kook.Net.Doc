@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>OAuth 2.0 &#30456;&#20851;&#25509;&#21475; | Kook.Net &#25991;&#26723; </title>
+    <title>&#22909;&#21451;&#30456;&#20851;&#25509;&#21475; | Kook.Net &#25991;&#26723; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="OAuth 2.0 &#30456;&#20851;&#25509;&#21475; | Kook.Net &#25991;&#26723; ">
+    <meta name="title" content="&#22909;&#21451;&#30456;&#20851;&#25509;&#21475; | Kook.Net &#25991;&#26723; ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -76,24 +76,54 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Guides.QuickReference.Http.OAuth">
-<h1 id="频道用户相关">频道用户相关</h1>
+            <article class="content wrap" id="_content" data-uid="Guides.QuickReference.Http.Friend">
+<h1 id="好友相关接口">好友相关接口</h1>
 
 <p>预声明变量</p>
 <pre><code class="lang-csharp">readonly KookSocketClient _socketClient = null;
 readonly KookRestClient _restClient = null;
-</code></pre><h3 id="获取-accesstoken"><a href="https://developer.kookapp.cn/doc/http/oauth#获取AccessToken">获取 AccessToken</a></h3>
-<p>POST <code>/api/oauth2/token</code></p>
-<p>无公开 API，请使用 <code>AspNet.Security.OAuth.Kook</code>，请参考：</p>
-<ul>
-<li>NuGet: <a href="https://www.nuget.org/packages/AspNet.Security.OAuth.Kook/">https://www.nuget.org/packages/AspNet.Security.OAuth.Kook/</a></li>
-<li>GitHub: <a href="https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers">https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers</a></li>
-<li>文档：<a href="https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/blob/dev/docs/kook.md">https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/blob/dev/docs/kook.md</a></li>
-</ul>
-</article>
+
+IUser user = null;
+</code></pre><h3 id="好友列表"><a href="https://developer.kookapp.cn/doc/http/friend#好友列表">好友列表</a></h3>
+<p>GET <code>/api/v3/friend</code></p>
+<pre><code class="lang-csharp">// API 请求，获取好友列表
+IReadOnlyCollection&lt;RestUser&gt; friends = await _restClient.GetFriendsAsync();
+
+// API 请求，获取好友请求列表
+IReadOnlyCollection&lt;RestFriendRequest&gt; friendRequests = await _restClient.GetFriendRequestsAsync();
+
+// API 请求，获取屏蔽用户列表
+IReadOnlyCollection&lt;RestUser&gt; blockedUsers = await _restClient.GetBlockedUsersAsync();
+</code></pre><h3 id="好友申请"><a href="https://developer.kookapp.cn/doc/http/friend#好友申请">好友申请</a></h3>
+<p>POST <code>/api/v3/friend/request</code></p>
+<pre><code class="lang-csharp">// API 请求
+await user.RequestFriendAsync();
+</code></pre><h3 id="处理好友申请"><a href="https://developer.kookapp.cn/doc/http/friend#处理好友申请">处理好友申请</a></h3>
+<p>POST <code>/api/v3/friend/handle-request</code></p>
+<pre><code class="lang-csharp">// 好友申请
+RestFriendRequest friendRequest = null;
+
+// API 请求，接受好友申请
+await friendRequest.AcceptAsync();
+
+// API 请求，拒绝好友申请
+await friendRequest.DeclineAsync();
+</code></pre><h3 id="删除好友"><a href="https://developer.kookapp.cn/doc/http/friend#删除好友">删除好友</a></h3>
+<p>POST <code>/api/v3/friend/delete</code></p>
+<pre><code class="lang-csharp">// API 请求
+await user.RemoveFriendAsync();
+</code></pre><h3 id="屏蔽用户"><a href="https://developer.kookapp.cn/doc/http/friend#屏蔽用户">屏蔽用户</a></h3>
+<p>POST <code>/api/v3/friend/block</code></p>
+<pre><code class="lang-csharp">// API 请求
+await user.BlockAsync();
+</code></pre><h3 id="取消屏蔽用户"><a href="https://developer.kookapp.cn/doc/http/friend#取消屏蔽用户">取消屏蔽用户</a></h3>
+<p>POST <code>/api/v3/friend/unblock</code></p>
+<pre><code class="lang-csharp">// API 请求
+await user.UnblockAsync();
+</code></pre></article>
           </div>
           <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/quick_reference/http_api/oauth.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/quick_reference/http_api/friend.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
