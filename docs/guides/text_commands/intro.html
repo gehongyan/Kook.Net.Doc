@@ -245,12 +245,12 @@ public class SampleModule : ModuleBase&lt;SocketCommandContext&gt;
 <p>要手动加载模块，可调用 <a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_AddModuleAsync_">CommandService.AddModuleAsync</a>，模块的类通过泛型传递。
 如有需要，也可以向该方法传入 IServiceProvider.</p>
 <h3 id="模块构造函数">模块构造函数</h3>
-<p>模块通过 <a class="xref" href="dependency-injection.html">依赖注入</a> 进行构造，
+<p>模块通过 <a class="xref" href="../dependency_injection/injection.html">依赖注入</a> 进行构造，
 构造函数内的任何参数都应先注入服务容器中。</p>
 <div class="TIP"><h5>Tip</h5><p>模块构造函数也可以将 <code>IServiceProvider</code> 作为参数，并从中手动抽取所需服务，但并不推荐。</p>
 </div>
 <h3 id="模块属性">模块属性</h3>
-<p>具有公共 <code>set</code> 访问器属性的模块在模块构造后会被依赖服务注入，详细信息可参考 <a class="xref" href="dependency-injection.html">&#20381;&#36182;&#27880;&#20837;</a> 。</p>
+<p>具有公共 <code>set</code> 访问器属性的模块在模块构造后会被依赖服务注入，详细信息可参考 @Guides.TextCommands.DI 。</p>
 <h3 id="模块组">模块组</h3>
 <p>模块组为一组具有相同名称前缀的命令，要声明模块组，可标记特性 <a class="xref" href="../../api/Kook.Commands.GroupAttribute.html">GroupAttribute</a> 。</p>
 <p>在模块组内，如果命令的 CommandAttribute 特性标签中不传入名称参数，则为创建以该组名称作为命令名称的命令。</p>

@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#21629;&#20196;&#26694;&#26550;&#20013;&#30340;&#20381;&#36182;&#27880;&#20837; | Kook.Net &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#21629;&#20196;&#26694;&#26550;&#20013;&#30340;&#20381;&#36182;&#27880;&#20837; | Kook.Net &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="Kook.Net &#25991;&#26723;">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.DI.Services">
+<h1 id="命令框架中的依赖注入">命令框架中的依赖注入</h1>
+
+<p>在文本命令框架服务模块中，依赖注入的非常简单。</p>
+<p>您可以将任何服务注入到模块中，而无需将模块注册到提供程序中。Kook.Net会在内部解析您的依赖项。</p>
+<h2 id="注册服务">注册服务</h2>
+<p>前文描述的行为允许已注册的成员作为可用构造函数的参数，因此 Socket 客户端和配置类将会被自动解析，并使用 CommandService(client, config) 重载。</p>
+<pre><code class="lang-csharp" name="Service Registration">static IServiceProvider CreateServices()
+{
+    var config = new KookSocketConfig()
+    {
+        //...
+    };
+
+    var servConfig = new CommandServiceConfig()
+    {
+        //...
+    }
+
+    var collection = new ServiceCollection()
+        .AddSingleton(config)
+        .AddSingleton&lt;KookSocketClient&gt;()
+        .AddSingleton(servConfig)
+        .AddSingleton&lt;CommandService&gt;();
+
+    return collection.BuildServiceProvider();
+}
+</code></pre><h2 id="模块内的用法">模块内的用法</h2>
+<p>在模块的构造函数中，任何参数都将被你所传入的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a> 填充。</p>
+<p>任何公共可设置属性也将以相同的方式填充。</p>
+<pre><code class="lang-csharp" name="Module Injection">public class MyModule : InteractionModuleBase
+{
+    private readonly MyService _service;
+
+    public MyModule(MyService service)
+    {
+        _service = service;
+    }
+
+    [Command(&quot;things&quot;)]
+    public async Task ThingsAsync()
+    {
+        var str = string.Join(&quot;\n&quot;, _service.Things)
+        await ReplyTextAsync(str);
+    }
+}
+</code></pre><p>如果你接受 <code>CommandService</code> 或 <code>IServiceProvider</code> 作为构造函数的参数或可注入的属性，这些条目将会被模块所加载的
+<code>CommandService</code> 和传入的 <code>IServiceProvider</code> 填充。</p>
+<div class="NOTE"><h5>Note</h5><p>在属性上标记 [DontInjectAttribute] 特性将会阻止该属性被注入。</p>
+</div>
+<h2 id="服务">服务</h2>
+<p>模块是瞬态的，会在每次请求时重新实例化，因此如果需要在多个命令执行之间保持值，建议创建单例服务来包装。</p>
+<pre><code class="lang-csharp" name="Services">public class MyService
+{
+    public List&lt;string&gt; Things { get; }
+
+    public MyService()
+    {
+        Things = new();
+    }
+}
+</code></pre></article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/dependency_injection/services.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Kook.Net (c) 2022-2023
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

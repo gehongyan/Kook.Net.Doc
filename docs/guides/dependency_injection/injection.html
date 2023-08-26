@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#27880;&#20837;&#23454;&#20363; | Kook.Net &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#27880;&#20837;&#23454;&#20363; | Kook.Net &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="Kook.Net &#25991;&#26723;">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.DI.Injection">
+<h1 id="注入实例">注入实例</h1>
+
+<p>在 <code>IServiceProvider</code> 中注册的服务后可以注入到任何注册的类中，这可以通过属性或构造函数来实现。</p>
+<div class="NOTE"><h5>Note</h5><p>如上所述，依赖项<em>和</em>目标类必须都进行注册，服务提供程序才可以解析它。</p>
+</div>
+<h2 id="通过构造函数注入">通过构造函数注入</h2>
+<p>服务可以从类的构造函数中注入。
+这是首选的方法，因为这可以将只读字段与提供的服务关联在一起，且在类的外部不可访问。</p>
+<pre><code class="lang-csharp" name="Constructor Injection">public class ClientHandler
+{
+    private readonly KookSocketClient _client;
+
+    public ClientHandler(KookSocketClient client)
+    {
+        _client = client;
+    }
+
+    public async Task ConfigureAsync()
+    {
+        //...
+    }
+}
+</code></pre><h2 id="通过属性注入">通过属性注入</h2>
+<p>也可以通过属性进行注入。</p>
+<pre><code class="lang-csharp" name="Property Injection">public class ClientHandler
+{
+    public KookSocketClient Client { get; set; }
+
+    public async Task ConfigureAsync()
+    {
+        //...
+    }
+}
+</code></pre><div class="WARNING"><h5>Warning</h5><p>依赖项注入不会解析属性注入中缺少的服务，也不会选择构造函数作为替代。如果尝试注入公共可访问属性时其服务缺失，应用程序将抛出错误。</p>
+</div>
+<h2 id="使用提供程序本身">使用提供程序本身</h2>
+<p>也可以将提供程序本身注入到类中，可用于以下多种用例：</p>
+<ul>
+<li>允许库（如 Kook.Net）在内部访问提供程序</li>
+<li>注入可选依赖项</li>
+<li>如有必要，可以直接在提供程序上调用方法，这通常用于创建作用域</li>
+</ul>
+<pre><code class="lang-csharp" name="Provider Injection">public class UtilizingProvider
+{
+    private readonly IServiceProvider _provider;
+    private readonly AnyService _service;
+
+    // &#26381;&#21153;&#21487;&#20026; null&#65292;&#22240;&#20026;&#23427;&#21482;&#26377;&#22312;&#25552;&#20379;&#31243;&#24207;&#20013;&#23454;&#38469;&#21487;&#29992;&#26102;&#25165;&#20250;&#22635;&#20805;
+    private readonly AnyOtherService? _otherService;
+
+    // &#35813;&#26500;&#36896;&#20989;&#25968;&#20165;&#27880;&#20837;&#26381;&#21153;&#25552;&#20379;&#31243;&#24207;&#65292;&#24182;&#20351;&#29992;&#23427;&#26469;&#22635;&#20805;&#20854;&#20182;&#20381;&#36182;&#39033;
+    public UtilizingProvider(IServiceProvider provider)
+    {
+        _provider = provider;
+        _service = provider.GetRequiredService&lt;AnyService&gt;();
+        _otherService = provider.GetService&lt;AnyOtherService&gt;();
+    }
+
+    // &#35813;&#26500;&#36896;&#20989;&#25968;&#27880;&#20837;&#26381;&#21153;&#25552;&#20379;&#31243;&#24207;&#21644; AnyService&#65292;&#36825;&#26679;&#26080;&#38656;&#35843;&#29992; GetRequiredService&#39029;&#21487;&#20197;&#30830;&#20445; AnyService &#19981;&#20026; null
+    public UtilizingProvider(IServiceProvider provider, AnyService service)
+    {
+        _provider = provider;
+        _service = service;
+        _otherService = provider.GetService&lt;AnyOtherService&gt;();
+    }
+}
+</code></pre><div class="NOTE"><h5>Note</h5><p>请记住，提供程序将选择“最大”的可用构造函数。
+如果选择引入多个构造函数，请记住，如在某一个构造函数中缺失了某项服务，提供程序可能会选择另一个可用的构造函数，而不是抛出异常。</p>
+</div>
+</article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/dependency_injection/injection.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Kook.Net (c) 2022-2023
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

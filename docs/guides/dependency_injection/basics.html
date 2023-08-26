@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#27010;&#36848; | Kook.Net &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#27010;&#36848; | Kook.Net &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="Kook.Net &#25991;&#26723;">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.DI.Intro">
+<h1 id="依赖注入">依赖注入</h1>
+
+<p>依赖注入并不是 Discord.Net 中必要的功能，但它可以让框架的使用更为简便。与许多其他库相结合使用，可以更好地控制应用程序。</p>
+<h2 id="按照">按照</h2>
+<p>依赖注入不是 .NET 的原生功能。您需要将扩展包安装到项目中才能使用它：</p>
+<ul>
+<li><a href="https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/">Microsoft.Extensions.DependencyInjection</a></li>
+<li><a href="https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection.Abstractions/">Microsoft.Extensions.DependencyInjection.Abstractions</a></li>
+</ul>
+<div class="WARNING"><h5>Warning</h5><p>仅下载 Abstractions 包不包含使用依赖注入所需的一些必要类，请确保同时安装两个包，或选择仅安装
+Microsoft.Extensions.DependencyInjection 包来隐式同时安装两个包。</p>
+</div>
+<h3 id="visual-studio">Visual Studio</h3>
+<p><img src="images/visualstudio.png" alt="Installing"></p>
+<ul>
+<li><p>程序包管理控制台</p>
+<p>  <code>PM&gt; Install-Package Microsoft.Extensions.DependencyInjection</code>.</p>
+</li>
+</ul>
+<h3 id="rider">Rider</h3>
+<p><img src="images/rider.png" alt="Installing"></p>
+<h3 id="命令行">命令行</h3>
+<pre><code class="lang-sh">dotnet add package Microsoft.Extensions.DependencyInjection
+</code></pre><div class="TIP"><h5>Tip</h5><p>ASP.NET 已经在其框架中包含了所有必要的程序集，要在 ASP.NET 中使用依赖注入完整功能，不需要安装任何额外的 NuGet 包。</p>
+</div>
+<h2 id="开始">开始</h2>
+<p>首先，您需要创建一个基于依赖注入的应用程序，这样就可以在整个项目中访问并注入它们。</p>
+<pre><code class="lang-csharp" name="Building the Program">public class Program
+{
+    private readonly IServiceProvider _serviceProvider;
+
+    public Program()
+    {
+        _serviceProvider = CreateProvider();
+    }
+
+    static void Main(string[] args)
+        =&gt; new Program().RunAsync(args).GetAwaiter().GetResult();
+
+    static IServiceProvider CreateProvider()
+    {
+        var collection = new ServiceCollection();
+        //...
+        return collection.BuildServiceProvider();
+    }
+
+    async Task RunAsync(string[] args)
+    {
+        //...
+    }
+}
+</code></pre><p>要在不同的类中自由传递依赖项，您需要将它们注册到新的 <code>ServiceCollection</code> 中，并将它们构建到 <code>IServiceProvider</code> 中，如上所示。
+然后需要通过启动文件访问 IServiceProvider，以便您可以访问您的提供程序并对其进行管理。</p>
+<pre><code class="lang-csharp" name="Building the Collection">static IServiceProvider CreateServices()
+{
+    var config = new KookSocketConfig()
+    {
+        //...
+    };
+
+    var collection = new ServiceCollection()
+        .AddSingleton(config)
+        .AddSingleton&lt;KookSocketClient&gt;();
+
+    return collection.BuildServiceProvider();
+}
+</code></pre><p>如上所示，这里创建了一个 <code>KookSocketConfig</code> 的实例，并在添加客户端本身<strong>之前</strong>将其添加到了服务容器中。
+服务容器会优先选择已经存在的服务来填充构造函数，且你已经将配置类注册到服务容器中，因此，带有配置参数的构造函数重载会被优先调用。</p>
+<h2 id="使用依赖项">使用依赖项</h2>
+<p>在 Program 类的构造函数中构建服务容器提供程序后，现在可以在您正在使用的实例中使用它了。
+通过提供程序，我们可以请求我们之前所注册的 KookSocketClient。</p>
+<pre><code class="lang-csharp" name="Applying DI in RunAsync">async Task RunAsync(string[] args)
+{
+    // &#20174;&#23458;&#25143;&#31471;&#35831;&#27714;&#23454;&#20363;&#12290;
+    // &#25105;&#20204;&#22312;&#36825;&#37324;&#39318;&#20808;&#35831;&#27714;&#23427;&#65292;&#22240;&#27492;&#20854;&#30446;&#26631;&#26500;&#36896;&#20989;&#25968;&#23558;&#20250;&#35843;&#29992;&#65292;&#25105;&#20204;&#20250;&#24471;&#21040;&#19968;&#20010;&#23458;&#25143;&#31471;&#30340;&#23454;&#20363;&#12290;
+    var client = _services.GetRequiredService&lt;KookSocketClient&gt;();
+
+    client.Log += async (msg) =&gt;
+    {
+        await Task.CompletedTask;
+        Console.WriteLine(msg);
+    }
+
+    await client.LoginAsync(TokenType.Bot, &quot;&quot;);
+    await client.StartAsync();
+
+    await Task.Delay(Timeout.Infinite);
+}
+</code></pre><div class="WARNING"><h5>Warning</h5><p>服务实例的构造函数在被<strong>首次请求</strong>之前不会被调用。要想实例化服务容器里的服务，需要先从提供程序中请求服务。
+如果所请求的服务有依赖项，那么在实例化服务本身之前，其未被实例化的依赖项会被实例化。</p>
+</div>
+<h2 id="注入依赖项">注入依赖项</h2>
+<p>您不仅可以直接从字段或属性中访问提供程序，还可以将实例传递给在提供程序中注册的类。有多种方法可以实现这一点。请参考
+<a class="xref" href="injection.html">注入实例</a> 了解更多信息。</p>
+</article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/dependency_injection/basics.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Kook.Net (c) 2022-2023
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
