@@ -92,13 +92,14 @@
 <ul>
 <li><a class="xref" href="../../api/Kook.Commands.RequireContextAttribute.html">RequireContextAttribute</a></li>
 <li><a class="xref" href="../../api/Kook.Commands.RequireUserAttribute.html">RequireUserAttribute</a></li>
+<li><a class="xref" href="../../api/Kook.Commands.RequireRoleAttribute.html">RequireRoleAttribute</a></li>
 <li><a class="xref" href="../../api/Kook.Commands.RequireBotPermissionAttribute.html">RequireBotPermissionAttribute</a></li>
 <li><a class="xref" href="../../api/Kook.Commands.RequireUserPermissionAttribute.html">RequireUserPermissionAttribute</a></li>
 </ul>
 <h2 id="用法">用法</h2>
 <p>要使用先决条件，只需将先决条件特性标记于命令的方法签名上。</p>
 <h3 id="示例">示例</h3>
-<pre><code class="lang-csharp" name="Precondition Usage">[RequireOwner]
+<pre><code class="lang-csharp" name="Precondition Usage">[RequireBotPermission(ChannelPermission.SendMessages)]
 [Command(&quot;echo&quot;)]
 public Task EchoAsync(string input) =&gt; ReplyTextAsync(input);
 </code></pre><h2 id="先决条件的析取">先决条件的析取</h2>
@@ -118,14 +119,11 @@ public class AdminModule : ModuleBase&lt;SocketCommandContext&gt;
     public Task BanAsync(IUser user) =&gt; Context.Guild.AddBanAsync(user);
 }
 </code></pre><h2 id="自定义先决条件">自定义先决条件</h2>
-<p>要创建自定义先决条件，请根据用途创建一个继承自 <a class="xref" href="../../api/Kook.Commands.PreconditionAttribute.html">PreconditionAttribute</a> 或
-<a class="xref" href="../../api/Kook.Commands.ParameterPreconditionAttribute.html">ParameterPreconditionAttribute</a> 的类。</p>
+<p>要创建自定义先决条件，请根据用途创建一个继承自 <a class="xref" href="../../api/Kook.Commands.PreconditionAttribute.html">PreconditionAttribute</a> 或 <a class="xref" href="../../api/Kook.Commands.ParameterPreconditionAttribute.html">ParameterPreconditionAttribute</a> 的类。</p>
 <p>要实现函数上的先决条件，请重写 <a class="xref" href="../../api/Kook.Commands.PreconditionAttribute.html#Kook_Commands_PreconditionAttribute_CheckPermissionsAsync_">CheckPermissionsAsync</a> 方法。</p>
-<p>如果命令调用上下文满足条件，则返回 <a class="xref" href="../../api/Kook.Commands.PreconditionResult.html#Kook_Commands_PreconditionResult_FromSuccess_">PreconditionResult.FromSuccess</a>
-创建的对象，否则，请返回 <a class="xref" href="../../api/Kook.Commands.PreconditionResult.html#Kook_Commands_PreconditionResult_FromError_">PreconditionResult.FromError</a> 创建的对象，
-如有需要，请在返回的对象中添加错误消息。</p>
-<div class="NOTE"><h5>Note</h5><p>Visual Studio、JetBrains Rider 等集成开发环境中的 IntelliSense
-智能提示可以帮助您添加抽象类的实现中缺失的成员。</p>
+<p>如果命令调用上下文满足条件，则返回 <a class="xref" href="../../api/Kook.Commands.PreconditionResult.html#Kook_Commands_PreconditionResult_FromSuccess_">PreconditionResult.FromSuccess</a> 创建的对象，否则，请返回 <a class="xref" href="../../api/Kook.Commands.PreconditionResult.html#Kook_Commands_PreconditionResult_FromError_">PreconditionResult.FromError</a>
+创建的对象，如有需要，请在返回的对象中添加错误消息。</p>
+<div class="NOTE"><h5>Note</h5><p>Visual Studio、JetBrains Rider 等集成开发环境中的 IntelliSense 智能提示可以帮助您添加抽象类的实现中缺失的成员。</p>
 </div>
 <h3 id="示例-2">示例</h3>
 <pre><code class="lang-csharp" name="Custom Precondition">using System;
@@ -135,30 +133,30 @@ using Kook.Commands;
 using Kook.WebSocket;
 
 // &#32487;&#25215;&#33258; PreconditionAttribute
-public class RequireRoleAttribute : PreconditionAttribute
+public class RequireTimeAttribute : PreconditionAttribute
 {
-    // &#21019;&#24314;&#23383;&#27573;&#23384;&#20648;&#25351;&#23450;&#30340;&#35282;&#33394;&#21517;&#31216;
-    private readonly string _name;
+    // &#21019;&#24314;&#23383;&#27573;&#23384;&#20648;&#25351;&#23450;&#30340;&#26102;&#38388;&#33539;&#22260;
+    private readonly TimeOnly _from;
+    private readonly TimeOnly _to;
 
-    // &#21019;&#24314;&#26500;&#36896;&#20989;&#25968;&#65292;&#29992;&#26469;&#22312;&#20351;&#29992;&#26102;&#25509;&#25910;&#35282;&#33394;&#21517;&#31216;&#20316;&#20026;&#21442;&#25968;
-    public RequireRoleAttribute(string name) =&gt; _name = name;
+    // &#21019;&#24314;&#26500;&#36896;&#20989;&#25968;&#65292;&#29992;&#26469;&#22312;&#20351;&#29992;&#26102;&#25509;&#25910;&#26102;&#38388;&#33539;&#22260;&#20316;&#20026;&#21442;&#25968;
+    public RequireTimeAttribute(TimeOnly from, TimeOnly to)
+    {
+        _from = from;
+        _to = to;
+    }
 
     // &#37325;&#20889; CheckPermissions &#26041;&#27861;
     public override Task&lt;PreconditionResult&gt; CheckPermissionsAsync(ICommandContext context, CommandInfo command, IServiceProvider services)
     {
-        // &#26816;&#26597;&#35813;&#29992;&#25143;&#26159;&#21542;&#20026;&#26381;&#21153;&#22120;&#20869;&#30340;&#29992;&#25143;&#65292;&#21482;&#26377;&#26381;&#21153;&#22120;&#20869;&#30340;&#29992;&#25143;&#23384;&#22312;&#35282;&#33394;
-        if (context.User is SocketGuildUser guildUser)
-        {
-            // &#22914;&#26524;&#35813;&#29992;&#25143;&#23384;&#22312;&#39044;&#20808;&#25351;&#23450;&#30340;&#35282;&#33394;&#65292;&#21017;&#36820;&#22238;&#25104;&#21151;
-            if (guildUser.Roles.Any(r =&gt; r.Name == _name))
-                // &#30001;&#20110;&#26041;&#27861;&#20869;&#27809;&#26377;&#24322;&#27493;&#20195;&#30721;&#65292;&#35201;&#36820;&#22238;&#30340;&#32467;&#26524;&#38656;&#35201;&#21253;&#35013;&#22312; `Task.FromResult` &#20013;&#26469;&#36991;&#20813;&#32534;&#35793;&#38169;&#35823;
-                return Task.FromResult(PreconditionResult.FromSuccess());
-            // &#35282;&#33394;&#26816;&#26597;&#19981;&#36890;&#36807;&#65292;&#21017;&#36820;&#22238;&#22833;&#36133;&#21450;&#38169;&#35823;&#20449;&#24687;
-            else
-                return Task.FromResult(PreconditionResult.FromError($&quot;You must have a role named {_name} to run this command.&quot;));
-        }
-        else
-            return Task.FromResult(PreconditionResult.FromError(&quot;You must be in a guild to run this command.&quot;));
+        // &#26816;&#26597;&#24403;&#21069;&#26102;&#38388;&#26159;&#21542;&#22312;&#25351;&#23450;&#30340;&#26102;&#38388;&#33539;&#22260;&#20869;
+        if ((_from &lt; _to &amp;&amp; TimeOnly.FromDateTime(DateTime.Now) &gt;= _from &amp;&amp; TimeOnly.FromDateTime(DateTime.Now) &lt;= _to)
+            || (_from &gt; _to &amp;&amp; (TimeOnly.FromDateTime(DateTime.Now) &gt;= _from || TimeOnly.FromDateTime(DateTime.Now) &lt;= _to)))
+            // &#22914;&#26524;&#22312;&#25351;&#23450;&#26102;&#38388;&#33539;&#22260;&#20869;&#65292;&#21017;&#36820;&#22238;&#25104;&#21151;
+            // &#30001;&#20110;&#26041;&#27861;&#20869;&#27809;&#26377;&#24322;&#27493;&#20195;&#30721;&#65292;&#35201;&#36820;&#22238;&#30340;&#32467;&#26524;&#38656;&#35201;&#21253;&#35013;&#22312; `Task.FromResult` &#20013;&#26469;&#36991;&#20813;&#32534;&#35793;&#38169;&#35823;
+            return Task.FromResult(PreconditionResult.FromSuccess());
+        // &#22914;&#26524;&#19981;&#22312;&#25351;&#23450;&#26102;&#38388;&#33539;&#22260;&#20869;&#65292;&#21017;&#36820;&#22238;&#22833;&#36133;&#21450;&#38169;&#35823;&#20449;&#24687;
+        return Task.FromResult(PreconditionResult.FromError($&quot;You can only run this command between {_from} and {_to}&quot;));
     }
 }
 </code></pre></article>
