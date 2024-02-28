@@ -1,858 +1,677 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ActionGroupModuleBuilder
-   | Kook.Net &#25991;&#26723; </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ActionGroupModuleBuilder
-   | Kook.Net &#25991;&#26723; ">
-    <meta name="generator" content="docfx 2.56.7.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>Class ActionGroupModuleBuilder | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ActionGroupModuleBuilder | Kook.Net 文档 ">
+      
+      <meta name="description" content="Represents a action group module builder for creating an .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="Represents a action group module builder for creating an ActionGroupModule."><meta property="og:title" content="Class ActionGroupModuleBuilder | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kook.ActionGroupModuleBuilder">
-  <h1 id="Kook_ActionGroupModuleBuilder" data-uid="Kook.ActionGroupModuleBuilder">Class ActionGroupModuleBuilder
+
+        <article data-uid="Kook.ActionGroupModuleBuilder">
+
+
+
+  <h1 id="Kook_ActionGroupModuleBuilder" data-uid="Kook.ActionGroupModuleBuilder" class="text-break">
+Class ActionGroupModuleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p>Represents a action group module builder for creating an <a class="xref" href="Kook.ActionGroupModule.html">ActionGroupModule</a>.</p>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a action group module builder for creating an <a class="xref" href="Kook.ActionGroupModule.html">ActionGroupModule</a>.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
+  <div class="markdown conceptual"></div>
 
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">ActionGroupModuleBuilder</span></div>
-  </div>
-  
-  
-  
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kook.html">Kook</a></h6>
-  <h6><strong>Assembly</strong>: Kook.Net.Core.dll</h6>
-  
-  <h5 id="Kook_ActionGroupModuleBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActionGroupModuleBuilder : object, IModuleBuilder, IEquatable&lt;ActionGroupModuleBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActionGroupModuleBuilder : IModuleBuilder, IEquatable&lt;ActionGroupModuleBuilder&gt;</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder__ctor.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L20" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ActionGroupModuleBuilder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
   <a id="Kook_ActionGroupModuleBuilder__ctor_" data-uid="Kook.ActionGroupModuleBuilder.#ctor*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder__ctor" data-uid="Kook.ActionGroupModuleBuilder.#ctor"><a href="#collapsible-Kook_ActionGroupModuleBuilder__ctor" class="expander" data-toggle="collapse">ActionGroupModuleBuilder()</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder__ctor" class="collapse in">
+
+  <h3 id="Kook_ActionGroupModuleBuilder__ctor" data-uid="Kook.ActionGroupModuleBuilder.#ctor">
+  ActionGroupModuleBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ActionGroupModuleBuilder()</code></pre>
   </div>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder__ctor_List_Kook_ButtonElementBuilder__.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.%23ctor(List%7BKook.ButtonElementBuilder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L25" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_ActionGroupModuleBuilder__ctor_" data-uid="Kook.ActionGroupModuleBuilder.#ctor*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder__ctor_List_Kook_ButtonElementBuilder__" data-uid="Kook.ActionGroupModuleBuilder.#ctor(List{Kook.ButtonElementBuilder})"><a href="#collapsible-Kook_ActionGroupModuleBuilder__ctor_List_Kook_ButtonElementBuilder__" class="expander" data-toggle="collapse">ActionGroupModuleBuilder(List&lt;ButtonElementBuilder&gt;)</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder__ctor_List_Kook_ButtonElementBuilder__" class="collapse in">
+
+  <h3 id="Kook_ActionGroupModuleBuilder__ctor_System_Collections_Generic_List_Kook_ButtonElementBuilder__" data-uid="Kook.ActionGroupModuleBuilder.#ctor(System.Collections.Generic.List{Kook.ButtonElementBuilder})">
+  ActionGroupModuleBuilder(List&lt;ButtonElementBuilder&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ActionGroupModuleBuilder(List&lt;ButtonElementBuilder&gt; elements)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">List</span>&lt;<a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a>&gt;</span>
-        <span class="parametername">elements</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="fields">Fields
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>elements</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Kook_ActionGroupModuleBuilder_MaxElementCount" data-uid="Kook.ActionGroupModuleBuilder.MaxElementCount">
+  MaxElementCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_MaxElementCount.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.MaxElementCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L15" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_MaxElementCount" data-uid="Kook.ActionGroupModuleBuilder.MaxElementCount"><a href="#collapsible-Kook_ActionGroupModuleBuilder_MaxElementCount" class="expander" data-toggle="collapse">MaxElementCount</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_MaxElementCount" class="collapse in">
+
   <div class="markdown level1 summary"><p>Returns the maximum number of elements allowed by Kook.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int MaxElementCount = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int MaxElementCount = 4</code></pre>
   </div>
 
-  
-  
-  
-  <h5 class="fieldValue">Field Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_Elements.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.Elements%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L39" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Kook_ActionGroupModuleBuilder_Elements_" data-uid="Kook.ActionGroupModuleBuilder.Elements*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_Elements" data-uid="Kook.ActionGroupModuleBuilder.Elements"><a href="#collapsible-Kook_ActionGroupModuleBuilder_Elements" class="expander" data-toggle="collapse">Elements</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_Elements" class="collapse in">
+
+  <h3 id="Kook_ActionGroupModuleBuilder_Elements" data-uid="Kook.ActionGroupModuleBuilder.Elements">
+  Elements
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the button elements of the action group module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public List&lt;ButtonElementBuilder&gt; Elements { get; set; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">List</span>&lt;<a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a>&gt;
-        <p><p>A <see cref="!:List&lt;ButtonElementBuilder>"></see> containing the button elements of the action group module.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_Type.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L28" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> containing the button elements of the action group module.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The addition operation would cause the number of elements to exceed <a class="xref" href="Kook.ActionGroupModuleBuilder.html#Kook_ActionGroupModuleBuilder_MaxElementCount">MaxElementCount</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_ActionGroupModuleBuilder_Type_" data-uid="Kook.ActionGroupModuleBuilder.Type*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_Type" data-uid="Kook.ActionGroupModuleBuilder.Type"><a href="#collapsible-Kook_ActionGroupModuleBuilder_Type" class="expander" data-toggle="collapse">Type</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_Type" class="collapse in">
+
+  <h3 id="Kook_ActionGroupModuleBuilder_Type" data-uid="Kook.ActionGroupModuleBuilder.Type">
+  Type
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Specifies the module type of the <a class="xref" href="Kook.IModule.html">IModule</a> this builder creates.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ModuleType Type { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ModuleType.html">ModuleType</a>
-        <p><p>A <a class="xref" href="Kook.ModuleType.html">ModuleType</a> representing the module type of the <a class="xref" href="Kook.IModule.html">IModule</a> this builder creates.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IModuleBuilder.html#Kook_IModuleBuilder_Type">IModuleBuilder.Type</a></div>
-  
-  
-  
-  
-  </div>
-  <h3 id="methods">Methods
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ModuleType.html">ModuleType</a></dt>
+    <dd><p>A <a class="xref" href="Kook.ModuleType.html">ModuleType</a> representing the module type of the <a class="xref" href="Kook.IModule.html">IModule</a> this builder creates.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Kook_ActionGroupModuleBuilder_AddElement_" data-uid="Kook.ActionGroupModuleBuilder.AddElement*"></a>
+
+  <h3 id="Kook_ActionGroupModuleBuilder_AddElement_Kook_ButtonElementBuilder_" data-uid="Kook.ActionGroupModuleBuilder.AddElement(Kook.ButtonElementBuilder)">
+  AddElement(ButtonElementBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_AddElement_Action_Kook_ButtonElementBuilder__.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.AddElement(Action%7BKook.ButtonElementBuilder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L92" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_ActionGroupModuleBuilder_AddElement_" data-uid="Kook.ActionGroupModuleBuilder.AddElement*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_AddElement_Action_Kook_ButtonElementBuilder__" data-uid="Kook.ActionGroupModuleBuilder.AddElement(Action{Kook.ButtonElementBuilder})"><a href="#collapsible-Kook_ActionGroupModuleBuilder_AddElement_Action_Kook_ButtonElementBuilder__" class="expander" data-toggle="collapse">AddElement(Action&lt;ButtonElementBuilder&gt;)</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_AddElement_Action_Kook_ButtonElementBuilder__" class="collapse in">
+
   <div class="markdown level1 summary"><p>Adds a button element to the action group module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ActionGroupModuleBuilder AddElement(Action&lt;ButtonElementBuilder&gt; action)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Action</span>&lt;<a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a>&gt;</span>
-        <span class="parametername">action</span>
-        <p><p>The action to add a button element to the action group module.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_AddElement_Kook_ButtonElementBuilder_.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.AddElement(Kook.ButtonElementBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L69" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_ActionGroupModuleBuilder_AddElement_" data-uid="Kook.ActionGroupModuleBuilder.AddElement*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_AddElement_Kook_ButtonElementBuilder_" data-uid="Kook.ActionGroupModuleBuilder.AddElement(Kook.ButtonElementBuilder)"><a href="#collapsible-Kook_ActionGroupModuleBuilder_AddElement_Kook_ButtonElementBuilder_" class="expander" data-toggle="collapse">AddElement(ButtonElementBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_AddElement_Kook_ButtonElementBuilder_" class="collapse in">
-  <div class="markdown level1 summary"><p>Adds a button element to the action group module.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ActionGroupModuleBuilder AddElement(ButtonElementBuilder field)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a></span>
-        <span class="parametername">field</span>
-        <p><p>The button element to add.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>field</code> <a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a></dt>
+    <dd><p>The button element to add.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The addition operation would cause the number of elements to exceed <a class="xref" href="Kook.ActionGroupModuleBuilder.html#Kook_ActionGroupModuleBuilder_MaxElementCount">MaxElementCount</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Kook_ActionGroupModuleBuilder_AddElement_" data-uid="Kook.ActionGroupModuleBuilder.AddElement*"></a>
+
+  <h3 id="Kook_ActionGroupModuleBuilder_AddElement_System_Action_Kook_ButtonElementBuilder__" data-uid="Kook.ActionGroupModuleBuilder.AddElement(System.Action{Kook.ButtonElementBuilder})">
+  AddElement(Action&lt;ButtonElementBuilder&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a button element to the action group module.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionGroupModuleBuilder AddElement(Action&lt;ButtonElementBuilder&gt; action)</code></pre>
   </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_Build.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L106" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a>&gt;</dt>
+    <dd><p>The action to add a button element to the action group module.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The addition operation would cause the number of elements to exceed <a class="xref" href="Kook.ActionGroupModuleBuilder.html#Kook_ActionGroupModuleBuilder_MaxElementCount">MaxElementCount</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_ActionGroupModuleBuilder_Build_" data-uid="Kook.ActionGroupModuleBuilder.Build*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_Build" data-uid="Kook.ActionGroupModuleBuilder.Build"><a href="#collapsible-Kook_ActionGroupModuleBuilder_Build" class="expander" data-toggle="collapse">Build()</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_Build" class="collapse in">
+
+  <h3 id="Kook_ActionGroupModuleBuilder_Build" data-uid="Kook.ActionGroupModuleBuilder.Build">
+  Build()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Builds this builder into an <a class="xref" href="Kook.ActionGroupModule.html">ActionGroupModule</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ActionGroupModule Build()</code></pre>
   </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ActionGroupModule.html">ActionGroupModule</a>
-        <p><p>An <a class="xref" href="Kook.ActionGroupModule.html">ActionGroupModule</a> representing the built action group module object.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_Equals_Kook_ActionGroupModuleBuilder_.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.Equals(Kook.ActionGroupModuleBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L142" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ActionGroupModule.html">ActionGroupModule</a></dt>
+    <dd><p>An <a class="xref" href="Kook.ActionGroupModule.html">ActionGroupModule</a> representing the built action group module object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_ActionGroupModuleBuilder_Equals_" data-uid="Kook.ActionGroupModuleBuilder.Equals*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_Equals_Kook_ActionGroupModuleBuilder_" data-uid="Kook.ActionGroupModuleBuilder.Equals(Kook.ActionGroupModuleBuilder)"><a href="#collapsible-Kook_ActionGroupModuleBuilder_Equals_Kook_ActionGroupModuleBuilder_" class="expander" data-toggle="collapse">Equals(ActionGroupModuleBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_Equals_Kook_ActionGroupModuleBuilder_" class="collapse in">
+
+  <h3 id="Kook_ActionGroupModuleBuilder_Equals_Kook_ActionGroupModuleBuilder_" data-uid="Kook.ActionGroupModuleBuilder.Equals(Kook.ActionGroupModuleBuilder)">
+  Equals(ActionGroupModuleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Equals(ActionGroupModuleBuilder actionGroupModuleBuilder)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></span>
-        <span class="parametername">actionGroupModuleBuilder</span>
-        <p><p>The <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> to compare with the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>; otherwise, <code>false</code>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L136" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actionGroupModuleBuilder</code> <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></dt>
+    <dd><p>The <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> to compare with the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_ActionGroupModuleBuilder_Equals_" data-uid="Kook.ActionGroupModuleBuilder.Equals*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_Equals_System_Object_" data-uid="Kook.ActionGroupModuleBuilder.Equals(System.Object)"><a href="#collapsible-Kook_ActionGroupModuleBuilder_Equals_System_Object_" class="expander" data-toggle="collapse">Equals(Object)</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_Equals_System_Object_" class="collapse in">
+
+  <h3 id="Kook_ActionGroupModuleBuilder_Equals_System_Object_" data-uid="Kook.ActionGroupModuleBuilder.Equals(System.Object)">
+  Equals(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></span>
-        <span class="parametername">obj</span>
-        <p><p>The object to compare with the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>; otherwise, <code>false</code>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_ActionGroupModuleBuilder_Equals_System_Object__remarks">Remarks</h5>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_ActionGroupModuleBuilder_Equals_System_Object__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>, <a class="xref" href="Kook.ActionGroupModuleBuilder.html#Kook_ActionGroupModuleBuilder_Equals_Kook_ActionGroupModuleBuilder_">Equals(ActionGroupModuleBuilder)</a> will be called to compare the 2 instances.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_GetHashCode.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L156" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_ActionGroupModuleBuilder_GetHashCode_" data-uid="Kook.ActionGroupModuleBuilder.GetHashCode*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_GetHashCode" data-uid="Kook.ActionGroupModuleBuilder.GetHashCode"><a href="#collapsible-Kook_ActionGroupModuleBuilder_GetHashCode" class="expander" data-toggle="collapse">GetHashCode()</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_GetHashCode" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_ActionGroupModuleBuilder_GetHashCode" data-uid="Kook.ActionGroupModuleBuilder.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
   </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="operators">Operators
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_op_Equality_Kook_ActionGroupModuleBuilder_Kook_ActionGroupModuleBuilder_.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.op_Equality(Kook.ActionGroupModuleBuilder%2CKook.ActionGroupModuleBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L122" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
   <a id="Kook_ActionGroupModuleBuilder_op_Equality_" data-uid="Kook.ActionGroupModuleBuilder.op_Equality*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_op_Equality_Kook_ActionGroupModuleBuilder_Kook_ActionGroupModuleBuilder_" data-uid="Kook.ActionGroupModuleBuilder.op_Equality(Kook.ActionGroupModuleBuilder,Kook.ActionGroupModuleBuilder)"><a href="#collapsible-Kook_ActionGroupModuleBuilder_op_Equality_Kook_ActionGroupModuleBuilder_Kook_ActionGroupModuleBuilder_" class="expander" data-toggle="collapse">Equality(ActionGroupModuleBuilder, ActionGroupModuleBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_op_Equality_Kook_ActionGroupModuleBuilder_Kook_ActionGroupModuleBuilder_" class="collapse in">
+
+  <h3 id="Kook_ActionGroupModuleBuilder_op_Equality_Kook_ActionGroupModuleBuilder_Kook_ActionGroupModuleBuilder_" data-uid="Kook.ActionGroupModuleBuilder.op_Equality(Kook.ActionGroupModuleBuilder,Kook.ActionGroupModuleBuilder)">
+  operator ==(ActionGroupModuleBuilder, ActionGroupModuleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator ==(ActionGroupModuleBuilder left, ActionGroupModuleBuilder right)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></span>
-        <span class="parametername">left</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></span>
-        <span class="parametername">right</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>; otherwise, <code>false</code>. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_op_Inequality_Kook_ActionGroupModuleBuilder_Kook_ActionGroupModuleBuilder_.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.op_Inequality(Kook.ActionGroupModuleBuilder%2CKook.ActionGroupModuleBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L129" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_ActionGroupModuleBuilder_op_Inequality_" data-uid="Kook.ActionGroupModuleBuilder.op_Inequality*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_op_Inequality_Kook_ActionGroupModuleBuilder_Kook_ActionGroupModuleBuilder_" data-uid="Kook.ActionGroupModuleBuilder.op_Inequality(Kook.ActionGroupModuleBuilder,Kook.ActionGroupModuleBuilder)"><a href="#collapsible-Kook_ActionGroupModuleBuilder_op_Inequality_Kook_ActionGroupModuleBuilder_Kook_ActionGroupModuleBuilder_" class="expander" data-toggle="collapse">Inequality(ActionGroupModuleBuilder, ActionGroupModuleBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_op_Inequality_Kook_ActionGroupModuleBuilder_Kook_ActionGroupModuleBuilder_" class="collapse in">
+
+  <h3 id="Kook_ActionGroupModuleBuilder_op_Inequality_Kook_ActionGroupModuleBuilder_Kook_ActionGroupModuleBuilder_" data-uid="Kook.ActionGroupModuleBuilder.op_Inequality(Kook.ActionGroupModuleBuilder,Kook.ActionGroupModuleBuilder)">
+  operator !=(ActionGroupModuleBuilder, ActionGroupModuleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is not equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator !=(ActionGroupModuleBuilder left, ActionGroupModuleBuilder right)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></span>
-        <span class="parametername">left</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></span>
-        <span class="parametername">right</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is not equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>; otherwise, <code>false</code>. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder_Kook_IModuleBuilder_Build.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder.Kook%23IModuleBuilder%23Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L116" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_ActionGroupModuleBuilder_Kook_IModuleBuilder_Build_" data-uid="Kook.ActionGroupModuleBuilder.Kook#IModuleBuilder#Build*"></a>
-  
-  <h4 id="Kook_ActionGroupModuleBuilder_Kook_IModuleBuilder_Build" data-uid="Kook.ActionGroupModuleBuilder.Kook#IModuleBuilder#Build"><a href="#collapsible-Kook_ActionGroupModuleBuilder_Kook_IModuleBuilder_Build" class="expander" data-toggle="collapse">IModuleBuilder.Build()</a></h4>
-  
-  <div id="collapsible-Kook_ActionGroupModuleBuilder_Kook_IModuleBuilder_Build" class="collapse in">
-  <div class="markdown level1 summary"><p>Builds the <a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a> into an <a class="xref" href="Kook.IModule.html">IModule</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a></dt>
+    <dd></dd>
+  </dl>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IModule IModuleBuilder.Build()</code></pre>
-  </div>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a> is not equal to the current <a class="xref" href="Kook.ActionGroupModuleBuilder.html">ActionGroupModuleBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.IModule.html">IModule</a>
-        <p><p>An <a class="xref" href="Kook.IModule.html">IModule</a> representing the built module object.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IModuleBuilder.html#Kook_IModuleBuilder_Build">IModuleBuilder.Build()</a></div>
-  
-  
-  
-  
-  </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ActionGroupModuleBuilder.md&amp;value=---%0Auid%3A%20Kook.ActionGroupModuleBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L8" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ActionGroupModuleBuilder.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            Kook.Net (c) 2022-2023
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

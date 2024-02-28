@@ -1,1709 +1,1288 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CommandService
-   | Kook.Net &#25991;&#26723; </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CommandService
-   | Kook.Net &#25991;&#26723; ">
-    <meta name="generator" content="docfx 2.56.7.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>Class CommandService | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CommandService | Kook.Net 文档 ">
+      
+      <meta name="description" content="Provides a framework for building Kook commands.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="Provides a framework for building Kook commands."><meta property="og:title" content="Class CommandService | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kook.Commands.CommandService">
-  <h1 id="Kook_Commands_CommandService" data-uid="Kook.Commands.CommandService">Class CommandService
-  </h1>
-  <div class="markdown level0 summary"><p>Provides a framework for building Kook commands.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
 
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">CommandService</span></div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.Commands.CommandService">
+
+
+
+  <h1 id="Kook_Commands_CommandService" data-uid="Kook.Commands.CommandService" class="text-break">
+Class CommandService  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a>.<a class="xref" href="Kook.Commands.html">Commands</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
-  
-  
-  
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kook.Commands.html">Kook.Commands</a></h6>
-  <h6><strong>Assembly</strong>: Kook.Net.Commands.dll</h6>
-  
-  <h5 id="Kook_Commands_CommandService_syntax">Syntax</h5>
+
+  <div class="markdown summary"><p>Provides a framework for building Kook commands.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class CommandService : IDisposable</code></pre>
   </div>
 
-  
-  
-  
-  <h5 id="Kook_Commands_CommandService_remarks"><strong>Remarks</strong></h5>
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CommandService</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Kook.Commands.CommandServiceExtensions.html#Kook_Commands_CommandServiceExtensions_GetExecutableCommandsAsync_Kook_Commands_CommandService_Kook_Commands_ICommandContext_System_IServiceProvider_">CommandServiceExtensions.GetExecutableCommandsAsync(CommandService, ICommandContext, IServiceProvider)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Kook_Commands_CommandService_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>
     The service provides a framework for building Kook commands both dynamically via runtime builders or
     statically via compile-time modules. To create a command module at compile-time, see
-<a class="xref" href="Kook.Commands.ModuleBase.html">ModuleBase</a> (most common); otherwise, see <a class="xref" href="Kook.Commands.Builders.ModuleBuilder.html">ModuleBuilder</a>.
+    <a class="xref" href="Kook.Commands.ModuleBase.html">ModuleBase</a> (most common); otherwise, see <a class="xref" href="Kook.Commands.Builders.ModuleBuilder.html">ModuleBuilder</a>.
 </p>
 <p>
     This service also provides several events for monitoring command usages; such as
-<a class="xref" href="Kook.Commands.CommandService.html#Kook_Commands_CommandService_Log">Log</a> for any command-related log events, and
-<a class="xref" href="Kook.Commands.CommandService.html#Kook_Commands_CommandService_CommandExecuted">CommandExecuted</a> for information about commands that have
-been successfully executed.
+    <a class="xref" href="Kook.Commands.CommandService.html#Kook_Commands_CommandService_Log">Log</a> for any command-related log events, and
+    <a class="xref" href="Kook.Commands.CommandService.html#Kook_Commands_CommandService_CommandExecuted">CommandExecuted</a> for information about commands that have
+    been successfully executed.
 </p>
 </div>
-  
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService__ctor.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L91" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
   <a id="Kook_Commands_CommandService__ctor_" data-uid="Kook.Commands.CommandService.#ctor*"></a>
-  
-  <h4 id="Kook_Commands_CommandService__ctor" data-uid="Kook.Commands.CommandService.#ctor"><a href="#collapsible-Kook_Commands_CommandService__ctor" class="expander" data-toggle="collapse">CommandService()</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService__ctor" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService__ctor" data-uid="Kook.Commands.CommandService.#ctor">
+  CommandService()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandService()</code></pre>
   </div>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService__ctor_Kook_Commands_CommandServiceConfig_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.%23ctor(Kook.Commands.CommandServiceConfig)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L102" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService__ctor_" data-uid="Kook.Commands.CommandService.#ctor*"></a>
-  
-  <h4 id="Kook_Commands_CommandService__ctor_Kook_Commands_CommandServiceConfig_" data-uid="Kook.Commands.CommandService.#ctor(Kook.Commands.CommandServiceConfig)"><a href="#collapsible-Kook_Commands_CommandService__ctor_Kook_Commands_CommandServiceConfig_" class="expander" data-toggle="collapse">CommandService(CommandServiceConfig)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService__ctor_Kook_Commands_CommandServiceConfig_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService__ctor_Kook_Commands_CommandServiceConfig_" data-uid="Kook.Commands.CommandService.#ctor(Kook.Commands.CommandServiceConfig)">
+  CommandService(CommandServiceConfig)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a> class with the provided configuration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CommandService(CommandServiceConfig config)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.CommandServiceConfig.html">CommandServiceConfig</a></span>
-        <span class="parametername">config</span>
-        <p><p>The configuration class.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_Commands.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.Commands%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L80" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>config</code> <a class="xref" href="Kook.Commands.CommandServiceConfig.html">CommandServiceConfig</a></dt>
+    <dd><p>The configuration class.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.Commands.RunMode.html">RunMode</a> cannot be set to <a class="xref" href="Kook.Commands.RunMode.html#Kook_Commands_RunMode_Default">Default</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Kook_Commands_CommandService_Commands_" data-uid="Kook.Commands.CommandService.Commands*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_Commands" data-uid="Kook.Commands.CommandService.Commands"><a href="#collapsible-Kook_Commands_CommandService_Commands" class="expander" data-toggle="collapse">Commands</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_Commands" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_Commands" data-uid="Kook.Commands.CommandService.Commands">
+  Commands
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Represents all commands loaded within <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnumerable&lt;CommandInfo&gt; Commands { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IEnumerable</span>&lt;<a class="xref" href="Kook.Commands.CommandInfo.html">CommandInfo</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_Modules.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.Modules%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L75" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.Commands.CommandInfo.html">CommandInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_Modules_" data-uid="Kook.Commands.CommandService.Modules*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_Modules" data-uid="Kook.Commands.CommandService.Modules"><a href="#collapsible-Kook_Commands_CommandService_Modules" class="expander" data-toggle="collapse">Modules</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_Modules" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_Modules" data-uid="Kook.Commands.CommandService.Modules">
+  Modules
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Represents all modules loaded within <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnumerable&lt;ModuleInfo&gt; Modules { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IEnumerable</span>&lt;<a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_TypeReaders.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.TypeReaders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L85" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_TypeReaders_" data-uid="Kook.Commands.CommandService.TypeReaders*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_TypeReaders" data-uid="Kook.Commands.CommandService.TypeReaders"><a href="#collapsible-Kook_Commands_CommandService_TypeReaders" class="expander" data-toggle="collapse">TypeReaders</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_TypeReaders" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_TypeReaders" data-uid="Kook.Commands.CommandService.TypeReaders">
+  TypeReaders
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Represents all <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> loaded within <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ILookup&lt;Type, TypeReader&gt; TypeReaders { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">ILookup</span>&lt;<span class="xref">Type</span>, <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_AddModuleAsync_Type_IServiceProvider_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.AddModuleAsync(Type%2CIServiceProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L210" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.ilookup-2">ILookup</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Kook_Commands_CommandService_AddModuleAsync_" data-uid="Kook.Commands.CommandService.AddModuleAsync*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_AddModuleAsync_Type_IServiceProvider_" data-uid="Kook.Commands.CommandService.AddModuleAsync(Type,IServiceProvider)"><a href="#collapsible-Kook_Commands_CommandService_AddModuleAsync_Type_IServiceProvider_" class="expander" data-toggle="collapse">AddModuleAsync(Type, IServiceProvider)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_AddModuleAsync_Type_IServiceProvider_" class="collapse in">
-  <div class="markdown level1 summary"><p>Adds a command module from a <see cref="!:Type"></see>.</p>
+
+  <h3 id="Kook_Commands_CommandService_AddModuleAsync_System_Type_System_IServiceProvider_" data-uid="Kook.Commands.CommandService.AddModuleAsync(System.Type,System.IServiceProvider)">
+  AddModuleAsync(Type, IServiceProvider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a command module from a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;ModuleInfo&gt; AddModuleAsync(Type type, IServiceProvider services)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Type</span></span>
-        <span class="parametername">type</span>
-        <p><p>The type of module.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IServiceProvider</span></span>
-        <span class="parametername">services</span>
-        <p><p>The <see cref="!:IServiceProvider"></see> for your dependency injection solution if using one; otherwise, pass <code>null</code> .</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a>&gt;
-        <p><p>A task that represents the asynchronous operation for adding the module. The task result contains the
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of module.</p>
+</dd>
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a> for your dependency injection solution if using one; otherwise, pass <code>null</code> .</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation for adding the module. The task result contains the
 built module.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_AddModuleAsync__1_IServiceProvider_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.AddModuleAsync%60%601(IServiceProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L195" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>This module has already been added.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a> fails to be built; an invalid type may have been provided.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_Commands_CommandService_AddModuleAsync_" data-uid="Kook.Commands.CommandService.AddModuleAsync*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_AddModuleAsync__1_IServiceProvider_" data-uid="Kook.Commands.CommandService.AddModuleAsync``1(IServiceProvider)"><a href="#collapsible-Kook_Commands_CommandService_AddModuleAsync__1_IServiceProvider_" class="expander" data-toggle="collapse">AddModuleAsync&lt;T&gt;(IServiceProvider)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_AddModuleAsync__1_IServiceProvider_" class="collapse in">
-  <div class="markdown level1 summary"><p>Add a command module from a <see cref="!:Type"></see>.</p>
+
+  <h3 id="Kook_Commands_CommandService_AddModuleAsync__1_System_IServiceProvider_" data-uid="Kook.Commands.CommandService.AddModuleAsync``1(System.IServiceProvider)">
+  AddModuleAsync&lt;T&gt;(IServiceProvider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a command module from a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;ModuleInfo&gt; AddModuleAsync&lt;T&gt;(IServiceProvider services)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IServiceProvider</span></span>
-        <span class="parametername">services</span>
-        <p><p>The <see cref="!:IServiceProvider"></see> for your dependency injection solution if using one; otherwise, pass <code>null</code>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a>&gt;
-        <p><p>A task that represents the asynchronous operation for adding the module. The task result contains the
-built module.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="parametername">T</span>
-        <p><p>The type of module.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_Commands_CommandService_AddModuleAsync__1_IServiceProvider__examples">Examples</h5>
-  <p><p>The following example registers the module <code>MyModule</code> to <code>commandService</code>.</p></p>
-<pre><code class="lang-cs">await commandService.AddModuleAsync&lt;MyModule>(serviceProvider);</code></pre>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a> for your dependency injection solution if using one; otherwise, pass <code>null</code>.</p>
+</dd>
+  </dl>
 
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_AddModulesAsync_Assembly_IServiceProvider_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.AddModulesAsync(Assembly%2CIServiceProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L246" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation for adding the module. The task result contains the
+built module.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of module.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Kook_Commands_CommandService_AddModuleAsync__1_System_IServiceProvider__examples">Examples</h4>
+  <p>The following example registers the module <code>MyModule</code> to <code>commandService</code>.</p>
+<pre><code class="lang-cs">await commandService.AddModuleAsync&lt;MyModule&gt;(serviceProvider);</code></pre>
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>This module has already been added.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a> fails to be built; an invalid type may have been provided.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_Commands_CommandService_AddModulesAsync_" data-uid="Kook.Commands.CommandService.AddModulesAsync*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_AddModulesAsync_Assembly_IServiceProvider_" data-uid="Kook.Commands.CommandService.AddModulesAsync(Assembly,IServiceProvider)"><a href="#collapsible-Kook_Commands_CommandService_AddModulesAsync_Assembly_IServiceProvider_" class="expander" data-toggle="collapse">AddModulesAsync(Assembly, IServiceProvider)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_AddModulesAsync_Assembly_IServiceProvider_" class="collapse in">
-  <div class="markdown level1 summary"><p>Add command modules from an <see cref="!:Assembly"></see>.</p>
+
+  <h3 id="Kook_Commands_CommandService_AddModulesAsync_System_Reflection_Assembly_System_IServiceProvider_" data-uid="Kook.Commands.CommandService.AddModulesAsync(System.Reflection.Assembly,System.IServiceProvider)">
+  AddModulesAsync(Assembly, IServiceProvider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add command modules from an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;IEnumerable&lt;ModuleInfo&gt;&gt; AddModulesAsync(Assembly assembly, IServiceProvider services)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Assembly</span></span>
-        <span class="parametername">assembly</span>
-        <p><p>The <see cref="!:Assembly"></see> containing command modules.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IServiceProvider</span></span>
-        <span class="parametername">services</span>
-        <p><p>The <see cref="!:IServiceProvider"></see> for your dependency injection solution if using one; otherwise, pass <code>null</code>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a>&gt;&gt;
-        <p><p>A task that represents the asynchronous operation for adding the command modules. The task result
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a> containing command modules.</p>
+</dd>
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a> for your dependency injection solution if using one; otherwise, pass <code>null</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation for adding the command modules. The task result
 contains an enumerable collection of modules added.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_AddTypeReader_Type_Kook_Commands_TypeReader_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.AddTypeReader(Type%2CKook.Commands.TypeReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L373" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_AddTypeReader_" data-uid="Kook.Commands.CommandService.AddTypeReader*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_AddTypeReader_Type_Kook_Commands_TypeReader_" data-uid="Kook.Commands.CommandService.AddTypeReader(Type,Kook.Commands.TypeReader)"><a href="#collapsible-Kook_Commands_CommandService_AddTypeReader_Type_Kook_Commands_TypeReader_" class="expander" data-toggle="collapse">AddTypeReader(Type, TypeReader)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_AddTypeReader_Type_Kook_Commands_TypeReader_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_AddTypeReader_System_Type_Kook_Commands_TypeReader_" data-uid="Kook.Commands.CommandService.AddTypeReader(System.Type,Kook.Commands.TypeReader)">
+  AddTypeReader(Type, TypeReader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Adds a custom <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to this <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a> for the supplied object
 type.
-If <code data-dev-comment-type="paramref" class="paramref">type</code> is a <see cref="!:ValueType"></see>, a nullable <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> for the
+If <code class="paramref">type</code> is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype">ValueType</a>, a nullable <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> for the
 value type will also be added.
-If a default <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> exists for <code data-dev-comment-type="paramref" class="paramref">type</code>, a warning will be logged and
+If a default <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> exists for <code class="paramref">type</code>, a warning will be logged and
 the default <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> will be replaced.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AddTypeReader(Type type, TypeReader reader)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Type</span></span>
-        <span class="parametername">type</span>
-        <p><p>A <see cref="!:Type"></see> instance for the type to be read.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a></span>
-        <span class="parametername">reader</span>
-        <p><p>An instance of the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to be added.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_AddTypeReader_Type_Kook_Commands_TypeReader_System_Boolean_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.AddTypeReader(Type%2CKook.Commands.TypeReader%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L409" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> instance for the type to be read.</p>
+</dd>
+    <dt><code>reader</code> <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a></dt>
+    <dd><p>An instance of the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to be added.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_AddTypeReader_" data-uid="Kook.Commands.CommandService.AddTypeReader*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_AddTypeReader_Type_Kook_Commands_TypeReader_System_Boolean_" data-uid="Kook.Commands.CommandService.AddTypeReader(Type,Kook.Commands.TypeReader,System.Boolean)"><a href="#collapsible-Kook_Commands_CommandService_AddTypeReader_Type_Kook_Commands_TypeReader_System_Boolean_" class="expander" data-toggle="collapse">AddTypeReader(Type, TypeReader, Boolean)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_AddTypeReader_Type_Kook_Commands_TypeReader_System_Boolean_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_AddTypeReader_System_Type_Kook_Commands_TypeReader_System_Boolean_" data-uid="Kook.Commands.CommandService.AddTypeReader(System.Type,Kook.Commands.TypeReader,System.Boolean)">
+  AddTypeReader(Type, TypeReader, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L410"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Adds a custom <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to this <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a> for the supplied object
 type.
-If <code data-dev-comment-type="paramref" class="paramref">type</code> is a <see cref="!:ValueType"></see>, a nullable <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> for the
+If <code class="paramref">type</code> is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype">ValueType</a>, a nullable <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> for the
 value type will also be added.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AddTypeReader(Type type, TypeReader reader, bool replaceDefault)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Type</span></span>
-        <span class="parametername">type</span>
-        <p><p>A <see cref="!:Type"></see> instance for the type to be read.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a></span>
-        <span class="parametername">reader</span>
-        <p><p>An instance of the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to be added.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></span>
-        <span class="parametername">replaceDefault</span>
-        <p><p>Defines whether the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> should replace the default one for <see cref="!:Type"></see> if
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> instance for the type to be read.</p>
+</dd>
+    <dt><code>reader</code> <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a></dt>
+    <dd><p>An instance of the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to be added.</p>
+</dd>
+    <dt><code>replaceDefault</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Defines whether the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> should replace the default one for <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> if
 it exists.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_AddTypeReader__1_Kook_Commands_TypeReader_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.AddTypeReader%60%601(Kook.Commands.TypeReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L360" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_AddTypeReader_" data-uid="Kook.Commands.CommandService.AddTypeReader*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_AddTypeReader__1_Kook_Commands_TypeReader_" data-uid="Kook.Commands.CommandService.AddTypeReader``1(Kook.Commands.TypeReader)"><a href="#collapsible-Kook_Commands_CommandService_AddTypeReader__1_Kook_Commands_TypeReader_" class="expander" data-toggle="collapse">AddTypeReader&lt;T&gt;(TypeReader)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_AddTypeReader__1_Kook_Commands_TypeReader_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_AddTypeReader__1_Kook_Commands_TypeReader_" data-uid="Kook.Commands.CommandService.AddTypeReader``1(Kook.Commands.TypeReader)">
+  AddTypeReader&lt;T&gt;(TypeReader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Adds a custom <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to this <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a> for the supplied object
 type.
-If <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> is a <see cref="!:ValueType"></see>, a nullable <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> will
+If <code class="typeparamref">T</code> is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype">ValueType</a>, a nullable <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> will
 also be added.
-If a default <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> exists for <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>, a warning will be logged
+If a default <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> exists for <code class="typeparamref">T</code>, a warning will be logged
 and the default <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> will be replaced.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AddTypeReader&lt;T&gt;(TypeReader reader)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a></span>
-        <span class="parametername">reader</span>
-        <p><p>An instance of the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to be added.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="parametername">T</span>
-        <p><p>The object type to be read by the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_AddTypeReader__1_Kook_Commands_TypeReader_System_Boolean_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.AddTypeReader%60%601(Kook.Commands.TypeReader%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L394" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reader</code> <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a></dt>
+    <dd><p>An instance of the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to be added.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The object type to be read by the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_AddTypeReader_" data-uid="Kook.Commands.CommandService.AddTypeReader*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_AddTypeReader__1_Kook_Commands_TypeReader_System_Boolean_" data-uid="Kook.Commands.CommandService.AddTypeReader``1(Kook.Commands.TypeReader,System.Boolean)"><a href="#collapsible-Kook_Commands_CommandService_AddTypeReader__1_Kook_Commands_TypeReader_System_Boolean_" class="expander" data-toggle="collapse">AddTypeReader&lt;T&gt;(TypeReader, Boolean)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_AddTypeReader__1_Kook_Commands_TypeReader_System_Boolean_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_AddTypeReader__1_Kook_Commands_TypeReader_System_Boolean_" data-uid="Kook.Commands.CommandService.AddTypeReader``1(Kook.Commands.TypeReader,System.Boolean)">
+  AddTypeReader&lt;T&gt;(TypeReader, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Adds a custom <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to this <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a> for the supplied object
 type.
-If <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> is a <see cref="!:ValueType"></see>, a nullable <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> will
+If <code class="typeparamref">T</code> is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype">ValueType</a>, a nullable <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> will
 also be added.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AddTypeReader&lt;T&gt;(TypeReader reader, bool replaceDefault)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a></span>
-        <span class="parametername">reader</span>
-        <p><p>An instance of the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to be added.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></span>
-        <span class="parametername">replaceDefault</span>
-        <p><p>Defines whether the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> should replace the default one for
-<see cref="!:Type"></see> if it exists.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="parametername">T</span>
-        <p><p>The object type to be read by the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_CreateModuleAsync_System_String_Action_Kook_Commands_Builders_ModuleBuilder__.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.CreateModuleAsync(System.String%2CAction%7BKook.Commands.Builders.ModuleBuilder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L158" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reader</code> <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a></dt>
+    <dd><p>An instance of the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> to be added.</p>
+</dd>
+    <dt><code>replaceDefault</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Defines whether the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> should replace the default one for
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> if it exists.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The object type to be read by the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_CreateModuleAsync_" data-uid="Kook.Commands.CommandService.CreateModuleAsync*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_CreateModuleAsync_System_String_Action_Kook_Commands_Builders_ModuleBuilder__" data-uid="Kook.Commands.CommandService.CreateModuleAsync(System.String,Action{Kook.Commands.Builders.ModuleBuilder})"><a href="#collapsible-Kook_Commands_CommandService_CreateModuleAsync_System_String_Action_Kook_Commands_Builders_ModuleBuilder__" class="expander" data-toggle="collapse">CreateModuleAsync(String, Action&lt;ModuleBuilder&gt;)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_CreateModuleAsync_System_String_Action_Kook_Commands_Builders_ModuleBuilder__" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_CreateModuleAsync_System_String_System_Action_Kook_Commands_Builders_ModuleBuilder__" data-uid="Kook.Commands.CommandService.CreateModuleAsync(System.String,System.Action{Kook.Commands.Builders.ModuleBuilder})">
+  CreateModuleAsync(string, Action&lt;ModuleBuilder&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Creates a new module builder.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;ModuleInfo&gt; CreateModuleAsync(string primaryAlias, Action&lt;ModuleBuilder&gt; buildFunc)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">primaryAlias</span>
-        <p><p>The primary alias for the module. </p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Action</span>&lt;<a class="xref" href="Kook.Commands.Builders.ModuleBuilder.html">ModuleBuilder</a>&gt;</span>
-        <span class="parametername">buildFunc</span>
-        <p><p>The action delegate to build the module. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a>&gt;
-        <p><p>A task that represents the asynchronous operation for creating the module. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L731" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>primaryAlias</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The primary alias for the module.</p>
+</dd>
+    <dt><code>buildFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.Commands.Builders.ModuleBuilder.html">ModuleBuilder</a>&gt;</dt>
+    <dd><p>The action delegate to build the module.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation for creating the module.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_Dispose_" data-uid="Kook.Commands.CommandService.Dispose*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_Dispose_System_Boolean_" data-uid="Kook.Commands.CommandService.Dispose(System.Boolean)"><a href="#collapsible-Kook_Commands_CommandService_Dispose_System_Boolean_" class="expander" data-toggle="collapse">Dispose(Boolean)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_Dispose_System_Boolean_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_Commands_CommandService_Dispose_System_Boolean_" data-uid="Kook.Commands.CommandService.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L732"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></span>
-        <span class="parametername">disposing</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_ExecuteAsync_Kook_Commands_ICommandContext_System_Int32_IServiceProvider_Kook_Commands_MultiMatchHandling_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.ExecuteAsync(Kook.Commands.ICommandContext%2CSystem.Int32%2CIServiceProvider%2CKook.Commands.MultiMatchHandling)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L570" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_ExecuteAsync_" data-uid="Kook.Commands.CommandService.ExecuteAsync*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_ExecuteAsync_Kook_Commands_ICommandContext_System_Int32_IServiceProvider_Kook_Commands_MultiMatchHandling_" data-uid="Kook.Commands.CommandService.ExecuteAsync(Kook.Commands.ICommandContext,System.Int32,IServiceProvider,Kook.Commands.MultiMatchHandling)"><a href="#collapsible-Kook_Commands_CommandService_ExecuteAsync_Kook_Commands_ICommandContext_System_Int32_IServiceProvider_Kook_Commands_MultiMatchHandling_" class="expander" data-toggle="collapse">ExecuteAsync(ICommandContext, Int32, IServiceProvider, MultiMatchHandling)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_ExecuteAsync_Kook_Commands_ICommandContext_System_Int32_IServiceProvider_Kook_Commands_MultiMatchHandling_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_ExecuteAsync_Kook_Commands_ICommandContext_System_Int32_System_IServiceProvider_Kook_Commands_MultiMatchHandling_" data-uid="Kook.Commands.CommandService.ExecuteAsync(Kook.Commands.ICommandContext,System.Int32,System.IServiceProvider,Kook.Commands.MultiMatchHandling)">
+  ExecuteAsync(ICommandContext, int, IServiceProvider, MultiMatchHandling)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L571"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Executes the command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;IResult&gt; ExecuteAsync(ICommandContext context, int argPos, IServiceProvider services, MultiMatchHandling multiMatchHandling = MultiMatchHandling.Exception)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></span>
-        <span class="parametername">context</span>
-        <p><p>The context of the command.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">argPos</span>
-        <p><p>The position of which the command starts at.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IServiceProvider</span></span>
-        <span class="parametername">services</span>
-        <p><p>The service to be used in the command&apos;s dependency injection.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.MultiMatchHandling.html">MultiMatchHandling</a></span>
-        <span class="parametername">multiMatchHandling</span>
-        <p><p>The handling mode when multiple command matches are found.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Commands.IResult.html">IResult</a>&gt;
-        <p><p>A task that represents the asynchronous execution operation. The task result contains the result of the
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></dt>
+    <dd><p>The context of the command.</p>
+</dd>
+    <dt><code>argPos</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The position of which the command starts at.</p>
+</dd>
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The service to be used in the command's dependency injection.</p>
+</dd>
+    <dt><code>multiMatchHandling</code> <a class="xref" href="Kook.Commands.MultiMatchHandling.html">MultiMatchHandling</a></dt>
+    <dd><p>The handling mode when multiple command matches are found.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Commands.IResult.html">IResult</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous execution operation. The task result contains the result of the
 command execution.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_ExecuteAsync_Kook_Commands_ICommandContext_System_String_IServiceProvider_Kook_Commands_MultiMatchHandling_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.ExecuteAsync(Kook.Commands.ICommandContext%2CSystem.String%2CIServiceProvider%2CKook.Commands.MultiMatchHandling)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L585" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_ExecuteAsync_" data-uid="Kook.Commands.CommandService.ExecuteAsync*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_ExecuteAsync_Kook_Commands_ICommandContext_System_String_IServiceProvider_Kook_Commands_MultiMatchHandling_" data-uid="Kook.Commands.CommandService.ExecuteAsync(Kook.Commands.ICommandContext,System.String,IServiceProvider,Kook.Commands.MultiMatchHandling)"><a href="#collapsible-Kook_Commands_CommandService_ExecuteAsync_Kook_Commands_ICommandContext_System_String_IServiceProvider_Kook_Commands_MultiMatchHandling_" class="expander" data-toggle="collapse">ExecuteAsync(ICommandContext, String, IServiceProvider, MultiMatchHandling)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_ExecuteAsync_Kook_Commands_ICommandContext_System_String_IServiceProvider_Kook_Commands_MultiMatchHandling_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_ExecuteAsync_Kook_Commands_ICommandContext_System_String_System_IServiceProvider_Kook_Commands_MultiMatchHandling_" data-uid="Kook.Commands.CommandService.ExecuteAsync(Kook.Commands.ICommandContext,System.String,System.IServiceProvider,Kook.Commands.MultiMatchHandling)">
+  ExecuteAsync(ICommandContext, string, IServiceProvider, MultiMatchHandling)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Executes the command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;IResult&gt; ExecuteAsync(ICommandContext context, string input, IServiceProvider services, MultiMatchHandling multiMatchHandling = MultiMatchHandling.Exception)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></span>
-        <span class="parametername">context</span>
-        <p><p>The context of the command.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">input</span>
-        <p><p>The command string.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IServiceProvider</span></span>
-        <span class="parametername">services</span>
-        <p><p>The service to be used in the command&apos;s dependency injection.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.MultiMatchHandling.html">MultiMatchHandling</a></span>
-        <span class="parametername">multiMatchHandling</span>
-        <p><p>The handling mode when multiple command matches are found.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Commands.IResult.html">IResult</a>&gt;
-        <p><p>A task that represents the asynchronous execution operation. The task result contains the result of the
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></dt>
+    <dd><p>The context of the command.</p>
+</dd>
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The command string.</p>
+</dd>
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The service to be used in the command's dependency injection.</p>
+</dd>
+    <dt><code>multiMatchHandling</code> <a class="xref" href="Kook.Commands.MultiMatchHandling.html">MultiMatchHandling</a></dt>
+    <dd><p>The handling mode when multiple command matches are found.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Commands.IResult.html">IResult</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous execution operation. The task result contains the result of the
 command execution.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_RemoveModuleAsync_Kook_Commands_ModuleInfo_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.RemoveModuleAsync(Kook.Commands.ModuleInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L289" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_RemoveModuleAsync_" data-uid="Kook.Commands.CommandService.RemoveModuleAsync*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_RemoveModuleAsync_Kook_Commands_ModuleInfo_" data-uid="Kook.Commands.CommandService.RemoveModuleAsync(Kook.Commands.ModuleInfo)"><a href="#collapsible-Kook_Commands_CommandService_RemoveModuleAsync_Kook_Commands_ModuleInfo_" class="expander" data-toggle="collapse">RemoveModuleAsync(ModuleInfo)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_RemoveModuleAsync_Kook_Commands_ModuleInfo_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_RemoveModuleAsync_Kook_Commands_ModuleInfo_" data-uid="Kook.Commands.CommandService.RemoveModuleAsync(Kook.Commands.ModuleInfo)">
+  RemoveModuleAsync(ModuleInfo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Removes the command module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveModuleAsync(ModuleInfo module)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a></span>
-        <span class="parametername">module</span>
-        <p><p>The <a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a> to be removed from the service.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p><p>A task that represents the asynchronous removal operation. The task result contains a value that
-indicates whether the <code data-dev-comment-type="paramref" class="paramref">module</code> is successfully removed.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_RemoveModuleAsync_Type_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.RemoveModuleAsync(Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L320" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>module</code> <a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a></dt>
+    <dd><p>The <a class="xref" href="Kook.Commands.ModuleInfo.html">ModuleInfo</a> to be removed from the service.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous removal operation. The task result contains a value that
+indicates whether the <code class="paramref">module</code> is successfully removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_RemoveModuleAsync_" data-uid="Kook.Commands.CommandService.RemoveModuleAsync*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_RemoveModuleAsync_Type_" data-uid="Kook.Commands.CommandService.RemoveModuleAsync(Type)"><a href="#collapsible-Kook_Commands_CommandService_RemoveModuleAsync_Type_" class="expander" data-toggle="collapse">RemoveModuleAsync(Type)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_RemoveModuleAsync_Type_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_RemoveModuleAsync_System_Type_" data-uid="Kook.Commands.CommandService.RemoveModuleAsync(System.Type)">
+  RemoveModuleAsync(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Removes the command module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveModuleAsync(Type type)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Type</span></span>
-        <span class="parametername">type</span>
-        <p><p>The <see cref="!:Type"></see> of the module.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p><p>A task that represents the asynchronous removal operation. The task result contains a value that
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of the module.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous removal operation. The task result contains a value that
 indicates whether the module is successfully removed.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_RemoveModuleAsync__1.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.RemoveModuleAsync%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L310" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_RemoveModuleAsync_" data-uid="Kook.Commands.CommandService.RemoveModuleAsync*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_RemoveModuleAsync__1" data-uid="Kook.Commands.CommandService.RemoveModuleAsync``1"><a href="#collapsible-Kook_Commands_CommandService_RemoveModuleAsync__1" class="expander" data-toggle="collapse">RemoveModuleAsync&lt;T&gt;()</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_RemoveModuleAsync__1" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_RemoveModuleAsync__1" data-uid="Kook.Commands.CommandService.RemoveModuleAsync``1">
+  RemoveModuleAsync&lt;T&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Removes the command module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveModuleAsync&lt;T&gt;()</code></pre>
   </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p><p>A task that represents the asynchronous removal operation. The task result contains a value that
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous removal operation. The task result contains a value that
 indicates whether the module is successfully removed.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="parametername">T</span>
-        <p><p>The <see cref="!:Type"></see> of the module.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_Search_Kook_Commands_ICommandContext_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.Search(Kook.Commands.ICommandContext%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L531" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of the module.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_Search_" data-uid="Kook.Commands.CommandService.Search*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_Search_Kook_Commands_ICommandContext_System_Int32_" data-uid="Kook.Commands.CommandService.Search(Kook.Commands.ICommandContext,System.Int32)"><a href="#collapsible-Kook_Commands_CommandService_Search_Kook_Commands_ICommandContext_System_Int32_" class="expander" data-toggle="collapse">Search(ICommandContext, Int32)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_Search_Kook_Commands_ICommandContext_System_Int32_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_Search_Kook_Commands_ICommandContext_System_Int32_" data-uid="Kook.Commands.CommandService.Search(Kook.Commands.ICommandContext,System.Int32)">
+  Search(ICommandContext, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L532"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Searches for the command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SearchResult Search(ICommandContext context, int argPos)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></span>
-        <span class="parametername">context</span>
-        <p><p>The context of the command.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">argPos</span>
-        <p><p>The position of which the command starts at.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a>
-        <p><p>The result containing the matching commands.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_Search_Kook_Commands_ICommandContext_System_String_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.Search(Kook.Commands.ICommandContext%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L540" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></dt>
+    <dd><p>The context of the command.</p>
+</dd>
+    <dt><code>argPos</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The position of which the command starts at.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a></dt>
+    <dd><p>The result containing the matching commands.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_Search_" data-uid="Kook.Commands.CommandService.Search*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_Search_Kook_Commands_ICommandContext_System_String_" data-uid="Kook.Commands.CommandService.Search(Kook.Commands.ICommandContext,System.String)"><a href="#collapsible-Kook_Commands_CommandService_Search_Kook_Commands_ICommandContext_System_String_" class="expander" data-toggle="collapse">Search(ICommandContext, String)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_Search_Kook_Commands_ICommandContext_System_String_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_Search_Kook_Commands_ICommandContext_System_String_" data-uid="Kook.Commands.CommandService.Search(Kook.Commands.ICommandContext,System.String)">
+  Search(ICommandContext, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L541"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Searches for the command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SearchResult Search(ICommandContext context, string input)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></span>
-        <span class="parametername">context</span>
-        <p><p>The context of the command.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">input</span>
-        <p><p>The command string.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a>
-        <p><p>The result containing the matching commands.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_Search_System_String_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.Search(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L548" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></dt>
+    <dd><p>The context of the command.</p>
+</dd>
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The command string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a></dt>
+    <dd><p>The result containing the matching commands.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_Search_" data-uid="Kook.Commands.CommandService.Search*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_Search_System_String_" data-uid="Kook.Commands.CommandService.Search(System.String)"><a href="#collapsible-Kook_Commands_CommandService_Search_System_String_" class="expander" data-toggle="collapse">Search(String)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_Search_System_String_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_Search_System_String_" data-uid="Kook.Commands.CommandService.Search(System.String)">
+  Search(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L549"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Searches for the command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SearchResult Search(string input)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">input</span>
-        <p><p>The command string. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a>
-        <p><p>The result containing the matching commands. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_TryRemoveTypeReader_Type_System_Boolean_IDictionary_Type_Kook_Commands_TypeReader___.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.TryRemoveTypeReader(Type%2CSystem.Boolean%2CIDictionary%7BType%2CKook.Commands.TypeReader%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L441" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The command string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a></dt>
+    <dd><p>The result containing the matching commands.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Commands_CommandService_TryRemoveTypeReader_" data-uid="Kook.Commands.CommandService.TryRemoveTypeReader*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_TryRemoveTypeReader_Type_System_Boolean_IDictionary_Type_Kook_Commands_TypeReader___" data-uid="Kook.Commands.CommandService.TryRemoveTypeReader(Type,System.Boolean,IDictionary{Type,Kook.Commands.TypeReader}@)"><a href="#collapsible-Kook_Commands_CommandService_TryRemoveTypeReader_Type_System_Boolean_IDictionary_Type_Kook_Commands_TypeReader___" class="expander" data-toggle="collapse">TryRemoveTypeReader(Type, Boolean, out IDictionary&lt;Type, TypeReader&gt;)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_TryRemoveTypeReader_Type_System_Boolean_IDictionary_Type_Kook_Commands_TypeReader___" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_TryRemoveTypeReader_System_Type_System_Boolean_System_Collections_Generic_IDictionary_System_Type_Kook_Commands_TypeReader___" data-uid="Kook.Commands.CommandService.TryRemoveTypeReader(System.Type,System.Boolean,System.Collections.Generic.IDictionary{System.Type,Kook.Commands.TypeReader}@)">
+  TryRemoveTypeReader(Type, bool, out IDictionary&lt;Type, TypeReader&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L442"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Removes a type reader from the list of type readers.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TryRemoveTypeReader(Type type, bool isDefaultTypeReader, out IDictionary&lt;Type, TypeReader&gt; readers)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Type</span></span>
-        <span class="parametername">type</span>
-        <p><p>The type to remove the readers from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></span>
-        <span class="parametername">isDefaultTypeReader</span>
-        <p><p><code>true</code> if the default readers for <code data-dev-comment-type="paramref" class="paramref">type</code> should be removed; otherwise <code>false</code>.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IDictionary</span>&lt;<span class="xref">Type</span>, <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a>&gt;</span>
-        <span class="parametername">readers</span>
-        <p><p>The removed collection of type readers.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the remove operation was successful; otherwise <code>false</code>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_Commands_CommandService_TryRemoveTypeReader_Type_System_Boolean_IDictionary_Type_Kook_Commands_TypeReader____remarks">Remarks</h5>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type to remove the readers from.</p>
+</dd>
+    <dt><code>isDefaultTypeReader</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the default readers for <code class="paramref">type</code> should be removed; otherwise <code>false</code>.</p>
+</dd>
+    <dt><code>readers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a>&gt;</dt>
+    <dd><p>The removed collection of type readers.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the remove operation was successful; otherwise <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_Commands_CommandService_TryRemoveTypeReader_System_Type_System_Boolean_System_Collections_Generic_IDictionary_System_Type_Kook_Commands_TypeReader____remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Removing a <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> from the <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a> will not dereference the <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> from the loaded module/command instances.
 You need to reload the modules for the changes to take effect.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_ValidateAndGetBestMatch_Kook_Commands_SearchResult_Kook_Commands_ICommandContext_IServiceProvider_Kook_Commands_MultiMatchHandling_.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.ValidateAndGetBestMatch(Kook.Commands.SearchResult%2CKook.Commands.ICommandContext%2CIServiceProvider%2CKook.Commands.MultiMatchHandling)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L663" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_Commands_CommandService_ValidateAndGetBestMatch_" data-uid="Kook.Commands.CommandService.ValidateAndGetBestMatch*"></a>
-  
-  <h4 id="Kook_Commands_CommandService_ValidateAndGetBestMatch_Kook_Commands_SearchResult_Kook_Commands_ICommandContext_IServiceProvider_Kook_Commands_MultiMatchHandling_" data-uid="Kook.Commands.CommandService.ValidateAndGetBestMatch(Kook.Commands.SearchResult,Kook.Commands.ICommandContext,IServiceProvider,Kook.Commands.MultiMatchHandling)"><a href="#collapsible-Kook_Commands_CommandService_ValidateAndGetBestMatch_Kook_Commands_SearchResult_Kook_Commands_ICommandContext_IServiceProvider_Kook_Commands_MultiMatchHandling_" class="expander" data-toggle="collapse">ValidateAndGetBestMatch(SearchResult, ICommandContext, IServiceProvider, MultiMatchHandling)</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_ValidateAndGetBestMatch_Kook_Commands_SearchResult_Kook_Commands_ICommandContext_IServiceProvider_Kook_Commands_MultiMatchHandling_" class="collapse in">
+
+  <h3 id="Kook_Commands_CommandService_ValidateAndGetBestMatch_Kook_Commands_SearchResult_Kook_Commands_ICommandContext_System_IServiceProvider_Kook_Commands_MultiMatchHandling_" data-uid="Kook.Commands.CommandService.ValidateAndGetBestMatch(Kook.Commands.SearchResult,Kook.Commands.ICommandContext,System.IServiceProvider,Kook.Commands.MultiMatchHandling)">
+  ValidateAndGetBestMatch(SearchResult, ICommandContext, IServiceProvider, MultiMatchHandling)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L664"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Validates and gets the best <a class="xref" href="Kook.Commands.CommandMatch.html">CommandMatch</a> from a specified <a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;IResult&gt; ValidateAndGetBestMatch(SearchResult matches, ICommandContext context, IServiceProvider provider, MultiMatchHandling multiMatchHandling = MultiMatchHandling.Exception)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a></span>
-        <span class="parametername">matches</span>
-        <p><p>The SearchResult.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></span>
-        <span class="parametername">context</span>
-        <p><p>The context of the command.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IServiceProvider</span></span>
-        <span class="parametername">provider</span>
-        <p><p>The service provider to be used on the command&apos;s dependency injection.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Commands.MultiMatchHandling.html">MultiMatchHandling</a></span>
-        <span class="parametername">multiMatchHandling</span>
-        <p><p>The handling mode when multiple command matches are found.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Commands.IResult.html">IResult</a>&gt;
-        <p><p>A task that represents the asynchronous validation operation. The task result contains the result of the
-    command validation as a <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a> or a <a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a> if no matches were found.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="events">Events
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matches</code> <a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a></dt>
+    <dd><p>The SearchResult.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></dt>
+    <dd><p>The context of the command.</p>
+</dd>
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The service provider to be used on the command's dependency injection.</p>
+</dd>
+    <dt><code>multiMatchHandling</code> <a class="xref" href="Kook.Commands.MultiMatchHandling.html">MultiMatchHandling</a></dt>
+    <dd><p>The handling mode when multiple command matches are found.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Commands.IResult.html">IResult</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous validation operation. The task result contains the result of the
+command validation as a <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a> or a <a class="xref" href="Kook.Commands.SearchResult.html">SearchResult</a> if no matches were found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Kook_Commands_CommandService_CommandExecuted" data-uid="Kook.Commands.CommandService.CommandExecuted">
+  CommandExecuted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_CommandExecuted.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.CommandExecuted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L47" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  
-  <h4 id="Kook_Commands_CommandService_CommandExecuted" data-uid="Kook.Commands.CommandService.CommandExecuted"><a href="#collapsible-Kook_Commands_CommandService_CommandExecuted" class="expander" data-toggle="collapse">CommandExecuted</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_CommandExecuted" class="collapse in">
+
   <div class="markdown level1 summary"><p>Occurs when a command is executed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Func&lt;CommandInfo, ICommandContext, IResult, Task&gt; CommandExecuted</code></pre>
   </div>
 
-  
-  
-  
-  
-  
-  <h5 class="eventType">Event Type</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Func</span>&lt;<a class="xref" href="Kook.Commands.CommandInfo.html">CommandInfo</a>, <a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a>, <a class="xref" href="Kook.Commands.IResult.html">IResult</a>, <span class="xref">Task</span>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  <h5 id="Kook_Commands_CommandService_CommandExecuted_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="Kook.Commands.CommandInfo.html">CommandInfo</a>, <a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a>, <a class="xref" href="Kook.Commands.IResult.html">IResult</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Commands_CommandService_CommandExecuted_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This event is fired when a command has been executed, successfully or not. When a command fails to
 execute during parsing or precondition stage, the CommandInfo may not be returned.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService_Log.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService.Log%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L32" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  
-  <h4 id="Kook_Commands_CommandService_Log" data-uid="Kook.Commands.CommandService.Log"><a href="#collapsible-Kook_Commands_CommandService_Log" class="expander" data-toggle="collapse">Log</a></h4>
-  
-  <div id="collapsible-Kook_Commands_CommandService_Log" class="collapse in">
+
+
+
+
+
+  <h3 id="Kook_Commands_CommandService_Log" data-uid="Kook.Commands.CommandService.Log">
+  Log
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Occurs when a command-related information is received.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Func&lt;LogMessage, Task&gt; Log</code></pre>
   </div>
 
-  
-  
-  
-  
-  
-  <h5 class="eventType">Event Type</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Func</span>&lt;<a class="xref" href="Kook.LogMessage.html">LogMessage</a>, <span class="xref">Task</span>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Kook.Commands.CommandServiceExtensions.html#Kook_Commands_CommandServiceExtensions_GetExecutableCommandsAsync_Kook_Commands_CommandService_Kook_Commands_ICommandContext_IServiceProvider_">CommandServiceExtensions.GetExecutableCommandsAsync(CommandService, ICommandContext, IServiceProvider)</a>
-  </div>
-  
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Kook.LogMessage.html">LogMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Commands_CommandService.md&amp;value=---%0Auid%3A%20Kook.Commands.CommandService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Commands/CommandService.cs/#L25" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Commands/CommandService.cs/#L25" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            Kook.Net (c) 2022-2023
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

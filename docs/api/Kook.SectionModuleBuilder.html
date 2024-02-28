@@ -1,1406 +1,1060 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SectionModuleBuilder
-   | Kook.Net &#25991;&#26723; </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SectionModuleBuilder
-   | Kook.Net &#25991;&#26723; ">
-    <meta name="generator" content="docfx 2.56.7.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>Class SectionModuleBuilder | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SectionModuleBuilder | Kook.Net 文档 ">
+      
+      <meta name="description" content="Represents a section module builder for creating a .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="Represents a section module builder for creating a SectionModule."><meta property="og:title" content="Class SectionModuleBuilder | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kook.SectionModuleBuilder">
-  <h1 id="Kook_SectionModuleBuilder" data-uid="Kook.SectionModuleBuilder">Class SectionModuleBuilder
+
+        <article data-uid="Kook.SectionModuleBuilder">
+
+
+
+  <h1 id="Kook_SectionModuleBuilder" data-uid="Kook.SectionModuleBuilder" class="text-break">
+Class SectionModuleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p>Represents a section module builder for creating a <a class="xref" href="Kook.SectionModule.html">SectionModule</a>.</p>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a section module builder for creating a <a class="xref" href="Kook.SectionModule.html">SectionModule</a>.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
+  <div class="markdown conceptual"></div>
 
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">SectionModuleBuilder</span></div>
-  </div>
-  
-  
-  
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kook.html">Kook</a></h6>
-  <h6><strong>Assembly</strong>: Kook.Net.Core.dll</h6>
-  
-  <h5 id="Kook_SectionModuleBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SectionModuleBuilder : object, IModuleBuilder, IEquatable&lt;SectionModuleBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SectionModuleBuilder : IModuleBuilder, IEquatable&lt;SectionModuleBuilder&gt;</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder__ctor.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L17" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SectionModuleBuilder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
   <a id="Kook_SectionModuleBuilder__ctor_" data-uid="Kook.SectionModuleBuilder.#ctor*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder__ctor" data-uid="Kook.SectionModuleBuilder.#ctor"><a href="#collapsible-Kook_SectionModuleBuilder__ctor" class="expander" data-toggle="collapse">SectionModuleBuilder()</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder__ctor" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder__ctor" data-uid="Kook.SectionModuleBuilder.#ctor">
+  SectionModuleBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModuleBuilder()</code></pre>
   </div>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder__ctor_Kook_IElementBuilder_Kook_SectionAccessoryMode_Kook_IElementBuilder_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.%23ctor(Kook.IElementBuilder%2CKook.SectionAccessoryMode%2CKook.IElementBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L30" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder__ctor_" data-uid="Kook.SectionModuleBuilder.#ctor*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder__ctor_Kook_IElementBuilder_Kook_SectionAccessoryMode_Kook_IElementBuilder_" data-uid="Kook.SectionModuleBuilder.#ctor(Kook.IElementBuilder,Kook.SectionAccessoryMode,Kook.IElementBuilder)"><a href="#collapsible-Kook_SectionModuleBuilder__ctor_Kook_IElementBuilder_Kook_SectionAccessoryMode_Kook_IElementBuilder_" class="expander" data-toggle="collapse">SectionModuleBuilder(IElementBuilder, SectionAccessoryMode, IElementBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder__ctor_Kook_IElementBuilder_Kook_SectionAccessoryMode_Kook_IElementBuilder_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder__ctor_Kook_IElementBuilder_Kook_SectionAccessoryMode_Kook_IElementBuilder_" data-uid="Kook.SectionModuleBuilder.#ctor(Kook.IElementBuilder,Kook.SectionAccessoryMode,Kook.IElementBuilder)">
+  SectionModuleBuilder(IElementBuilder, SectionAccessoryMode, IElementBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModuleBuilder(IElementBuilder text, SectionAccessoryMode mode = SectionAccessoryMode.Unspecified, IElementBuilder accessory = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></span>
-        <span class="parametername">text</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a></span>
-        <span class="parametername">mode</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></span>
-        <span class="parametername">accessory</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder__ctor_System_String_System_Boolean_Kook_SectionAccessoryMode_Kook_IElementBuilder_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.%23ctor(System.String%2CSystem.Boolean%2CKook.SectionAccessoryMode%2CKook.IElementBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L47" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></dt>
+    <dd></dd>
+    <dt><code>mode</code> <a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a></dt>
+    <dd></dd>
+    <dt><code>accessory</code> <a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">text</code> is not any form of text element,
+including <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a>, <a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a>,
+and <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>; or the <code class="paramref">accessory</code> is neither
+an <a class="xref" href="Kook.ImageElementBuilder.html">ImageElementBuilder</a> nor <a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_SectionModuleBuilder__ctor_" data-uid="Kook.SectionModuleBuilder.#ctor*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder__ctor_System_String_System_Boolean_Kook_SectionAccessoryMode_Kook_IElementBuilder_" data-uid="Kook.SectionModuleBuilder.#ctor(System.String,System.Boolean,Kook.SectionAccessoryMode,Kook.IElementBuilder)"><a href="#collapsible-Kook_SectionModuleBuilder__ctor_System_String_System_Boolean_Kook_SectionAccessoryMode_Kook_IElementBuilder_" class="expander" data-toggle="collapse">SectionModuleBuilder(String, Boolean, SectionAccessoryMode, IElementBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder__ctor_System_String_System_Boolean_Kook_SectionAccessoryMode_Kook_IElementBuilder_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder__ctor_System_String_System_Boolean_Kook_SectionAccessoryMode_Kook_IElementBuilder_" data-uid="Kook.SectionModuleBuilder.#ctor(System.String,System.Boolean,Kook.SectionAccessoryMode,Kook.IElementBuilder)">
+  SectionModuleBuilder(string, bool, SectionAccessoryMode, IElementBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModuleBuilder(string text, bool isKMarkdown = false, SectionAccessoryMode mode = SectionAccessoryMode.Unspecified, IElementBuilder accessory = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">text</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></span>
-        <span class="parametername">isKMarkdown</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a></span>
-        <span class="parametername">mode</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></span>
-        <span class="parametername">accessory</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_Accessory.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.Accessory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L101" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>isKMarkdown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>mode</code> <a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a></dt>
+    <dd></dd>
+    <dt><code>accessory</code> <a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">text</code> is not any form of text element,
+including <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a>, <a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a>,
+and <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>; or the <code class="paramref">accessory</code> is neither
+an <a class="xref" href="Kook.ImageElementBuilder.html">ImageElementBuilder</a> nor <a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Kook_SectionModuleBuilder_Accessory_" data-uid="Kook.SectionModuleBuilder.Accessory*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_Accessory" data-uid="Kook.SectionModuleBuilder.Accessory"><a href="#collapsible-Kook_SectionModuleBuilder_Accessory" class="expander" data-toggle="collapse">Accessory</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_Accessory" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_Accessory" data-uid="Kook.SectionModuleBuilder.Accessory">
+  Accessory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the accessory of the section.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IElementBuilder Accessory { get; set; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>
-        <p><p>An <a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a> representing the accessory of the section.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_Mode.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.Mode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L62" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></dt>
+    <dd><p>An <a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a> representing the accessory of the section.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">value</code> is neither an <a class="xref" href="Kook.ImageElementBuilder.html">ImageElementBuilder</a>
+nor <a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_SectionModuleBuilder_Mode_" data-uid="Kook.SectionModuleBuilder.Mode*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_Mode" data-uid="Kook.SectionModuleBuilder.Mode"><a href="#collapsible-Kook_SectionModuleBuilder_Mode" class="expander" data-toggle="collapse">Mode</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_Mode" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_Mode" data-uid="Kook.SectionModuleBuilder.Mode">
+  Mode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets how the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Accessory">Accessory</a> is positioned relative to the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Text">Text</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionAccessoryMode Mode { get; set; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a>
-        <p><p>A <a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a> representing
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a></dt>
+    <dd><p>A <a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a> representing
 how the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Accessory">Accessory</a> is positioned relative to the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Text">Text</a>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_Text.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L74" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_Text_" data-uid="Kook.SectionModuleBuilder.Text*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_Text" data-uid="Kook.SectionModuleBuilder.Text"><a href="#collapsible-Kook_SectionModuleBuilder_Text" class="expander" data-toggle="collapse">Text</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_Text" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_Text" data-uid="Kook.SectionModuleBuilder.Text">
+  Text
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the text of the section.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IElementBuilder Text { get; set; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>
-        <p><p>An <a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a> representing the text of the section.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_Type.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L12" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></dt>
+    <dd><p>An <a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a> representing the text of the section.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">value</code> is not any form of text element,
+including <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a>, <a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a>, and <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_SectionModuleBuilder_Type_" data-uid="Kook.SectionModuleBuilder.Type*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_Type" data-uid="Kook.SectionModuleBuilder.Type"><a href="#collapsible-Kook_SectionModuleBuilder_Type" class="expander" data-toggle="collapse">Type</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_Type" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_Type" data-uid="Kook.SectionModuleBuilder.Type">
+  Type
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Specifies the module type of the <a class="xref" href="Kook.IModule.html">IModule</a> this builder creates.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ModuleType Type { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ModuleType.html">ModuleType</a>
-        <p><p>A <a class="xref" href="Kook.ModuleType.html">ModuleType</a> representing the module type of the <a class="xref" href="Kook.IModule.html">IModule</a> this builder creates.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IModuleBuilder.html#Kook_IModuleBuilder_Type">IModuleBuilder.Type</a></div>
-  
-  
-  
-  
-  </div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_Build.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L273" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ModuleType.html">ModuleType</a></dt>
+    <dd><p>A <a class="xref" href="Kook.ModuleType.html">ModuleType</a> representing the module type of the <a class="xref" href="Kook.IModule.html">IModule</a> this builder creates.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Kook_SectionModuleBuilder_Build_" data-uid="Kook.SectionModuleBuilder.Build*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_Build" data-uid="Kook.SectionModuleBuilder.Build"><a href="#collapsible-Kook_SectionModuleBuilder_Build" class="expander" data-toggle="collapse">Build()</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_Build" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_Build" data-uid="Kook.SectionModuleBuilder.Build">
+  Build()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Builds this builder into a <a class="xref" href="Kook.SectionModule.html">SectionModule</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModule Build()</code></pre>
   </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionModule.html">SectionModule</a>
-        <p><p>A <a class="xref" href="Kook.SectionModule.html">SectionModule</a> representing the built section module object.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_Equals_Kook_SectionModuleBuilder_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.Equals(Kook.SectionModuleBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L308" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionModule.html">SectionModule</a></dt>
+    <dd><p>A <a class="xref" href="Kook.SectionModule.html">SectionModule</a> representing the built section module object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a> was not positioned to the right of the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Text">Text</a>,
+which is not allowed.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_SectionModuleBuilder_Equals_" data-uid="Kook.SectionModuleBuilder.Equals*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_Equals_Kook_SectionModuleBuilder_" data-uid="Kook.SectionModuleBuilder.Equals(Kook.SectionModuleBuilder)"><a href="#collapsible-Kook_SectionModuleBuilder_Equals_Kook_SectionModuleBuilder_" class="expander" data-toggle="collapse">Equals(SectionModuleBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_Equals_Kook_SectionModuleBuilder_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_Equals_Kook_SectionModuleBuilder_" data-uid="Kook.SectionModuleBuilder.Equals(Kook.SectionModuleBuilder)">
+  Equals(SectionModuleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Equals(SectionModuleBuilder sectionModuleBuilder)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></span>
-        <span class="parametername">sectionModuleBuilder</span>
-        <p><p>The <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> to compare with the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>; otherwise, <code>false</code>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L302" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sectionModuleBuilder</code> <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd><p>The <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> to compare with the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_Equals_" data-uid="Kook.SectionModuleBuilder.Equals*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_Equals_System_Object_" data-uid="Kook.SectionModuleBuilder.Equals(System.Object)"><a href="#collapsible-Kook_SectionModuleBuilder_Equals_System_Object_" class="expander" data-toggle="collapse">Equals(Object)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_Equals_System_Object_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_Equals_System_Object_" data-uid="Kook.SectionModuleBuilder.Equals(System.Object)">
+  Equals(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></span>
-        <span class="parametername">obj</span>
-        <p><p>The object to compare with the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>; otherwise, <code>false</code>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_SectionModuleBuilder_Equals_System_Object__remarks">Remarks</h5>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_SectionModuleBuilder_Equals_System_Object__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>, <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Equals_Kook_SectionModuleBuilder_">Equals(SectionModuleBuilder)</a> will be called to compare the 2 instances.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_GetHashCode.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L319" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_SectionModuleBuilder_GetHashCode_" data-uid="Kook.SectionModuleBuilder.GetHashCode*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_GetHashCode" data-uid="Kook.SectionModuleBuilder.GetHashCode"><a href="#collapsible-Kook_SectionModuleBuilder_GetHashCode" class="expander" data-toggle="collapse">GetHashCode()</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_GetHashCode" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_SectionModuleBuilder_GetHashCode" data-uid="Kook.SectionModuleBuilder.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
   </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_WithAccessory_Kook_ButtonElementBuilder_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.WithAccessory(Kook.ButtonElementBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L224" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_WithAccessory_" data-uid="Kook.SectionModuleBuilder.WithAccessory*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_WithAccessory_Kook_ButtonElementBuilder_" data-uid="Kook.SectionModuleBuilder.WithAccessory(Kook.ButtonElementBuilder)"><a href="#collapsible-Kook_SectionModuleBuilder_WithAccessory_Kook_ButtonElementBuilder_" class="expander" data-toggle="collapse">WithAccessory(ButtonElementBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_WithAccessory_Kook_ButtonElementBuilder_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_WithAccessory_Kook_ButtonElementBuilder_" data-uid="Kook.SectionModuleBuilder.WithAccessory(Kook.ButtonElementBuilder)">
+  WithAccessory(ButtonElementBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets the accessory of the section.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithAccessory(ButtonElementBuilder accessory)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a></span>
-        <span class="parametername">accessory</span>
-        <p><p>The accessory to be set for the section.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_WithAccessory_Kook_ImageElementBuilder_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.WithAccessory(Kook.ImageElementBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L209" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>accessory</code> <a class="xref" href="Kook.ButtonElementBuilder.html">ButtonElementBuilder</a></dt>
+    <dd><p>The accessory to be set for the section.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_WithAccessory_" data-uid="Kook.SectionModuleBuilder.WithAccessory*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_WithAccessory_Kook_ImageElementBuilder_" data-uid="Kook.SectionModuleBuilder.WithAccessory(Kook.ImageElementBuilder)"><a href="#collapsible-Kook_SectionModuleBuilder_WithAccessory_Kook_ImageElementBuilder_" class="expander" data-toggle="collapse">WithAccessory(ImageElementBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_WithAccessory_Kook_ImageElementBuilder_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_WithAccessory_Kook_ImageElementBuilder_" data-uid="Kook.SectionModuleBuilder.WithAccessory(Kook.ImageElementBuilder)">
+  WithAccessory(ImageElementBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets the accessory of the section.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithAccessory(ImageElementBuilder accessory)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ImageElementBuilder.html">ImageElementBuilder</a></span>
-        <span class="parametername">accessory</span>
-        <p><p>The accessory to be set for the section.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_WithAccessory__1_Action___0__.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.WithAccessory%60%601(Action%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L239" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>accessory</code> <a class="xref" href="Kook.ImageElementBuilder.html">ImageElementBuilder</a></dt>
+    <dd><p>The accessory to be set for the section.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_WithAccessory_" data-uid="Kook.SectionModuleBuilder.WithAccessory*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_WithAccessory__1_Action___0__" data-uid="Kook.SectionModuleBuilder.WithAccessory``1(Action{``0})"><a href="#collapsible-Kook_SectionModuleBuilder_WithAccessory__1_Action___0__" class="expander" data-toggle="collapse">WithAccessory&lt;T&gt;(Action&lt;T&gt;)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_WithAccessory__1_Action___0__" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_WithAccessory__1_System_Action___0__" data-uid="Kook.SectionModuleBuilder.WithAccessory``1(System.Action{``0})">
+  WithAccessory&lt;T&gt;(Action&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets the accessory of the section.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithAccessory&lt;T&gt;(Action&lt;T&gt; action = null)
-    where T : IElementBuilder, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithAccessory&lt;T&gt;(Action&lt;T&gt; action = null) where T : IElementBuilder, new()</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Action</span>&lt;T&gt;</span>
-        <span class="parametername">action</span>
-        <p><p>The action to set the accessory of the section.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="parametername">T</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_WithMode_Kook_SectionAccessoryMode_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.WithMode(Kook.SectionAccessoryMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L257" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The action to set the accessory of the section.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_WithMode_" data-uid="Kook.SectionModuleBuilder.WithMode*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_WithMode_Kook_SectionAccessoryMode_" data-uid="Kook.SectionModuleBuilder.WithMode(Kook.SectionAccessoryMode)"><a href="#collapsible-Kook_SectionModuleBuilder_WithMode_Kook_SectionAccessoryMode_" class="expander" data-toggle="collapse">WithMode(SectionAccessoryMode)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_WithMode_Kook_SectionAccessoryMode_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_WithMode_Kook_SectionAccessoryMode_" data-uid="Kook.SectionModuleBuilder.WithMode(Kook.SectionAccessoryMode)">
+  WithMode(SectionAccessoryMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets how the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Accessory">Accessory</a> is positioned relative to the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Text">Text</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithMode(SectionAccessoryMode mode)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a></span>
-        <span class="parametername">mode</span>
-        <p><p>How the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Accessory">Accessory</a> is positioned relative to the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Text">Text</a>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_WithText_Kook_KMarkdownElementBuilder_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.WithText(Kook.KMarkdownElementBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L139" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mode</code> <a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a></dt>
+    <dd><p>How the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Accessory">Accessory</a> is positioned relative to the <a class="xref" href="Kook.SectionModuleBuilder.html#Kook_SectionModuleBuilder_Text">Text</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_WithText_" data-uid="Kook.SectionModuleBuilder.WithText*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_WithText_Kook_KMarkdownElementBuilder_" data-uid="Kook.SectionModuleBuilder.WithText(Kook.KMarkdownElementBuilder)"><a href="#collapsible-Kook_SectionModuleBuilder_WithText_Kook_KMarkdownElementBuilder_" class="expander" data-toggle="collapse">WithText(KMarkdownElementBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_WithText_Kook_KMarkdownElementBuilder_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_WithText_Kook_KMarkdownElementBuilder_" data-uid="Kook.SectionModuleBuilder.WithText(Kook.KMarkdownElementBuilder)">
+  WithText(KMarkdownElementBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets the text of the section.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithText(KMarkdownElementBuilder text)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a></span>
-        <span class="parametername">text</span>
-        <p><p>The text to be set for the section.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_WithText_Kook_ParagraphStructBuilder_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.WithText(Kook.ParagraphStructBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L176" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a></dt>
+    <dd><p>The text to be set for the section.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_WithText_" data-uid="Kook.SectionModuleBuilder.WithText*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_WithText_Kook_ParagraphStructBuilder_" data-uid="Kook.SectionModuleBuilder.WithText(Kook.ParagraphStructBuilder)"><a href="#collapsible-Kook_SectionModuleBuilder_WithText_Kook_ParagraphStructBuilder_" class="expander" data-toggle="collapse">WithText(ParagraphStructBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_WithText_Kook_ParagraphStructBuilder_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_WithText_Kook_ParagraphStructBuilder_" data-uid="Kook.SectionModuleBuilder.WithText(Kook.ParagraphStructBuilder)">
+  WithText(ParagraphStructBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets the text of the section.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithText(ParagraphStructBuilder text)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></span>
-        <span class="parametername">text</span>
-        <p><p>The text to be set for the section.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_WithText_Kook_PlainTextElementBuilder_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.WithText(Kook.PlainTextElementBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L124" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></dt>
+    <dd><p>The text to be set for the section.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_WithText_" data-uid="Kook.SectionModuleBuilder.WithText*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_WithText_Kook_PlainTextElementBuilder_" data-uid="Kook.SectionModuleBuilder.WithText(Kook.PlainTextElementBuilder)"><a href="#collapsible-Kook_SectionModuleBuilder_WithText_Kook_PlainTextElementBuilder_" class="expander" data-toggle="collapse">WithText(PlainTextElementBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_WithText_Kook_PlainTextElementBuilder_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_WithText_Kook_PlainTextElementBuilder_" data-uid="Kook.SectionModuleBuilder.WithText(Kook.PlainTextElementBuilder)">
+  WithText(PlainTextElementBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets the text of the section.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithText(PlainTextElementBuilder text)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a></span>
-        <span class="parametername">text</span>
-        <p><p>The text to be set for the section.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_WithText_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.WithText(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L157" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a></dt>
+    <dd><p>The text to be set for the section.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_WithText_" data-uid="Kook.SectionModuleBuilder.WithText*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_WithText_System_String_System_Boolean_" data-uid="Kook.SectionModuleBuilder.WithText(System.String,System.Boolean)"><a href="#collapsible-Kook_SectionModuleBuilder_WithText_System_String_System_Boolean_" class="expander" data-toggle="collapse">WithText(String, Boolean)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_WithText_System_String_System_Boolean_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_WithText_System_String_System_Boolean_" data-uid="Kook.SectionModuleBuilder.WithText(System.String,System.Boolean)">
+  WithText(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets the text of the section.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithText(string text, bool isKMarkdown = false)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">text</span>
-        <p><p>The text to be set for the section.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></span>
-        <span class="parametername">isKMarkdown</span>
-        <p><p>A bool indicating whether the text is in KMarkdown format;
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text to be set for the section.</p>
+</dd>
+    <dt><code>isKMarkdown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A bool indicating whether the text is in KMarkdown format;
 if <code>true</code>, the text will be set as a <a class="xref" href="Kook.KMarkdownElement.html">KMarkdownElement</a>;
 if <code>false</code>, the text will be set as a <a class="xref" href="Kook.PlainTextElement.html">PlainTextElement</a>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_WithText__1_Action___0__.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.WithText%60%601(Action%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L191" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_WithText_" data-uid="Kook.SectionModuleBuilder.WithText*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_WithText__1_Action___0__" data-uid="Kook.SectionModuleBuilder.WithText``1(Action{``0})"><a href="#collapsible-Kook_SectionModuleBuilder_WithText__1_Action___0__" class="expander" data-toggle="collapse">WithText&lt;T&gt;(Action&lt;T&gt;)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_WithText__1_Action___0__" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_WithText__1_System_Action___0__" data-uid="Kook.SectionModuleBuilder.WithText``1(System.Action{``0})">
+  WithText&lt;T&gt;(Action&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets the text of the section.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithText&lt;T&gt;(Action&lt;T&gt; action = null)
-    where T : IElementBuilder, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public SectionModuleBuilder WithText&lt;T&gt;(Action&lt;T&gt; action = null) where T : IElementBuilder, new()</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Action</span>&lt;T&gt;</span>
-        <span class="parametername">action</span>
-        <p><p>The action to set the text of the section.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="parametername">T</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="operators">Operators
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_op_Equality_Kook_SectionModuleBuilder_Kook_SectionModuleBuilder_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.op_Equality(Kook.SectionModuleBuilder%2CKook.SectionModuleBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L288" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The action to set the text of the section.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
   <a id="Kook_SectionModuleBuilder_op_Equality_" data-uid="Kook.SectionModuleBuilder.op_Equality*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_op_Equality_Kook_SectionModuleBuilder_Kook_SectionModuleBuilder_" data-uid="Kook.SectionModuleBuilder.op_Equality(Kook.SectionModuleBuilder,Kook.SectionModuleBuilder)"><a href="#collapsible-Kook_SectionModuleBuilder_op_Equality_Kook_SectionModuleBuilder_Kook_SectionModuleBuilder_" class="expander" data-toggle="collapse">Equality(SectionModuleBuilder, SectionModuleBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_op_Equality_Kook_SectionModuleBuilder_Kook_SectionModuleBuilder_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_op_Equality_Kook_SectionModuleBuilder_Kook_SectionModuleBuilder_" data-uid="Kook.SectionModuleBuilder.op_Equality(Kook.SectionModuleBuilder,Kook.SectionModuleBuilder)">
+  operator ==(SectionModuleBuilder, SectionModuleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator ==(SectionModuleBuilder left, SectionModuleBuilder right)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></span>
-        <span class="parametername">left</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></span>
-        <span class="parametername">right</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>; otherwise, <code>false</code>. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_op_Inequality_Kook_SectionModuleBuilder_Kook_SectionModuleBuilder_.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.op_Inequality(Kook.SectionModuleBuilder%2CKook.SectionModuleBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L295" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_SectionModuleBuilder_op_Inequality_" data-uid="Kook.SectionModuleBuilder.op_Inequality*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_op_Inequality_Kook_SectionModuleBuilder_Kook_SectionModuleBuilder_" data-uid="Kook.SectionModuleBuilder.op_Inequality(Kook.SectionModuleBuilder,Kook.SectionModuleBuilder)"><a href="#collapsible-Kook_SectionModuleBuilder_op_Inequality_Kook_SectionModuleBuilder_Kook_SectionModuleBuilder_" class="expander" data-toggle="collapse">Inequality(SectionModuleBuilder, SectionModuleBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_op_Inequality_Kook_SectionModuleBuilder_Kook_SectionModuleBuilder_" class="collapse in">
+
+  <h3 id="Kook_SectionModuleBuilder_op_Inequality_Kook_SectionModuleBuilder_Kook_SectionModuleBuilder_" data-uid="Kook.SectionModuleBuilder.op_Inequality(Kook.SectionModuleBuilder,Kook.SectionModuleBuilder)">
+  operator !=(SectionModuleBuilder, SectionModuleBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is not equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator !=(SectionModuleBuilder left, SectionModuleBuilder right)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></span>
-        <span class="parametername">left</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></span>
-        <span class="parametername">right</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is not equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>; otherwise, <code>false</code>. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder_Kook_IModuleBuilder_Build.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder.Kook%23IModuleBuilder%23Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L282" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_SectionModuleBuilder_Kook_IModuleBuilder_Build_" data-uid="Kook.SectionModuleBuilder.Kook#IModuleBuilder#Build*"></a>
-  
-  <h4 id="Kook_SectionModuleBuilder_Kook_IModuleBuilder_Build" data-uid="Kook.SectionModuleBuilder.Kook#IModuleBuilder#Build"><a href="#collapsible-Kook_SectionModuleBuilder_Kook_IModuleBuilder_Build" class="expander" data-toggle="collapse">IModuleBuilder.Build()</a></h4>
-  
-  <div id="collapsible-Kook_SectionModuleBuilder_Kook_IModuleBuilder_Build" class="collapse in">
-  <div class="markdown level1 summary"><p>Builds the <a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a> into an <a class="xref" href="Kook.IModule.html">IModule</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a></dt>
+    <dd></dd>
+  </dl>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IModule IModuleBuilder.Build()</code></pre>
-  </div>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a> is not equal to the current <a class="xref" href="Kook.SectionModuleBuilder.html">SectionModuleBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.IModule.html">IModule</a>
-        <p><p>An <a class="xref" href="Kook.IModule.html">IModule</a> representing the built module object.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IModuleBuilder.html#Kook_IModuleBuilder_Build">IModuleBuilder.Build()</a></div>
-  
-  
-  
-  
-  </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_SectionModuleBuilder.md&amp;value=---%0Auid%3A%20Kook.SectionModuleBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L6" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/SectionModuleBuilder.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            Kook.Net (c) 2022-2023
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

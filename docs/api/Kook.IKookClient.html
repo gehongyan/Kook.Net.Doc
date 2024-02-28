@@ -1,1070 +1,781 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IKookClient
-   | Kook.Net &#25991;&#26723; </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IKookClient
-   | Kook.Net &#25991;&#26723; ">
-    <meta name="generator" content="docfx 2.56.7.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>Interface IKookClient | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IKookClient | Kook.Net 文档 ">
+      
+      <meta name="description" content="Represents a generic Kook client.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient.md&amp;value=---%0Auid%3A%20Kook.IKookClient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="Represents a generic Kook client."><meta property="og:title" content="Interface IKookClient | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kook.IKookClient">
-  <h1 id="Kook_IKookClient" data-uid="Kook.IKookClient">Interface IKookClient
-  </h1>
-  <div class="markdown level0 summary"><p>Represents a generic Kook client.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
 
-  
-  
-  
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kook.html">Kook</a></h6>
-  <h6><strong>Assembly</strong>: Kook.Net.Core.dll</h6>
-  
-  <h5 id="Kook_IKookClient_syntax">Syntax</h5>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.IKookClient">
+
+
+
+  <h1 id="Kook_IKookClient" data-uid="Kook.IKookClient" class="text-break">
+Interface IKookClient  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a generic Kook client.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IKookClient : IDisposable</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h3 id="properties">Properties
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_ConnectionState.md&amp;value=---%0Auid%3A%20Kook.IKookClient.ConnectionState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L13" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Kook_IKookClient_ConnectionState_" data-uid="Kook.IKookClient.ConnectionState*"></a>
-  
-  <h4 id="Kook_IKookClient_ConnectionState" data-uid="Kook.IKookClient.ConnectionState"><a href="#collapsible-Kook_IKookClient_ConnectionState" class="expander" data-toggle="collapse">ConnectionState</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_ConnectionState" class="collapse in">
+
+  <h3 id="Kook_IKookClient_ConnectionState" data-uid="Kook.IKookClient.ConnectionState">
+  ConnectionState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the current state of connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ConnectionState ConnectionState { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ConnectionState.html">ConnectionState</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_CurrentUser.md&amp;value=---%0Auid%3A%20Kook.IKookClient.CurrentUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L18" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ConnectionState.html">ConnectionState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_CurrentUser_" data-uid="Kook.IKookClient.CurrentUser*"></a>
-  
-  <h4 id="Kook_IKookClient_CurrentUser" data-uid="Kook.IKookClient.CurrentUser"><a href="#collapsible-Kook_IKookClient_CurrentUser" class="expander" data-toggle="collapse">CurrentUser</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_CurrentUser" class="collapse in">
+
+  <h3 id="Kook_IKookClient_CurrentUser" data-uid="Kook.IKookClient.CurrentUser">
+  CurrentUser
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the currently logged-in user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ISelfUser CurrentUser { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ISelfUser.html">ISelfUser</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_TokenType.md&amp;value=---%0Auid%3A%20Kook.IKookClient.TokenType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L23" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ISelfUser.html">ISelfUser</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_TokenType_" data-uid="Kook.IKookClient.TokenType*"></a>
-  
-  <h4 id="Kook_IKookClient_TokenType" data-uid="Kook.IKookClient.TokenType"><a href="#collapsible-Kook_IKookClient_TokenType" class="expander" data-toggle="collapse">TokenType</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_TokenType" class="collapse in">
+
+  <h3 id="Kook_IKookClient_TokenType" data-uid="Kook.IKookClient.TokenType">
+  TokenType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the token type of the logged-in user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">TokenType TokenType { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.TokenType.html">TokenType</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_GetBlockedUsersAsync_Kook_CacheMode_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IKookClient.GetBlockedUsersAsync(Kook.CacheMode%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L184" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Kook_IKookClient_GetBlockedUsersAsync_" data-uid="Kook.IKookClient.GetBlockedUsersAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_GetBlockedUsersAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetBlockedUsersAsync(Kook.CacheMode,Kook.RequestOptions)"><a href="#collapsible-Kook_IKookClient_GetBlockedUsersAsync_Kook_CacheMode_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetBlockedUsersAsync(CacheMode, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_GetBlockedUsersAsync_Kook_CacheMode_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_IKookClient_GetBlockedUsersAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetBlockedUsersAsync(Kook.CacheMode,Kook.RequestOptions)">
+  GetBlockedUsersAsync(CacheMode, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets blocked users.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IUser&gt;&gt; GetBlockedUsersAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.CacheMode.html">CacheMode</a></span>
-        <span class="parametername">mode</span>
-        <p><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains a collection of users
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
+    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains a collection of users
 that are blocked by the current user.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_GetChannelAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IKookClient.GetChannelAsync(System.UInt64%2CKook.CacheMode%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L62" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_GetChannelAsync_" data-uid="Kook.IKookClient.GetChannelAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_GetChannelAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetChannelAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)"><a href="#collapsible-Kook_IKookClient_GetChannelAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetChannelAsync(UInt64, CacheMode, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_GetChannelAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_IKookClient_GetChannelAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetChannelAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)">
+  GetChannelAsync(ulong, CacheMode, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a generic channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IChannel&gt; GetChannelAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></span>
-        <span class="parametername">id</span>
-        <p><p>The identifier of the channel.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.CacheMode.html">CacheMode</a></span>
-        <span class="parametername">mode</span>
-        <p><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.IChannel.html">IChannel</a>&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains the channel associated
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The identifier of the channel.</p>
+</dd>
+    <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
+    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IChannel.html">IChannel</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains the channel associated
 with the identifier; <code>null</code> when the channel cannot be found.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_GetDMChannelAsync_Guid_Kook_CacheMode_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IKookClient.GetDMChannelAsync(Guid%2CKook.CacheMode%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L74" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_GetDMChannelAsync_" data-uid="Kook.IKookClient.GetDMChannelAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_GetDMChannelAsync_Guid_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetDMChannelAsync(Guid,Kook.CacheMode,Kook.RequestOptions)"><a href="#collapsible-Kook_IKookClient_GetDMChannelAsync_Guid_Kook_CacheMode_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetDMChannelAsync(Guid, CacheMode, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_GetDMChannelAsync_Guid_Kook_CacheMode_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_IKookClient_GetDMChannelAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetDMChannelAsync(System.Guid,Kook.CacheMode,Kook.RequestOptions)">
+  GetDMChannelAsync(Guid, CacheMode, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a direct message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IDMChannel&gt; GetDMChannelAsync(Guid chatCode, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Guid</span></span>
-        <span class="parametername">chatCode</span>
-        <p><p>The identifier of the channel.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.CacheMode.html">CacheMode</a></span>
-        <span class="parametername">mode</span>
-        <p><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a>&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains a read-only collection
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>chatCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The identifier of the channel.</p>
+</dd>
+    <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
+    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains a read-only collection
 of direct-message channels that the user currently partakes in.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_GetDMChannelsAsync_Kook_CacheMode_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IKookClient.GetDMChannelsAsync(Kook.CacheMode%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L92" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_GetDMChannelsAsync_" data-uid="Kook.IKookClient.GetDMChannelsAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_GetDMChannelsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetDMChannelsAsync(Kook.CacheMode,Kook.RequestOptions)"><a href="#collapsible-Kook_IKookClient_GetDMChannelsAsync_Kook_CacheMode_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetDMChannelsAsync(CacheMode, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_GetDMChannelsAsync_Kook_CacheMode_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_IKookClient_GetDMChannelsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetDMChannelsAsync(Kook.CacheMode,Kook.RequestOptions)">
+  GetDMChannelsAsync(CacheMode, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a collection of direct message channels opened in this session.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IDMChannel&gt;&gt; GetDMChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.CacheMode.html">CacheMode</a></span>
-        <span class="parametername">mode</span>
-        <p><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a>&gt;&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains a read-only collection
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
+    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains a read-only collection
 of direct-message channels that the user currently partakes in.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_IKookClient_GetDMChannelsAsync_Kook_CacheMode_Kook_RequestOptions__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This method returns a collection of currently opened direct message channels.
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_IKookClient_GetDMChannelsAsync_Kook_CacheMode_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method returns a collection of currently opened direct message channels.</p>
 <div class="WARNING"><h5>warning</h5><p>
     This method will not return previously opened DM channels outside of the current session! If you
     have just started the client, this may return an empty collection.
-</p></div></p>
+</p></div>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_GetFriendRequestsAsync_Kook_CacheMode_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IKookClient.GetFriendRequestsAsync(Kook.CacheMode%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L173" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_IKookClient_GetFriendRequestsAsync_" data-uid="Kook.IKookClient.GetFriendRequestsAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_GetFriendRequestsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetFriendRequestsAsync(Kook.CacheMode,Kook.RequestOptions)"><a href="#collapsible-Kook_IKookClient_GetFriendRequestsAsync_Kook_CacheMode_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetFriendRequestsAsync(CacheMode, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_GetFriendRequestsAsync_Kook_CacheMode_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_IKookClient_GetFriendRequestsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetFriendRequestsAsync(Kook.CacheMode,Kook.RequestOptions)">
+  GetFriendRequestsAsync(CacheMode, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets friend requests.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IFriendRequest&gt;&gt; GetFriendRequestsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.CacheMode.html">CacheMode</a></span>
-        <span class="parametername">mode</span>
-        <p><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IFriendRequest.html">IFriendRequest</a>&gt;&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains a collection of users
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
+    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IFriendRequest.html">IFriendRequest</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains a collection of users
 that requested to be friends with the current user.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_GetFriendsAsync_Kook_CacheMode_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IKookClient.GetFriendsAsync(Kook.CacheMode%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L162" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_GetFriendsAsync_" data-uid="Kook.IKookClient.GetFriendsAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_GetFriendsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetFriendsAsync(Kook.CacheMode,Kook.RequestOptions)"><a href="#collapsible-Kook_IKookClient_GetFriendsAsync_Kook_CacheMode_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetFriendsAsync(CacheMode, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_GetFriendsAsync_Kook_CacheMode_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_IKookClient_GetFriendsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetFriendsAsync(Kook.CacheMode,Kook.RequestOptions)">
+  GetFriendsAsync(CacheMode, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets friends.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IUser&gt;&gt; GetFriendsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.CacheMode.html">CacheMode</a></span>
-        <span class="parametername">mode</span>
-        <p><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains a collection of users
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
+    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains a collection of users
 that are friends with the current user.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_GetGuildAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IKookClient.GetGuildAsync(System.UInt64%2CKook.CacheMode%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L108" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_GetGuildAsync_" data-uid="Kook.IKookClient.GetGuildAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_GetGuildAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetGuildAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)"><a href="#collapsible-Kook_IKookClient_GetGuildAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetGuildAsync(UInt64, CacheMode, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_GetGuildAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_IKookClient_GetGuildAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetGuildAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)">
+  GetGuildAsync(ulong, CacheMode, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a guild.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IGuild&gt; GetGuildAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></span>
-        <span class="parametername">id</span>
-        <p><p>The guild identifier.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.CacheMode.html">CacheMode</a></span>
-        <span class="parametername">mode</span>
-        <p><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains the guild associated
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The guild identifier.</p>
+</dd>
+    <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
+    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains the guild associated
 with the identifier; <code>null</code> when the guild cannot be found.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_GetGuildsAsync_Kook_CacheMode_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IKookClient.GetGuildsAsync(Kook.CacheMode%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L119" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_GetGuildsAsync_" data-uid="Kook.IKookClient.GetGuildsAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_GetGuildsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetGuildsAsync(Kook.CacheMode,Kook.RequestOptions)"><a href="#collapsible-Kook_IKookClient_GetGuildsAsync_Kook_CacheMode_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetGuildsAsync(CacheMode, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_GetGuildsAsync_Kook_CacheMode_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_IKookClient_GetGuildsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetGuildsAsync(Kook.CacheMode,Kook.RequestOptions)">
+  GetGuildsAsync(CacheMode, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a collection of guilds that the user is currently in.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IGuild&gt;&gt; GetGuildsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.CacheMode.html">CacheMode</a></span>
-        <span class="parametername">mode</span>
-        <p><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains a read-only collection
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
+    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains a read-only collection
 of guilds that the current user is in.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_GetUserAsync_System_String_System_String_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IKookClient.GetUserAsync(System.String%2CSystem.String%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L147" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_GetUserAsync_" data-uid="Kook.IKookClient.GetUserAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_GetUserAsync_System_String_System_String_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetUserAsync(System.String,System.String,Kook.RequestOptions)"><a href="#collapsible-Kook_IKookClient_GetUserAsync_System_String_System_String_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetUserAsync(String, String, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_GetUserAsync_System_String_System_String_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_IKookClient_GetUserAsync_System_String_System_String_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetUserAsync(System.String,System.String,Kook.RequestOptions)">
+  GetUserAsync(string, string, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IUser&gt; GetUserAsync(string username, string identifyNumber, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">username</span>
-        <p><p>The name of the user (e.g. <code>Still</code>).</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">identifyNumber</span>
-        <p><p>The identify value of the user (e.g. <code>2876</code>).</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains the user associated with
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>username</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the user (e.g. <code>Still</code>).</p>
+</dd>
+    <dt><code>identifyNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The identify value of the user (e.g. <code>2876</code>).</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains the user associated with
 the name and the identifyNumber; <code>null</code> if the user is not found.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_GetUserAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.IKookClient.GetUserAsync(System.UInt64%2CKook.CacheMode%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L135" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_GetUserAsync_" data-uid="Kook.IKookClient.GetUserAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_GetUserAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetUserAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)"><a href="#collapsible-Kook_IKookClient_GetUserAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetUserAsync(UInt64, CacheMode, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_GetUserAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_IKookClient_GetUserAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetUserAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)">
+  GetUserAsync(ulong, CacheMode, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IUser&gt; GetUserAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></span>
-        <span class="parametername">id</span>
-        <p><p>The identifier of the user.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.CacheMode.html">CacheMode</a></span>
-        <span class="parametername">mode</span>
-        <p><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains the user associated with
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The identifier of the user.</p>
+</dd>
+    <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
+    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains the user associated with
 the identifier; <code>null</code> if the user is not found.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_StartAsync.md&amp;value=---%0Auid%3A%20Kook.IKookClient.StartAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L38" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_IKookClient_StartAsync_" data-uid="Kook.IKookClient.StartAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_StartAsync" data-uid="Kook.IKookClient.StartAsync"><a href="#collapsible-Kook_IKookClient_StartAsync" class="expander" data-toggle="collapse">StartAsync()</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_StartAsync" class="collapse in">
+
+  <h3 id="Kook_IKookClient_StartAsync" data-uid="Kook.IKookClient.StartAsync">
+  StartAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Starts the connection between Kook and the client..</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task StartAsync()</code></pre>
   </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p><p>A task that represents the asynchronous start operation.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_IKookClient_StartAsync_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This method will initialize the connection between the client and Kook.
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous start operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_IKookClient_StartAsync_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method will initialize the connection between the client and Kook.</p>
 <div class="IMPORTANT"><h5>important</h5><p>
     This method will immediately return after it is called, as it will initialize the connection on
     another thread.
-</p></div></p>
+</p></div>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient_StopAsync.md&amp;value=---%0Auid%3A%20Kook.IKookClient.StopAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L46" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_IKookClient_StopAsync_" data-uid="Kook.IKookClient.StopAsync*"></a>
-  
-  <h4 id="Kook_IKookClient_StopAsync" data-uid="Kook.IKookClient.StopAsync"><a href="#collapsible-Kook_IKookClient_StopAsync" class="expander" data-toggle="collapse">StopAsync()</a></h4>
-  
-  <div id="collapsible-Kook_IKookClient_StopAsync" class="collapse in">
+
+  <h3 id="Kook_IKookClient_StopAsync" data-uid="Kook.IKookClient.StopAsync">
+  StopAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Stops the connection between Kook and the client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task StopAsync()</code></pre>
   </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p><p>A task that represents the asynchronous stop operation.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous stop operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IKookClient.md&amp;value=---%0Auid%3A%20Kook.IKookClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/IKookClient.cs/#L6" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/IKookClient.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            Kook.Net (c) 2022-2023
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

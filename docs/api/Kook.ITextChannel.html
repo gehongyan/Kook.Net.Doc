@@ -1,94 +1,119 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ITextChannel
-   | Kook.Net &#25991;&#26723; </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ITextChannel
-   | Kook.Net &#25991;&#26723; ">
-    <meta name="generator" content="docfx 2.56.7.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>Interface ITextChannel | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ITextChannel | Kook.Net 文档 ">
+      
+      <meta name="description" content="Represents a generic channel in a guild that can send and receive messages.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ITextChannel.md&amp;value=---%0Auid%3A%20Kook.ITextChannel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="Represents a generic channel in a guild that can send and receive messages."><meta property="og:title" content="Interface ITextChannel | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kook.ITextChannel">
-  <h1 id="Kook_ITextChannel" data-uid="Kook.ITextChannel">Interface ITextChannel
-  </h1>
-  <div class="markdown level0 summary"><p>Represents a generic channel in a guild that can send and receive messages.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
 
-  
-  
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.ITextChannel">
+
+
+
+  <h1 id="Kook_ITextChannel" data-uid="Kook.ITextChannel" class="text-break">
+Interface ITextChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a generic channel in a guild that can send and receive messages.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITextChannel : INestedChannel, IGuildChannel, IDeletable, IMentionable, IMessageChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_CategoryId">INestedChannel.CategoryId</a>
     </div>
@@ -108,7 +133,7 @@
       <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_">INestedChannel.CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_">INestedChannel.CreateInviteAsync(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, RequestOptions)</a>
+      <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_">INestedChannel.CreateInviteAsync(int?, int?, RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_Guild">IGuildChannel.Guild</a>
@@ -132,7 +157,7 @@
       <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_UserPermissionOverwrites">IGuildChannel.UserPermissionOverwrites</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_ModifyAsync_Action_Kook_ModifyGuildChannelProperties__Kook_RequestOptions_">IGuildChannel.ModifyAsync(Action&lt;ModifyGuildChannelProperties&gt;, RequestOptions)</a>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_ModifyAsync_System_Action_Kook_ModifyGuildChannelProperties__Kook_RequestOptions_">IGuildChannel.ModifyAsync(Action&lt;ModifyGuildChannelProperties&gt;, RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_GetCreatorAsync_Kook_CacheMode_Kook_RequestOptions_">IGuildChannel.GetCreatorAsync(CacheMode, RequestOptions)</a>
@@ -156,16 +181,16 @@
       <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_AddPermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_">IGuildChannel.AddPermissionOverwriteAsync(IGuildUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_">IGuildChannel.ModifyPermissionOverwriteAsync(IRole, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_System_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_">IGuildChannel.ModifyPermissionOverwriteAsync(IRole, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_ModifyPermissionOverwriteAsync_Kook_IGuildUser_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_">IGuildChannel.ModifyPermissionOverwriteAsync(IGuildUser, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_ModifyPermissionOverwriteAsync_Kook_IGuildUser_System_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_">IGuildChannel.ModifyPermissionOverwriteAsync(IGuildUser, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_GetUsersAsync_Kook_CacheMode_Kook_RequestOptions_">IGuildChannel.GetUsersAsync(CacheMode, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_GetUserAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_">IGuildChannel.GetUserAsync(UInt64, CacheMode, RequestOptions)</a>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_GetUserAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_">IGuildChannel.GetUserAsync(ulong, CacheMode, RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.IDeletable.html#Kook_IDeletable_DeleteAsync_Kook_RequestOptions_">IDeletable.DeleteAsync(RequestOptions)</a>
@@ -177,325 +202,252 @@
       <a class="xref" href="Kook.IMentionable.html#Kook_IMentionable_KMarkdownMention">IMentionable.KMarkdownMention</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendFileAsync(String, String, AttachmentType, IQuote, IUser, RequestOptions)</a>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendFileAsync(string, string, AttachmentType, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendFileAsync_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendFileAsync(Stream, String, AttachmentType, IQuote, IUser, RequestOptions)</a>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendFileAsync(Stream, string, AttachmentType, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendFileAsync(FileAttachment, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendTextAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendTextAsync(String, IQuote, IUser, RequestOptions)</a>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendTextAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendTextAsync(string, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendCardAsync(ICard, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendCardsAsync_IEnumerable_Kook_ICard__Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote, IUser, RequestOptions)</a>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessageAsync_Guid_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessageAsync(Guid, CacheMode, RequestOptions)</a>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessageAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessageAsync(Guid, CacheMode, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessagesAsync(Int32, CacheMode, RequestOptions)</a>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessagesAsync(int, CacheMode, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessagesAsync(Guid, Direction, Int32, CacheMode, RequestOptions)</a>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessagesAsync(IMessage, Direction, Int32, CacheMode, RequestOptions)</a>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_DeleteMessageAsync_Guid_Kook_RequestOptions_">IMessageChannel.DeleteMessageAsync(Guid, RequestOptions)</a>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_DeleteMessageAsync_System_Guid_Kook_RequestOptions_">IMessageChannel.DeleteMessageAsync(Guid, RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_">IMessageChannel.DeleteMessageAsync(IMessage, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_ModifyMessageAsync_Guid_Action_Kook_MessageProperties__Kook_RequestOptions_">IMessageChannel.ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)</a>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions_">IMessageChannel.ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.IChannel.html#Kook_IChannel_Name">IChannel.Name</a>
     </div>
     <div>
-      <a class="xref" href="Kook.IEntity-1.html#Kook_IEntity_1_Id">IEntity&lt;UInt64&gt;.Id</a>
+      <a class="xref" href="Kook.IEntity-1.html#Kook_IEntity_1_Id">IEntity&lt;ulong&gt;.Id</a>
     </div>
-  </div>
-  
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kook.html">Kook</a></h6>
-  <h6><strong>Assembly</strong>: Kook.Net.Core.dll</h6>
-  
-  <h5 id="Kook_ITextChannel_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ITextChannel : INestedChannel, IGuildChannel, IDeletable, IMentionable, IMessageChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
-  </div>
+  </dd></dl>
 
-  
-  
-  
-  
-  <h3 id="properties">Properties
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ITextChannel_SlowModeInterval.md&amp;value=---%0Auid%3A%20Kook.ITextChannel.SlowModeInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L24" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_ITextChannel_SlowModeInterval_" data-uid="Kook.ITextChannel.SlowModeInterval*"></a>
-  
-  <h4 id="Kook_ITextChannel_SlowModeInterval" data-uid="Kook.ITextChannel.SlowModeInterval"><a href="#collapsible-Kook_ITextChannel_SlowModeInterval" class="expander" data-toggle="collapse">SlowModeInterval</a></h4>
-  
-  <div id="collapsible-Kook_ITextChannel_SlowModeInterval" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets the current slow-mode delay for this channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int SlowModeInterval { get; }</code></pre>
-  </div>
-
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>
-        <p><p>An int representing the time in seconds required before the user can send another message; 0 if disabled.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ITextChannel_Topic.md&amp;value=---%0Auid%3A%20Kook.ITextChannel.Topic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L16" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_ITextChannel_Topic_" data-uid="Kook.ITextChannel.Topic*"></a>
-  
-  <h4 id="Kook_ITextChannel_Topic" data-uid="Kook.ITextChannel.Topic"><a href="#collapsible-Kook_ITextChannel_Topic" class="expander" data-toggle="collapse">Topic</a></h4>
-  
-  <div id="collapsible-Kook_ITextChannel_Topic" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets the current topic for this text channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Topic { get; }</code></pre>
-  </div>
-
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
-        <p><p>A string representing the topic set in the channel; <code>null</code> if none is set.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ITextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.ITextChannel.GetPinnedMessagesAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L47" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_ITextChannel_GetPinnedMessagesAsync_" data-uid="Kook.ITextChannel.GetPinnedMessagesAsync*"></a>
-  
-  <h4 id="Kook_ITextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_" data-uid="Kook.ITextChannel.GetPinnedMessagesAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_ITextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetPinnedMessagesAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_ITextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets a collection of pinned messages in this channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetPinnedMessagesAsync(RequestOptions options = null)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;
-        <p><p>A task that represents the asynchronous get operation for retrieving pinned messages in this channel.
-The task result contains a collection of messages found in the pinned messages.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ITextChannel_ModifyAsync_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.ITextChannel.ModifyAsync(Action%7BKook.ModifyTextChannelProperties%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L35" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_ITextChannel_ModifyAsync_" data-uid="Kook.ITextChannel.ModifyAsync*"></a>
-  
-  <h4 id="Kook_ITextChannel_ModifyAsync_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_" data-uid="Kook.ITextChannel.ModifyAsync(Action{Kook.ModifyTextChannelProperties},Kook.RequestOptions)"><a href="#collapsible-Kook_ITextChannel_ModifyAsync_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_" class="expander" data-toggle="collapse">ModifyAsync(Action&lt;ModifyTextChannelProperties&gt;, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_ITextChannel_ModifyAsync_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"><p>Modifies this text channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task ModifyAsync(Action&lt;ModifyTextChannelProperties&gt; func, RequestOptions options = null)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Action</span>&lt;<a class="xref" href="Kook.ModifyTextChannelProperties.html">ModifyTextChannelProperties</a>&gt;</span>
-        <span class="parametername">func</span>
-        <p><p>The delegate containing the properties to modify the channel with.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p><p>A task that represents the asynchronous modification operation.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_ITextChannel_ModifyAsync_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions__seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="Kook.ModifyTextChannelProperties.html">ModifyTextChannelProperties</a></div>
-  </div>
-  </div>
-  
-  <h3 id="extensionmethods">Extension Methods</h3>
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
   <div>
       <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetChannelType_Kook_IChannel_">ChannelExtensions.GetChannelType(IChannel)</a>
   </div>
   <div>
       <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetJumpUrl_Kook_IChannel_">ChannelExtensions.GetJumpUrl(IChannel)</a>
   </div>
-  
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Kook_ITextChannel_SlowModeInterval_" data-uid="Kook.ITextChannel.SlowModeInterval*"></a>
+
+  <h3 id="Kook_ITextChannel_SlowModeInterval" data-uid="Kook.ITextChannel.SlowModeInterval">
+  SlowModeInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current slow-mode delay for this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int SlowModeInterval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An int representing the time in seconds required before the user can send another message; 0 if disabled.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_ITextChannel_Topic_" data-uid="Kook.ITextChannel.Topic*"></a>
+
+  <h3 id="Kook_ITextChannel_Topic" data-uid="Kook.ITextChannel.Topic">
+  Topic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current topic for this text channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Topic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representing the topic set in the channel; <code>null</code> if none is set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Kook_ITextChannel_GetPinnedMessagesAsync_" data-uid="Kook.ITextChannel.GetPinnedMessagesAsync*"></a>
+
+  <h3 id="Kook_ITextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_" data-uid="Kook.ITextChannel.GetPinnedMessagesAsync(Kook.RequestOptions)">
+  GetPinnedMessagesAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a collection of pinned messages in this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetPinnedMessagesAsync(RequestOptions options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation for retrieving pinned messages in this channel.
+The task result contains a collection of messages found in the pinned messages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_ITextChannel_ModifyAsync_" data-uid="Kook.ITextChannel.ModifyAsync*"></a>
+
+  <h3 id="Kook_ITextChannel_ModifyAsync_System_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_" data-uid="Kook.ITextChannel.ModifyAsync(System.Action{Kook.ModifyTextChannelProperties},Kook.RequestOptions)">
+  ModifyAsync(Action&lt;ModifyTextChannelProperties&gt;, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Modifies this text channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ModifyAsync(Action&lt;ModifyTextChannelProperties&gt; func, RequestOptions options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.ModifyTextChannelProperties.html">ModifyTextChannelProperties</a>&gt;</dt>
+    <dd><p>The delegate containing the properties to modify the channel with.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous modification operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.ModifyTextChannelProperties.html">ModifyTextChannelProperties</a></div>
+    </dd>
+  </dl>
+
+
+
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ITextChannel.md&amp;value=---%0Auid%3A%20Kook.ITextChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L6" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            Kook.Net (c) 2022-2023
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

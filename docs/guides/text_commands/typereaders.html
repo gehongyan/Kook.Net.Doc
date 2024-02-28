@@ -1,82 +1,90 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#31867;&#22411;&#35299;&#26512; | Kook.Net &#25991;&#26723; </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#31867;&#22411;&#35299;&#26512; | Kook.Net &#25991;&#26723; ">
-    <meta name="generator" content="docfx 2.56.7.0">
-    
-    <link rel="shortcut icon" href="../../favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../../index.html">
-                <img id="logo" class="svg" src="../../logo.svg" alt="Kook.Net &#25991;&#26723;">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>类型解析 | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="类型解析 | Kook.Net 文档 ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/text_commands/typereaders.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="通过类型解析，命令中传入的各种参数可以被自动转换为各种类型。"><meta property="og:title" content="类型解析 | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Guides.TextCommands.TypeReaders">
+
+        <article data-uid="Guides.TextCommands.TypeReaders">
 <h1 id="类型解析">类型解析</h1>
 
 <p>通过类型解析，命令中传入的各种参数可以被自动转换为各种类型。</p>
@@ -97,16 +105,18 @@
 </ul>
 <h2 id="自定义类型解析">自定义类型解析</h2>
 <p>要自定义类型解析，可以创建一个类，引入 <a class="xref" href="../../api/Kook.html">Kook</a> 和 <a class="xref" href="../../api/Kook.Commands.html">Kook.Commands</a>
-命名空间，继承 @Kook.Commands.TypeReader&#65292;&#24182;&#37325;&#20889; <a class="xref" href="../../api/Kook.Commands.TypeReader.html#Kook_Commands_TypeReader_ReadAsync_">ReadAsync</a> 方法，
+命名空间，继承 @Kook.Commands.TypeReader，并重写 <a class="xref" href="../../api/Kook.Commands.TypeReader.html#Kook_Commands_TypeReader_ReadAsync_">ReadAsync</a> 方法，
 该方法内为将输入的字符串解析为指定类型的逻辑。</p>
 <p>如果类型解析成功，请将解析结果传入 <a class="xref" href="../../api/Kook.Commands.TypeReaderResult.html#Kook_Commands_TypeReaderResult_FromSuccess_">TypeReaderResult.FromSuccess</a> 返回；
 如果类型解析失败，请将错误信息传入 <a class="xref" href="../../api/Kook.Commands.TypeReaderResult.html#Kook_Commands_TypeReaderResult_FromError_">TypeReaderResult.FromError</a> 返回。</p>
-<div class="NOTE"><h5>Note</h5><p>Visual Studio、JetBrains Rider 等集成开发环境中的 IntelliSense
+<div class="NOTE">
+<h5>Note</h5>
+<p>Visual Studio、JetBrains Rider 等集成开发环境中的 IntelliSense
 智能提示可以帮助您添加抽象类的实现中缺失的成员。</p>
 </div>
 <h3 id="示例">示例</h3>
-<pre><code class="lang-csharp" name="TypeReaders">// &#26412;&#31867;&#24211;&#24050;&#23545;&#22810;&#25968;&#22522;&#26412;&#31867;&#22411;&#30340;&#31867;&#22411;&#35299;&#26512;&#36827;&#34892;&#20102;&#23454;&#29616;
-// &#26412;&#31034;&#20363;&#20165;&#29992;&#26469;&#23637;&#31034;&#22914;&#20309;&#21019;&#24314;&#19968;&#20010;&#31616;&#21333;&#30340;&#33258;&#23450;&#20041;&#31867;&#22411;&#35299;&#26512;
+<pre><code class="lang-csharp" name="TypeReaders">// 本类库已对多数基本类型的类型解析进行了实现
+// 本示例仅用来展示如何创建一个简单的自定义类型解析
 using Kook;
 using Kook.Commands;
 
@@ -124,7 +134,9 @@ public class BooleanTypeReader : TypeReader
 </code></pre><h2 id="注册自定义类型解析">注册自定义类型解析</h2>
 <p>自定义类型解析无法被文本命令服务自动发现，需要显式注册。</p>
 <p>要添加自定义类型解析，请调用 <a class="xref" href="../../api/Kook.Commands.CommandService.html#Kook_Commands_CommandService_AddTypeReader_">CommandService.AddTypeReader</a> 方法。</p>
-<div class="IMPORTANT"><h5>Important</h5><p>自定义类型解析注册需要在模块发现前进行，否则自定义类型接解析无法正常工作。</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>自定义类型解析注册需要在模块发现前进行，否则自定义类型接解析无法正常工作。</p>
 </div>
 <h3 id="示例-1">示例</h3>
 <pre><code class="lang-csharp" name="Adding TypeReaders">public class CommandHandler
@@ -144,10 +156,10 @@ public class BooleanTypeReader : TypeReader
     {
         _client.MessageReceived += CommandHandleAsync;
 
-        // &#28155;&#21152; BooleanTypeReader &#26469;&#35299;&#26512; `bool` &#31867;&#22411;&#30340;&#21442;&#25968;
+        // 添加 BooleanTypeReader 来解析 `bool` 类型的参数
         _commands.AddTypeReader(typeof(bool), new BooleanTypeReader());
 
-        // &#27880;&#20876;&#27169;&#22359;
+        // 注册模块
         await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _services);
     }
 
@@ -156,38 +168,30 @@ public class BooleanTypeReader : TypeReader
         // ...
     }
 }
-</code></pre></article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/text_commands/typereaders.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <div></div>
-              </nav>
-            </div>
-          </div>
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/text_commands/typereaders.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            Kook.Net (c) 2022-2023
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    </footer>
   </body>
 </html>

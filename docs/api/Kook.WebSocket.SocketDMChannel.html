@@ -1,1964 +1,1387 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SocketDMChannel
-   | Kook.Net &#25991;&#26723; </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SocketDMChannel
-   | Kook.Net &#25991;&#26723; ">
-    <meta name="generator" content="docfx 2.56.7.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>Class SocketDMChannel | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SocketDMChannel | Kook.Net 文档 ">
+      
+      <meta name="description" content="Represents a WebSocket-based direct-message channel.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="Represents a WebSocket-based direct-message channel."><meta property="og:title" content="Class SocketDMChannel | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kook.WebSocket.SocketDMChannel">
-  <h1 id="Kook_WebSocket_SocketDMChannel" data-uid="Kook.WebSocket.SocketDMChannel">Class SocketDMChannel
+
+        <article data-uid="Kook.WebSocket.SocketDMChannel">
+
+
+
+  <h1 id="Kook_WebSocket_SocketDMChannel" data-uid="Kook.WebSocket.SocketDMChannel" class="text-break">
+Class SocketDMChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p>Represents a WebSocket-based direct-message channel.</p>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a>.<a class="xref" href="Kook.WebSocket.html">WebSocket</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a WebSocket-based direct-message channel.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
+  <div class="markdown conceptual"></div>
 
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="Kook.WebSocket.SocketEntity-1.html">SocketEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</div>
-    <div class="level2"><a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a></div>
-    <div class="level3"><span class="xref">SocketDMChannel</span></div>
-  </div>
-  
-  
-  
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kook.WebSocket.html">Kook.WebSocket</a></h6>
-  <h6><strong>Assembly</strong>: Kook.Net.WebSocket.dll</h6>
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SocketDMChannel : SocketChannel, IEntity&lt;ulong&gt;, IUpdateable, IDMChannel, IEntity&lt;Guid&gt;, ISocketPrivateChannel, IPrivateChannel, ISocketMessageChannel, IMessageChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SocketDMChannel : SocketChannel, IUpdateable, IDMChannel, IEntity&lt;Guid&gt;, ISocketPrivateChannel, IPrivateChannel, ISocketMessageChannel, IMessageChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h3 id="properties">Properties
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_CachedMessages.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.CachedMessages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L34" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Kook.WebSocket.SocketEntity-1.html">SocketEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</div>
+      <div><a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a></div>
+      <div><span class="xref">SocketDMChannel</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Kook.IUpdateable.html">IUpdateable</a></div>
+      <div><a class="xref" href="Kook.IDMChannel.html">IDMChannel</a></div>
+      <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</div>
+      <div><a class="xref" href="Kook.WebSocket.ISocketPrivateChannel.html">ISocketPrivateChannel</a></div>
+      <div><a class="xref" href="Kook.IPrivateChannel.html">IPrivateChannel</a></div>
+      <div><a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a></div>
+      <div><a class="xref" href="Kook.IMessageChannel.html">IMessageChannel</a></div>
+      <div><a class="xref" href="Kook.IChannel.html">IChannel</a></div>
+      <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetChannelType_Kook_IChannel_">ChannelExtensions.GetChannelType(IChannel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetJumpUrl_Kook_IChannel_">ChannelExtensions.GetJumpUrl(IChannel)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Kook_WebSocket_SocketDMChannel_CachedMessages_" data-uid="Kook.WebSocket.SocketDMChannel.CachedMessages*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_CachedMessages" data-uid="Kook.WebSocket.SocketDMChannel.CachedMessages"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_CachedMessages" class="expander" data-toggle="collapse">CachedMessages</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_CachedMessages" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets all messages in this channel&apos;s cache.</p>
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_CachedMessages" data-uid="Kook.WebSocket.SocketDMChannel.CachedMessages">
+  CachedMessages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all messages in this channel's cache.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; CachedMessages { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;
-        <p><p>A read-only collection of WebSocket-based messages.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html#Kook_WebSocket_ISocketMessageChannel_CachedMessages">ISocketMessageChannel.CachedMessages</a></div>
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_ChatCode.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.ChatCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L26" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
+    <dd><p>A read-only collection of WebSocket-based messages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_ChatCode_" data-uid="Kook.WebSocket.SocketDMChannel.ChatCode*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_ChatCode" data-uid="Kook.WebSocket.SocketDMChannel.ChatCode"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_ChatCode" class="expander" data-toggle="collapse">ChatCode</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_ChatCode" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_ChatCode" data-uid="Kook.WebSocket.SocketDMChannel.ChatCode">
+  ChatCode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the chat code of the direct-message channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Guid ChatCode { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Guid</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_ChatCode_remarks">Remarks</h5>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a> that represents the chat code of the direct-message channel.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_ChatCode_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This property is the same as <a class="xref" href="Kook.WebSocket.SocketDMChannel.html#Kook_WebSocket_SocketDMChannel_Id">Id</a>.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_Id.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L20" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_Id_" data-uid="Kook.WebSocket.SocketDMChannel.Id*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_Id" data-uid="Kook.WebSocket.SocketDMChannel.Id"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_Id" class="expander" data-toggle="collapse">Id</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_Id" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_Id" data-uid="Kook.WebSocket.SocketDMChannel.Id">
+  Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get the identifier of the DM channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Guid Id { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Guid</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_Id_remarks">Remarks</h5>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_Id_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This property is the same as <a class="xref" href="Kook.WebSocket.SocketDMChannel.html#Kook_WebSocket_SocketDMChannel_ChatCode">ChatCode</a>.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_Recipient.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.Recipient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L31" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_Recipient_" data-uid="Kook.WebSocket.SocketDMChannel.Recipient*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_Recipient" data-uid="Kook.WebSocket.SocketDMChannel.Recipient"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_Recipient" class="expander" data-toggle="collapse">Recipient</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_Recipient" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_Recipient" data-uid="Kook.WebSocket.SocketDMChannel.Recipient">
+  Recipient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the recipient of the channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SocketUser Recipient { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_Users.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.Users%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L39" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_Users_" data-uid="Kook.WebSocket.SocketDMChannel.Users*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_Users" data-uid="Kook.WebSocket.SocketDMChannel.Users"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_Users" class="expander" data-toggle="collapse">Users</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_Users" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_Users" data-uid="Kook.WebSocket.SocketDMChannel.Users">
+  Users
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a collection that is the current logged-in user and the recipient.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketUser&gt; Users { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_CloseAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.CloseAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L68" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Kook_WebSocket_SocketDMChannel_CloseAsync_" data-uid="Kook.WebSocket.SocketDMChannel.CloseAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_CloseAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.CloseAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_CloseAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">CloseAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_CloseAsync_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_CloseAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.CloseAsync(Kook.RequestOptions)">
+  CloseAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes this private channel, removing it from your channel list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task CloseAsync(RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_Guid_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.DeleteMessageAsync(Guid%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L251" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_" data-uid="Kook.WebSocket.SocketDMChannel.DeleteMessageAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_Guid_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.DeleteMessageAsync(Guid,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_Guid_Kook_RequestOptions_" class="expander" data-toggle="collapse">DeleteMessageAsync(Guid, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_Guid_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DeleteMessageAsync(Guid messageId, RequestOptions options = null)</code></pre>
-  </div>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous close operation.</p>
+</dd>
+  </dl>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Guid</span></span>
-        <span class="parametername">messageId</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.DeleteMessageAsync(Kook.IMessage%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L255" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_" data-uid="Kook.WebSocket.SocketDMChannel.DeleteMessageAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.DeleteMessageAsync(Kook.IMessage,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_" class="expander" data-toggle="collapse">DeleteMessageAsync(IMessage, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.DeleteMessageAsync(Kook.IMessage,Kook.RequestOptions)">
+  DeleteMessageAsync(IMessage, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes a message based on the provided message in this channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task DeleteMessageAsync(IMessage message, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IMessage.html">IMessage</a></span>
-        <span class="parametername">message</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
+    <dd><p>The message that would be removed.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous removal operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_" data-uid="Kook.WebSocket.SocketDMChannel.DeleteMessageAsync*"></a>
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_DeleteMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.DeleteMessageAsync(System.Guid,Kook.RequestOptions)">
+  DeleteMessageAsync(Guid, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes a message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task DeleteMessageAsync(Guid messageId, RequestOptions options = null)</code></pre>
   </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_GetCachedMessage_Guid_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.GetCachedMessage(Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L76" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>messageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The identifier of the message that would be removed.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous removal operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_GetCachedMessage_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessage*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_GetCachedMessage_Guid_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessage(Guid)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_GetCachedMessage_Guid_" class="expander" data-toggle="collapse">GetCachedMessage(Guid)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_GetCachedMessage_Guid_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_GetCachedMessage_System_Guid_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessage(System.Guid)">
+  GetCachedMessage(Guid)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a cached message from this channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SocketMessage GetCachedMessage(Guid id)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Guid</span></span>
-        <span class="parametername">id</span>
-        <p><p>The Guid of the message.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>
-        <p><p>A WebSocket-based message object; <code>null</code> if it does not exist in the cache or if caching is not
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The Guid of the message.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a></dt>
+    <dd><p>A WebSocket-based message object; <code>null</code> if it does not exist in the cache or if caching is not
 enabled.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html#Kook_WebSocket_ISocketMessageChannel_GetCachedMessage_Guid_">ISocketMessageChannel.GetCachedMessage(Guid)</a></div>
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_GetCachedMessage_Guid__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><div class="WARNING"><h5>warning</h5><p>
-    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-    this method will always return <code>null</code>. Please refer to
-<a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
-</p></div>
-<p>
-    This method retrieves the message from the local WebSocket cache and does not send any additional
-    request to Kook. This message may be a message that has been deleted.
-</p></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_GetCachedMessage_System_Guid__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING">
+  <h5>warning</h5>
+  <p>
+            This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+            this method will always return <code>null</code>. Please refer to
+            <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+        </p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_GetCachedMessages_Guid_Kook_Direction_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.GetCachedMessages(Guid%2CKook.Direction%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L146" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+<p>
+            This method retrieves the message from the local WebSocket cache and does not send any additional
+            request to Kook. This message may be a message that has been deleted.
+        </p>
+</div>
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessages*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_Guid_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessages(Guid,Kook.Direction,System.Int32)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_GetCachedMessages_Guid_Kook_Direction_System_Int32_" class="expander" data-toggle="collapse">GetCachedMessages(Guid, Direction, Int32)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_GetCachedMessages_Guid_Kook_Direction_System_Int32_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessages(Kook.IMessage,Kook.Direction,System.Int32)">
+  GetCachedMessages(IMessage, Direction, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the last N cached messages starting from a certain message in this message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(Guid fromMessageId, Direction dir, int limit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(IMessage fromMessage, Direction dir, int limit = 50)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Guid</span></span>
-        <span class="parametername">fromMessageId</span>
-        <p><p>The message ID to start the fetching from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Direction.html">Direction</a></span>
-        <span class="parametername">dir</span>
-        <p><p>The direction of which the message should be gotten from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">limit</span>
-        <p><p>The number of messages to get.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;
-        <p><p>A read-only collection of WebSocket-based messages.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html#Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_Guid_Kook_Direction_System_Int32_">ISocketMessageChannel.GetCachedMessages(Guid, Direction, Int32)</a></div>
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_Guid_Kook_Direction_System_Int32__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><div class="WARNING"><h5>warning</h5><p>
-    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-    this method will always return an empty collection. Please refer to
-<a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
-</p></div>
-<p>
-    This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-    request to Kook. This read-only collection may include messages that have been deleted. The
-    maximum number of messages that can be retrieved from this method depends on the
-<a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-</p></p>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fromMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
+    <dd><p>The message to start the fetching from.</p>
+</dd>
+    <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
+    <dd><p>The direction of which the message should be gotten from.</p>
+</dd>
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of messages to get.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
+    <dd><p>A read-only collection of WebSocket-based messages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING">
+  <h5>warning</h5>
+  <p>
+            This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+            this method will always return an empty collection. Please refer to
+            <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+        </p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.GetCachedMessages(Kook.IMessage%2CKook.Direction%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L150" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+<p>
+            This method retrieves the message(s) from the local WebSocket cache and does not send any additional
+            request to Kook. This read-only collection may include messages that have been deleted. The
+            maximum number of messages that can be retrieved from this method depends on the
+            <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
+        </p>
+</div>
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessages*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessages(Kook.IMessage,Kook.Direction,System.Int32)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_" class="expander" data-toggle="collapse">GetCachedMessages(IMessage, Direction, Int32)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_System_Guid_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessages(System.Guid,Kook.Direction,System.Int32)">
+  GetCachedMessages(Guid, Direction, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the last N cached messages starting from a certain message in this message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(IMessage fromMessage, Direction dir, int limit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(Guid fromMessageId, Direction dir, int limit = 50)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IMessage.html">IMessage</a></span>
-        <span class="parametername">fromMessage</span>
-        <p><p>The message to start the fetching from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Direction.html">Direction</a></span>
-        <span class="parametername">dir</span>
-        <p><p>The direction of which the message should be gotten from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">limit</span>
-        <p><p>The number of messages to get.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;
-        <p><p>A read-only collection of WebSocket-based messages.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html#Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_">ISocketMessageChannel.GetCachedMessages(IMessage, Direction, Int32)</a></div>
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><div class="WARNING"><h5>warning</h5><p>
-    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-    this method will always return an empty collection. Please refer to
-<a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
-</p></div>
-<p>
-    This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-    request to Kook. This read-only collection may include messages that have been deleted. The
-    maximum number of messages that can be retrieved from this method depends on the
-<a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-</p></p>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fromMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The message ID to start the fetching from.</p>
+</dd>
+    <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
+    <dd><p>The direction of which the message should be gotten from.</p>
+</dd>
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of messages to get.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
+    <dd><p>A read-only collection of WebSocket-based messages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_System_Guid_Kook_Direction_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING">
+  <h5>warning</h5>
+  <p>
+            This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+            this method will always return an empty collection. Please refer to
+            <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+        </p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_GetCachedMessages_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.GetCachedMessages(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L142" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+<p>
+            This method retrieves the message(s) from the local WebSocket cache and does not send any additional
+            request to Kook. This read-only collection may include messages that have been deleted. The
+            maximum number of messages that can be retrieved from this method depends on the
+            <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
+        </p>
+</div>
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessages*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_System_Int32_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessages(System.Int32)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_GetCachedMessages_System_Int32_" class="expander" data-toggle="collapse">GetCachedMessages(Int32)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_GetCachedMessages_System_Int32_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_System_Int32_" data-uid="Kook.WebSocket.SocketDMChannel.GetCachedMessages(System.Int32)">
+  GetCachedMessages(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the last N cached messages from this message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(int limit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(int limit = 50)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">limit</span>
-        <p><p>The number of messages to get.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;
-        <p><p>A read-only collection of WebSocket-based messages.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html#Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Int32_">ISocketMessageChannel.GetCachedMessages(Int32)</a></div>
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_System_Int32__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><div class="WARNING"><h5>warning</h5><p>
-    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-    this method will always return an empty collection. Please refer to
-<a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
-</p></div>
-<p>
-    This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-    request to Kook. This read-only collection may include messages that have been deleted. The
-    maximum number of messages that can be retrieved from this method depends on the
-<a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-</p></p>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of messages to get.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
+    <dd><p>A read-only collection of WebSocket-based messages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_GetCachedMessages_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING">
+  <h5>warning</h5>
+  <p>
+            This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+            this method will always return an empty collection. Please refer to
+            <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+        </p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_GetMessageAsync_Guid_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.GetMessageAsync(Guid%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L87" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+<p>
+            This method retrieves the message(s) from the local WebSocket cache and does not send any additional
+            request to Kook. This read-only collection may include messages that have been deleted. The
+            maximum number of messages that can be retrieved from this method depends on the
+            <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
+        </p>
+</div>
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_GetMessageAsync_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessageAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_GetMessageAsync_Guid_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessageAsync(Guid,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_GetMessageAsync_Guid_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetMessageAsync(Guid, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_GetMessageAsync_Guid_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets the message associated with the given <code data-dev-comment-type="paramref" class="paramref">id</code>.</p>
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_GetMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessageAsync(System.Guid,Kook.RequestOptions)">
+  GetMessageAsync(Guid, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the message associated with the given <code class="paramref">id</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;IMessage&gt; GetMessageAsync(Guid id, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Guid</span></span>
-        <span class="parametername">id</span>
-        <p><p>TThe ID of the message.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;
-        <p><p>The message gotten from either the cache or the download, or <code>null</code> if none is found.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.GetMessagesAsync(Guid%2CKook.Direction%2CSystem.Int32%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L119" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>TThe ID of the message.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;</dt>
+    <dd><p>The message gotten from either the cache or the download, or <code>null</code> if none is found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessagesAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessagesAsync(Guid,Kook.Direction,System.Int32,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetMessagesAsync(Guid, Direction, Int32, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)">
+  GetMessagesAsync(IMessage, Direction, int, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = 50, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Guid</span></span>
-        <span class="parametername">referenceMessageId</span>
-        <p><p>The ID of the starting message to get the messages from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Direction.html">Direction</a></span>
-        <span class="parametername">dir</span>
-        <p><p>The direction of the messages to be gotten from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">limit</span>
-        <p><p>The numbers of message to be gotten from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;
-        <p><p>Paged collection of messages.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Guid_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <see cref="!:IMessageChannel.GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions)"></see>.
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>referenceMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
+    <dd><p>The starting message to get the messages from.</p>
+</dd>
+    <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
+    <dd><p>The direction of the messages to be gotten from.</p>
+</dd>
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The numbers of message to be gotten from.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
+    <dd><p>Paged collection of messages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.GetMessagesAsync(Kook.IMessage%2CKook.Direction%2CSystem.Int32%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L137" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessagesAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetMessagesAsync(IMessage, Direction, Int32, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.RequestOptions)">
+  GetMessagesAsync(Guid, Direction, int, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = 50, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IMessage.html">IMessage</a></span>
-        <span class="parametername">referenceMessage</span>
-        <p><p>The starting message to get the messages from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.Direction.html">Direction</a></span>
-        <span class="parametername">dir</span>
-        <p><p>The direction of the messages to be gotten from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">limit</span>
-        <p><p>The numbers of message to be gotten from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;
-        <p><p>Paged collection of messages.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <see cref="!:IMessageChannel.GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions)"></see>.
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>referenceMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The ID of the starting message to get the messages from.</p>
+</dd>
+    <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
+    <dd><p>The direction of the messages to be gotten from.</p>
+</dd>
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The numbers of message to be gotten from.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
+    <dd><p>Paged collection of messages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.GetMessagesAsync(System.Int32%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L102" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessagesAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetMessagesAsync(Int32, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)">
+  GetMessagesAsync(int, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(int limit = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(int limit = 50, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">limit</span>
-        <p><p>The numbers of message to be gotten from.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IAsyncEnumerable</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;
-        <p><p>Paged collection of messages.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <see cref="!:IMessageChannel.GetMessagesAsync(int, CacheMode, RequestOptions)"></see>.
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The numbers of message to be gotten from.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
+    <dd><p>Paged collection of messages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_GetUser_System_UInt64_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.GetUser(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L276" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_GetUser_" data-uid="Kook.WebSocket.SocketDMChannel.GetUser*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketDMChannel.GetUser(System.UInt64)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_GetUser_System_UInt64_" class="expander" data-toggle="collapse">GetUser(UInt64)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_GetUser_System_UInt64_" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets a user in this channel from the provided <code data-dev-comment-type="paramref" class="paramref">id</code>.</p>
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketDMChannel.GetUser(System.UInt64)">
+  GetUser(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a user in this channel from the provided <code class="paramref">id</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SocketUser GetUser(ulong id)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></span>
-        <span class="parametername">id</span>
-        <p><p>The identifier of the user.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>
-        <p><p>A <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> object that is a recipient of this channel; otherwise <code>null</code>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_ModifyMessageAsync_Guid_Action_Kook_MessageProperties__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.ModifyMessageAsync(Guid%2CAction%7BKook.MessageProperties%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L247" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The identifier of the user.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a></dt>
+    <dd><p>A <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> object that is a recipient of this channel; otherwise <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_ModifyMessageAsync_" data-uid="Kook.WebSocket.SocketDMChannel.ModifyMessageAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_ModifyMessageAsync_Guid_Action_Kook_MessageProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.ModifyMessageAsync(Guid,Action{Kook.MessageProperties},Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_ModifyMessageAsync_Guid_Action_Kook_MessageProperties__Kook_RequestOptions_" class="expander" data-toggle="collapse">ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_ModifyMessageAsync_Guid_Action_Kook_MessageProperties__Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.ModifyMessageAsync(System.Guid,System.Action{Kook.MessageProperties},Kook.RequestOptions)">
+  ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Modifies a message.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task ModifyMessageAsync(Guid messageId, Action&lt;MessageProperties&gt; func, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Guid</span></span>
-        <span class="parametername">messageId</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Action</span>&lt;<a class="xref" href="Kook.MessageProperties.html">MessageProperties</a>&gt;</span>
-        <span class="parametername">func</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.SendCardAsync(Kook.ICard%2CKook.IQuote%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L243" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>messageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The identifier of the message that would be changed.</p>
+</dd>
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.MessageProperties.html">MessageProperties</a>&gt;</dt>
+    <dd><p>A delegate containing the properties to modify the message with.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous modification operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method modifies this message with the specified properties. To see an example of this
+method and what properties are available, please refer to <a class="xref" href="Kook.MessageProperties.html">MessageProperties</a>.</p>
+</div>
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_SendCardAsync_" data-uid="Kook.WebSocket.SocketDMChannel.SendCardAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendCardAsync(Kook.ICard,Kook.IQuote,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_RequestOptions_" class="expander" data-toggle="collapse">SendCardAsync(ICard, IQuote, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendCardAsync(Kook.ICard,Kook.IQuote,Kook.RequestOptions)">
+  SendCardAsync(ICard, IQuote, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardAsync(ICard card, IQuote quote = null, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ICard.html">ICard</a></span>
-        <span class="parametername">card</span>
-        <p><p>The card to be sent.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IQuote.html">IQuote</a></span>
-        <span class="parametername">quote</span>
-        <p><p>The message quote to be included. Used to reply to specific messages.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;
-        <p><p>A task that represents an asynchronous send operation for delivering the message. The task result
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>card</code> <a class="xref" href="Kook.ICard.html">ICard</a></dt>
+    <dd><p>The card to be sent.</p>
+</dd>
+    <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
+    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
+    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
 contains the identifier and timestamp of the sent message.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_SendCardsAsync_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.SendCardsAsync(IEnumerable%7BKook.ICard%7D%2CKook.IQuote%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L230" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_SendCardsAsync_" data-uid="Kook.WebSocket.SocketDMChannel.SendCardsAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_SendCardsAsync_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendCardsAsync(IEnumerable{Kook.ICard},Kook.IQuote,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_SendCardsAsync_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_" class="expander" data-toggle="collapse">SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_SendCardsAsync_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendCardsAsync(System.Collections.Generic.IEnumerable{Kook.ICard},Kook.IQuote,Kook.RequestOptions)">
+  SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardsAsync(IEnumerable&lt;ICard&gt; cards, IQuote quote = null, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</span>
-        <span class="parametername">cards</span>
-        <p><p>The cards to be sent.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IQuote.html">IQuote</a></span>
-        <span class="parametername">quote</span>
-        <p><p>The message quote to be included. Used to reply to specific messages.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;
-        <p><p>A task that represents an asynchronous send operation for delivering the message. The task result
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cards</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
+    <dd><p>The cards to be sent.</p>
+</dd>
+    <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
+    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
+    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
 contains the identifier and timestamp of the sent message.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.SendFileAsync(Kook.FileAttachment%2CKook.IQuote%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L204" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_SendFileAsync_" data-uid="Kook.WebSocket.SocketDMChannel.SendFileAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendFileAsync(Kook.FileAttachment,Kook.IQuote,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_" class="expander" data-toggle="collapse">SendFileAsync(FileAttachment, IQuote, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendFileAsync(Kook.FileAttachment,Kook.IQuote,Kook.RequestOptions)">
+  SendFileAsync(FileAttachment, IQuote, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(FileAttachment attachment, IQuote quote = null, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.FileAttachment.html">FileAttachment</a></span>
-        <span class="parametername">attachment</span>
-        <p><p>The attachment containing the file.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IQuote.html">IQuote</a></span>
-        <span class="parametername">quote</span>
-        <p><p>The message quote to be included. Used to reply to specific messages.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;
-        <p><p>A task that represents an asynchronous send operation for delivering the message. The task result
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attachment</code> <a class="xref" href="Kook.FileAttachment.html">FileAttachment</a></dt>
+    <dd><p>The attachment containing the file.</p>
+</dd>
+    <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
+    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
+    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
 contains the identifier and timestamp of the sent message.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions__remarks">Remarks</h5>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This method sends a file as if you are uploading a file directly from your Kook client.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_SendFileAsync_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.SendFileAsync(Stream%2CSystem.String%2CKook.AttachmentType%2CKook.IQuote%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L187" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_SendFileAsync_" data-uid="Kook.WebSocket.SocketDMChannel.SendFileAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_SendFileAsync_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendFileAsync(Stream,System.String,Kook.AttachmentType,Kook.IQuote,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_SendFileAsync_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" class="expander" data-toggle="collapse">SendFileAsync(Stream, String, AttachmentType, IQuote, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_SendFileAsync_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendFileAsync(System.IO.Stream,System.String,Kook.AttachmentType,Kook.IQuote,Kook.RequestOptions)">
+  SendFileAsync(Stream, string, AttachmentType, IQuote, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(Stream stream, string fileName = null, AttachmentType type = AttachmentType.File, IQuote quote = null, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Stream</span></span>
-        <span class="parametername">stream</span>
-        <p><p>The stream of the file.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">fileName</span>
-        <p><p>The name of the file.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></span>
-        <span class="parametername">type</span>
-        <p><p>The type of the file.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IQuote.html">IQuote</a></span>
-        <span class="parametername">quote</span>
-        <p><p>The message quote to be included. Used to reply to specific messages.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;
-        <p><p>A task that represents an asynchronous send operation for delivering the message. The task result
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The stream of the file.</p>
+</dd>
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the file.</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
+    <dd><p>The type of the file.</p>
+</dd>
+    <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
+    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
+    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
 contains the identifier and timestamp of the sent message.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_SendFileAsync_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions__remarks">Remarks</h5>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This method sends a file as if you are uploading a file directly from your Kook client.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.SendFileAsync(System.String%2CSystem.String%2CKook.AttachmentType%2CKook.IQuote%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L168" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_SendFileAsync_" data-uid="Kook.WebSocket.SocketDMChannel.SendFileAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendFileAsync(System.String,System.String,Kook.AttachmentType,Kook.IQuote,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" class="expander" data-toggle="collapse">SendFileAsync(String, String, AttachmentType, IQuote, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendFileAsync(System.String,System.String,Kook.AttachmentType,Kook.IQuote,Kook.RequestOptions)">
+  SendFileAsync(string, string, AttachmentType, IQuote, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(string path, string fileName = null, AttachmentType type = AttachmentType.File, IQuote quote = null, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">path</span>
-        <p><p>The file path of the file.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">fileName</span>
-        <p><p>The name of the file.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></span>
-        <span class="parametername">type</span>
-        <p><p>The type of the file.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IQuote.html">IQuote</a></span>
-        <span class="parametername">quote</span>
-        <p><p>The message quote to be included. Used to reply to specific messages.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;
-        <p><p>A task that represents an asynchronous send operation for delivering the message. The task result
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file path of the file.</p>
+</dd>
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the file.</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
+    <dd><p>The type of the file.</p>
+</dd>
+    <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
+    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
+    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
 contains the identifier and timestamp of the sent message.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketDMChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions__remarks">Remarks</h5>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This method sends a file as if you are uploading a file directly from your Kook client.</p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_SendTextAsync_System_String_Kook_IQuote_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.SendTextAsync(System.String%2CKook.IQuote%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L217" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_SendTextAsync_" data-uid="Kook.WebSocket.SocketDMChannel.SendTextAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_SendTextAsync_System_String_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendTextAsync(System.String,Kook.IQuote,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_SendTextAsync_System_String_Kook_IQuote_Kook_RequestOptions_" class="expander" data-toggle="collapse">SendTextAsync(String, IQuote, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_SendTextAsync_System_String_Kook_IQuote_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_SendTextAsync_System_String_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.SendTextAsync(System.String,Kook.IQuote,Kook.RequestOptions)">
+  SendTextAsync(string, IQuote, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sends a text message to this message channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendTextAsync(string text, IQuote quote = null, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">text</span>
-        <p><p>The message to be sent.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IQuote.html">IQuote</a></span>
-        <span class="parametername">quote</span>
-        <p><p>The message quote to be included. Used to reply to specific messages.</p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <span class="xref">Guid</span>&gt;&gt;
-        <p><p>A task that represents an asynchronous send operation for delivering the message. The task result
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message to be sent.</p>
+</dd>
+    <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
+    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
+    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
 contains the identifier and timestamp of the sent message.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_ToString.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L428" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_ToString_" data-uid="Kook.WebSocket.SocketDMChannel.ToString*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_ToString" data-uid="Kook.WebSocket.SocketDMChannel.ToString"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_ToString" class="expander" data-toggle="collapse">ToString()</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_ToString" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_ToString" data-uid="Kook.WebSocket.SocketDMChannel.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L428"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Returns the recipient user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_UpdateAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.UpdateAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L64" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketDMChannel_UpdateAsync_" data-uid="Kook.WebSocket.SocketDMChannel.UpdateAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.UpdateAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_UpdateAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">UpdateAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_UpdateAsync_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketDMChannel_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketDMChannel.UpdateAsync(Kook.RequestOptions)">
+  UpdateAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates this object's properties with its current state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override Task UpdateAsync(RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketChannel.html#Kook_WebSocket_SocketChannel_UpdateAsync_Kook_RequestOptions_">SocketChannel.UpdateAsync(RequestOptions)</a></div>
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_Kook_IDMChannel_Recipient.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.Kook%23IDMChannel%23Recipient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L305" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_WebSocket_SocketDMChannel_Kook_IDMChannel_Recipient_" data-uid="Kook.WebSocket.SocketDMChannel.Kook#IDMChannel#Recipient*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_Kook_IDMChannel_Recipient" data-uid="Kook.WebSocket.SocketDMChannel.Kook#IDMChannel#Recipient"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_Kook_IDMChannel_Recipient" class="expander" data-toggle="collapse">IDMChannel.Recipient</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_Kook_IDMChannel_Recipient" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets the recipient of all messages in this channel.</p>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents an asynchronous reloading operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketDMChannel_UpdateAsync_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING">
+  <h5>warning</h5>
+  <p>
+            This method will fetch the latest data from REST API,
+            and replace the current object's properties with the new data.
+        </p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IUser IDMChannel.Recipient { get; }</code></pre>
-  </div>
-
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.IUser.html">IUser</a>
-        <p><p>A user object that represents the other user in this channel.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IDMChannel.html#Kook_IDMChannel_Recipient">IDMChannel.Recipient</a></div>
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel_Kook_WebSocket_ISocketPrivateChannel_Recipients.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel.Kook%23WebSocket%23ISocketPrivateChannel%23Recipients%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L312" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_WebSocket_SocketDMChannel_Kook_WebSocket_ISocketPrivateChannel_Recipients_" data-uid="Kook.WebSocket.SocketDMChannel.Kook#WebSocket#ISocketPrivateChannel#Recipients*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketDMChannel_Kook_WebSocket_ISocketPrivateChannel_Recipients" data-uid="Kook.WebSocket.SocketDMChannel.Kook#WebSocket#ISocketPrivateChannel#Recipients"><a href="#collapsible-Kook_WebSocket_SocketDMChannel_Kook_WebSocket_ISocketPrivateChannel_Recipients" class="expander" data-toggle="collapse">ISocketPrivateChannel.Recipients</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketDMChannel_Kook_WebSocket_ISocketPrivateChannel_Recipients" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets the users that can access this channel.</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;SocketUser&gt; ISocketPrivateChannel.Recipients { get; }</code></pre>
-  </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>&gt;
-        <p><p>A read-only collection of users that can access this channel.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.WebSocket.ISocketPrivateChannel.html#Kook_WebSocket_ISocketPrivateChannel_Recipients">ISocketPrivateChannel.Recipients</a></div>
-  
-  
-  
-  
-  </div>
-  
-  
+
+
+
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketDMChannel.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketDMChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L10" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Channels/SocketDMChannel.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            Kook.Net (c) 2022-2023
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

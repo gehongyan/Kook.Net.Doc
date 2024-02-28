@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>语音推流 | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="语音推流 | Kook.Net 文档 ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/voice/sending-voice.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="语音推流需要 Opus 编码器的支持，要使用语音功能，请将 opus 原生库放在 Bot 运行目录内。"><meta property="og:title" content="语音推流 | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Guides.Voice.SendingVoice">
+
+<h2 id="前言">前言</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>KOOK 尚未正式公开面向 Bot 的语音连接与推流的 API，当前的实现基于 <a href="https://github.com/hank9999/kook-voice-API">hank9999/kook-voice-API</a> 进行开发，在此向 <a href="https://github.com/hank9999">hank9999</a>
+表示感谢。</p>
+<p>使用语音连接与推流的功能，视为认同<strong>开黑啦 V3 语音 API - 使用须知</strong>：</p>
+<p><strong>注意本 API 由抓包得来，API 可能会随时变动进而失效</strong>，
+<strong>您需要得知，使用此 API 会违反 <a href="https://www.kookapp.cn/protocol.html">KOOK 语音软件许可及服务协议</a> <code>3.2.3</code> 或 <code>3.2.5</code> 条款</strong>，
+<strong>同时会违反 <a href="https://developer.kookapp.cn/doc/privacy">KOOK 开发者隐私政策</a> <code>数据信息</code> 或 <code>滥用</code> 中的相关条款</strong></p>
+</div>
+<h2 id="安装">安装</h2>
+<p>语音推流需要 Opus 编码器的支持，要使用语音功能，请将 <code>opus</code> 原生库放在 Bot 运行目录内。</p>
+<p>.NET Framework 中，请将该原生库放在编译或发布的输出目录中，例如 <code>bin/Debug</code>；.NET (Core) 中，该目录应为 <code>csporj</code> 文件所在目录。</p>
+<p>Windows 开发者可以在<a href="https://github.com/gehongyan/Kook.Net/tree/master/voice-natives">此处</a> 下载预编译的二进制文件。</p>
+<p>Linux 开发者需要从源码编译 <a href="http://downloads.xiph.org/releases/opus/">Opus</a>，或通过包管理器进行安装。</p>
+<h2 id="加入语音频道">加入语音频道</h2>
+<p>语音推流前需要先加入语音频道，调用 <a class="xref" href="../../api/Kook.Audio.IAudioClient.html">IAudioClient</a> 上的 <a class="xref" href="../../api/Kook.IAudioChannel.html#Kook_IAudioChannel_ConnectAsync_">ConnectAsync</a>，该异步操作会返回一个 <a class="xref" href="../../api/Kook.Audio.IAudioClient.html">IAudioClient</a> 对象，用于后续的语音推流操作。</p>
+<pre><code class="lang-csharp" name="加入语音频道">// The command's Run Mode MUST be set to RunMode.Async, otherwise, being connected to a voice channel will block the gateway thread.
+[Command(&quot;join&quot;, RunMode = RunMode.Async)]
+public async Task JoinChannel(IVoiceChannel channel = null)
+{
+    // Get the audio channel
+    channel ??= (Context.User as IGuildUser)?.VoiceChannel;
+    // If you need to ensure the user's connected voice channel via Rest
+    // if (Context.User is IGuildUser guildUser)
+    //     channel ??= (await guildUser.GetConnectedVoiceChannelsAsync()).FirstOrDefault();
+    if (channel == null)
+    {
+        await Context.Channel.SendTextAsync(&quot;User must be in a voice channel, or a voice channel must be passed as an argument.&quot;);
+        return;
+    }
+
+    // For the next step with transmitting audio, you would want to pass this Audio Client in to a service.
+    _audioClient = await channel.ConnectAsync();
+}
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>改变语音状态的命令，例如加入或离开音频频道、推流时，应该使用 <a class="xref" href="../../api/Kook.Commands.RunMode.html">RunMode.Async</a>，这可以防止在客户端的默认配置中产生死锁的反馈循环。
+如果你能确保你的命令在与网关任务不同的任务中运行，那么也可以不需要 <code>RunMode.Async</code>。</p>
+</div>
+<p>加入语音频道后，客户端将保持与此频道的连接，直到被踢出频道、掉线、或其它被服务端通知需主动断开连接。</p>
+<p>应注意的是，语音连接是基于每个服务器创建的。在单个服务器中，Bot 只能启动一个音频连接。
+要在服务器内切换频道，需要在服务器的另一个语音频道上调用 <a class="xref" href="../../api/Kook.IAudioChannel.html#Kook_IAudioChannel_ConnectAsync_">ConnectAsync</a>。</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>KOOK 已对 Bot 禁用对多个服务器的语音频道同时推流的能力，在某个服务器上保持音频连接时，如果在另一个服务器上的某个语音频道中调用
+<a class="xref" href="../../api/Kook.IAudioChannel.html#Kook_IAudioChannel_ConnectAsync_">ConnectAsync</a>，或导致已有的音频链接被 KOOK 服务端中断。</p>
+</div>
+<h2 id="语音推流">语音推流</h2>
+<h3 id="通过-ffmpeg-转码">通过 FFmpeg 转码</h3>
+<p><a href="https://ffmpeg.org/">FFmpeg</a> 是一个开源的、高度多功能的音视频混合工具。这是传输音频前进行转码的推荐方式。</p>
+<p>在这之前，你需要安装 FFmpeg CLI，通常的做法是下载一个 FFmpeg 的版本，并将其放置在你的环境变量的 PATH 中（或者与 Bot 在同一位置，与
+opus 在同一位置），参见 <a href="https://ffmpeg.org/download.html">FFmpeg 的下载页面</a>，或使用操作系统相应的包管理器。</p>
+<p>首先，创建一个启动 FFmpeg 的 Process 进程对象，来将输入音频以 PCM 方式转码为 48kHz 采样率的字节流。</p>
+<pre><code class="lang-csharp" name="启动 FFmpeg">using Process ffmpeg = Process.Start(new ProcessStartInfo
+{
+    FileName = &quot;ffmpeg&quot;,
+    Arguments = $&quot;&quot;&quot;-hide_banner -loglevel panic -i &quot;{source}&quot; -ac 2 -f s16le -ar 48000 pipe:1&quot;&quot;&quot;,
+    UseShellExecute = false,
+    RedirectStandardOutput = true,
+});
+</code></pre>
+<p>该 ffmpeg 命令的参数中：</p>
+<ul>
+<li><code>-hide_banner</code>：用于隐藏启动时的版权和版本信息。</li>
+<li><code>-loglevel panic</code>：设置日志级别为 <code>panic</code>，只有最严重的错误才会被记录。</li>
+<li><code>-i {source}</code>：指定输入文件或流，<code>{source}</code> 是输入的变量，表示具体的文件路径或网络地址。</li>
+<li><code>-ac 2</code>：设置音频通道数量为 2，即立体声。</li>
+<li><code>-f s16le</code>：设置输出格式为 16 位有符号小端（Signed 16-bit Little-Endian）PCM（脉冲编码调制）音频。</li>
+<li><code>-ar 48000</code>：设置音频采样率为 48kHz。</li>
+<li><code>pipe:1</code>：将输出重定向到标准输出，以便在接下来的操作中由程序读取。</li>
+</ul>
+<h3 id="由-kooknet-进行编码推流">由 Kook.Net 进行编码推流</h3>
+<p>接下来，要向 KOOK 传输音频，需要由 <a class="xref" href="../../api/Kook.Audio.IAudioClient.html">IAudioClient</a> 创建一个 <a class="xref" href="../../api/Kook.Audio.AudioOutStream.html">AudioOutStream</a>，由于 ffmpeg 命令输出了 PCM
+音频，因此使用 <a class="xref" href="../../api/Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_CreatePcmStream_Kook_Audio_AudioApplication_System_Int32_System_Int32_System_Int32_">IAudioClient.CreatePcmStream</a>。</p>
+<p>最后，音频需要从 FFmpeg 的标准输出流传输到你的 AudioOutStream 对象中。
+根据你的业务需要，这个步骤中间可能会进行某些处理，但在大多数情况下，使用 <a href="https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync">Stream.CopyToAsync</a> 即可。</p>
+<p>如果你正在实现一个点歌机，你可能会希望等待音频停止播放后再继续播放下一首歌，等待 <code>AudioOutStream.FlushAsync</code>
+可以等待音频客户端的内部缓冲区清空。</p>
+<pre><code class="lang-csharp" name="音频推流">await using var output = ffmpeg.StandardOutput.BaseStream;
+await using var kook = _audioClient.CreatePcmStream(AudioApplication.Voice);
+try
+{
+    await output.CopyToAsync(kook, cancellationToken);
+}
+finally
+{
+    await kook.FlushAsync(cancellationToken);
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/voice/sending-voice.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

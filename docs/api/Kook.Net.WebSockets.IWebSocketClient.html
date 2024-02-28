@@ -1,565 +1,485 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IWebSocketClient
-   | Kook.Net &#25991;&#26723; </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IWebSocketClient
-   | Kook.Net &#25991;&#26723; ">
-    <meta name="generator" content="docfx 2.56.7.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>Interface IWebSocketClient | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IWebSocketClient | Kook.Net 文档 ">
+      
+      <meta name="description" content="Represents a generic WebSocket client.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_WebSockets_IWebSocketClient.md&amp;value=---%0Auid%3A%20Kook.Net.WebSockets.IWebSocketClient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="Represents a generic WebSocket client."><meta property="og:title" content="Interface IWebSocketClient | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kook.Net.WebSockets.IWebSocketClient">
-  <h1 id="Kook_Net_WebSockets_IWebSocketClient" data-uid="Kook.Net.WebSockets.IWebSocketClient">Interface IWebSocketClient
-  </h1>
-  <div class="markdown level0 summary"><p>Represents a generic WebSocket client.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
 
-  
-  
-  
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kook.Net.WebSockets.html">Kook.Net.WebSockets</a></h6>
-  <h6><strong>Assembly</strong>: Kook.Net.Core.dll</h6>
-  
-  <h5 id="Kook_Net_WebSockets_IWebSocketClient_syntax">Syntax</h5>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.Net.WebSockets.IWebSocketClient">
+
+
+
+  <h1 id="Kook_Net_WebSockets_IWebSocketClient" data-uid="Kook.Net.WebSockets.IWebSocketClient" class="text-break">
+Interface IWebSocketClient  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a>.<a class="xref" href="Kook.Net.html">Net</a>.<a class="xref" href="Kook.Net.WebSockets.html">WebSockets</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a generic WebSocket client.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IWebSocketClient : IDisposable</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h3 id="methods">Methods
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_WebSockets_IWebSocketClient_ConnectAsync_System_String_.md&amp;value=---%0Auid%3A%20Kook.Net.WebSockets.IWebSocketClient.ConnectAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L41" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Kook_Net_WebSockets_IWebSocketClient_ConnectAsync_" data-uid="Kook.Net.WebSockets.IWebSocketClient.ConnectAsync*"></a>
-  
-  <h4 id="Kook_Net_WebSockets_IWebSocketClient_ConnectAsync_System_String_" data-uid="Kook.Net.WebSockets.IWebSocketClient.ConnectAsync(System.String)"><a href="#collapsible-Kook_Net_WebSockets_IWebSocketClient_ConnectAsync_System_String_" class="expander" data-toggle="collapse">ConnectAsync(String)</a></h4>
-  
-  <div id="collapsible-Kook_Net_WebSockets_IWebSocketClient_ConnectAsync_System_String_" class="collapse in">
+
+  <h3 id="Kook_Net_WebSockets_IWebSocketClient_ConnectAsync_System_String_" data-uid="Kook.Net.WebSockets.IWebSocketClient.ConnectAsync(System.String)">
+  ConnectAsync(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Connects to the specified host.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task ConnectAsync(string host)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">host</span>
-        <p><p>The host to connect to. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p><p>A task that represents an asynchronous connect operation. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_WebSockets_IWebSocketClient_DisconnectAsync_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.Net.WebSockets.IWebSocketClient.DisconnectAsync(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L48" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>host</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The host to connect to.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents an asynchronous connect operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Net_WebSockets_IWebSocketClient_DisconnectAsync_" data-uid="Kook.Net.WebSockets.IWebSocketClient.DisconnectAsync*"></a>
-  
-  <h4 id="Kook_Net_WebSockets_IWebSocketClient_DisconnectAsync_System_Int32_" data-uid="Kook.Net.WebSockets.IWebSocketClient.DisconnectAsync(System.Int32)"><a href="#collapsible-Kook_Net_WebSockets_IWebSocketClient_DisconnectAsync_System_Int32_" class="expander" data-toggle="collapse">DisconnectAsync(Int32)</a></h4>
-  
-  <div id="collapsible-Kook_Net_WebSockets_IWebSocketClient_DisconnectAsync_System_Int32_" class="collapse in">
+
+  <h3 id="Kook_Net_WebSockets_IWebSocketClient_DisconnectAsync_System_Int32_" data-uid="Kook.Net.WebSockets.IWebSocketClient.DisconnectAsync(System.Int32)">
+  DisconnectAsync(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Disconnects from the host.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task DisconnectAsync(int closeCode = 1000)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">closeCode</span>
-        <p><p>The close code to be sent to the host. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p><p>A task that represents an asynchronous disconnect operation. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_WebSockets_IWebSocketClient_SendAsync_System_Byte___System_Int32_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20Kook.Net.WebSockets.IWebSocketClient.SendAsync(System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L58" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>closeCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The close code to be sent to the host.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents an asynchronous disconnect operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Net_WebSockets_IWebSocketClient_SendAsync_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SendAsync*"></a>
-  
-  <h4 id="Kook_Net_WebSockets_IWebSocketClient_SendAsync_System_Byte___System_Int32_System_Int32_System_Boolean_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SendAsync(System.Byte[],System.Int32,System.Int32,System.Boolean)"><a href="#collapsible-Kook_Net_WebSockets_IWebSocketClient_SendAsync_System_Byte___System_Int32_System_Int32_System_Boolean_" class="expander" data-toggle="collapse">SendAsync(Byte[], Int32, Int32, Boolean)</a></h4>
-  
-  <div id="collapsible-Kook_Net_WebSockets_IWebSocketClient_SendAsync_System_Byte___System_Int32_System_Int32_System_Boolean_" class="collapse in">
+
+  <h3 id="Kook_Net_WebSockets_IWebSocketClient_SendAsync_System_Byte___System_Int32_System_Int32_System_Boolean_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SendAsync(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+  SendAsync(byte[], int, int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sends a message to the host.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task SendAsync(byte[] data, int index, int count, bool isText)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</span>
-        <span class="parametername">data</span>
-        <p><p>The data to be sent. </p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">index</span>
-        <p><p>The index of the data to start sending from. </p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">count</span>
-        <p><p>The amount of data to send. </p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></span>
-        <span class="parametername">isText</span>
-        <p><p>Whether the data is text or binary. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p><p>A task that represents an asynchronous send operation. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_WebSockets_IWebSocketClient_SetCancelToken_CancellationToken_.md&amp;value=---%0Auid%3A%20Kook.Net.WebSockets.IWebSocketClient.SetCancelToken(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L34" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_Net_WebSockets_IWebSocketClient_SetCancelToken_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SetCancelToken*"></a>
-  
-  <h4 id="Kook_Net_WebSockets_IWebSocketClient_SetCancelToken_CancellationToken_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SetCancelToken(CancellationToken)"><a href="#collapsible-Kook_Net_WebSockets_IWebSocketClient_SetCancelToken_CancellationToken_" class="expander" data-toggle="collapse">SetCancelToken(CancellationToken)</a></h4>
-  
-  <div id="collapsible-Kook_Net_WebSockets_IWebSocketClient_SetCancelToken_CancellationToken_" class="collapse in">
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The data to be sent.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the data to start sending from.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The amount of data to send.</p>
+</dd>
+    <dt><code>isText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the data is text or binary.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents an asynchronous send operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_WebSockets_IWebSocketClient_SetCancellationToken_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SetCancellationToken*"></a>
+
+  <h3 id="Kook_Net_WebSockets_IWebSocketClient_SetCancellationToken_System_Threading_CancellationToken_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SetCancellationToken(System.Threading.CancellationToken)">
+  SetCancellationToken(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets the cancellation token for this client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void SetCancelToken(CancellationToken cancelToken)</code></pre>
+    <pre><code class="lang-csharp hljs">void SetCancellationToken(CancellationToken cancellationToken)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">CancellationToken</span></span>
-        <span class="parametername">cancelToken</span>
-        <p><p>The cancellation token to be used. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_WebSockets_IWebSocketClient_SetHeader_System_String_System_String_.md&amp;value=---%0Auid%3A%20Kook.Net.WebSockets.IWebSocketClient.SetHeader(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L28" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token to be used.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Net_WebSockets_IWebSocketClient_SetHeader_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SetHeader*"></a>
-  
-  <h4 id="Kook_Net_WebSockets_IWebSocketClient_SetHeader_System_String_System_String_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SetHeader(System.String,System.String)"><a href="#collapsible-Kook_Net_WebSockets_IWebSocketClient_SetHeader_System_String_System_String_" class="expander" data-toggle="collapse">SetHeader(String, String)</a></h4>
-  
-  <div id="collapsible-Kook_Net_WebSockets_IWebSocketClient_SetHeader_System_String_System_String_" class="collapse in">
+
+  <h3 id="Kook_Net_WebSockets_IWebSocketClient_SetHeader_System_String_System_String_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SetHeader(System.String,System.String)">
+  SetHeader(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets a header to be sent with the future requests.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void SetHeader(string key, string value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">key</span>
-        <p><p>The field name of the header. </p>
-</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">value</span>
-        <p><p>The value of the header. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="events">Events
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The field name of the header.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value of the header.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_WebSockets_IWebSocketClient_SetKeepAliveInterval_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SetKeepAliveInterval*"></a>
+
+  <h3 id="Kook_Net_WebSockets_IWebSocketClient_SetKeepAliveInterval_System_TimeSpan_" data-uid="Kook.Net.WebSockets.IWebSocketClient.SetKeepAliveInterval(System.TimeSpan)">
+  SetKeepAliveInterval(TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_WebSockets_IWebSocketClient_BinaryMessage.md&amp;value=---%0Auid%3A%20Kook.Net.WebSockets.IWebSocketClient.BinaryMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L11" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  
-  <h4 id="Kook_Net_WebSockets_IWebSocketClient_BinaryMessage" data-uid="Kook.Net.WebSockets.IWebSocketClient.BinaryMessage"><a href="#collapsible-Kook_Net_WebSockets_IWebSocketClient_BinaryMessage" class="expander" data-toggle="collapse">BinaryMessage</a></h4>
-  
-  <div id="collapsible-Kook_Net_WebSockets_IWebSocketClient_BinaryMessage" class="collapse in">
+
+  <div class="markdown level1 summary"><p>Sets the keep-alive interval for this client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetKeepAliveInterval(TimeSpan keepAliveInterval)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>keepAliveInterval</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The keep-alive interval to be used.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_Net_WebSockets_IWebSocketClient_SetKeepAliveInterval_System_TimeSpan__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If this method is not called, the default keep-alive interval will be
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.websockets.websocket.defaultkeepaliveinterval">DefaultKeepAliveInterval</a>.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Kook_Net_WebSockets_IWebSocketClient_BinaryMessage" data-uid="Kook.Net.WebSockets.IWebSocketClient.BinaryMessage">
+  BinaryMessage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Fired when a binary message is received.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">event Func&lt;byte[], int, int, Task&gt; BinaryMessage</code></pre>
   </div>
 
-  
-  
-  
-  
-  
-  <h5 class="eventType">Event Type</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Func</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>, <span class="xref">Task</span>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_WebSockets_IWebSocketClient_Closed.md&amp;value=---%0Auid%3A%20Kook.Net.WebSockets.IWebSocketClient.Closed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L21" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  
-  <h4 id="Kook_Net_WebSockets_IWebSocketClient_Closed" data-uid="Kook.Net.WebSockets.IWebSocketClient.Closed"><a href="#collapsible-Kook_Net_WebSockets_IWebSocketClient_Closed" class="expander" data-toggle="collapse">Closed</a></h4>
-  
-  <div id="collapsible-Kook_Net_WebSockets_IWebSocketClient_Closed" class="collapse in">
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Kook_Net_WebSockets_IWebSocketClient_Closed" data-uid="Kook.Net.WebSockets.IWebSocketClient.Closed">
+  Closed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Fired when the WebSocket connection is closed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">event Func&lt;Exception, Task&gt; Closed</code></pre>
   </div>
 
-  
-  
-  
-  
-  
-  <h5 class="eventType">Event Type</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Func</span>&lt;<span class="xref">Exception</span>, <span class="xref">Task</span>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_WebSockets_IWebSocketClient_TextMessage.md&amp;value=---%0Auid%3A%20Kook.Net.WebSockets.IWebSocketClient.TextMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L16" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  
-  <h4 id="Kook_Net_WebSockets_IWebSocketClient_TextMessage" data-uid="Kook.Net.WebSockets.IWebSocketClient.TextMessage"><a href="#collapsible-Kook_Net_WebSockets_IWebSocketClient_TextMessage" class="expander" data-toggle="collapse">TextMessage</a></h4>
-  
-  <div id="collapsible-Kook_Net_WebSockets_IWebSocketClient_TextMessage" class="collapse in">
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Kook_Net_WebSockets_IWebSocketClient_TextMessage" data-uid="Kook.Net.WebSockets.IWebSocketClient.TextMessage">
+  TextMessage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Fired when a text message is received.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">event Func&lt;string, Task&gt; TextMessage</code></pre>
   </div>
 
-  
-  
-  
-  
-  
-  <h5 class="eventType">Event Type</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Func</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">Task</span>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_WebSockets_IWebSocketClient.md&amp;value=---%0Auid%3A%20Kook.Net.WebSockets.IWebSocketClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L6" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Net/WebSockets/IWebSocketClient.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            Kook.Net (c) 2022-2023
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

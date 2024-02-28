@@ -1,1115 +1,872 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ParagraphStructBuilder
-   | Kook.Net &#25991;&#26723; </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ParagraphStructBuilder
-   | Kook.Net &#25991;&#26723; ">
-    <meta name="generator" content="docfx 2.56.7.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>Class ParagraphStructBuilder | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ParagraphStructBuilder | Kook.Net 文档 ">
+      
+      <meta name="description" content="An element builder to build a .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="An element builder to build a ParagraphStruct."><meta property="og:title" content="Class ParagraphStructBuilder | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kook.ParagraphStructBuilder">
-  <h1 id="Kook_ParagraphStructBuilder" data-uid="Kook.ParagraphStructBuilder">Class ParagraphStructBuilder
+
+        <article data-uid="Kook.ParagraphStructBuilder">
+
+
+
+  <h1 id="Kook_ParagraphStructBuilder" data-uid="Kook.ParagraphStructBuilder" class="text-break">
+Class ParagraphStructBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
-  <div class="markdown level0 summary"><p>An element builder to build a <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>.</p>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An element builder to build a <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
+  <div class="markdown conceptual"></div>
 
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">ParagraphStructBuilder</span></div>
-  </div>
-  
-  
-  
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kook.html">Kook</a></h6>
-  <h6><strong>Assembly</strong>: Kook.Net.Core.dll</h6>
-  
-  <h5 id="Kook_ParagraphStructBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ParagraphStructBuilder : object, IElementBuilder, IEquatable&lt;ParagraphStructBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ParagraphStructBuilder : IElementBuilder, IEquatable&lt;ParagraphStructBuilder&gt;</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder__ctor.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L31" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ParagraphStructBuilder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
   <a id="Kook_ParagraphStructBuilder__ctor_" data-uid="Kook.ParagraphStructBuilder.#ctor*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder__ctor" data-uid="Kook.ParagraphStructBuilder.#ctor"><a href="#collapsible-Kook_ParagraphStructBuilder__ctor" class="expander" data-toggle="collapse">ParagraphStructBuilder()</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder__ctor" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder__ctor" data-uid="Kook.ParagraphStructBuilder.#ctor">
+  ParagraphStructBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ParagraphStructBuilder()</code></pre>
   </div>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder__ctor_System_Int32_List_Kook_IElementBuilder__.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.%23ctor(System.Int32%2CList%7BKook.IElementBuilder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L39" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_ParagraphStructBuilder__ctor_" data-uid="Kook.ParagraphStructBuilder.#ctor*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder__ctor_System_Int32_List_Kook_IElementBuilder__" data-uid="Kook.ParagraphStructBuilder.#ctor(System.Int32,List{Kook.IElementBuilder})"><a href="#collapsible-Kook_ParagraphStructBuilder__ctor_System_Int32_List_Kook_IElementBuilder__" class="expander" data-toggle="collapse">ParagraphStructBuilder(Int32, List&lt;IElementBuilder&gt;)</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder__ctor_System_Int32_List_Kook_IElementBuilder__" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder__ctor_System_Int32_System_Collections_Generic_List_Kook_IElementBuilder__" data-uid="Kook.ParagraphStructBuilder.#ctor(System.Int32,System.Collections.Generic.List{Kook.IElementBuilder})">
+  ParagraphStructBuilder(int, List&lt;IElementBuilder&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ParagraphStructBuilder(int columnCount, List&lt;IElementBuilder&gt; fields = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">columnCount</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">List</span>&lt;<a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>&gt;</span>
-        <span class="parametername">fields</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="fields">Fields
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>columnCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>fields</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Kook_ParagraphStructBuilder_MaxColumnCount" data-uid="Kook.ParagraphStructBuilder.MaxColumnCount">
+  MaxColumnCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_MaxColumnCount.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.MaxColumnCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L26" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  
-  <h4 id="Kook_ParagraphStructBuilder_MaxColumnCount" data-uid="Kook.ParagraphStructBuilder.MaxColumnCount"><a href="#collapsible-Kook_ParagraphStructBuilder_MaxColumnCount" class="expander" data-toggle="collapse">MaxColumnCount</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_MaxColumnCount" class="collapse in">
+
   <div class="markdown level1 summary"><p>Returns the maximum number of columns allowed by Kook.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int MaxColumnCount = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int MaxColumnCount = 3</code></pre>
   </div>
 
-  
-  
-  
-  <h5 class="fieldValue">Field Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_MaxFieldCount.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.MaxFieldCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L16" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  
-  <h4 id="Kook_ParagraphStructBuilder_MaxFieldCount" data-uid="Kook.ParagraphStructBuilder.MaxFieldCount"><a href="#collapsible-Kook_ParagraphStructBuilder_MaxFieldCount" class="expander" data-toggle="collapse">MaxFieldCount</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_MaxFieldCount" class="collapse in">
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Kook_ParagraphStructBuilder_MaxFieldCount" data-uid="Kook.ParagraphStructBuilder.MaxFieldCount">
+  MaxFieldCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Returns the maximum number of fields allowed by Kook.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int MaxFieldCount = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int MaxFieldCount = 50</code></pre>
   </div>
 
-  
-  
-  
-  <h5 class="fieldValue">Field Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_MinColumnCount.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.MinColumnCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L21" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  
-  <h4 id="Kook_ParagraphStructBuilder_MinColumnCount" data-uid="Kook.ParagraphStructBuilder.MinColumnCount"><a href="#collapsible-Kook_ParagraphStructBuilder_MinColumnCount" class="expander" data-toggle="collapse">MinColumnCount</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_MinColumnCount" class="collapse in">
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Kook_ParagraphStructBuilder_MinColumnCount" data-uid="Kook.ParagraphStructBuilder.MinColumnCount">
+  MinColumnCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Returns the minimum number of columns allowed by Kook.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int MinColumnCount = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int MinColumnCount = 1</code></pre>
   </div>
 
-  
-  
-  
-  <h5 class="fieldValue">Field Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_ColumnCount.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.ColumnCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L62" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Kook_ParagraphStructBuilder_ColumnCount_" data-uid="Kook.ParagraphStructBuilder.ColumnCount*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_ColumnCount" data-uid="Kook.ParagraphStructBuilder.ColumnCount"><a href="#collapsible-Kook_ParagraphStructBuilder_ColumnCount" class="expander" data-toggle="collapse">ColumnCount</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_ColumnCount" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_ColumnCount" data-uid="Kook.ParagraphStructBuilder.ColumnCount">
+  ColumnCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the number of columns of the paragraph.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int ColumnCount { get; set; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>
-        <p><p>An int that represents the number of columns of the paragraph.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_Fields.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.Fields%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L91" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An int that represents the number of columns of the paragraph.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">value</code> is less than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MinColumnCount">MinColumnCount</a> or greater than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxColumnCount">MaxColumnCount</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_ParagraphStructBuilder_Fields_" data-uid="Kook.ParagraphStructBuilder.Fields*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_Fields" data-uid="Kook.ParagraphStructBuilder.Fields"><a href="#collapsible-Kook_ParagraphStructBuilder_Fields" class="expander" data-toggle="collapse">Fields</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_Fields" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_Fields" data-uid="Kook.ParagraphStructBuilder.Fields">
+  Fields
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the fields of the paragraph.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public List&lt;IElementBuilder&gt; Fields { get; set; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">List</span>&lt;<a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>&gt;
-        <p><p>A <see cref="!:List&lt;IElementBuilder>"></see> that represents the fields of the paragraph.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_Type.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L51" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> that represents the fields of the paragraph.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The <code class="paramref">value</code> is <code>null</code>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">value</code> contains more than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxFieldCount">MaxFieldCount</a> elements.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <code class="paramref">value</code> contains an element that is neither a <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> nor a <a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_ParagraphStructBuilder_Type_" data-uid="Kook.ParagraphStructBuilder.Type*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_Type" data-uid="Kook.ParagraphStructBuilder.Type"><a href="#collapsible-Kook_ParagraphStructBuilder_Type" class="expander" data-toggle="collapse">Type</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_Type" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_Type" data-uid="Kook.ParagraphStructBuilder.Type">
+  Type
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the type of the element that this builder builds.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ElementType Type { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ElementType.html">ElementType</a>
-        <p><p>An <a class="xref" href="Kook.ElementType.html">ElementType</a> that represents the type of element that this builder builds.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IElementBuilder.html#Kook_IElementBuilder_Type">IElementBuilder.Type</a></div>
-  
-  
-  
-  
-  </div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_AddField_Kook_KMarkdownElementBuilder_.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.AddField(Kook.KMarkdownElementBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L165" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ElementType.html">ElementType</a></dt>
+    <dd><p>An <a class="xref" href="Kook.ElementType.html">ElementType</a> that represents the type of element that this builder builds.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Kook_ParagraphStructBuilder_AddField_" data-uid="Kook.ParagraphStructBuilder.AddField*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_AddField_Kook_KMarkdownElementBuilder_" data-uid="Kook.ParagraphStructBuilder.AddField(Kook.KMarkdownElementBuilder)"><a href="#collapsible-Kook_ParagraphStructBuilder_AddField_Kook_KMarkdownElementBuilder_" class="expander" data-toggle="collapse">AddField(KMarkdownElementBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_AddField_Kook_KMarkdownElementBuilder_" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_AddField_Kook_KMarkdownElementBuilder_" data-uid="Kook.ParagraphStructBuilder.AddField(Kook.KMarkdownElementBuilder)">
+  AddField(KMarkdownElementBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Adds a field to the paragraph.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ParagraphStructBuilder AddField(KMarkdownElementBuilder field)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a></span>
-        <span class="parametername">field</span>
-        <p><p>A <a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a> that represents the field to add.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_AddField_Kook_PlainTextElementBuilder_.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.AddField(Kook.PlainTextElementBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L142" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>field</code> <a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a></dt>
+    <dd><p>A <a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a> that represents the field to add.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The addition operation will result in a field count greater than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxFieldCount">MaxFieldCount</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_ParagraphStructBuilder_AddField_" data-uid="Kook.ParagraphStructBuilder.AddField*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_AddField_Kook_PlainTextElementBuilder_" data-uid="Kook.ParagraphStructBuilder.AddField(Kook.PlainTextElementBuilder)"><a href="#collapsible-Kook_ParagraphStructBuilder_AddField_Kook_PlainTextElementBuilder_" class="expander" data-toggle="collapse">AddField(PlainTextElementBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_AddField_Kook_PlainTextElementBuilder_" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_AddField_Kook_PlainTextElementBuilder_" data-uid="Kook.ParagraphStructBuilder.AddField(Kook.PlainTextElementBuilder)">
+  AddField(PlainTextElementBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Adds a field to the paragraph.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ParagraphStructBuilder AddField(PlainTextElementBuilder field)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a></span>
-        <span class="parametername">field</span>
-        <p><p>A <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> that represents the field to add.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_AddField__1_Action___0__.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.AddField%60%601(Action%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L188" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>field</code> <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a></dt>
+    <dd><p>A <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> that represents the field to add.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The addition operation will result in a field count greater than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxFieldCount">MaxFieldCount</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_ParagraphStructBuilder_AddField_" data-uid="Kook.ParagraphStructBuilder.AddField*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_AddField__1_Action___0__" data-uid="Kook.ParagraphStructBuilder.AddField``1(Action{``0})"><a href="#collapsible-Kook_ParagraphStructBuilder_AddField__1_Action___0__" class="expander" data-toggle="collapse">AddField&lt;T&gt;(Action&lt;T&gt;)</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_AddField__1_Action___0__" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_AddField__1_System_Action___0__" data-uid="Kook.ParagraphStructBuilder.AddField``1(System.Action{``0})">
+  AddField&lt;T&gt;(Action&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Adds a field to the paragraph.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ParagraphStructBuilder AddField&lt;T&gt;(Action&lt;T&gt; action = null)
-    where T : IElementBuilder, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public ParagraphStructBuilder AddField&lt;T&gt;(Action&lt;T&gt; action = null) where T : IElementBuilder, new()</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">Action</span>&lt;T&gt;</span>
-        <span class="parametername">action</span>
-        <p><p>The action to create a builder of a <a class="xref" href="Kook.KMarkdownElement.html">KMarkdownElement</a>, which will be added to the paragraph.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="parametername">T</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_Build.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L216" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The action to create a builder of a <a class="xref" href="Kook.KMarkdownElement.html">KMarkdownElement</a>, which will be added to the paragraph.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The addition operation will result in a field count greater than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxFieldCount">MaxFieldCount</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_ParagraphStructBuilder_Build_" data-uid="Kook.ParagraphStructBuilder.Build*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_Build" data-uid="Kook.ParagraphStructBuilder.Build"><a href="#collapsible-Kook_ParagraphStructBuilder_Build" class="expander" data-toggle="collapse">Build()</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_Build" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_Build" data-uid="Kook.ParagraphStructBuilder.Build">
+  Build()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Builds the <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> into a <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ParagraphStruct Build()</code></pre>
   </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>
-        <p><p>A <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a> represents the built element object.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_Equals_Kook_ParagraphStructBuilder_.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.Equals(Kook.ParagraphStructBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L247" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a></dt>
+    <dd><p>A <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a> represents the built element object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_ParagraphStructBuilder_Equals_" data-uid="Kook.ParagraphStructBuilder.Equals*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_Equals_Kook_ParagraphStructBuilder_" data-uid="Kook.ParagraphStructBuilder.Equals(Kook.ParagraphStructBuilder)"><a href="#collapsible-Kook_ParagraphStructBuilder_Equals_Kook_ParagraphStructBuilder_" class="expander" data-toggle="collapse">Equals(ParagraphStructBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_Equals_Kook_ParagraphStructBuilder_" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_Equals_Kook_ParagraphStructBuilder_" data-uid="Kook.ParagraphStructBuilder.Equals(Kook.ParagraphStructBuilder)">
+  Equals(ParagraphStructBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Equals(ParagraphStructBuilder paragraphStructBuilder)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></span>
-        <span class="parametername">paragraphStructBuilder</span>
-        <p><p>The <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> to compare with the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>; otherwise, <code>false</code>.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L241" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>paragraphStructBuilder</code> <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></dt>
+    <dd><p>The <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> to compare with the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_ParagraphStructBuilder_Equals_" data-uid="Kook.ParagraphStructBuilder.Equals*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_Equals_System_Object_" data-uid="Kook.ParagraphStructBuilder.Equals(System.Object)"><a href="#collapsible-Kook_ParagraphStructBuilder_Equals_System_Object_" class="expander" data-toggle="collapse">Equals(Object)</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_Equals_System_Object_" class="collapse in">
-  <div class="markdown level1 summary"><p>Determines whether the specified <see cref="!:System.Object"></see> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
+
+  <h3 id="Kook_ParagraphStructBuilder_Equals_System_Object_" data-uid="Kook.ParagraphStructBuilder.Equals(System.Object)">
+  Equals(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></span>
-        <span class="parametername">obj</span>
-        <p><p>The <see cref="!:System.Object"></see> to compare with the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <see cref="!:System.Object"></see> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>; otherwise, <code>false</code>. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_GetHashCode.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L262" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to compare with the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_ParagraphStructBuilder_GetHashCode_" data-uid="Kook.ParagraphStructBuilder.GetHashCode*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_GetHashCode" data-uid="Kook.ParagraphStructBuilder.GetHashCode"><a href="#collapsible-Kook_ParagraphStructBuilder_GetHashCode" class="expander" data-toggle="collapse">GetHashCode()</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_GetHashCode" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_ParagraphStructBuilder_GetHashCode" data-uid="Kook.ParagraphStructBuilder.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
   </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_WithColumnCount_System_Int32_.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.WithColumnCount(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L124" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_ParagraphStructBuilder_WithColumnCount_" data-uid="Kook.ParagraphStructBuilder.WithColumnCount*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_WithColumnCount_System_Int32_" data-uid="Kook.ParagraphStructBuilder.WithColumnCount(System.Int32)"><a href="#collapsible-Kook_ParagraphStructBuilder_WithColumnCount_System_Int32_" class="expander" data-toggle="collapse">WithColumnCount(Int32)</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_WithColumnCount_System_Int32_" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_WithColumnCount_System_Int32_" data-uid="Kook.ParagraphStructBuilder.WithColumnCount(System.Int32)">
+  WithColumnCount(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Sets the number of columns of the paragraph.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ParagraphStructBuilder WithColumnCount(int count)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></span>
-        <span class="parametername">count</span>
-        <p><p>An int that represents the number of columns of the paragraph.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>
-        <p><p>The current builder.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="operators">Operators
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_op_Equality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.op_Equality(Kook.ParagraphStructBuilder%2CKook.ParagraphStructBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L226" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An int that represents the number of columns of the paragraph.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></dt>
+    <dd><p>The current builder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
   <a id="Kook_ParagraphStructBuilder_op_Equality_" data-uid="Kook.ParagraphStructBuilder.op_Equality*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_op_Equality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_" data-uid="Kook.ParagraphStructBuilder.op_Equality(Kook.ParagraphStructBuilder,Kook.ParagraphStructBuilder)"><a href="#collapsible-Kook_ParagraphStructBuilder_op_Equality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_" class="expander" data-toggle="collapse">Equality(ParagraphStructBuilder, ParagraphStructBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_op_Equality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_op_Equality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_" data-uid="Kook.ParagraphStructBuilder.op_Equality(Kook.ParagraphStructBuilder,Kook.ParagraphStructBuilder)">
+  operator ==(ParagraphStructBuilder, ParagraphStructBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator ==(ParagraphStructBuilder left, ParagraphStructBuilder right)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></span>
-        <span class="parametername">left</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></span>
-        <span class="parametername">right</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>; otherwise, <code>false</code>. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_op_Inequality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.op_Inequality(Kook.ParagraphStructBuilder%2CKook.ParagraphStructBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L233" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_ParagraphStructBuilder_op_Inequality_" data-uid="Kook.ParagraphStructBuilder.op_Inequality*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_op_Inequality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_" data-uid="Kook.ParagraphStructBuilder.op_Inequality(Kook.ParagraphStructBuilder,Kook.ParagraphStructBuilder)"><a href="#collapsible-Kook_ParagraphStructBuilder_op_Inequality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_" class="expander" data-toggle="collapse">Inequality(ParagraphStructBuilder, ParagraphStructBuilder)</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_op_Inequality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_" class="collapse in">
+
+  <h3 id="Kook_ParagraphStructBuilder_op_Inequality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_" data-uid="Kook.ParagraphStructBuilder.op_Inequality(Kook.ParagraphStructBuilder,Kook.ParagraphStructBuilder)">
+  operator !=(ParagraphStructBuilder, ParagraphStructBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is not equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator !=(ParagraphStructBuilder left, ParagraphStructBuilder right)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></span>
-        <span class="parametername">left</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></span>
-        <span class="parametername">right</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p><p><code>true</code> if the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is not equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>; otherwise, <code>false</code>. </p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder_Kook_IElementBuilder_Build.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder.Kook%23IElementBuilder%23Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L220" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_ParagraphStructBuilder_Kook_IElementBuilder_Build_" data-uid="Kook.ParagraphStructBuilder.Kook#IElementBuilder#Build*"></a>
-  
-  <h4 id="Kook_ParagraphStructBuilder_Kook_IElementBuilder_Build" data-uid="Kook.ParagraphStructBuilder.Kook#IElementBuilder#Build"><a href="#collapsible-Kook_ParagraphStructBuilder_Kook_IElementBuilder_Build" class="expander" data-toggle="collapse">IElementBuilder.Build()</a></h4>
-  
-  <div id="collapsible-Kook_ParagraphStructBuilder_Kook_IElementBuilder_Build" class="collapse in">
-  <div class="markdown level1 summary"><p>Builds the <a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a> into an <a class="xref" href="Kook.IElement.html">IElement</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a></dt>
+    <dd></dd>
+  </dl>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IElement IElementBuilder.Build()</code></pre>
-  </div>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is not equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.IElement.html">IElement</a>
-        <p><p>An <a class="xref" href="Kook.IElement.html">IElement</a> represents the built element object.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IElementBuilder.html#Kook_IElementBuilder_Build">IElementBuilder.Build()</a></div>
-  
-  
-  
-  
-  </div>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_ParagraphStructBuilder.md&amp;value=---%0Auid%3A%20Kook.ParagraphStructBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L8" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            Kook.Net (c) 2022-2023
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

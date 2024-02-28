@@ -1,101 +1,140 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SocketGuildUser
-   | Kook.Net &#25991;&#26723; </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SocketGuildUser
-   | Kook.Net &#25991;&#26723; ">
-    <meta name="generator" content="docfx 2.56.7.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net &#25991;&#26723;">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>Class SocketGuildUser | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SocketGuildUser | Kook.Net 文档 ">
+      
+      <meta name="description" content="Represents a WebSocket-based guild user.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="Represents a WebSocket-based guild user."><meta property="og:title" content="Class SocketGuildUser | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kook.WebSocket.SocketGuildUser">
-  <h1 id="Kook_WebSocket_SocketGuildUser" data-uid="Kook.WebSocket.SocketGuildUser">Class SocketGuildUser
-  </h1>
-  <div class="markdown level0 summary"><p>Represents a WebSocket-based guild user.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
 
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="Kook.WebSocket.SocketEntity-1.html">SocketEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</div>
-    <div class="level2"><a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a></div>
-    <div class="level3"><span class="xref">SocketGuildUser</span></div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.WebSocket.SocketGuildUser">
+
+
+
+  <h1 id="Kook_WebSocket_SocketGuildUser" data-uid="Kook.WebSocket.SocketGuildUser" class="text-break">
+Class SocketGuildUser  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a>.<a class="xref" href="Kook.WebSocket.html">WebSocket</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
-  
-  
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <div class="markdown summary"><p>Represents a WebSocket-based guild user.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SocketGuildUser : SocketUser, IGuildUser, IUser, IEntity&lt;ulong&gt;, IMentionable, IPresence, IVoiceState, IUpdateable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Kook.WebSocket.SocketEntity-1.html">SocketEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</div>
+      <div><a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a></div>
+      <div><span class="xref">SocketGuildUser</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Kook.IGuildUser.html">IGuildUser</a></div>
+      <div><a class="xref" href="Kook.IUser.html">IUser</a></div>
+      <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</div>
+      <div><a class="xref" href="Kook.IMentionable.html">IMentionable</a></div>
+      <div><a class="xref" href="Kook.IPresence.html">IPresence</a></div>
+      <div><a class="xref" href="Kook.IVoiceState.html">IVoiceState</a></div>
+      <div><a class="xref" href="Kook.IUpdateable.html">IUpdateable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_IdentifyNumber">SocketUser.IdentifyNumber</a>
     </div>
@@ -115,7 +154,7 @@
       <a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_GetIntimacyAsync_Kook_RequestOptions_">SocketUser.GetIntimacyAsync(RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_UpdateIntimacyAsync_Action_Kook_IntimacyProperties__Kook_RequestOptions_">SocketUser.UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt;, RequestOptions)</a>
+      <a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_UpdateIntimacyAsync_System_Action_Kook_IntimacyProperties__Kook_RequestOptions_">SocketUser.UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt;, RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_BlockAsync_Kook_RequestOptions_">SocketUser.BlockAsync(RequestOptions)</a>
@@ -133,2527 +172,1828 @@
       <a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_ToString">SocketUser.ToString()</a>
     </div>
     <div>
-      <a class="xref" href="Kook.WebSocket.SocketEntity-1.html#Kook_WebSocket_SocketEntity_1_Id">SocketEntity&lt;UInt64&gt;.Id</a>
+      <a class="xref" href="Kook.WebSocket.SocketEntity-1.html#Kook_WebSocket_SocketEntity_1_Id">SocketEntity&lt;ulong&gt;.Id</a>
     </div>
-  </div>
-  
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kook.WebSocket.html">Kook.WebSocket</a></h6>
-  <h6><strong>Assembly</strong>: Kook.Net.WebSocket.dll</h6>
-  
-  <h5 id="Kook_WebSocket_SocketGuildUser_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SocketGuildUser : SocketUser, IEntity&lt;ulong&gt;, IGuildUser, IUser, IEntity&lt;ulong&gt;, IMentionable, IPresence, IVoiceState, IUpdateable</code></pre>
-  </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
 
-  
-  
-  
-  
-  <h3 id="properties">Properties
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_ActiveAt.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.ActiveAt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L41" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_BanAsync_Kook_IGuildUser_System_Int32_System_String_Kook_RequestOptions_">UserExtensions.BanAsync(IGuildUser, int, string, RequestOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.Format.html#Kook_Format_UsernameAndIdentifyNumber_Kook_IUser_System_Boolean_">Format.UsernameAndIdentifyNumber(IUser, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardAsync_Kook_IUser_Kook_ICard_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardAsync(IUser, ICard, IQuote, RequestOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardsAsync_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardsAsync(IUser, IEnumerable&lt;ICard&gt;, IQuote, RequestOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, FileAttachment, IQuote, RequestOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, Stream, string, AttachmentType, IQuote, RequestOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, string, string, AttachmentType, IQuote, RequestOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendTextAsync_Kook_IUser_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendTextAsync(IUser, string, IQuote, RequestOptions)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Kook_WebSocket_SocketGuildUser_ActiveAt_" data-uid="Kook.WebSocket.SocketGuildUser.ActiveAt*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_ActiveAt" data-uid="Kook.WebSocket.SocketGuildUser.ActiveAt"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_ActiveAt" class="expander" data-toggle="collapse">ActiveAt</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_ActiveAt" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_ActiveAt" data-uid="Kook.WebSocket.SocketGuildUser.ActiveAt">
+  ActiveAt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets when this user was activated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public DateTimeOffset ActiveAt { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">DateTimeOffset</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_Avatar.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.Avatar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L74" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>The time of which the user was activated.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_Avatar_" data-uid="Kook.WebSocket.SocketGuildUser.Avatar*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_Avatar" data-uid="Kook.WebSocket.SocketGuildUser.Avatar"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_Avatar" class="expander" data-toggle="collapse">Avatar</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_Avatar" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_Avatar" data-uid="Kook.WebSocket.SocketGuildUser.Avatar">
+  Avatar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the link to this user's avatar.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string Avatar { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_Avatar">SocketUser.Avatar</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_Banner.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.Banner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L88" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_Banner_" data-uid="Kook.WebSocket.SocketGuildUser.Banner*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_Banner" data-uid="Kook.WebSocket.SocketGuildUser.Banner"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_Banner" class="expander" data-toggle="collapse">Banner</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_Banner" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_Banner" data-uid="Kook.WebSocket.SocketGuildUser.Banner">
+  Banner
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the link to this user's banner.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string Banner { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_Banner">SocketUser.Banner</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_BoostSubscriptions.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.BoostSubscriptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L179" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_BoostSubscriptions_" data-uid="Kook.WebSocket.SocketGuildUser.BoostSubscriptions*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_BoostSubscriptions" data-uid="Kook.WebSocket.SocketGuildUser.BoostSubscriptions"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_BoostSubscriptions" class="expander" data-toggle="collapse">BoostSubscriptions</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_BoostSubscriptions" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_BoostSubscriptions" data-uid="Kook.WebSocket.SocketGuildUser.BoostSubscriptions">
+  BoostSubscriptions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a collection of all boost subscriptions of this user for this guild.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt; BoostSubscriptions { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>&gt;
-        <p><p>A read-only collection of boost subscription metadata of this user for this guild;
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>&gt;</dt>
+    <dd><p>A read-only collection of boost subscription metadata of this user for this guild;
 or <code>null</code> if the boost subscription data has never been cached.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketGuildUser_BoostSubscriptions_remarks">Remarks</h5>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketGuildUser_BoostSubscriptions_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-<p>
-    Only when <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</a> is set to <code>true</code>
-    will this property be populated upon startup. Due to the lack of event support for boost subscriptions,
-    this property may be not up-to-date. The changes of <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a> will trigger the update
-    of this property, but KOOK gateway will not publish this event resulting from the changes of total boost subscription
-    count. To fetch the latest boost subscription data, use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions)</a> upon <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>
-    or <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a>
-    upon a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to manually download the latest boost subscription data,
-    or <a class="xref" href="Kook.WebSocket.SocketGuildUser.html#Kook_WebSocket_SocketGuildUser_GetBoostSubscriptionsAsync_Kook_RequestOptions_">GetBoostSubscriptionsAsync(RequestOptions)</a>.
-</p>
-</p></div>
+    <p>
+        Only when <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</a> is set to <code>true</code>
+        will this property be populated upon startup. Due to the lack of event support for boost subscriptions,
+        this property may be not up-to-date. The changes of <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a> will trigger the update
+        of this property, but KOOK gateway will not publish this event resulting from the changes of total boost subscription
+        count. To fetch the latest boost subscription data, use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions)</a> upon <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>
+        or <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a>
+        upon a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to manually download the latest boost subscription data,
+        or <a class="xref" href="Kook.WebSocket.SocketGuildUser.html#Kook_WebSocket_SocketGuildUser_GetBoostSubscriptionsAsync_Kook_RequestOptions_">GetBoostSubscriptionsAsync(RequestOptions)</a>.
+    </p>
 </div>
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketGuildUser_BoostSubscriptions_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions)</a></div>
-      <div><a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a></div>
-      <div><span class="xref">Kook.WebSocket.KookSocketClient.AlwaysDownloadBoostSubscriptions</span></div>
-  </div>
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_BuffAvatar.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.BuffAvatar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L81" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync</a>(<a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
+    <div><a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;, <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
+    </dd>
+  </dl>
+
+
   <a id="Kook_WebSocket_SocketGuildUser_BuffAvatar_" data-uid="Kook.WebSocket.SocketGuildUser.BuffAvatar*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_BuffAvatar" data-uid="Kook.WebSocket.SocketGuildUser.BuffAvatar"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_BuffAvatar" class="expander" data-toggle="collapse">BuffAvatar</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_BuffAvatar" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_BuffAvatar" data-uid="Kook.WebSocket.SocketGuildUser.BuffAvatar">
+  BuffAvatar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the link to this user's BUFF avatar.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string BuffAvatar { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_BuffAvatar">SocketUser.BuffAvatar</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_Color.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.Color%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L44" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_Color_" data-uid="Kook.WebSocket.SocketGuildUser.Color*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_Color" data-uid="Kook.WebSocket.SocketGuildUser.Color"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_Color" class="expander" data-toggle="collapse">Color</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_Color" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets the color the user&apos;s displayed name is being displayed in.</p>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_Color" data-uid="Kook.WebSocket.SocketGuildUser.Color">
+  Color
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the color the user's displayed name is being displayed in.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Color Color { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.Color.html">Color</a>
-        <p><p>A <a class="xref" href="Kook.IGuildUser.html#Kook_IGuildUser_Color">Color</a> struct representing the color the user&apos;s display name is being displayed in.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IGuildUser.html#Kook_IGuildUser_Color">IGuildUser.Color</a></div>
-  
-  <h5 id="Kook_WebSocket_SocketGuildUser_Color_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    At present, the color of a role may be a solid color or a gradient. See <a class="xref" href="Kook.IRole.html#Kook_IRole_ColorType">ColorType</a>,
-    which is guaranteed due to the fact that the guild&apos;s user list API endpoint returns the color type
-    and the gradient color information if exists. However, the value of this property is fetched
-    from the guild&apos;s user list API endpoint, which does not return the color type and the gradient
-    color information. Hence, the value of this property may be incorrect if the color of a role is
-    a gradient.
-</p></div>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
+    <dd><p>A <a class="xref" href="Kook.IGuildUser.html#Kook_IGuildUser_Color">Color</a> struct representing the color the user's display name is being displayed in.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketGuildUser_Color_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING">
+  <h5>warning</h5>
+  <p>
+            At present, the color of a role may be a solid color or a gradient. See <a class="xref" href="Kook.IRole.html#Kook_IRole_ColorType">ColorType</a>,
+            which is guaranteed due to the fact that the guild's user list API endpoint returns the color type
+            and the gradient color information if exists. However, the value of this property is fetched
+            from the guild's user list API endpoint, which does not return the color type and the gradient
+            color information. Hence, the value of this property may be incorrect if the color of a role is
+            a gradient.
+        </p>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_DisplayName.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.DisplayName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L29" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</div>
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_DisplayName_" data-uid="Kook.WebSocket.SocketGuildUser.DisplayName*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_DisplayName" data-uid="Kook.WebSocket.SocketGuildUser.DisplayName"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_DisplayName" class="expander" data-toggle="collapse">DisplayName</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_DisplayName" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_DisplayName" data-uid="Kook.WebSocket.SocketGuildUser.DisplayName">
+  DisplayName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the displayed name for this user.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string DisplayName { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_Guild.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.Guild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L26" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representing the display name of the user; If the nickname is null, this will be the username.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_Guild_" data-uid="Kook.WebSocket.SocketGuildUser.Guild*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_Guild" data-uid="Kook.WebSocket.SocketGuildUser.Guild"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_Guild" class="expander" data-toggle="collapse">Guild</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_Guild" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_Guild" data-uid="Kook.WebSocket.SocketGuildUser.Guild">
+  Guild
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the guild the user is in.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SocketGuild Guild { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_GuildPermissions.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.GuildPermissions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L144" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_GuildPermissions_" data-uid="Kook.WebSocket.SocketGuildUser.GuildPermissions*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_GuildPermissions" data-uid="Kook.WebSocket.SocketGuildUser.GuildPermissions"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_GuildPermissions" class="expander" data-toggle="collapse">GuildPermissions</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_GuildPermissions" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_GuildPermissions" data-uid="Kook.WebSocket.SocketGuildUser.GuildPermissions">
+  GuildPermissions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the guild-level permissions for this user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public GuildPermissions GuildPermissions { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.GuildPermissions.html">GuildPermissions</a>
-        <p><p>A <a class="xref" href="Kook.GuildPermissions.html">GuildPermissions</a> structure for this user, representing what
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.GuildPermissions.html">GuildPermissions</a></dt>
+    <dd><p>A <a class="xref" href="Kook.GuildPermissions.html">GuildPermissions</a> structure for this user, representing what
 permissions this user has in the guild.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IGuildUser.html#Kook_IGuildUser_GuildPermissions">IGuildUser.GuildPermissions</a></div>
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_HasAnnualBuff.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.HasAnnualBuff%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L109" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_HasAnnualBuff_" data-uid="Kook.WebSocket.SocketGuildUser.HasAnnualBuff*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_HasAnnualBuff" data-uid="Kook.WebSocket.SocketGuildUser.HasAnnualBuff"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_HasAnnualBuff" class="expander" data-toggle="collapse">HasAnnualBuff</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_HasAnnualBuff" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_HasAnnualBuff" data-uid="Kook.WebSocket.SocketGuildUser.HasAnnualBuff">
+  HasAnnualBuff
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this user's BUFF subscription is annual; <code>null</code> if unknown.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool? HasAnnualBuff { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_HasAnnualBuff">SocketUser.HasAnnualBuff</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_HasBuff.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.HasBuff%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L102" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_HasBuff_" data-uid="Kook.WebSocket.SocketGuildUser.HasBuff*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_HasBuff" data-uid="Kook.WebSocket.SocketGuildUser.HasBuff"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_HasBuff" class="expander" data-toggle="collapse">HasBuff</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_HasBuff" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_HasBuff" data-uid="Kook.WebSocket.SocketGuildUser.HasBuff">
+  HasBuff
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this user has subscribed to BUFF; <code>null</code> if unknown.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool? HasBuff { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_HasBuff">SocketUser.HasBuff</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_IdentifyNumberValue.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.IdentifyNumberValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L67" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_IdentifyNumberValue_" data-uid="Kook.WebSocket.SocketGuildUser.IdentifyNumberValue*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_IdentifyNumberValue" data-uid="Kook.WebSocket.SocketGuildUser.IdentifyNumberValue"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_IdentifyNumberValue" class="expander" data-toggle="collapse">IdentifyNumberValue</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_IdentifyNumberValue" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_IdentifyNumberValue" data-uid="Kook.WebSocket.SocketGuildUser.IdentifyNumberValue">
+  IdentifyNumberValue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the per-username unique ID for this user.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override ushort? IdentifyNumberValue { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">UInt16</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_IdentifyNumberValue">SocketUser.IdentifyNumberValue</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_IsBanned.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.IsBanned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L95" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_IsBanned_" data-uid="Kook.WebSocket.SocketGuildUser.IsBanned*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_IsBanned" data-uid="Kook.WebSocket.SocketGuildUser.IsBanned"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_IsBanned" class="expander" data-toggle="collapse">IsBanned</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_IsBanned" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_IsBanned" data-uid="Kook.WebSocket.SocketGuildUser.IsBanned">
+  IsBanned
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this user is banned; <code>null</code> if unknown.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool? IsBanned { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_IsBanned">SocketUser.IsBanned</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_IsBot.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.IsBot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L53" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_IsBot_" data-uid="Kook.WebSocket.SocketGuildUser.IsBot*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_IsBot" data-uid="Kook.WebSocket.SocketGuildUser.IsBot"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_IsBot" class="expander" data-toggle="collapse">IsBot</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_IsBot" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_IsBot" data-uid="Kook.WebSocket.SocketGuildUser.IsBot">
+  IsBot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this user is a bot; <code>null</code> if unknown.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool? IsBot { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_IsBot">SocketUser.IsBot</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_IsDeafened.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.IsDeafened%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L150" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_IsDeafened_" data-uid="Kook.WebSocket.SocketGuildUser.IsDeafened*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_IsDeafened" data-uid="Kook.WebSocket.SocketGuildUser.IsDeafened"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_IsDeafened" class="expander" data-toggle="collapse">IsDeafened</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_IsDeafened" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_IsDeafened" data-uid="Kook.WebSocket.SocketGuildUser.IsDeafened">
+  IsDeafened
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether this user is deafened by the guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool? IsDeafened { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_IsDenoiseEnabled.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.IsDenoiseEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L116" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p><code>true</code> if the user is deafened (i.e. not permitted to listen to or speak to others) by the guild;
+otherwise <code>false</code>; <code>null</code> if unknown.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_IsDenoiseEnabled_" data-uid="Kook.WebSocket.SocketGuildUser.IsDenoiseEnabled*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_IsDenoiseEnabled" data-uid="Kook.WebSocket.SocketGuildUser.IsDenoiseEnabled"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_IsDenoiseEnabled" class="expander" data-toggle="collapse">IsDenoiseEnabled</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_IsDenoiseEnabled" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_IsDenoiseEnabled" data-uid="Kook.WebSocket.SocketGuildUser.IsDenoiseEnabled">
+  IsDenoiseEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this user enabled denoise feature; <code>null</code> if unknown.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool? IsDenoiseEnabled { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_IsDenoiseEnabled">SocketUser.IsDenoiseEnabled</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_IsMobileVerified.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.IsMobileVerified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L35" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_IsMobileVerified_" data-uid="Kook.WebSocket.SocketGuildUser.IsMobileVerified*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_IsMobileVerified" data-uid="Kook.WebSocket.SocketGuildUser.IsMobileVerified"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_IsMobileVerified" class="expander" data-toggle="collapse">IsMobileVerified</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_IsMobileVerified" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_IsMobileVerified" data-uid="Kook.WebSocket.SocketGuildUser.IsMobileVerified">
+  IsMobileVerified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the mobile number has been verified for this user.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsMobileVerified { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_IsMuted.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.IsMuted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L153" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the mobile number has been verified; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_IsMuted_" data-uid="Kook.WebSocket.SocketGuildUser.IsMuted*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_IsMuted" data-uid="Kook.WebSocket.SocketGuildUser.IsMuted"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_IsMuted" class="expander" data-toggle="collapse">IsMuted</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_IsMuted" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_IsMuted" data-uid="Kook.WebSocket.SocketGuildUser.IsMuted">
+  IsMuted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether this user is muted (i.e. not permitted to speak via voice) by the
+guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool? IsMuted { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_IsOwner.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.IsOwner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L47" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p><code>true</code> if this user is muted by the guild; otherwise <code>false</code>; <code>null</code> if unknown.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_IsOwner_" data-uid="Kook.WebSocket.SocketGuildUser.IsOwner*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_IsOwner" data-uid="Kook.WebSocket.SocketGuildUser.IsOwner"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_IsOwner" class="expander" data-toggle="collapse">IsOwner</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_IsOwner" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_IsOwner" data-uid="Kook.WebSocket.SocketGuildUser.IsOwner">
+  IsOwner
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this user owns the current guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool? IsOwner { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_IsSystemUser.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.IsSystemUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L137" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p><code>true</code> if this user owns the current guild; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_IsSystemUser_" data-uid="Kook.WebSocket.SocketGuildUser.IsSystemUser*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_IsSystemUser" data-uid="Kook.WebSocket.SocketGuildUser.IsSystemUser"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_IsSystemUser" class="expander" data-toggle="collapse">IsSystemUser</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_IsSystemUser" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_IsSystemUser" data-uid="Kook.WebSocket.SocketGuildUser.IsSystemUser">
+  IsSystemUser
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this user is a system user.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool? IsSystemUser { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_IsSystemUser">SocketUser.IsSystemUser</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_JoinedAt.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.JoinedAt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L38" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_JoinedAt_" data-uid="Kook.WebSocket.SocketGuildUser.JoinedAt*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_JoinedAt" data-uid="Kook.WebSocket.SocketGuildUser.JoinedAt"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_JoinedAt" class="expander" data-toggle="collapse">JoinedAt</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_JoinedAt" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_JoinedAt" data-uid="Kook.WebSocket.SocketGuildUser.JoinedAt">
+  JoinedAt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets when this user joined the guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public DateTimeOffset JoinedAt { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">DateTimeOffset</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_Nameplates.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.Nameplates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L130" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>The time of which the user has joined the guild.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_Nameplates_" data-uid="Kook.WebSocket.SocketGuildUser.Nameplates*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_Nameplates" data-uid="Kook.WebSocket.SocketGuildUser.Nameplates"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_Nameplates" class="expander" data-toggle="collapse">Nameplates</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_Nameplates" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_Nameplates" data-uid="Kook.WebSocket.SocketGuildUser.Nameplates">
+  Nameplates
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the nameplates this user has.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override IReadOnlyCollection&lt;Nameplate&gt; Nameplates { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.Nameplate.html">Nameplate</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_Nameplates">SocketUser.Nameplates</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_Nickname.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.Nickname%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L32" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Nameplate.html">Nameplate</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_Nickname_" data-uid="Kook.WebSocket.SocketGuildUser.Nickname*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_Nickname" data-uid="Kook.WebSocket.SocketGuildUser.Nickname"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_Nickname" class="expander" data-toggle="collapse">Nickname</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_Nickname" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_Nickname" data-uid="Kook.WebSocket.SocketGuildUser.Nickname">
+  Nickname
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the nickname for this user.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Nickname { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_PlainTextMention.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.PlainTextMention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L50" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string representing the nickname of the user; <code>null</code> if none is set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_PlainTextMention_" data-uid="Kook.WebSocket.SocketGuildUser.PlainTextMention*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_PlainTextMention" data-uid="Kook.WebSocket.SocketGuildUser.PlainTextMention"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_PlainTextMention" class="expander" data-toggle="collapse">PlainTextMention</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_PlainTextMention" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_PlainTextMention" data-uid="Kook.WebSocket.SocketGuildUser.PlainTextMention">
+  PlainTextMention
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a special string used to mention this object in plain text formatted text.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string PlainTextMention { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_Roles.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.Roles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L195" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that is recognized by Kook as a mention in plain text formatted text.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_Roles_" data-uid="Kook.WebSocket.SocketGuildUser.Roles*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_Roles" data-uid="Kook.WebSocket.SocketGuildUser.Roles"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_Roles" class="expander" data-toggle="collapse">Roles</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_Roles" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_Roles" data-uid="Kook.WebSocket.SocketGuildUser.Roles">
+  Roles
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Returns a collection of roles that the user possesses.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketRole&gt; Roles { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  <h5 id="Kook_WebSocket_SocketGuildUser_Roles_remarks">Remarks</h5>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketGuildUser_Roles_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
     Due to the lack of events which should be raised when a role is added or removed from a user,
     this property may not be completely accurate. To ensure the most accurate results,
     it is recommended to call <a class="xref" href="Kook.WebSocket.SocketGuildUser.html#Kook_WebSocket_SocketGuildUser_UpdateAsync_Kook_RequestOptions_">UpdateAsync(RequestOptions)</a> before this property is used.
 </p></div>
 </div>
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_Username.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.Username%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L60" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_WebSocket_SocketGuildUser_Username_" data-uid="Kook.WebSocket.SocketGuildUser.Username*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_Username" data-uid="Kook.WebSocket.SocketGuildUser.Username"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_Username" class="expander" data-toggle="collapse">Username</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_Username" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string Username { get; }</code></pre>
-  </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_Username">SocketUser.Username</a></div>
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_UserTag.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.UserTag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L123" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
   <a id="Kook_WebSocket_SocketGuildUser_UserTag_" data-uid="Kook.WebSocket.SocketGuildUser.UserTag*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_UserTag" data-uid="Kook.WebSocket.SocketGuildUser.UserTag"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_UserTag" class="expander" data-toggle="collapse">UserTag</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_UserTag" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_UserTag" data-uid="Kook.WebSocket.SocketGuildUser.UserTag">
+  UserTag
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Get the tag this user has.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override UserTag UserTag { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.UserTag.html">UserTag</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kook.WebSocket.SocketUser.html#Kook_WebSocket_SocketUser_UserTag">SocketUser.UserTag</a></div>
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IUser.html#Kook_IUser_UserTag">IUser.UserTag</a></div>
-  
-  
-  
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.UserTag.html">UserTag</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_WebSocket_SocketGuildUser_Username_" data-uid="Kook.WebSocket.SocketGuildUser.Username*"></a>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_Username" data-uid="Kook.WebSocket.SocketGuildUser.Username">
+  Username
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the username for this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string Username { get; }</code></pre>
   </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_VoiceChannel.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.VoiceChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L208" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_VoiceChannel_" data-uid="Kook.WebSocket.SocketGuildUser.VoiceChannel*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_VoiceChannel" data-uid="Kook.WebSocket.SocketGuildUser.VoiceChannel"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_VoiceChannel" class="expander" data-toggle="collapse">VoiceChannel</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_VoiceChannel" class="collapse in">
-  <div class="markdown level1 summary"><p>Returns the voice channel the user is in, or <code>null</code> if none or unknown.
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_VoiceChannel" data-uid="Kook.WebSocket.SocketGuildUser.VoiceChannel">
+  VoiceChannel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the voice channel the user is in, or <code>null</code> if none or unknown.</p>
 <div class="WARNING"><h5>warning</h5><p>
     If a user connects to a voice channel before the bot has connected to the gateway,
     this property will be <code>null</code> until <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadVoiceStatesAsync_Kook_RequestOptions_">DownloadVoiceStatesAsync(RequestOptions)</a>
-    or <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadVoiceStatesAsync_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a> is called.
+    or <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadVoiceStatesAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a> is called.
     To ensure whether the user is in a voice channel or not, use those methods above,
     or <a class="xref" href="Kook.WebSocket.SocketGuildUser.html#Kook_WebSocket_SocketGuildUser_GetConnectedVoiceChannelsAsync_Kook_RequestOptions_">GetConnectedVoiceChannelsAsync(RequestOptions)</a>.
-</p></div></p>
+</p></div>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SocketVoiceChannel VoiceChannel { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_VoiceState.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.VoiceState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L217" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_VoiceState_" data-uid="Kook.WebSocket.SocketGuildUser.VoiceState*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_VoiceState" data-uid="Kook.WebSocket.SocketGuildUser.VoiceState"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_VoiceState" class="expander" data-toggle="collapse">VoiceState</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_VoiceState" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_VoiceState" data-uid="Kook.WebSocket.SocketGuildUser.VoiceState">
+  VoiceState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the voice status of the user if any.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SocketVoiceState? VoiceState { get; }</code></pre>
   </div>
 
-  
-  
-  
-  
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketVoiceState.html">SocketVoiceState</a>&gt;
-        <p><p>A <a class="xref" href="Kook.WebSocket.SocketVoiceState.html">SocketVoiceState</a> representing the user&apos;s voice status; <code>null</code> if the user is neither
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.WebSocket.SocketVoiceState.html">SocketVoiceState</a>?</dt>
+    <dd><p>A <a class="xref" href="Kook.WebSocket.SocketVoiceState.html">SocketVoiceState</a> representing the user's voice status; <code>null</code> if the user is neither
 connected to a voice channel nor is muted or deafened by the guild.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_AddRoleAsync_Kook_IRole_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.AddRoleAsync(Kook.IRole%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L320" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Kook_WebSocket_SocketGuildUser_AddRoleAsync_" data-uid="Kook.WebSocket.SocketGuildUser.AddRoleAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_AddRoleAsync_Kook_IRole_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.AddRoleAsync(Kook.IRole,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_AddRoleAsync_Kook_IRole_Kook_RequestOptions_" class="expander" data-toggle="collapse">AddRoleAsync(IRole, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_AddRoleAsync_Kook_IRole_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_AddRoleAsync_Kook_IRole_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.AddRoleAsync(Kook.IRole,Kook.RequestOptions)">
+  AddRoleAsync(IRole, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the specified role to this user in the guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task AddRoleAsync(IRole role, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IRole.html">IRole</a></span>
-        <span class="parametername">role</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_AddRoleAsync_System_UInt32_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.AddRoleAsync(System.UInt32%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L311" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>role</code> <a class="xref" href="Kook.IRole.html">IRole</a></dt>
+    <dd><p>The role to be added to the user.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous role addition operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_AddRoleAsync_" data-uid="Kook.WebSocket.SocketGuildUser.AddRoleAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_AddRoleAsync_System_UInt32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.AddRoleAsync(System.UInt32,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_AddRoleAsync_System_UInt32_Kook_RequestOptions_" class="expander" data-toggle="collapse">AddRoleAsync(UInt32, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_AddRoleAsync_System_UInt32_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_AddRoleAsync_System_UInt32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.AddRoleAsync(System.UInt32,Kook.RequestOptions)">
+  AddRoleAsync(uint, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the specified role to this user in the guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task AddRoleAsync(uint roleId, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a></span>
-        <span class="parametername">roleId</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_AddRolesAsync_IEnumerable_Kook_IRole__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.AddRolesAsync(IEnumerable%7BKook.IRole%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L338" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>roleId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The role to be added to the user.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous role addition operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_AddRolesAsync_" data-uid="Kook.WebSocket.SocketGuildUser.AddRolesAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_AddRolesAsync_IEnumerable_Kook_IRole__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.AddRolesAsync(IEnumerable{Kook.IRole},Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_AddRolesAsync_IEnumerable_Kook_IRole__Kook_RequestOptions_" class="expander" data-toggle="collapse">AddRolesAsync(IEnumerable&lt;IRole&gt;, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_AddRolesAsync_IEnumerable_Kook_IRole__Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_AddRolesAsync_System_Collections_Generic_IEnumerable_Kook_IRole__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.AddRolesAsync(System.Collections.Generic.IEnumerable{Kook.IRole},Kook.RequestOptions)">
+  AddRolesAsync(IEnumerable&lt;IRole&gt;, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the specified <code class="paramref">roles</code> to this user in the guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task AddRolesAsync(IEnumerable&lt;IRole&gt; roles, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Kook.IRole.html">IRole</a>&gt;</span>
-        <span class="parametername">roles</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_AddRolesAsync_IEnumerable_System_UInt32__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.AddRolesAsync(IEnumerable%7BSystem.UInt32%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L329" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>roles</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IRole.html">IRole</a>&gt;</dt>
+    <dd><p>The roles to be added to the user.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous role addition operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_AddRolesAsync_" data-uid="Kook.WebSocket.SocketGuildUser.AddRolesAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_AddRolesAsync_IEnumerable_System_UInt32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.AddRolesAsync(IEnumerable{System.UInt32},Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_AddRolesAsync_IEnumerable_System_UInt32__Kook_RequestOptions_" class="expander" data-toggle="collapse">AddRolesAsync(IEnumerable&lt;UInt32&gt;, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_AddRolesAsync_IEnumerable_System_UInt32__Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_AddRolesAsync_System_Collections_Generic_IEnumerable_System_UInt32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.AddRolesAsync(System.Collections.Generic.IEnumerable{System.UInt32},Kook.RequestOptions)">
+  AddRolesAsync(IEnumerable&lt;uint&gt;, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the specified <code class="paramref">roleIds</code> to this user in the guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task AddRolesAsync(IEnumerable&lt;uint&gt; roleIds, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a>&gt;</span>
-        <span class="parametername">roleIds</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_DeafenAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.DeafenAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L382" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>roleIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd><p>The roles to be added to the user.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous role addition operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_DeafenAsync_" data-uid="Kook.WebSocket.SocketGuildUser.DeafenAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_DeafenAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.DeafenAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_DeafenAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">DeafenAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_DeafenAsync_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_DeafenAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.DeafenAsync(Kook.RequestOptions)">
+  DeafenAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L381"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deafen this user in this guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task DeafenAsync(RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_GetBoostSubscriptionsAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.GetBoostSubscriptionsAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L298" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous deafening operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_GetBoostSubscriptionsAsync_" data-uid="Kook.WebSocket.SocketGuildUser.GetBoostSubscriptionsAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_GetBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.GetBoostSubscriptionsAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_GetBoostSubscriptionsAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetBoostSubscriptionsAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_GetBoostSubscriptionsAsync_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_GetBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.GetBoostSubscriptionsAsync(Kook.RequestOptions)">
+  GetBoostSubscriptionsAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all subscriptions of this user for this guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt; GetBoostSubscriptionsAsync(RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>&gt;&gt;
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_GetConnectedVoiceChannelsAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.GetConnectedVoiceChannelsAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L394" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous retrieval operation. The task result contains
+a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>, each representing the subscriptions information.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_GetConnectedVoiceChannelsAsync_" data-uid="Kook.WebSocket.SocketGuildUser.GetConnectedVoiceChannelsAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_GetConnectedVoiceChannelsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.GetConnectedVoiceChannelsAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_GetConnectedVoiceChannelsAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">GetConnectedVoiceChannelsAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_GetConnectedVoiceChannelsAsync_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_GetConnectedVoiceChannelsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.GetConnectedVoiceChannelsAsync(Kook.RequestOptions)">
+  GetConnectedVoiceChannelsAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L393"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a collection of voice channels a user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;SocketVoiceChannel&gt;&gt; GetConnectedVoiceChannelsAsync(RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>&lt;<span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>&gt;&gt;
-        <p><p>A task that represents the asynchronous get operation. The task result contains a collection of
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous get operation. The task result contains a collection of
 voice channels the user is connected to.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_GetPermissions_Kook_IGuildChannel_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.GetPermissions(Kook.IGuildChannel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L415" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_GetPermissions_" data-uid="Kook.WebSocket.SocketGuildUser.GetPermissions*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_GetPermissions_Kook_IGuildChannel_" data-uid="Kook.WebSocket.SocketGuildUser.GetPermissions(Kook.IGuildChannel)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_GetPermissions_Kook_IGuildChannel_" class="expander" data-toggle="collapse">GetPermissions(IGuildChannel)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_GetPermissions_Kook_IGuildChannel_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_GetPermissions_Kook_IGuildChannel_" data-uid="Kook.WebSocket.SocketGuildUser.GetPermissions(Kook.IGuildChannel)">
+  GetPermissions(IGuildChannel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the level permissions granted to this user to a given channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ChannelPermissions GetPermissions(IGuildChannel channel)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IGuildChannel.html">IGuildChannel</a></span>
-        <span class="parametername">channel</span>
-        <p><p>The channel to get the permission from.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.ChannelPermissions.html">ChannelPermissions</a>
-        <p><p>A <a class="xref" href="Kook.ChannelPermissions.html">ChannelPermissions</a> structure representing the permissions that a user has in the
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>channel</code> <a class="xref" href="Kook.IGuildChannel.html">IGuildChannel</a></dt>
+    <dd><p>The channel to get the permission from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ChannelPermissions.html">ChannelPermissions</a></dt>
+    <dd><p>A <a class="xref" href="Kook.ChannelPermissions.html">ChannelPermissions</a> structure representing the permissions that a user has in the
 specified channel.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IGuildUser.html#Kook_IGuildUser_GetPermissions_Kook_IGuildChannel_">IGuildUser.GetPermissions(IGuildChannel)</a></div>
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_KickAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.KickAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L302" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_KickAsync_" data-uid="Kook.WebSocket.SocketGuildUser.KickAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_KickAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.KickAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_KickAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">KickAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_KickAsync_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_KickAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.KickAsync(Kook.RequestOptions)">
+  KickAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Kicks this user from this guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task KickAsync(RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_ModifyNicknameAsync_System_String_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.ModifyNicknameAsync(System.String%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L294" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous kick operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_ModifyNicknameAsync_" data-uid="Kook.WebSocket.SocketGuildUser.ModifyNicknameAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_ModifyNicknameAsync_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.ModifyNicknameAsync(System.String,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_ModifyNicknameAsync_System_String_Kook_RequestOptions_" class="expander" data-toggle="collapse">ModifyNicknameAsync(String, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_ModifyNicknameAsync_System_String_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_ModifyNicknameAsync_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.ModifyNicknameAsync(System.String,Kook.RequestOptions)">
+  ModifyNicknameAsync(string, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Modifies this user's nickname in this guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task ModifyNicknameAsync(string name, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></span>
-        <span class="parametername">name</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_MuteAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.MuteAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L378" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The nickname to modify the user with.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous modification operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketGuildUser_ModifyNicknameAsync_System_String_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method modifies the nickname of current guild user.</p>
+<div class="WARNING"><h5>warning</h5><p>
+    The KOOK API will clear the nickname if the nickname is set to
+    the same as the username at present. Hence either setting the nickname
+    to the same as the username or setting the nickname to null will clear
+    the nickname.
+</p></div>
+</div>
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_MuteAsync_" data-uid="Kook.WebSocket.SocketGuildUser.MuteAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_MuteAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.MuteAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_MuteAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">MuteAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_MuteAsync_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_MuteAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.MuteAsync(Kook.RequestOptions)">
+  MuteAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Mute this user in this guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task MuteAsync(RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_Kook_IRole_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.RemoveRoleAsync(Kook.IRole%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L356" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous muting operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRoleAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_Kook_IRole_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRoleAsync(Kook.IRole,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_Kook_IRole_Kook_RequestOptions_" class="expander" data-toggle="collapse">RemoveRoleAsync(IRole, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_Kook_IRole_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_Kook_IRole_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRoleAsync(Kook.IRole,Kook.RequestOptions)">
+  RemoveRoleAsync(IRole, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the specified <code class="paramref">role</code> from this user in the guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task RemoveRoleAsync(IRole role, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.IRole.html">IRole</a></span>
-        <span class="parametername">role</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_System_UInt32_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.RemoveRoleAsync(System.UInt32%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L347" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>role</code> <a class="xref" href="Kook.IRole.html">IRole</a></dt>
+    <dd><p>The role to be removed from the user.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous role removal operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRoleAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_System_UInt32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRoleAsync(System.UInt32,Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_System_UInt32_Kook_RequestOptions_" class="expander" data-toggle="collapse">RemoveRoleAsync(UInt32, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_System_UInt32_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_RemoveRoleAsync_System_UInt32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRoleAsync(System.UInt32,Kook.RequestOptions)">
+  RemoveRoleAsync(uint, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the specified <code class="paramref">roleId</code> from this user in the guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task RemoveRoleAsync(uint roleId, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a></span>
-        <span class="parametername">roleId</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_IEnumerable_Kook_IRole__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.RemoveRolesAsync(IEnumerable%7BKook.IRole%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L374" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>roleId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The role to be removed from the user.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous role removal operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRolesAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_IEnumerable_Kook_IRole__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRolesAsync(IEnumerable{Kook.IRole},Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_IEnumerable_Kook_IRole__Kook_RequestOptions_" class="expander" data-toggle="collapse">RemoveRolesAsync(IEnumerable&lt;IRole&gt;, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_IEnumerable_Kook_IRole__Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_System_Collections_Generic_IEnumerable_Kook_IRole__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRolesAsync(System.Collections.Generic.IEnumerable{Kook.IRole},Kook.RequestOptions)">
+  RemoveRolesAsync(IEnumerable&lt;IRole&gt;, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the specified <code class="paramref">roles</code> from this user in the guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task RemoveRolesAsync(IEnumerable&lt;IRole&gt; roles, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Kook.IRole.html">IRole</a>&gt;</span>
-        <span class="parametername">roles</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_IEnumerable_System_UInt32__Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.RemoveRolesAsync(IEnumerable%7BSystem.UInt32%7D%2CKook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L365" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>roles</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IRole.html">IRole</a>&gt;</dt>
+    <dd><p>The roles to be removed from the user.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous role removal operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRolesAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_IEnumerable_System_UInt32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRolesAsync(IEnumerable{System.UInt32},Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_IEnumerable_System_UInt32__Kook_RequestOptions_" class="expander" data-toggle="collapse">RemoveRolesAsync(IEnumerable&lt;UInt32&gt;, RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_IEnumerable_System_UInt32__Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_RemoveRolesAsync_System_Collections_Generic_IEnumerable_System_UInt32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.RemoveRolesAsync(System.Collections.Generic.IEnumerable{System.UInt32},Kook.RequestOptions)">
+  RemoveRolesAsync(IEnumerable&lt;uint&gt;, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L364"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the specified <code class="paramref">roleIds</code> from this user in the guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task RemoveRolesAsync(IEnumerable&lt;uint&gt; roleIds, RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a>&gt;</span>
-        <span class="parametername">roleIds</span>
-        <p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_UndeafenAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.UndeafenAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L390" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>roleIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd><p>The roles to be removed from the user.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous role removal operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_UndeafenAsync_" data-uid="Kook.WebSocket.SocketGuildUser.UndeafenAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_UndeafenAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.UndeafenAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_UndeafenAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">UndeafenAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_UndeafenAsync_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_UndeafenAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.UndeafenAsync(Kook.RequestOptions)">
+  UndeafenAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Undeafen this user in this guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task UndeafenAsync(RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_UnmuteAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.UnmuteAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L386" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous undeafening operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_UnmuteAsync_" data-uid="Kook.WebSocket.SocketGuildUser.UnmuteAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_UnmuteAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.UnmuteAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_UnmuteAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">UnmuteAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_UnmuteAsync_Kook_RequestOptions_" class="collapse in">
-  <div class="markdown level1 summary"></div>
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_UnmuteAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.UnmuteAsync(Kook.RequestOptions)">
+  UnmuteAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unmute this user in this guild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task UnmuteAsync(RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_UpdateAsync_Kook_RequestOptions_.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.UpdateAsync(Kook.RequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L411" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous unmuting operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_WebSocket_SocketGuildUser_UpdateAsync_" data-uid="Kook.WebSocket.SocketGuildUser.UpdateAsync*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.UpdateAsync(Kook.RequestOptions)"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_UpdateAsync_Kook_RequestOptions_" class="expander" data-toggle="collapse">UpdateAsync(RequestOptions)</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_UpdateAsync_Kook_RequestOptions_" class="collapse in">
+
+  <h3 id="Kook_WebSocket_SocketGuildUser_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuildUser.UpdateAsync(Kook.RequestOptions)">
+  UpdateAsync(RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L410"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Fetches the users data from the REST API to update this object,
 especially the <a class="xref" href="Kook.WebSocket.SocketGuildUser.html#Kook_WebSocket_SocketGuildUser_Roles">Roles</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task UpdateAsync(RequestOptions options = null)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></span>
-        <span class="parametername">options</span>
-        <p><p>The options to be used when sending the request.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="xref">Task</span>
-        <p><p>A task that represents the asynchronous reloading operation.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_Kook_IGuildUser_Guild.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.Kook%23IGuildUser%23Guild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L423" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_WebSocket_SocketGuildUser_Kook_IGuildUser_Guild_" data-uid="Kook.WebSocket.SocketGuildUser.Kook#IGuildUser#Guild*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_Kook_IGuildUser_Guild" data-uid="Kook.WebSocket.SocketGuildUser.Kook#IGuildUser#Guild"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_Kook_IGuildUser_Guild" class="expander" data-toggle="collapse">IGuildUser.Guild</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_Kook_IGuildUser_Guild" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets the guild for this user.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IGuild IGuildUser.Guild { get; }</code></pre>
-  </div>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous reloading operation.</p>
+</dd>
+  </dl>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.IGuild.html">IGuild</a>
-        <p><p>A guild object that this user belongs to.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IGuildUser.html#Kook_IGuildUser_Guild">IGuildUser.Guild</a></div>
-  
-  
-  
-  
-  </div>
-  
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser_Kook_IVoiceState_VoiceChannel.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser.Kook%23IVoiceState%23VoiceChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L440" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-  
-  <a id="Kook_WebSocket_SocketGuildUser_Kook_IVoiceState_VoiceChannel_" data-uid="Kook.WebSocket.SocketGuildUser.Kook#IVoiceState#VoiceChannel*"></a>
-  
-  <h4 id="Kook_WebSocket_SocketGuildUser_Kook_IVoiceState_VoiceChannel" data-uid="Kook.WebSocket.SocketGuildUser.Kook#IVoiceState#VoiceChannel"><a href="#collapsible-Kook_WebSocket_SocketGuildUser_Kook_IVoiceState_VoiceChannel" class="expander" data-toggle="collapse">IVoiceState.VoiceChannel</a></h4>
-  
-  <div id="collapsible-Kook_WebSocket_SocketGuildUser_Kook_IVoiceState_VoiceChannel" class="collapse in">
-  <div class="markdown level1 summary"><p>Gets the voice channel this user is currently in.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IVoiceChannel IVoiceState.VoiceChannel { get; }</code></pre>
-  </div>
 
-  
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-        <a class="xref" href="Kook.IVoiceChannel.html">IVoiceChannel</a>
-        <p><p>A generic voice channel object representing the voice channel that the user is currently in; <code>null</code>
-if none.</p>
-</p>
-      </td>
-    </tr>
-  </table>
-  
-  
-  
-  
-  
-  
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Kook.IVoiceState.html#Kook_IVoiceState_VoiceChannel">IVoiceState.VoiceChannel</a></div>
-  
-  
-  
-  
-  </div>
-  
-  
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketGuildUser.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketGuildUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/gehongyan/Kook.Net/blob/d7b78a3089a1b85b804089fd82088756cdf83120/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L14" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.6.0/src/Kook.Net.WebSocket/Entities/Users/SocketGuildUser.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            Kook.Net (c) 2022-2023
-            
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>
