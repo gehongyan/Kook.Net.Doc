@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>XML 卡片消息入门 | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="XML 卡片消息入门 | Kook.Net 文档 ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/card_markup/intro.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  <meta property="og:description" content="Kook.CardMarkup 命名空间提供了将使用 XML 标记语言定义的卡片消息反序列化为 ICard 对象的方法。"><meta property="og:title" content="XML 卡片消息入门 | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Guides.CardMarkup.Intro">
+<h1 id="xml-卡片消息">XML 卡片消息</h1>
+
+<p><a class="xref" href="../../api/Kook.CardMarkup.html">Kook.CardMarkup</a> 命名空间提供了将使用 XML 标记语言定义的卡片消息反序列化为 <a class="xref" href="../../api/Kook.ICard.html">ICard</a> 对象的方法。</p>
+<h2 id="入门">入门</h2>
+<p>下面的示例中，我们创建一个简单的，由标题、分割线和 9 张图片组成的一个卡片消息。</p>
+<h3 id="xml-标记">XML 标记</h3>
+<p>创建一个 XML 文件，定义卡片消息的内容：</p>
+<pre><code class="lang-xml" name="Sample Card">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;card-message xmlns=&quot;https://kooknet.dev&quot;
+              xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+              xsi:schemaLocation=&quot;https://kooknet.dev https://kooknet.dev/card-message.xsd&quot;&gt;
+
+  &lt;card&gt;
+    &lt;modules&gt;
+
+      &lt;header&gt;
+        &lt;plain&gt;KOOK：一款出色的文字、语音与组队工具&lt;/plain&gt;
+      &lt;/header&gt;
+
+      &lt;divider /&gt;
+
+      &lt;images&gt;
+        &lt;image src=&quot;https://img.kaiheila.cn/assets/2021-01/pWsmcLsPJq08c08c.jpeg&quot; /&gt;
+        &lt;image src=&quot;https://img.kaiheila.cn/assets/2021-01/YIfHfnvxaV0dw0dw.jpg&quot; /&gt;
+        &lt;image src=&quot;https://img.kaiheila.cn/assets/2021-01/YevTY6eGJa0fk0f2.jpeg&quot; /&gt;
+        &lt;image src=&quot;https://img.kaiheila.cn/assets/2021-01/r2K9RjHZ4s0xc0xc.jpeg&quot; /&gt;
+        &lt;image src=&quot;https://img.kaiheila.cn/assets/2021-01/klosFRTVy90jz0k0.jpg&quot; /&gt;
+        &lt;image src=&quot;https://img.kaiheila.cn/assets/2021-01/veHnEhzu6c0dw0dv.jpg&quot; /&gt;
+        &lt;image src=&quot;https://img.kaiheila.cn/assets/2021-01/tiVWPIuTrf0dw0dw.jpg&quot; /&gt;
+        &lt;image src=&quot;https://img.kaiheila.cn/assets/2021-01/wExzRIrTeR0j60j7.jpeg&quot; /&gt;
+        &lt;image src=&quot;https://img.kaiheila.cn/assets/2021-01/AybvLWYQgA0dw0dw.jpg&quot; /&gt;
+      &lt;/images&gt;
+
+    &lt;/modules&gt;
+  &lt;/card&gt;
+
+&lt;/card-message&gt;
+</code></pre><h4 id="xml-声明">XML 声明</h4>
+<p>文件第一行为 XML 声明，指定 XML 版本和字符编码：</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>字符编码必须是 <code>UTF-8</code>。
+XML 版本必须是 <code>1.0</code>。</p>
+</div>
+<pre><code class="lang-xml" name="Sample Card - XML Declaration">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+</code></pre><h4 id="卡片消息">卡片消息</h4>
+<p>XML 根元素为 <code>&lt;card-message&gt;</code>，代表一个卡片消息，每一个 <code>&lt;card-message&gt;</code> 元素可以包含多个 <code>&lt;card&gt;</code> 元素。</p>
+<p><code>&lt;card-message&gt;</code> 元素上需要指定 XML 命名空间，以及 XML Schema 文件的位置：</p>
+<pre><code class="lang-xml" name="Sample Card - Root Element">&lt;card-message xmlns=&quot;https://kooknet.dev&quot;
+              xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+              xsi:schemaLocation=&quot;https://kooknet.dev https://kooknet.dev/card-message.xsd&quot;&gt;
+</code></pre>
+<ul>
+<li><code>xmlns=https://kooknet.dev</code> 指定了默认 XML 命名空间，卡片消息所有的元素均在该命名空间下。</li>
+<li><code>xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</code> 指定了 XML Schema 实例命名空间，并设置命名空间前缀为 <code>xsi</code>。</li>
+<li><code>xsi:schemaLocation=&quot;https://kooknet.dev https://kooknet.dev/card-message.xsd&quot;</code> 调用了 <code>xsi</code> 命名空间下的 <code>schemaLocation</code> 属性，指定了 <code>https://kooknet.dev</code> 命名空间下的 XML Schema 文件位置在 <code>https://kooknet.dev/card-message.xsd</code>。</li>
+</ul>
+<h4 id="卡片">卡片</h4>
+<p><code>&lt;card&gt;</code> 元素代表一个卡片，每一个 <code>&lt;card&gt;</code> 元素包含一个 <code>&lt;modules&gt;</code> 元素，用于包含卡片的组件。</p>
+<p>关于卡片，请参阅 <a href="card.html">卡片</a>。</p>
+<h3 id="反序列化">反序列化</h3>
+<p>使用 <a class="xref" href="../../api/Kook.CardMarkup.CardMarkupSerializer.html">Kook.CardMarkup.CardMarkupSerializer</a> 将 XML 卡片消息反序列化为 <a class="xref" href="../../api/Kook.ICard.html">ICard</a> 对象：</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p><code>Try...</code> 方法只适用于同步调用。</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>此示例传入参数为 XML 文件的 <code>FileInfo</code> 类实例。
+所有方法均有传入参数为 <code>Stream</code> 或 <code>string</code> 的重载。
+传出参数的类型均为 <code>IEnumerable&lt;ICard&gt;</code> 或 <code>Task&lt;IEnumerable&lt;ICard&gt;&gt;</code>。</p>
+</div>
+<pre><code class="lang-csharp" name="Deserialize Card">var xmlFile = new FileInfo(&quot;sample-card.xml&quot;);
+
+// 同步调用
+var cards = CardMarkupSerializer.Deserialize(xmlFile);
+
+// 同步调用，使用 Try... 方法
+var canDeserialize = CardMarkupSerializer.TryDeserialize(xmlFile, out var cards);
+
+// 异步调用
+var cards = await CardMarkupSerializer.DeserializeAsync(xmlFile);
+
+// 异步调用，传入 CancellationToken
+var cts = new CancellationTokenSource();
+var cards = await CardMarkupSerializer.DeserializeAsync(xmlFile, cts.Token);
+</code></pre><h3 id="渲染效果">渲染效果</h3>
+<p>该 XML 卡片消息等效于以下 JSON 格式的卡片消息：</p>
+<pre><code class="lang-json" name="Sample Card">[
+    {
+        &quot;type&quot;: &quot;card&quot;,
+        &quot;theme&quot;: &quot;secondary&quot;,
+        &quot;size&quot;: &quot;lg&quot;,
+        &quot;modules&quot;: [
+            {
+                &quot;type&quot;: &quot;header&quot;,
+                &quot;text&quot;: {
+                    &quot;type&quot;: &quot;plain-text&quot;,
+                    &quot;content&quot;: &quot;KOOK：一款出色的文字、语音与组队工具&quot;
+                }
+            },
+            {
+                &quot;type&quot;: &quot;divider&quot;
+            },
+            {
+                &quot;type&quot;: &quot;image-group&quot;,
+                &quot;elements&quot;: [
+                    {
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;src&quot;: &quot;https://img.kaiheila.cn/assets/2021-01/pWsmcLsPJq08c08c.jpeg&quot;
+                    },
+                    {
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;src&quot;: &quot;https://img.kaiheila.cn/assets/2021-01/YIfHfnvxaV0dw0dw.jpg&quot;
+                    },
+                    {
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;src&quot;: &quot;https://img.kaiheila.cn/assets/2021-01/YevTY6eGJa0fk0f2.jpeg&quot;
+                    },
+                    {
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;src&quot;: &quot;https://img.kaiheila.cn/assets/2021-01/r2K9RjHZ4s0xc0xc.jpeg&quot;
+                    },
+                    {
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;src&quot;: &quot;https://img.kaiheila.cn/assets/2021-01/klosFRTVy90jz0k0.jpg&quot;
+                    },
+                    {
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;src&quot;: &quot;https://img.kaiheila.cn/assets/2021-01/veHnEhzu6c0dw0dv.jpg&quot;
+                    },
+                    {
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;src&quot;: &quot;https://img.kaiheila.cn/assets/2021-01/tiVWPIuTrf0dw0dw.jpg&quot;
+                    },
+                    {
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;src&quot;: &quot;https://img.kaiheila.cn/assets/2021-01/wExzRIrTeR0j60j7.jpeg&quot;
+                    },
+                    {
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;src&quot;: &quot;https://img.kaiheila.cn/assets/2021-01/AybvLWYQgA0dw0dw.jpg&quot;
+                    }
+                ]
+            }
+        ]
+    }
+]
+</code></pre>
+<p>渲染效果如下：</p>
+<p><img src="samples/intro/sample-card.png" alt="Sample Card"></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/card_markup/intro.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
