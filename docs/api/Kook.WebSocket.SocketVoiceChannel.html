@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_WebSocket_SocketVoiceChannel" data-uid="Kook.WebSocket.SocketVoiceChannel" class="text-break">
-Class SocketVoiceChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class SocketVoiceChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SocketVoiceChannel : SocketGuildChannel, IUpdateable, IVoiceChannel, INestedChannel, IGuildChannel, IDeletable, ISocketAudioChannel, IAudioChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SocketVoiceChannel : SocketTextChannel, IUpdateable, ISocketMessageChannel, IVoiceChannel, ITextChannel, INestedChannel, IGuildChannel, IDeletable, IMentionable, IMessageChannel, ISocketAudioChannel, IAudioChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
   </div>
 
 
@@ -115,6 +115,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
       <div><a class="xref" href="Kook.WebSocket.SocketEntity-1.html">SocketEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</div>
       <div><a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a></div>
       <div><a class="xref" href="Kook.WebSocket.SocketGuildChannel.html">SocketGuildChannel</a></div>
+      <div><a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a></div>
       <div><span class="xref">SocketVoiceChannel</span></div>
     </dd>
   </dl>
@@ -123,10 +124,14 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="Kook.IUpdateable.html">IUpdateable</a></div>
+      <div><a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a></div>
       <div><a class="xref" href="Kook.IVoiceChannel.html">IVoiceChannel</a></div>
+      <div><a class="xref" href="Kook.ITextChannel.html">ITextChannel</a></div>
       <div><a class="xref" href="Kook.INestedChannel.html">INestedChannel</a></div>
       <div><a class="xref" href="Kook.IGuildChannel.html">IGuildChannel</a></div>
       <div><a class="xref" href="Kook.IDeletable.html">IDeletable</a></div>
+      <div><a class="xref" href="Kook.IMentionable.html">IMentionable</a></div>
+      <div><a class="xref" href="Kook.IMessageChannel.html">IMessageChannel</a></div>
       <div><a class="xref" href="Kook.WebSocket.ISocketAudioChannel.html">ISocketAudioChannel</a></div>
       <div><a class="xref" href="Kook.IAudioChannel.html">IAudioChannel</a></div>
       <div><a class="xref" href="Kook.IChannel.html">IChannel</a></div>
@@ -138,6 +143,90 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_Topic">SocketTextChannel.Topic</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SlowModeInterval">SocketTextChannel.SlowModeInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_CategoryId">SocketTextChannel.CategoryId</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_Category">SocketTextChannel.Category</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_IsPermissionSynced">SocketTextChannel.IsPermissionSynced</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_KMarkdownMention">SocketTextChannel.KMarkdownMention</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_PlainTextMention">SocketTextChannel.PlainTextMention</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_CachedMessages">SocketTextChannel.CachedMessages</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_ModifyAsync_System_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_">SocketTextChannel.ModifyAsync(Action&lt;ModifyTextChannelProperties&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SyncPermissionsAsync_Kook_RequestOptions_">SocketTextChannel.SyncPermissionsAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_GetCachedMessage_System_Guid_">SocketTextChannel.GetCachedMessage(Guid)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_GetMessageAsync_System_Guid_Kook_RequestOptions_">SocketTextChannel.GetMessageAsync(Guid, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_GetCachedMessages_System_Int32_">SocketTextChannel.GetCachedMessages(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_GetCachedMessages_System_Guid_Kook_Direction_System_Int32_">SocketTextChannel.GetCachedMessages(Guid, Direction, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_">SocketTextChannel.GetCachedMessages(IMessage, Direction, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_">SocketTextChannel.GetPinnedMessagesAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_Quote_Kook_IUser_Kook_RequestOptions_">SocketTextChannel.SendFileAsync(string, string, AttachmentType, Quote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_Quote_Kook_IUser_Kook_RequestOptions_">SocketTextChannel.SendFileAsync(Stream, string, AttachmentType, Quote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendFileAsync_Kook_FileAttachment_Kook_Quote_Kook_IUser_Kook_RequestOptions_">SocketTextChannel.SendFileAsync(FileAttachment, Quote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendTextAsync_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_">SocketTextChannel.SendTextAsync(string, Quote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_Quote_Kook_IUser_Kook_RequestOptions_">SocketTextChannel.SendCardsAsync(IEnumerable&lt;ICard&gt;, Quote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendCardAsync_Kook_ICard_Kook_Quote_Kook_IUser_Kook_RequestOptions_">SocketTextChannel.SendCardAsync(ICard, Quote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions_">SocketTextChannel.ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_DeleteMessageAsync_System_Guid_Kook_RequestOptions_">SocketTextChannel.DeleteMessageAsync(Guid, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_">SocketTextChannel.DeleteMessageAsync(IMessage, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_GetInvitesAsync_Kook_RequestOptions_">SocketTextChannel.GetInvitesAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_">SocketTextChannel.CreateInviteAsync(int?, int?, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_">SocketTextChannel.CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)</a>
+    </div>
     <div>
       <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_Guild">SocketGuildChannel.Guild</a>
     </div>
@@ -243,78 +332,11 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
 </h2>
 
 
-  <a id="Kook_WebSocket_SocketVoiceChannel_Category_" data-uid="Kook.WebSocket.SocketVoiceChannel.Category*"></a>
-
-  <h3 id="Kook_WebSocket_SocketVoiceChannel_Category" data-uid="Kook.WebSocket.SocketVoiceChannel.Category">
-  Category
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L26"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the parent (category) of this channel in the guild's channel list.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ICategoryChannel Category { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Kook.ICategoryChannel.html">ICategoryChannel</a></dt>
-    <dd><p>An <a class="xref" href="Kook.ICategoryChannel.html">ICategoryChannel</a> representing the parent of this channel; <code>null</code> if none is set.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Kook_WebSocket_SocketVoiceChannel_CategoryId_" data-uid="Kook.WebSocket.SocketVoiceChannel.CategoryId*"></a>
-
-  <h3 id="Kook_WebSocket_SocketVoiceChannel_CategoryId" data-uid="Kook.WebSocket.SocketVoiceChannel.CategoryId">
-  CategoryId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L18"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the parent (category) ID of this channel in the guild's channel list.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong? CategoryId { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>?</dt>
-    <dd><p>A <code>ulong</code> representing the identifier of the parent of this channel;
-<code>null</code> if none is set.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="Kook_WebSocket_SocketVoiceChannel_ConnectedUsers_" data-uid="Kook.WebSocket.SocketVoiceChannel.ConnectedUsers*"></a>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_ConnectedUsers" data-uid="Kook.WebSocket.SocketVoiceChannel.ConnectedUsers">
   ConnectedUsers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of users that are currently connected to this voice channel.</p>
@@ -357,7 +379,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_HasPassword" data-uid="Kook.WebSocket.SocketVoiceChannel.HasPassword">
   HasPassword
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this voice channel is locked by a password.</p>
@@ -386,44 +408,11 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
 
 
 
-  <a id="Kook_WebSocket_SocketVoiceChannel_IsPermissionSynced_" data-uid="Kook.WebSocket.SocketVoiceChannel.IsPermissionSynced*"></a>
-
-  <h3 id="Kook_WebSocket_SocketVoiceChannel_IsPermissionSynced" data-uid="Kook.WebSocket.SocketVoiceChannel.IsPermissionSynced">
-  IsPermissionSynced
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L30"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Specifies whether the permissions of this channel is synchronized with its parent channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? IsPermissionSynced { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
-    <dd><p>A <code>bool</code> indicating whether the permissions of this channel is synchronized with its parent channel.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="Kook_WebSocket_SocketVoiceChannel_IsVoiceRegionOverwritten_" data-uid="Kook.WebSocket.SocketVoiceChannel.IsVoiceRegionOverwritten*"></a>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_IsVoiceRegionOverwritten" data-uid="Kook.WebSocket.SocketVoiceChannel.IsVoiceRegionOverwritten">
   IsVoiceRegionOverwritten
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether the voice region of this audio channel is overwritten.</p>
@@ -455,7 +444,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_ServerUrl" data-uid="Kook.WebSocket.SocketVoiceChannel.ServerUrl">
   ServerUrl
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the server url that clients should connect to to join this voice channel.</p>
@@ -488,7 +477,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_UserLimit" data-uid="Kook.WebSocket.SocketVoiceChannel.UserLimit">
   UserLimit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the max number of users allowed to be connected to this channel at once.</p>
@@ -522,7 +511,7 @@ channel at once; <code>null</code> if a limit is not set.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_Users" data-uid="Kook.WebSocket.SocketVoiceChannel.Users">
   Users
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of users that are able to view the channel.</p>
@@ -561,7 +550,7 @@ channel at once; <code>null</code> if a limit is not set.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_VoiceQuality" data-uid="Kook.WebSocket.SocketVoiceChannel.VoiceQuality">
   VoiceQuality
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the voice quality that the clients in this voice channel are requested to use.</p>
@@ -595,7 +584,7 @@ client(s) to use.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_VoiceRegion" data-uid="Kook.WebSocket.SocketVoiceChannel.VoiceRegion">
   VoiceRegion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the voice region for this audio channel.</p>
@@ -639,7 +628,7 @@ client(s) to use.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_ConnectAsync_System_Boolean_System_Boolean_" data-uid="Kook.WebSocket.SocketVoiceChannel.ConnectAsync(System.Boolean,System.Boolean)">
   ConnectAsync(bool, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Connects to this audio channel.</p>
@@ -678,103 +667,11 @@ client(s) to use.</p>
 
 
 
-  <a id="Kook_WebSocket_SocketVoiceChannel_CreateInviteAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.CreateInviteAsync*"></a>
-
-  <h3 id="Kook_WebSocket_SocketVoiceChannel_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.CreateInviteAsync(Kook.InviteMaxAge,Kook.InviteMaxUses,Kook.RequestOptions)">
-  CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L149"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Creates a new invite to this channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(InviteMaxAge maxAge = InviteMaxAge._604800, InviteMaxUses maxUses = InviteMaxUses.Unlimited, RequestOptions options = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>maxAge</code> <a class="xref" href="Kook.InviteMaxAge.html">InviteMaxAge</a></dt>
-    <dd><p>The time until the invite expires. Set to <code>InviteMaxAge.NeverExpires</code> to never expire.</p>
-</dd>
-    <dt><code>maxUses</code> <a class="xref" href="Kook.InviteMaxUses.html">InviteMaxUses</a></dt>
-    <dd><p>The max amount of times this invite may be used. Set to <code>InviteMaxUses.Unlimited</code> to have unlimited uses.</p>
-</dd>
-    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous invite creation operation. The task result contains an invite
-metadata object containing information for the created invite.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Kook_WebSocket_SocketVoiceChannel_CreateInviteAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.CreateInviteAsync*"></a>
-
-  <h3 id="Kook_WebSocket_SocketVoiceChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},Kook.RequestOptions)">
-  CreateInviteAsync(int?, int?, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L145"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Creates a new invite to this channel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(int? maxAge = 604800, int? maxUses = null, RequestOptions options = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>maxAge</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
-    <dd><p>The time (in seconds) until the invite expires. Set to <code>null</code> to never expire.</p>
-</dd>
-    <dt><code>maxUses</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
-    <dd><p>The max amount of times this invite may be used. Set to <code>null</code> to have unlimited uses.</p>
-</dd>
-    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous invite creation operation. The task result contains an invite
-metadata object containing information for the created invite.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="Kook_WebSocket_SocketVoiceChannel_DisconnectAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.DisconnectAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_DisconnectAsync" data-uid="Kook.WebSocket.SocketVoiceChannel.DisconnectAsync">
   DisconnectAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Disconnects from this audio channel.</p>
@@ -807,7 +704,7 @@ metadata object containing information for the created invite.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_GetConnectedUsersAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetConnectedUsersAsync(Kook.CacheMode,Kook.RequestOptions)">
   GetConnectedUsersAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of users that are currently connected to this voice channel.</p>
@@ -846,23 +743,32 @@ that are currently connected to this voice channel.</p>
 
 
 
-  <a id="Kook_WebSocket_SocketVoiceChannel_GetInvitesAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetInvitesAsync*"></a>
+  <a id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetMessagesAsync*"></a>
 
-  <h3 id="Kook_WebSocket_SocketVoiceChannel_GetInvitesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetInvitesAsync(Kook.RequestOptions)">
-  GetInvitesAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)">
+  GetMessagesAsync(IMessage, Direction, int, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all invites from this guild channel.</p>
+  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;IInvite&gt;&gt; GetInvitesAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = 50, RequestOptions options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
+    <dt><code>referenceMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
+    <dd><p>The starting message to get the messages from.</p>
+</dd>
+    <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
+    <dd><p>The direction of the messages to be gotten from.</p>
+</dd>
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The numbers of message to be gotten from.</p>
+</dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
     <dd><p>The options to be used when sending the request.</p>
 </dd>
@@ -870,9 +776,8 @@ that are currently connected to this voice channel.</p>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a read-only collection of
-invite, each representing information for an invite found within this guild.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
+    <dd><p>Paged collection of messages.</p>
 </dd>
   </dl>
 
@@ -882,7 +787,127 @@ invite, each representing information for an invite found within this guild.</p>
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions)</a>.
+Please visit its documentation for more details on this method.</p>
+</div>
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>Getting messages from a voice channel is not supported.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetMessagesAsync*"></a>
+
+  <h3 id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.RequestOptions)">
+  GetMessagesAsync(Guid, Direction, int, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = 50, RequestOptions options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>referenceMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The ID of the starting message to get the messages from.</p>
+</dd>
+    <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
+    <dd><p>The direction of the messages to be gotten from.</p>
+</dd>
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The numbers of message to be gotten from.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
+    <dd><p>Paged collection of messages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions)</a>.
+Please visit its documentation for more details on this method.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>Getting messages from a voice channel is not supported.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetMessagesAsync*"></a>
+
+  <h3 id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)">
+  GetMessagesAsync(int, RequestOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(int limit = 50, RequestOptions options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The numbers of message to be gotten from.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
+    <dd><p>Paged collection of messages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions)</a>.
+Please visit its documentation for more details on this method.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>Getting messages from a voice channel is not supported.</p>
+</dd>
+  </dl>
 
 
 
@@ -890,7 +915,7 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetUser(System.UInt64)">
   GetUser(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> from this channel.</p>
@@ -929,7 +954,7 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_ModifyAsync_System_Action_Kook_ModifyVoiceChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.ModifyAsync(System.Action{Kook.ModifyVoiceChannelProperties},Kook.RequestOptions)">
   ModifyAsync(Action&lt;ModifyVoiceChannelProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Modifies this voice channel.</p>
@@ -973,50 +998,11 @@ invite, each representing information for an invite found within this guild.</p>
   </dl>
 
 
-  <a id="Kook_WebSocket_SocketVoiceChannel_SyncPermissionsAsync_" data-uid="Kook.WebSocket.SocketVoiceChannel.SyncPermissionsAsync*"></a>
-
-  <h3 id="Kook_WebSocket_SocketVoiceChannel_SyncPermissionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.SyncPermissionsAsync(Kook.RequestOptions)">
-  SyncPermissionsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L133"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Syncs the permissions of this nested channel with its parent's.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task SyncPermissionsAsync(RequestOptions options = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for syncing channel permissions with its parent's.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

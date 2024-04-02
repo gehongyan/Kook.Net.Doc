@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IVoiceChannel" data-uid="Kook.IVoiceChannel" class="text-break">
-Interface IVoiceChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IVoiceChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IVoiceChannel : INestedChannel, IGuildChannel, IDeletable, IAudioChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IVoiceChannel : ITextChannel, INestedChannel, IGuildChannel, IDeletable, IMentionable, IMessageChannel, IAudioChannel, IChannel, IEntity&lt;ulong&gt;</code></pre>
   </div>
 
 
@@ -114,6 +114,18 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Kook.ITextChannel.html#Kook_ITextChannel_Topic">ITextChannel.Topic</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.ITextChannel.html#Kook_ITextChannel_SlowModeInterval">ITextChannel.SlowModeInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.ITextChannel.html#Kook_ITextChannel_ModifyAsync_System_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_">ITextChannel.ModifyAsync(Action&lt;ModifyTextChannelProperties&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.ITextChannel.html#Kook_ITextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_">ITextChannel.GetPinnedMessagesAsync(RequestOptions)</a>
+    </div>
     <div>
       <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_CategoryId">INestedChannel.CategoryId</a>
     </div>
@@ -196,6 +208,51 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="Kook.IDeletable.html#Kook_IDeletable_DeleteAsync_Kook_RequestOptions_">IDeletable.DeleteAsync(RequestOptions)</a>
     </div>
     <div>
+      <a class="xref" href="Kook.IMentionable.html#Kook_IMentionable_PlainTextMention">IMentionable.PlainTextMention</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMentionable.html#Kook_IMentionable_KMarkdownMention">IMentionable.KMarkdownMention</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendFileAsync(string, string, AttachmentType, IQuote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendFileAsync(Stream, string, AttachmentType, IQuote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendFileAsync(FileAttachment, IQuote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendTextAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendTextAsync(string, IQuote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendCardAsync(ICard, IQuote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_IUser_Kook_RequestOptions_">IMessageChannel.SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote, IUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessageAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessageAsync(Guid, CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessagesAsync(int, CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">IMessageChannel.GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_DeleteMessageAsync_System_Guid_Kook_RequestOptions_">IMessageChannel.DeleteMessageAsync(Guid, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_">IMessageChannel.DeleteMessageAsync(IMessage, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions_">IMessageChannel.ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)</a>
+    </div>
+    <div>
       <a class="xref" href="Kook.IAudioChannel.html#Kook_IAudioChannel_IsVoiceRegionOverwritten">IAudioChannel.IsVoiceRegionOverwritten</a>
     </div>
     <div>
@@ -241,7 +298,7 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_IVoiceChannel_HasPassword" data-uid="Kook.IVoiceChannel.HasPassword">
   HasPassword
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this voice channel is locked by a password.</p>
@@ -274,7 +331,7 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_IVoiceChannel_UserLimit" data-uid="Kook.IVoiceChannel.UserLimit">
   UserLimit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the max number of users allowed to be connected to this channel at once.</p>
@@ -308,7 +365,7 @@ channel at once; <code>null</code> if a limit is not set.</p>
 
   <h3 id="Kook_IVoiceChannel_VoiceQuality" data-uid="Kook.IVoiceChannel.VoiceQuality">
   VoiceQuality
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the voice quality that the clients in this voice channel are requested to use.</p>
@@ -346,7 +403,7 @@ client(s) to use.</p>
 
   <h3 id="Kook_IVoiceChannel_GetConnectedUsersAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IVoiceChannel.GetConnectedUsersAsync(Kook.CacheMode,Kook.RequestOptions)">
   GetConnectedUsersAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the users connected to this voice channel.</p>
@@ -389,7 +446,7 @@ client(s) to use.</p>
 
   <h3 id="Kook_IVoiceChannel_ModifyAsync_System_Action_Kook_ModifyVoiceChannelProperties__Kook_RequestOptions_" data-uid="Kook.IVoiceChannel.ModifyAsync(System.Action{Kook.ModifyVoiceChannelProperties},Kook.RequestOptions)">
   ModifyAsync(Action&lt;ModifyVoiceChannelProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Modifies this voice channel.</p>
@@ -437,7 +494,7 @@ client(s) to use.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
