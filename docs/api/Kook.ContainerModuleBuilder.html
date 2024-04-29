@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a container module builder for creating a ContainerModule."><meta property="og:title" content="Class ContainerModuleBuilder | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_ContainerModuleBuilder" data-uid="Kook.ContainerModuleBuilder" class="text-break">
-Class ContainerModuleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class ContainerModuleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ContainerModuleBuilder : IModuleBuilder, IEquatable&lt;ContainerModuleBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ContainerModuleBuilder : IModuleBuilder, IEquatable&lt;ContainerModuleBuilder&gt;, IEquatable&lt;IModuleBuilder&gt;</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
     <dd>
       <div><a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a>&gt;</div>
     </dd>
   </dl>
 
@@ -158,7 +159,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ContainerModuleBuilder__ctor" data-uid="Kook.ContainerModuleBuilder.#ctor">
   ContainerModuleBuilder()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a> class.</p>
@@ -183,9 +184,9 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <a id="Kook_ContainerModuleBuilder__ctor_" data-uid="Kook.ContainerModuleBuilder.#ctor*"></a>
 
-  <h3 id="Kook_ContainerModuleBuilder__ctor_System_Collections_Generic_List_Kook_ImageElementBuilder__" data-uid="Kook.ContainerModuleBuilder.#ctor(System.Collections.Generic.List{Kook.ImageElementBuilder})">
-  ContainerModuleBuilder(List&lt;ImageElementBuilder&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_ContainerModuleBuilder__ctor_System_Collections_Generic_IList_Kook_ImageElementBuilder__" data-uid="Kook.ContainerModuleBuilder.#ctor(System.Collections.Generic.IList{Kook.ImageElementBuilder})">
+  ContainerModuleBuilder(IList&lt;ImageElementBuilder&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a> class.</p>
@@ -193,12 +194,12 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ContainerModuleBuilder(List&lt;ImageElementBuilder&gt; elements)</code></pre>
+    <pre><code class="lang-csharp hljs">public ContainerModuleBuilder(IList&lt;ImageElementBuilder&gt; elements)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>elements</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Kook.ImageElementBuilder.html">ImageElementBuilder</a>&gt;</dt>
+    <dt><code>elements</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="Kook.ImageElementBuilder.html">ImageElementBuilder</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -220,7 +221,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ContainerModuleBuilder_MaxElementCount" data-uid="Kook.ContainerModuleBuilder.MaxElementCount">
   MaxElementCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the maximum number of elements allowed by Kook.</p>
@@ -256,7 +257,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ContainerModuleBuilder_Elements" data-uid="Kook.ContainerModuleBuilder.Elements">
   Elements
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the image elements in the container module.</p>
@@ -264,7 +265,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ImageElementBuilder&gt; Elements { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IList&lt;ImageElementBuilder&gt; Elements { get; set; }</code></pre>
   </div>
 
 
@@ -273,8 +274,8 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Kook.ImageElementBuilder.html">ImageElementBuilder</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> containing the image elements in this image container module.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="Kook.ImageElementBuilder.html">ImageElementBuilder</a>&gt;</dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList&lt;T&gt;</a> containing the image elements in this image container module.</p>
 </dd>
   </dl>
 
@@ -282,12 +283,6 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The number of <code class="paramref">value</code> is greater than <a class="xref" href="Kook.ContainerModuleBuilder.html#Kook_ContainerModuleBuilder_MaxElementCount">MaxElementCount</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -295,7 +290,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ContainerModuleBuilder_Type" data-uid="Kook.ContainerModuleBuilder.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Specifies the module type of the <a class="xref" href="Kook.IModule.html">IModule</a> this builder creates.</p>
@@ -332,7 +327,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ContainerModuleBuilder_AddElement_Kook_ImageElementBuilder_" data-uid="Kook.ContainerModuleBuilder.AddElement(Kook.ImageElementBuilder)">
   AddElement(ImageElementBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds an image element to the container module.</p>
@@ -364,20 +359,14 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The addition operation would cause the number of elements to exceed <a class="xref" href="Kook.ContainerModuleBuilder.html#Kook_ContainerModuleBuilder_MaxElementCount">MaxElementCount</a>.</p>
-</dd>
-  </dl>
 
 
 
   <a id="Kook_ContainerModuleBuilder_AddElement_" data-uid="Kook.ContainerModuleBuilder.AddElement*"></a>
 
   <h3 id="Kook_ContainerModuleBuilder_AddElement_System_Action_Kook_ImageElementBuilder__" data-uid="Kook.ContainerModuleBuilder.AddElement(System.Action{Kook.ImageElementBuilder})">
-  AddElement(Action&lt;ImageElementBuilder&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  AddElement(Action&lt;ImageElementBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds an image element to the container module.</p>
@@ -385,7 +374,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ContainerModuleBuilder AddElement(Action&lt;ImageElementBuilder&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public ContainerModuleBuilder AddElement(Action&lt;ImageElementBuilder&gt;? action = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -409,12 +398,6 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The addition operation would cause the number of elements to exceed <a class="xref" href="Kook.ContainerModuleBuilder.html#Kook_ContainerModuleBuilder_MaxElementCount">MaxElementCount</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -422,7 +405,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ContainerModuleBuilder_Build" data-uid="Kook.ContainerModuleBuilder.Build">
   Build()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Builds this builder into a <a class="xref" href="Kook.ContainerModule.html">ContainerModule</a>.</p>
@@ -448,14 +431,26 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><a class="xref" href="Kook.ContainerModuleBuilder.html#Kook_ContainerModuleBuilder_Elements">Elements</a> cannot be null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><a class="xref" href="Kook.ContainerModuleBuilder.html#Kook_ContainerModuleBuilder_Elements">Elements</a> cannot be an empty list.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p><a class="xref" href="Kook.ContainerModuleBuilder.html#Kook_ContainerModuleBuilder_Elements">Elements</a> count must be less than or equal to <a class="xref" href="Kook.ContainerModuleBuilder.html#Kook_ContainerModuleBuilder_MaxElementCount">MaxElementCount</a>.</p>
+</dd>
+  </dl>
 
 
 
   <a id="Kook_ContainerModuleBuilder_Equals_" data-uid="Kook.ContainerModuleBuilder.Equals*"></a>
 
   <h3 id="Kook_ContainerModuleBuilder_Equals_Kook_ContainerModuleBuilder_" data-uid="Kook.ContainerModuleBuilder.Equals(Kook.ContainerModuleBuilder)">
-  Equals(ContainerModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  Equals(ContainerModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a>.</p>
@@ -463,7 +458,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(ContainerModuleBuilder containerModuleBuilder)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(ContainerModuleBuilder? containerModuleBuilder)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -493,8 +488,8 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <a id="Kook_ContainerModuleBuilder_Equals_" data-uid="Kook.ContainerModuleBuilder.Equals*"></a>
 
   <h3 id="Kook_ContainerModuleBuilder_Equals_System_Object_" data-uid="Kook.ContainerModuleBuilder.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a>.</p>
@@ -502,7 +497,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -526,7 +521,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
 
   <h4 class="section" id="Kook_ContainerModuleBuilder_Equals_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a>, <a class="xref" href="Kook.ContainerModuleBuilder.html#Kook_ContainerModuleBuilder_Equals_Kook_ContainerModuleBuilder_">Equals(ContainerModuleBuilder)</a> will be called to compare the 2 instances.</p>
+  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a>, <a class="xref" href="Kook.ContainerModuleBuilder.html#Kook_ContainerModuleBuilder_Equals_Kook_ContainerModuleBuilder_">Equals(ContainerModuleBuilder?)</a> will be called to compare the 2 instances.</p>
 </div>
 
 
@@ -536,7 +531,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ContainerModuleBuilder_GetHashCode" data-uid="Kook.ContainerModuleBuilder.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -572,8 +567,8 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <a id="Kook_ContainerModuleBuilder_op_Equality_" data-uid="Kook.ContainerModuleBuilder.op_Equality*"></a>
 
   <h3 id="Kook_ContainerModuleBuilder_op_Equality_Kook_ContainerModuleBuilder_Kook_ContainerModuleBuilder_" data-uid="Kook.ContainerModuleBuilder.op_Equality(Kook.ContainerModuleBuilder,Kook.ContainerModuleBuilder)">
-  operator ==(ContainerModuleBuilder, ContainerModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  operator ==(ContainerModuleBuilder?, ContainerModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a> is equal to the current <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a>.</p>
@@ -581,7 +576,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(ContainerModuleBuilder left, ContainerModuleBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator ==(ContainerModuleBuilder? left, ContainerModuleBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -612,8 +607,8 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <a id="Kook_ContainerModuleBuilder_op_Inequality_" data-uid="Kook.ContainerModuleBuilder.op_Inequality*"></a>
 
   <h3 id="Kook_ContainerModuleBuilder_op_Inequality_Kook_ContainerModuleBuilder_Kook_ContainerModuleBuilder_" data-uid="Kook.ContainerModuleBuilder.op_Inequality(Kook.ContainerModuleBuilder,Kook.ContainerModuleBuilder)">
-  operator !=(ContainerModuleBuilder, ContainerModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  operator !=(ContainerModuleBuilder?, ContainerModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a> is not equal to the current <a class="xref" href="Kook.ContainerModuleBuilder.html">ContainerModuleBuilder</a>.</p>
@@ -621,7 +616,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(ContainerModuleBuilder left, ContainerModuleBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator !=(ContainerModuleBuilder? left, ContainerModuleBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -653,7 +648,7 @@ Class ContainerModuleBuilder  <a class="header-action link-secondary" title="Vie
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/ContainerModuleBuilder.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

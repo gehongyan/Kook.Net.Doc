@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Requires the command to be invoked in a specified context (e.g. in guild, DM)."><meta property="og:title" content="Class RequireContextAttribute | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Commands_RequireContextAttribute" data-uid="Kook.Commands.RequireContextAttribute" class="text-break">
-Class RequireContextAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L23"><i class="bi bi-code-slash"></i></a>
+Class RequireContextAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class RequireContextAttribute  <a class="header-action link-secondary" title="Vi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Class|AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Class|AttributeTargets.Method, AllowMultiple = true)]
 public class RequireContextAttribute : PreconditionAttribute</code></pre>
   </div>
 
@@ -268,7 +268,7 @@ public class RequireContextAttribute : PreconditionAttribute</code></pre>
 
   <h3 id="Kook_Commands_RequireContextAttribute__ctor_Kook_Commands_ContextType_" data-uid="Kook.Commands.RequireContextAttribute.#ctor(Kook.Commands.ContextType)">
   RequireContextAttribute(ContextType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Requires the command to be invoked in the specified context.</p>
@@ -313,7 +313,7 @@ public Task PrivateOnlyAsync()
 
   <h3 id="Kook_Commands_RequireContextAttribute_Contexts" data-uid="Kook.Commands.RequireContextAttribute.Contexts">
   Contexts
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the context required to execute the command.</p>
@@ -345,7 +345,7 @@ public Task PrivateOnlyAsync()
 
   <h3 id="Kook_Commands_RequireContextAttribute_ErrorMessage" data-uid="Kook.Commands.RequireContextAttribute.ErrorMessage">
   ErrorMessage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>When overridden in a derived class, uses the supplied string
@@ -356,7 +356,7 @@ this property is a no-op.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ErrorMessage { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override string? ErrorMessage { get; set; }</code></pre>
   </div>
 
 
@@ -384,7 +384,7 @@ this property is a no-op.</p>
 
   <h3 id="Kook_Commands_RequireContextAttribute_CheckPermissionsAsync_Kook_Commands_ICommandContext_Kook_Commands_CommandInfo_System_IServiceProvider_" data-uid="Kook.Commands.RequireContextAttribute.CheckPermissionsAsync(Kook.Commands.ICommandContext,Kook.Commands.CommandInfo,System.IServiceProvider)">
   CheckPermissionsAsync(ICommandContext, CommandInfo, IServiceProvider)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if the <code class="paramref">command</code> has the sufficient permission to be executed.</p>
@@ -428,7 +428,7 @@ this property is a no-op.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L23" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireContextAttribute.cs/#L23" class="edit-link">Edit this page</a>
         </div>
 
 

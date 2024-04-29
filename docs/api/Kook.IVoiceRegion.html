@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a region of which the user connects to when using voice."><meta property="og:title" content="Interface IVoiceRegion | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IVoiceRegion" data-uid="Kook.IVoiceRegion" class="text-break">
-Interface IVoiceRegion  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Interface IVoiceRegion  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -117,9 +117,9 @@ Interface IVoiceRegion  <a class="header-action link-secondary" title="View sour
 
   <h2 id="Kook_IVoiceRegion_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><div class="WARNING"><h5>warning</h5><p>
-    This entity is still in experimental state, which means that it is not for official API implementation
-    usage, may violate the developer rules or policies, not guaranteed to be stable, and may be changed or removed in the future.
-</p></div>
+        This entity is still in experimental state, which means that it is not for official API implementation
+        usage, may violate the developer rules or policies, not guaranteed to be stable, and may be changed or removed in the future.
+    </p></div>
 </div>
 
 
@@ -131,7 +131,7 @@ Interface IVoiceRegion  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_IVoiceRegion_Crowding" data-uid="Kook.IVoiceRegion.Crowding">
   Crowding
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the crowding of this voice region.</p>
@@ -164,7 +164,7 @@ Interface IVoiceRegion  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_IVoiceRegion_Id" data-uid="Kook.IVoiceRegion.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the unique identifier for this voice region.</p>
@@ -197,7 +197,7 @@ Interface IVoiceRegion  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_IVoiceRegion_MinimumBoostLevel" data-uid="Kook.IVoiceRegion.MinimumBoostLevel">
   MinimumBoostLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the minimum boost level required to use this voice region.</p>
@@ -230,7 +230,7 @@ Interface IVoiceRegion  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_IVoiceRegion_Name" data-uid="Kook.IVoiceRegion.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of this voice region.</p>
@@ -263,7 +263,7 @@ Interface IVoiceRegion  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Core/Entities/Guilds/IVoiceRegion.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

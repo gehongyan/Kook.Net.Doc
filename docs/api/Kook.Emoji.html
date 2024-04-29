@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="A Unicode emoji."><meta property="og:title" content="Class Emoji | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Emoji" data-uid="Kook.Emoji" class="text-break">
-Class Emoji  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class Emoji  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -155,7 +155,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Kook_Emoji__ctor_System_String_" data-uid="Kook.Emoji.#ctor(System.String)">
   Emoji(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Emoji.html">Emoji</a> class with the provided Unicode.</p>
@@ -192,7 +192,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Kook_Emoji_Id" data-uid="Kook.Emoji.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the unique identifier for this object.</p>
@@ -224,7 +224,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Kook_Emoji_Name" data-uid="Kook.Emoji.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the display name or Unicode representation of this emote.</p>
@@ -260,8 +260,8 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
   <a id="Kook_Emoji_Equals_" data-uid="Kook.Emoji.Equals*"></a>
 
   <h3 id="Kook_Emoji_Equals_System_Object_" data-uid="Kook.Emoji.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified emoji is equal to the current one.</p>
@@ -269,7 +269,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -299,7 +299,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Kook_Emoji_GetHashCode" data-uid="Kook.Emoji.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -331,8 +331,8 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
   <a id="Kook_Emoji_Parse_" data-uid="Kook.Emoji.Parse*"></a>
 
   <h3 id="Kook_Emoji_Parse_System_String_" data-uid="Kook.Emoji.Parse(System.String)">
-  Parse(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  Parse(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Parse an <a class="xref" href="Kook.Emoji.html">Emoji</a> from its raw format.</p>
@@ -340,7 +340,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Emoji Parse(string emojiStr)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Emoji Parse(string? emojiStr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -376,7 +376,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Kook_Emoji_ToString" data-uid="Kook.Emoji.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the Unicode representation of this emoji.</p>
@@ -408,8 +408,8 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
   <a id="Kook_Emoji_TryParse_" data-uid="Kook.Emoji.TryParse*"></a>
 
   <h3 id="Kook_Emoji_TryParse_System_String_Kook_Emoji__" data-uid="Kook.Emoji.TryParse(System.String,Kook.Emoji@)">
-  TryParse(string, out Emoji)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  TryParse(string?, out Emoji?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Tries to parse an <a class="xref" href="Kook.Emoji.html">Emoji</a> from its raw format.</p>
@@ -417,7 +417,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryParse(string text, out Emoji result)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string? text, out Emoji? result)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -454,7 +454,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Kook_Emoji_op_Implicit_System_String__Kook_Emoji" data-uid="Kook.Emoji.op_Implicit(System.String)~Kook.Emoji">
   implicit operator Emoji(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L1846"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L1843"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Parses the given string into an <a class="xref" href="Kook.Emoji.html">Emoji</a>.</p>
@@ -496,7 +496,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
   <dl class="typelist seealso">
     <dt>See Also</dt>
     <dd>
-    <div><a class="xref" href="Kook.Emoji.html#Kook_Emoji_Parse_System_String_">Parse(string)</a></div>
+    <div><a class="xref" href="Kook.Emoji.html#Kook_Emoji_Parse_System_String_">Parse(string?)</a></div>
     </dd>
   </dl>
 
@@ -505,7 +505,7 @@ Class Emoji  <a class="header-action link-secondary" title="View source" href="h
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emoji.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

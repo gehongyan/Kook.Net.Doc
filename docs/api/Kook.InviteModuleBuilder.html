@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a invite module builder for creating an InviteModule."><meta property="og:title" content="Class InviteModuleBuilder | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_InviteModuleBuilder" data-uid="Kook.InviteModuleBuilder" class="text-break">
-Class InviteModuleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class InviteModuleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InviteModuleBuilder : IModuleBuilder, IEquatable&lt;InviteModuleBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class InviteModuleBuilder : IModuleBuilder, IEquatable&lt;InviteModuleBuilder&gt;, IEquatable&lt;IModuleBuilder&gt;</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
     <dd>
       <div><a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a>&gt;</div>
     </dd>
   </dl>
 
@@ -158,7 +159,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_InviteModuleBuilder__ctor" data-uid="Kook.InviteModuleBuilder.#ctor">
   InviteModuleBuilder()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a> class.</p>
@@ -185,7 +186,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_InviteModuleBuilder__ctor_System_String_" data-uid="Kook.InviteModuleBuilder.#ctor(System.String)">
   InviteModuleBuilder(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a> class.</p>
@@ -221,7 +222,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_InviteModuleBuilder_Code" data-uid="Kook.InviteModuleBuilder.Code">
   Code
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the code of the invite.</p>
@@ -229,7 +230,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Code { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Code { get; set; }</code></pre>
   </div>
 
 
@@ -254,7 +255,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_InviteModuleBuilder_Type" data-uid="Kook.InviteModuleBuilder.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Specifies the module type of the <a class="xref" href="Kook.IModule.html">IModule</a> this builder creates.</p>
@@ -291,7 +292,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_InviteModuleBuilder_Build" data-uid="Kook.InviteModuleBuilder.Build">
   Build()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Builds this builder into an <a class="xref" href="Kook.InviteModule.html">InviteModule</a>.</p>
@@ -317,14 +318,23 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.InviteModuleBuilder.html#Kook_InviteModuleBuilder_Code">Code</a> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.InviteModuleBuilder.html#Kook_InviteModuleBuilder_Code">Code</a> is empty or whitespace.</p>
+</dd>
+  </dl>
 
 
 
   <a id="Kook_InviteModuleBuilder_Equals_" data-uid="Kook.InviteModuleBuilder.Equals*"></a>
 
   <h3 id="Kook_InviteModuleBuilder_Equals_Kook_InviteModuleBuilder_" data-uid="Kook.InviteModuleBuilder.Equals(Kook.InviteModuleBuilder)">
-  Equals(InviteModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  Equals(InviteModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a> is equal to the current <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a>.</p>
@@ -332,7 +342,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(InviteModuleBuilder inviteModuleBuilder)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(InviteModuleBuilder? inviteModuleBuilder)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -362,8 +372,8 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
   <a id="Kook_InviteModuleBuilder_Equals_" data-uid="Kook.InviteModuleBuilder.Equals*"></a>
 
   <h3 id="Kook_InviteModuleBuilder_Equals_System_Object_" data-uid="Kook.InviteModuleBuilder.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a> is equal to the current <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a>.</p>
@@ -371,7 +381,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -395,7 +405,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
 
 
   <h4 class="section" id="Kook_InviteModuleBuilder_Equals_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a>, <a class="xref" href="Kook.InviteModuleBuilder.html#Kook_InviteModuleBuilder_Equals_Kook_InviteModuleBuilder_">Equals(InviteModuleBuilder)</a> will be called to compare the 2 instances.</p>
+  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a>, <a class="xref" href="Kook.InviteModuleBuilder.html#Kook_InviteModuleBuilder_Equals_Kook_InviteModuleBuilder_">Equals(InviteModuleBuilder?)</a> will be called to compare the 2 instances.</p>
 </div>
 
 
@@ -405,7 +415,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_InviteModuleBuilder_GetHashCode" data-uid="Kook.InviteModuleBuilder.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -438,7 +448,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_InviteModuleBuilder_WithCode_System_String_" data-uid="Kook.InviteModuleBuilder.WithCode(System.String)">
   WithCode(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the code of the invite.</p>
@@ -480,8 +490,8 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
   <a id="Kook_InviteModuleBuilder_op_Equality_" data-uid="Kook.InviteModuleBuilder.op_Equality*"></a>
 
   <h3 id="Kook_InviteModuleBuilder_op_Equality_Kook_InviteModuleBuilder_Kook_InviteModuleBuilder_" data-uid="Kook.InviteModuleBuilder.op_Equality(Kook.InviteModuleBuilder,Kook.InviteModuleBuilder)">
-  operator ==(InviteModuleBuilder, InviteModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  operator ==(InviteModuleBuilder?, InviteModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a> is equal to the current <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a>.</p>
@@ -489,7 +499,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(InviteModuleBuilder left, InviteModuleBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator ==(InviteModuleBuilder? left, InviteModuleBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -521,7 +531,7 @@ Class InviteModuleBuilder  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_InviteModuleBuilder_op_Implicit_System_String__Kook_InviteModuleBuilder" data-uid="Kook.InviteModuleBuilder.op_Implicit(System.String)~Kook.InviteModuleBuilder">
   implicit operator InviteModuleBuilder(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initialized a new instance of the <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a> class
@@ -560,8 +570,8 @@ with the specified <code class="paramref">code</code>.</p>
   <a id="Kook_InviteModuleBuilder_op_Inequality_" data-uid="Kook.InviteModuleBuilder.op_Inequality*"></a>
 
   <h3 id="Kook_InviteModuleBuilder_op_Inequality_Kook_InviteModuleBuilder_Kook_InviteModuleBuilder_" data-uid="Kook.InviteModuleBuilder.op_Inequality(Kook.InviteModuleBuilder,Kook.InviteModuleBuilder)">
-  operator !=(InviteModuleBuilder, InviteModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  operator !=(InviteModuleBuilder?, InviteModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a> is not equal to the current <a class="xref" href="Kook.InviteModuleBuilder.html">InviteModuleBuilder</a>.</p>
@@ -569,7 +579,7 @@ with the specified <code class="paramref">code</code>.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(InviteModuleBuilder left, InviteModuleBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator !=(InviteModuleBuilder? left, InviteModuleBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -601,7 +611,7 @@ with the specified <code class="paramref">code</code>.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/InviteModuleBuilder.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

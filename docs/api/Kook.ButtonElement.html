@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="A button element that can be used in an IModule."><meta property="og:title" content="Class ButtonElement | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_ButtonElement" data-uid="Kook.ButtonElement" class="text-break">
-Class ButtonElement  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class ButtonElement  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ButtonElement : IElement, IEquatable&lt;ButtonElement&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ButtonElement : IElement, IEquatable&lt;ButtonElement&gt;, IEquatable&lt;IElement&gt;</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
     <dd>
       <div><a class="xref" href="Kook.IElement.html">IElement</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.ButtonElement.html">ButtonElement</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.IElement.html">IElement</a>&gt;</div>
     </dd>
   </dl>
 
@@ -168,7 +169,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_ButtonElement_Click" data-uid="Kook.ButtonElement.Click">
   Click
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the event type fired when the button is clicked.</p>
@@ -176,7 +177,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ButtonClickEventType Click { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ButtonClickEventType? Click { get; }</code></pre>
   </div>
 
 
@@ -185,7 +186,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Kook.ButtonClickEventType.html">ButtonClickEventType</a></dt>
+    <dt><a class="xref" href="Kook.ButtonClickEventType.html">ButtonClickEventType</a>?</dt>
     <dd><p>A <a class="xref" href="Kook.ButtonClickEventType.html">ButtonClickEventType</a> value that represents the event type fired when the button is clicked.</p>
 </dd>
   </dl>
@@ -201,7 +202,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_ButtonElement_Text" data-uid="Kook.ButtonElement.Text">
   Text
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the text element of the button.</p>
@@ -234,7 +235,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_ButtonElement_Theme" data-uid="Kook.ButtonElement.Theme">
   Theme
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the theme of the button.</p>
@@ -242,7 +243,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ButtonTheme Theme { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ButtonTheme? Theme { get; }</code></pre>
   </div>
 
 
@@ -251,7 +252,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Kook.ButtonTheme.html">ButtonTheme</a></dt>
+    <dt><a class="xref" href="Kook.ButtonTheme.html">ButtonTheme</a>?</dt>
     <dd><p>A <a class="xref" href="Kook.ButtonTheme.html">ButtonTheme</a> value that represents the theme of the button.</p>
 </dd>
   </dl>
@@ -267,7 +268,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_ButtonElement_Type" data-uid="Kook.ButtonElement.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the theme of the button.</p>
@@ -300,7 +301,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_ButtonElement_Value" data-uid="Kook.ButtonElement.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the value of the button.</p>
@@ -308,7 +309,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Value { get; }</code></pre>
   </div>
 
 
@@ -336,8 +337,8 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <a id="Kook_ButtonElement_Equals_" data-uid="Kook.ButtonElement.Equals*"></a>
 
   <h3 id="Kook_ButtonElement_Equals_Kook_ButtonElement_" data-uid="Kook.ButtonElement.Equals(Kook.ButtonElement)">
-  Equals(ButtonElement)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  Equals(ButtonElement?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a> is equal to the current <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a>.</p>
@@ -345,7 +346,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(ButtonElement buttonElement)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(ButtonElement? buttonElement)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -375,8 +376,8 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <a id="Kook_ButtonElement_Equals_" data-uid="Kook.ButtonElement.Equals*"></a>
 
   <h3 id="Kook_ButtonElement_Equals_System_Object_" data-uid="Kook.ButtonElement.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a> is equal to the current <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a>.</p>
@@ -384,7 +385,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -408,7 +409,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
 
 
   <h4 class="section" id="Kook_ButtonElement_Equals_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a>, <a class="xref" href="Kook.ButtonElement.html#Kook_ButtonElement_Equals_Kook_ButtonElement_">Equals(ButtonElement)</a> will be called to compare the 2 instances.</p>
+  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a>, <a class="xref" href="Kook.ButtonElement.html#Kook_ButtonElement_Equals_Kook_ButtonElement_">Equals(ButtonElement?)</a> will be called to compare the 2 instances.</p>
 </div>
 
 
@@ -418,7 +419,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_ButtonElement_GetHashCode" data-uid="Kook.ButtonElement.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -454,8 +455,8 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <a id="Kook_ButtonElement_op_Equality_" data-uid="Kook.ButtonElement.op_Equality*"></a>
 
   <h3 id="Kook_ButtonElement_op_Equality_Kook_ButtonElement_Kook_ButtonElement_" data-uid="Kook.ButtonElement.op_Equality(Kook.ButtonElement,Kook.ButtonElement)">
-  operator ==(ButtonElement, ButtonElement)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  operator ==(ButtonElement?, ButtonElement?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a> is equal to the current <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a>.</p>
@@ -463,7 +464,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(ButtonElement left, ButtonElement right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator ==(ButtonElement? left, ButtonElement? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -494,8 +495,8 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <a id="Kook_ButtonElement_op_Inequality_" data-uid="Kook.ButtonElement.op_Inequality*"></a>
 
   <h3 id="Kook_ButtonElement_op_Inequality_Kook_ButtonElement_Kook_ButtonElement_" data-uid="Kook.ButtonElement.op_Inequality(Kook.ButtonElement,Kook.ButtonElement)">
-  operator !=(ButtonElement, ButtonElement)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  operator !=(ButtonElement?, ButtonElement?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a> is not equal to the current <a class="xref" href="Kook.ButtonElement.html">ButtonElement</a>.</p>
@@ -503,7 +504,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(ButtonElement left, ButtonElement right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator !=(ButtonElement? left, ButtonElement? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -535,7 +536,7 @@ Class ButtonElement  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ButtonElement.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

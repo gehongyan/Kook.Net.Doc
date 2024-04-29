@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Marks the execution information for a command."><meta property="og:title" content="Class CommandAttribute | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Commands_CommandAttribute" data-uid="Kook.Commands.CommandAttribute" class="text-break">
-Class CommandAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class CommandAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class CommandAttribute  <a class="header-action link-secondary" title="View sour
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Method)]
 public class CommandAttribute : Attribute</code></pre>
   </div>
 
@@ -264,7 +264,7 @@ public class CommandAttribute : Attribute</code></pre>
 
   <h3 id="Kook_Commands_CommandAttribute__ctor" data-uid="Kook.Commands.CommandAttribute.#ctor">
   CommandAttribute()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute">Attribute</a> class.</p>
@@ -291,7 +291,7 @@ public class CommandAttribute : Attribute</code></pre>
 
   <h3 id="Kook_Commands_CommandAttribute__ctor_System_String_" data-uid="Kook.Commands.CommandAttribute.#ctor(System.String)">
   CommandAttribute(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.CommandAttribute.html">CommandAttribute</a> attribute with the specified name.</p>
@@ -323,8 +323,8 @@ public class CommandAttribute : Attribute</code></pre>
   <a id="Kook_Commands_CommandAttribute__ctor_" data-uid="Kook.Commands.CommandAttribute.#ctor*"></a>
 
   <h3 id="Kook_Commands_CommandAttribute__ctor_System_String_System_Boolean_System_String_System_String___System_String_" data-uid="Kook.Commands.CommandAttribute.#ctor(System.String,System.Boolean,System.String,System.String[],System.String)">
-  CommandAttribute(string, bool, string, string[], string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  CommandAttribute(string, bool, string?, string[]?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.CommandAttribute.html">CommandAttribute</a> attribute with the specified name
@@ -333,7 +333,7 @@ and mode of whether to ignore extra arguments.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CommandAttribute(string text, bool ignoreExtraArgs, string summary = null, string[] aliases = null, string remarks = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public CommandAttribute(string text, bool ignoreExtraArgs, string? summary = null, string[]? aliases = null, string? remarks = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -374,7 +374,7 @@ and mode of whether to ignore extra arguments.</p>
 
   <h3 id="Kook_Commands_CommandAttribute_Aliases" data-uid="Kook.Commands.CommandAttribute.Aliases">
   Aliases
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Marks the aliases for a command.</p>
@@ -382,7 +382,7 @@ and mode of whether to ignore extra arguments.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] Aliases { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string[]? Aliases { get; set; }</code></pre>
   </div>
 
 
@@ -409,7 +409,7 @@ and mode of whether to ignore extra arguments.</p>
 
   <h3 id="Kook_Commands_CommandAttribute_IgnoreExtraArgs" data-uid="Kook.Commands.CommandAttribute.IgnoreExtraArgs">
   IgnoreExtraArgs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether extra arguments should be ignored for this command.</p>
@@ -441,7 +441,7 @@ and mode of whether to ignore extra arguments.</p>
 
   <h3 id="Kook_Commands_CommandAttribute_Remarks" data-uid="Kook.Commands.CommandAttribute.Remarks">
   Remarks
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attaches remarks to your commands.</p>
@@ -449,7 +449,7 @@ and mode of whether to ignore extra arguments.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Remarks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Remarks { get; set; }</code></pre>
   </div>
 
 
@@ -476,7 +476,7 @@ and mode of whether to ignore extra arguments.</p>
 
   <h3 id="Kook_Commands_CommandAttribute_RunMode" data-uid="Kook.Commands.CommandAttribute.RunMode">
   RunMode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Specifies the <a class="xref" href="Kook.Commands.CommandAttribute.html#Kook_Commands_CommandAttribute_RunMode">RunMode</a> of the command. This affects how the command is executed.</p>
@@ -508,7 +508,7 @@ and mode of whether to ignore extra arguments.</p>
 
   <h3 id="Kook_Commands_CommandAttribute_Summary" data-uid="Kook.Commands.CommandAttribute.Summary">
   Summary
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attaches a summary to your command.</p>
@@ -516,7 +516,7 @@ and mode of whether to ignore extra arguments.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Summary { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Summary { get; set; }</code></pre>
   </div>
 
 
@@ -543,7 +543,7 @@ and mode of whether to ignore extra arguments.</p>
 
   <h3 id="Kook_Commands_CommandAttribute_Text" data-uid="Kook.Commands.CommandAttribute.Text">
   Text
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the text that has been set to be recognized as a command.</p>
@@ -551,7 +551,7 @@ and mode of whether to ignore extra arguments.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Text { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Text { get; }</code></pre>
   </div>
 
 
@@ -575,7 +575,7 @@ and mode of whether to ignore extra arguments.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Provides extension methods of experimental functionalities for KookRestClients."><meta property="og:title" content="Class KookRestClientExperimentalExtensions | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Rest_KookRestClientExperimentalExtensions" data-uid="Kook.Rest.KookRestClientExperimentalExtensions" class="text-break">
-Class KookRestClientExperimentalExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class KookRestClientExperimentalExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -156,8 +156,8 @@ Class KookRestClientExperimentalExtensions  <a class="header-action link-seconda
   <a id="Kook_Rest_KookRestClientExperimentalExtensions_CreateGuildAsync_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.CreateGuildAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_CreateGuildAsync_Kook_Rest_KookRestClient_System_String_Kook_IVoiceRegion_System_IO_Stream_System_Nullable_System_Int32__Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.CreateGuildAsync(Kook.Rest.KookRestClient,System.String,Kook.IVoiceRegion,System.IO.Stream,System.Nullable{System.Int32},Kook.RequestOptions)">
-  CreateGuildAsync(KookRestClient, string, IVoiceRegion, Stream, int?, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  CreateGuildAsync(KookRestClient, string, IVoiceRegion?, Stream?, int?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a guild for the logged-in user.</p>
@@ -165,7 +165,7 @@ Class KookRestClientExperimentalExtensions  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;RestGuild&gt; CreateGuildAsync(this KookRestClient client, string name, IVoiceRegion region = null, Stream icon = null, int? templateId = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;RestGuild&gt; CreateGuildAsync(this KookRestClient client, string name, IVoiceRegion? region = null, Stream? icon = null, int? templateId = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -217,8 +217,8 @@ Class KookRestClientExperimentalExtensions  <a class="header-action link-seconda
   <a id="Kook_Rest_KookRestClientExperimentalExtensions_GetAdminGuildsAsync_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetAdminGuildsAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_GetAdminGuildsAsync_Kook_Rest_KookRestClient_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetAdminGuildsAsync(Kook.Rest.KookRestClient,Kook.RequestOptions)">
-  GetAdminGuildsAsync(KookRestClient, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  GetAdminGuildsAsync(KookRestClient, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of guilds where the current user has the
@@ -227,7 +227,7 @@ Class KookRestClientExperimentalExtensions  <a class="header-action link-seconda
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;IReadOnlyCollection&lt;RestGuild&gt;&gt; GetAdminGuildsAsync(this KookRestClient client, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;IReadOnlyCollection&lt;RestGuild&gt;&gt; GetAdminGuildsAsync(this KookRestClient client, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -261,8 +261,8 @@ of guilds where the current user has the <a class="xref" href="Kook.GuildPermiss
   <a id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceRegionAsync_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetVoiceRegionAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceRegionAsync_Kook_Rest_KookRestClient_System_String_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetVoiceRegionAsync(Kook.Rest.KookRestClient,System.String,Kook.RequestOptions)">
-  GetVoiceRegionAsync(KookRestClient, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  GetVoiceRegionAsync(KookRestClient, string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a voice region.</p>
@@ -270,7 +270,7 @@ of guilds where the current user has the <a class="xref" href="Kook.GuildPermiss
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;RestVoiceRegion&gt; GetVoiceRegionAsync(this KookRestClient client, string id, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;RestVoiceRegion?&gt; GetVoiceRegionAsync(this KookRestClient client, string id, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -302,9 +302,9 @@ associated with the identifier; <code>null</code> if the voice region is not fou
 
   <h4 class="section" id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceRegionAsync_Kook_Rest_KookRestClient_System_String_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    This method is still in experimental state, which means that it is not for official API implementation
-    usage, may violate the developer rules or policies, not guaranteed to be stable, and may be changed or removed in the future.
-</p></div>
+        This method is still in experimental state, which means that it is not for official API implementation
+        usage, may violate the developer rules or policies, not guaranteed to be stable, and may be changed or removed in the future.
+    </p></div>
 </div>
 
 
@@ -313,8 +313,8 @@ associated with the identifier; <code>null</code> if the voice region is not fou
   <a id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceRegionsAsync_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetVoiceRegionsAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceRegionsAsync_Kook_Rest_KookRestClient_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetVoiceRegionsAsync(Kook.Rest.KookRestClient,Kook.RequestOptions)">
-  GetVoiceRegionsAsync(KookRestClient, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  GetVoiceRegionsAsync(KookRestClient, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of the available voice regions.</p>
@@ -322,7 +322,7 @@ associated with the identifier; <code>null</code> if the voice region is not fou
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;IReadOnlyCollection&lt;RestVoiceRegion&gt;&gt; GetVoiceRegionsAsync(this KookRestClient client, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;IReadOnlyCollection&lt;RestVoiceRegion&gt;&gt; GetVoiceRegionsAsync(this KookRestClient client, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -351,9 +351,9 @@ with all of the available voice regions in this session.</p>
 
   <h4 class="section" id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceRegionsAsync_Kook_Rest_KookRestClient_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    This method is still in experimental state, which means that it is not for official API implementation
-    usage, may violate the developer rules or policies, not guaranteed to be stable, and may be changed or removed in the future.
-</p></div>
+        This method is still in experimental state, which means that it is not for official API implementation
+        usage, may violate the developer rules or policies, not guaranteed to be stable, and may be changed or removed in the future.
+    </p></div>
 </div>
 
 
@@ -362,8 +362,8 @@ with all of the available voice regions in this session.</p>
   <a id="Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardAsync_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.ValidateCardAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardAsync_Kook_Rest_KookRestClient_Kook_ICard_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.ValidateCardAsync(Kook.Rest.KookRestClient,Kook.ICard,Kook.RequestOptions)">
-  ValidateCardAsync(KookRestClient, ICard, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  ValidateCardAsync(KookRestClient, ICard, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Validates a card.</p>
@@ -371,7 +371,7 @@ with all of the available voice regions in this session.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task ValidateCardAsync(this KookRestClient client, ICard card, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task ValidateCardAsync(this KookRestClient client, ICard card, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -407,8 +407,8 @@ with all of the available voice regions in this session.</p>
   <a id="Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardsAsync_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.ValidateCardsAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardsAsync_Kook_Rest_KookRestClient_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.ValidateCardsAsync(Kook.Rest.KookRestClient,System.Collections.Generic.IEnumerable{Kook.ICard},Kook.RequestOptions)">
-  ValidateCardsAsync(KookRestClient, IEnumerable&lt;ICard&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  ValidateCardsAsync(KookRestClient, IEnumerable&lt;ICard&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Validates a collection of cards.</p>
@@ -416,7 +416,7 @@ with all of the available voice regions in this session.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task ValidateCardsAsync(this KookRestClient client, IEnumerable&lt;ICard&gt; cards, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task ValidateCardsAsync(this KookRestClient client, IEnumerable&lt;ICard&gt; cards, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -452,8 +452,8 @@ with all of the available voice regions in this session.</p>
   <a id="Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardsAsync_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.ValidateCardsAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardsAsync_Kook_Rest_KookRestClient_System_String_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.ValidateCardsAsync(Kook.Rest.KookRestClient,System.String,Kook.RequestOptions)">
-  ValidateCardsAsync(KookRestClient, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  ValidateCardsAsync(KookRestClient, string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Validates a collection of cards.</p>
@@ -461,7 +461,7 @@ with all of the available voice regions in this session.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task ValidateCardsAsync(this KookRestClient client, string cardsJson, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task ValidateCardsAsync(this KookRestClient client, string cardsJson, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -498,7 +498,7 @@ with all of the available voice regions in this session.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

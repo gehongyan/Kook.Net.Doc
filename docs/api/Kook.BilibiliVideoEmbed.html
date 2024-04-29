@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents an embed in a message that links to a Bilibili video."><meta property="og:title" content="Struct BilibiliVideoEmbed | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_BilibiliVideoEmbed" data-uid="Kook.BilibiliVideoEmbed" class="text-break">
-Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -153,7 +153,7 @@ Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_BilibiliVideoEmbed_BvNumber" data-uid="Kook.BilibiliVideoEmbed.BvNumber">
   BvNumber
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A <code>string</code> that represents the Bilibili video number in BV format.</p>
@@ -185,7 +185,7 @@ Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_BilibiliVideoEmbed_Cover" data-uid="Kook.BilibiliVideoEmbed.Cover">
   Cover
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A <code>string</code> that represents the cover of the Bilibili video.</p>
@@ -217,7 +217,7 @@ Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_BilibiliVideoEmbed_Duration" data-uid="Kook.BilibiliVideoEmbed.Duration">
   Duration
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a> that represents the duration of the Bilibili video.</p>
@@ -249,7 +249,7 @@ Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_BilibiliVideoEmbed_IframePath" data-uid="Kook.BilibiliVideoEmbed.IframePath">
   IframePath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A <code>string</code> that represents the path of the iframe.</p>
@@ -281,7 +281,7 @@ Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_BilibiliVideoEmbed_OriginUrl" data-uid="Kook.BilibiliVideoEmbed.OriginUrl">
   OriginUrl
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A <code>string</code> that represents the origin URL of the Bilibili video.</p>
@@ -313,7 +313,7 @@ Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_BilibiliVideoEmbed_Title" data-uid="Kook.BilibiliVideoEmbed.Title">
   Title
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A <code>string</code> that represents the title of the Bilibili video.</p>
@@ -345,7 +345,7 @@ Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_BilibiliVideoEmbed_Type" data-uid="Kook.BilibiliVideoEmbed.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the type of this embed.</p>
@@ -378,7 +378,7 @@ Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_BilibiliVideoEmbed_Url" data-uid="Kook.BilibiliVideoEmbed.Url">
   Url
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the URL of this embed.</p>
@@ -411,7 +411,7 @@ Struct BilibiliVideoEmbed  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Embeds/BilibiliVideoEmbed.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a game object."><meta property="og:title" content="Class RestGame | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Rest_RestGame" data-uid="Kook.Rest.RestGame" class="text-break">
-Class RestGame  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class RestGame  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -170,7 +170,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Kook_Rest_RestGame_GameType" data-uid="Kook.Rest.RestGame.GameType">
   GameType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the type of the game.</p>
@@ -203,7 +203,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Kook_Rest_RestGame_Icon" data-uid="Kook.Rest.RestGame.Icon">
   Icon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the URL of the game's icon.</p>
@@ -211,7 +211,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Icon { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Icon { get; }</code></pre>
   </div>
 
 
@@ -236,7 +236,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Kook_Rest_RestGame_Name" data-uid="Kook.Rest.RestGame.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the game.</p>
@@ -269,7 +269,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Kook_Rest_RestGame_Options" data-uid="Kook.Rest.RestGame.Options">
   Options
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the additional information about the game.</p>
@@ -277,7 +277,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Options { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Options { get; }</code></pre>
   </div>
 
 
@@ -302,7 +302,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Kook_Rest_RestGame_ProcessNames" data-uid="Kook.Rest.RestGame.ProcessNames">
   ProcessNames
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the process names of the game.</p>
@@ -335,7 +335,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Kook_Rest_RestGame_ProductNames" data-uid="Kook.Rest.RestGame.ProductNames">
   ProductNames
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the product names of the game.</p>
@@ -368,7 +368,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Kook_Rest_RestGame_RequireAdminPrivilege" data-uid="Kook.Rest.RestGame.RequireAdminPrivilege">
   RequireAdminPrivilege
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether the Kook client needs administrator privileges to detect the game.</p>
@@ -404,8 +404,8 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
   <a id="Kook_Rest_RestGame_DeleteAsync_" data-uid="Kook.Rest.RestGame.DeleteAsync*"></a>
 
   <h3 id="Kook_Rest_RestGame_DeleteAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGame.DeleteAsync(Kook.RequestOptions)">
-  DeleteAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  DeleteAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deletes this object and all its children.</p>
@@ -413,7 +413,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DeleteAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DeleteAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -442,8 +442,8 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
   <a id="Kook_Rest_RestGame_ModifyAsync_" data-uid="Kook.Rest.RestGame.ModifyAsync*"></a>
 
   <h3 id="Kook_Rest_RestGame_ModifyAsync_System_Action_Kook_GameProperties__Kook_RequestOptions_" data-uid="Kook.Rest.RestGame.ModifyAsync(System.Action{Kook.GameProperties},Kook.RequestOptions)">
-  ModifyAsync(Action&lt;GameProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  ModifyAsync(Action&lt;GameProperties&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Modifies this game.</p>
@@ -451,7 +451,7 @@ Class RestGame  <a class="header-action link-secondary" title="View source" href
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestGame&gt; ModifyAsync(Action&lt;GameProperties&gt; func, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestGame&gt; ModifyAsync(Action&lt;GameProperties&gt; func, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -489,7 +489,7 @@ method and what properties are available, please refer to <a class="xref" href="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Games/RestGame.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

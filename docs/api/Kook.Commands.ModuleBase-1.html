@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Provides a base class for a command module to inherit from."><meta property="og:title" content="Class ModuleBase&lt;T&gt; | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Commands_ModuleBase_1" data-uid="Kook.Commands.ModuleBase`1" class="text-break">
-Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L16"><i class="bi bi-code-slash"></i></a>
+Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -175,7 +175,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Commands_ModuleBase_1_Context" data-uid="Kook.Commands.ModuleBase`1.Context">
   Context
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The underlying context of the command.</p>
@@ -218,7 +218,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Commands_ModuleBase_1_AfterExecute_Kook_Commands_CommandInfo_" data-uid="Kook.Commands.ModuleBase`1.AfterExecute(Kook.Commands.CommandInfo)">
   AfterExecute(CommandInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The method to execute after executing the command.</p>
@@ -251,7 +251,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Commands_ModuleBase_1_AfterExecuteAsync_Kook_Commands_CommandInfo_" data-uid="Kook.Commands.ModuleBase`1.AfterExecuteAsync(Kook.Commands.CommandInfo)">
   AfterExecuteAsync(CommandInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The method to execute asynchronously after executing the command.</p>
@@ -289,7 +289,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Commands_ModuleBase_1_BeforeExecute_Kook_Commands_CommandInfo_" data-uid="Kook.Commands.ModuleBase`1.BeforeExecute(Kook.Commands.CommandInfo)">
   BeforeExecute(CommandInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The method to execute before executing the command.</p>
@@ -322,7 +322,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Commands_ModuleBase_1_BeforeExecuteAsync_Kook_Commands_CommandInfo_" data-uid="Kook.Commands.ModuleBase`1.BeforeExecuteAsync(Kook.Commands.CommandInfo)">
   BeforeExecuteAsync(CommandInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The method to execute asynchronously before executing the command.</p>
@@ -360,7 +360,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Commands_ModuleBase_1_OnModuleBuilding_Kook_Commands_CommandService_Kook_Commands_Builders_ModuleBuilder_" data-uid="Kook.Commands.ModuleBase`1.OnModuleBuilding(Kook.Commands.CommandService,Kook.Commands.Builders.ModuleBuilder)">
   OnModuleBuilding(CommandService, ModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L187"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The method to execute when building the module.</p>
@@ -395,8 +395,8 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <a id="Kook_Commands_ModuleBase_1_ReplyCardAsync_" data-uid="Kook.Commands.ModuleBase`1.ReplyCardAsync*"></a>
 
   <h3 id="Kook_Commands_ModuleBase_1_ReplyCardAsync_Kook_ICard_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.Commands.ModuleBase`1.ReplyCardAsync(Kook.ICard,System.Boolean,System.Boolean,Kook.RequestOptions)">
-  ReplyCardAsync(ICard, bool, bool, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  ReplyCardAsync(ICard, bool, bool, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a card message to the source channel.</p>
@@ -404,7 +404,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyCardAsync(ICard card, bool isQuote = true, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyCardAsync(ICard card, bool isQuote = true, bool isEphemeral = false, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -442,8 +442,8 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <a id="Kook_Commands_ModuleBase_1_ReplyCardsAsync_" data-uid="Kook.Commands.ModuleBase`1.ReplyCardsAsync*"></a>
 
   <h3 id="Kook_Commands_ModuleBase_1_ReplyCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.Commands.ModuleBase`1.ReplyCardsAsync(System.Collections.Generic.IEnumerable{Kook.ICard},System.Boolean,System.Boolean,Kook.RequestOptions)">
-  ReplyCardsAsync(IEnumerable&lt;ICard&gt;, bool, bool, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  ReplyCardsAsync(IEnumerable&lt;ICard&gt;, bool, bool, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a card message to the source channel.</p>
@@ -451,7 +451,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyCardsAsync(IEnumerable&lt;ICard&gt; cards, bool isQuote = true, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyCardsAsync(IEnumerable&lt;ICard&gt; cards, bool isQuote = true, bool isEphemeral = false, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -489,8 +489,8 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <a id="Kook_Commands_ModuleBase_1_ReplyFileAsync_" data-uid="Kook.Commands.ModuleBase`1.ReplyFileAsync*"></a>
 
   <h3 id="Kook_Commands_ModuleBase_1_ReplyFileAsync_Kook_FileAttachment_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.Commands.ModuleBase`1.ReplyFileAsync(Kook.FileAttachment,System.Boolean,System.Boolean,Kook.RequestOptions)">
-  ReplyFileAsync(FileAttachment, bool, bool, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  ReplyFileAsync(FileAttachment, bool, bool, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to the source channel.</p>
@@ -498,7 +498,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyFileAsync(FileAttachment attachment, bool isQuote = true, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyFileAsync(FileAttachment attachment, bool isQuote = true, bool isEphemeral = false, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -536,8 +536,8 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <a id="Kook_Commands_ModuleBase_1_ReplyFileAsync_" data-uid="Kook.Commands.ModuleBase`1.ReplyFileAsync*"></a>
 
   <h3 id="Kook_Commands_ModuleBase_1_ReplyFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.Commands.ModuleBase`1.ReplyFileAsync(System.IO.Stream,System.String,Kook.AttachmentType,System.Boolean,System.Boolean,Kook.RequestOptions)">
-  ReplyFileAsync(Stream, string, AttachmentType, bool, bool, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  ReplyFileAsync(Stream, string, AttachmentType, bool, bool, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to the source channel.</p>
@@ -545,7 +545,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyFileAsync(Stream stream, string fileName = null, AttachmentType type = AttachmentType.File, bool isQuote = true, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyFileAsync(Stream stream, string filename, AttachmentType type = AttachmentType.File, bool isQuote = true, bool isEphemeral = false, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -553,7 +553,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
     <dd><p>Stream of the file to be sent.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the file.</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
@@ -589,8 +589,8 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <a id="Kook_Commands_ModuleBase_1_ReplyFileAsync_" data-uid="Kook.Commands.ModuleBase`1.ReplyFileAsync*"></a>
 
   <h3 id="Kook_Commands_ModuleBase_1_ReplyFileAsync_System_String_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.Commands.ModuleBase`1.ReplyFileAsync(System.String,System.String,Kook.AttachmentType,System.Boolean,System.Boolean,Kook.RequestOptions)">
-  ReplyFileAsync(string, string, AttachmentType, bool, bool, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  ReplyFileAsync(string, string?, AttachmentType, bool, bool, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to the source channel.</p>
@@ -598,7 +598,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyFileAsync(string path, string fileName = null, AttachmentType type = AttachmentType.File, bool isQuote = true, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyFileAsync(string path, string? filename = null, AttachmentType type = AttachmentType.File, bool isQuote = true, bool isEphemeral = false, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -606,7 +606,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The file path of the file.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the file.</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
@@ -642,8 +642,8 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <a id="Kook_Commands_ModuleBase_1_ReplyTextAsync_" data-uid="Kook.Commands.ModuleBase`1.ReplyTextAsync*"></a>
 
   <h3 id="Kook_Commands_ModuleBase_1_ReplyTextAsync_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.Commands.ModuleBase`1.ReplyTextAsync(System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">
-  ReplyTextAsync(string, bool, bool, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  ReplyTextAsync(string, bool, bool, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a text message to the source channel.</p>
@@ -651,7 +651,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyTextAsync(string message, bool isQuote = true, bool isEphemeral = false, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; ReplyTextAsync(string message, bool isQuote = true, bool isEphemeral = false, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -690,7 +690,7 @@ Class ModuleBase&lt;T&gt;  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/ModuleBase.cs/#L16" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/ModuleBase.cs/#L14" class="edit-link">Edit this page</a>
         </div>
 
 

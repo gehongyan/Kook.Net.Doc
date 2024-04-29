@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Provides extension methods of experimental functionalities for BaseSocketClients."><meta property="og:title" content="Class BaseSocketClientExperimentalExtensions | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_WebSocket_BaseSocketClientExperimentalExtensions" data-uid="Kook.WebSocket.BaseSocketClientExperimentalExtensions" class="text-break">
-Class BaseSocketClientExperimentalExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/WebSocket/BaseSocketClientExperimentalExtensions.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class BaseSocketClientExperimentalExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/WebSocket/BaseSocketClientExperimentalExtensions.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -156,8 +156,8 @@ Class BaseSocketClientExperimentalExtensions  <a class="header-action link-secon
   <a id="Kook_WebSocket_BaseSocketClientExperimentalExtensions_CreateGuildAsync_" data-uid="Kook.WebSocket.BaseSocketClientExperimentalExtensions.CreateGuildAsync*"></a>
 
   <h3 id="Kook_WebSocket_BaseSocketClientExperimentalExtensions_CreateGuildAsync_Kook_WebSocket_BaseSocketClient_System_String_Kook_IVoiceRegion_System_IO_Stream_System_Nullable_System_Int32__Kook_RequestOptions_" data-uid="Kook.WebSocket.BaseSocketClientExperimentalExtensions.CreateGuildAsync(Kook.WebSocket.BaseSocketClient,System.String,Kook.IVoiceRegion,System.IO.Stream,System.Nullable{System.Int32},Kook.RequestOptions)">
-  CreateGuildAsync(BaseSocketClient, string, IVoiceRegion, Stream, int?, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/WebSocket/BaseSocketClientExperimentalExtensions.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  CreateGuildAsync(BaseSocketClient, string, IVoiceRegion?, Stream?, int?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/WebSocket/BaseSocketClientExperimentalExtensions.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a guild for the logged-in user.</p>
@@ -165,7 +165,7 @@ Class BaseSocketClientExperimentalExtensions  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;RestGuild&gt; CreateGuildAsync(this BaseSocketClient client, string name, IVoiceRegion region = null, Stream icon = null, int? templateId = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;RestGuild&gt; CreateGuildAsync(this BaseSocketClient client, string name, IVoiceRegion? region = null, Stream? icon = null, int? templateId = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -218,7 +218,7 @@ Class BaseSocketClientExperimentalExtensions  <a class="header-action link-secon
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Experimental/WebSocket/BaseSocketClientExperimentalExtensions.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/WebSocket/BaseSocketClientExperimentalExtensions.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

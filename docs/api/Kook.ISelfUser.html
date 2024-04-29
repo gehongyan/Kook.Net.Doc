@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents the logged-in Kook user."><meta property="og:title" content="Interface ISelfUser | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_ISelfUser" data-uid="Kook.ISelfUser" class="text-break">
-Interface ISelfUser  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface ISelfUser  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -201,22 +201,22 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="Kook.Format.html#Kook_Format_UsernameAndIdentifyNumber_Kook_IUser_System_Boolean_">Format.UsernameAndIdentifyNumber(IUser, bool)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardAsync_Kook_IUser_Kook_ICard_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardAsync(IUser, ICard, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardAsync_Kook_IUser_Kook_ICard_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardAsync(IUser, ICard, IQuote?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardsAsync_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardsAsync(IUser, IEnumerable&lt;ICard&gt;, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardsAsync_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardsAsync(IUser, IEnumerable&lt;ICard&gt;, IQuote?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, FileAttachment, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, FileAttachment, IQuote?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, Stream, string, AttachmentType, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, Stream, string, AttachmentType, IQuote?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, string, string, AttachmentType, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, string, string?, AttachmentType, IQuote?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendTextAsync_Kook_IUser_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendTextAsync(IUser, string, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendTextAsync_Kook_IUser_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendTextAsync(IUser, string, IQuote?, RequestOptions?)</a>
   </div>
   </dd></dl>
 
@@ -232,7 +232,7 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_ISelfUser_InvitedCount" data-uid="Kook.ISelfUser.InvitedCount">
   InvitedCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>TODO: To be documented.</p>
@@ -264,7 +264,7 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_ISelfUser_IsMobileVerified" data-uid="Kook.ISelfUser.IsMobileVerified">
   IsMobileVerified
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether the mobile number of the logged-in user is verified.</p>
@@ -296,7 +296,7 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_ISelfUser_Mobile" data-uid="Kook.ISelfUser.Mobile">
   Mobile
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the mobile number of the logged-in user.</p>
@@ -304,7 +304,7 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Mobile { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">string? Mobile { get; }</code></pre>
   </div>
 
 
@@ -328,7 +328,7 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_ISelfUser_MobilePrefix" data-uid="Kook.ISelfUser.MobilePrefix">
   MobilePrefix
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the mobile prefix of the logged-in user.</p>
@@ -336,7 +336,7 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string MobilePrefix { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">string? MobilePrefix { get; }</code></pre>
   </div>
 
 
@@ -363,8 +363,8 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
   <a id="Kook_ISelfUser_StartPlayingAsync_" data-uid="Kook.ISelfUser.StartPlayingAsync*"></a>
 
   <h3 id="Kook_ISelfUser_StartPlayingAsync_Kook_IGame_Kook_RequestOptions_" data-uid="Kook.ISelfUser.StartPlayingAsync(Kook.IGame,Kook.RequestOptions)">
-  StartPlayingAsync(IGame, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  StartPlayingAsync(IGame, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Starts a new game activity. After this operation, a game activity will be displayed on the currently connected user's profile.</p>
@@ -372,7 +372,7 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task StartPlayingAsync(IGame game, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task StartPlayingAsync(IGame game, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -405,8 +405,8 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
   <a id="Kook_ISelfUser_StartPlayingAsync_" data-uid="Kook.ISelfUser.StartPlayingAsync*"></a>
 
   <h3 id="Kook_ISelfUser_StartPlayingAsync_Kook_Music_Kook_RequestOptions_" data-uid="Kook.ISelfUser.StartPlayingAsync(Kook.Music,Kook.RequestOptions)">
-  StartPlayingAsync(Music, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  StartPlayingAsync(Music, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Starts a new music activity. After this operation, a music activity will be displayed on the currently connected user's profile.</p>
@@ -414,7 +414,7 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task StartPlayingAsync(Music music, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task StartPlayingAsync(Music music, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -447,8 +447,8 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
   <a id="Kook_ISelfUser_StopPlayingAsync_" data-uid="Kook.ISelfUser.StopPlayingAsync*"></a>
 
   <h3 id="Kook_ISelfUser_StopPlayingAsync_Kook_ActivityType_Kook_RequestOptions_" data-uid="Kook.ISelfUser.StopPlayingAsync(Kook.ActivityType,Kook.RequestOptions)">
-  StopPlayingAsync(ActivityType, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  StopPlayingAsync(ActivityType, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stops an activity. After this operation, the activity on the currently connected user's profile will disappear.</p>
@@ -456,7 +456,7 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task StopPlayingAsync(ActivityType type, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task StopPlayingAsync(ActivityType type, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -490,7 +490,7 @@ Interface ISelfUser  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/ISelfUser.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

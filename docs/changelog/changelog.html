@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
-  <meta property="og:description" content="KOOK 客户端现已支持在语音频道内发送消息，与此相关地以下 API 产生了变动："><meta property="og:title" content="变更日志 | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
 
-  <script type="module" src="./../public/docfx.min.js"></script>
+      <script type="module" src="./../public/docfx.min.js"></script>
 
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
 
+  <meta property="og:description" content="KOOK 客户端现已支持在语音频道内发送消息，与此相关的以下 API 产生了变动："><meta property="og:title" content="变更日志 | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 <h2 id="v070-2024-04-02">v0.7.0 [2024-04-02]</h2>
 <h3 id="更新路线">更新路线</h3>
-<p>KOOK 客户端现已支持在语音频道内发送消息，与此相关地以下 API 产生了变动：</p>
+<p>KOOK 客户端现已支持在语音频道内发送消息，与此相关的以下 API 产生了变动：</p>
 <ul>
 <li><code>CreateVoiceChannelProperties</code> 现已继承自 <code>CreateTextChannelProperties</code></li>
 <li><code>ModifyVoiceChannelProperties</code> 现已继承自 <code>ModifyTextChannelProperties</code></li>
@@ -99,7 +99,7 @@
 </ul>
 <p>需要注意的是，受限于 KOOK API，语音频道内不支持通过 API 获取历史消息，无置顶消息功能，因此，语音频道上不支持调用
 <code>IMessageChannel</code> 的 <code>GetMessagesAsync</code> 与 <code>GetPinnedMessagesAsync</code> 方法。</p>
-<p>另外，语音频道在 API 层面支持操作 Topic 及 SlowModeInterval，但 KOOK 客户端暂无相关表现。</p>
+<p>另外，语音频道在 API 层面支持操作 <code>Topic</code> 及 <code>SlowModeInterval</code>，但 KOOK 客户端暂无相关表现。</p>
 <p>创建频道时不支持立即指定 <code>Topic</code>，<code>CreateTextChannelProperties</code> 中的 <code>Topic</code> 属性不生效，现已移除，
 请在创建频道后调用 <code>ITextChannel.ModifyAsync</code> 方法进行修改。</p>
 <h3 id="新增">新增</h3>

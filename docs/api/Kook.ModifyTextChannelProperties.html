@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Provides properties that are used to modify an ITextChannel with the specified properties."><meta property="og:title" content="Class ModifyTextChannelProperties | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_ModifyTextChannelProperties" data-uid="Kook.ModifyTextChannelProperties" class="text-break">
-Class ModifyTextChannelProperties  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/ModifyTextChannelProperties.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class ModifyTextChannelProperties  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/ModifyTextChannelProperties.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -173,7 +173,7 @@ Class ModifyTextChannelProperties  <a class="header-action link-secondary" title
 
   <h3 id="Kook_ModifyTextChannelProperties_SlowModeInterval" data-uid="Kook.ModifyTextChannelProperties.SlowModeInterval">
   SlowModeInterval
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/ModifyTextChannelProperties.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/ModifyTextChannelProperties.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the slow-mode ratelimit in seconds for this channel.</p>
@@ -202,7 +202,7 @@ Class ModifyTextChannelProperties  <a class="header-action link-secondary" title
 <a class="xref" href="Kook.SlowModeInterval.html#Kook_SlowModeInterval_None">None</a> will disable slow-mode for this channel;
 if this value is set to <code>null</code>, the slow-mode interval will not be modified.</p>
 <div class="NOTE"><h5>note</h5><p>
-    Users with <a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageMessages">ManageMessages</a> or 
+    Users with <a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageMessages">ManageMessages</a> or
     <a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageChannels">ManageChannels</a> will be exempt from slow-mode.
 </p></div>
 </div>
@@ -214,7 +214,7 @@ if this value is set to <code>null</code>, the slow-mode interval will not be mo
 
   <h3 id="Kook_ModifyTextChannelProperties_Topic" data-uid="Kook.ModifyTextChannelProperties.Topic">
   Topic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/ModifyTextChannelProperties.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/ModifyTextChannelProperties.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the topic of the channel.</p>
@@ -222,7 +222,7 @@ if this value is set to <code>null</code>, the slow-mode interval will not be mo
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Topic { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Topic { get; set; }</code></pre>
   </div>
 
 
@@ -254,7 +254,7 @@ channel topic or description to the desired value.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/ModifyTextChannelProperties.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/ModifyTextChannelProperties.cs/#L7" class="edit-link">Edit this page</a>
         </div>
 
 

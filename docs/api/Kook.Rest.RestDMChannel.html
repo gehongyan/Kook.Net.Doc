@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a REST-based direct-message channel."><meta property="og:title" content="Class RestDMChannel | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Rest_RestDMChannel" data-uid="Kook.Rest.RestDMChannel" class="text-break">
-Class RestDMChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class RestDMChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -180,7 +180,7 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Rest_RestDMChannel_ChatCode" data-uid="Kook.Rest.RestDMChannel.ChatCode">
   ChatCode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the chat code of the direct-message channel.</p>
@@ -216,7 +216,7 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Rest_RestDMChannel_CurrentUser" data-uid="Kook.Rest.RestDMChannel.CurrentUser">
   CurrentUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the current logged-in user.</p>
@@ -248,7 +248,7 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Rest_RestDMChannel_Id" data-uid="Kook.Rest.RestDMChannel.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get the identifier of the DM channel.</p>
@@ -283,7 +283,7 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Rest_RestDMChannel_Recipient" data-uid="Kook.Rest.RestDMChannel.Recipient">
   Recipient
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the recipient of the channel.</p>
@@ -315,7 +315,7 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Rest_RestDMChannel_Users" data-uid="Kook.Rest.RestDMChannel.Users">
   Users
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection that is the current logged-in user and the recipient.</p>
@@ -350,8 +350,8 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
   <a id="Kook_Rest_RestDMChannel_CloseAsync_" data-uid="Kook.Rest.RestDMChannel.CloseAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_CloseAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.CloseAsync(Kook.RequestOptions)">
-  CloseAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  CloseAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Closes this private channel, removing it from your channel list.</p>
@@ -359,7 +359,7 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task CloseAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task CloseAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -389,8 +389,8 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
   <a id="Kook_Rest_RestDMChannel_DeleteMessageAsync_" data-uid="Kook.Rest.RestDMChannel.DeleteMessageAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.DeleteMessageAsync(Kook.IMessage,Kook.RequestOptions)">
-  DeleteMessageAsync(IMessage, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  DeleteMessageAsync(IMessage, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deletes a message based on the provided message in this channel.</p>
@@ -398,7 +398,7 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DeleteMessageAsync(IMessage message, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DeleteMessageAsync(IMessage message, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -431,8 +431,8 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
   <a id="Kook_Rest_RestDMChannel_DeleteMessageAsync_" data-uid="Kook.Rest.RestDMChannel.DeleteMessageAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_DeleteMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.DeleteMessageAsync(System.Guid,Kook.RequestOptions)">
-  DeleteMessageAsync(Guid, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  DeleteMessageAsync(Guid, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deletes a message.</p>
@@ -440,7 +440,7 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DeleteMessageAsync(Guid messageId, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DeleteMessageAsync(Guid messageId, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -473,8 +473,8 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
   <a id="Kook_Rest_RestDMChannel_GetMessageAsync_" data-uid="Kook.Rest.RestDMChannel.GetMessageAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_GetMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.GetMessageAsync(System.Guid,Kook.RequestOptions)">
-  GetMessageAsync(Guid, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  GetMessageAsync(Guid, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L188"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a message from this message channel.</p>
@@ -482,7 +482,7 @@ Class RestDMChannel  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestMessage&gt; GetMessageAsync(Guid id, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestMessage&gt; GetMessageAsync(Guid id, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -510,7 +510,7 @@ the retrieved message; <code>null</code> if no message is found with the specifi
 
 
   <h4 class="section" id="Kook_Rest_RestDMChannel_GetMessageAsync_System_Guid_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessageAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_">GetMessageAsync(Guid, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessageAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_">GetMessageAsync(Guid, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -520,8 +520,8 @@ Please visit its documentation for more details on this method.</p>
   <a id="Kook_Rest_RestDMChannel_GetMessagesAsync_" data-uid="Kook.Rest.RestDMChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)">
-  GetMessagesAsync(IMessage, Direction, int, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(IMessage, Direction, int, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
@@ -529,7 +529,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = 50, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = 50, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -562,7 +562,7 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestDMChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -572,8 +572,8 @@ Please visit its documentation for more details on this method.</p>
   <a id="Kook_Rest_RestDMChannel_GetMessagesAsync_" data-uid="Kook.Rest.RestDMChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.RequestOptions)">
-  GetMessagesAsync(Guid, Direction, int, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(Guid, Direction, int, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L197"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
@@ -581,7 +581,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = 50, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = 50, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -614,7 +614,7 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestDMChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -624,8 +624,8 @@ Please visit its documentation for more details on this method.</p>
   <a id="Kook_Rest_RestDMChannel_GetMessagesAsync_" data-uid="Kook.Rest.RestDMChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)">
-  GetMessagesAsync(int, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(int, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
@@ -633,7 +633,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(int limit = 50, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(int limit = 50, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -660,7 +660,7 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestDMChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -671,7 +671,7 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_Rest_RestDMChannel_GetUser_System_UInt64_" data-uid="Kook.Rest.RestDMChannel.GetUser(System.UInt64)">
   GetUser(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a user in this channel from the provided <code class="paramref">id</code>.</p>
@@ -679,7 +679,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RestUser GetUser(ulong id)</code></pre>
+    <pre><code class="lang-csharp hljs">public RestUser? GetUser(ulong id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -709,8 +709,8 @@ Please visit its documentation for more details on this method.</p>
   <a id="Kook_Rest_RestDMChannel_ModifyMessageAsync_" data-uid="Kook.Rest.RestDMChannel.ModifyMessageAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.ModifyMessageAsync(System.Guid,System.Action{Kook.MessageProperties},Kook.RequestOptions)">
-  ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Modifies a message.</p>
@@ -718,7 +718,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task ModifyMessageAsync(Guid messageId, Action&lt;MessageProperties&gt; func, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ModifyMessageAsync(Guid messageId, Action&lt;MessageProperties&gt; func, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -758,8 +758,8 @@ method and what properties are available, please refer to <a class="xref" href="
   <a id="Kook_Rest_RestDMChannel_SendCardAsync_" data-uid="Kook.Rest.RestDMChannel.SendCardAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.SendCardAsync(Kook.ICard,Kook.IQuote,Kook.RequestOptions)">
-  SendCardAsync(ICard, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  SendCardAsync(ICard, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
@@ -767,7 +767,7 @@ method and what properties are available, please refer to <a class="xref" href="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardAsync(ICard card, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardAsync(ICard card, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -804,8 +804,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_Rest_RestDMChannel_SendCardsAsync_" data-uid="Kook.Rest.RestDMChannel.SendCardsAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.SendCardsAsync(System.Collections.Generic.IEnumerable{Kook.ICard},Kook.IQuote,Kook.RequestOptions)">
-  SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
@@ -813,7 +813,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardsAsync(IEnumerable&lt;ICard&gt; cards, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardsAsync(IEnumerable&lt;ICard&gt; cards, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -850,8 +850,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_Rest_RestDMChannel_SendFileAsync_" data-uid="Kook.Rest.RestDMChannel.SendFileAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.SendFileAsync(Kook.FileAttachment,Kook.IQuote,Kook.RequestOptions)">
-  SendFileAsync(FileAttachment, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  SendFileAsync(FileAttachment, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
@@ -859,7 +859,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(FileAttachment attachment, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(FileAttachment attachment, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -899,8 +899,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_Rest_RestDMChannel_SendFileAsync_" data-uid="Kook.Rest.RestDMChannel.SendFileAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.SendFileAsync(System.IO.Stream,System.String,Kook.AttachmentType,Kook.IQuote,Kook.RequestOptions)">
-  SendFileAsync(Stream, string, AttachmentType, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  SendFileAsync(Stream, string, AttachmentType, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
@@ -908,7 +908,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(Stream stream, string fileName = null, AttachmentType type = AttachmentType.File, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(Stream stream, string filename, AttachmentType type = AttachmentType.File, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -916,7 +916,7 @@ contains the identifier and timestamp of the sent message.</p>
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
     <dd><p>The stream of the file.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the file.</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
@@ -954,8 +954,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_Rest_RestDMChannel_SendFileAsync_" data-uid="Kook.Rest.RestDMChannel.SendFileAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.SendFileAsync(System.String,System.String,Kook.AttachmentType,Kook.IQuote,Kook.RequestOptions)">
-  SendFileAsync(string, string, AttachmentType, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  SendFileAsync(string, string?, AttachmentType, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
@@ -963,7 +963,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(string path, string fileName = null, AttachmentType type = AttachmentType.File, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(string path, string? filename = null, AttachmentType type = AttachmentType.File, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -971,7 +971,7 @@ contains the identifier and timestamp of the sent message.</p>
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The file path of the file.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the file.</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
@@ -1009,8 +1009,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_Rest_RestDMChannel_SendTextAsync_" data-uid="Kook.Rest.RestDMChannel.SendTextAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_SendTextAsync_System_String_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.SendTextAsync(System.String,Kook.IQuote,Kook.RequestOptions)">
-  SendTextAsync(string, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  SendTextAsync(string, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a text message to this message channel.</p>
@@ -1018,7 +1018,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendTextAsync(string text, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendTextAsync(string text, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1056,7 +1056,7 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_Rest_RestDMChannel_ToString" data-uid="Kook.Rest.RestDMChannel.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L312"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a string that represents the Username#IdentifyNumber of the recipient.</p>
@@ -1088,8 +1088,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_Rest_RestDMChannel_UpdateAsync_" data-uid="Kook.Rest.RestDMChannel.UpdateAsync*"></a>
 
   <h3 id="Kook_Rest_RestDMChannel_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestDMChannel.UpdateAsync(Kook.RequestOptions)">
-  UpdateAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  UpdateAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Updates this object's properties with its current state.</p>
@@ -1097,7 +1097,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task UpdateAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task UpdateAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1121,13 +1121,10 @@ contains the identifier and timestamp of the sent message.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestDMChannel_UpdateAsync_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><div class="WARNING">
-  <h5>warning</h5>
-  <p>
-            This method will fetch the latest data from REST API,
-            and replace the current object's properties with the new data.
-        </p>
-</div>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+        This method will fetch the latest data from REST API,
+        and replace the current object's properties with the new data.
+    </p></div>
 </div>
 
 
@@ -1137,7 +1134,7 @@ contains the identifier and timestamp of the sent message.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestDMChannel.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

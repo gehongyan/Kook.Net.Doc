@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a REST-based KOOK client."><meta property="og:title" content="Class KookRestClient | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Rest_KookRestClient" data-uid="Kook.Rest.KookRestClient" class="text-break">
-Class KookRestClient  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class KookRestClient  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -192,25 +192,25 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_CreateGuildAsync_Kook_Rest_KookRestClient_System_String_Kook_IVoiceRegion_System_IO_Stream_System_Nullable_System_Int32__Kook_RequestOptions_">KookRestClientExperimentalExtensions.CreateGuildAsync(KookRestClient, string, IVoiceRegion, Stream, int?, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_CreateGuildAsync_Kook_Rest_KookRestClient_System_String_Kook_IVoiceRegion_System_IO_Stream_System_Nullable_System_Int32__Kook_RequestOptions_">KookRestClientExperimentalExtensions.CreateGuildAsync(KookRestClient, string, IVoiceRegion?, Stream?, int?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_GetAdminGuildsAsync_Kook_Rest_KookRestClient_Kook_RequestOptions_">KookRestClientExperimentalExtensions.GetAdminGuildsAsync(KookRestClient, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_GetAdminGuildsAsync_Kook_Rest_KookRestClient_Kook_RequestOptions_">KookRestClientExperimentalExtensions.GetAdminGuildsAsync(KookRestClient, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceRegionAsync_Kook_Rest_KookRestClient_System_String_Kook_RequestOptions_">KookRestClientExperimentalExtensions.GetVoiceRegionAsync(KookRestClient, string, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceRegionAsync_Kook_Rest_KookRestClient_System_String_Kook_RequestOptions_">KookRestClientExperimentalExtensions.GetVoiceRegionAsync(KookRestClient, string, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceRegionsAsync_Kook_Rest_KookRestClient_Kook_RequestOptions_">KookRestClientExperimentalExtensions.GetVoiceRegionsAsync(KookRestClient, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceRegionsAsync_Kook_Rest_KookRestClient_Kook_RequestOptions_">KookRestClientExperimentalExtensions.GetVoiceRegionsAsync(KookRestClient, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardAsync_Kook_Rest_KookRestClient_Kook_ICard_Kook_RequestOptions_">KookRestClientExperimentalExtensions.ValidateCardAsync(KookRestClient, ICard, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardAsync_Kook_Rest_KookRestClient_Kook_ICard_Kook_RequestOptions_">KookRestClientExperimentalExtensions.ValidateCardAsync(KookRestClient, ICard, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardsAsync_Kook_Rest_KookRestClient_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_RequestOptions_">KookRestClientExperimentalExtensions.ValidateCardsAsync(KookRestClient, IEnumerable&lt;ICard&gt;, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardsAsync_Kook_Rest_KookRestClient_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_RequestOptions_">KookRestClientExperimentalExtensions.ValidateCardsAsync(KookRestClient, IEnumerable&lt;ICard&gt;, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardsAsync_Kook_Rest_KookRestClient_System_String_Kook_RequestOptions_">KookRestClientExperimentalExtensions.ValidateCardsAsync(KookRestClient, string, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardsAsync_Kook_Rest_KookRestClient_System_String_Kook_RequestOptions_">KookRestClientExperimentalExtensions.ValidateCardsAsync(KookRestClient, string, RequestOptions?)</a>
   </div>
   </dd></dl>
 
@@ -226,7 +226,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Rest_KookRestClient__ctor" data-uid="Kook.Rest.KookRestClient.#ctor">
   KookRestClient()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new REST-based KOOK client with the default configuration.</p>
@@ -253,7 +253,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Rest_KookRestClient__ctor_Kook_Rest_KookRestConfig_" data-uid="Kook.Rest.KookRestClient.#ctor(Kook.Rest.KookRestConfig)">
   KookRestClient(KookRestConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new REST-based KOOK client with the specified configuration.</p>
@@ -290,7 +290,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Rest_KookRestClient_CurrentUser" data-uid="Kook.Rest.KookRestClient.CurrentUser">
   CurrentUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the logged-in user.</p>
@@ -298,7 +298,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RestSelfUser CurrentUser { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RestSelfUser? CurrentUser { get; }</code></pre>
   </div>
 
 
@@ -325,8 +325,8 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <a id="Kook_Rest_KookRestClient_AddDirectMessageReactionAsync_" data-uid="Kook.Rest.KookRestClient.AddDirectMessageReactionAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_AddDirectMessageReactionAsync_System_Guid_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.AddDirectMessageReactionAsync(System.Guid,Kook.IEmote,Kook.RequestOptions)">
-  AddDirectMessageReactionAsync(Guid, IEmote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  AddDirectMessageReactionAsync(Guid, IEmote, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L285"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a reaction to a direct message.</p>
@@ -334,7 +334,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task AddDirectMessageReactionAsync(Guid messageId, IEmote emote, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task AddDirectMessageReactionAsync(Guid messageId, IEmote emote, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -376,8 +376,8 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <a id="Kook_Rest_KookRestClient_AddReactionAsync_" data-uid="Kook.Rest.KookRestClient.AddReactionAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_AddReactionAsync_System_Guid_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.AddReactionAsync(System.Guid,Kook.IEmote,Kook.RequestOptions)">
-  AddReactionAsync(Guid, IEmote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  AddReactionAsync(Guid, IEmote, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a reaction to a message.</p>
@@ -385,7 +385,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task AddReactionAsync(Guid messageId, IEmote emote, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task AddReactionAsync(Guid messageId, IEmote emote, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -428,7 +428,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Rest_KookRestClient_AddRoleAsync_System_UInt64_System_UInt64_System_UInt32_" data-uid="Kook.Rest.KookRestClient.AddRoleAsync(System.UInt64,System.UInt64,System.UInt32)">
   AddRoleAsync(ulong, ulong, uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds the specified role to this user in the guild.</p>
@@ -472,8 +472,8 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <a id="Kook_Rest_KookRestClient_CreateAssetAsync_" data-uid="Kook.Rest.KookRestClient.CreateAssetAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_CreateAssetAsync_System_IO_Stream_System_String_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.CreateAssetAsync(System.IO.Stream,System.String,Kook.RequestOptions)">
-  CreateAssetAsync(Stream, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  CreateAssetAsync(Stream, string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L323"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an asset from a stream.</p>
@@ -481,7 +481,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; CreateAssetAsync(Stream stream, string fileName, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; CreateAssetAsync(Stream stream, string filename, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -489,7 +489,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
     <dd><p>The stream to the file.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the file.</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
@@ -517,8 +517,8 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <a id="Kook_Rest_KookRestClient_CreateAssetAsync_" data-uid="Kook.Rest.KookRestClient.CreateAssetAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_CreateAssetAsync_System_String_System_String_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.CreateAssetAsync(System.String,System.String,Kook.RequestOptions)">
-  CreateAssetAsync(string, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  CreateAssetAsync(string, string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L313"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an asset from a file path.</p>
@@ -526,7 +526,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; CreateAssetAsync(string path, string fileName, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; CreateAssetAsync(string path, string filename, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -534,7 +534,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The path to the file.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the file.</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
@@ -562,8 +562,8 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <a id="Kook_Rest_KookRestClient_CreateGameAsync_" data-uid="Kook.Rest.KookRestClient.CreateGameAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_CreateGameAsync_System_String_System_String_System_String_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.CreateGameAsync(System.String,System.String,System.String,Kook.RequestOptions)">
-  CreateGameAsync(string, string, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  CreateGameAsync(string, string?, string?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L351"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates game information.</p>
@@ -571,7 +571,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestGame&gt; CreateGameAsync(string name, string processName, string iconUrl, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestGame&gt; CreateGameAsync(string name, string? processName = null, string? iconUrl = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -609,8 +609,8 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <a id="Kook_Rest_KookRestClient_GetBlockedUsersAsync_" data-uid="Kook.Rest.KookRestClient.GetBlockedUsersAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetBlockedUsersAsync_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetBlockedUsersAsync(Kook.RequestOptions)">
-  GetBlockedUsersAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  GetBlockedUsersAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets blocked users.</p>
@@ -618,7 +618,7 @@ Class KookRestClient  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestUser&gt;&gt; GetBlockedUsersAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestUser&gt;&gt; GetBlockedUsersAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -649,8 +649,8 @@ that are blocked by the current user.</p>
   <a id="Kook_Rest_KookRestClient_GetChannelAsync_" data-uid="Kook.Rest.KookRestClient.GetChannelAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetChannelAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetChannelAsync(System.UInt64,Kook.RequestOptions)">
-  GetChannelAsync(ulong, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  GetChannelAsync(ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a generic channel.</p>
@@ -658,7 +658,7 @@ that are blocked by the current user.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestChannel&gt; GetChannelAsync(ulong id, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestChannel&gt; GetChannelAsync(ulong id, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -692,8 +692,8 @@ with the identifier; <code>null</code> when the channel cannot be found.</p>
   <a id="Kook_Rest_KookRestClient_GetDMChannelAsync_" data-uid="Kook.Rest.KookRestClient.GetDMChannelAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetDMChannelAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetDMChannelAsync(System.Guid,Kook.RequestOptions)">
-  GetDMChannelAsync(Guid, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  GetDMChannelAsync(Guid, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a direct message channel.</p>
@@ -701,7 +701,7 @@ with the identifier; <code>null</code> when the channel cannot be found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestDMChannel&gt; GetDMChannelAsync(Guid chatCode, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestDMChannel&gt; GetDMChannelAsync(Guid chatCode, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -735,8 +735,8 @@ of direct-message channels that the user currently partakes in.</p>
   <a id="Kook_Rest_KookRestClient_GetDMChannelsAsync_" data-uid="Kook.Rest.KookRestClient.GetDMChannelsAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetDMChannelsAsync_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetDMChannelsAsync(Kook.RequestOptions)">
-  GetDMChannelsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  GetDMChannelsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of direct message channels opened in this session.</p>
@@ -744,7 +744,7 @@ of direct-message channels that the user currently partakes in.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestDMChannel&gt;&gt; GetDMChannelsAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestDMChannel&gt;&gt; GetDMChannelsAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -782,8 +782,8 @@ of direct-message channels that the user currently partakes in.</p>
   <a id="Kook_Rest_KookRestClient_GetFriendRequestsAsync_" data-uid="Kook.Rest.KookRestClient.GetFriendRequestsAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetFriendRequestsAsync_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetFriendRequestsAsync(Kook.RequestOptions)">
-  GetFriendRequestsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  GetFriendRequestsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L230"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets friend requests.</p>
@@ -791,7 +791,7 @@ of direct-message channels that the user currently partakes in.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestFriendRequest&gt;&gt; GetFriendRequestsAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestFriendRequest&gt;&gt; GetFriendRequestsAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -822,8 +822,8 @@ friend requests that the current user has received.</p>
   <a id="Kook_Rest_KookRestClient_GetFriendsAsync_" data-uid="Kook.Rest.KookRestClient.GetFriendsAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetFriendsAsync_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetFriendsAsync(Kook.RequestOptions)">
-  GetFriendsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  GetFriendsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets friends.</p>
@@ -831,7 +831,7 @@ friend requests that the current user has received.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestUser&gt;&gt; GetFriendsAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestUser&gt;&gt; GetFriendsAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -862,8 +862,8 @@ that are friends with the current user.</p>
   <a id="Kook_Rest_KookRestClient_GetGamesAsync_" data-uid="Kook.Rest.KookRestClient.GetGamesAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetGamesAsync_System_Nullable_Kook_GameCreationSource__Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetGamesAsync(System.Nullable{Kook.GameCreationSource},Kook.RequestOptions)">
-  GetGamesAsync(GameCreationSource?, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  GetGamesAsync(GameCreationSource?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L339"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets games information.</p>
@@ -871,7 +871,7 @@ that are friends with the current user.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestGame&gt;&gt; GetGamesAsync(GameCreationSource? source = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestGame&gt;&gt; GetGamesAsync(GameCreationSource? source = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -905,8 +905,8 @@ by the system by default; <code>null</code> to return all games information.</p>
   <a id="Kook_Rest_KookRestClient_GetGuildAsync_" data-uid="Kook.Rest.KookRestClient.GetGuildAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetGuildAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetGuildAsync(System.UInt64,Kook.RequestOptions)">
-  GetGuildAsync(ulong, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  GetGuildAsync(ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a guild.</p>
@@ -914,7 +914,7 @@ by the system by default; <code>null</code> to return all games information.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestGuild&gt; GetGuildAsync(ulong id, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestGuild&gt; GetGuildAsync(ulong id, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -948,8 +948,8 @@ with the identifier; <code>null</code> when the guild cannot be found.</p>
   <a id="Kook_Rest_KookRestClient_GetGuildUserAsync_" data-uid="Kook.Rest.KookRestClient.GetGuildUserAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetGuildUserAsync_System_UInt64_System_UInt64_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetGuildUserAsync(System.UInt64,System.UInt64,Kook.RequestOptions)">
-  GetGuildUserAsync(ulong, ulong, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  GetGuildUserAsync(ulong, ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a user from a guild.</p>
@@ -957,7 +957,7 @@ with the identifier; <code>null</code> when the guild cannot be found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestGuildUser&gt; GetGuildUserAsync(ulong guildId, ulong id, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestGuildUser?&gt; GetGuildUserAsync(ulong guildId, ulong id, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -994,8 +994,8 @@ associated with the identifier; <code>null</code> if the user is not found in th
   <a id="Kook_Rest_KookRestClient_GetGuildsAsync_" data-uid="Kook.Rest.KookRestClient.GetGuildsAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetGuildsAsync_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetGuildsAsync(Kook.RequestOptions)">
-  GetGuildsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  GetGuildsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of guilds that the user is currently in.</p>
@@ -1003,7 +1003,7 @@ associated with the identifier; <code>null</code> if the user is not found in th
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestGuild&gt;&gt; GetGuildsAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestGuild&gt;&gt; GetGuildsAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1034,8 +1034,8 @@ of guilds that the current user is in.</p>
   <a id="Kook_Rest_KookRestClient_GetUserAsync_" data-uid="Kook.Rest.KookRestClient.GetUserAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_GetUserAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.GetUserAsync(System.UInt64,Kook.RequestOptions)">
-  GetUserAsync(ulong, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  GetUserAsync(ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a user.</p>
@@ -1043,7 +1043,7 @@ of guilds that the current user is in.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestUser&gt; GetUserAsync(ulong id, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestUser&gt; GetUserAsync(ulong id, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1077,8 +1077,8 @@ the identifier; <code>null</code> if the user is not found.</p>
   <a id="Kook_Rest_KookRestClient_RemoveDirectMessageReactionAsync_" data-uid="Kook.Rest.KookRestClient.RemoveDirectMessageReactionAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_RemoveDirectMessageReactionAsync_System_Guid_System_UInt64_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.RemoveDirectMessageReactionAsync(System.Guid,System.UInt64,Kook.IEmote,Kook.RequestOptions)">
-  RemoveDirectMessageReactionAsync(Guid, ulong, IEmote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  RemoveDirectMessageReactionAsync(Guid, ulong, IEmote, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L299"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes a reaction from a direct message.</p>
@@ -1086,7 +1086,7 @@ the identifier; <code>null</code> if the user is not found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task RemoveDirectMessageReactionAsync(Guid messageId, ulong userId, IEmote emote, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task RemoveDirectMessageReactionAsync(Guid messageId, ulong userId, IEmote emote, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1131,8 +1131,8 @@ the identifier; <code>null</code> if the user is not found.</p>
   <a id="Kook_Rest_KookRestClient_RemoveReactionAsync_" data-uid="Kook.Rest.KookRestClient.RemoveReactionAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClient_RemoveReactionAsync_System_Guid_System_UInt64_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClient.RemoveReactionAsync(System.Guid,System.UInt64,Kook.IEmote,Kook.RequestOptions)">
-  RemoveReactionAsync(Guid, ulong, IEmote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  RemoveReactionAsync(Guid, ulong, IEmote, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L272"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes a reaction from a message.</p>
@@ -1140,7 +1140,7 @@ the identifier; <code>null</code> if the user is not found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task RemoveReactionAsync(Guid messageId, ulong userId, IEmote emote, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task RemoveReactionAsync(Guid messageId, ulong userId, IEmote emote, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1186,7 +1186,7 @@ the identifier; <code>null</code> if the user is not found.</p>
 
   <h3 id="Kook_Rest_KookRestClient_RemoveRoleAsync_System_UInt64_System_UInt64_System_UInt32_" data-uid="Kook.Rest.KookRestClient.RemoveRoleAsync(System.UInt64,System.UInt64,System.UInt32)">
   RemoveRoleAsync(ulong, ulong, uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes the specified <code class="paramref">roleId</code> from this user in the guild.</p>
@@ -1231,7 +1231,7 @@ the identifier; <code>null</code> if the user is not found.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/KookRestClient.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/KookRestClient.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

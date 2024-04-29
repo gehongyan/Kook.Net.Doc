@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a command builder."><meta property="og:title" content="Class CommandBuilder | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Commands_Builders_CommandBuilder" data-uid="Kook.Commands.Builders.CommandBuilder" class="text-break">
-Class CommandBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class CommandBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_Aliases" data-uid="Kook.Commands.Builders.CommandBuilder.Aliases">
   Aliases
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the aliases of this command.</p>
@@ -189,7 +189,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_Attributes" data-uid="Kook.Commands.Builders.CommandBuilder.Attributes">
   Attributes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the attributes of this command.</p>
@@ -221,7 +221,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_IgnoreExtraArgs" data-uid="Kook.Commands.Builders.CommandBuilder.IgnoreExtraArgs">
   IgnoreExtraArgs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets whether the extra arguments should be ignored.</p>
@@ -253,7 +253,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_Module" data-uid="Kook.Commands.Builders.CommandBuilder.Module">
   Module
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the module builder that this command builder belongs to.</p>
@@ -285,7 +285,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_Name" data-uid="Kook.Commands.Builders.CommandBuilder.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the name of this command.</p>
@@ -293,7 +293,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Name { get; set; }</code></pre>
   </div>
 
 
@@ -317,7 +317,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_Parameters" data-uid="Kook.Commands.Builders.CommandBuilder.Parameters">
   Parameters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the parameters of this command.</p>
@@ -349,7 +349,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_Preconditions" data-uid="Kook.Commands.Builders.CommandBuilder.Preconditions">
   Preconditions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the preconditions of this command.</p>
@@ -381,7 +381,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_PrimaryAlias" data-uid="Kook.Commands.Builders.CommandBuilder.PrimaryAlias">
   PrimaryAlias
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the primary alias of this command.</p>
@@ -389,7 +389,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string PrimaryAlias { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? PrimaryAlias { get; set; }</code></pre>
   </div>
 
 
@@ -413,7 +413,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_Priority" data-uid="Kook.Commands.Builders.CommandBuilder.Priority">
   Priority
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the priority of this command.</p>
@@ -445,7 +445,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_Remarks" data-uid="Kook.Commands.Builders.CommandBuilder.Remarks">
   Remarks
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the remarks of this command.</p>
@@ -453,7 +453,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Remarks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Remarks { get; set; }</code></pre>
   </div>
 
 
@@ -477,7 +477,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_RunMode" data-uid="Kook.Commands.Builders.CommandBuilder.RunMode">
   RunMode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the run mode of this command.</p>
@@ -509,7 +509,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_Summary" data-uid="Kook.Commands.Builders.CommandBuilder.Summary">
   Summary
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the summary of this command.</p>
@@ -517,7 +517,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Summary { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Summary { get; set; }</code></pre>
   </div>
 
 
@@ -544,8 +544,8 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
   <a id="Kook_Commands_Builders_CommandBuilder_AddAliases_" data-uid="Kook.Commands.Builders.CommandBuilder.AddAliases*"></a>
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_AddAliases_System_String___" data-uid="Kook.Commands.Builders.CommandBuilder.AddAliases(System.String[])">
-  AddAliases(params string[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  AddAliases(params string?[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L179"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds aliases to this command.</p>
@@ -553,7 +553,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CommandBuilder AddAliases(params string[] aliases)</code></pre>
+    <pre><code class="lang-csharp hljs">public CommandBuilder AddAliases(params string?[] aliases)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -584,7 +584,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_AddAttributes_System_Attribute___" data-uid="Kook.Commands.Builders.CommandBuilder.AddAttributes(System.Attribute[])">
   AddAttributes(params Attribute[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds attributes to this command.</p>
@@ -623,7 +623,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_AddParameter_System_String_System_Type_System_Action_Kook_Commands_Builders_ParameterBuilder__" data-uid="Kook.Commands.Builders.CommandBuilder.AddParameter(System.String,System.Type,System.Action{Kook.Commands.Builders.ParameterBuilder})">
   AddParameter(string, Type, Action&lt;ParameterBuilder&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a parameter to this command.</p>
@@ -668,7 +668,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_AddParameter__1_System_String_System_Action_Kook_Commands_Builders_ParameterBuilder__" data-uid="Kook.Commands.Builders.CommandBuilder.AddParameter``1(System.String,System.Action{Kook.Commands.Builders.ParameterBuilder})">
   AddParameter&lt;T&gt;(string, Action&lt;ParameterBuilder&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a parameter to this command.</p>
@@ -716,7 +716,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_AddPrecondition_Kook_Commands_PreconditionAttribute_" data-uid="Kook.Commands.Builders.CommandBuilder.AddPrecondition(Kook.Commands.PreconditionAttribute)">
   AddPrecondition(PreconditionAttribute)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L207"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a precondition to this command.</p>
@@ -755,7 +755,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_WithName_System_String_" data-uid="Kook.Commands.Builders.CommandBuilder.WithName(System.String)">
   WithName(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the name of this command.</p>
@@ -794,7 +794,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_WithPriority_System_Int32_" data-uid="Kook.Commands.Builders.CommandBuilder.WithPriority(System.Int32)">
   WithPriority(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the priority of this command.</p>
@@ -833,7 +833,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_WithRemarks_System_String_" data-uid="Kook.Commands.Builders.CommandBuilder.WithRemarks(System.String)">
   WithRemarks(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the remarks of this command.</p>
@@ -872,7 +872,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_WithRunMode_Kook_Commands_RunMode_" data-uid="Kook.Commands.Builders.CommandBuilder.WithRunMode(Kook.Commands.RunMode)">
   WithRunMode(RunMode)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L157"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the run mode of this command.</p>
@@ -911,7 +911,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_Builders_CommandBuilder_WithSummary_System_String_" data-uid="Kook.Commands.Builders.CommandBuilder.WithSummary(System.String)">
   WithSummary(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the summary of this command.</p>
@@ -950,7 +950,7 @@ Class CommandBuilder  <a class="header-action link-secondary" title="View source
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Builders/CommandBuilder.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

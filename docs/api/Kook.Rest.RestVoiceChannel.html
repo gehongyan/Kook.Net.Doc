@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a REST-based voice channel in a guild."><meta property="og:title" content="Class RestVoiceChannel | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Rest_RestVoiceChannel" data-uid="Kook.Rest.RestVoiceChannel" class="text-break">
-Class RestVoiceChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class RestVoiceChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -174,22 +174,22 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_GetMessageAsync_System_Guid_Kook_RequestOptions_">RestTextChannel.GetMessageAsync(Guid, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_Quote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendFileAsync(string, string, AttachmentType, Quote, IUser, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendFileAsync(string, string, AttachmentType, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_Quote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendFileAsync(Stream, string, AttachmentType, Quote, IUser, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendFileAsync(Stream, string, AttachmentType, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendFileAsync_Kook_FileAttachment_Kook_Quote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendFileAsync(FileAttachment, Quote, IUser, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendFileAsync(FileAttachment, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendTextAsync_System_String_Kook_Quote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendTextAsync(string, Quote, IUser, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendTextAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendTextAsync(string, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_Quote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendCardsAsync(IEnumerable&lt;ICard&gt;, Quote, IUser, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendCardAsync_Kook_ICard_Kook_Quote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendCardAsync(ICard, Quote, IUser, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_IUser_Kook_RequestOptions_">RestTextChannel.SendCardAsync(ICard, IQuote, IUser, RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.Rest.RestTextChannel.html#Kook_Rest_RestTextChannel_GetCategoryAsync_Kook_RequestOptions_">RestTextChannel.GetCategoryAsync(RequestOptions)</a>
@@ -244,9 +244,6 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
     </div>
     <div>
       <a class="xref" href="Kook.Rest.RestGuildChannel.html#Kook_Rest_RestGuildChannel_DeleteAsync_Kook_RequestOptions_">RestGuildChannel.DeleteAsync(RequestOptions)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kook.Rest.RestGuildChannel.html#Kook_Rest_RestGuildChannel_UpdateAsync_Kook_RequestOptions_">RestGuildChannel.UpdateAsync(RequestOptions)</a>
     </div>
     <div>
       <a class="xref" href="Kook.Rest.RestGuildChannel.html#Kook_Rest_RestGuildChannel_GetPermissionOverwrite_Kook_IUser_">RestGuildChannel.GetPermissionOverwrite(IUser)</a>
@@ -308,13 +305,13 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetJumpUrl_Kook_IChannel_">ChannelExtensions.GetJumpUrl(IChannel)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.Rest.RestTextChannelExperimentalExtensions.html#Kook_Rest_RestTextChannelExperimentalExtensions_SyncPermissionsAsync_Kook_Rest_RestTextChannel_Kook_RequestOptions_">RestTextChannelExperimentalExtensions.SyncPermissionsAsync(RestTextChannel, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.RestTextChannelExperimentalExtensions.html#Kook_Rest_RestTextChannelExperimentalExtensions_SyncPermissionsAsync_Kook_Rest_RestTextChannel_Kook_RequestOptions_">RestTextChannelExperimentalExtensions.SyncPermissionsAsync(RestTextChannel, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.Rest.RestVoiceChannelExperimentalExtensions.html#Kook_Rest_RestVoiceChannelExperimentalExtensions_DisconnectUserAsync_Kook_Rest_RestVoiceChannel_Kook_IGuildUser_Kook_RequestOptions_">RestVoiceChannelExperimentalExtensions.DisconnectUserAsync(RestVoiceChannel, IGuildUser, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.RestVoiceChannelExperimentalExtensions.html#Kook_Rest_RestVoiceChannelExperimentalExtensions_DisconnectUserAsync_Kook_Rest_RestVoiceChannel_Kook_IGuildUser_Kook_RequestOptions_">RestVoiceChannelExperimentalExtensions.DisconnectUserAsync(RestVoiceChannel, IGuildUser, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.Rest.RestVoiceChannelExperimentalExtensions.html#Kook_Rest_RestVoiceChannelExperimentalExtensions_SyncPermissionsAsync_Kook_Rest_RestVoiceChannel_Kook_RequestOptions_">RestVoiceChannelExperimentalExtensions.SyncPermissionsAsync(RestVoiceChannel, RequestOptions)</a>
+      <a class="xref" href="Kook.Rest.RestVoiceChannelExperimentalExtensions.html#Kook_Rest_RestVoiceChannelExperimentalExtensions_SyncPermissionsAsync_Kook_Rest_RestVoiceChannel_Kook_RequestOptions_">RestVoiceChannelExperimentalExtensions.SyncPermissionsAsync(RestVoiceChannel, RequestOptions?)</a>
   </div>
   </dd></dl>
 
@@ -330,7 +327,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_Rest_RestVoiceChannel_HasPassword" data-uid="Kook.Rest.RestVoiceChannel.HasPassword">
   HasPassword
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this voice channel is locked by a password.</p>
@@ -363,7 +360,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_Rest_RestVoiceChannel_IsVoiceRegionOverwritten" data-uid="Kook.Rest.RestVoiceChannel.IsVoiceRegionOverwritten">
   IsVoiceRegionOverwritten
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether the voice region of this audio channel is overwritten.</p>
@@ -395,7 +392,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_Rest_RestVoiceChannel_ServerUrl" data-uid="Kook.Rest.RestVoiceChannel.ServerUrl">
   ServerUrl
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the server url that clients should connect to to join this voice channel.</p>
@@ -403,7 +400,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ServerUrl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? ServerUrl { get; }</code></pre>
   </div>
 
 
@@ -428,7 +425,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_Rest_RestVoiceChannel_UserLimit" data-uid="Kook.Rest.RestVoiceChannel.UserLimit">
   UserLimit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the max number of users allowed to be connected to this channel at once.</p>
@@ -436,7 +433,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? UserLimit { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int UserLimit { get; }</code></pre>
   </div>
 
 
@@ -445,9 +442,9 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>An int representing the maximum number of users that are allowed to be connected to this
-channel at once; <code>null</code> if a limit is not set.</p>
+channel at once; <code>0</code> if a limit is not set.</p>
 </dd>
   </dl>
 
@@ -462,7 +459,7 @@ channel at once; <code>null</code> if a limit is not set.</p>
 
   <h3 id="Kook_Rest_RestVoiceChannel_VoiceQuality" data-uid="Kook.Rest.RestVoiceChannel.VoiceQuality">
   VoiceQuality
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the voice quality that the clients in this voice channel are requested to use.</p>
@@ -496,7 +493,7 @@ client(s) to use.</p>
 
   <h3 id="Kook_Rest_RestVoiceChannel_VoiceRegion" data-uid="Kook.Rest.RestVoiceChannel.VoiceRegion">
   VoiceRegion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the voice region for this audio channel.</p>
@@ -504,7 +501,7 @@ client(s) to use.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string VoiceRegion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? VoiceRegion { get; }</code></pre>
   </div>
 
 
@@ -521,12 +518,9 @@ client(s) to use.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestVoiceChannel_VoiceRegion_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><div class="WARNING">
-  <h5>warning</h5>
-  <p>
-            This property may be empty if the voice channel is created before this feature was released.
-        </p>
-</div>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+        This property may be empty if the voice channel is created before this feature was released.
+    </p></div>
 </div>
 
 
@@ -539,8 +533,8 @@ client(s) to use.</p>
   <a id="Kook_Rest_RestVoiceChannel_GetConnectedUsersAsync_" data-uid="Kook.Rest.RestVoiceChannel.GetConnectedUsersAsync*"></a>
 
   <h3 id="Kook_Rest_RestVoiceChannel_GetConnectedUsersAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.GetConnectedUsersAsync(Kook.RequestOptions)">
-  GetConnectedUsersAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  GetConnectedUsersAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the users connected to this voice channel.</p>
@@ -548,7 +542,7 @@ client(s) to use.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;IUser&gt;&gt; GetConnectedUsersAsync(RequestOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;IUser&gt;&gt; GetConnectedUsersAsync(RequestOptions? options)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -578,8 +572,8 @@ client(s) to use.</p>
   <a id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_" data-uid="Kook.Rest.RestVoiceChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)">
-  GetMessagesAsync(IMessage, Direction, int, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(IMessage, Direction, int, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
@@ -587,7 +581,7 @@ client(s) to use.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = 50, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = 50, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -620,7 +614,7 @@ client(s) to use.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -636,8 +630,8 @@ Please visit its documentation for more details on this method.</p>
   <a id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_" data-uid="Kook.Rest.RestVoiceChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.RequestOptions)">
-  GetMessagesAsync(Guid, Direction, int, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(Guid, Direction, int, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
@@ -645,7 +639,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = 50, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = 50, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -678,7 +672,7 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -694,8 +688,8 @@ Please visit its documentation for more details on this method.</p>
   <a id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_" data-uid="Kook.Rest.RestVoiceChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)">
-  GetMessagesAsync(int, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(int, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
@@ -703,7 +697,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(int limit = 50, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(int limit = 50, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -730,7 +724,7 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -746,8 +740,8 @@ Please visit its documentation for more details on this method.</p>
   <a id="Kook_Rest_RestVoiceChannel_GetPinnedMessagesAsync_" data-uid="Kook.Rest.RestVoiceChannel.GetPinnedMessagesAsync*"></a>
 
   <h3 id="Kook_Rest_RestVoiceChannel_GetPinnedMessagesAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.GetPinnedMessagesAsync(Kook.RequestOptions)">
-  GetPinnedMessagesAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  GetPinnedMessagesAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of pinned messages in this channel.</p>
@@ -755,7 +749,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetPinnedMessagesAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetPinnedMessagesAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -792,8 +786,8 @@ The task result contains a collection of messages found in the pinned messages.<
   <a id="Kook_Rest_RestVoiceChannel_ModifyAsync_" data-uid="Kook.Rest.RestVoiceChannel.ModifyAsync*"></a>
 
   <h3 id="Kook_Rest_RestVoiceChannel_ModifyAsync_System_Action_Kook_ModifyVoiceChannelProperties__Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.ModifyAsync(System.Action{Kook.ModifyVoiceChannelProperties},Kook.RequestOptions)">
-  ModifyAsync(Action&lt;ModifyVoiceChannelProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  ModifyAsync(Action&lt;ModifyVoiceChannelProperties&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Modifies this voice channel.</p>
@@ -801,7 +795,7 @@ The task result contains a collection of messages found in the pinned messages.<
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task ModifyAsync(Action&lt;ModifyVoiceChannelProperties&gt; func, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ModifyAsync(Action&lt;ModifyVoiceChannelProperties&gt; func, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -837,11 +831,56 @@ The task result contains a collection of messages found in the pinned messages.<
   </dl>
 
 
+  <a id="Kook_Rest_RestVoiceChannel_UpdateAsync_" data-uid="Kook.Rest.RestVoiceChannel.UpdateAsync*"></a>
+
+  <h3 id="Kook_Rest_RestVoiceChannel_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.UpdateAsync(Kook.RequestOptions)">
+  UpdateAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates this object's properties with its current state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task UpdateAsync(RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>The options to be used when sending the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents an asynchronous reloading operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_Rest_RestVoiceChannel_UpdateAsync_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+        This method will fetch the latest data from REST API,
+        and replace the current object's properties with the new data.
+    </p></div>
+</div>
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

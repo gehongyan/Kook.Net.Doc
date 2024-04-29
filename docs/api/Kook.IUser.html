@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a generic user."><meta property="og:title" content="Interface IUser | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IUser" data-uid="Kook.IUser" class="text-break">
-Interface IUser  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IUser  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -138,22 +138,22 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
       <a class="xref" href="Kook.Format.html#Kook_Format_UsernameAndIdentifyNumber_Kook_IUser_System_Boolean_">Format.UsernameAndIdentifyNumber(IUser, bool)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardAsync_Kook_IUser_Kook_ICard_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardAsync(IUser, ICard, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardAsync_Kook_IUser_Kook_ICard_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardAsync(IUser, ICard, IQuote?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardsAsync_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardsAsync(IUser, IEnumerable&lt;ICard&gt;, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendCardsAsync_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendCardsAsync(IUser, IEnumerable&lt;ICard&gt;, IQuote?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, FileAttachment, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, FileAttachment, IQuote?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, Stream, string, AttachmentType, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, Stream, string, AttachmentType, IQuote?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, string, string, AttachmentType, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendFileAsync_Kook_IUser_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendFileAsync(IUser, string, string?, AttachmentType, IQuote?, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendTextAsync_Kook_IUser_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendTextAsync(IUser, string, IQuote, RequestOptions)</a>
+      <a class="xref" href="Kook.UserExtensions.html#Kook_UserExtensions_SendTextAsync_Kook_IUser_System_String_Kook_IQuote_Kook_RequestOptions_">UserExtensions.SendTextAsync(IUser, string, IQuote?, RequestOptions?)</a>
   </div>
   </dd></dl>
 
@@ -169,7 +169,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_Avatar" data-uid="Kook.IUser.Avatar">
   Avatar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the link to this user's avatar.</p>
@@ -201,7 +201,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_Banner" data-uid="Kook.IUser.Banner">
   Banner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the link to this user's banner.</p>
@@ -209,7 +209,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Banner { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">string? Banner { get; }</code></pre>
   </div>
 
 
@@ -233,7 +233,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_BuffAvatar" data-uid="Kook.IUser.BuffAvatar">
   BuffAvatar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the link to this user's BUFF avatar.</p>
@@ -265,7 +265,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_HasAnnualBuff" data-uid="Kook.IUser.HasAnnualBuff">
   HasAnnualBuff
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this user's BUFF subscription is annual; <code>null</code> if unknown.</p>
@@ -297,7 +297,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_HasBuff" data-uid="Kook.IUser.HasBuff">
   HasBuff
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this user has subscribed to BUFF; <code>null</code> if unknown.</p>
@@ -329,7 +329,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_IdentifyNumber" data-uid="Kook.IUser.IdentifyNumber">
   IdentifyNumber
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the per-username unique ID for this user.</p>
@@ -361,7 +361,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_IdentifyNumberValue" data-uid="Kook.IUser.IdentifyNumberValue">
   IdentifyNumberValue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the per-username unique ID for this user.</p>
@@ -369,7 +369,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ushort? IdentifyNumberValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">ushort IdentifyNumberValue { get; }</code></pre>
   </div>
 
 
@@ -378,7 +378,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>?</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
     <dd></dd>
   </dl>
 
@@ -393,7 +393,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_IsBanned" data-uid="Kook.IUser.IsBanned">
   IsBanned
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this user is banned; <code>null</code> if unknown.</p>
@@ -425,7 +425,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_IsBot" data-uid="Kook.IUser.IsBot">
   IsBot
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this user is a bot; <code>null</code> if unknown.</p>
@@ -457,7 +457,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_IsDenoiseEnabled" data-uid="Kook.IUser.IsDenoiseEnabled">
   IsDenoiseEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this user enabled denoise feature; <code>null</code> if unknown.</p>
@@ -489,7 +489,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_IsSystemUser" data-uid="Kook.IUser.IsSystemUser">
   IsSystemUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this user is a system user.</p>
@@ -497,7 +497,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool? IsSystemUser { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">bool IsSystemUser { get; }</code></pre>
   </div>
 
 
@@ -506,7 +506,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -521,7 +521,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_Nameplates" data-uid="Kook.IUser.Nameplates">
   Nameplates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the nameplates this user has.</p>
@@ -553,7 +553,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_UserTag" data-uid="Kook.IUser.UserTag">
   UserTag
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get the tag this user has.</p>
@@ -561,7 +561,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UserTag UserTag { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">UserTag? UserTag { get; }</code></pre>
   </div>
 
 
@@ -585,7 +585,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_Username" data-uid="Kook.IUser.Username">
   Username
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the username for this user.</p>
@@ -620,8 +620,8 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <a id="Kook_IUser_BlockAsync_" data-uid="Kook.IUser.BlockAsync*"></a>
 
   <h3 id="Kook_IUser_BlockAsync_Kook_RequestOptions_" data-uid="Kook.IUser.BlockAsync(Kook.RequestOptions)">
-  BlockAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  BlockAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the friend state with this user.</p>
@@ -629,7 +629,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task BlockAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task BlockAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -659,8 +659,8 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <a id="Kook_IUser_CreateDMChannelAsync_" data-uid="Kook.IUser.CreateDMChannelAsync*"></a>
 
   <h3 id="Kook_IUser_CreateDMChannelAsync_Kook_RequestOptions_" data-uid="Kook.IUser.CreateDMChannelAsync(Kook.RequestOptions)">
-  CreateDMChannelAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  CreateDMChannelAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates the direct message channel of this user.</p>
@@ -668,7 +668,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IDMChannel&gt; CreateDMChannelAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IDMChannel&gt; CreateDMChannelAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -709,8 +709,8 @@ contains the DM channel associated with this user.</p>
   <a id="Kook_IUser_GetIntimacyAsync_" data-uid="Kook.IUser.GetIntimacyAsync*"></a>
 
   <h3 id="Kook_IUser_GetIntimacyAsync_Kook_RequestOptions_" data-uid="Kook.IUser.GetIntimacyAsync(Kook.RequestOptions)">
-  GetIntimacyAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  GetIntimacyAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the intimacy information with this user.</p>
@@ -718,7 +718,7 @@ contains the DM channel associated with this user.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IIntimacy&gt; GetIntimacyAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IIntimacy&gt; GetIntimacyAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -749,8 +749,8 @@ contains the intimacy information associated with this user.</p>
   <a id="Kook_IUser_RemoveFriendAsync_" data-uid="Kook.IUser.RemoveFriendAsync*"></a>
 
   <h3 id="Kook_IUser_RemoveFriendAsync_Kook_RequestOptions_" data-uid="Kook.IUser.RemoveFriendAsync(Kook.RequestOptions)">
-  RemoveFriendAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  RemoveFriendAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the friend state with this user.</p>
@@ -758,7 +758,7 @@ contains the intimacy information associated with this user.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task RemoveFriendAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task RemoveFriendAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -788,8 +788,8 @@ contains the intimacy information associated with this user.</p>
   <a id="Kook_IUser_RequestFriendAsync_" data-uid="Kook.IUser.RequestFriendAsync*"></a>
 
   <h3 id="Kook_IUser_RequestFriendAsync_Kook_RequestOptions_" data-uid="Kook.IUser.RequestFriendAsync(Kook.RequestOptions)">
-  RequestFriendAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  RequestFriendAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a friend request to this user.</p>
@@ -797,7 +797,7 @@ contains the intimacy information associated with this user.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task RequestFriendAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task RequestFriendAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -827,8 +827,8 @@ contains the intimacy information associated with this user.</p>
   <a id="Kook_IUser_UnblockAsync_" data-uid="Kook.IUser.UnblockAsync*"></a>
 
   <h3 id="Kook_IUser_UnblockAsync_Kook_RequestOptions_" data-uid="Kook.IUser.UnblockAsync(Kook.RequestOptions)">
-  UnblockAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  UnblockAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the friend state with this user.</p>
@@ -836,7 +836,7 @@ contains the intimacy information associated with this user.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task UnblockAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task UnblockAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -866,8 +866,8 @@ contains the intimacy information associated with this user.</p>
   <a id="Kook_IUser_UpdateIntimacyAsync_" data-uid="Kook.IUser.UpdateIntimacyAsync*"></a>
 
   <h3 id="Kook_IUser_UpdateIntimacyAsync_System_Action_Kook_IntimacyProperties__Kook_RequestOptions_" data-uid="Kook.IUser.UpdateIntimacyAsync(System.Action{Kook.IntimacyProperties},Kook.RequestOptions)">
-  UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Updates the intimacy information with this user.</p>
@@ -875,7 +875,7 @@ contains the intimacy information associated with this user.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt; func, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt; func, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -909,7 +909,7 @@ contains the intimacy information associated with this user.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/IUser.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

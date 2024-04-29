@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="A paragraph struct that can be used in modules."><meta property="og:title" content="Class ParagraphStruct | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_ParagraphStruct" data-uid="Kook.ParagraphStruct" class="text-break">
-Class ParagraphStruct  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class ParagraphStruct  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ParagraphStruct : IElement, IEquatable&lt;ParagraphStruct&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ParagraphStruct : IElement, IEquatable&lt;ParagraphStruct&gt;, IEquatable&lt;IElement&gt;</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
     <dd>
       <div><a class="xref" href="Kook.IElement.html">IElement</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.IElement.html">IElement</a>&gt;</div>
     </dd>
   </dl>
 
@@ -168,7 +169,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_ParagraphStruct_ColumnCount" data-uid="Kook.ParagraphStruct.ColumnCount">
   ColumnCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of columns in the paragraph.</p>
@@ -176,7 +177,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ColumnCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int? ColumnCount { get; }</code></pre>
   </div>
 
 
@@ -185,7 +186,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd><p>An int value that represents the number of columns in the paragraph.</p>
 </dd>
   </dl>
@@ -201,7 +202,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_ParagraphStruct_Fields" data-uid="Kook.ParagraphStruct.Fields">
   Fields
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the fields in the paragraph.</p>
@@ -234,7 +235,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_ParagraphStruct_Type" data-uid="Kook.ParagraphStruct.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the type of the element.</p>
@@ -270,8 +271,8 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
   <a id="Kook_ParagraphStruct_Equals_" data-uid="Kook.ParagraphStruct.Equals*"></a>
 
   <h3 id="Kook_ParagraphStruct_Equals_Kook_ParagraphStruct_" data-uid="Kook.ParagraphStruct.Equals(Kook.ParagraphStruct)">
-  Equals(ParagraphStruct)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  Equals(ParagraphStruct?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a> is equal to the current <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>.</p>
@@ -279,7 +280,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(ParagraphStruct paragraphStruct)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(ParagraphStruct? paragraphStruct)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -309,8 +310,8 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
   <a id="Kook_ParagraphStruct_Equals_" data-uid="Kook.ParagraphStruct.Equals*"></a>
 
   <h3 id="Kook_ParagraphStruct_Equals_System_Object_" data-uid="Kook.ParagraphStruct.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a> is equal to the current <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>.</p>
@@ -318,7 +319,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -342,7 +343,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
 
 
   <h4 class="section" id="Kook_ParagraphStruct_Equals_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>, <a class="xref" href="Kook.ParagraphStruct.html#Kook_ParagraphStruct_Equals_Kook_ParagraphStruct_">Equals(ParagraphStruct)</a> will be called to compare the 2 instances.</p>
+  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>, <a class="xref" href="Kook.ParagraphStruct.html#Kook_ParagraphStruct_Equals_Kook_ParagraphStruct_">Equals(ParagraphStruct?)</a> will be called to compare the 2 instances.</p>
 </div>
 
 
@@ -352,7 +353,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_ParagraphStruct_GetHashCode" data-uid="Kook.ParagraphStruct.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -388,8 +389,8 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
   <a id="Kook_ParagraphStruct_op_Equality_" data-uid="Kook.ParagraphStruct.op_Equality*"></a>
 
   <h3 id="Kook_ParagraphStruct_op_Equality_Kook_ParagraphStruct_Kook_ParagraphStruct_" data-uid="Kook.ParagraphStruct.op_Equality(Kook.ParagraphStruct,Kook.ParagraphStruct)">
-  operator ==(ParagraphStruct, ParagraphStruct)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  operator ==(ParagraphStruct?, ParagraphStruct?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a> is equal to the current <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>.</p>
@@ -397,7 +398,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(ParagraphStruct left, ParagraphStruct right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator ==(ParagraphStruct? left, ParagraphStruct? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -428,8 +429,8 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
   <a id="Kook_ParagraphStruct_op_Inequality_" data-uid="Kook.ParagraphStruct.op_Inequality*"></a>
 
   <h3 id="Kook_ParagraphStruct_op_Inequality_Kook_ParagraphStruct_Kook_ParagraphStruct_" data-uid="Kook.ParagraphStruct.op_Inequality(Kook.ParagraphStruct,Kook.ParagraphStruct)">
-  operator !=(ParagraphStruct, ParagraphStruct)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  operator !=(ParagraphStruct?, ParagraphStruct?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a> is not equal to the current <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>.</p>
@@ -437,7 +438,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(ParagraphStruct left, ParagraphStruct right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator !=(ParagraphStruct? left, ParagraphStruct? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -469,7 +470,7 @@ Class ParagraphStruct  <a class="header-action link-secondary" title="View sourc
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/ParagraphStruct.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

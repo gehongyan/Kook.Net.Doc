@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a countdown module builder for creating a CountdownModule."><meta property="og:title" content="Class CountdownModuleBuilder | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_CountdownModuleBuilder" data-uid="Kook.CountdownModuleBuilder" class="text-break">
-Class CountdownModuleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class CountdownModuleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CountdownModuleBuilder : IModuleBuilder, IEquatable&lt;CountdownModuleBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class CountdownModuleBuilder : IModuleBuilder, IEquatable&lt;CountdownModuleBuilder&gt;, IEquatable&lt;IModuleBuilder&gt;</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
     <dd>
       <div><a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a>&gt;</div>
     </dd>
   </dl>
 
@@ -158,7 +159,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_CountdownModuleBuilder__ctor" data-uid="Kook.CountdownModuleBuilder.#ctor">
   CountdownModuleBuilder()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a> class.</p>
@@ -185,7 +186,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_CountdownModuleBuilder__ctor_Kook_CountdownMode_System_DateTimeOffset_System_Nullable_System_DateTimeOffset__" data-uid="Kook.CountdownModuleBuilder.#ctor(Kook.CountdownMode,System.DateTimeOffset,System.Nullable{System.DateTimeOffset})">
   CountdownModuleBuilder(CountdownMode, DateTimeOffset, DateTimeOffset?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a> class.</p>
@@ -225,7 +226,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_CountdownModuleBuilder_EndTime" data-uid="Kook.CountdownModuleBuilder.EndTime">
   EndTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the ending time of the countdown.</p>
@@ -258,7 +259,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_CountdownModuleBuilder_Mode" data-uid="Kook.CountdownModuleBuilder.Mode">
   Mode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets how the countdown should be displayed.</p>
@@ -291,7 +292,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_CountdownModuleBuilder_StartTime" data-uid="Kook.CountdownModuleBuilder.StartTime">
   StartTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the beginning time of the countdown.</p>
@@ -324,7 +325,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_CountdownModuleBuilder_Type" data-uid="Kook.CountdownModuleBuilder.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Specifies the module type of the <a class="xref" href="Kook.IModule.html">IModule</a> this builder creates.</p>
@@ -361,7 +362,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_CountdownModuleBuilder_Build" data-uid="Kook.CountdownModuleBuilder.Build">
   Build()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Builds this builder into a <a class="xref" href="Kook.CountdownModule.html">CountdownModule</a>.</p>
@@ -390,6 +391,9 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><a class="xref" href="Kook.CountdownMode.html">CountdownMode</a> is not <a class="xref" href="Kook.CountdownMode.html#Kook_CountdownMode_Second">Second</a> but <a class="xref" href="Kook.CountdownModuleBuilder.html#Kook_CountdownModuleBuilder_StartTime">StartTime</a> is set.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p><a class="xref" href="Kook.CountdownModuleBuilder.html#Kook_CountdownModuleBuilder_EndTime">EndTime</a> is before the current time.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
@@ -405,8 +409,8 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <a id="Kook_CountdownModuleBuilder_Equals_" data-uid="Kook.CountdownModuleBuilder.Equals*"></a>
 
   <h3 id="Kook_CountdownModuleBuilder_Equals_Kook_CountdownModuleBuilder_" data-uid="Kook.CountdownModuleBuilder.Equals(Kook.CountdownModuleBuilder)">
-  Equals(CountdownModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  Equals(CountdownModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a> is equal to the current <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a>.</p>
@@ -414,7 +418,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(CountdownModuleBuilder countdownModuleBuilder)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(CountdownModuleBuilder? countdownModuleBuilder)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -444,8 +448,8 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <a id="Kook_CountdownModuleBuilder_Equals_" data-uid="Kook.CountdownModuleBuilder.Equals*"></a>
 
   <h3 id="Kook_CountdownModuleBuilder_Equals_System_Object_" data-uid="Kook.CountdownModuleBuilder.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a> is equal to the current <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a>.</p>
@@ -453,7 +457,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -477,7 +481,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
 
   <h4 class="section" id="Kook_CountdownModuleBuilder_Equals_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a>, <a class="xref" href="Kook.CountdownModuleBuilder.html#Kook_CountdownModuleBuilder_Equals_Kook_CountdownModuleBuilder_">Equals(CountdownModuleBuilder)</a> will be called to compare the 2 instances.</p>
+  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a>, <a class="xref" href="Kook.CountdownModuleBuilder.html#Kook_CountdownModuleBuilder_Equals_Kook_CountdownModuleBuilder_">Equals(CountdownModuleBuilder?)</a> will be called to compare the 2 instances.</p>
 </div>
 
 
@@ -487,7 +491,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_CountdownModuleBuilder_GetHashCode" data-uid="Kook.CountdownModuleBuilder.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L179"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -520,7 +524,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_CountdownModuleBuilder_WithEndTime_System_DateTimeOffset_" data-uid="Kook.CountdownModuleBuilder.WithEndTime(System.DateTimeOffset)">
   WithEndTime(DateTimeOffset)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the beginning time of the countdown.</p>
@@ -559,7 +563,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_CountdownModuleBuilder_WithMode_Kook_CountdownMode_" data-uid="Kook.CountdownModuleBuilder.WithMode(Kook.CountdownMode)">
   WithMode(CountdownMode)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets how the countdown should be displayed.</p>
@@ -596,9 +600,9 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 
   <a id="Kook_CountdownModuleBuilder_WithStartTime_" data-uid="Kook.CountdownModuleBuilder.WithStartTime*"></a>
 
-  <h3 id="Kook_CountdownModuleBuilder_WithStartTime_System_DateTimeOffset_" data-uid="Kook.CountdownModuleBuilder.WithStartTime(System.DateTimeOffset)">
-  WithStartTime(DateTimeOffset)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_CountdownModuleBuilder_WithStartTime_System_Nullable_System_DateTimeOffset__" data-uid="Kook.CountdownModuleBuilder.WithStartTime(System.Nullable{System.DateTimeOffset})">
+  WithStartTime(DateTimeOffset?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the beginning time of the countdown.</p>
@@ -606,12 +610,12 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CountdownModuleBuilder WithStartTime(DateTimeOffset startTime)</code></pre>
+    <pre><code class="lang-csharp hljs">public CountdownModuleBuilder WithStartTime(DateTimeOffset? startTime)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>startTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dt><code>startTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
     <dd><p>The time at which the countdown begins.</p>
 </dd>
   </dl>
@@ -640,8 +644,8 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <a id="Kook_CountdownModuleBuilder_op_Equality_" data-uid="Kook.CountdownModuleBuilder.op_Equality*"></a>
 
   <h3 id="Kook_CountdownModuleBuilder_op_Equality_Kook_CountdownModuleBuilder_Kook_CountdownModuleBuilder_" data-uid="Kook.CountdownModuleBuilder.op_Equality(Kook.CountdownModuleBuilder,Kook.CountdownModuleBuilder)">
-  operator ==(CountdownModuleBuilder, CountdownModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  operator ==(CountdownModuleBuilder?, CountdownModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a> is equal to the current <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a>.</p>
@@ -649,7 +653,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(CountdownModuleBuilder left, CountdownModuleBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator ==(CountdownModuleBuilder? left, CountdownModuleBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -680,8 +684,8 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <a id="Kook_CountdownModuleBuilder_op_Inequality_" data-uid="Kook.CountdownModuleBuilder.op_Inequality*"></a>
 
   <h3 id="Kook_CountdownModuleBuilder_op_Inequality_Kook_CountdownModuleBuilder_Kook_CountdownModuleBuilder_" data-uid="Kook.CountdownModuleBuilder.op_Inequality(Kook.CountdownModuleBuilder,Kook.CountdownModuleBuilder)">
-  operator !=(CountdownModuleBuilder, CountdownModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  operator !=(CountdownModuleBuilder?, CountdownModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a> is not equal to the current <a class="xref" href="Kook.CountdownModuleBuilder.html">CountdownModuleBuilder</a>.</p>
@@ -689,7 +693,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(CountdownModuleBuilder left, CountdownModuleBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator !=(CountdownModuleBuilder? left, CountdownModuleBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -721,7 +725,7 @@ Class CountdownModuleBuilder  <a class="header-action link-secondary" title="Vie
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/CountdownModuleBuilder.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

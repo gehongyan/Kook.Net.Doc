@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Representing a nameplate an IUser can have."><meta property="og:title" content="Class Nameplate | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Nameplate" data-uid="Kook.Nameplate" class="text-break">
-Class Nameplate  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class Nameplate  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_Nameplate_Icon" data-uid="Kook.Nameplate.Icon">
   Icon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the resource uri of the icon of the nameplate given to user.</p>
@@ -189,7 +189,7 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_Nameplate_Name" data-uid="Kook.Nameplate.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the nameplate given to user.</p>
@@ -221,7 +221,7 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_Nameplate_Tips" data-uid="Kook.Nameplate.Tips">
   Tips
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the tips of the nameplate given to user.</p>
@@ -253,7 +253,7 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_Nameplate_Type" data-uid="Kook.Nameplate.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the type of the nameplate given to user.</p>
@@ -289,7 +289,7 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_Nameplate_Create_System_String_System_Int32_System_String_System_String_" data-uid="Kook.Nameplate.Create(System.String,System.Int32,System.String,System.String)">
   Create(string, int, string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.Nameplate.html">Nameplate</a> class.</p>
@@ -336,8 +336,8 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
   <a id="Kook_Nameplate_Equals_" data-uid="Kook.Nameplate.Equals*"></a>
 
   <h3 id="Kook_Nameplate_Equals_Kook_Nameplate_" data-uid="Kook.Nameplate.Equals(Kook.Nameplate)">
-  Equals(Nameplate)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  Equals(Nameplate?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
@@ -345,7 +345,7 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(Nameplate other)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(Nameplate? other)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -375,8 +375,8 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
   <a id="Kook_Nameplate_Equals_" data-uid="Kook.Nameplate.Equals*"></a>
 
   <h3 id="Kook_Nameplate_Equals_System_Object_" data-uid="Kook.Nameplate.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
@@ -384,7 +384,7 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -415,7 +415,7 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_Nameplate_GetHashCode" data-uid="Kook.Nameplate.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -448,7 +448,7 @@ Class Nameplate  <a class="header-action link-secondary" title="View source" hre
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/Nameplate.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

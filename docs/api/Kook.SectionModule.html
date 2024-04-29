@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a section module in card."><meta property="og:title" content="Class SectionModule | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_SectionModule" data-uid="Kook.SectionModule" class="text-break">
-Class SectionModule  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class SectionModule  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SectionModule : IModule, IEquatable&lt;SectionModule&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SectionModule : IModule, IEquatable&lt;SectionModule&gt;, IEquatable&lt;IModule&gt;</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
     <dd>
       <div><a class="xref" href="Kook.IModule.html">IModule</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.SectionModule.html">SectionModule</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.IModule.html">IModule</a>&gt;</div>
     </dd>
   </dl>
 
@@ -168,7 +169,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_SectionModule_Accessory" data-uid="Kook.SectionModule.Accessory">
   Accessory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the accessory of the section.</p>
@@ -176,7 +177,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IElement Accessory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IElement? Accessory { get; }</code></pre>
   </div>
 
 
@@ -201,7 +202,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_SectionModule_Mode" data-uid="Kook.SectionModule.Mode">
   Mode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Specifies that the <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Accessory">Accessory</a> is to the left or right of <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Text">Text</a>.</p>
@@ -209,7 +210,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SectionAccessoryMode Mode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public SectionAccessoryMode? Mode { get; }</code></pre>
   </div>
 
 
@@ -218,10 +219,9 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a></dt>
+    <dt><a class="xref" href="Kook.SectionAccessoryMode.html">SectionAccessoryMode</a>?</dt>
     <dd><p><a class="xref" href="Kook.SectionAccessoryMode.html#Kook_SectionAccessoryMode_Left">Left</a> if the <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Accessory">Accessory</a> is to the left of <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Text">Text</a>,
-<a class="xref" href="Kook.SectionAccessoryMode.html#Kook_SectionAccessoryMode_Right">Right</a> if the <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Accessory">Accessory</a> is to the right of <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Text">Text</a>,
-<a class="xref" href="Kook.SectionAccessoryMode.html#Kook_SectionAccessoryMode_Unspecified">Unspecified</a> if how the <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Accessory">Accessory</a> is positioned is not specified.</p>
+<a class="xref" href="Kook.SectionAccessoryMode.html#Kook_SectionAccessoryMode_Right">Right</a> if the <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Accessory">Accessory</a> is to the right of <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Text">Text</a>,</p>
 </dd>
   </dl>
 
@@ -236,7 +236,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_SectionModule_Text" data-uid="Kook.SectionModule.Text">
   Text
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the text of the section.</p>
@@ -244,7 +244,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IElement Text { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IElement? Text { get; }</code></pre>
   </div>
 
 
@@ -269,7 +269,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_SectionModule_Type" data-uid="Kook.SectionModule.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the type of the module.</p>
@@ -305,8 +305,8 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
   <a id="Kook_SectionModule_Equals_" data-uid="Kook.SectionModule.Equals*"></a>
 
   <h3 id="Kook_SectionModule_Equals_Kook_SectionModule_" data-uid="Kook.SectionModule.Equals(Kook.SectionModule)">
-  Equals(SectionModule)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  Equals(SectionModule?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.SectionModule.html">SectionModule</a> is equal to the current <a class="xref" href="Kook.SectionModule.html">SectionModule</a>.</p>
@@ -314,7 +314,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(SectionModule sectionModule)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(SectionModule? sectionModule)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -344,8 +344,8 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
   <a id="Kook_SectionModule_Equals_" data-uid="Kook.SectionModule.Equals*"></a>
 
   <h3 id="Kook_SectionModule_Equals_System_Object_" data-uid="Kook.SectionModule.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.SectionModule.html">SectionModule</a> is equal to the current <a class="xref" href="Kook.SectionModule.html">SectionModule</a>.</p>
@@ -353,7 +353,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -377,7 +377,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
 
 
   <h4 class="section" id="Kook_SectionModule_Equals_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.SectionModule.html">SectionModule</a>, <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Equals_Kook_SectionModule_">Equals(SectionModule)</a> will be called to compare the 2 instances.</p>
+  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.SectionModule.html">SectionModule</a>, <a class="xref" href="Kook.SectionModule.html#Kook_SectionModule_Equals_Kook_SectionModule_">Equals(SectionModule?)</a> will be called to compare the 2 instances.</p>
 </div>
 
 
@@ -387,7 +387,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_SectionModule_GetHashCode" data-uid="Kook.SectionModule.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -424,7 +424,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_SectionModule_op_Equality_Kook_SectionModule_Kook_SectionModule_" data-uid="Kook.SectionModule.op_Equality(Kook.SectionModule,Kook.SectionModule)">
   operator ==(SectionModule, SectionModule)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.SectionModule.html">SectionModule</a> is equal to the current <a class="xref" href="Kook.SectionModule.html">SectionModule</a>.</p>
@@ -464,7 +464,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_SectionModule_op_Inequality_Kook_SectionModule_Kook_SectionModule_" data-uid="Kook.SectionModule.op_Inequality(Kook.SectionModule,Kook.SectionModule)">
   operator !=(SectionModule, SectionModule)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.SectionModule.html">SectionModule</a> is not equal to the current <a class="xref" href="Kook.SectionModule.html">SectionModule</a>.</p>
@@ -504,7 +504,7 @@ Class SectionModule  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/SectionModule.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

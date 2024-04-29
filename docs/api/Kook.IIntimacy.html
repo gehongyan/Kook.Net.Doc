@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a generic intimacy."><meta property="og:title" content="Interface IIntimacy | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IIntimacy" data-uid="Kook.IIntimacy" class="text-break">
-Interface IIntimacy  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IIntimacy  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -132,7 +132,7 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_IIntimacy_Images" data-uid="Kook.IIntimacy.Images">
   Images
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the images associated with this intimacy.</p>
@@ -165,7 +165,7 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_IIntimacy_LastModifyAt" data-uid="Kook.IIntimacy.LastModifyAt">
   LastModifyAt
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the time at which this intimacy was modified last time.</p>
@@ -173,7 +173,7 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DateTimeOffset LastModifyAt { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">DateTimeOffset? LastModifyAt { get; }</code></pre>
   </div>
 
 
@@ -182,7 +182,7 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
     <dd><p>A time at which this intimacy was modified last time.</p>
 </dd>
   </dl>
@@ -198,7 +198,7 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_IIntimacy_LastReadAt" data-uid="Kook.IIntimacy.LastReadAt">
   LastReadAt
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the time at which the user read the message.</p>
@@ -231,7 +231,7 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_IIntimacy_Score" data-uid="Kook.IIntimacy.Score">
   Score
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the score associated with this intimacy.</p>
@@ -264,7 +264,7 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_IIntimacy_SocialInfo" data-uid="Kook.IIntimacy.SocialInfo">
   SocialInfo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the social information associated with this intimacy.</p>
@@ -297,7 +297,7 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_IIntimacy_User" data-uid="Kook.IIntimacy.User">
   User
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the user associated with this intimacy.</p>
@@ -333,8 +333,8 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
   <a id="Kook_IIntimacy_UpdateAsync_" data-uid="Kook.IIntimacy.UpdateAsync*"></a>
 
   <h3 id="Kook_IIntimacy_UpdateAsync_System_Action_Kook_IntimacyProperties__Kook_RequestOptions_" data-uid="Kook.IIntimacy.UpdateAsync(System.Action{Kook.IntimacyProperties},Kook.RequestOptions)">
-  UpdateAsync(Action&lt;IntimacyProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  UpdateAsync(Action&lt;IntimacyProperties&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Updates the intimacy information with this user.</p>
@@ -342,7 +342,7 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task UpdateAsync(Action&lt;IntimacyProperties&gt; func, RequestOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">Task UpdateAsync(Action&lt;IntimacyProperties&gt; func, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -376,7 +376,7 @@ Interface IIntimacy  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Intimacies/IIntimacy.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

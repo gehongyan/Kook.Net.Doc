@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a generic guild/server."><meta property="og:title" content="Interface IGuild | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IGuild" data-uid="Kook.IGuild" class="text-break">
-Interface IGuild  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Interface IGuild  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -132,7 +132,7 @@ Interface IGuild  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_IGuild_AudioClient" data-uid="Kook.IGuild.AudioClient">
   AudioClient
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a> currently associated with this guild.</p>
@@ -140,7 +140,7 @@ Interface IGuild  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAudioClient AudioClient { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IAudioClient? AudioClient { get; }</code></pre>
   </div>
 
 
@@ -165,7 +165,7 @@ Interface IGuild  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_IGuild_Available" data-uid="Kook.IGuild.Available">
   Available
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines if this guild is currently connected and ready to be used.</p>
@@ -192,9 +192,9 @@ Interface IGuild  <a class="header-action link-secondary" title="View source" hr
 
   <h4 class="section" id="Kook_IGuild_Available_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
-    This property only applies to a WebSocket-based client.
-</p></div>
-This boolean is used to determine if the guild is currently connected to the WebSocket and is ready to be used/accessed.
+        This property only applies to a WebSocket-based client.
+    </p></div>
+    This boolean is used to determine if the guild is currently connected to the WebSocket and is ready to be used/accessed.
 </div>
 
 
@@ -204,7 +204,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_Banner" data-uid="Kook.IGuild.Banner">
   Banner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the URL of this guild's banner image.</p>
@@ -237,7 +237,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_BoostLevel" data-uid="Kook.IGuild.BoostLevel">
   BoostLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the level of guild boosting in this guild.</p>
@@ -270,7 +270,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_BoostSubscriptionCount" data-uid="Kook.IGuild.BoostSubscriptionCount">
   BoostSubscriptionCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of boost subscribers of this guild.</p>
@@ -303,7 +303,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_BufferBoostSubscriptionCount" data-uid="Kook.IGuild.BufferBoostSubscriptionCount">
   BufferBoostSubscriptionCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of boost subscribers who activates buffer of this guild.</p>
@@ -336,7 +336,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_DefaultChannelId" data-uid="Kook.IGuild.DefaultChannelId">
   DefaultChannelId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default channel ID for this guild.</p>
@@ -369,7 +369,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_Emotes" data-uid="Kook.IGuild.Emotes">
   Emotes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all custom emotes for this guild.</p>
@@ -399,7 +399,7 @@ This boolean is used to determine if the guild is currently connected to the Web
   <dl class="typelist seealso">
     <dt>See Also</dt>
     <dd>
-    <div><a class="xref" href="Kook.IGuild.html#Kook_IGuild_GetEmotesAsync_Kook_RequestOptions_">GetEmotesAsync(RequestOptions)</a></div>
+    <div><a class="xref" href="Kook.IGuild.html#Kook_IGuild_GetEmotesAsync_Kook_RequestOptions_">GetEmotesAsync(RequestOptions?)</a></div>
     </dd>
   </dl>
 
@@ -408,7 +408,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_EveryoneRole" data-uid="Kook.IGuild.EveryoneRole">
   EveryoneRole
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the built-in role containing all users in this guild.</p>
@@ -441,7 +441,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_Features" data-uid="Kook.IGuild.Features">
   Features
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the features of this guild.</p>
@@ -474,7 +474,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_Icon" data-uid="Kook.IGuild.Icon">
   Icon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the URL of this guild's icon.</p>
@@ -507,7 +507,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_IsOpenEnabled" data-uid="Kook.IGuild.IsOpenEnabled">
   IsOpenEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this guild is public.</p>
@@ -540,7 +540,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_MaxBitrate" data-uid="Kook.IGuild.MaxBitrate">
   MaxBitrate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the max bitrate for voice channels in this guild.</p>
@@ -573,7 +573,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_MaxUploadLimit" data-uid="Kook.IGuild.MaxUploadLimit">
   MaxUploadLimit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L167"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the upload limit in bytes for this guild. This number is dependent on the guild's boost status.</p>
@@ -605,7 +605,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_Name" data-uid="Kook.IGuild.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of this guild.</p>
@@ -638,7 +638,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_NotifyType" data-uid="Kook.IGuild.NotifyType">
   NotifyType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default notification type for this guild.</p>
@@ -671,7 +671,7 @@ This boolean is used to determine if the guild is currently connected to the Web
 
   <h3 id="Kook_IGuild_OpenId" data-uid="Kook.IGuild.OpenId">
   OpenId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the open ID for this guild.</p>
@@ -705,7 +705,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_IGuild_OwnerId" data-uid="Kook.IGuild.OwnerId">
   OwnerId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the ID of the user that owns this guild.</p>
@@ -738,7 +738,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_IGuild_RecommendInfo" data-uid="Kook.IGuild.RecommendInfo">
   RecommendInfo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L201"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the recommendation information for this guild.</p>
@@ -746,7 +746,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRecommendInfo RecommendInfo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IRecommendInfo? RecommendInfo { get; }</code></pre>
   </div>
 
 
@@ -772,7 +772,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_IGuild_Region" data-uid="Kook.IGuild.Region">
   Region
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default voice region for this guild.</p>
@@ -805,7 +805,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_IGuild_Roles" data-uid="Kook.IGuild.Roles">
   Roles
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all roles in this guild.</p>
@@ -838,7 +838,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_IGuild_Topic" data-uid="Kook.IGuild.Topic">
   Topic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the topic for the guild.</p>
@@ -871,7 +871,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_IGuild_WelcomeChannelId" data-uid="Kook.IGuild.WelcomeChannelId">
   WelcomeChannelId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the welcome channel ID for this guild.</p>
@@ -907,8 +907,8 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <a id="Kook_IGuild_AddBanAsync_" data-uid="Kook.IGuild.AddBanAsync*"></a>
 
   <h3 id="Kook_IGuild_AddBanAsync_Kook_IUser_System_Int32_System_String_Kook_RequestOptions_" data-uid="Kook.IGuild.AddBanAsync(Kook.IUser,System.Int32,System.String,Kook.RequestOptions)">
-  AddBanAsync(IUser, int, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  AddBanAsync(IUser, int, string?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L291"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Bans the user from this guild and optionally prunes their recent messages.</p>
@@ -916,7 +916,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task AddBanAsync(IUser user, int pruneDays = 0, string reason = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task AddBanAsync(IUser user, int pruneDays = 0, string? reason = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -961,8 +961,8 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <a id="Kook_IGuild_AddBanAsync_" data-uid="Kook.IGuild.AddBanAsync*"></a>
 
   <h3 id="Kook_IGuild_AddBanAsync_System_UInt64_System_Int32_System_String_Kook_RequestOptions_" data-uid="Kook.IGuild.AddBanAsync(System.UInt64,System.Int32,System.String,Kook.RequestOptions)">
-  AddBanAsync(ulong, int, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  AddBanAsync(ulong, int, string?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L304"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Bans the user from this guild and optionally prunes their recent messages.</p>
@@ -970,7 +970,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task AddBanAsync(ulong userId, int pruneDays = 0, string reason = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task AddBanAsync(ulong userId, int pruneDays = 0, string? reason = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1015,8 +1015,8 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <a id="Kook_IGuild_CreateCategoryChannelAsync_" data-uid="Kook.IGuild.CreateCategoryChannelAsync*"></a>
 
   <h3 id="Kook_IGuild_CreateCategoryChannelAsync_System_String_System_Action_Kook_CreateCategoryChannelProperties__Kook_RequestOptions_" data-uid="Kook.IGuild.CreateCategoryChannelAsync(System.String,System.Action{Kook.CreateCategoryChannelProperties},Kook.RequestOptions)">
-  CreateCategoryChannelAsync(string, Action&lt;CreateCategoryChannelProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L467"><i class="bi bi-code-slash"></i></a>
+  CreateCategoryChannelAsync(string, Action&lt;CreateCategoryChannelProperties&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L470"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new channel category in this guild.</p>
@@ -1024,7 +1024,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ICategoryChannel&gt; CreateCategoryChannelAsync(string name, Action&lt;CreateCategoryChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ICategoryChannel&gt; CreateCategoryChannelAsync(string name, Action&lt;CreateCategoryChannelProperties&gt;? func = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1061,8 +1061,8 @@ category channel.</p>
   <a id="Kook_IGuild_CreateEmoteAsync_" data-uid="Kook.IGuild.CreateEmoteAsync*"></a>
 
   <h3 id="Kook_IGuild_CreateEmoteAsync_System_String_Kook_Image_Kook_RequestOptions_" data-uid="Kook.IGuild.CreateEmoteAsync(System.String,Kook.Image,Kook.RequestOptions)">
-  CreateEmoteAsync(string, Image, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L680"><i class="bi bi-code-slash"></i></a>
+  CreateEmoteAsync(string, Image, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L681"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> in this guild.</p>
@@ -1070,7 +1070,7 @@ category channel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;GuildEmote&gt; CreateEmoteAsync(string name, Image image, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;GuildEmote&gt; CreateEmoteAsync(string name, Image image, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1106,8 +1106,8 @@ category channel.</p>
   <a id="Kook_IGuild_CreateInviteAsync_" data-uid="Kook.IGuild.CreateInviteAsync*"></a>
 
   <h3 id="Kook_IGuild_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_" data-uid="Kook.IGuild.CreateInviteAsync(Kook.InviteMaxAge,Kook.InviteMaxUses,Kook.RequestOptions)">
-  CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L494"><i class="bi bi-code-slash"></i></a>
+  CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L496"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new invite to this channel.</p>
@@ -1115,7 +1115,7 @@ category channel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IInvite&gt; CreateInviteAsync(InviteMaxAge maxAge = InviteMaxAge._604800, InviteMaxUses maxUses = InviteMaxUses.Unlimited, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IInvite&gt; CreateInviteAsync(InviteMaxAge maxAge = InviteMaxAge._604800, InviteMaxUses maxUses = InviteMaxUses.Unlimited, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1152,8 +1152,8 @@ metadata object containing information for the created invite.</p>
   <a id="Kook_IGuild_CreateInviteAsync_" data-uid="Kook.IGuild.CreateInviteAsync*"></a>
 
   <h3 id="Kook_IGuild_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_" data-uid="Kook.IGuild.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},Kook.RequestOptions)">
-  CreateInviteAsync(int?, int?, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L507"><i class="bi bi-code-slash"></i></a>
+  CreateInviteAsync(int?, int?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L508"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new invite to this channel.</p>
@@ -1161,7 +1161,7 @@ metadata object containing information for the created invite.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IInvite&gt; CreateInviteAsync(int? maxAge = 604800, int? maxUses = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IInvite&gt; CreateInviteAsync(int? maxAge = 604800, int? maxUses = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1198,8 +1198,8 @@ metadata object containing information for the created invite.</p>
   <a id="Kook_IGuild_CreateRoleAsync_" data-uid="Kook.IGuild.CreateRoleAsync*"></a>
 
   <h3 id="Kook_IGuild_CreateRoleAsync_System_String_Kook_RequestOptions_" data-uid="Kook.IGuild.CreateRoleAsync(System.String,Kook.RequestOptions)">
-  CreateRoleAsync(string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L530"><i class="bi bi-code-slash"></i></a>
+  CreateRoleAsync(string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L531"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new role with the provided name.</p>
@@ -1207,7 +1207,7 @@ metadata object containing information for the created invite.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IRole&gt; CreateRoleAsync(string name, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IRole&gt; CreateRoleAsync(string name, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1240,8 +1240,8 @@ metadata object containing information for the created invite.</p>
   <a id="Kook_IGuild_CreateTextChannelAsync_" data-uid="Kook.IGuild.CreateTextChannelAsync*"></a>
 
   <h3 id="Kook_IGuild_CreateTextChannelAsync_System_String_System_Action_Kook_CreateTextChannelProperties__Kook_RequestOptions_" data-uid="Kook.IGuild.CreateTextChannelAsync(System.String,System.Action{Kook.CreateTextChannelProperties},Kook.RequestOptions)">
-  CreateTextChannelAsync(string, Action&lt;CreateTextChannelProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L443"><i class="bi bi-code-slash"></i></a>
+  CreateTextChannelAsync(string, Action&lt;CreateTextChannelProperties&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L446"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new text channel in this guild.</p>
@@ -1249,7 +1249,7 @@ metadata object containing information for the created invite.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ITextChannel&gt; CreateTextChannelAsync(string name, Action&lt;CreateTextChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ITextChannel&gt; CreateTextChannelAsync(string name, Action&lt;CreateTextChannelProperties&gt;? func = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1286,8 +1286,8 @@ text channel.</p>
   <a id="Kook_IGuild_CreateVoiceChannelAsync_" data-uid="Kook.IGuild.CreateVoiceChannelAsync*"></a>
 
   <h3 id="Kook_IGuild_CreateVoiceChannelAsync_System_String_System_Action_Kook_CreateVoiceChannelProperties__Kook_RequestOptions_" data-uid="Kook.IGuild.CreateVoiceChannelAsync(System.String,System.Action{Kook.CreateVoiceChannelProperties},Kook.RequestOptions)">
-  CreateVoiceChannelAsync(string, Action&lt;CreateVoiceChannelProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  CreateVoiceChannelAsync(string, Action&lt;CreateVoiceChannelProperties&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L458"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new voice channel in this guild.</p>
@@ -1295,7 +1295,7 @@ text channel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IVoiceChannel&gt; CreateVoiceChannelAsync(string name, Action&lt;CreateVoiceChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IVoiceChannel&gt; CreateVoiceChannelAsync(string name, Action&lt;CreateVoiceChannelProperties&gt;? func = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1332,8 +1332,8 @@ voice channel.</p>
   <a id="Kook_IGuild_DeleteEmoteAsync_" data-uid="Kook.IGuild.DeleteEmoteAsync*"></a>
 
   <h3 id="Kook_IGuild_DeleteEmoteAsync_Kook_GuildEmote_Kook_RequestOptions_" data-uid="Kook.IGuild.DeleteEmoteAsync(Kook.GuildEmote,Kook.RequestOptions)">
-  DeleteEmoteAsync(GuildEmote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L702"><i class="bi bi-code-slash"></i></a>
+  DeleteEmoteAsync(GuildEmote, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L703"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deletes an existing <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> from this guild.</p>
@@ -1341,7 +1341,7 @@ voice channel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task DeleteEmoteAsync(GuildEmote emote, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task DeleteEmoteAsync(GuildEmote emote, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1374,8 +1374,8 @@ voice channel.</p>
   <a id="Kook_IGuild_DownloadBoostSubscriptionsAsync_" data-uid="Kook.IGuild.DownloadBoostSubscriptionsAsync*"></a>
 
   <h3 id="Kook_IGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.IGuild.DownloadBoostSubscriptionsAsync(Kook.RequestOptions)">
-  DownloadBoostSubscriptionsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L626"><i class="bi bi-code-slash"></i></a>
+  DownloadBoostSubscriptionsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L627"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads all boost subscriptions for this guild.</p>
@@ -1383,7 +1383,7 @@ voice channel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task DownloadBoostSubscriptionsAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task DownloadBoostSubscriptionsAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1418,8 +1418,8 @@ To download all boost subscriptions, the current user must has the
   <a id="Kook_IGuild_DownloadUsersAsync_" data-uid="Kook.IGuild.DownloadUsersAsync*"></a>
 
   <h3 id="Kook_IGuild_DownloadUsersAsync_Kook_RequestOptions_" data-uid="Kook.IGuild.DownloadUsersAsync(Kook.RequestOptions)">
-  DownloadUsersAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L600"><i class="bi bi-code-slash"></i></a>
+  DownloadUsersAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L601"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads all users for this guild if the current list is incomplete.</p>
@@ -1427,7 +1427,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task DownloadUsersAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task DownloadUsersAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1460,8 +1460,8 @@ To download all boost subscriptions, the current user must has the
   <a id="Kook_IGuild_DownloadVoiceStatesAsync_" data-uid="Kook.IGuild.DownloadVoiceStatesAsync*"></a>
 
   <h3 id="Kook_IGuild_DownloadVoiceStatesAsync_Kook_RequestOptions_" data-uid="Kook.IGuild.DownloadVoiceStatesAsync(Kook.RequestOptions)">
-  DownloadVoiceStatesAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L612"><i class="bi bi-code-slash"></i></a>
+  DownloadVoiceStatesAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L613"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads all voice states for this guild.</p>
@@ -1469,7 +1469,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task DownloadVoiceStatesAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task DownloadVoiceStatesAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1502,8 +1502,8 @@ To download all boost subscriptions, the current user must has the
   <a id="Kook_IGuild_GetActiveBoostSubscriptionsAsync_" data-uid="Kook.IGuild.GetActiveBoostSubscriptionsAsync*"></a>
 
   <h3 id="Kook_IGuild_GetActiveBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.IGuild.GetActiveBoostSubscriptionsAsync(Kook.RequestOptions)">
-  GetActiveBoostSubscriptionsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  GetActiveBoostSubscriptionsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets subscriptions which are not expired for this guild.</p>
@@ -1511,7 +1511,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ImmutableDictionary&lt;IUser, IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt;&gt; GetActiveBoostSubscriptionsAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ImmutableDictionary&lt;IUser, IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt;&gt; GetActiveBoostSubscriptionsAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1543,8 +1543,8 @@ each representing the subscriptions information.</p>
   <a id="Kook_IGuild_GetBadgeAsync_" data-uid="Kook.IGuild.GetBadgeAsync*"></a>
 
   <h3 id="Kook_IGuild_GetBadgeAsync_Kook_BadgeStyle_Kook_RequestOptions_" data-uid="Kook.IGuild.GetBadgeAsync(Kook.BadgeStyle,Kook.RequestOptions)">
-  GetBadgeAsync(BadgeStyle, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L730"><i class="bi bi-code-slash"></i></a>
+  GetBadgeAsync(BadgeStyle, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L731"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a badge which is associated with this guild.</p>
@@ -1552,7 +1552,7 @@ each representing the subscriptions information.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Stream&gt; GetBadgeAsync(BadgeStyle style = BadgeStyle.GuildName, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Stream&gt; GetBadgeAsync(BadgeStyle style = BadgeStyle.GuildName, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1586,8 +1586,8 @@ associated with this guild.</p>
   <a id="Kook_IGuild_GetBanAsync_" data-uid="Kook.IGuild.GetBanAsync*"></a>
 
   <h3 id="Kook_IGuild_GetBanAsync_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IGuild.GetBanAsync(Kook.IUser,Kook.RequestOptions)">
-  GetBanAsync(IUser, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  GetBanAsync(IUser, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a ban object for a banned user.</p>
@@ -1595,7 +1595,7 @@ associated with this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IBan&gt; GetBanAsync(IUser user, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IBan?&gt; GetBanAsync(IUser user, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1629,8 +1629,8 @@ contains the user information and the reason for the ban; <code>null</code> if t
   <a id="Kook_IGuild_GetBanAsync_" data-uid="Kook.IGuild.GetBanAsync*"></a>
 
   <h3 id="Kook_IGuild_GetBanAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.IGuild.GetBanAsync(System.UInt64,Kook.RequestOptions)">
-  GetBanAsync(ulong, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  GetBanAsync(ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a ban object for a banned user.</p>
@@ -1638,7 +1638,7 @@ contains the user information and the reason for the ban; <code>null</code> if t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IBan&gt; GetBanAsync(ulong userId, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IBan?&gt; GetBanAsync(ulong userId, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1672,8 +1672,8 @@ contains the user information and the reason for the ban; <code>null</code> if t
   <a id="Kook_IGuild_GetBansAsync_" data-uid="Kook.IGuild.GetBansAsync*"></a>
 
   <h3 id="Kook_IGuild_GetBansAsync_Kook_RequestOptions_" data-uid="Kook.IGuild.GetBansAsync(Kook.RequestOptions)">
-  GetBansAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  GetBansAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all users banned in this guild.</p>
@@ -1681,7 +1681,7 @@ contains the user information and the reason for the ban; <code>null</code> if t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IBan&gt;&gt; GetBansAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IBan&gt;&gt; GetBansAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1713,8 +1713,8 @@ behind the ban.</p>
   <a id="Kook_IGuild_GetBoostSubscriptionsAsync_" data-uid="Kook.IGuild.GetBoostSubscriptionsAsync*"></a>
 
   <h3 id="Kook_IGuild_GetBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.IGuild.GetBoostSubscriptionsAsync(Kook.RequestOptions)">
-  GetBoostSubscriptionsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  GetBoostSubscriptionsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L230"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets all subscriptions for this guild.</p>
@@ -1722,7 +1722,7 @@ behind the ban.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ImmutableDictionary&lt;IUser, IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt;&gt; GetBoostSubscriptionsAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ImmutableDictionary&lt;IUser, IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt;&gt; GetBoostSubscriptionsAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1753,8 +1753,8 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <a id="Kook_IGuild_GetCategoryChannelsAsync_" data-uid="Kook.IGuild.GetCategoryChannelsAsync*"></a>
 
   <h3 id="Kook_IGuild_GetCategoryChannelsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetCategoryChannelsAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetCategoryChannelsAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  GetCategoryChannelsAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L411"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all category channels in this guild.</p>
@@ -1762,7 +1762,7 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;ICategoryChannel&gt;&gt; GetCategoryChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;ICategoryChannel&gt;&gt; GetCategoryChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1796,8 +1796,8 @@ category channels found within this guild.</p>
   <a id="Kook_IGuild_GetChannelAsync_" data-uid="Kook.IGuild.GetChannelAsync*"></a>
 
   <h3 id="Kook_IGuild_GetChannelAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetChannelAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)">
-  GetChannelAsync(ulong, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  GetChannelAsync(ulong, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L351"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a channel in this guild.</p>
@@ -1805,7 +1805,7 @@ category channels found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IGuildChannel&gt; GetChannelAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IGuildChannel?&gt; GetChannelAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1842,8 +1842,8 @@ associated with the specified <code class="paramref">id</code>; <code>null</code
   <a id="Kook_IGuild_GetChannelsAsync_" data-uid="Kook.IGuild.GetChannelsAsync*"></a>
 
   <h3 id="Kook_IGuild_GetChannelsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetChannelsAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetChannelsAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  GetChannelsAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L339"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all channels in this guild.</p>
@@ -1851,7 +1851,7 @@ associated with the specified <code class="paramref">id</code>; <code>null</code
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IGuildChannel&gt;&gt; GetChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IGuildChannel&gt;&gt; GetChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1885,8 +1885,8 @@ generic channels found within this guild.</p>
   <a id="Kook_IGuild_GetCurrentUserAsync_" data-uid="Kook.IGuild.GetCurrentUserAsync*"></a>
 
   <h3 id="Kook_IGuild_GetCurrentUserAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetCurrentUserAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetCurrentUserAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L578"><i class="bi bi-code-slash"></i></a>
+  GetCurrentUserAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L579"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the current user for this guild.</p>
@@ -1894,7 +1894,7 @@ generic channels found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IGuildUser&gt; GetCurrentUserAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IGuildUser?&gt; GetCurrentUserAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1928,8 +1928,8 @@ user within this guild.</p>
   <a id="Kook_IGuild_GetDefaultChannelAsync_" data-uid="Kook.IGuild.GetDefaultChannelAsync*"></a>
 
   <h3 id="Kook_IGuild_GetDefaultChannelAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetDefaultChannelAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetDefaultChannelAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  GetDefaultChannelAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L423"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default text channel for this guild.</p>
@@ -1937,7 +1937,7 @@ user within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ITextChannel&gt; GetDefaultChannelAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ITextChannel?&gt; GetDefaultChannelAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1971,8 +1971,8 @@ user within this guild.</p>
   <a id="Kook_IGuild_GetEmoteAsync_" data-uid="Kook.IGuild.GetEmoteAsync*"></a>
 
   <h3 id="Kook_IGuild_GetEmoteAsync_System_String_Kook_RequestOptions_" data-uid="Kook.IGuild.GetEmoteAsync(System.String,Kook.RequestOptions)">
-  GetEmoteAsync(string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L669"><i class="bi bi-code-slash"></i></a>
+  GetEmoteAsync(string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L670"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a specific emote from this guild.</p>
@@ -1980,7 +1980,7 @@ user within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;GuildEmote&gt; GetEmoteAsync(string id, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;GuildEmote?&gt; GetEmoteAsync(string id, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2014,8 +2014,8 @@ specified <code class="paramref">id</code>; <code>null</code> if none is found.<
   <a id="Kook_IGuild_GetEmotesAsync_" data-uid="Kook.IGuild.GetEmotesAsync*"></a>
 
   <h3 id="Kook_IGuild_GetEmotesAsync_Kook_RequestOptions_" data-uid="Kook.IGuild.GetEmotesAsync(Kook.RequestOptions)">
-  GetEmotesAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L658"><i class="bi bi-code-slash"></i></a>
+  GetEmotesAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L659"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of emotes from this guild.</p>
@@ -2023,7 +2023,7 @@ specified <code class="paramref">id</code>; <code>null</code> if none is found.<
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;GuildEmote&gt;&gt; GetEmotesAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;GuildEmote&gt;&gt; GetEmotesAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2054,8 +2054,8 @@ of emotes found within the guild.</p>
   <a id="Kook_IGuild_GetInvitesAsync_" data-uid="Kook.IGuild.GetInvitesAsync*"></a>
 
   <h3 id="Kook_IGuild_GetInvitesAsync_Kook_RequestOptions_" data-uid="Kook.IGuild.GetInvitesAsync(Kook.RequestOptions)">
-  GetInvitesAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L482"><i class="bi bi-code-slash"></i></a>
+  GetInvitesAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L484"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all invites in this guild.</p>
@@ -2063,7 +2063,7 @@ of emotes found within the guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IInvite&gt;&gt; GetInvitesAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IInvite&gt;&gt; GetInvitesAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2094,8 +2094,8 @@ invite, each representing information for an invite found within this guild.</p>
   <a id="Kook_IGuild_GetOwnerAsync_" data-uid="Kook.IGuild.GetOwnerAsync*"></a>
 
   <h3 id="Kook_IGuild_GetOwnerAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetOwnerAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetOwnerAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L588"><i class="bi bi-code-slash"></i></a>
+  GetOwnerAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L589"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the owner of this guild.</p>
@@ -2103,7 +2103,7 @@ invite, each representing information for an invite found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IGuildUser&gt; GetOwnerAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IGuildUser?&gt; GetOwnerAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2137,7 +2137,7 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_IGuild_GetRole_System_UInt32_" data-uid="Kook.IGuild.GetRole(System.UInt32)">
   GetRole(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L520"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L521"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a role in this guild.</p>
@@ -2145,7 +2145,7 @@ invite, each representing information for an invite found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRole GetRole(uint id)</code></pre>
+    <pre><code class="lang-csharp hljs">IRole? GetRole(uint id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2175,8 +2175,8 @@ invite, each representing information for an invite found within this guild.</p>
   <a id="Kook_IGuild_GetTextChannelAsync_" data-uid="Kook.IGuild.GetTextChannelAsync*"></a>
 
   <h3 id="Kook_IGuild_GetTextChannelAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetTextChannelAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)">
-  GetTextChannelAsync(ulong, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  GetTextChannelAsync(ulong, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L375"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a text channel in this guild.</p>
@@ -2184,7 +2184,7 @@ invite, each representing information for an invite found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ITextChannel&gt; GetTextChannelAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ITextChannel?&gt; GetTextChannelAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2221,8 +2221,8 @@ associated with the specified <code class="paramref">id</code>; <code>null</code
   <a id="Kook_IGuild_GetTextChannelsAsync_" data-uid="Kook.IGuild.GetTextChannelsAsync*"></a>
 
   <h3 id="Kook_IGuild_GetTextChannelsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetTextChannelsAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetTextChannelsAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L362"><i class="bi bi-code-slash"></i></a>
+  GetTextChannelsAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L363"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all text channels in this guild.</p>
@@ -2230,7 +2230,7 @@ associated with the specified <code class="paramref">id</code>; <code>null</code
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;ITextChannel&gt;&gt; GetTextChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;ITextChannel&gt;&gt; GetTextChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2264,8 +2264,8 @@ message channels found within this guild.</p>
   <a id="Kook_IGuild_GetUserAsync_" data-uid="Kook.IGuild.GetUserAsync*"></a>
 
   <h3 id="Kook_IGuild_GetUserAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetUserAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)">
-  GetUserAsync(ulong, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L567"><i class="bi bi-code-slash"></i></a>
+  GetUserAsync(ulong, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L568"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a user from this guild.</p>
@@ -2273,7 +2273,7 @@ message channels found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IGuildUser&gt; GetUserAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IGuildUser?&gt; GetUserAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2317,8 +2317,8 @@ associated with the specified <code class="paramref">id</code>; <code>null</code
   <a id="Kook_IGuild_GetUsersAsync_" data-uid="Kook.IGuild.GetUsersAsync*"></a>
 
   <h3 id="Kook_IGuild_GetUsersAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetUsersAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetUsersAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L548"><i class="bi bi-code-slash"></i></a>
+  GetUsersAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L549"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all users in this guild.</p>
@@ -2326,7 +2326,7 @@ associated with the specified <code class="paramref">id</code>; <code>null</code
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IGuildUser&gt;&gt; GetUsersAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IGuildUser&gt;&gt; GetUsersAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2363,8 +2363,8 @@ users found within this guild.</p>
   <a id="Kook_IGuild_GetVoiceChannelAsync_" data-uid="Kook.IGuild.GetVoiceChannelAsync*"></a>
 
   <h3 id="Kook_IGuild_GetVoiceChannelAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetVoiceChannelAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)">
-  GetVoiceChannelAsync(ulong, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L397"><i class="bi bi-code-slash"></i></a>
+  GetVoiceChannelAsync(ulong, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L399"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a voice channel in this guild.</p>
@@ -2372,7 +2372,7 @@ users found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IVoiceChannel&gt; GetVoiceChannelAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IVoiceChannel?&gt; GetVoiceChannelAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2409,8 +2409,8 @@ with the specified <code class="paramref">id</code>; <code>null</code> if none i
   <a id="Kook_IGuild_GetVoiceChannelsAsync_" data-uid="Kook.IGuild.GetVoiceChannelsAsync*"></a>
 
   <h3 id="Kook_IGuild_GetVoiceChannelsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetVoiceChannelsAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetVoiceChannelsAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  GetVoiceChannelsAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L387"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all voice channels in this guild.</p>
@@ -2418,7 +2418,7 @@ with the specified <code class="paramref">id</code>; <code>null</code> if none i
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IVoiceChannel&gt;&gt; GetVoiceChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IVoiceChannel&gt;&gt; GetVoiceChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2452,8 +2452,8 @@ voice channels found within this guild.</p>
   <a id="Kook_IGuild_GetWelcomeChannelAsync_" data-uid="Kook.IGuild.GetWelcomeChannelAsync*"></a>
 
   <h3 id="Kook_IGuild_GetWelcomeChannelAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.GetWelcomeChannelAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetWelcomeChannelAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L431"><i class="bi bi-code-slash"></i></a>
+  GetWelcomeChannelAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L434"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the welcome text channel for this guild.</p>
@@ -2461,7 +2461,7 @@ voice channels found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ITextChannel&gt; GetWelcomeChannelAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ITextChannel?&gt; GetWelcomeChannelAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2495,8 +2495,8 @@ voice channels found within this guild.</p>
   <a id="Kook_IGuild_LeaveAsync_" data-uid="Kook.IGuild.LeaveAsync*"></a>
 
   <h3 id="Kook_IGuild_LeaveAsync_Kook_RequestOptions_" data-uid="Kook.IGuild.LeaveAsync(Kook.RequestOptions)">
-  LeaveAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  LeaveAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Leaves this guild.</p>
@@ -2504,7 +2504,7 @@ voice channels found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task LeaveAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task LeaveAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2530,7 +2530,7 @@ voice channels found within this guild.</p>
   <h4 class="section" id="Kook_IGuild_LeaveAsync_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This method will make the currently logged-in user leave the guild.</p>
 <div class="NOTE"><h5>note</h5><p>
-    If the user is the owner of this guild, use <a class="xref" href="Kook.IDeletable.html#Kook_IDeletable_DeleteAsync_Kook_RequestOptions_">DeleteAsync(RequestOptions)</a> instead.
+    If the user is the owner of this guild, use <a class="xref" href="Kook.IDeletable.html#Kook_IDeletable_DeleteAsync_Kook_RequestOptions_">DeleteAsync(RequestOptions?)</a> instead.
 </p></div>
 </div>
 
@@ -2540,8 +2540,8 @@ voice channels found within this guild.</p>
   <a id="Kook_IGuild_ModifyEmoteNameAsync_" data-uid="Kook.IGuild.ModifyEmoteNameAsync*"></a>
 
   <h3 id="Kook_IGuild_ModifyEmoteNameAsync_Kook_GuildEmote_System_String_Kook_RequestOptions_" data-uid="Kook.IGuild.ModifyEmoteNameAsync(Kook.GuildEmote,System.String,Kook.RequestOptions)">
-  ModifyEmoteNameAsync(GuildEmote, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L692"><i class="bi bi-code-slash"></i></a>
+  ModifyEmoteNameAsync(GuildEmote, string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L693"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Modifies an existing <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> in this guild.</p>
@@ -2549,7 +2549,7 @@ voice channels found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task ModifyEmoteNameAsync(GuildEmote emote, string name, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task ModifyEmoteNameAsync(GuildEmote emote, string name, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2586,8 +2586,8 @@ emote.</p>
   <a id="Kook_IGuild_MoveUsersAsync_" data-uid="Kook.IGuild.MoveUsersAsync*"></a>
 
   <h3 id="Kook_IGuild_MoveUsersAsync_System_Collections_Generic_IEnumerable_Kook_IGuildUser__Kook_IVoiceChannel_Kook_RequestOptions_" data-uid="Kook.IGuild.MoveUsersAsync(System.Collections.Generic.IEnumerable{Kook.IGuildUser},Kook.IVoiceChannel,Kook.RequestOptions)">
-  MoveUsersAsync(IEnumerable&lt;IGuildUser&gt;, IVoiceChannel, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L715"><i class="bi bi-code-slash"></i></a>
+  MoveUsersAsync(IEnumerable&lt;IGuildUser&gt;, IVoiceChannel, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L716"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Moves the user to the voice channel.</p>
@@ -2595,7 +2595,7 @@ emote.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task MoveUsersAsync(IEnumerable&lt;IGuildUser&gt; users, IVoiceChannel targetChannel, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task MoveUsersAsync(IEnumerable&lt;IGuildUser&gt; users, IVoiceChannel targetChannel, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2631,8 +2631,8 @@ emote.</p>
   <a id="Kook_IGuild_RemoveBanAsync_" data-uid="Kook.IGuild.RemoveBanAsync*"></a>
 
   <h3 id="Kook_IGuild_RemoveBanAsync_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IGuild.RemoveBanAsync(Kook.IUser,Kook.RequestOptions)">
-  RemoveBanAsync(IUser, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  RemoveBanAsync(IUser, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L314"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unbans the user if they are currently banned.</p>
@@ -2640,7 +2640,7 @@ emote.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task RemoveBanAsync(IUser user, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task RemoveBanAsync(IUser user, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2673,8 +2673,8 @@ emote.</p>
   <a id="Kook_IGuild_RemoveBanAsync_" data-uid="Kook.IGuild.RemoveBanAsync*"></a>
 
   <h3 id="Kook_IGuild_RemoveBanAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.IGuild.RemoveBanAsync(System.UInt64,Kook.RequestOptions)">
-  RemoveBanAsync(ulong, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L324"><i class="bi bi-code-slash"></i></a>
+  RemoveBanAsync(ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unbans the user if they are currently banned.</p>
@@ -2682,7 +2682,7 @@ emote.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task RemoveBanAsync(ulong userId, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task RemoveBanAsync(ulong userId, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2715,8 +2715,8 @@ emote.</p>
   <a id="Kook_IGuild_SearchUsersAsync_" data-uid="Kook.IGuild.SearchUsersAsync*"></a>
 
   <h3 id="Kook_IGuild_SearchUsersAsync_System_Action_Kook_SearchGuildMemberProperties__System_Int32_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IGuild.SearchUsersAsync(System.Action{Kook.SearchGuildMemberProperties},System.Int32,Kook.CacheMode,Kook.RequestOptions)">
-  SearchUsersAsync(Action&lt;SearchGuildMemberProperties&gt;, int, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L643"><i class="bi bi-code-slash"></i></a>
+  SearchUsersAsync(Action&lt;SearchGuildMemberProperties&gt;, int, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L644"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of users in this guild that the name or nickname contains the
@@ -2725,7 +2725,7 @@ provided string at <code class="paramref">func</code>.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IGuildUser&gt;&gt; SearchUsersAsync(Action&lt;SearchGuildMemberProperties&gt; func, int limit = 50, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IGuildUser&gt;&gt; SearchUsersAsync(Action&lt;SearchGuildMemberProperties&gt; func, int limit = 50, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2769,7 +2769,7 @@ users that matches the properties with the provided <a class="xref" href="https:
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Guilds/IGuild.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

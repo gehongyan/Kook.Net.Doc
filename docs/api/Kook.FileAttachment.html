@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a file attachment."><meta property="og:title" content="Struct FileAttachment | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_FileAttachment" data-uid="Kook.FileAttachment" class="text-break">
-Struct FileAttachment  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Struct FileAttachment  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -153,7 +153,7 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_FileAttachment__ctor_System_IO_Stream_System_String_Kook_AttachmentType_" data-uid="Kook.FileAttachment.#ctor(System.IO.Stream,System.String,Kook.AttachmentType)">
   FileAttachment(Stream, string, AttachmentType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a file attachment from a stream.</p>
@@ -161,7 +161,7 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FileAttachment(Stream stream, string fileName, AttachmentType type = AttachmentType.File)</code></pre>
+    <pre><code class="lang-csharp hljs">public FileAttachment(Stream stream, string filename, AttachmentType type = AttachmentType.File)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -169,7 +169,7 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
     <dd><p>The stream to create the attachment from.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the attachment.</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
@@ -191,8 +191,8 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
   <a id="Kook_FileAttachment__ctor_" data-uid="Kook.FileAttachment.#ctor*"></a>
 
   <h3 id="Kook_FileAttachment__ctor_System_String_System_String_Kook_AttachmentType_" data-uid="Kook.FileAttachment.#ctor(System.String,System.String,Kook.AttachmentType)">
-  FileAttachment(string, string, AttachmentType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  FileAttachment(string, string?, AttachmentType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create the file attachment from a file path.</p>
@@ -200,7 +200,7 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FileAttachment(string path, string fileName = null, AttachmentType type = AttachmentType.File)</code></pre>
+    <pre><code class="lang-csharp hljs">public FileAttachment(string path, string? filename = null, AttachmentType type = AttachmentType.File)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -208,7 +208,7 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The path to the file.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the attachment.</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
@@ -265,7 +265,7 @@ characters.</p>
 
   <h3 id="Kook_FileAttachment__ctor_System_Uri_System_String_Kook_AttachmentType_" data-uid="Kook.FileAttachment.#ctor(System.Uri,System.String,Kook.AttachmentType)">
   FileAttachment(Uri, string, AttachmentType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create the file attachment from a URI.</p>
@@ -273,7 +273,7 @@ characters.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FileAttachment(Uri uri, string fileName, AttachmentType type = AttachmentType.File)</code></pre>
+    <pre><code class="lang-csharp hljs">public FileAttachment(Uri uri, string filename, AttachmentType type = AttachmentType.File)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -281,7 +281,7 @@ characters.</p>
     <dt><code>uri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
     <dd><p>The URI of the file.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the attachment.</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
@@ -328,10 +328,10 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_FileName" data-uid="Kook.FileAttachment.FileName">
   FileName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets  the filename.</p>
+  <div class="markdown level1 summary"><p>Gets the filename.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -360,7 +360,7 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_Mode" data-uid="Kook.FileAttachment.Mode">
   Mode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets how this attachment will be operated.</p>
@@ -392,7 +392,7 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_Stream" data-uid="Kook.FileAttachment.Stream">
   Stream
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the stream containing the file content.</p>
@@ -400,7 +400,7 @@ Under this circumstance, please create asset in advance.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly Stream Stream { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly Stream? Stream { get; }</code></pre>
   </div>
 
 
@@ -424,7 +424,7 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_Type" data-uid="Kook.FileAttachment.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the type of this attachment.</p>
@@ -456,7 +456,7 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_Uri" data-uid="Kook.FileAttachment.Uri">
   Uri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the URI of the file.</p>
@@ -464,7 +464,7 @@ Under this circumstance, please create asset in advance.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly Uri Uri { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly Uri? Uri { get; }</code></pre>
   </div>
 
 
@@ -492,7 +492,7 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_Dispose" data-uid="Kook.FileAttachment.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
@@ -519,7 +519,7 @@ Under this circumstance, please create asset in advance.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

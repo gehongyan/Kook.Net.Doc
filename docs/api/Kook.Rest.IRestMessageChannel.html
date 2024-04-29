@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a REST-based channel that can send and receive messages."><meta property="og:title" content="Interface IRestMessageChannel | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Rest_IRestMessageChannel" data-uid="Kook.Rest.IRestMessageChannel" class="text-break">
-Interface IRestMessageChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IRestMessageChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -189,8 +189,8 @@ Interface IRestMessageChannel  <a class="header-action link-secondary" title="Vi
   <a id="Kook_Rest_IRestMessageChannel_GetMessageAsync_" data-uid="Kook.Rest.IRestMessageChannel.GetMessageAsync*"></a>
 
   <h3 id="Kook_Rest_IRestMessageChannel_GetMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.Rest.IRestMessageChannel.GetMessageAsync(System.Guid,Kook.RequestOptions)">
-  GetMessageAsync(Guid, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  GetMessageAsync(Guid, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a message from this message channel.</p>
@@ -198,7 +198,7 @@ Interface IRestMessageChannel  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;RestMessage&gt; GetMessageAsync(Guid id, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;RestMessage&gt; GetMessageAsync(Guid id, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -226,7 +226,7 @@ the retrieved message; <code>null</code> if no message is found with the specifi
 
 
   <h4 class="section" id="Kook_Rest_IRestMessageChannel_GetMessageAsync_System_Guid_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessageAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_">GetMessageAsync(Guid, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessageAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_">GetMessageAsync(Guid, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -236,8 +236,8 @@ Please visit its documentation for more details on this method.</p>
   <a id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_" data-uid="Kook.Rest.IRestMessageChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.IRestMessageChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)">
-  GetMessagesAsync(IMessage, Direction, int, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(IMessage, Direction, int, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
@@ -245,7 +245,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = 50, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = 50, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -278,7 +278,7 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -288,8 +288,8 @@ Please visit its documentation for more details on this method.</p>
   <a id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_" data-uid="Kook.Rest.IRestMessageChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.IRestMessageChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.RequestOptions)">
-  GetMessagesAsync(Guid, Direction, int, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(Guid, Direction, int, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
@@ -297,7 +297,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = 50, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = 50, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -330,7 +330,7 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -340,8 +340,8 @@ Please visit its documentation for more details on this method.</p>
   <a id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_" data-uid="Kook.Rest.IRestMessageChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.IRestMessageChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)">
-  GetMessagesAsync(int, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(int, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
@@ -349,7 +349,7 @@ Please visit its documentation for more details on this method.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(int limit = 50, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestMessage&gt;&gt; GetMessagesAsync(int limit = 50, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -376,7 +376,7 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions)</a>.
+  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions?)</a>.
 Please visit its documentation for more details on this method.</p>
 </div>
 
@@ -387,7 +387,7 @@ Please visit its documentation for more details on this method.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

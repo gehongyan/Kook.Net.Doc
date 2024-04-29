@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a generic Kook client."><meta property="og:title" content="Interface IKookClient | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IKookClient" data-uid="Kook.IKookClient" class="text-break">
-Interface IKookClient  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IKookClient  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -132,7 +132,7 @@ Interface IKookClient  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_IKookClient_ConnectionState" data-uid="Kook.IKookClient.ConnectionState">
   ConnectionState
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the current state of connection.</p>
@@ -164,7 +164,7 @@ Interface IKookClient  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_IKookClient_CurrentUser" data-uid="Kook.IKookClient.CurrentUser">
   CurrentUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the currently logged-in user.</p>
@@ -172,7 +172,7 @@ Interface IKookClient  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ISelfUser CurrentUser { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">ISelfUser? CurrentUser { get; }</code></pre>
   </div>
 
 
@@ -196,7 +196,7 @@ Interface IKookClient  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_IKookClient_TokenType" data-uid="Kook.IKookClient.TokenType">
   TokenType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the token type of the logged-in user.</p>
@@ -231,8 +231,8 @@ Interface IKookClient  <a class="header-action link-secondary" title="View sourc
   <a id="Kook_IKookClient_GetBlockedUsersAsync_" data-uid="Kook.IKookClient.GetBlockedUsersAsync*"></a>
 
   <h3 id="Kook_IKookClient_GetBlockedUsersAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetBlockedUsersAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetBlockedUsersAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  GetBlockedUsersAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets blocked users.</p>
@@ -240,7 +240,7 @@ Interface IKookClient  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IUser&gt;&gt; GetBlockedUsersAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IUser&gt;&gt; GetBlockedUsersAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -274,8 +274,8 @@ that are blocked by the current user.</p>
   <a id="Kook_IKookClient_GetChannelAsync_" data-uid="Kook.IKookClient.GetChannelAsync*"></a>
 
   <h3 id="Kook_IKookClient_GetChannelAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetChannelAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)">
-  GetChannelAsync(ulong, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  GetChannelAsync(ulong, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a generic channel.</p>
@@ -283,7 +283,7 @@ that are blocked by the current user.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IChannel&gt; GetChannelAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IChannel?&gt; GetChannelAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -320,8 +320,8 @@ with the identifier; <code>null</code> when the channel cannot be found.</p>
   <a id="Kook_IKookClient_GetDMChannelAsync_" data-uid="Kook.IKookClient.GetDMChannelAsync*"></a>
 
   <h3 id="Kook_IKookClient_GetDMChannelAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetDMChannelAsync(System.Guid,Kook.CacheMode,Kook.RequestOptions)">
-  GetDMChannelAsync(Guid, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  GetDMChannelAsync(Guid, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a direct message channel.</p>
@@ -329,7 +329,7 @@ with the identifier; <code>null</code> when the channel cannot be found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IDMChannel&gt; GetDMChannelAsync(Guid chatCode, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IDMChannel?&gt; GetDMChannelAsync(Guid chatCode, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -366,8 +366,8 @@ of direct-message channels that the user currently partakes in.</p>
   <a id="Kook_IKookClient_GetDMChannelsAsync_" data-uid="Kook.IKookClient.GetDMChannelsAsync*"></a>
 
   <h3 id="Kook_IKookClient_GetDMChannelsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetDMChannelsAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetDMChannelsAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  GetDMChannelsAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of direct message channels opened in this session.</p>
@@ -375,7 +375,7 @@ of direct-message channels that the user currently partakes in.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IDMChannel&gt;&gt; GetDMChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IDMChannel&gt;&gt; GetDMChannelsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -416,8 +416,8 @@ of direct-message channels that the user currently partakes in.</p>
   <a id="Kook_IKookClient_GetFriendRequestsAsync_" data-uid="Kook.IKookClient.GetFriendRequestsAsync*"></a>
 
   <h3 id="Kook_IKookClient_GetFriendRequestsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetFriendRequestsAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetFriendRequestsAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  GetFriendRequestsAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets friend requests.</p>
@@ -425,7 +425,7 @@ of direct-message channels that the user currently partakes in.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IFriendRequest&gt;&gt; GetFriendRequestsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IFriendRequest&gt;&gt; GetFriendRequestsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -459,8 +459,8 @@ that requested to be friends with the current user.</p>
   <a id="Kook_IKookClient_GetFriendsAsync_" data-uid="Kook.IKookClient.GetFriendsAsync*"></a>
 
   <h3 id="Kook_IKookClient_GetFriendsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetFriendsAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetFriendsAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  GetFriendsAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets friends.</p>
@@ -468,7 +468,7 @@ that requested to be friends with the current user.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IUser&gt;&gt; GetFriendsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IUser&gt;&gt; GetFriendsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -502,8 +502,8 @@ that are friends with the current user.</p>
   <a id="Kook_IKookClient_GetGuildAsync_" data-uid="Kook.IKookClient.GetGuildAsync*"></a>
 
   <h3 id="Kook_IKookClient_GetGuildAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetGuildAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)">
-  GetGuildAsync(ulong, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  GetGuildAsync(ulong, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a guild.</p>
@@ -511,7 +511,7 @@ that are friends with the current user.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IGuild&gt; GetGuildAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IGuild?&gt; GetGuildAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -548,8 +548,8 @@ with the identifier; <code>null</code> when the guild cannot be found.</p>
   <a id="Kook_IKookClient_GetGuildsAsync_" data-uid="Kook.IKookClient.GetGuildsAsync*"></a>
 
   <h3 id="Kook_IKookClient_GetGuildsAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetGuildsAsync(Kook.CacheMode,Kook.RequestOptions)">
-  GetGuildsAsync(CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  GetGuildsAsync(CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of guilds that the user is currently in.</p>
@@ -557,7 +557,7 @@ with the identifier; <code>null</code> when the guild cannot be found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IGuild&gt;&gt; GetGuildsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IGuild&gt;&gt; GetGuildsAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -591,8 +591,8 @@ of guilds that the current user is in.</p>
   <a id="Kook_IKookClient_GetUserAsync_" data-uid="Kook.IKookClient.GetUserAsync*"></a>
 
   <h3 id="Kook_IKookClient_GetUserAsync_System_String_System_String_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetUserAsync(System.String,System.String,Kook.RequestOptions)">
-  GetUserAsync(string, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  GetUserAsync(string, string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a user.</p>
@@ -600,7 +600,7 @@ of guilds that the current user is in.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IUser&gt; GetUserAsync(string username, string identifyNumber, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IUser?&gt; GetUserAsync(string username, string identifyNumber, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -637,8 +637,8 @@ the name and the identifyNumber; <code>null</code> if the user is not found.</p>
   <a id="Kook_IKookClient_GetUserAsync_" data-uid="Kook.IKookClient.GetUserAsync*"></a>
 
   <h3 id="Kook_IKookClient_GetUserAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IKookClient.GetUserAsync(System.UInt64,Kook.CacheMode,Kook.RequestOptions)">
-  GetUserAsync(ulong, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  GetUserAsync(ulong, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a user.</p>
@@ -646,7 +646,7 @@ the name and the identifyNumber; <code>null</code> if the user is not found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IUser&gt; GetUserAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IUser?&gt; GetUserAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -684,7 +684,7 @@ the identifier; <code>null</code> if the user is not found.</p>
 
   <h3 id="Kook_IKookClient_StartAsync" data-uid="Kook.IKookClient.StartAsync">
   StartAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Starts the connection between Kook and the client..</p>
@@ -724,7 +724,7 @@ the identifier; <code>null</code> if the user is not found.</p>
 
   <h3 id="Kook_IKookClient_StopAsync" data-uid="Kook.IKookClient.StopAsync">
   StopAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stops the connection between Kook and the client.</p>
@@ -757,7 +757,7 @@ the identifier; <code>null</code> if the user is not found.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/IKookClient.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/IKookClient.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

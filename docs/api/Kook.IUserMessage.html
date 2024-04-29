@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a generic message sent by a user."><meta property="og:title" content="Interface IUserMessage | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IUserMessage" data-uid="Kook.IUserMessage" class="text-break">
-Interface IUserMessage  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IUserMessage  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -207,28 +207,28 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="Kook.Commands.MessageExtensions.html#Kook_Commands_MessageExtensions_HasStringPrefix_Kook_IUserMessage_System_String_System_Int32__System_StringComparison_">MessageExtensions.HasStringPrefix(IUserMessage, string, ref int, StringComparison)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_AddReactionsAsync_Kook_IUserMessage_System_Collections_Generic_IEnumerable_Kook_IEmote__Kook_RequestOptions_">MessageExtensions.AddReactionsAsync(IUserMessage, IEnumerable&lt;IEmote&gt;, RequestOptions)</a>
+      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_AddReactionsAsync_Kook_IUserMessage_System_Collections_Generic_IEnumerable_Kook_IEmote__Kook_RequestOptions_">MessageExtensions.AddReactionsAsync(IUserMessage, IEnumerable&lt;IEmote&gt;, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_RemoveReactionsAsync_Kook_IUserMessage_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_IEmote__Kook_RequestOptions_">MessageExtensions.RemoveReactionsAsync(IUserMessage, IUser, IEnumerable&lt;IEmote&gt;, RequestOptions)</a>
+      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_RemoveReactionsAsync_Kook_IUserMessage_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_IEmote__Kook_RequestOptions_">MessageExtensions.RemoveReactionsAsync(IUserMessage, IUser, IEnumerable&lt;IEmote&gt;, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyCardAsync_Kook_IUserMessage_Kook_ICard_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyCardAsync(IUserMessage, ICard, bool, bool, RequestOptions)</a>
+      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyCardAsync_Kook_IUserMessage_Kook_ICard_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyCardAsync(IUserMessage, ICard, bool, bool, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyCardsAsync_Kook_IUserMessage_System_Collections_Generic_IEnumerable_Kook_ICard__System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyCardsAsync(IUserMessage, IEnumerable&lt;ICard&gt;, bool, bool, RequestOptions)</a>
+      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyCardsAsync_Kook_IUserMessage_System_Collections_Generic_IEnumerable_Kook_ICard__System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyCardsAsync(IUserMessage, IEnumerable&lt;ICard&gt;, bool, bool, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Kook_FileAttachment_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyFileAsync(IUserMessage, FileAttachment, bool, bool, RequestOptions)</a>
+      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Kook_FileAttachment_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyFileAsync(IUserMessage, FileAttachment, bool, bool, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_System_IO_Stream_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyFileAsync(IUserMessage, Stream, string, AttachmentType, bool, bool, RequestOptions)</a>
+      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_System_IO_Stream_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyFileAsync(IUserMessage, Stream, string, AttachmentType, bool, bool, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_System_String_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyFileAsync(IUserMessage, string, string, AttachmentType, bool, bool, RequestOptions)</a>
+      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_System_String_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyFileAsync(IUserMessage, string, string?, AttachmentType, bool, bool, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyTextAsync_Kook_IUserMessage_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyTextAsync(IUserMessage, string, bool, bool, RequestOptions)</a>
+      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyTextAsync_Kook_IUserMessage_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyTextAsync(IUserMessage, string, bool, bool, RequestOptions?)</a>
   </div>
   </dd></dl>
 
@@ -244,7 +244,7 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_IUserMessage_Quote" data-uid="Kook.IUserMessage.Quote">
   Quote
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the message quote.</p>
@@ -252,7 +252,7 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IQuote Quote { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IQuote? Quote { get; }</code></pre>
   </div>
 
 
@@ -280,8 +280,8 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
   <a id="Kook_IUserMessage_ModifyAsync_" data-uid="Kook.IUserMessage.ModifyAsync*"></a>
 
   <h3 id="Kook_IUserMessage_ModifyAsync_System_Action_Kook_MessageProperties__Kook_RequestOptions_" data-uid="Kook.IUserMessage.ModifyAsync(System.Action{Kook.MessageProperties},Kook.RequestOptions)">
-  ModifyAsync(Action&lt;MessageProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  ModifyAsync(Action&lt;MessageProperties&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Modifies this message.</p>
@@ -289,7 +289,7 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task ModifyAsync(Action&lt;MessageProperties&gt; func, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task ModifyAsync(Action&lt;MessageProperties&gt; func, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -327,7 +327,7 @@ method and what properties are available, please refer to <a class="xref" href="
 
   <h3 id="Kook_IUserMessage_Resolve_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_" data-uid="Kook.IUserMessage.Resolve(Kook.TagHandling,Kook.TagHandling,Kook.TagHandling,Kook.TagHandling,Kook.TagHandling)">
   Resolve(TagHandling, TagHandling, TagHandling, TagHandling, TagHandling)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Transforms this message's text into a human-readable form by resolving its tags.</p>
@@ -377,7 +377,7 @@ method and what properties are available, please refer to <a class="xref" href="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

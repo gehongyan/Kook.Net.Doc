@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="An element builder to build a PlainTextElement."><meta property="og:title" content="Class PlainTextElementBuilder | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_PlainTextElementBuilder" data-uid="Kook.PlainTextElementBuilder" class="text-break">
-Class PlainTextElementBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class PlainTextElementBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PlainTextElementBuilder : IElementBuilder, IEquatable&lt;PlainTextElementBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class PlainTextElementBuilder : IElementBuilder, IEquatable&lt;PlainTextElementBuilder&gt;, IEquatable&lt;IElementBuilder&gt;</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
     <dd>
       <div><a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>&gt;</div>
     </dd>
   </dl>
 
@@ -158,7 +159,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_PlainTextElementBuilder__ctor" data-uid="Kook.PlainTextElementBuilder.#ctor">
   PlainTextElementBuilder()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> class.</p>
@@ -184,8 +185,8 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
   <a id="Kook_PlainTextElementBuilder__ctor_" data-uid="Kook.PlainTextElementBuilder.#ctor*"></a>
 
   <h3 id="Kook_PlainTextElementBuilder__ctor_System_String_System_Boolean_" data-uid="Kook.PlainTextElementBuilder.#ctor(System.String,System.Boolean)">
-  PlainTextElementBuilder(string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  PlainTextElementBuilder(string?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> class.</p>
@@ -193,7 +194,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlainTextElementBuilder(string content, bool emoji = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public PlainTextElementBuilder(string? content, bool emoji = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -224,7 +225,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_PlainTextElementBuilder_MaxPlainTextLength" data-uid="Kook.PlainTextElementBuilder.MaxPlainTextLength">
   MaxPlainTextLength
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the maximum plain text length allowed by Kook.</p>
@@ -261,7 +262,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_PlainTextElementBuilder_Content" data-uid="Kook.PlainTextElementBuilder.Content">
   Content
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the content of a <a class="xref" href="Kook.PlainTextElement.html">PlainTextElement</a>.</p>
@@ -269,7 +270,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Content { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Content { get; set; }</code></pre>
   </div>
 
 
@@ -287,15 +288,6 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The <code class="paramref">value</code> cannot be null.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The length of <code class="paramref">value</code> is greater than <a class="xref" href="Kook.PlainTextElementBuilder.html#Kook_PlainTextElementBuilder_MaxPlainTextLength">MaxPlainTextLength</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -303,7 +295,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_PlainTextElementBuilder_Emoji" data-uid="Kook.PlainTextElementBuilder.Emoji">
   Emoji
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether the shortcuts should be translated into emojis.</p>
@@ -338,7 +330,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_PlainTextElementBuilder_Type" data-uid="Kook.PlainTextElementBuilder.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the type of the element that this builder builds.</p>
@@ -375,7 +367,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_PlainTextElementBuilder_Build" data-uid="Kook.PlainTextElementBuilder.Build">
   Build()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Builds the <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> into a <a class="xref" href="Kook.PlainTextElement.html">PlainTextElement</a>.</p>
@@ -401,14 +393,23 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.PlainTextElementBuilder.html#Kook_PlainTextElementBuilder_Content">Content</a> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The length of the <a class="xref" href="Kook.PlainTextElementBuilder.html#Kook_PlainTextElementBuilder_Content">Content</a> is greater than <a class="xref" href="Kook.PlainTextElementBuilder.html#Kook_PlainTextElementBuilder_MaxPlainTextLength">MaxPlainTextLength</a>.</p>
+</dd>
+  </dl>
 
 
 
   <a id="Kook_PlainTextElementBuilder_Equals_" data-uid="Kook.PlainTextElementBuilder.Equals*"></a>
 
   <h3 id="Kook_PlainTextElementBuilder_Equals_Kook_PlainTextElementBuilder_" data-uid="Kook.PlainTextElementBuilder.Equals(Kook.PlainTextElementBuilder)">
-  Equals(PlainTextElementBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  Equals(PlainTextElementBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L160"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> is equal to the current <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a>.</p>
@@ -416,7 +417,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(PlainTextElementBuilder plainTextElementBuilder)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(PlainTextElementBuilder? plainTextElementBuilder)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -446,8 +447,8 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
   <a id="Kook_PlainTextElementBuilder_Equals_" data-uid="Kook.PlainTextElementBuilder.Equals*"></a>
 
   <h3 id="Kook_PlainTextElementBuilder_Equals_System_Object_" data-uid="Kook.PlainTextElementBuilder.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> is equal to the current <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a>.</p>
@@ -455,7 +456,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -485,7 +486,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_PlainTextElementBuilder_GetHashCode" data-uid="Kook.PlainTextElementBuilder.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -518,7 +519,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_PlainTextElementBuilder_WithContent_System_String_" data-uid="Kook.PlainTextElementBuilder.WithContent(System.String)">
   WithContent(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the content of a <a class="xref" href="Kook.PlainTextElement.html">PlainTextElement</a>.</p>
@@ -550,15 +551,6 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The <code class="paramref">content</code> cannot be null.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The length of <code class="paramref">content</code> is greater than <a class="xref" href="Kook.PlainTextElementBuilder.html#Kook_PlainTextElementBuilder_MaxPlainTextLength">MaxPlainTextLength</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -566,7 +558,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_PlainTextElementBuilder_WithEmoji_System_Boolean_" data-uid="Kook.PlainTextElementBuilder.WithEmoji(System.Boolean)">
   WithEmoji(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets whether the shortcuts should be translated into emojis.</p>
@@ -610,8 +602,8 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
   <a id="Kook_PlainTextElementBuilder_op_Equality_" data-uid="Kook.PlainTextElementBuilder.op_Equality*"></a>
 
   <h3 id="Kook_PlainTextElementBuilder_op_Equality_Kook_PlainTextElementBuilder_Kook_PlainTextElementBuilder_" data-uid="Kook.PlainTextElementBuilder.op_Equality(Kook.PlainTextElementBuilder,Kook.PlainTextElementBuilder)">
-  operator ==(PlainTextElementBuilder, PlainTextElementBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  operator ==(PlainTextElementBuilder?, PlainTextElementBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> is equal to the current <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a>.</p>
@@ -619,7 +611,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(PlainTextElementBuilder left, PlainTextElementBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator ==(PlainTextElementBuilder? left, PlainTextElementBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -651,7 +643,7 @@ Class PlainTextElementBuilder  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_PlainTextElementBuilder_op_Implicit_System_String__Kook_PlainTextElementBuilder" data-uid="Kook.PlainTextElementBuilder.op_Implicit(System.String)~Kook.PlainTextElementBuilder">
   implicit operator PlainTextElementBuilder(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initialized a new instance of the <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> class
@@ -684,23 +676,14 @@ with the specified content.</p>
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The <code class="paramref">content</code> cannot be null.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The length of <code class="paramref">content</code> is greater than <a class="xref" href="Kook.PlainTextElementBuilder.html#Kook_PlainTextElementBuilder_MaxPlainTextLength">MaxPlainTextLength</a>.</p>
-</dd>
-  </dl>
 
 
 
   <a id="Kook_PlainTextElementBuilder_op_Inequality_" data-uid="Kook.PlainTextElementBuilder.op_Inequality*"></a>
 
   <h3 id="Kook_PlainTextElementBuilder_op_Inequality_Kook_PlainTextElementBuilder_Kook_PlainTextElementBuilder_" data-uid="Kook.PlainTextElementBuilder.op_Inequality(Kook.PlainTextElementBuilder,Kook.PlainTextElementBuilder)">
-  operator !=(PlainTextElementBuilder, PlainTextElementBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  operator !=(PlainTextElementBuilder?, PlainTextElementBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> is not equal to the current <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a>.</p>
@@ -708,7 +691,7 @@ with the specified content.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(PlainTextElementBuilder left, PlainTextElementBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator !=(PlainTextElementBuilder? left, PlainTextElementBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -740,7 +723,7 @@ with the specified content.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/PlainTextElementBuilder.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

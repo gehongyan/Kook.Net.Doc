@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a generic WebSocket-based channel that can send and receive messages."><meta property="og:title" content="Interface ISocketMessageChannel | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_WebSocket_ISocketMessageChannel" data-uid="Kook.WebSocket.ISocketMessageChannel" class="text-break">
-Interface ISocketMessageChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface ISocketMessageChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -190,7 +190,7 @@ Interface ISocketMessageChannel  <a class="header-action link-secondary" title="
 
   <h3 id="Kook_WebSocket_ISocketMessageChannel_CachedMessages" data-uid="Kook.WebSocket.ISocketMessageChannel.CachedMessages">
   CachedMessages
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets all messages in this channel's cache.</p>
@@ -227,7 +227,7 @@ Interface ISocketMessageChannel  <a class="header-action link-secondary" title="
 
   <h3 id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessage_System_Guid_" data-uid="Kook.WebSocket.ISocketMessageChannel.GetCachedMessage(System.Guid)">
   GetCachedMessage(Guid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a cached message from this channel.</p>
@@ -235,7 +235,7 @@ Interface ISocketMessageChannel  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">SocketMessage GetCachedMessage(Guid id)</code></pre>
+    <pre><code class="lang-csharp hljs">SocketMessage? GetCachedMessage(Guid id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -261,14 +261,14 @@ enabled.</p>
 
   <h4 class="section" id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessage_System_Guid__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-    this method will always return <code>null</code>. Please refer to
-    <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
-</p></div>
+        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+        this method will always return <code>null</code>. Please refer to
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+    </p></div>
 <p>
-    This method retrieves the message from the local WebSocket cache and does not send any additional
-    request to Kook. This message may be a message that has been deleted.
-</p>
+        This method retrieves the message from the local WebSocket cache and does not send any additional
+        request to Kook. This message may be a message that has been deleted.
+    </p>
 </div>
 
 
@@ -278,7 +278,7 @@ enabled.</p>
 
   <h3 id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.ISocketMessageChannel.GetCachedMessages(Kook.IMessage,Kook.Direction,System.Int32)">
   GetCachedMessages(IMessage, Direction, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the last N cached messages starting from a certain message in this message channel.</p>
@@ -317,16 +317,16 @@ enabled.</p>
 
   <h4 class="section" id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-    this method will always return an empty collection. Please refer to
-    <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
-</p></div>
+        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+        this method will always return an empty collection. Please refer to
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+    </p></div>
 <p>
-    This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-    request to Kook. This read-only collection may include messages that have been deleted. The
-    maximum number of messages that can be retrieved from this method depends on the
-    <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-</p>
+        This method retrieves the message(s) from the local WebSocket cache and does not send any additional
+        request to Kook. This read-only collection may include messages that have been deleted. The
+        maximum number of messages that can be retrieved from this method depends on the
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
+    </p>
 </div>
 
 
@@ -336,7 +336,7 @@ enabled.</p>
 
   <h3 id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Guid_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.ISocketMessageChannel.GetCachedMessages(System.Guid,Kook.Direction,System.Int32)">
   GetCachedMessages(Guid, Direction, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the last N cached messages starting from a certain message in this message channel.</p>
@@ -375,16 +375,16 @@ enabled.</p>
 
   <h4 class="section" id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Guid_Kook_Direction_System_Int32__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-    this method will always return an empty collection. Please refer to
-    <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
-</p></div>
+        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+        this method will always return an empty collection. Please refer to
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+    </p></div>
 <p>
-    This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-    request to Kook. This read-only collection may include messages that have been deleted. The
-    maximum number of messages that can be retrieved from this method depends on the
-    <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-</p>
+        This method retrieves the message(s) from the local WebSocket cache and does not send any additional
+        request to Kook. This read-only collection may include messages that have been deleted. The
+        maximum number of messages that can be retrieved from this method depends on the
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
+    </p>
 </div>
 
 
@@ -394,7 +394,7 @@ enabled.</p>
 
   <h3 id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Int32_" data-uid="Kook.WebSocket.ISocketMessageChannel.GetCachedMessages(System.Int32)">
   GetCachedMessages(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the last N cached messages from this message channel.</p>
@@ -427,16 +427,16 @@ enabled.</p>
 
   <h4 class="section" id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Int32__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-    this method will always return an empty collection. Please refer to
-    <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
-</p></div>
+        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
+        this method will always return an empty collection. Please refer to
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+    </p></div>
 <p>
-    This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-    request to Kook. This read-only collection may include messages that have been deleted. The
-    maximum number of messages that can be retrieved from this method depends on the
-    <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-</p>
+        This method retrieves the message(s) from the local WebSocket cache and does not send any additional
+        request to Kook. This read-only collection may include messages that have been deleted. The
+        maximum number of messages that can be retrieved from this method depends on the
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
+    </p>
 </div>
 
 
@@ -446,7 +446,7 @@ enabled.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a WebSocket-based guild object."><meta property="og:title" content="Class SocketGuild | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_WebSocket_SocketGuild" data-uid="Kook.WebSocket.SocketGuild" class="text-break">
-Class SocketGuild  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L22"><i class="bi bi-code-slash"></i></a>
+Class SocketGuild  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -158,10 +158,10 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="Kook.WebSocket.SocketGuildExperimentalExtensions.html#Kook_WebSocket_SocketGuildExperimentalExtensions_DeleteAsync_Kook_WebSocket_SocketGuild_Kook_RequestOptions_">SocketGuildExperimentalExtensions.DeleteAsync(SocketGuild, RequestOptions)</a>
+      <a class="xref" href="Kook.WebSocket.SocketGuildExperimentalExtensions.html#Kook_WebSocket_SocketGuildExperimentalExtensions_DeleteAsync_Kook_WebSocket_SocketGuild_Kook_RequestOptions_">SocketGuildExperimentalExtensions.DeleteAsync(SocketGuild, RequestOptions?)</a>
   </div>
   <div>
-      <a class="xref" href="Kook.WebSocket.SocketGuildExperimentalExtensions.html#Kook_WebSocket_SocketGuildExperimentalExtensions_ModifyAsync_Kook_WebSocket_SocketGuild_System_Action_Kook_GuildProperties__Kook_RequestOptions_">SocketGuildExperimentalExtensions.ModifyAsync(SocketGuild, Action&lt;GuildProperties&gt;, RequestOptions)</a>
+      <a class="xref" href="Kook.WebSocket.SocketGuildExperimentalExtensions.html#Kook_WebSocket_SocketGuildExperimentalExtensions_ModifyAsync_Kook_WebSocket_SocketGuild_System_Action_Kook_GuildProperties__Kook_RequestOptions_">SocketGuildExperimentalExtensions.ModifyAsync(SocketGuild, Action&lt;GuildProperties&gt;, RequestOptions?)</a>
   </div>
   </dd></dl>
 
@@ -177,7 +177,7 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_WebSocket_SocketGuild_AudioClient" data-uid="Kook.WebSocket.SocketGuild.AudioClient">
   AudioClient
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a> associated with this guild.</p>
@@ -185,7 +185,7 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAudioClient AudioClient { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IAudioClient? AudioClient { get; }</code></pre>
   </div>
 
 
@@ -209,7 +209,7 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_WebSocket_SocketGuild_AutoDeleteTime" data-uid="Kook.WebSocket.SocketGuild.AutoDeleteTime">
   AutoDeleteTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>TODO: To be documented.</p>
@@ -217,7 +217,7 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string AutoDeleteTime { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? AutoDeleteTime { get; }</code></pre>
   </div>
 
 
@@ -241,7 +241,7 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_WebSocket_SocketGuild_Banner" data-uid="Kook.WebSocket.SocketGuild.Banner">
   Banner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the URL of this guild's banner image.</p>
@@ -274,7 +274,7 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_WebSocket_SocketGuild_BoostLevel" data-uid="Kook.WebSocket.SocketGuild.BoostLevel">
   BoostLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the level of guild boosting in this guild.</p>
@@ -307,7 +307,7 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_WebSocket_SocketGuild_BoostSubscriptionCount" data-uid="Kook.WebSocket.SocketGuild.BoostSubscriptionCount">
   BoostSubscriptionCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of boost subscribers of this guild.</p>
@@ -340,7 +340,7 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_WebSocket_SocketGuild_BoostSubscriptions" data-uid="Kook.WebSocket.SocketGuild.BoostSubscriptions">
   BoostSubscriptions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a dictionary of all boost subscriptions for this guild.</p>
@@ -368,15 +368,15 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_BoostSubscriptions_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    <p>
-        Only when <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</a> is set to <code>true</code>
-        will this property be populated upon startup. Due to the lack of event support for boost subscriptions,
-        this property will never be updated. The changes of <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a> will trigger the update
-        of this property, but KOOK gateway will not publish this event resulting from the changes of total boost subscription
-        count. To fetch the latest boost subscription data, use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions)</a> or
-        <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a> upon a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to
-        manually download the latest boost subscription data, or <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_GetBoostSubscriptionsAsync_Kook_RequestOptions_">GetBoostSubscriptionsAsync(RequestOptions)</a>.
-    </p>
+  <p>
+            Only when <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</a> is set to <code>true</code>
+            will this property be populated upon startup. Due to the lack of event support for boost subscriptions,
+            this property will never be updated. The changes of <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a> will trigger the update
+            of this property, but KOOK gateway will not publish this event resulting from the changes of total boost subscription
+            count. To fetch the latest boost subscription data, use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions?)</a> or
+            <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)</a> upon a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to
+            manually download the latest boost subscription data, or <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_GetBoostSubscriptionsAsync_Kook_RequestOptions_">GetBoostSubscriptionsAsync(RequestOptions?)</a>.
+        </p>
 </div>
 </div>
 
@@ -385,7 +385,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
     <dt>See Also</dt>
     <dd>
     <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_ValidBoostSubscriptions">ValidBoostSubscriptions</a></div>
-    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions)</a></div>
+    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions?)</a></div>
     <div><a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;, <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
     </dd>
   </dl>
@@ -395,7 +395,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_BufferBoostSubscriptionCount" data-uid="Kook.WebSocket.SocketGuild.BufferBoostSubscriptionCount">
   BufferBoostSubscriptionCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of boost subscribers who activates buffer of this guild.</p>
@@ -428,7 +428,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CategoryChannels" data-uid="Kook.WebSocket.SocketGuild.CategoryChannels">
   CategoryChannels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all stage channels in this guild.</p>
@@ -461,7 +461,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_Channels" data-uid="Kook.WebSocket.SocketGuild.Channels">
   Channels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all channels in this guild.</p>
@@ -494,7 +494,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CurrentUser" data-uid="Kook.WebSocket.SocketGuild.CurrentUser">
   CurrentUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the current logged-in user.</p>
@@ -502,7 +502,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SocketGuildUser CurrentUser { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public SocketGuildUser? CurrentUser { get; }</code></pre>
   </div>
 
 
@@ -526,7 +526,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_DefaultChannel" data-uid="Kook.WebSocket.SocketGuild.DefaultChannel">
   DefaultChannel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default text channel for this guild.</p>
@@ -534,7 +534,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SocketTextChannel DefaultChannel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public SocketTextChannel? DefaultChannel { get; }</code></pre>
   </div>
 
 
@@ -562,7 +562,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_DefaultChannelId" data-uid="Kook.WebSocket.SocketGuild.DefaultChannelId">
   DefaultChannelId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default channel ID for this guild.</p>
@@ -595,7 +595,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_DownloadedMemberCount" data-uid="Kook.WebSocket.SocketGuild.DownloadedMemberCount">
   DownloadedMemberCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of members downloaded to the local guild cache.</p>
@@ -627,7 +627,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_Emotes" data-uid="Kook.WebSocket.SocketGuild.Emotes">
   Emotes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all custom emotes for this guild.</p>
@@ -666,7 +666,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_EveryoneRole" data-uid="Kook.WebSocket.SocketGuild.EveryoneRole">
   EveryoneRole
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L166"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the built-in role containing all users in this guild.</p>
@@ -699,7 +699,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_Features" data-uid="Kook.WebSocket.SocketGuild.Features">
   Features
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the features of this guild.</p>
@@ -732,7 +732,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_HasAllMembers" data-uid="Kook.WebSocket.SocketGuild.HasAllMembers">
   HasAllMembers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the client has all the members downloaded to the local guild cache.</p>
@@ -758,9 +758,9 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_HasAllMembers_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    If <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_MemberCount">MemberCount</a> is <code>null</code>, this property will always return <code>null</code>,
-    which means that the client is unable to determine whether all the members are downloaded or not.
-</p></div>
+        If <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_MemberCount">MemberCount</a> is <code>null</code>, this property will always return <code>null</code>,
+        which means that the client is unable to determine whether all the members are downloaded or not.
+    </p></div>
 </div>
 
 
@@ -770,7 +770,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_Icon" data-uid="Kook.WebSocket.SocketGuild.Icon">
   Icon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the URL of this guild's icon.</p>
@@ -803,7 +803,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_IsConnected" data-uid="Kook.WebSocket.SocketGuild.IsConnected">
   IsConnected
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether the client is connected to this guild.</p>
@@ -835,7 +835,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_IsOpenEnabled" data-uid="Kook.WebSocket.SocketGuild.IsOpenEnabled">
   IsOpenEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this guild is public.</p>
@@ -868,7 +868,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_MaxBitrate" data-uid="Kook.WebSocket.SocketGuild.MaxBitrate">
   MaxBitrate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the max bitrate for voice channels in this guild.</p>
@@ -901,7 +901,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_MaxUploadLimit" data-uid="Kook.WebSocket.SocketGuild.MaxUploadLimit">
   MaxUploadLimit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the upload limit in bytes for this guild. This number is dependent on the guild's boost status.</p>
@@ -933,7 +933,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_MemberCount" data-uid="Kook.WebSocket.SocketGuild.MemberCount">
   MemberCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of members.</p>
@@ -959,21 +959,17 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_MemberCount_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This property retrieves the number of members returned by Kook.</p>
-<div class="TIP"><h5>tip</h5><p>
-<p>
+<div class="TIP"><h5>tip</h5><p><p>
     Due to how this property is returned by Kook instead of relying on the WebSocket cache, the
     number here is the most accurate in terms of counting the number of users within this guild.
-</p>
-<p>
+</p><p>
     Use this instead of enumerating the count of the
     <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_Users">Users</a> collection, as you may see discrepancy
     between that and this property.
-</p>
-</div>
-<div class="WARNING"><h5>warning</h5><p>
+</p></div><div class="WARNING"><h5>warning</h5><p>
     Only when <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">AlwaysDownloadUsers</a> is set to <code>true</code>
     will this property be populated upon startup. Otherwise, this property will be <code>null</code>,
-    and will be populated when <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_">DownloadUsersAsync(RequestOptions)</a> is called.
+    and will be populated when <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_">DownloadUsersAsync(RequestOptions?)</a> is called.
 </p></div>
 </div>
 
@@ -984,7 +980,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_Name" data-uid="Kook.WebSocket.SocketGuild.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of this guild.</p>
@@ -1017,7 +1013,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_NotifyType" data-uid="Kook.WebSocket.SocketGuild.NotifyType">
   NotifyType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default notification type for this guild.</p>
@@ -1050,7 +1046,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_OpenId" data-uid="Kook.WebSocket.SocketGuild.OpenId">
   OpenId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the open ID for this guild.</p>
@@ -1084,7 +1080,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Owner" data-uid="Kook.WebSocket.SocketGuild.Owner">
   Owner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the user that owns this guild.</p>
@@ -1092,7 +1088,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SocketGuildUser Owner { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public SocketGuildUser? Owner { get; }</code></pre>
   </div>
 
 
@@ -1116,7 +1112,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_OwnerId" data-uid="Kook.WebSocket.SocketGuild.OwnerId">
   OwnerId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the ID of the user that owns this guild.</p>
@@ -1149,7 +1145,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_RecommendInfo" data-uid="Kook.WebSocket.SocketGuild.RecommendInfo">
   RecommendInfo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the recommendation information for this guild.</p>
@@ -1157,7 +1153,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RecommendInfo RecommendInfo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RecommendInfo? RecommendInfo { get; }</code></pre>
   </div>
 
 
@@ -1183,7 +1179,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Region" data-uid="Kook.WebSocket.SocketGuild.Region">
   Region
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default voice region for this guild.</p>
@@ -1216,7 +1212,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Roles" data-uid="Kook.WebSocket.SocketGuild.Roles">
   Roles
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L330"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all roles in this guild.</p>
@@ -1243,11 +1239,11 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_Roles_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    Due to the lack of event args which should contains the reordered roles data
-    when roles are reordered, this property may not be completely accurate.
-    To ensure the most accurate results, it is recommended to
-    call <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_UpdateAsync_Kook_RequestOptions_">UpdateAsync(RequestOptions)</a> before this property is used.
-</p></div>
+        Due to the lack of event args which should contains the reordered roles data
+        when roles are reordered, this property may not be completely accurate.
+        To ensure the most accurate results, it is recommended to
+        call <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_UpdateAsync_Kook_RequestOptions_">UpdateAsync(RequestOptions?)</a> before this property is used.
+    </p></div>
 </div>
 
 
@@ -1257,7 +1253,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Status" data-uid="Kook.WebSocket.SocketGuild.Status">
   Status
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>TODO: To be documented.</p>
@@ -1289,7 +1285,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_TextChannels" data-uid="Kook.WebSocket.SocketGuild.TextChannels">
   TextChannels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all text channels in this guild.</p>
@@ -1322,7 +1318,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Topic" data-uid="Kook.WebSocket.SocketGuild.Topic">
   Topic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the topic for the guild.</p>
@@ -1355,7 +1351,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Users" data-uid="Kook.WebSocket.SocketGuild.Users">
   Users
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L314"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of users in this guild.</p>
@@ -1382,25 +1378,22 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_Users_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This property retrieves all users found within this guild.</p>
-<div class="WARNING"><h5>warning</h5><p>
-    <p>
+<div class="WARNING"><h5>warning</h5><p><p>
         This property may not always return all the members for large guilds (i.e. guilds containing
         100+ users). If you are simply looking to get the number of users present in this guild,
         consider using <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_MemberCount">MemberCount</a> instead.
-    </p>
-    <p>
+    </p><p>
         Otherwise, you may need to enable <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">AlwaysDownloadUsers</a> to fetch
-        the full user list upon startup, or use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_">DownloadUsersAsync(RequestOptions)</a> to manually download
+        the full user list upon startup, or use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_">DownloadUsersAsync(RequestOptions?)</a> to manually download
         the users.
-    </p>
-</div>
+    </p></div>
 </div>
 
 
   <dl class="typelist seealso">
     <dt>See Also</dt>
     <dd>
-    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_">DownloadUsersAsync(RequestOptions)</a></div>
+    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_">DownloadUsersAsync(RequestOptions?)</a></div>
     <div><a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadUsersAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadUsersAsync</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;, <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
     </dd>
   </dl>
@@ -1410,7 +1403,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_ValidBoostSubscriptions" data-uid="Kook.WebSocket.SocketGuild.ValidBoostSubscriptions">
   ValidBoostSubscriptions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a dictionary of all boost subscriptions which have not expired for this guild.</p>
@@ -1438,15 +1431,15 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_ValidBoostSubscriptions_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    <p>
-        Only when <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</a> is set to <code>true</code>
-        will this property be populated upon startup. Due to the lack of event support for boost subscriptions,
-        this property will never be updated. The changes of <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a> will trigger the update
-        of this property, but KOOK gateway will not publish this event resulting from the changes of total boost subscription
-        count. To fetch the latest boost subscription data, use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions)</a> or
-        <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a> upon a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to
-        manually download the latest boost subscription data, or <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_GetBoostSubscriptionsAsync_Kook_RequestOptions_">GetBoostSubscriptionsAsync(RequestOptions)</a>.
-    </p>
+  <p>
+            Only when <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</a> is set to <code>true</code>
+            will this property be populated upon startup. Due to the lack of event support for boost subscriptions,
+            this property will never be updated. The changes of <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a> will trigger the update
+            of this property, but KOOK gateway will not publish this event resulting from the changes of total boost subscription
+            count. To fetch the latest boost subscription data, use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions?)</a> or
+            <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)</a> upon a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to
+            manually download the latest boost subscription data, or <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_GetBoostSubscriptionsAsync_Kook_RequestOptions_">GetBoostSubscriptionsAsync(RequestOptions?)</a>.
+        </p>
 </div>
 </div>
 
@@ -1455,7 +1448,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
     <dt>See Also</dt>
     <dd>
     <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptions">BoostSubscriptions</a></div>
-    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions)</a></div>
+    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions?)</a></div>
     <div><a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;, <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
     </dd>
   </dl>
@@ -1465,7 +1458,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_VoiceChannels" data-uid="Kook.WebSocket.SocketGuild.VoiceChannels">
   VoiceChannels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all voice channels in this guild.</p>
@@ -1498,7 +1491,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_WelcomeChannel" data-uid="Kook.WebSocket.SocketGuild.WelcomeChannel">
   WelcomeChannel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the welcome text channel for this guild.</p>
@@ -1506,7 +1499,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SocketTextChannel WelcomeChannel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public SocketTextChannel? WelcomeChannel { get; }</code></pre>
   </div>
 
 
@@ -1534,7 +1527,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_WelcomeChannelId" data-uid="Kook.WebSocket.SocketGuild.WelcomeChannelId">
   WelcomeChannelId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the welcome channel ID for this guild.</p>
@@ -1570,8 +1563,8 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <a id="Kook_WebSocket_SocketGuild_AddBanAsync_" data-uid="Kook.WebSocket.SocketGuild.AddBanAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_AddBanAsync_Kook_IUser_System_Int32_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.AddBanAsync(Kook.IUser,System.Int32,System.String,Kook.RequestOptions)">
-  AddBanAsync(IUser, int, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L543"><i class="bi bi-code-slash"></i></a>
+  AddBanAsync(IUser, int, string?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L541"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Bans the user from this guild and optionally prunes their recent messages.</p>
@@ -1579,7 +1572,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task AddBanAsync(IUser user, int pruneDays = 0, string reason = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task AddBanAsync(IUser user, int pruneDays = 0, string? reason = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1624,8 +1617,8 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <a id="Kook_WebSocket_SocketGuild_AddBanAsync_" data-uid="Kook.WebSocket.SocketGuild.AddBanAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_AddBanAsync_System_UInt64_System_Int32_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.AddBanAsync(System.UInt64,System.Int32,System.String,Kook.RequestOptions)">
-  AddBanAsync(ulong, int, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  AddBanAsync(ulong, int, string?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L545"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Bans the user from this guild and optionally prunes their recent messages.</p>
@@ -1633,7 +1626,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task AddBanAsync(ulong userId, int pruneDays = 0, string reason = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task AddBanAsync(ulong userId, int pruneDays = 0, string? reason = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1678,8 +1671,8 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <a id="Kook_WebSocket_SocketGuild_CreateCategoryChannelAsync_" data-uid="Kook.WebSocket.SocketGuild.CreateCategoryChannelAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateCategoryChannelAsync_System_String_System_Action_Kook_CreateCategoryChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateCategoryChannelAsync(System.String,System.Action{Kook.CreateCategoryChannelProperties},Kook.RequestOptions)">
-  CreateCategoryChannelAsync(string, Action&lt;CreateCategoryChannelProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L646"><i class="bi bi-code-slash"></i></a>
+  CreateCategoryChannelAsync(string, Action&lt;CreateCategoryChannelProperties&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L636"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new channel category in this guild.</p>
@@ -1687,7 +1680,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestCategoryChannel&gt; CreateCategoryChannelAsync(string name, Action&lt;CreateCategoryChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestCategoryChannel&gt; CreateCategoryChannelAsync(string name, Action&lt;CreateCategoryChannelProperties&gt;? func = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1730,8 +1723,8 @@ category channel.</p>
   <a id="Kook_WebSocket_SocketGuild_CreateEmoteAsync_" data-uid="Kook.WebSocket.SocketGuild.CreateEmoteAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateEmoteAsync_System_String_Kook_Image_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateEmoteAsync(System.String,Kook.Image,Kook.RequestOptions)">
-  CreateEmoteAsync(string, Image, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L975"><i class="bi bi-code-slash"></i></a>
+  CreateEmoteAsync(string, Image, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L931"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> in this guild.</p>
@@ -1739,7 +1732,7 @@ category channel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;GuildEmote&gt; CreateEmoteAsync(string name, Image image, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;GuildEmote&gt; CreateEmoteAsync(string name, Image image, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1775,8 +1768,8 @@ category channel.</p>
   <a id="Kook_WebSocket_SocketGuild_CreateInviteAsync_" data-uid="Kook.WebSocket.SocketGuild.CreateInviteAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateInviteAsync(Kook.InviteMaxAge,Kook.InviteMaxUses,Kook.RequestOptions)">
-  CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L1000"><i class="bi bi-code-slash"></i></a>
+  CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L957"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new invite to this channel.</p>
@@ -1784,7 +1777,7 @@ category channel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(InviteMaxAge maxAge = InviteMaxAge._604800, InviteMaxUses maxUses = InviteMaxUses.Unlimited, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(InviteMaxAge maxAge = InviteMaxAge._604800, InviteMaxUses maxUses = InviteMaxUses.Unlimited, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1821,8 +1814,8 @@ metadata object containing information for the created invite.</p>
   <a id="Kook_WebSocket_SocketGuild_CreateInviteAsync_" data-uid="Kook.WebSocket.SocketGuild.CreateInviteAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},Kook.RequestOptions)">
-  CreateInviteAsync(int?, int?, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L996"><i class="bi bi-code-slash"></i></a>
+  CreateInviteAsync(int?, int?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L952"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new invite to this channel.</p>
@@ -1830,7 +1823,7 @@ metadata object containing information for the created invite.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(int? maxAge = 604800, int? maxUses = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(int? maxAge = 604800, int? maxUses = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1867,8 +1860,8 @@ metadata object containing information for the created invite.</p>
   <a id="Kook_WebSocket_SocketGuild_CreateRoleAsync_" data-uid="Kook.WebSocket.SocketGuild.CreateRoleAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateRoleAsync_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateRoleAsync(System.String,Kook.RequestOptions)">
-  CreateRoleAsync(string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L729"><i class="bi bi-code-slash"></i></a>
+  CreateRoleAsync(string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L713"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new role with the provided name.</p>
@@ -1876,7 +1869,7 @@ metadata object containing information for the created invite.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestRole&gt; CreateRoleAsync(string name, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestRole&gt; CreateRoleAsync(string name, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1916,8 +1909,8 @@ role.</p>
   <a id="Kook_WebSocket_SocketGuild_CreateTextChannelAsync_" data-uid="Kook.WebSocket.SocketGuild.CreateTextChannelAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateTextChannelAsync_System_String_System_Action_Kook_CreateTextChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateTextChannelAsync(System.String,System.Action{Kook.CreateTextChannelProperties},Kook.RequestOptions)">
-  CreateTextChannelAsync(string, Action&lt;CreateTextChannelProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L617"><i class="bi bi-code-slash"></i></a>
+  CreateTextChannelAsync(string, Action&lt;CreateTextChannelProperties&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L606"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new text channel in this guild.</p>
@@ -1925,7 +1918,7 @@ role.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestTextChannel&gt; CreateTextChannelAsync(string name, Action&lt;CreateTextChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestTextChannel&gt; CreateTextChannelAsync(string name, Action&lt;CreateTextChannelProperties&gt;? func = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1962,8 +1955,8 @@ text channel.</p>
   <a id="Kook_WebSocket_SocketGuild_CreateVoiceChannelAsync_" data-uid="Kook.WebSocket.SocketGuild.CreateVoiceChannelAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateVoiceChannelAsync_System_String_System_Action_Kook_CreateVoiceChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateVoiceChannelAsync(System.String,System.Action{Kook.CreateVoiceChannelProperties},Kook.RequestOptions)">
-  CreateVoiceChannelAsync(string, Action&lt;CreateVoiceChannelProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L631"><i class="bi bi-code-slash"></i></a>
+  CreateVoiceChannelAsync(string, Action&lt;CreateVoiceChannelProperties&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L621"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new voice channel in this guild.</p>
@@ -1971,7 +1964,7 @@ text channel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestVoiceChannel&gt; CreateVoiceChannelAsync(string name, Action&lt;CreateVoiceChannelProperties&gt; func = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestVoiceChannel&gt; CreateVoiceChannelAsync(string name, Action&lt;CreateVoiceChannelProperties&gt;? func = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2014,8 +2007,8 @@ voice channel.</p>
   <a id="Kook_WebSocket_SocketGuild_DeleteEmoteAsync_" data-uid="Kook.WebSocket.SocketGuild.DeleteEmoteAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_DeleteEmoteAsync_Kook_GuildEmote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.DeleteEmoteAsync(Kook.GuildEmote,Kook.RequestOptions)">
-  DeleteEmoteAsync(GuildEmote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L984"><i class="bi bi-code-slash"></i></a>
+  DeleteEmoteAsync(GuildEmote, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L940"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deletes an existing <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> from this guild.</p>
@@ -2023,7 +2016,7 @@ voice channel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DeleteEmoteAsync(GuildEmote emote, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DeleteEmoteAsync(GuildEmote emote, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2053,38 +2046,11 @@ voice channel.</p>
 
 
 
-  <a id="Kook_WebSocket_SocketGuild_Dispose_" data-uid="Kook.WebSocket.SocketGuild.Dispose*"></a>
-
-  <h3 id="Kook_WebSocket_SocketGuild_Dispose" data-uid="Kook.WebSocket.SocketGuild.Dispose">
-  Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L1166"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_" data-uid="Kook.WebSocket.SocketGuild.DownloadBoostSubscriptionsAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.DownloadBoostSubscriptionsAsync(Kook.RequestOptions)">
-  DownloadBoostSubscriptionsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L897"><i class="bi bi-code-slash"></i></a>
+  DownloadBoostSubscriptionsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L866"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads all boost subscriptions for this guild.</p>
@@ -2092,7 +2058,7 @@ voice channel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DownloadBoostSubscriptionsAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DownloadBoostSubscriptionsAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2127,8 +2093,8 @@ To download all boost subscriptions, the current user must has the
   <a id="Kook_WebSocket_SocketGuild_DownloadUsersAsync_" data-uid="Kook.WebSocket.SocketGuild.DownloadUsersAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.DownloadUsersAsync(Kook.RequestOptions)">
-  DownloadUsersAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L889"><i class="bi bi-code-slash"></i></a>
+  DownloadUsersAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L858"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads all users for this guild if the current list is incomplete.</p>
@@ -2136,7 +2102,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DownloadUsersAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DownloadUsersAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2169,8 +2135,8 @@ To download all boost subscriptions, the current user must has the
   <a id="Kook_WebSocket_SocketGuild_DownloadVoiceStatesAsync_" data-uid="Kook.WebSocket.SocketGuild.DownloadVoiceStatesAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_DownloadVoiceStatesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.DownloadVoiceStatesAsync(Kook.RequestOptions)">
-  DownloadVoiceStatesAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L893"><i class="bi bi-code-slash"></i></a>
+  DownloadVoiceStatesAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L862"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads all voice states for this guild.</p>
@@ -2178,7 +2144,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DownloadVoiceStatesAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DownloadVoiceStatesAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2211,8 +2177,8 @@ To download all boost subscriptions, the current user must has the
   <a id="Kook_WebSocket_SocketGuild_GetActiveBoostSubscriptionsAsync_" data-uid="Kook.WebSocket.SocketGuild.GetActiveBoostSubscriptionsAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetActiveBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetActiveBoostSubscriptionsAsync(Kook.RequestOptions)">
-  GetActiveBoostSubscriptionsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L522"><i class="bi bi-code-slash"></i></a>
+  GetActiveBoostSubscriptionsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L520"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets subscriptions which are not expired for this guild.</p>
@@ -2220,7 +2186,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;ImmutableDictionary&lt;IUser, IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt;&gt; GetActiveBoostSubscriptionsAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;ImmutableDictionary&lt;IUser, IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt;&gt; GetActiveBoostSubscriptionsAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2252,8 +2218,8 @@ each representing the subscriptions information.</p>
   <a id="Kook_WebSocket_SocketGuild_GetBadgeAsync_" data-uid="Kook.WebSocket.SocketGuild.GetBadgeAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetBadgeAsync_Kook_BadgeStyle_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetBadgeAsync(Kook.BadgeStyle,Kook.RequestOptions)">
-  GetBadgeAsync(BadgeStyle, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L1282"><i class="bi bi-code-slash"></i></a>
+  GetBadgeAsync(BadgeStyle, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L1241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a badge which is associated with this guild.</p>
@@ -2261,7 +2227,7 @@ each representing the subscriptions information.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; GetBadgeAsync(BadgeStyle style = BadgeStyle.GuildName, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; GetBadgeAsync(BadgeStyle style = BadgeStyle.GuildName, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2295,8 +2261,8 @@ associated with this guild.</p>
   <a id="Kook_WebSocket_SocketGuild_GetBanAsync_" data-uid="Kook.WebSocket.SocketGuild.GetBanAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetBanAsync_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetBanAsync(Kook.IUser,Kook.RequestOptions)">
-  GetBanAsync(IUser, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L535"><i class="bi bi-code-slash"></i></a>
+  GetBanAsync(IUser, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L533"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a ban object for a banned user.</p>
@@ -2304,7 +2270,7 @@ associated with this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestBan&gt; GetBanAsync(IUser user, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestBan?&gt; GetBanAsync(IUser user, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2338,8 +2304,8 @@ contains the user information and the reason for the ban; <code>null</code> if t
   <a id="Kook_WebSocket_SocketGuild_GetBanAsync_" data-uid="Kook.WebSocket.SocketGuild.GetBanAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetBanAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetBanAsync(System.UInt64,Kook.RequestOptions)">
-  GetBanAsync(ulong, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L539"><i class="bi bi-code-slash"></i></a>
+  GetBanAsync(ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L537"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a ban object for a banned user.</p>
@@ -2347,7 +2313,7 @@ contains the user information and the reason for the ban; <code>null</code> if t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RestBan&gt; GetBanAsync(ulong userId, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RestBan?&gt; GetBanAsync(ulong userId, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2381,8 +2347,8 @@ contains the user information and the reason for the ban; <code>null</code> if t
   <a id="Kook_WebSocket_SocketGuild_GetBansAsync_" data-uid="Kook.WebSocket.SocketGuild.GetBansAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetBansAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetBansAsync(Kook.RequestOptions)">
-  GetBansAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L531"><i class="bi bi-code-slash"></i></a>
+  GetBansAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L529"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all users banned in this guild.</p>
@@ -2390,7 +2356,7 @@ contains the user information and the reason for the ban; <code>null</code> if t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestBan&gt;&gt; GetBansAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;RestBan&gt;&gt; GetBansAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2422,8 +2388,8 @@ behind the ban.</p>
   <a id="Kook_WebSocket_SocketGuild_GetBoostSubscriptionsAsync_" data-uid="Kook.WebSocket.SocketGuild.GetBoostSubscriptionsAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetBoostSubscriptionsAsync(Kook.RequestOptions)">
-  GetBoostSubscriptionsAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L518"><i class="bi bi-code-slash"></i></a>
+  GetBoostSubscriptionsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L515"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets all subscriptions for this guild.</p>
@@ -2431,7 +2397,7 @@ behind the ban.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;ImmutableDictionary&lt;IUser, IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt;&gt; GetBoostSubscriptionsAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;ImmutableDictionary&lt;IUser, IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt;&gt; GetBoostSubscriptionsAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2463,7 +2429,7 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
 
   <h3 id="Kook_WebSocket_SocketGuild_GetCategoryChannel_System_UInt64_" data-uid="Kook.WebSocket.SocketGuild.GetCategoryChannel(System.UInt64)">
   GetCategoryChannel(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L604"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L594"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a category channel in this guild.</p>
@@ -2471,7 +2437,7 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SocketCategoryChannel GetCategoryChannel(ulong id)</code></pre>
+    <pre><code class="lang-csharp hljs">public SocketCategoryChannel? GetCategoryChannel(ulong id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2502,7 +2468,7 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
 
   <h3 id="Kook_WebSocket_SocketGuild_GetChannel_System_UInt64_" data-uid="Kook.WebSocket.SocketGuild.GetChannel(System.UInt64)">
   GetChannel(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L569"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L567"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a channel in this guild.</p>
@@ -2510,7 +2476,7 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SocketGuildChannel GetChannel(ulong id)</code></pre>
+    <pre><code class="lang-csharp hljs">public SocketGuildChannel? GetChannel(ulong id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2541,7 +2507,7 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
 
   <h3 id="Kook_WebSocket_SocketGuild_GetEmote_System_String_" data-uid="Kook.WebSocket.SocketGuild.GetEmote(System.String)">
   GetEmote(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L938"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L909"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a guild emoji in this guild.</p>
@@ -2549,7 +2515,7 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GuildEmote GetEmote(string id)</code></pre>
+    <pre><code class="lang-csharp hljs">public GuildEmote? GetEmote(string id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2579,8 +2545,8 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <a id="Kook_WebSocket_SocketGuild_GetEmoteAsync_" data-uid="Kook.WebSocket.SocketGuild.GetEmoteAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetEmoteAsync_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetEmoteAsync(System.String,Kook.RequestOptions)">
-  GetEmoteAsync(string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L971"><i class="bi bi-code-slash"></i></a>
+  GetEmoteAsync(string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L927"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a specific emote from this guild.</p>
@@ -2588,7 +2554,7 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;GuildEmote&gt; GetEmoteAsync(string id, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;GuildEmote?&gt; GetEmoteAsync(string id, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2622,8 +2588,8 @@ specified <code class="paramref">id</code>; <code>null</code> if none is found.<
   <a id="Kook_WebSocket_SocketGuild_GetEmotesAsync_" data-uid="Kook.WebSocket.SocketGuild.GetEmotesAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetEmotesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetEmotesAsync(Kook.RequestOptions)">
-  GetEmotesAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L967"><i class="bi bi-code-slash"></i></a>
+  GetEmotesAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L923"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of emotes from this guild.</p>
@@ -2631,7 +2597,7 @@ specified <code class="paramref">id</code>; <code>null</code> if none is found.<
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;GuildEmote&gt;&gt; GetEmotesAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;GuildEmote&gt;&gt; GetEmotesAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2662,8 +2628,8 @@ of emotes found within the guild.</p>
   <a id="Kook_WebSocket_SocketGuild_GetInvitesAsync_" data-uid="Kook.WebSocket.SocketGuild.GetInvitesAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetInvitesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetInvitesAsync(Kook.RequestOptions)">
-  GetInvitesAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L992"><i class="bi bi-code-slash"></i></a>
+  GetInvitesAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L948"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all invites in this guild.</p>
@@ -2671,7 +2637,7 @@ of emotes found within the guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;IInvite&gt;&gt; GetInvitesAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;IInvite&gt;&gt; GetInvitesAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2703,7 +2669,7 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetRole_System_UInt32_" data-uid="Kook.WebSocket.SocketGuild.GetRole(System.UInt32)">
   GetRole(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L712"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L700"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a role in this guild.</p>
@@ -2711,7 +2677,7 @@ invite, each representing information for an invite found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SocketRole GetRole(uint id)</code></pre>
+    <pre><code class="lang-csharp hljs">public SocketRole? GetRole(uint id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2742,7 +2708,7 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetTextChannel_System_UInt64_" data-uid="Kook.WebSocket.SocketGuild.GetTextChannel(System.UInt64)">
   GetTextChannel(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L584"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L576"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a text channel in this guild.</p>
@@ -2750,7 +2716,7 @@ invite, each representing information for an invite found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SocketTextChannel GetTextChannel(ulong id)</code></pre>
+    <pre><code class="lang-csharp hljs">public SocketTextChannel? GetTextChannel(ulong id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2781,7 +2747,7 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketGuild.GetUser(System.UInt64)">
   GetUser(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L774"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L752"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a user from this guild.</p>
@@ -2789,7 +2755,7 @@ invite, each representing information for an invite found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SocketGuildUser GetUser(ulong id)</code></pre>
+    <pre><code class="lang-csharp hljs">public SocketGuildUser? GetUser(ulong id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2826,8 +2792,8 @@ invite, each representing information for an invite found within this guild.</p>
   <a id="Kook_WebSocket_SocketGuild_GetUsersAsync_" data-uid="Kook.WebSocket.SocketGuild.GetUsersAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetUsersAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetUsersAsync(Kook.RequestOptions)">
-  GetUsersAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L881"><i class="bi bi-code-slash"></i></a>
+  GetUsersAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L850"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of all users in this guild.</p>
@@ -2835,7 +2801,7 @@ invite, each representing information for an invite found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IGuildUser&gt;&gt; GetUsersAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;IGuildUser&gt;&gt; GetUsersAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2871,7 +2837,7 @@ users found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetVoiceChannel_System_UInt64_" data-uid="Kook.WebSocket.SocketGuild.GetVoiceChannel(System.UInt64)">
   GetVoiceChannel(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L594"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L585"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a voice channel in this guild.</p>
@@ -2879,7 +2845,7 @@ users found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SocketVoiceChannel GetVoiceChannel(ulong id)</code></pre>
+    <pre><code class="lang-csharp hljs">public SocketVoiceChannel? GetVoiceChannel(ulong id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2909,8 +2875,8 @@ users found within this guild.</p>
   <a id="Kook_WebSocket_SocketGuild_LeaveAsync_" data-uid="Kook.WebSocket.SocketGuild.LeaveAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_LeaveAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.LeaveAsync(Kook.RequestOptions)">
-  LeaveAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L514"><i class="bi bi-code-slash"></i></a>
+  LeaveAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L511"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Leaves this guild.</p>
@@ -2918,7 +2884,7 @@ users found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task LeaveAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task LeaveAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2944,7 +2910,7 @@ users found within this guild.</p>
   <h4 class="section" id="Kook_WebSocket_SocketGuild_LeaveAsync_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This method will make the currently logged-in user leave the guild.</p>
 <div class="NOTE"><h5>note</h5><p>
-    If the user is the owner of this guild, use <a class="xref" href="Kook.IDeletable.html#Kook_IDeletable_DeleteAsync_Kook_RequestOptions_">DeleteAsync(RequestOptions)</a> instead.
+    If the user is the owner of this guild, use <a class="xref" href="Kook.IDeletable.html#Kook_IDeletable_DeleteAsync_Kook_RequestOptions_">DeleteAsync(RequestOptions?)</a> instead.
 </p></div>
 </div>
 
@@ -2954,8 +2920,8 @@ users found within this guild.</p>
   <a id="Kook_WebSocket_SocketGuild_ModifyEmoteNameAsync_" data-uid="Kook.WebSocket.SocketGuild.ModifyEmoteNameAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_ModifyEmoteNameAsync_Kook_GuildEmote_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.ModifyEmoteNameAsync(Kook.GuildEmote,System.String,Kook.RequestOptions)">
-  ModifyEmoteNameAsync(GuildEmote, string, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L980"><i class="bi bi-code-slash"></i></a>
+  ModifyEmoteNameAsync(GuildEmote, string, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L936"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Modifies an existing <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> in this guild.</p>
@@ -2963,7 +2929,7 @@ users found within this guild.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task ModifyEmoteNameAsync(GuildEmote emote, string name, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ModifyEmoteNameAsync(GuildEmote emote, string name, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3006,8 +2972,8 @@ emote.</p>
   <a id="Kook_WebSocket_SocketGuild_MoveUsersAsync_" data-uid="Kook.WebSocket.SocketGuild.MoveUsersAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_MoveUsersAsync_System_Collections_Generic_IEnumerable_Kook_IGuildUser__Kook_IVoiceChannel_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.MoveUsersAsync(System.Collections.Generic.IEnumerable{Kook.IGuildUser},Kook.IVoiceChannel,Kook.RequestOptions)">
-  MoveUsersAsync(IEnumerable&lt;IGuildUser&gt;, IVoiceChannel, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L924"><i class="bi bi-code-slash"></i></a>
+  MoveUsersAsync(IEnumerable&lt;IGuildUser&gt;, IVoiceChannel, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L894"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Moves the user to the voice channel.</p>
@@ -3015,7 +2981,7 @@ emote.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task MoveUsersAsync(IEnumerable&lt;IGuildUser&gt; users, IVoiceChannel targetChannel, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task MoveUsersAsync(IEnumerable&lt;IGuildUser&gt; users, IVoiceChannel targetChannel, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3052,7 +3018,7 @@ emote.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_PurgeUserCache" data-uid="Kook.WebSocket.SocketGuild.PurgeUserCache">
   PurgeUserCache()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L849"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L816"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Purges this guild's user cache.</p>
@@ -3079,7 +3045,7 @@ emote.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_PurgeUserCache_System_Func_Kook_WebSocket_SocketGuildUser_System_Boolean__" data-uid="Kook.WebSocket.SocketGuild.PurgeUserCache(System.Func{Kook.WebSocket.SocketGuildUser,System.Boolean})">
   PurgeUserCache(Func&lt;SocketGuildUser, bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L855"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L822"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Purges this guild's user cache.</p>
@@ -3111,8 +3077,8 @@ emote.</p>
   <a id="Kook_WebSocket_SocketGuild_RemoveBanAsync_" data-uid="Kook.WebSocket.SocketGuild.RemoveBanAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_RemoveBanAsync_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.RemoveBanAsync(Kook.IUser,Kook.RequestOptions)">
-  RemoveBanAsync(IUser, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L551"><i class="bi bi-code-slash"></i></a>
+  RemoveBanAsync(IUser, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L549"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unbans the user if they are currently banned.</p>
@@ -3120,7 +3086,7 @@ emote.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task RemoveBanAsync(IUser user, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task RemoveBanAsync(IUser user, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3153,8 +3119,8 @@ emote.</p>
   <a id="Kook_WebSocket_SocketGuild_RemoveBanAsync_" data-uid="Kook.WebSocket.SocketGuild.RemoveBanAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_RemoveBanAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.RemoveBanAsync(System.UInt64,Kook.RequestOptions)">
-  RemoveBanAsync(ulong, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  RemoveBanAsync(ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L553"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unbans the user if they are currently banned.</p>
@@ -3162,7 +3128,7 @@ emote.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task RemoveBanAsync(ulong userId, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task RemoveBanAsync(ulong userId, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3195,8 +3161,8 @@ emote.</p>
   <a id="Kook_WebSocket_SocketGuild_SearchUsersAsync_" data-uid="Kook.WebSocket.SocketGuild.SearchUsersAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_SearchUsersAsync_System_Action_Kook_SearchGuildMemberProperties__System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.SearchUsersAsync(System.Action{Kook.SearchGuildMemberProperties},System.Int32,Kook.RequestOptions)">
-  SearchUsersAsync(Action&lt;SearchGuildMemberProperties&gt;, int, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L915"><i class="bi bi-code-slash"></i></a>
+  SearchUsersAsync(Action&lt;SearchGuildMemberProperties&gt;, int, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L884"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of users in this guild that the name or nickname contains the
@@ -3205,7 +3171,7 @@ provided string at <code class="paramref">func</code>.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestGuildUser&gt;&gt; SearchUsersAsync(Action&lt;SearchGuildMemberProperties&gt; func, int limit = 50, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestGuildUser&gt;&gt; SearchUsersAsync(Action&lt;SearchGuildMemberProperties&gt; func, int limit = 50, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3247,7 +3213,7 @@ at <code class="paramref">func</code>.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_ToString" data-uid="Kook.WebSocket.SocketGuild.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L506"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L503"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the guild.</p>
@@ -3279,8 +3245,8 @@ at <code class="paramref">func</code>.</p>
   <a id="Kook_WebSocket_SocketGuild_UpdateAsync_" data-uid="Kook.WebSocket.SocketGuild.UpdateAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.UpdateAsync(Kook.RequestOptions)">
-  UpdateAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L495"><i class="bi bi-code-slash"></i></a>
+  UpdateAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L492"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Updates this object's properties with its current state.</p>
@@ -3288,7 +3254,7 @@ at <code class="paramref">func</code>.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task UpdateAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task UpdateAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3312,13 +3278,10 @@ at <code class="paramref">func</code>.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_UpdateAsync_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><div class="WARNING">
-  <h5>warning</h5>
-  <p>
-            This method will fetch the latest data from REST API,
-            and replace the current object's properties with the new data.
-        </p>
-</div>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+        This method will fetch the latest data from REST API,
+        and replace the current object's properties with the new data.
+    </p></div>
 </div>
 
 
@@ -3328,7 +3291,7 @@ at <code class="paramref">func</code>.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L22" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L22" class="edit-link">Edit this page</a>
         </div>
 
 

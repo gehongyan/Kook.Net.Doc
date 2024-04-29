@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="An element builder to build a ParagraphStruct."><meta property="og:title" content="Class ParagraphStructBuilder | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_ParagraphStructBuilder" data-uid="Kook.ParagraphStructBuilder" class="text-break">
-Class ParagraphStructBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class ParagraphStructBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ParagraphStructBuilder : IElementBuilder, IEquatable&lt;ParagraphStructBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ParagraphStructBuilder : IElementBuilder, IEquatable&lt;ParagraphStructBuilder&gt;, IEquatable&lt;IElementBuilder&gt;</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
     <dd>
       <div><a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>&gt;</div>
     </dd>
   </dl>
 
@@ -158,7 +159,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder__ctor" data-uid="Kook.ParagraphStructBuilder.#ctor">
   ParagraphStructBuilder()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> class.</p>
@@ -183,9 +184,9 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <a id="Kook_ParagraphStructBuilder__ctor_" data-uid="Kook.ParagraphStructBuilder.#ctor*"></a>
 
-  <h3 id="Kook_ParagraphStructBuilder__ctor_System_Int32_System_Collections_Generic_List_Kook_IElementBuilder__" data-uid="Kook.ParagraphStructBuilder.#ctor(System.Int32,System.Collections.Generic.List{Kook.IElementBuilder})">
-  ParagraphStructBuilder(int, List&lt;IElementBuilder&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_ParagraphStructBuilder__ctor_System_Int32_System_Collections_Generic_IList_Kook_IElementBuilder__" data-uid="Kook.ParagraphStructBuilder.#ctor(System.Int32,System.Collections.Generic.IList{Kook.IElementBuilder})">
+  ParagraphStructBuilder(int, IList&lt;IElementBuilder&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> class.</p>
@@ -193,14 +194,14 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ParagraphStructBuilder(int columnCount, List&lt;IElementBuilder&gt; fields = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ParagraphStructBuilder(int columnCount, IList&lt;IElementBuilder&gt;? fields = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>columnCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
-    <dt><code>fields</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>&gt;</dt>
+    <dt><code>fields</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -222,7 +223,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_MaxColumnCount" data-uid="Kook.ParagraphStructBuilder.MaxColumnCount">
   MaxColumnCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the maximum number of columns allowed by Kook.</p>
@@ -253,7 +254,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_MaxFieldCount" data-uid="Kook.ParagraphStructBuilder.MaxFieldCount">
   MaxFieldCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the maximum number of fields allowed by Kook.</p>
@@ -284,7 +285,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_MinColumnCount" data-uid="Kook.ParagraphStructBuilder.MinColumnCount">
   MinColumnCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the minimum number of columns allowed by Kook.</p>
@@ -320,7 +321,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_ColumnCount" data-uid="Kook.ParagraphStructBuilder.ColumnCount">
   ColumnCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the number of columns of the paragraph.</p>
@@ -346,12 +347,6 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The <code class="paramref">value</code> is less than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MinColumnCount">MinColumnCount</a> or greater than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxColumnCount">MaxColumnCount</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -359,7 +354,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_Fields" data-uid="Kook.ParagraphStructBuilder.Fields">
   Fields
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the fields of the paragraph.</p>
@@ -367,7 +362,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;IElementBuilder&gt; Fields { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IList&lt;IElementBuilder&gt; Fields { get; set; }</code></pre>
   </div>
 
 
@@ -376,8 +371,8 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> that represents the fields of the paragraph.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="Kook.IElementBuilder.html">IElementBuilder</a>&gt;</dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList&lt;T&gt;</a> that represents the fields of the paragraph.</p>
 </dd>
   </dl>
 
@@ -385,18 +380,6 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>The <code class="paramref">value</code> is <code>null</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The <code class="paramref">value</code> contains more than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxFieldCount">MaxFieldCount</a> elements.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The <code class="paramref">value</code> contains an element that is neither a <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a> nor a <a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -404,7 +387,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_Type" data-uid="Kook.ParagraphStructBuilder.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the type of the element that this builder builds.</p>
@@ -441,7 +424,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_AddField_Kook_KMarkdownElementBuilder_" data-uid="Kook.ParagraphStructBuilder.AddField(Kook.KMarkdownElementBuilder)">
   AddField(KMarkdownElementBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a field to the paragraph.</p>
@@ -473,12 +456,6 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The addition operation will result in a field count greater than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxFieldCount">MaxFieldCount</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -486,7 +463,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_AddField_Kook_PlainTextElementBuilder_" data-uid="Kook.ParagraphStructBuilder.AddField(Kook.PlainTextElementBuilder)">
   AddField(PlainTextElementBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a field to the paragraph.</p>
@@ -518,20 +495,14 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The addition operation will result in a field count greater than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxFieldCount">MaxFieldCount</a>.</p>
-</dd>
-  </dl>
 
 
 
   <a id="Kook_ParagraphStructBuilder_AddField_" data-uid="Kook.ParagraphStructBuilder.AddField*"></a>
 
   <h3 id="Kook_ParagraphStructBuilder_AddField__1_System_Action___0__" data-uid="Kook.ParagraphStructBuilder.AddField``1(System.Action{``0})">
-  AddField&lt;T&gt;(Action&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  AddField&lt;T&gt;(Action&lt;T&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a field to the paragraph.</p>
@@ -539,7 +510,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ParagraphStructBuilder AddField&lt;T&gt;(Action&lt;T&gt; action = null) where T : IElementBuilder, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public ParagraphStructBuilder AddField&lt;T&gt;(Action&lt;T&gt;? action = null) where T : IElementBuilder, new()</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -568,12 +539,6 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The addition operation will result in a field count greater than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxFieldCount">MaxFieldCount</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -581,7 +546,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_Build" data-uid="Kook.ParagraphStructBuilder.Build">
   Build()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Builds the <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> into a <a class="xref" href="Kook.ParagraphStruct.html">ParagraphStruct</a>.</p>
@@ -607,14 +572,33 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_ColumnCount">ColumnCount</a> is less than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MinColumnCount">MinColumnCount</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_ColumnCount">ColumnCount</a> is greater than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxColumnCount">MaxColumnCount</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_Fields">Fields</a> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The number of <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_Fields">Fields</a> is greater than <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_MaxFieldCount">MaxFieldCount</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The <a class="xref" href="Kook.ParagraphStructBuilder.html#Kook_ParagraphStructBuilder_Fields">Fields</a> contain an element that is not a <a class="xref" href="Kook.PlainTextElementBuilder.html">PlainTextElementBuilder</a>
+or <a class="xref" href="Kook.KMarkdownElementBuilder.html">KMarkdownElementBuilder</a>.</p>
+</dd>
+  </dl>
 
 
 
   <a id="Kook_ParagraphStructBuilder_Equals_" data-uid="Kook.ParagraphStructBuilder.Equals*"></a>
 
   <h3 id="Kook_ParagraphStructBuilder_Equals_Kook_ParagraphStructBuilder_" data-uid="Kook.ParagraphStructBuilder.Equals(Kook.ParagraphStructBuilder)">
-  Equals(ParagraphStructBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  Equals(ParagraphStructBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
@@ -622,7 +606,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(ParagraphStructBuilder paragraphStructBuilder)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(ParagraphStructBuilder? paragraphStructBuilder)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -652,8 +636,8 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <a id="Kook_ParagraphStructBuilder_Equals_" data-uid="Kook.ParagraphStructBuilder.Equals*"></a>
 
   <h3 id="Kook_ParagraphStructBuilder_Equals_System_Object_" data-uid="Kook.ParagraphStructBuilder.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
@@ -661,7 +645,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -692,7 +676,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_GetHashCode" data-uid="Kook.ParagraphStructBuilder.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -725,7 +709,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Kook_ParagraphStructBuilder_WithColumnCount_System_Int32_" data-uid="Kook.ParagraphStructBuilder.WithColumnCount(System.Int32)">
   WithColumnCount(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the number of columns of the paragraph.</p>
@@ -767,8 +751,8 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <a id="Kook_ParagraphStructBuilder_op_Equality_" data-uid="Kook.ParagraphStructBuilder.op_Equality*"></a>
 
   <h3 id="Kook_ParagraphStructBuilder_op_Equality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_" data-uid="Kook.ParagraphStructBuilder.op_Equality(Kook.ParagraphStructBuilder,Kook.ParagraphStructBuilder)">
-  operator ==(ParagraphStructBuilder, ParagraphStructBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  operator ==(ParagraphStructBuilder?, ParagraphStructBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
@@ -776,7 +760,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(ParagraphStructBuilder left, ParagraphStructBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator ==(ParagraphStructBuilder? left, ParagraphStructBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -807,8 +791,8 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <a id="Kook_ParagraphStructBuilder_op_Inequality_" data-uid="Kook.ParagraphStructBuilder.op_Inequality*"></a>
 
   <h3 id="Kook_ParagraphStructBuilder_op_Inequality_Kook_ParagraphStructBuilder_Kook_ParagraphStructBuilder_" data-uid="Kook.ParagraphStructBuilder.op_Inequality(Kook.ParagraphStructBuilder,Kook.ParagraphStructBuilder)">
-  operator !=(ParagraphStructBuilder, ParagraphStructBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  operator !=(ParagraphStructBuilder?, ParagraphStructBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L203"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a> is not equal to the current <a class="xref" href="Kook.ParagraphStructBuilder.html">ParagraphStructBuilder</a>.</p>
@@ -816,7 +800,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(ParagraphStructBuilder left, ParagraphStructBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator !=(ParagraphStructBuilder? left, ParagraphStructBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -848,7 +832,7 @@ Class ParagraphStructBuilder  <a class="header-action link-secondary" title="Vie
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Elements/Builders/ParagraphStructBuilder.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

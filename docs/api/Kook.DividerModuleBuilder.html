@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a divider module builder for creating a DividerModule."><meta property="og:title" content="Class DividerModuleBuilder | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_DividerModuleBuilder" data-uid="Kook.DividerModuleBuilder" class="text-break">
-Class DividerModuleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class DividerModuleBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DividerModuleBuilder : IModuleBuilder, IEquatable&lt;DividerModuleBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class DividerModuleBuilder : IModuleBuilder, IEquatable&lt;DividerModuleBuilder&gt;, IEquatable&lt;IModuleBuilder&gt;</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
     <dd>
       <div><a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Kook.IModuleBuilder.html">IModuleBuilder</a>&gt;</div>
     </dd>
   </dl>
 
@@ -158,7 +159,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
 
   <h3 id="Kook_DividerModuleBuilder_Type" data-uid="Kook.DividerModuleBuilder.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Specifies the module type of the <a class="xref" href="Kook.IModule.html">IModule</a> this builder creates.</p>
@@ -195,7 +196,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
 
   <h3 id="Kook_DividerModuleBuilder_Build" data-uid="Kook.DividerModuleBuilder.Build">
   Build()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Builds this builder into a <a class="xref" href="Kook.DividerModule.html">DividerModule</a>.</p>
@@ -227,8 +228,8 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
   <a id="Kook_DividerModuleBuilder_Equals_" data-uid="Kook.DividerModuleBuilder.Equals*"></a>
 
   <h3 id="Kook_DividerModuleBuilder_Equals_Kook_DividerModuleBuilder_" data-uid="Kook.DividerModuleBuilder.Equals(Kook.DividerModuleBuilder)">
-  Equals(DividerModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  Equals(DividerModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a> is equal to the current <a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a>.</p>
@@ -236,7 +237,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(DividerModuleBuilder dividerModuleBuilder)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(DividerModuleBuilder? dividerModuleBuilder)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -266,8 +267,8 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
   <a id="Kook_DividerModuleBuilder_Equals_" data-uid="Kook.DividerModuleBuilder.Equals*"></a>
 
   <h3 id="Kook_DividerModuleBuilder_Equals_System_Object_" data-uid="Kook.DividerModuleBuilder.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a> is equal to the current <a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a>.</p>
@@ -275,7 +276,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -299,7 +300,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
 
 
   <h4 class="section" id="Kook_DividerModuleBuilder_Equals_System_Object__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a>, <a class="xref" href="Kook.DividerModuleBuilder.html#Kook_DividerModuleBuilder_Equals_Kook_DividerModuleBuilder_">Equals(DividerModuleBuilder)</a> will be called to compare the 2 instances.</p>
+  <div class="markdown level1 remarks"><p>If the object passes is an <a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a>, <a class="xref" href="Kook.DividerModuleBuilder.html#Kook_DividerModuleBuilder_Equals_Kook_DividerModuleBuilder_">Equals(DividerModuleBuilder?)</a> will be called to compare the 2 instances.</p>
 </div>
 
 
@@ -309,7 +310,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
 
   <h3 id="Kook_DividerModuleBuilder_GetHashCode" data-uid="Kook.DividerModuleBuilder.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -345,8 +346,8 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
   <a id="Kook_DividerModuleBuilder_op_Equality_" data-uid="Kook.DividerModuleBuilder.op_Equality*"></a>
 
   <h3 id="Kook_DividerModuleBuilder_op_Equality_Kook_DividerModuleBuilder_Kook_DividerModuleBuilder_" data-uid="Kook.DividerModuleBuilder.op_Equality(Kook.DividerModuleBuilder,Kook.DividerModuleBuilder)">
-  operator ==(DividerModuleBuilder, DividerModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  operator ==(DividerModuleBuilder?, DividerModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a> is equal to the current <a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a>.</p>
@@ -354,7 +355,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(DividerModuleBuilder left, DividerModuleBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator ==(DividerModuleBuilder? left, DividerModuleBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -385,8 +386,8 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
   <a id="Kook_DividerModuleBuilder_op_Inequality_" data-uid="Kook.DividerModuleBuilder.op_Inequality*"></a>
 
   <h3 id="Kook_DividerModuleBuilder_op_Inequality_Kook_DividerModuleBuilder_Kook_DividerModuleBuilder_" data-uid="Kook.DividerModuleBuilder.op_Inequality(Kook.DividerModuleBuilder,Kook.DividerModuleBuilder)">
-  operator !=(DividerModuleBuilder, DividerModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  operator !=(DividerModuleBuilder?, DividerModuleBuilder?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a> is not equal to the current <a class="xref" href="Kook.DividerModuleBuilder.html">DividerModuleBuilder</a>.</p>
@@ -394,7 +395,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(DividerModuleBuilder left, DividerModuleBuilder right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator !=(DividerModuleBuilder? left, DividerModuleBuilder? right)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -426,7 +427,7 @@ Class DividerModuleBuilder  <a class="header-action link-secondary" title="View 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Cards/Modules/Builders/DividerModuleBuilder.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

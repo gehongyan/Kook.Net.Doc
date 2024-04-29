@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a cached entity."><meta property="og:title" content="Struct Cacheable&lt;TEntity, TId&gt; | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Cacheable_2" data-uid="Kook.Cacheable`2" class="text-break">
-Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Utils/Cacheable.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Cacheable&lt;TEntity, TId&gt; where TEntity : IEntity&lt;TId&gt; where TId : IEquatable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly struct Cacheable&lt;TEntity, TId&gt; where TEntity : IEntity&lt;TId&gt; where TId : IEquatable&lt;TId&gt;</code></pre>
   </div>
 
 
@@ -156,7 +156,7 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="Kook_Cacheable_2_HasValue" data-uid="Kook.Cacheable`2.HasValue">
   HasValue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Utils/Cacheable.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether this entity is cached.</p>
@@ -164,7 +164,7 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool HasValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HasValue { get; }</code></pre>
   </div>
 
 
@@ -188,7 +188,7 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="Kook_Cacheable_2_Id" data-uid="Kook.Cacheable`2.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Utils/Cacheable.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the ID of this entity.</p>
@@ -196,7 +196,7 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly TId Id { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TId Id { get; }</code></pre>
   </div>
 
 
@@ -220,7 +220,7 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="Kook_Cacheable_2_Value" data-uid="Kook.Cacheable`2.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Utils/Cacheable.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the entity if it could be pulled from cache.</p>
@@ -228,7 +228,7 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly TEntity Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TEntity? Value { get; }</code></pre>
   </div>
 
 
@@ -260,7 +260,7 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="Kook_Cacheable_2_DownloadAsync" data-uid="Kook.Cacheable`2.DownloadAsync">
   DownloadAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Utils/Cacheable.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads this entity to cache.</p>
@@ -268,15 +268,15 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;TEntity&gt; DownloadAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;TEntity?&gt; DownloadAsync()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;</dt>
-    <dd><p>A task that represents the asynchronous download operation. The task result contains the downloaded
-entity.</p>
+    <dd><p>A task that represents the asynchronous download operation. The task result contains
+the downloaded entity.</p>
 </dd>
   </dl>
 
@@ -303,7 +303,7 @@ entity.</p>
 
   <h3 id="Kook_Cacheable_2_GetOrDownloadAsync" data-uid="Kook.Cacheable`2.GetOrDownloadAsync">
   GetOrDownloadAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Utils/Cacheable.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the cached entity if it exists; otherwise downloads it.</p>
@@ -311,7 +311,7 @@ entity.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;TEntity&gt; GetOrDownloadAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;TEntity?&gt; GetOrDownloadAsync()</code></pre>
   </div>
 
 
@@ -346,7 +346,7 @@ download the entity. The task result contains the downloaded entity.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Utils/Cacheable.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L14" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:title" content="Namespace Kook | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -121,12 +121,12 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Kook.AudioModuleBuilder.html">AudioModuleBuilder</a></dt>
-      <dd><p>Represents a audio module builder for creating an <a class="xref" href="Kook.AudioModule.html">AudioModule</a>.</p>
+      <dd><p>Represents an audio module builder for creating an <a class="xref" href="Kook.AudioModule.html">AudioModule</a>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a></dt>
-      <dd><p>A meta data containing boost subscription information.</p>
+      <dd><p>A metadata containing boost subscription information.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -255,11 +255,6 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Kook.GuildFeatures.html">GuildFeatures</a></dt>
-      <dd><p>Represents a collection of features of a guild.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Kook.GuildProperties.html">GuildProperties</a></dt>
       <dd><p>Provides properties that are used to modify an <a class="xref" href="Kook.IGuild.html">IGuild</a> with the specified changes.</p>
 </dd>
@@ -345,6 +340,11 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Kook.MessageReference.html">MessageReference</a></dt>
+      <dd><p>Represents a message reference.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Kook.ModifyGuildChannelProperties.html">ModifyGuildChannelProperties</a></dt>
       <dd><p>Properties that are used to modify an <a class="xref" href="Kook.IGuildChannel.html">IGuildChannel</a> with the specified properties.</p>
 </dd>
@@ -396,7 +396,7 @@ Classes
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Kook.Quote.html">Quote</a></dt>
-      <dd><p>Represents a generic message quote.</p>
+      <dd><p>Represents a quoted message.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -488,6 +488,11 @@ Structs
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Kook.CardEmbed.html">CardEmbed</a></dt>
+      <dd><p>Represents an embed in a message that</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Kook.ChannelPermissions.html">ChannelPermissions</a></dt>
       <dd><p>Represents a set of permissions for a channel.</p>
 </dd>
@@ -505,6 +510,11 @@ Structs
     <dl class="jumplist">
       <dt><a class="xref" href="Kook.GradientColor.html">GradientColor</a></dt>
       <dd><p>Represents a gradient color.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kook.GuildFeatures.html">GuildFeatures</a></dt>
+      <dd><p>Represents a collection of features of a guild.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1090,7 +1100,7 @@ Enums
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Kook.TextTheme.html">TextTheme</a></dt>
-      <dd><p>Represents text themes used in <a class="xref" href="Kook.Format.html#Kook_Format_Colorize_System_String_Kook_TextTheme_System_Boolean_">Colorize(string, TextTheme, bool)</a>.</p>
+      <dd><p>Represents text themes used in <a class="xref" href="Kook.Format.html#Kook_Format_Colorize_System_String_Kook_TextTheme_System_Boolean_">Colorize(string?, TextTheme, bool)</a>.</p>
 </dd>
     </dl>
     <dl class="jumplist">

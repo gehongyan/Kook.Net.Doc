@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a channel that can send and receive messages."><meta property="og:title" content="Interface IMessageChannel | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IMessageChannel" data-uid="Kook.IMessageChannel" class="text-break">
-Interface IMessageChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IMessageChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -150,8 +150,8 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
   <a id="Kook_IMessageChannel_DeleteMessageAsync_" data-uid="Kook.IMessageChannel.DeleteMessageAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.DeleteMessageAsync(Kook.IMessage,Kook.RequestOptions)">
-  DeleteMessageAsync(IMessage, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  DeleteMessageAsync(IMessage, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deletes a message based on the provided message in this channel.</p>
@@ -159,7 +159,7 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task DeleteMessageAsync(IMessage message, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task DeleteMessageAsync(IMessage message, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -192,8 +192,8 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
   <a id="Kook_IMessageChannel_DeleteMessageAsync_" data-uid="Kook.IMessageChannel.DeleteMessageAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_DeleteMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.DeleteMessageAsync(System.Guid,Kook.RequestOptions)">
-  DeleteMessageAsync(Guid, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  DeleteMessageAsync(Guid, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deletes a message.</p>
@@ -201,7 +201,7 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task DeleteMessageAsync(Guid messageId, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task DeleteMessageAsync(Guid messageId, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -234,8 +234,8 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
   <a id="Kook_IMessageChannel_GetMessageAsync_" data-uid="Kook.IMessageChannel.GetMessageAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_GetMessageAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.GetMessageAsync(System.Guid,Kook.CacheMode,Kook.RequestOptions)">
-  GetMessageAsync(Guid, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  GetMessageAsync(Guid, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a message from this message channel.</p>
@@ -243,7 +243,7 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IMessage&gt; GetMessageAsync(Guid id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IMessage?&gt; GetMessageAsync(Guid id, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -280,8 +280,8 @@ the retrieved message; <code>null</code> if no message is found with the specifi
   <a id="Kook_IMessageChannel_GetMessagesAsync_" data-uid="Kook.IMessageChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.CacheMode,Kook.RequestOptions)">
-  GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
@@ -289,7 +289,7 @@ the retrieved message; <code>null</code> if no message is found with the specifi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = 50, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(IMessage referenceMessage, Direction dir, int limit = 50, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -327,21 +327,21 @@ cache.</p>
 
   <h4 class="section" id="Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
-    The returned collection is an asynchronous enumerable object; one must call
-    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a> to access the individual messages as a
-    collection.
-</p></div>
+        The returned collection is an asynchronous enumerable object; one must call
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a> to access the individual messages as a
+        collection.
+    </p></div>
 <div class="WARNING"><h5>warning</h5><p>
-    Do not fetch too many messages at once! This may cause unwanted preemptive rate limit or even actual
-    rate limit, causing your bot to freeze!
-</p></div>
-This method will attempt to fetch the number of messages specified under <code class="paramref">limit</code> around
-the message <code class="paramref">referenceMessage</code> depending on the <code class="paramref">dir</code>. The library will
-attempt to split up the requests according to your <code class="paramref">limit</code> and
-<a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>. In other words, should the user request 500 messages,
-and the <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> constant is <code>100</code>, the request will
-be split into 5 individual requests; thus returning 5 individual asynchronous responses, hence the need
-of flattening.
+        Do not fetch too many messages at once! This may cause unwanted preemptive rate limit or even actual
+        rate limit, causing your bot to freeze!
+    </p></div>
+    This method will attempt to fetch the number of messages specified under <code class="paramref">limit</code> around
+    the message <code class="paramref">referenceMessage</code> depending on the <code class="paramref">dir</code>. The library will
+    attempt to split up the requests according to your <code class="paramref">limit</code> and
+    <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>. In other words, should the user request 500 messages,
+    and the <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> constant is <code>100</code>, the request will
+    be split into 5 individual requests; thus returning 5 individual asynchronous responses, hence the need
+    of flattening.
 </div>
 
 
@@ -350,8 +350,8 @@ of flattening.
   <a id="Kook_IMessageChannel_GetMessagesAsync_" data-uid="Kook.IMessageChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.CacheMode,Kook.RequestOptions)">
-  GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
@@ -359,7 +359,7 @@ of flattening.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = 50, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(Guid referenceMessageId, Direction dir, int limit = 50, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -397,21 +397,21 @@ cache.</p>
 
   <h4 class="section" id="Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
-    The returned collection is an asynchronous enumerable object; one must call
-    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a> to access the individual messages as a
-    collection.
-</p></div>
+        The returned collection is an asynchronous enumerable object; one must call
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a> to access the individual messages as a
+        collection.
+    </p></div>
 <div class="WARNING"><h5>warning</h5><p>
-    Do not fetch too many messages at once! This may cause unwanted preemptive rate limit or even actual
-    rate limit, causing your bot to freeze!
-</p></div>
-This method will attempt to fetch the number of messages specified under <code class="paramref">limit</code> around
-the message <code class="paramref">referenceMessageId</code> depending on the <code class="paramref">dir</code>. The library will
-attempt to split up the requests according to your <code class="paramref">limit</code> and
-<a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>. In other words, should the user request 500 messages,
-and the <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> constant is <code>100</code>, the request will
-be split into 5 individual requests; thus returning 5 individual asynchronous responses, hence the need
-of flattening.
+        Do not fetch too many messages at once! This may cause unwanted preemptive rate limit or even actual
+        rate limit, causing your bot to freeze!
+    </p></div>
+    This method will attempt to fetch the number of messages specified under <code class="paramref">limit</code> around
+    the message <code class="paramref">referenceMessageId</code> depending on the <code class="paramref">dir</code>. The library will
+    attempt to split up the requests according to your <code class="paramref">limit</code> and
+    <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>. In other words, should the user request 500 messages,
+    and the <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> constant is <code>100</code>, the request will
+    be split into 5 individual requests; thus returning 5 individual asynchronous responses, hence the need
+    of flattening.
 </div>
 
 
@@ -420,8 +420,8 @@ of flattening.
   <a id="Kook_IMessageChannel_GetMessagesAsync_" data-uid="Kook.IMessageChannel.GetMessagesAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.GetMessagesAsync(System.Int32,Kook.CacheMode,Kook.RequestOptions)">
-  GetMessagesAsync(int, CacheMode, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  GetMessagesAsync(int, CacheMode, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
@@ -429,7 +429,7 @@ of flattening.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(int limit = 50, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IMessage&gt;&gt; GetMessagesAsync(int limit = 50, CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -461,20 +461,20 @@ cache.</p>
 
   <h4 class="section" id="Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
-    The returned collection is an asynchronous enumerable object; one must call
-    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a> to access the individual messages as a
-    collection.
-</p></div>
+        The returned collection is an asynchronous enumerable object; one must call
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a> to access the individual messages as a
+        collection.
+    </p></div>
 <div class="WARNING"><h5>warning</h5><p>
-    Do not fetch too many messages at once! This may cause unwanted preemptive rate limit or even actual
-    rate limit, causing your bot to freeze!
-</p></div>
-This method will attempt to fetch the number of messages specified under <code class="paramref">limit</code>. The
-library will attempt to split up the requests according to your <code class="paramref">limit</code> and
-<a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>. In other words, should the user request 500 messages,
-and the <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> constant is <code>100</code>, the request will
-be split into 5 individual requests; thus returning 5 individual asynchronous responses, hence the need
-of flattening.
+        Do not fetch too many messages at once! This may cause unwanted preemptive rate limit or even actual
+        rate limit, causing your bot to freeze!
+    </p></div>
+    This method will attempt to fetch the number of messages specified under <code class="paramref">limit</code>. The
+    library will attempt to split up the requests according to your <code class="paramref">limit</code> and
+    <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>. In other words, should the user request 500 messages,
+    and the <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> constant is <code>100</code>, the request will
+    be split into 5 individual requests; thus returning 5 individual asynchronous responses, hence the need
+    of flattening.
 </div>
 
 
@@ -483,8 +483,8 @@ of flattening.
   <a id="Kook_IMessageChannel_ModifyMessageAsync_" data-uid="Kook.IMessageChannel.ModifyMessageAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions_" data-uid="Kook.IMessageChannel.ModifyMessageAsync(System.Guid,System.Action{Kook.MessageProperties},Kook.RequestOptions)">
-  ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L262"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Modifies a message.</p>
@@ -492,7 +492,7 @@ of flattening.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task ModifyMessageAsync(Guid messageId, Action&lt;MessageProperties&gt; func, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task ModifyMessageAsync(Guid messageId, Action&lt;MessageProperties&gt; func, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -532,8 +532,8 @@ method and what properties are available, please refer to <a class="xref" href="
   <a id="Kook_IMessageChannel_SendCardAsync_" data-uid="Kook.IMessageChannel.SendCardAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendCardAsync(Kook.ICard,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
-  SendCardAsync(ICard, IQuote, IUser, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  SendCardAsync(ICard, IQuote?, IUser?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
@@ -541,7 +541,7 @@ method and what properties are available, please refer to <a class="xref" href="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardAsync(ICard card, IQuote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardAsync(ICard card, IQuote? quote = null, IUser? ephemeralUser = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -581,8 +581,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_IMessageChannel_SendCardsAsync_" data-uid="Kook.IMessageChannel.SendCardsAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendCardsAsync(System.Collections.Generic.IEnumerable{Kook.ICard},Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
-  SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote, IUser, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote?, IUser?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
@@ -590,7 +590,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardsAsync(IEnumerable&lt;ICard&gt; cards, IQuote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardsAsync(IEnumerable&lt;ICard&gt; cards, IQuote? quote = null, IUser? ephemeralUser = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -630,8 +630,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_IMessageChannel_SendFileAsync_" data-uid="Kook.IMessageChannel.SendFileAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendFileAsync(Kook.FileAttachment,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
-  SendFileAsync(FileAttachment, IQuote, IUser, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  SendFileAsync(FileAttachment, IQuote?, IUser?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
@@ -639,7 +639,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(FileAttachment attachment, IQuote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(FileAttachment attachment, IQuote? quote = null, IUser? ephemeralUser = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -682,8 +682,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_IMessageChannel_SendFileAsync_" data-uid="Kook.IMessageChannel.SendFileAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendFileAsync(System.IO.Stream,System.String,Kook.AttachmentType,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
-  SendFileAsync(Stream, string, AttachmentType, IQuote, IUser, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  SendFileAsync(Stream, string, AttachmentType, IQuote?, IUser?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
@@ -691,7 +691,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(Stream stream, string fileName, AttachmentType type = AttachmentType.File, IQuote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(Stream stream, string filename, AttachmentType type = AttachmentType.File, IQuote? quote = null, IUser? ephemeralUser = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -699,7 +699,7 @@ contains the identifier and timestamp of the sent message.</p>
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
     <dd><p>The stream of the file.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the file.</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
@@ -740,8 +740,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_IMessageChannel_SendFileAsync_" data-uid="Kook.IMessageChannel.SendFileAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendFileAsync(System.String,System.String,Kook.AttachmentType,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
-  SendFileAsync(string, string, AttachmentType, IQuote, IUser, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  SendFileAsync(string, string?, AttachmentType, IQuote?, IUser?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
@@ -749,7 +749,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(string path, string fileName = null, AttachmentType type = AttachmentType.File, IQuote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(string path, string? filename = null, AttachmentType type = AttachmentType.File, IQuote? quote = null, IUser? ephemeralUser = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -757,7 +757,7 @@ contains the identifier and timestamp of the sent message.</p>
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The file path of the file.</p>
 </dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The name of the file.</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
@@ -798,8 +798,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_IMessageChannel_SendTextAsync_" data-uid="Kook.IMessageChannel.SendTextAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_SendTextAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendTextAsync(System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
-  SendTextAsync(string, IQuote, IUser, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  SendTextAsync(string, IQuote?, IUser?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a text message to this message channel.</p>
@@ -807,7 +807,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendTextAsync(string text, IQuote quote = null, IUser ephemeralUser = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendTextAsync(string text, IQuote? quote = null, IUser? ephemeralUser = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -848,7 +848,7 @@ contains the identifier and timestamp of the sent message.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

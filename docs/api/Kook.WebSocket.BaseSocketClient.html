@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents an abstract base class for WebSocket-based clients."><meta property="og:title" content="Class BaseSocketClient | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_WebSocket_BaseSocketClient" data-uid="Kook.WebSocket.BaseSocketClient" class="text-break">
-Class BaseSocketClient  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L3"><i class="bi bi-code-slash"></i></a>
+Class BaseSocketClient  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L5"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -192,7 +192,7 @@ Class BaseSocketClient  <a class="header-action link-secondary" title="View sour
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="Kook.WebSocket.BaseSocketClientExperimentalExtensions.html#Kook_WebSocket_BaseSocketClientExperimentalExtensions_CreateGuildAsync_Kook_WebSocket_BaseSocketClient_System_String_Kook_IVoiceRegion_System_IO_Stream_System_Nullable_System_Int32__Kook_RequestOptions_">BaseSocketClientExperimentalExtensions.CreateGuildAsync(BaseSocketClient, string, IVoiceRegion, Stream, int?, RequestOptions)</a>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClientExperimentalExtensions.html#Kook_WebSocket_BaseSocketClientExperimentalExtensions_CreateGuildAsync_Kook_WebSocket_BaseSocketClient_System_String_Kook_IVoiceRegion_System_IO_Stream_System_Nullable_System_Int32__Kook_RequestOptions_">BaseSocketClientExperimentalExtensions.CreateGuildAsync(BaseSocketClient, string, IVoiceRegion?, Stream?, int?, RequestOptions?)</a>
   </div>
   </dd></dl>
 
@@ -205,9 +205,9 @@ Class BaseSocketClient  <a class="header-action link-secondary" title="View sour
 
 
 
-  <h3 id="Kook_WebSocket_BaseSocketClient__baseConfig" data-uid="Kook.WebSocket.BaseSocketClient._baseConfig">
-  _baseConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_WebSocket_BaseSocketClient_BaseConfig" data-uid="Kook.WebSocket.BaseSocketClient.BaseConfig">
+  BaseConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the configuration used by this client.</p>
@@ -215,7 +215,7 @@ Class BaseSocketClient  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly KookSocketConfig _baseConfig</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly KookSocketConfig BaseConfig</code></pre>
   </div>
 
 
@@ -243,7 +243,7 @@ Class BaseSocketClient  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_WebSocket_BaseSocketClient_CurrentUser" data-uid="Kook.WebSocket.BaseSocketClient.CurrentUser">
   CurrentUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the current logged-in user.</p>
@@ -251,7 +251,7 @@ Class BaseSocketClient  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual SocketSelfUser CurrentUser { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual SocketSelfUser? CurrentUser { get; protected set; }</code></pre>
   </div>
 
 
@@ -275,7 +275,7 @@ Class BaseSocketClient  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_WebSocket_BaseSocketClient_Guilds" data-uid="Kook.WebSocket.BaseSocketClient.Guilds">
   Guilds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a collection of guilds that the user is currently in.</p>
@@ -308,7 +308,7 @@ Class BaseSocketClient  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_WebSocket_BaseSocketClient_Latency" data-uid="Kook.WebSocket.BaseSocketClient.Latency">
   Latency
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the estimated round-trip latency, in milliseconds, to the gateway server.</p>
@@ -342,7 +342,7 @@ note that this value does not represent a &quot;true&quot; latency for operation
 
   <h3 id="Kook_WebSocket_BaseSocketClient_Rest" data-uid="Kook.WebSocket.BaseSocketClient.Rest">
   Rest
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides access to a REST-only client with a shared state from this client.</p>
@@ -377,8 +377,8 @@ note that this value does not represent a &quot;true&quot; latency for operation
   <a id="Kook_WebSocket_BaseSocketClient_DownloadBoostSubscriptionsAsync_" data-uid="Kook.WebSocket.BaseSocketClient.DownloadBoostSubscriptionsAsync*"></a>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_" data-uid="Kook.WebSocket.BaseSocketClient.DownloadBoostSubscriptionsAsync(System.Collections.Generic.IEnumerable{Kook.IGuild},Kook.RequestOptions)">
-  DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads all boost subscriptions for the specified guilds.</p>
@@ -386,7 +386,7 @@ note that this value does not represent a &quot;true&quot; latency for operation
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt; guilds = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;? guilds = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -420,8 +420,8 @@ To download all boost subscriptions, the current user must has the
   <a id="Kook_WebSocket_BaseSocketClient_DownloadUsersAsync_" data-uid="Kook.WebSocket.BaseSocketClient.DownloadUsersAsync*"></a>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_DownloadUsersAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_" data-uid="Kook.WebSocket.BaseSocketClient.DownloadUsersAsync(System.Collections.Generic.IEnumerable{Kook.IGuild},Kook.RequestOptions)">
-  DownloadUsersAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  DownloadUsersAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to download users into the user cache for the selected guilds.</p>
@@ -429,7 +429,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task DownloadUsersAsync(IEnumerable&lt;IGuild&gt; guilds = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task DownloadUsersAsync(IEnumerable&lt;IGuild&gt;? guilds = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -462,8 +462,8 @@ To download all boost subscriptions, the current user must has the
   <a id="Kook_WebSocket_BaseSocketClient_DownloadVoiceStatesAsync_" data-uid="Kook.WebSocket.BaseSocketClient.DownloadVoiceStatesAsync*"></a>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_DownloadVoiceStatesAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_" data-uid="Kook.WebSocket.BaseSocketClient.DownloadVoiceStatesAsync(System.Collections.Generic.IEnumerable{Kook.IGuild},Kook.RequestOptions)">
-  DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads all voice states for the specified guilds.</p>
@@ -471,7 +471,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt; guilds = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt;? guilds = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -504,7 +504,7 @@ To download all boost subscriptions, the current user must has the
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GetChannel_System_UInt64_" data-uid="Kook.WebSocket.BaseSocketClient.GetChannel(System.UInt64)">
   GetChannel(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a channel.</p>
@@ -512,7 +512,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract SocketChannel GetChannel(ulong id)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract SocketChannel? GetChannel(ulong id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -544,7 +544,7 @@ To download all boost subscriptions, the current user must has the
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GetDMChannel_System_Guid_" data-uid="Kook.WebSocket.BaseSocketClient.GetDMChannel(System.Guid)">
   GetDMChannel(Guid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a channel.</p>
@@ -552,7 +552,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract SocketDMChannel GetDMChannel(Guid chatCode)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract SocketDMChannel? GetDMChannel(Guid chatCode)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -584,7 +584,7 @@ To download all boost subscriptions, the current user must has the
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GetDMChannel_System_UInt64_" data-uid="Kook.WebSocket.BaseSocketClient.GetDMChannel(System.UInt64)">
   GetDMChannel(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a channel.</p>
@@ -592,7 +592,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract SocketDMChannel GetDMChannel(ulong userId)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract SocketDMChannel? GetDMChannel(ulong userId)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -624,7 +624,7 @@ To download all boost subscriptions, the current user must has the
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GetGuild_System_UInt64_" data-uid="Kook.WebSocket.BaseSocketClient.GetGuild(System.UInt64)">
   GetGuild(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a guild.</p>
@@ -632,7 +632,7 @@ To download all boost subscriptions, the current user must has the
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract SocketGuild GetGuild(ulong id)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract SocketGuild? GetGuild(ulong id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -664,7 +664,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GetUser_System_String_System_String_" data-uid="Kook.WebSocket.BaseSocketClient.GetUser(System.String,System.String)">
   GetUser(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a user.</p>
@@ -672,7 +672,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract SocketUser GetUser(string username, string identifyNumber)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract SocketUser? GetUser(string username, string identifyNumber)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -704,12 +704,11 @@ found.</p>
     Sometimes a user may return <code>null</code> due to Kook not sending offline users in large guilds
     (i.e. guild with 100+ members) actively. To download users on startup and to see more information
     about this subject, see <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">AlwaysDownloadUsers</a>.
-</p></div>
-<div class="NOTE"><h5>note</h5><p>
+</p></div><div class="NOTE"><h5>note</h5><p>
     This method does not attempt to fetch users that the logged-in user does not have access to (i.e.
     users who don't share mutual guild(s) with the current user). If you wish to get a user that you do
     not have access to, consider using the REST implementation of
-    <a class="xref" href="Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetUserAsync_System_UInt64_Kook_RequestOptions_">GetUserAsync(ulong, RequestOptions)</a>.
+    <a class="xref" href="Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetUserAsync_System_UInt64_Kook_RequestOptions_">GetUserAsync(ulong, RequestOptions?)</a>.
 </p></div>
 </div>
 
@@ -720,7 +719,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GetUser_System_UInt64_" data-uid="Kook.WebSocket.BaseSocketClient.GetUser(System.UInt64)">
   GetUser(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a generic user.</p>
@@ -728,7 +727,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract SocketUser GetUser(ulong id)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract SocketUser? GetUser(ulong id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -757,12 +756,11 @@ found.</p>
     Sometimes a user may return <code>null</code> due to Kook not sending offline users in large guilds
     (i.e. guild with 100+ members) actively. To download users on startup and to see more information
     about this subject, see <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">AlwaysDownloadUsers</a>.
-</p></div>
-<div class="NOTE"><h5>note</h5><p>
+</p></div><div class="NOTE"><h5>note</h5><p>
     This method does not attempt to fetch users that the logged-in user does not have access to (i.e.
     users who don't share mutual guild(s) with the current user). If you wish to get a user that you do
     not have access to, consider using the REST implementation of
-    <a class="xref" href="Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetUserAsync_System_UInt64_Kook_RequestOptions_">GetUserAsync(ulong, RequestOptions)</a>.
+    <a class="xref" href="Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetUserAsync_System_UInt64_Kook_RequestOptions_">GetUserAsync(ulong, RequestOptions?)</a>.
 </p></div>
 </div>
 
@@ -773,7 +771,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_StartAsync" data-uid="Kook.WebSocket.BaseSocketClient.StartAsync">
   StartAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Starts the WebSocket connection.</p>
@@ -806,7 +804,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_StopAsync" data-uid="Kook.WebSocket.BaseSocketClient.StopAsync">
   StopAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stops the WebSocket connection.</p>
@@ -842,7 +840,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_ChannelCreated" data-uid="Kook.WebSocket.BaseSocketClient.ChannelCreated">
   ChannelCreated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a channel is created.</p>
@@ -868,14 +866,14 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_ChannelCreated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a generic channel has been created. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> as its parameter.
-</p>
+        This event is fired when a generic channel has been created. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> as its parameter.
+    </p>
 <p>
-    The newly created channel is passed into the event handler parameter. The given channel type may
-    include, but not limited to, Private Channels (DM, Group), Guild Channels (Text, Voice, Category);
-    see the derived classes of <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> for more details.
-</p>
+        The newly created channel is passed into the event handler parameter. The given channel type may
+        include, but not limited to, Private Channels (DM, Group), Guild Channels (Text, Voice, Category);
+        see the derived classes of <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> for more details.
+    </p>
 </div>
 
 
@@ -884,7 +882,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_ChannelDestroyed" data-uid="Kook.WebSocket.BaseSocketClient.ChannelDestroyed">
   ChannelDestroyed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a channel is destroyed.</p>
@@ -910,14 +908,14 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_ChannelDestroyed_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a generic channel has been destroyed. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> as its parameter.
-</p>
+        This event is fired when a generic channel has been destroyed. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> as its parameter.
+    </p>
 <p>
-    The destroyed channel is passed into the event handler parameter. The given channel type may
-    include, but not limited to, Private Channels (DM, Group), Guild Channels (Text, Voice, Category);
-    see the derived classes of <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> for more details.
-</p>
+        The destroyed channel is passed into the event handler parameter. The given channel type may
+        include, but not limited to, Private Channels (DM, Group), Guild Channels (Text, Voice, Category);
+        see the derived classes of <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> for more details.
+    </p>
 </div>
 
 
@@ -926,7 +924,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_ChannelUpdated" data-uid="Kook.WebSocket.BaseSocketClient.ChannelUpdated">
   ChannelUpdated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a channel is updated.</p>
@@ -952,15 +950,15 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_ChannelUpdated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a generic channel has been updated. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept 2 <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> as its parameters.
-</p>
+        This event is fired when a generic channel has been updated. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept 2 <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> as its parameters.
+    </p>
 <p>
-    The original (prior to update) channel is passed into the first <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a>, while
-    the updated channel is passed into the second. The given channel type may include, but not limited
-    to, Private Channels (DM, Group), Guild Channels (Text, Voice, Category); see the derived classes of
-    <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> for more details.
-</p>
+        The original (prior to update) channel is passed into the first <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a>, while
+        the updated channel is passed into the second. The given channel type may include, but not limited
+        to, Private Channels (DM, Group), Guild Channels (Text, Voice, Category); see the derived classes of
+        <a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a> for more details.
+    </p>
 </div>
 
 
@@ -969,7 +967,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_CurrentUserUpdated" data-uid="Kook.WebSocket.BaseSocketClient.CurrentUserUpdated">
   CurrentUserUpdated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L703"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L705"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when the connected account is updated.</p>
@@ -995,18 +993,18 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_CurrentUserUpdated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when the connected account is updated. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a>,
-    and a <a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a> as its parameter.
-</p>
+        This event is fired when the connected account is updated. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a>,
+        and a <a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a> as its parameter.
+    </p>
 <p>
-    The current user before the update is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a>.
-</p>
+        The current user before the update is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a>.
+    </p>
 <p>
-    The current user after the update is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a>.
-</p>
+        The current user after the update is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketSelfUser.html">SocketSelfUser</a>.
+    </p>
 </div>
 
 
@@ -1015,7 +1013,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_DirectMessageButtonClicked" data-uid="Kook.WebSocket.BaseSocketClient.DirectMessageButtonClicked">
   DirectMessageButtonClicked
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a button is clicked in a direct card message.</p>
@@ -1041,29 +1039,28 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_DirectMessageButtonClicked_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a button is clicked in a direct card message. The event handler must
-    return a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <code>string</code>,
-    a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    and a <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameter.
-</p>
+        This event is fired when a button is clicked in a direct card message. The event handler must
+        return a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <code>string</code>,
+        a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        and a <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameter.
+    </p>
 <p>
-    The button value is passed into the event handler parameter as <code>string</code>.
-</p>
+        The button value is passed into the event handler parameter as <code>string</code>.
+    </p>
 <p>
-    The users who clicked the button is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user
-    presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The users who clicked the button is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user
+        presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the direct card message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>
-</p>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the direct card message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></p>
 <p>
-    The channel where the button is clicked is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>.
-</p>
+        The channel where the button is clicked is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>.
+    </p>
 </div>
 
 
@@ -1072,7 +1069,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_DirectMessageDeleted" data-uid="Kook.WebSocket.BaseSocketClient.DirectMessageDeleted">
   DirectMessageDeleted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L474"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L476"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a direct message is deleted.</p>
@@ -1098,33 +1095,33 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_DirectMessageDeleted_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a direct message is deleted. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>
-    as its parameters.
-</p>
+        This event is fired when a direct message is deleted. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>
+        as its parameters.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        It is not possible to retrieve the direct message via
-        <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original direct message cannot be retrieved by Kook
-        after the message has been deleted.
-    </p></div>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the deleted direct message; otherwise, in event
-    that the message cannot be retrieved, the ID of the direct message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            It is not possible to retrieve the direct message via
+            <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original direct message cannot be retrieved by Kook
+            after the message has been deleted.
+        </p></div>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the deleted direct message; otherwise, in event
+        that the message cannot be retrieved, the ID of the direct message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    
 <p>
-    The user that originally sent this direct message is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
-    presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The user that originally sent this direct message is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
+        presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    If a direct message was sent by the current user to this user, or the recipient had sent a message before
-    in current session, the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contains the direct message channel;
-    otherwise, the direct message channel has not been created yet, and the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a> as chat code will be preserved.
-</p>
+        If a direct message was sent by the current user to this user, or the recipient had sent a message before
+        in current session, the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contains the direct message channel;
+        otherwise, the direct message channel has not been created yet, and the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a> as chat code will be preserved.
+    </p>
 </div>
 
 
@@ -1133,7 +1130,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_DirectMessageReceived" data-uid="Kook.WebSocket.BaseSocketClient.DirectMessageReceived">
   DirectMessageReceived
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L437"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a direct message is received.</p>
@@ -1159,25 +1156,25 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_DirectMessageReceived_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a direct message is received. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, a
-    <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, and a <a class="xref" href="Kook.WebSocket.SocketDMChannel.html">SocketDMChannel</a>
-    as its parameters.
-</p>
+        This event is fired when a direct message is received. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, a
+        <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, and a <a class="xref" href="Kook.WebSocket.SocketDMChannel.html">SocketDMChannel</a>
+        as its parameters.
+    </p>
 <p>
-    The message that is sent to the client is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>. This message may be a system message (i.e.
-    <a class="xref" href="Kook.WebSocket.SocketSystemMessage.html">SocketSystemMessage</a>) or a user message (i.e. <a class="xref" href="Kook.WebSocket.SocketUserMessage.html">SocketUserMessage</a>. See the
-    derived classes of <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> for more details.
-</p>
+        The message that is sent to the client is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>. This message may be a system message (i.e.
+        <a class="xref" href="Kook.WebSocket.SocketSystemMessage.html">SocketSystemMessage</a>) or a user message (i.e. <a class="xref" href="Kook.WebSocket.SocketUserMessage.html">SocketUserMessage</a>. See the
+        derived classes of <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> for more details.
+    </p>
 <p>
-    The user that sent this direct message is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>.
-</p>
+        The user that sent this direct message is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>.
+    </p>
 <p>
-    The source direct channel of the removed message will be passed into the
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
-</p>
+        The source direct channel of the removed message will be passed into the
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
+    </p>
 </div>
 
 
@@ -1186,7 +1183,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_DirectMessageUpdated" data-uid="Kook.WebSocket.BaseSocketClient.DirectMessageUpdated">
   DirectMessageUpdated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L513"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L515"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a message is updated.</p>
@@ -1194,7 +1191,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;SocketMessage, Guid&gt;, Cacheable&lt;SocketUser, ulong&gt;, Cacheable&lt;SocketDMChannel, Guid&gt;, Task&gt; DirectMessageUpdated</code></pre>
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;SocketUser, ulong&gt;, Cacheable&lt;SocketDMChannel, Guid&gt;, Task&gt; DirectMessageUpdated</code></pre>
   </div>
 
 
@@ -1204,7 +1201,7 @@ found.</p>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketDMChannel.html">SocketDMChannel</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketDMChannel.html">SocketDMChannel</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -1212,33 +1209,33 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_DirectMessageUpdated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a direct message is updated. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    and a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> as its parameters.
-</p>
+        This event is fired when a direct message is updated. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        and a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> as its parameters.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        It is not possible to retrieve the direct message via
-        <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original direct message cannot be retrieved by Kook
-        after the message has been updated.
-    </p></div>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the updated direct message; otherwise, in event
-    that the message cannot be retrieved, the ID of the direct message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            It is not possible to retrieve the direct message via
+            <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original direct message cannot be retrieved by Kook
+            after the message has been updated.
+        </p></div>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the updated direct message; otherwise, in event
+        that the message cannot be retrieved, the ID of the direct message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    
 <p>
-    The user that originally sent this direct message is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
-    presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The user that originally sent this direct message is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
+        presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    If a direct message was sent by the current user to this user, or the recipient had sent a message before
-    in current session, the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contains the direct message channel;
-    otherwise, the direct message channel has not been created yet, and the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a> as chat code will be preserved.
-</p>
+        If a direct message was sent by the current user to this user, or the recipient had sent a message before
+        in current session, the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contains the direct message channel;
+        otherwise, the direct message channel has not been created yet, and the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a> as chat code will be preserved.
+    </p>
 </div>
 
 
@@ -1247,7 +1244,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_DirectReactionAdded" data-uid="Kook.WebSocket.BaseSocketClient.DirectReactionAdded">
   DirectReactionAdded
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a reaction is added to a direct message.</p>
@@ -1255,7 +1252,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;IDMChannel, Guid&gt;, Cacheable&lt;SocketUser, ulong&gt;, SocketReaction, Task&gt; DirectReactionAdded</code></pre>
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;SocketDMChannel, Guid&gt;, Cacheable&lt;SocketUser, ulong&gt;, SocketReaction, Task&gt; DirectReactionAdded</code></pre>
   </div>
 
 
@@ -1265,7 +1262,7 @@ found.</p>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketDMChannel.html">SocketDMChannel</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -1273,33 +1270,33 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_DirectReactionAdded_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a reaction is added to a user message in a private channel. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a
-    <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> as its parameter.
-</p>
+        This event is fired when a reaction is added to a user message in a private channel. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a
+        <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> as its parameter.
+    </p>
 <p>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-</p>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    </p>
 <p>
-    If a direct message was sent by the current user to this user, or the recipient had sent a message before
-    in current session, the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contains the direct message channel;
-    otherwise, the direct message channel has not been created yet, and the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a> as chat code will be preserved.
-</p>
+        If a direct message was sent by the current user to this user, or the recipient had sent a message before
+        in current session, the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contains the direct message channel;
+        otherwise, the direct message channel has not been created yet, and the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a> as chat code will be preserved.
+    </p>
 <p>
-    The user who removed the reaction will be passed into the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>.
-</p>
+        The user who removed the reaction will be passed into the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>.
+    </p>
 <p>
-    The reaction that was added will be passed into the <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> parameter.
-</p>
+        The reaction that was added will be passed into the <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> parameter.
+    </p>
 <div class="NOTE"><h5>note</h5><p>
-    When fetching the reaction from this event, a user may not be provided under
-    <a class="xref" href="Kook.WebSocket.SocketReaction.html#Kook_WebSocket_SocketReaction_User">User</a>. Please see the documentation of the property for more
-    information.
-</p></div>
+        When fetching the reaction from this event, a user may not be provided under
+        <a class="xref" href="Kook.WebSocket.SocketReaction.html#Kook_WebSocket_SocketReaction_User">User</a>. Please see the documentation of the property for more
+        information.
+    </p></div>
 </div>
 
 
@@ -1308,7 +1305,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_DirectReactionRemoved" data-uid="Kook.WebSocket.BaseSocketClient.DirectReactionRemoved">
   DirectReactionRemoved
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L214"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a reaction is removed from a message.</p>
@@ -1316,7 +1313,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;IDMChannel, Guid&gt;, Cacheable&lt;SocketUser, ulong&gt;, SocketReaction, Task&gt; DirectReactionRemoved</code></pre>
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;SocketDMChannel, Guid&gt;, Cacheable&lt;SocketUser, ulong&gt;, SocketReaction, Task&gt; DirectReactionRemoved</code></pre>
   </div>
 
 
@@ -1326,7 +1323,7 @@ found.</p>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketDMChannel.html">SocketDMChannel</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -1334,33 +1331,33 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_DirectReactionRemoved_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a reaction is removed from a user message in a private channel. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a
-    <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> as its parameter.
-</p>
+        This event is fired when a reaction is removed from a user message in a private channel. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a
+        <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> as its parameter.
+    </p>
 <p>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-</p>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    </p>
 <p>
-    If a direct message was sent by the current user to this user, or the recipient had sent a message before
-    in current session, the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contains the direct message channel;
-    otherwise, the direct message channel has not been created yet, and the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a> as chat code will be preserved.
-</p>
+        If a direct message was sent by the current user to this user, or the recipient had sent a message before
+        in current session, the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contains the direct message channel;
+        otherwise, the direct message channel has not been created yet, and the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a> as chat code will be preserved.
+    </p>
 <p>
-    The user who added the reaction will be passed into the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>.
-</p>
+        The user who added the reaction will be passed into the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>.
+    </p>
 <p>
-    The reaction that was added will be passed into the <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> parameter.
-</p>
+        The reaction that was added will be passed into the <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> parameter.
+    </p>
 <div class="NOTE"><h5>note</h5><p>
-    When fetching the reaction from this event, a user may not be provided under
-    <a class="xref" href="Kook.WebSocket.SocketReaction.html#Kook_WebSocket_SocketReaction_User">User</a>. Please see the documentation of the property for more
-    information.
-</p></div>
+        When fetching the reaction from this event, a user may not be provided under
+        <a class="xref" href="Kook.WebSocket.SocketReaction.html#Kook_WebSocket_SocketReaction_User">User</a>. Please see the documentation of the property for more
+        information.
+    </p></div>
 </div>
 
 
@@ -1369,7 +1366,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_EmoteCreated" data-uid="Kook.WebSocket.BaseSocketClient.EmoteCreated">
   EmoteCreated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L948"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L950"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when an emote is created.</p>
@@ -1395,18 +1392,18 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_EmoteCreated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when an emote is created. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>
-    as its parameter.
-</p>
+        This event is fired when an emote is created. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>
+        as its parameter.
+    </p>
 <p>
-    The emote that is created is passed into the event handler parameter as
-    <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>.
-</p>
+        The emote that is created is passed into the event handler parameter as
+        <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>.
+    </p>
 <p>
-    The guild where the emote is created is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-</p>
+        The guild where the emote is created is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    </p>
 </div>
 
 
@@ -1415,7 +1412,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_EmoteDeleted" data-uid="Kook.WebSocket.BaseSocketClient.EmoteDeleted">
   EmoteDeleted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L972"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L974"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a emote is deleted.</p>
@@ -1441,18 +1438,18 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_EmoteDeleted_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when an emote is deleted. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>
-    as its parameter.
-</p>
+        This event is fired when an emote is deleted. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>
+        as its parameter.
+    </p>
 <p>
-    The emote that is deleted is passed into the event handler parameter as
-    <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>.
-</p>
+        The emote that is deleted is passed into the event handler parameter as
+        <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>.
+    </p>
 <p>
-    The guild where the emote is deleted is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-</p>
+        The guild where the emote is deleted is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    </p>
 </div>
 
 
@@ -1461,7 +1458,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_EmoteUpdated" data-uid="Kook.WebSocket.BaseSocketClient.EmoteUpdated">
   EmoteUpdated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1000"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1002"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a emote is updated.</p>
@@ -1469,7 +1466,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Func&lt;GuildEmote, GuildEmote, SocketGuild, Task&gt; EmoteUpdated</code></pre>
+    <pre><code class="lang-csharp hljs">public event Func&lt;GuildEmote?, GuildEmote, SocketGuild, Task&gt; EmoteUpdated</code></pre>
   </div>
 
 
@@ -1487,22 +1484,22 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_EmoteUpdated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when an emote is updated. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>, a <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>
-    and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
-</p>
+        This event is fired when an emote is updated. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>, a <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>
+        and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+    </p>
 <p>
-    The original emote entity is passed into the event handler parameter as
-    <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>.
-</p>
+        The original emote entity is passed into the event handler parameter as
+        <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>.
+    </p>
 <p>
-    The updated emote entity is passed into the event handler parameter as
-    <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>.
-</p>
+        The updated emote entity is passed into the event handler parameter as
+        <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>.
+    </p>
 <p>
-    The guild where the emote is updated is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-</p>
+        The guild where the emote is updated is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    </p>
 </div>
 
 
@@ -1511,7 +1508,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GuildAvailable" data-uid="Kook.WebSocket.BaseSocketClient.GuildAvailable">
   GuildAvailable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1090"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1092"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a guild becomes available.</p>
@@ -1537,13 +1534,13 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_GuildAvailable_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a guild becomes available. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
-</p>
+        This event is fired when a guild becomes available. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+    </p>
 <p>
-    The guild that becomes available is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-</p>
+        The guild that becomes available is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    </p>
 </div>
 
 
@@ -1552,7 +1549,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GuildMemberOffline" data-uid="Kook.WebSocket.BaseSocketClient.GuildMemberOffline">
   GuildMemberOffline
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L788"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L790"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a guild member is offline.</p>
@@ -1578,20 +1575,20 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_GuildMemberOffline_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a guild member is offline. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> as its parameter.
-</p>
+        This event is fired when a guild member is offline. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> as its parameter.
+    </p>
 <p>
-    The guild member that is offline is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
-    presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The guild member that is offline is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
+        presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    The time when the guild member is offline is passed into the event handler parameter as
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>.
-</p>
+        The time when the guild member is offline is passed into the event handler parameter as
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>.
+    </p>
 </div>
 
 
@@ -1600,7 +1597,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GuildMemberOnline" data-uid="Kook.WebSocket.BaseSocketClient.GuildMemberOnline">
   GuildMemberOnline
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L762"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L764"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a guild member is online.</p>
@@ -1626,20 +1623,20 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_GuildMemberOnline_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a guild member is online. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> as its parameter.
-</p>
+        This event is fired when a guild member is online. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> as its parameter.
+    </p>
 <p>
-    The guild member that is online is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
-    presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The guild member that is online is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
+        presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    The time when the guild member is online is passed into the event handler parameter as
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>.
-</p>
+        The time when the guild member is online is passed into the event handler parameter as
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>.
+    </p>
 </div>
 
 
@@ -1648,7 +1645,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GuildMemberUpdated" data-uid="Kook.WebSocket.BaseSocketClient.GuildMemberUpdated">
   GuildMemberUpdated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L736"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L738"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a guild member is updated.</p>
@@ -1674,27 +1671,27 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_GuildMemberUpdated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a guild member is updated. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    and a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> as its parameter.
-</p>
+        This event is fired when a guild member is updated. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        and a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> as its parameter.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        It is not possible to retrieve the guild member via
-        <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original guild member cannot be retrieved by
-        Kook after the guild member has been updated.
-    </p></div>
-    The guild member that is updated is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
-    presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            It is not possible to retrieve the guild member via
+            <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original guild member cannot be retrieved by
+            Kook after the guild member has been updated.
+        </p></div>
+        The guild member that is updated is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
+        presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    
 <p>
-    The guild member that is updated is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
-    presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The guild member that is updated is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
+        presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 </div>
 
 
@@ -1703,7 +1700,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GuildUnavailable" data-uid="Kook.WebSocket.BaseSocketClient.GuildUnavailable">
   GuildUnavailable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a guild becomes unavailable.</p>
@@ -1729,13 +1726,13 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_GuildUnavailable_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a guild becomes unavailable. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
-</p>
+        This event is fired when a guild becomes unavailable. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+    </p>
 <p>
-    The guild that becomes unavailable is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-</p>
+        The guild that becomes unavailable is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    </p>
 </div>
 
 
@@ -1744,7 +1741,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_GuildUpdated" data-uid="Kook.WebSocket.BaseSocketClient.GuildUpdated">
   GuildUpdated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1071"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1073"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a guild is updated.</p>
@@ -1770,18 +1767,18 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_GuildUpdated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a guild is updated. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>,
-    and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
-</p>
+        This event is fired when a guild is updated. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>,
+        and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+    </p>
 <p>
-    The guild before the update is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-</p>
+        The guild before the update is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    </p>
 <p>
-    The guild after the update is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-</p>
+        The guild after the update is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    </p>
 </div>
 
 
@@ -1790,7 +1787,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_JoinedGuild" data-uid="Kook.WebSocket.BaseSocketClient.JoinedGuild">
   JoinedGuild
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1023"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1025"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when the connected account joins a guild.</p>
@@ -1816,13 +1813,13 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_JoinedGuild_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when the connected account joins a guild. The event handler must
-    return a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
-</p>
+        This event is fired when the connected account joins a guild. The event handler must
+        return a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+    </p>
 <p>
-    The guild where the account joins is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-</p>
+        The guild where the account joins is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    </p>
 </div>
 
 
@@ -1831,7 +1828,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_LeftGuild" data-uid="Kook.WebSocket.BaseSocketClient.LeftGuild">
   LeftGuild
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1047"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1049"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when the connected account leaves a guild.</p>
@@ -1857,18 +1854,18 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_LeftGuild_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when the connected account leaves a guild. The event handler must
-    return a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
-</p>
+        This event is fired when the connected account leaves a guild. The event handler must
+        return a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        This parameter must be accessed within the current thread context. After
-        waiting for completion of the task in this asynchronous event, the object
-        passed to it will be disposed.
-    </p></div>
-    The guild where the account leaves is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            This parameter must be accessed within the current thread context. After
+            waiting for completion of the task in this asynchronous event, the object
+            passed to it will be disposed.
+        </p></div>
+        The guild where the account leaves is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    
 </div>
 
 
@@ -1877,7 +1874,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_MessageButtonClicked" data-uid="Kook.WebSocket.BaseSocketClient.MessageButtonClicked">
   MessageButtonClicked
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L1150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a button is clicked in a card message.</p>
@@ -1903,29 +1900,28 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_MessageButtonClicked_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a button is clicked in a card message. The event handler must
-    return a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <code>string</code>,
-    a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    a <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
-</p>
+        This event is fired when a button is clicked in a card message. The event handler must
+        return a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <code>string</code>,
+        a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        a <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+    </p>
 <p>
-    The button value is passed into the event handler parameter as <code>string</code>.
-</p>
+        The button value is passed into the event handler parameter as <code>string</code>.
+    </p>
 <p>
-    The users who clicked the button is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user
-    presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The users who clicked the button is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user
+        presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the card message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>
-</p>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the card message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></p>
 <p>
-    The channel where the button is clicked is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>.
-</p>
+        The channel where the button is clicked is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>.
+    </p>
 </div>
 
 
@@ -1934,7 +1930,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_MessageDeleted" data-uid="Kook.WebSocket.BaseSocketClient.MessageDeleted">
   MessageDeleted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L279"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a message is deleted.</p>
@@ -1960,25 +1956,25 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_MessageDeleted_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a message is deleted. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameter.
-</p>
+        This event is fired when a message is deleted. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameter.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        It is not possible to retrieve the message via
-        <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the message cannot be retrieved by Kook
-        after the message has been deleted.
-    </p></div>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the deleted message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            It is not possible to retrieve the message via
+            <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the message cannot be retrieved by Kook
+            after the message has been deleted.
+        </p></div>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the deleted message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    
 <p>
-    The source channel of the removed message will be passed into the
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
-</p>
+        The source channel of the removed message will be passed into the
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
+    </p>
 </div>
 
 
@@ -1987,7 +1983,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_MessagePinned" data-uid="Kook.WebSocket.BaseSocketClient.MessagePinned">
   MessagePinned
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L357"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L359"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a message is pinned.</p>
@@ -1995,7 +1991,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;SocketMessage, Guid&gt;, Cacheable&lt;SocketMessage, Guid&gt;, SocketTextChannel, Cacheable&lt;SocketGuildUser, ulong&gt;, Task&gt; MessagePinned</code></pre>
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;IMessage, Guid&gt;, SocketTextChannel, Cacheable&lt;SocketGuildUser, ulong&gt;, Task&gt; MessagePinned</code></pre>
   </div>
 
 
@@ -2005,7 +2001,7 @@ found.</p>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -2013,37 +2009,37 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_MessagePinned_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a message is pinned. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>,
-    and <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameters.
-</p>
+        This event is fired when a message is pinned. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>,
+        and <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameters.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        It is not possible to retrieve the message via
-        <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original message cannot be retrieved by
-        Kook after the message has been updated.
-    </p></div>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            It is not possible to retrieve the message via
+            <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original message cannot be retrieved by
+            Kook after the message has been updated.
+        </p></div>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    
 <p>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the pinned message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-</p>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the pinned message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    </p>
 <p>
-    The source channel of the updated message will be passed into the
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
-</p>
+        The source channel of the updated message will be passed into the
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
+    </p>
 <p>
-    The guild member that pinned this message is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
-    presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The guild member that pinned this message is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
+        presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 </div>
 
 
@@ -2052,7 +2048,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_MessageReceived" data-uid="Kook.WebSocket.BaseSocketClient.MessageReceived">
   MessageReceived
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L248"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a message is received.</p>
@@ -2078,24 +2074,24 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_MessageReceived_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a message is received. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, a
-    <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, and a <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameter.
-</p>
+        This event is fired when a message is received. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, a
+        <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, and a <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameter.
+    </p>
 <p>
-    The message that is sent to the client is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>. This message may be a system message (i.e.
-    <a class="xref" href="Kook.WebSocket.SocketSystemMessage.html">SocketSystemMessage</a>) or a user message (i.e. <a class="xref" href="Kook.WebSocket.SocketUserMessage.html">SocketUserMessage</a>. See the
-    derived classes of <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> for more details.
-</p>
+        The message that is sent to the client is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>. This message may be a system message (i.e.
+        <a class="xref" href="Kook.WebSocket.SocketSystemMessage.html">SocketSystemMessage</a>) or a user message (i.e. <a class="xref" href="Kook.WebSocket.SocketUserMessage.html">SocketUserMessage</a>. See the
+        derived classes of <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a> for more details.
+    </p>
 <p>
-    The guild member that sent this message is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>.
-</p>
+        The guild member that sent this message is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>.
+    </p>
 <p>
-    The source channel of the removed message will be passed into the
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
-</p>
+        The source channel of the removed message will be passed into the
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
+    </p>
 </div>
 
 
@@ -2104,7 +2100,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_MessageUnpinned" data-uid="Kook.WebSocket.BaseSocketClient.MessageUnpinned">
   MessageUnpinned
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L400"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L402"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a message is unpinned.</p>
@@ -2112,7 +2108,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;SocketMessage, Guid&gt;, Cacheable&lt;SocketMessage, Guid&gt;, SocketTextChannel, Cacheable&lt;SocketGuildUser, ulong&gt;, Task&gt; MessageUnpinned</code></pre>
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;IMessage, Guid&gt;, SocketTextChannel, Cacheable&lt;SocketGuildUser, ulong&gt;, Task&gt; MessageUnpinned</code></pre>
   </div>
 
 
@@ -2122,7 +2118,7 @@ found.</p>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -2130,37 +2126,37 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_MessageUnpinned_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a message is unpinned. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>,
-    and <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameters.
-</p>
+        This event is fired when a message is unpinned. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>,
+        and <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameters.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        It is not possible to retrieve the message via
-        <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original message cannot be retrieved by
-        Kook after the message has been updated.
-    </p></div>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            It is not possible to retrieve the message via
+            <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original message cannot be retrieved by
+            Kook after the message has been updated.
+        </p></div>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    
 <p>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the unpinned message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-</p>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the unpinned message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    </p>
 <p>
-    The source channel of the updated message will be passed into the
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
-</p>
+        The source channel of the updated message will be passed into the
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
+    </p>
 <p>
-    The guild member that unpinned this message is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
-    presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The guild member that unpinned this message is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the guild member
+        presents in the cache; otherwise, in event that the guild member cannot be retrieved, the ID of the guild member
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 </div>
 
 
@@ -2169,7 +2165,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_MessageUpdated" data-uid="Kook.WebSocket.BaseSocketClient.MessageUpdated">
   MessageUpdated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L316"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a message is updated.</p>
@@ -2177,7 +2173,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;SocketMessage, Guid&gt;, Cacheable&lt;SocketMessage, Guid&gt;, SocketTextChannel, Task&gt; MessageUpdated</code></pre>
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;IMessage, Guid&gt;, Cacheable&lt;IMessage, Guid&gt;, SocketTextChannel, Task&gt; MessageUpdated</code></pre>
   </div>
 
 
@@ -2187,7 +2183,7 @@ found.</p>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -2195,31 +2191,31 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_MessageUpdated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a message is updated. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameters.
-</p>
+        This event is fired when a message is updated. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> as its parameters.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        It is not possible to retrieve the message via
-        <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original message cannot be retrieved by
-        Kook after the message has been updated.
-    </p></div>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            It is not possible to retrieve the message via
+            <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original message cannot be retrieved by
+            Kook after the message has been updated.
+        </p></div>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    
 <p>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the updated message; otherwise, in event
-    that the entire message entity cannot be retrieved, the ID of the message is preserved in the
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
-</p>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the updated message; otherwise, in event
+        that the entire message entity cannot be retrieved, the ID of the message is preserved in the
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>.
+    </p>
 <p>
-    The source channel of the updated message will be passed into the
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
-</p>
+        The source channel of the updated message will be passed into the
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
+    </p>
 </div>
 
 
@@ -2228,7 +2224,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_ReactionAdded" data-uid="Kook.WebSocket.BaseSocketClient.ReactionAdded">
   ReactionAdded
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a reaction is added to a channel message.</p>
@@ -2254,31 +2250,30 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_ReactionAdded_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a reaction is added to a message in a channel. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, an
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a
-    <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> as its parameter.
-</p>
+        This event is fired when a reaction is added to a message in a channel. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, an
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a
+        <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> as its parameter.
+    </p>
 <p>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>
-</p>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></p>
 <p>
-    The source channel of the reaction addition will be passed into the
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
-</p>
+        The source channel of the reaction addition will be passed into the
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
+    </p>
 <p>
-    The user who added the reaction will be passed into the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>.
-</p>
+        The user who added the reaction will be passed into the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>.
+    </p>
 <p>
-    The reaction that was added will be passed into the <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> parameter.
-</p>
+        The reaction that was added will be passed into the <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> parameter.
+    </p>
 <div class="NOTE"><h5>note</h5><p>
-    When fetching the reaction from this event, a user may not be provided under
-    <a class="xref" href="Kook.WebSocket.SocketReaction.html#Kook_WebSocket_SocketReaction_User">User</a>. Please see the documentation of the property for more
-    information.
-</p></div>
+        When fetching the reaction from this event, a user may not be provided under
+        <a class="xref" href="Kook.WebSocket.SocketReaction.html#Kook_WebSocket_SocketReaction_User">User</a>. Please see the documentation of the property for more
+        information.
+    </p></div>
 </div>
 
 
@@ -2287,7 +2282,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_ReactionRemoved" data-uid="Kook.WebSocket.BaseSocketClient.ReactionRemoved">
   ReactionRemoved
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a reaction is removed from a message.</p>
@@ -2313,31 +2308,30 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_ReactionRemoved_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a reaction is removed from a message in a channel. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, an
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a
-    <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> as its parameter.
-</p>
+        This event is fired when a reaction is removed from a message in a channel. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, an
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>, a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, and a
+        <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> as its parameter.
+    </p>
 <p>
-    If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
-    that the message cannot be retrieved, the ID of the message is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>
-</p>
+        If caching is enabled via <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>, the
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity will contain the original message; otherwise, in event
+        that the message cannot be retrieved, the ID of the message is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></p>
 <p>
-    The source channel of the reaction addition will be passed into the
-    <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
-</p>
+        The source channel of the reaction addition will be passed into the
+        <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> parameter.
+    </p>
 <p>
-    The user who removed the reaction will be passed into the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>.
-</p>
+        The user who removed the reaction will be passed into the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>.
+    </p>
 <p>
-    The reaction that was removed will be passed into the <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> parameter.
-</p>
+        The reaction that was removed will be passed into the <a class="xref" href="Kook.WebSocket.SocketReaction.html">SocketReaction</a> parameter.
+    </p>
 <div class="NOTE"><h5>note</h5><p>
-    When fetching the reaction from this event, a user may not be provided under
-    <a class="xref" href="Kook.WebSocket.SocketReaction.html#Kook_WebSocket_SocketReaction_User">User</a>. Please see the documentation of the property for more
-    information.
-</p></div>
+        When fetching the reaction from this event, a user may not be provided under
+        <a class="xref" href="Kook.WebSocket.SocketReaction.html#Kook_WebSocket_SocketReaction_User">User</a>. Please see the documentation of the property for more
+        information.
+    </p></div>
 </div>
 
 
@@ -2346,7 +2340,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_RoleCreated" data-uid="Kook.WebSocket.BaseSocketClient.RoleCreated">
   RoleCreated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L877"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L879"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a role is created.</p>
@@ -2372,13 +2366,13 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_RoleCreated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a role is created. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a> as its parameter.
-</p>
+        This event is fired when a role is created. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a> as its parameter.
+    </p>
 <p>
-    The role that is created is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>.
-</p>
+        The role that is created is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>.
+    </p>
 </div>
 
 
@@ -2387,7 +2381,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_RoleDeleted" data-uid="Kook.WebSocket.BaseSocketClient.RoleDeleted">
   RoleDeleted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L896"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L898"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a role is deleted.</p>
@@ -2413,13 +2407,13 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_RoleDeleted_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a role is deleted. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a> as its parameter.
-</p>
+        This event is fired when a role is deleted. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a> as its parameter.
+    </p>
 <p>
-    The role that is deleted is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>.
-</p>
+        The role that is deleted is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>.
+    </p>
 </div>
 
 
@@ -2428,7 +2422,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_RoleUpdated" data-uid="Kook.WebSocket.BaseSocketClient.RoleUpdated">
   RoleUpdated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L920"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L922"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a role is updated.</p>
@@ -2454,18 +2448,18 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_RoleUpdated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a role is deleted. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a> and a <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>
-    as its parameter.
-</p>
+        This event is fired when a role is deleted. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a> and a <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>
+        as its parameter.
+    </p>
 <p>
-    The original role entity is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>.
-</p>
+        The original role entity is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>.
+    </p>
 <p>
-    The updated role entity is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>.
-</p>
+        The updated role entity is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>.
+    </p>
 </div>
 
 
@@ -2474,7 +2468,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_UserBanned" data-uid="Kook.WebSocket.BaseSocketClient.UserBanned">
   UserBanned
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L609"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L611"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a user is banned from a guild.</p>
@@ -2482,7 +2476,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Func&lt;IReadOnlyCollection&lt;Cacheable&lt;SocketUser, ulong&gt;&gt;, Cacheable&lt;SocketUser, ulong&gt;, SocketGuild, string, Task&gt; UserBanned</code></pre>
+    <pre><code class="lang-csharp hljs">public event Func&lt;IReadOnlyCollection&lt;Cacheable&lt;SocketUser, ulong&gt;&gt;, Cacheable&lt;SocketGuildUser, ulong&gt;, SocketGuild, string?, Task&gt; UserBanned</code></pre>
   </div>
 
 
@@ -2492,7 +2486,7 @@ found.</p>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -2500,34 +2494,34 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_UserBanned_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a user is banned. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection&lt;T&gt;</a>, a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>,
-    a <code>string</code> and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
-</p>
+        This event is fired when a user is banned. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection&lt;T&gt;</a>, a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>,
+        a <code>string</code> and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        It is not possible to retrieve the user via
-        <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original user cannot be retrieved by
-        Kook after the user has been banned.
-    </p></div>
-    The users that are banned are passed into the event handler parameter as
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection&lt;T&gt;</a>, where <code>T</code> is <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    each of which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user presents in the cache; otherwise,
-    in event that the user cannot be retrieved, the ID of the user is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            It is not possible to retrieve the user via
+            <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original user cannot be retrieved by
+            Kook after the user has been banned.
+        </p></div>
+        The users that are banned are passed into the event handler parameter as
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection&lt;T&gt;</a>, where <code>T</code> is <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        each of which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user presents in the cache; otherwise,
+        in event that the user cannot be retrieved, the ID of the user is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    
 <p>
-    The users who operated the bans is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user
-    presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The users who operated the bans is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the user
+        presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    The guild where the banning action takes place is passed in the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-</p>
+        The guild where the banning action takes place is passed in the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    </p>
 <p>
-    The reason of the ban is passed into the event handler parameter as <code>string</code>.
-</p>
+        The reason of the ban is passed into the event handler parameter as <code>string</code>.
+    </p>
 </div>
 
 
@@ -2536,7 +2530,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_UserConnected" data-uid="Kook.WebSocket.BaseSocketClient.UserConnected">
   UserConnected
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L823"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L825"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a user connected to a voice channel.</p>
@@ -2562,25 +2556,25 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_UserConnected_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a user connected to a voice channel. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    a <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>, a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>
-    as its parameter.
-</p>
+        This event is fired when a user connected to a voice channel. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        a <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>, a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>
+        as its parameter.
+    </p>
 <p>
-    The user that connected to a voice channel is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the user
-    presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The user that connected to a voice channel is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the user
+        presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    The voice channel that the user connected to is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>.
-</p>
+        The voice channel that the user connected to is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>.
+    </p>
 <p>
-    The time when the user is offline is passed into the event handler parameter as
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>.
-</p>
+        The time when the user is offline is passed into the event handler parameter as
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>.
+    </p>
 </div>
 
 
@@ -2589,7 +2583,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_UserDisconnected" data-uid="Kook.WebSocket.BaseSocketClient.UserDisconnected">
   UserDisconnected
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L854"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L856"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a user disconnected to a voice channel.</p>
@@ -2615,25 +2609,25 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_UserDisconnected_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a user disconnected to a voice channel. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    a <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>, a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>
-    as its parameter.
-</p>
+        This event is fired when a user disconnected to a voice channel. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        a <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>, a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>
+        as its parameter.
+    </p>
 <p>
-    The user that disconnected to a voice channel is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the user
-    presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The user that disconnected to a voice channel is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the user
+        presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    The voice channel that the user disconnected to is passed into the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>.
-</p>
+        The voice channel that the user disconnected to is passed into the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>.
+    </p>
 <p>
-    The time when the user is offline is passed into the event handler parameter as
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>.
-</p>
+        The time when the user is offline is passed into the event handler parameter as
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>.
+    </p>
 </div>
 
 
@@ -2642,7 +2636,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_UserJoined" data-uid="Kook.WebSocket.BaseSocketClient.UserJoined">
   UserJoined
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L542"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L544"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a user joins a guild.</p>
@@ -2650,7 +2644,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Func&lt;SocketGuildUser, DateTimeOffset, Task&gt; UserJoined</code></pre>
+    <pre><code class="lang-csharp hljs">public event Func&lt;Cacheable&lt;SocketGuildUser, ulong&gt;, DateTimeOffset, Task&gt; UserJoined</code></pre>
   </div>
 
 
@@ -2660,7 +2654,7 @@ found.</p>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -2668,19 +2662,19 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_UserJoined_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    It is reported that this event will not be fired if a guild contains more than 2000 members.
-</p></div>
+        It is reported that this event will not be fired if a guild contains more than 2000 members.
+    </p></div>
 <p>
-    This event is fired when a user joins a guild. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>
-    as its parameters.
-</p>
+        This event is fired when a user joins a guild. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>
+        as its parameters.
+    </p>
 <p>
-    The joined user will be passed into the <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> parameter.
-</p>
+        The joined user will be passed into the <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> parameter.
+    </p>
 <p>
-    The time at which the user joined the guild will be passed into the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> parameter.
-</p>
+        The time at which the user joined the guild will be passed into the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> parameter.
+    </p>
 </div>
 
 
@@ -2689,7 +2683,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_UserLeft" data-uid="Kook.WebSocket.BaseSocketClient.UserLeft">
   UserLeft
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L569"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L571"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a user leaves a guild.</p>
@@ -2715,21 +2709,21 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_UserLeft_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-    It is reported that this event will not be fired if a guild contains more than 2000 members.
-</p></div>
+        It is reported that this event will not be fired if a guild contains more than 2000 members.
+    </p></div>
 <p>
-    This event is fired when a user leaves a guild. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>
-    as its parameters.
-</p>
+        This event is fired when a user leaves a guild. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>
+        as its parameters.
+    </p>
 <p>
-    If the left user presents in the cache, the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity
-    will contain the left user; otherwise, in event that the user cannot be retrieved,
-    the ID of the left user is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        If the left user presents in the cache, the <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> entity
+        will contain the left user; otherwise, in event that the user cannot be retrieved,
+        the ID of the left user is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    The time at which the user left the guild will be passed into the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> parameter.
-</p>
+        The time at which the user left the guild will be passed into the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> parameter.
+    </p>
 </div>
 
 
@@ -2738,7 +2732,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_UserUnbanned" data-uid="Kook.WebSocket.BaseSocketClient.UserUnbanned">
   UserUnbanned
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L646"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L648"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a user is unbanned from a guild.</p>
@@ -2746,7 +2740,7 @@ found.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Func&lt;IReadOnlyCollection&lt;Cacheable&lt;SocketUser, ulong&gt;&gt;, Cacheable&lt;SocketUser, ulong&gt;, SocketGuild, Task&gt; UserUnbanned</code></pre>
+    <pre><code class="lang-csharp hljs">public event Func&lt;IReadOnlyCollection&lt;Cacheable&lt;SocketUser, ulong&gt;&gt;, Cacheable&lt;SocketGuildUser, ulong&gt;, SocketGuild, Task&gt; UserUnbanned</code></pre>
   </div>
 
 
@@ -2756,7 +2750,7 @@ found.</p>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;&gt;, <a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -2764,31 +2758,31 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_UserUnbanned_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a user is unbanned. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection&lt;T&gt;</a>, a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>
-    and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
-</p>
+        This event is fired when a user is unbanned. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection&lt;T&gt;</a>, a <a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>
+        and a <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a> as its parameter.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        It is not possible to retrieve the user via
-        <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original user cannot be retrieved by
-        Kook after the user has been unbanned.
-    </p></div>
-    The users that are unbanned are passed into the event handler parameter as
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection&lt;T&gt;</a>, where <code>T</code> is <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    each of which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user presents in the cache; otherwise,
-    in event that the user cannot be retrieved, the ID of the user is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            It is not possible to retrieve the user via
+            <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original user cannot be retrieved by
+            Kook after the user has been unbanned.
+        </p></div>
+        The users that are unbanned are passed into the event handler parameter as
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection&lt;T&gt;</a>, where <code>T</code> is <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        each of which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user presents in the cache; otherwise,
+        in event that the user cannot be retrieved, the ID of the user is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    
 <p>
-    The users who operated the unbans is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user
-    presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The users who operated the unbans is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> when the user
+        presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 <p>
-    The guild where the unbanning action takes place is passed in the event handler parameter as
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
-</p>
+        The guild where the unbanning action takes place is passed in the event handler parameter as
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html">SocketGuild</a>.
+    </p>
 </div>
 
 
@@ -2797,7 +2791,7 @@ found.</p>
 
   <h3 id="Kook_WebSocket_BaseSocketClient_UserUpdated" data-uid="Kook.WebSocket.BaseSocketClient.UserUpdated">
   UserUpdated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L679"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L681"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fired when a user is updated.</p>
@@ -2823,27 +2817,27 @@ found.</p>
 
   <h4 class="section" id="Kook_WebSocket_BaseSocketClient_UserUpdated_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
-    This event is fired when a user is updated. The event handler must return a
-    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
-    and a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> as its parameter.
-</p>
+        This event is fired when a user is updated. The event handler must return a
+        <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and accept a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>,
+        and a <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a> as its parameter.
+    </p>
 <p>
-    <div class="IMPORTANT"><h5>important</h5><p>
-        It is not possible to retrieve the user via
-        <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original user cannot be retrieved by
-        Kook after the user has been updated.
-    </p></div>
-    The user that is updated is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user
-    presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-
+  <div class="IMPORTANT"><h5>important</h5><p>
+            It is not possible to retrieve the user via
+            <a class="xref" href="Kook.Cacheable-2.html#Kook_Cacheable_2_DownloadAsync">DownloadAsync()</a>; the original user cannot be retrieved by
+            Kook after the user has been updated.
+        </p></div>
+        The user that is updated is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains the original <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user
+        presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    
 <p>
-    The user that is updated is passed into the event handler parameter as
-    <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user
-    presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
-    is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
-</p>
+        The user that is updated is passed into the event handler parameter as
+        <a class="xref" href="Kook.Cacheable-2.html">Cacheable&lt;TEntity, TId&gt;</a>, which contains a <a class="xref" href="Kook.WebSocket.SocketUser.html">SocketUser</a> when the user
+        presents in the cache; otherwise, in event that the user cannot be retrieved, the ID of the user
+        is preserved in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.
+    </p>
 </div>
 
 
@@ -2853,7 +2847,7 @@ found.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L3" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/BaseSocketClient.Event.cs/#L5" class="edit-link">Edit this page</a>
         </div>
 
 

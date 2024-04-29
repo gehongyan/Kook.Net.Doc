@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents an image animation poke resource."><meta property="og:title" content="Struct ImageAnimationPokeResource | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_ImageAnimationPokeResource" data-uid="Kook.ImageAnimationPokeResource" class="text-break">
-Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -153,10 +153,10 @@ Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title
 
   <h3 id="Kook_ImageAnimationPokeResource_Duration" data-uid="Kook.ImageAnimationPokeResource.Duration">
   Duration
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets how long this animation animation should last filling the full screen.</p>
+  <div class="markdown level1 summary"><p>Gets how long this animation should last filling the full screen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -185,7 +185,7 @@ Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title
 
   <h3 id="Kook_ImageAnimationPokeResource_Height" data-uid="Kook.ImageAnimationPokeResource.Height">
   Height
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the height of the image animation.</p>
@@ -217,7 +217,7 @@ Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title
 
   <h3 id="Kook_ImageAnimationPokeResource_Percent" data-uid="Kook.ImageAnimationPokeResource.Percent">
   Percent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>// TODO: To be documented.</p>
@@ -225,7 +225,7 @@ Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly double Percent { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly decimal Percent { get; }</code></pre>
   </div>
 
 
@@ -234,7 +234,7 @@ Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
     <dd></dd>
   </dl>
 
@@ -249,7 +249,7 @@ Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title
 
   <h3 id="Kook_ImageAnimationPokeResource_Resources" data-uid="Kook.ImageAnimationPokeResource.Resources">
   Resources
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the resources of the image animation.</p>
@@ -281,7 +281,7 @@ Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title
 
   <h3 id="Kook_ImageAnimationPokeResource_Type" data-uid="Kook.ImageAnimationPokeResource.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the type of the poke resource.</p>
@@ -313,7 +313,7 @@ Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title
 
   <h3 id="Kook_ImageAnimationPokeResource_Width" data-uid="Kook.ImageAnimationPokeResource.Width">
   Width
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the width of the image animation.</p>
@@ -345,7 +345,7 @@ Struct ImageAnimationPokeResource  <a class="header-action link-secondary" title
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Pokes/PokeResources/ImageAnimationPokeResource.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Represents a generic direct-message channel."><meta property="og:title" content="Interface IDMChannel | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IDMChannel" data-uid="Kook.IDMChannel" class="text-break">
-Interface IDMChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IDMChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -190,7 +190,7 @@ Interface IDMChannel  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_IDMChannel_ChatCode" data-uid="Kook.IDMChannel.ChatCode">
   ChatCode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the chat code of the direct-message channel.</p>
@@ -223,7 +223,7 @@ Interface IDMChannel  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_IDMChannel_Id" data-uid="Kook.IDMChannel.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the unique identifier of this direct-message channel.</p>
@@ -256,7 +256,7 @@ Interface IDMChannel  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_IDMChannel_Recipient" data-uid="Kook.IDMChannel.Recipient">
   Recipient
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the recipient of all messages in this channel.</p>
@@ -292,8 +292,8 @@ Interface IDMChannel  <a class="header-action link-secondary" title="View source
   <a id="Kook_IDMChannel_CloseAsync_" data-uid="Kook.IDMChannel.CloseAsync*"></a>
 
   <h3 id="Kook_IDMChannel_CloseAsync_Kook_RequestOptions_" data-uid="Kook.IDMChannel.CloseAsync(Kook.RequestOptions)">
-  CloseAsync(RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  CloseAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Closes this private channel, removing it from your channel list.</p>
@@ -301,7 +301,7 @@ Interface IDMChannel  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task CloseAsync(RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task CloseAsync(RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -331,8 +331,8 @@ Interface IDMChannel  <a class="header-action link-secondary" title="View source
   <a id="Kook_IDMChannel_SendCardAsync_" data-uid="Kook.IDMChannel.SendCardAsync*"></a>
 
   <h3 id="Kook_IDMChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.IDMChannel.SendCardAsync(Kook.ICard,Kook.IQuote,Kook.RequestOptions)">
-  SendCardAsync(ICard, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  SendCardAsync(ICard, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
@@ -340,7 +340,7 @@ Interface IDMChannel  <a class="header-action link-secondary" title="View source
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardAsync(ICard card, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardAsync(ICard card, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -374,8 +374,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_IDMChannel_SendCardsAsync_" data-uid="Kook.IDMChannel.SendCardsAsync*"></a>
 
   <h3 id="Kook_IDMChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.IDMChannel.SendCardsAsync(System.Collections.Generic.IEnumerable{Kook.ICard},Kook.IQuote,Kook.RequestOptions)">
-  SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
@@ -383,7 +383,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardsAsync(IEnumerable&lt;ICard&gt; cards, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendCardsAsync(IEnumerable&lt;ICard&gt; cards, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -417,8 +417,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_IDMChannel_SendFileAsync_" data-uid="Kook.IDMChannel.SendFileAsync*"></a>
 
   <h3 id="Kook_IDMChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.IDMChannel.SendFileAsync(Kook.FileAttachment,Kook.IQuote,Kook.RequestOptions)">
-  SendFileAsync(FileAttachment, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  SendFileAsync(FileAttachment, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
@@ -426,7 +426,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(FileAttachment attachment, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(FileAttachment attachment, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -460,8 +460,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_IDMChannel_SendFileAsync_" data-uid="Kook.IDMChannel.SendFileAsync*"></a>
 
   <h3 id="Kook_IDMChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.IDMChannel.SendFileAsync(System.IO.Stream,System.String,Kook.AttachmentType,Kook.IQuote,Kook.RequestOptions)">
-  SendFileAsync(Stream, string, AttachmentType, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  SendFileAsync(Stream, string, AttachmentType, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
@@ -469,14 +469,14 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(Stream stream, string fileName = null, AttachmentType type = AttachmentType.File, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(Stream stream, string filename, AttachmentType type = AttachmentType.File, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
     <dd></dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
     <dd></dd>
@@ -507,8 +507,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_IDMChannel_SendFileAsync_" data-uid="Kook.IDMChannel.SendFileAsync*"></a>
 
   <h3 id="Kook_IDMChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.IDMChannel.SendFileAsync(System.String,System.String,Kook.AttachmentType,Kook.IQuote,Kook.RequestOptions)">
-  SendFileAsync(string, string, AttachmentType, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  SendFileAsync(string, string?, AttachmentType, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
@@ -516,14 +516,14 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(string path, string fileName = null, AttachmentType type = AttachmentType.File, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendFileAsync(string path, string? filename = null, AttachmentType type = AttachmentType.File, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
     <dd></dd>
@@ -554,8 +554,8 @@ contains the identifier and timestamp of the sent message.</p>
   <a id="Kook_IDMChannel_SendTextAsync_" data-uid="Kook.IDMChannel.SendTextAsync*"></a>
 
   <h3 id="Kook_IDMChannel_SendTextAsync_System_String_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.IDMChannel.SendTextAsync(System.String,Kook.IQuote,Kook.RequestOptions)">
-  SendTextAsync(string, IQuote, RequestOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  SendTextAsync(string, IQuote?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends a text message to this message channel.</p>
@@ -563,7 +563,7 @@ contains the identifier and timestamp of the sent message.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendTextAsync(string text, IQuote quote = null, RequestOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Cacheable&lt;IUserMessage, Guid&gt;&gt; SendTextAsync(string text, IQuote? quote = null, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -598,7 +598,7 @@ contains the identifier and timestamp of the sent message.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IDMChannel.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

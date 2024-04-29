@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   <meta property="og:description" content="Provides the information of a module."><meta property="og:title" content="Class ModuleInfo | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Commands_ModuleInfo" data-uid="Kook.Commands.ModuleInfo" class="text-break">
-Class ModuleInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class ModuleInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -164,7 +164,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Aliases" data-uid="Kook.Commands.ModuleInfo.Aliases">
   Aliases
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a read-only list of aliases associated with this module.</p>
@@ -196,7 +196,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Attributes" data-uid="Kook.Commands.ModuleInfo.Attributes">
   Attributes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a read-only list of attributes that apply to this module.</p>
@@ -228,7 +228,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Commands" data-uid="Kook.Commands.ModuleInfo.Commands">
   Commands
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a read-only list of commands associated with this module.</p>
@@ -260,7 +260,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Group" data-uid="Kook.Commands.ModuleInfo.Group">
   Group
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the group name (main prefix) of this module.</p>
@@ -268,7 +268,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Group { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Group { get; }</code></pre>
   </div>
 
 
@@ -292,7 +292,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_IsSubmodule" data-uid="Kook.Commands.ModuleInfo.IsSubmodule">
   IsSubmodule
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a value that indicates whether this module is a submodule or not.</p>
@@ -324,7 +324,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Name" data-uid="Kook.Commands.ModuleInfo.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of this module.</p>
@@ -332,7 +332,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Name { get; }</code></pre>
   </div>
 
 
@@ -356,7 +356,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Parent" data-uid="Kook.Commands.ModuleInfo.Parent">
   Parent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the parent module of this submodule if applicable.</p>
@@ -364,7 +364,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ModuleInfo Parent { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ModuleInfo? Parent { get; }</code></pre>
   </div>
 
 
@@ -388,7 +388,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Preconditions" data-uid="Kook.Commands.ModuleInfo.Preconditions">
   Preconditions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a read-only list of preconditions that apply to this module.</p>
@@ -420,7 +420,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Remarks" data-uid="Kook.Commands.ModuleInfo.Remarks">
   Remarks
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the remarks of this module.</p>
@@ -428,7 +428,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Remarks { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Remarks { get; }</code></pre>
   </div>
 
 
@@ -452,7 +452,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Service" data-uid="Kook.Commands.ModuleInfo.Service">
   Service
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the command service associated with this module.</p>
@@ -484,7 +484,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Submodules" data-uid="Kook.Commands.ModuleInfo.Submodules">
   Submodules
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a read-only list of submodules associated with this module.</p>
@@ -516,7 +516,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_Commands_ModuleInfo_Summary" data-uid="Kook.Commands.ModuleInfo.Summary">
   Summary
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the summary of this module.</p>
@@ -524,7 +524,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Summary { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Summary { get; }</code></pre>
   </div>
 
 
@@ -548,7 +548,7 @@ Class ModuleInfo  <a class="header-action link-secondary" title="View source" hr
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.7.0/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Info/ModuleInfo.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 
