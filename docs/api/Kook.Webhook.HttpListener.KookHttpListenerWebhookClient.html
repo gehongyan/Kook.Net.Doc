@@ -1,0 +1,512 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class KookHttpListenerWebhookClient | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KookHttpListenerWebhookClient | Kook.Net 文档 ">
+      
+      <meta name="description" content="Represents a KOOK webhook client using HTTP listener.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Webhook_HttpListener_KookHttpListenerWebhookClient.md&amp;value=---%0Auid%3A%20Kook.Webhook.HttpListener.KookHttpListenerWebhookClient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  <meta property="og:description" content="Represents a KOOK webhook client using HTTP listener."><meta property="og:title" content="Class KookHttpListenerWebhookClient | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo/Logo_Small.png" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient">
+
+
+
+  <h1 id="Kook_Webhook_HttpListener_KookHttpListenerWebhookClient" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient" class="text-break">
+Class KookHttpListenerWebhookClient  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookClient.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a>.<a class="xref" href="Kook.Webhook.html">Webhook</a>.<a class="xref" href="Kook.Webhook.HttpListener.html">HttpListener</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Webhook.HttpListener.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a KOOK webhook client using HTTP listener.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KookHttpListenerWebhookClient : KookWebhookClient, IKookClient, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Kook.Rest.BaseKookClient.html">BaseKookClient</a></div>
+      <div><a class="xref" href="Kook.WebSocket.BaseSocketClient.html">BaseSocketClient</a></div>
+      <div><a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a></div>
+      <div><a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a></div>
+      <div><span class="xref">KookHttpListenerWebhookClient</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Kook.IKookClient.html">IKookClient</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Kook.Webhook.KookWebhookClient.html#Kook_Webhook_KookWebhookClient_ConnectionState">KookWebhookClient.ConnectionState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_Rest">KookSocketClient.Rest</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_Latency">KookSocketClient.Latency</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_Guilds">KookSocketClient.Guilds</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DMChannels">KookSocketClient.DMChannels</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_GetGuild_System_UInt64_">KookSocketClient.GetGuild(ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_GetChannel_System_UInt64_">KookSocketClient.GetChannel(ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_GetDMChannel_System_Guid_">KookSocketClient.GetDMChannel(Guid)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_GetDMChannel_System_UInt64_">KookSocketClient.GetDMChannel(ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_GetChannelAsync_System_UInt64_Kook_RequestOptions_">KookSocketClient.GetChannelAsync(ulong, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_GetDMChannelAsync_System_Guid_Kook_RequestOptions_">KookSocketClient.GetDMChannelAsync(Guid, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_GetDMChannelsAsync_Kook_RequestOptions_">KookSocketClient.GetDMChannelsAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_GetUserAsync_System_UInt64_Kook_RequestOptions_">KookSocketClient.GetUserAsync(ulong, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_GetUser_System_UInt64_">KookSocketClient.GetUser(ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_GetUser_System_String_System_String_">KookSocketClient.GetUser(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadUsersAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">KookSocketClient.DownloadUsersAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadVoiceStatesAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">KookSocketClient.DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">KookSocketClient.DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_Connected">KookSocketClient.Connected</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_Disconnected">KookSocketClient.Disconnected</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_Ready">KookSocketClient.Ready</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_LatencyUpdated">KookSocketClient.LatencyUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_BaseConfig">BaseSocketClient.BaseConfig</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_CurrentUser">BaseSocketClient.CurrentUser</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_ChannelCreated">BaseSocketClient.ChannelCreated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_ChannelDestroyed">BaseSocketClient.ChannelDestroyed</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_ChannelUpdated">BaseSocketClient.ChannelUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_ReactionAdded">BaseSocketClient.ReactionAdded</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_ReactionRemoved">BaseSocketClient.ReactionRemoved</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DirectReactionAdded">BaseSocketClient.DirectReactionAdded</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DirectReactionRemoved">BaseSocketClient.DirectReactionRemoved</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_MessageReceived">BaseSocketClient.MessageReceived</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_MessageDeleted">BaseSocketClient.MessageDeleted</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_MessageUpdated">BaseSocketClient.MessageUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_MessagePinned">BaseSocketClient.MessagePinned</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_MessageUnpinned">BaseSocketClient.MessageUnpinned</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DirectMessageReceived">BaseSocketClient.DirectMessageReceived</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DirectMessageDeleted">BaseSocketClient.DirectMessageDeleted</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DirectMessageUpdated">BaseSocketClient.DirectMessageUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserJoined">BaseSocketClient.UserJoined</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserLeft">BaseSocketClient.UserLeft</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserBanned">BaseSocketClient.UserBanned</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserUnbanned">BaseSocketClient.UserUnbanned</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserUpdated">BaseSocketClient.UserUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_CurrentUserUpdated">BaseSocketClient.CurrentUserUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildMemberUpdated">BaseSocketClient.GuildMemberUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildMemberOnline">BaseSocketClient.GuildMemberOnline</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildMemberOffline">BaseSocketClient.GuildMemberOffline</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserVoiceStateUpdated">BaseSocketClient.UserVoiceStateUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserConnected">BaseSocketClient.UserConnected</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserDisconnected">BaseSocketClient.UserDisconnected</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_RoleCreated">BaseSocketClient.RoleCreated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_RoleDeleted">BaseSocketClient.RoleDeleted</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_RoleUpdated">BaseSocketClient.RoleUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_EmoteCreated">BaseSocketClient.EmoteCreated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_EmoteDeleted">BaseSocketClient.EmoteDeleted</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_EmoteUpdated">BaseSocketClient.EmoteUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_JoinedGuild">BaseSocketClient.JoinedGuild</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_LeftGuild">BaseSocketClient.LeftGuild</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildUpdated">BaseSocketClient.GuildUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildAvailable">BaseSocketClient.GuildAvailable</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildUnavailable">BaseSocketClient.GuildUnavailable</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_MessageButtonClicked">BaseSocketClient.MessageButtonClicked</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_DirectMessageButtonClicked">BaseSocketClient.DirectMessageButtonClicked</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_Log">BaseKookClient.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LoggedIn">BaseKookClient.LoggedIn</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LoggedOut">BaseKookClient.LoggedOut</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_SentRequest">BaseKookClient.SentRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LoginState">BaseKookClient.LoginState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_TokenType">BaseKookClient.TokenType</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_Dispose">BaseKookClient.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LoginAsync_Kook_TokenType_System_String_System_Boolean_">BaseKookClient.LoginAsync(TokenType, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Rest.BaseKookClient.html#Kook_Rest_BaseKookClient_LogoutAsync">BaseKookClient.LogoutAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Kook_Webhook_HttpListener_KookHttpListenerWebhookClient__ctor_" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient.#ctor*"></a>
+
+  <h3 id="Kook_Webhook_HttpListener_KookHttpListenerWebhookClient__ctor_Kook_Webhook_HttpListener_KookHttpListenerWebhookConfig_" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient.#ctor(Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig)">
+  KookHttpListenerWebhookClient(KookHttpListenerWebhookConfig)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookClient.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KookHttpListenerWebhookClient(KookHttpListenerWebhookConfig config)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>config</code> <a class="xref" href="Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig.html">KookHttpListenerWebhookConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Kook_Webhook_HttpListener_KookHttpListenerWebhookClient_StartAsync_" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient.StartAsync*"></a>
+
+  <h3 id="Kook_Webhook_HttpListener_KookHttpListenerWebhookClient_StartAsync" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient.StartAsync">
+  StartAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookClient.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the WebSocket connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task StartAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous start operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Webhook_HttpListener_KookHttpListenerWebhookClient_StopAsync_" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient.StopAsync*"></a>
+
+  <h3 id="Kook_Webhook_HttpListener_KookHttpListenerWebhookClient_StopAsync" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient.StopAsync">
+  StopAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookClient.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the WebSocket connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task StopAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that represents the asynchronous stop operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookClient.cs/#L9" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Commands_MessageExtensions" data-uid="Kook.Commands.MessageExtensions" class="text-break">
-Class MessageExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class MessageExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Commands_MessageExtensions_HasCharPrefix_Kook_IUserMessage_System_Char_System_Int32__" data-uid="Kook.Commands.MessageExtensions.HasCharPrefix(Kook.IUserMessage,System.Char,System.Int32@)">
   HasCharPrefix(IUserMessage, char, ref int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether the message starts with the provided character.</p>
@@ -202,7 +202,7 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Commands_MessageExtensions_HasMentionPrefix_Kook_IUserMessage_Kook_IUser_System_Int32__" data-uid="Kook.Commands.MessageExtensions.HasMentionPrefix(Kook.IUserMessage,Kook.IUser,System.Int32@)">
   HasMentionPrefix(IUserMessage, IUser, ref int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether the message starts with the user's mention string.</p>
@@ -243,7 +243,7 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Commands_MessageExtensions_HasStringPrefix_Kook_IUserMessage_System_String_System_Int32__System_StringComparison_" data-uid="Kook.Commands.MessageExtensions.HasStringPrefix(Kook.IUserMessage,System.String,System.Int32@,System.StringComparison)">
   HasStringPrefix(IUserMessage, string, ref int, StringComparison)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether the message starts with the provided string.</p>
@@ -282,11 +282,53 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
 
 
 
+  <a id="Kook_Commands_MessageExtensions_TryExpandCardContent_" data-uid="Kook.Commands.MessageExtensions.TryExpandCardContent*"></a>
+
+  <h3 id="Kook_Commands_MessageExtensions_TryExpandCardContent_Kook_IUserMessage_System_String__" data-uid="Kook.Commands.MessageExtensions.TryExpandCardContent(Kook.IUserMessage,System.String@)">
+  TryExpandCardContent(IUserMessage, out string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to expand the content of the card into a single string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryExpandCardContent(this IUserMessage msg, out string? expandedContent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>msg</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
+    <dd><p>The message to expand the content of.</p>
+</dd>
+    <dt><code>expandedContent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The expanded content of the card.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the content was successfully expanded; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

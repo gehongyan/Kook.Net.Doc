@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>登录与启动 | Kook.Net 文档 </title>
+      <title>Namespace Kook.Webhook.AspNet | Kook.Net 文档 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="登录与启动 | Kook.Net 文档 ">
+      <meta name="title" content="Namespace Kook.Webhook.AspNet | Kook.Net 文档 ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/blob/master/docs/quick_reference/startup.md/#L1">
+      
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -37,9 +37,9 @@
         document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
       </script>
 
-  <meta property="og:description" content="预声明变量"><meta property="og:title" content="登录与启动 | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+  <meta property="og:title" content="Namespace Kook.Webhook.AspNet | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,105 +84,38 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Guides.QuickReference.Startup">
-<h1 id="登录与启动">登录与启动</h1>
+        <article data-uid="Kook.Webhook.AspNet">
 
-<p>预声明变量</p>
-<pre><code class="lang-csharp">readonly KookRestClient _restClient;
-readonly KookSocketClient _socketClient;
-</code></pre>
-<h3 id="rest-客户端">Rest 客户端</h3>
-<pre><code class="lang-csharp">// 使用默认配置创建 Rest 客户端
-_restClient = new KookRestClient();
-// 使用自定义配置创建 Rest 客户端
-_restClient = new KookRestClient(new KookRestConfig()
-{
-    // 请求头 Accept-Language
-    AcceptLanguage = &quot;zh-CN&quot;,
-    // 默认重试模式
-    DefaultRetryMode = RetryMode.AlwaysRetry,
-    // 默认超速回调
-    DefaultRatelimitCallback = info =&gt; Task.CompletedTask,
-    // 日志级别
-    LogLevel = LogSeverity.Info,
-    // 双向文稿格式化用户名
-    FormatUsersInBidirectionalUnicode = true,
-    // Rest 客户端提供程序
-    RestClientProvider = DefaultRestClientProvider.Instance
-});
+  <h1 id="Kook_Webhook_AspNet" data-uid="Kook.Webhook.AspNet" class="text-break">Namespace Kook.Webhook.AspNet</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
 
-// Token
-string token = null;
-// 登录
-await _restClient.LoginAsync(TokenType.Bot, token);
-// 登出
-await _restClient.LogoutAsync();
-</code></pre>
-<h3 id="websocket-客户端">WebSocket 客户端</h3>
-<pre><code class="lang-csharp">// 使用默认配置创建 WebSocket 客户端
-_socketClient = new KookRestClient();
-// 使用自定义配置创建 WebSocket 客户端
-_socketClient = new KookSocketClient(new KookRestConfig()
-{
-    // 请求头 Accept-Language
-    AcceptLanguage = &quot;zh-CN&quot;,
-    // 默认重试模式
-    DefaultRetryMode = RetryMode.AlwaysRetry,
-    // 默认超速回调
-    DefaultRatelimitCallback = info =&gt; Task.CompletedTask,
-    // 日志级别
-    LogLevel = LogSeverity.Info,
-    // 双向文稿格式化用户名
-    FormatUsersInBidirectionalUnicode = true,
-    // Rest 客户端提供程序
-    RestClientProvider = DefaultRestClientProvider.Instance,
-    // 显示指定网关地址
-    GatewayHost = null,
-    // 连接超时（毫秒）
-    ConnectionTimeout = 6000,
-    // 处理程序警告耗时阈值（毫秒）
-    HandlerTimeout = 3000,
-    // 消息缓存数量
-    MessageCacheSize = 10,
-    // WebSocket 客户端提供程序
-    WebSocketProvider = DefaultWebSocketProvider.Instance,
-    // UDP 客户端提供程序
-    UdpSocketProvider = DefaultUdpSocketProvider.Instance,
-    // 自动下载服务器用户信息
-    AlwaysDownloadUsers = false,
-    // 自动下载服务器用户语音状态信息
-    AlwaysDownloadVoiceStates = false,
-    // 自动下载服务器助力信息
-    AlwaysDownloadBoostSubscriptions = false,
-    // 等待服务器可用状态超时（毫秒）
-    MaxWaitBetweenGuildAvailablesBeforeReady = 10000,
-    // 最大获取新加入服务器信息重试次数
-    MaxJoinedGuildDataFetchingRetryTimes = 10,
-    // 获取新加入服务器信息重试延迟（毫秒）
-    JoinedGuildDataFetchingRetryDelay = 500
-});
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kook.Webhook.AspNet.KookAspNetWebhookClient.html">KookAspNetWebhookClient</a></dt>
+      <dd><p>Represents a KOOK webhook client using ASP.NET.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kook.Webhook.AspNet.KookAspNetWebhookConfig.html">KookAspNetWebhookConfig</a></dt>
+      <dd><p>Represents a KOOK webhook client configuration for ASP.NET.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Kook.Webhook.AspNet.KookWebhookClientExtension.html">KookWebhookClientExtension</a></dt>
+      <dd><p>Provides extension methods for Kook webhook client.</p>
+</dd>
+    </dl>
 
-// Token
-string token = null;
-// 登录
-await _socketClient.LoginAsync(TokenType.Bot, token);
-// 启动
-await _socketClient.StartAsync();
-// 停止
-await _socketClient.StopAsync();
-// 登出
-await _socketClient.LogoutAsync();
-// 登出
-await _socketClient.LogoutAsync();
-</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/quick_reference/startup.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
-        <div class="next-article d-print-none border-top" id="nextArticle"></div>
 
       </div>
 
