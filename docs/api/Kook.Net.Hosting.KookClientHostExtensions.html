@@ -1,0 +1,849 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class KookClientHostExtensions | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KookClientHostExtensions | Kook.Net 文档 ">
+      
+      <meta name="description" content="Provides extension methods for Kook.Net to host clients using the .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Net_Hosting_KookClientHostExtensions.md&amp;value=---%0Auid%3A%20Kook.Net.Hosting.KookClientHostExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  <meta property="og:description" content="Provides extension methods for Kook.Net to host clients using the IHost."><meta property="og:title" content="Class KookClientHostExtensions | Kook.Net 文档 "><meta property="og:site_name" content="Discord.Net Docs"><meta name="theme-color" content="#995EA7"><meta property="og:image" content="https://raw.githubusercontent.com/Discord-Net/Discord.Net/dev/docs/marketing/logo/PackageLogo.png"></head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo/Logo_Small.png" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.Net.Hosting.KookClientHostExtensions">
+
+
+
+  <h1 id="Kook_Net_Hosting_KookClientHostExtensions" data-uid="Kook.Net.Hosting.KookClientHostExtensions" class="text-break">
+Class KookClientHostExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a>.<a class="xref" href="Kook.Net.html">Net</a>.<a class="xref" href="Kook.Net.Hosting.html">Hosting</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Hosting.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides extension methods for Kook.Net to host clients using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihost">IHost</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class KookClientHostExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">KookClientHostExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_Kook_Rest_KookRestConfig_Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,Kook.Rest.KookRestConfig,Kook.TokenType,System.String,System.Boolean)">
+  AddHostedKookRestClient(IServiceCollection, KookRestConfig, TokenType, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
+the specified configuration action and login information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookRestClient(this IServiceCollection services, KookRestConfig config, TokenType tokenType, string token, bool validateToken = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>config</code> <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a></dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_Kook_Rest_KookRestConfig_System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,Kook.Rest.KookRestConfig,System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
+  AddHostedKookRestClient(IServiceCollection, KookRestConfig, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
+the specified configuration action and login information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookRestClient(this IServiceCollection services, KookRestConfig config, Func&lt;IServiceProvider, TokenType&gt; tokenType, Func&lt;IServiceProvider, string&gt; token, Func&lt;IServiceProvider, bool&gt;? validateToken = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>config</code> <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a></dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Kook_Rest_KookRestConfig__Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Kook.Rest.KookRestConfig},Kook.TokenType,System.String,System.Boolean)">
+  AddHostedKookRestClient(IServiceCollection, Action&lt;KookRestConfig&gt;, TokenType, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
+the specified configuration action and login information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookRestClient(this IServiceCollection services, Action&lt;KookRestConfig&gt; configure, TokenType tokenType, string token, bool validateToken = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>&gt;</dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Kook_Rest_KookRestConfig__System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Kook.Rest.KookRestConfig},System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
+  AddHostedKookRestClient(IServiceCollection, Action&lt;KookRestConfig&gt;, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
+the specified configuration action and login information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookRestClient(this IServiceCollection services, Action&lt;KookRestConfig&gt; configure, Func&lt;IServiceProvider, TokenType&gt; tokenType, Func&lt;IServiceProvider, string&gt; token, Func&lt;IServiceProvider, bool&gt;? validateToken = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>&gt;</dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_Kook_WebSocket_KookSocketConfig_Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,Kook.WebSocket.KookSocketConfig,Kook.TokenType,System.String,System.Boolean)">
+  AddHostedKookSocketClient(IServiceCollection, KookSocketConfig, TokenType, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
+the specified configuration action and login information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookSocketClient(this IServiceCollection services, KookSocketConfig config, TokenType tokenType, string token, bool validateToken = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>config</code> <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a></dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_Kook_WebSocket_KookSocketConfig_System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,Kook.WebSocket.KookSocketConfig,System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
+  AddHostedKookSocketClient(IServiceCollection, KookSocketConfig, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
+the specified configuration action and login information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookSocketClient(this IServiceCollection services, KookSocketConfig config, Func&lt;IServiceProvider, TokenType&gt; tokenType, Func&lt;IServiceProvider, string&gt; token, Func&lt;IServiceProvider, bool&gt;? validateToken = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>config</code> <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a></dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Kook_WebSocket_KookSocketConfig__Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Kook.WebSocket.KookSocketConfig},Kook.TokenType,System.String,System.Boolean)">
+  AddHostedKookSocketClient(IServiceCollection, Action&lt;KookSocketConfig&gt;, TokenType, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
+the specified configuration action and login information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookSocketClient(this IServiceCollection services, Action&lt;KookSocketConfig&gt; configure, TokenType tokenType, string token, bool validateToken = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>&gt;</dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Kook_WebSocket_KookSocketConfig__System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Kook.WebSocket.KookSocketConfig},System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
+  AddHostedKookSocketClient(IServiceCollection, Action&lt;KookSocketConfig&gt;, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
+the specified configuration action and login information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookSocketClient(this IServiceCollection services, Action&lt;KookSocketConfig&gt; configure, Func&lt;IServiceProvider, TokenType&gt; tokenType, Func&lt;IServiceProvider, string&gt; token, Func&lt;IServiceProvider, bool&gt;? validateToken = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>&gt;</dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider_Microsoft_Extensions_Options_IOptions___1____0__System_Action___1__Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,Microsoft.Extensions.Options.IOptions{``1},``0},System.Action{``1},Kook.TokenType,System.String,System.Boolean)">
+  AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(IServiceCollection, Func&lt;IServiceProvider, IOptions&lt;TConfig&gt;, TClient&gt;, Action&lt;TConfig&gt;, TokenType, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(this IServiceCollection services, Func&lt;IServiceProvider, IOptions&lt;TConfig&gt;, TClient&gt; clientFactory, Action&lt;TConfig&gt; configure, TokenType tokenType, string token, bool validateToken = true) where TClient : KookWebhookClient where TConfig : KookWebhookConfig</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>clientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;TConfig&gt;, TClient&gt;</dt>
+    <dd><p>The factory to create the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TConfig&gt;</dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TClient</code></dt>
+    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+</dd>
+    <dt><code>TConfig</code></dt>
+    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider_Microsoft_Extensions_Options_IOptions___1____0__System_Action___1__System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,Microsoft.Extensions.Options.IOptions{``1},``0},System.Action{``1},System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
+  AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(IServiceCollection, Func&lt;IServiceProvider, IOptions&lt;TConfig&gt;, TClient&gt;, Action&lt;TConfig&gt;, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(this IServiceCollection services, Func&lt;IServiceProvider, IOptions&lt;TConfig&gt;, TClient&gt; clientFactory, Action&lt;TConfig&gt; configure, Func&lt;IServiceProvider, TokenType&gt; tokenType, Func&lt;IServiceProvider, string&gt; token, Func&lt;IServiceProvider, bool&gt;? validateToken = null) where TClient : KookWebhookClient where TConfig : KookWebhookConfig</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>clientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;TConfig&gt;, TClient&gt;</dt>
+    <dd><p>The factory to create the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+</dd>
+    <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TConfig&gt;</dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TClient</code></dt>
+    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+</dd>
+    <dt><code>TConfig</code></dt>
+    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___1___0____1_Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1,``0},``1,Kook.TokenType,System.String,System.Boolean)">
+  AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(IServiceCollection, Func&lt;IServiceProvider, TConfig, TClient&gt;, TConfig, TokenType, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(this IServiceCollection services, Func&lt;IServiceProvider, TConfig, TClient&gt; clientFactory, TConfig config, TokenType tokenType, string token, bool validateToken = true) where TClient : KookWebhookClient where TConfig : KookWebhookConfig</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>clientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, TConfig, TClient&gt;</dt>
+    <dd><p>The factory to create the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+</dd>
+    <dt><code>config</code> <span class="xref">TConfig</span></dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TClient</code></dt>
+    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+</dd>
+    <dt><code>TConfig</code></dt>
+    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient*"></a>
+
+  <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___1___0____1_System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1,``0},``1,System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
+  AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(IServiceCollection, Func&lt;IServiceProvider, TConfig, TClient&gt;, TConfig, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(this IServiceCollection services, Func&lt;IServiceProvider, TConfig, TClient&gt; clientFactory, TConfig config, Func&lt;IServiceProvider, TokenType&gt; tokenType, Func&lt;IServiceProvider, string&gt; token, Func&lt;IServiceProvider, bool&gt;? validateToken = null) where TClient : KookWebhookClient where TConfig : KookWebhookConfig</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+</dd>
+    <dt><code>clientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, TConfig, TClient&gt;</dt>
+    <dd><p>The factory to create the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+</dd>
+    <dt><code>config</code> <span class="xref">TConfig</span></dt>
+    <dd><p>The action to configure the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+</dd>
+    <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
+    <dd><p>The type of token to use.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The token to use.</p>
+</dd>
+    <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Whether to validate the token before logging in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TClient</code></dt>
+    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+</dd>
+    <dt><code>TConfig</code></dt>
+    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

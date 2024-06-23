@@ -138,6 +138,9 @@ Class KookAspNetWebhookConfig  <a class="header-action link-secondary" title="Vi
       <a class="xref" href="Kook.Webhook.KookWebhookConfig.html#Kook_Webhook_KookWebhookConfig_WebhookProvider">KookWebhookConfig.WebhookProvider</a>
     </div>
     <div>
+      <a class="xref" href="Kook.Webhook.KookWebhookConfig.html#Kook_Webhook_KookWebhookConfig_LogoutWhenDisconnected">KookWebhookConfig.LogoutWhenDisconnected</a>
+    </div>
+    <div>
       <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_GatewayEncoding">KookSocketConfig.GatewayEncoding</a>
     </div>
     <div>
@@ -193,6 +196,9 @@ Class KookAspNetWebhookConfig  <a class="header-action link-secondary" title="Vi
     </div>
     <div>
       <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AutoUpdateChannelPositions">KookSocketConfig.AutoUpdateChannelPositions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageQueueProvider">KookSocketConfig.MessageQueueProvider</a>
     </div>
     <div>
       <a class="xref" href="Kook.Rest.KookRestConfig.html#Kook_Rest_KookRestConfig_RestClientProvider">KookRestConfig.RestClientProvider</a>
@@ -293,7 +299,7 @@ Class KookAspNetWebhookConfig  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_Webhook_AspNet_KookAspNetWebhookConfig__ctor" data-uid="Kook.Webhook.AspNet.KookAspNetWebhookConfig.#ctor">
   KookAspNetWebhookConfig()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.AspNet/KookAspNetWebhookConfig.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.AspNet/KookAspNetWebhookConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.Webhook.AspNet.KookAspNetWebhookConfig.html">KookAspNetWebhookConfig</a> class.</p>
@@ -320,42 +326,10 @@ Class KookAspNetWebhookConfig  <a class="header-action link-secondary" title="Vi
 </h2>
 
 
-  <a id="Kook_Webhook_AspNet_KookAspNetWebhookConfig_ConfigureKookClient_" data-uid="Kook.Webhook.AspNet.KookAspNetWebhookConfig.ConfigureKookClient*"></a>
+  <a id="Kook_Webhook_AspNet_KookAspNetWebhookConfig_RoutePattern_" data-uid="Kook.Webhook.AspNet.KookAspNetWebhookConfig.RoutePattern*"></a>
 
-  <h3 id="Kook_Webhook_AspNet_KookAspNetWebhookConfig_ConfigureKookClient" data-uid="Kook.Webhook.AspNet.KookAspNetWebhookConfig.ConfigureKookClient">
-  ConfigureKookClient
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.AspNet/KookAspNetWebhookConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets a function that is called when the webhook client is being configured.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;IServiceProvider, KookWebhookClient&gt;? ConfigureKookClient { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Kook_Webhook_AspNet_KookAspNetWebhookConfig_RouteEndpoint_" data-uid="Kook.Webhook.AspNet.KookAspNetWebhookConfig.RouteEndpoint*"></a>
-
-  <h3 id="Kook_Webhook_AspNet_KookAspNetWebhookConfig_RouteEndpoint" data-uid="Kook.Webhook.AspNet.KookAspNetWebhookConfig.RouteEndpoint">
-  RouteEndpoint
+  <h3 id="Kook_Webhook_AspNet_KookAspNetWebhookConfig_RoutePattern" data-uid="Kook.Webhook.AspNet.KookAspNetWebhookConfig.RoutePattern">
+  RoutePattern
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.AspNet/KookAspNetWebhookConfig.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -364,7 +338,7 @@ Class KookAspNetWebhookConfig  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string RouteEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string RoutePattern { get; set; }</code></pre>
   </div>
 
 
