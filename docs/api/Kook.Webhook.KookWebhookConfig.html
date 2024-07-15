@@ -77,7 +77,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -141,9 +141,6 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_ConnectionTimeout">KookSocketConfig.ConnectionTimeout</a>
     </div>
     <div>
-      <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_HeartbeatIntervalMilliseconds">KookSocketConfig.HeartbeatIntervalMilliseconds</a>
-    </div>
-    <div>
       <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_RtcpIntervalMilliseconds">KookSocketConfig.RtcpIntervalMilliseconds</a>
     </div>
     <div>
@@ -166,6 +163,9 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
     </div>
     <div>
       <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_StartupCacheFetchMode">KookSocketConfig.StartupCacheFetchMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AudioClientIdleTimeout">KookSocketConfig.AudioClientIdleTimeout</a>
     </div>
     <div>
       <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">KookSocketConfig.AlwaysDownloadUsers</a>
@@ -290,7 +290,7 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Webhook_KookWebhookConfig__ctor_Kook_Net_Webhooks_WebhookProvider_" data-uid="Kook.Webhook.KookWebhookConfig.#ctor(Kook.Net.Webhooks.WebhookProvider)">
   KookWebhookConfig(WebhookProvider)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a> class.</p>
@@ -321,6 +321,70 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="Kook_Webhook_KookWebhookConfig_AutoLogin_" data-uid="Kook.Webhook.KookWebhookConfig.AutoLogin*"></a>
+
+  <h3 id="Kook_Webhook_KookWebhookConfig_AutoLogin" data-uid="Kook.Webhook.KookWebhookConfig.AutoLogin">
+  AutoLogin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the client should try to automatically log in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoLogin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Webhook_KookWebhookConfig_AutoLogout_" data-uid="Kook.Webhook.KookWebhookConfig.AutoLogout*"></a>
+
+  <h3 id="Kook_Webhook_KookWebhookConfig_AutoLogout" data-uid="Kook.Webhook.KookWebhookConfig.AutoLogout">
+  AutoLogout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the client should try to automatically log out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoLogout { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="Kook_Webhook_KookWebhookConfig_EncryptKey_" data-uid="Kook.Webhook.KookWebhookConfig.EncryptKey*"></a>
@@ -355,19 +419,19 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
 
 
-  <a id="Kook_Webhook_KookWebhookConfig_LogoutWhenDisconnected_" data-uid="Kook.Webhook.KookWebhookConfig.LogoutWhenDisconnected*"></a>
+  <a id="Kook_Webhook_KookWebhookConfig_HeartbeatIntervalMilliseconds_" data-uid="Kook.Webhook.KookWebhookConfig.HeartbeatIntervalMilliseconds*"></a>
 
-  <h3 id="Kook_Webhook_KookWebhookConfig_LogoutWhenDisconnected" data-uid="Kook.Webhook.KookWebhookConfig.LogoutWhenDisconnected">
-  LogoutWhenDisconnected
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_Webhook_KookWebhookConfig_HeartbeatIntervalMilliseconds" data-uid="Kook.Webhook.KookWebhookConfig.HeartbeatIntervalMilliseconds">
+  HeartbeatIntervalMilliseconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets whether the client should log out when disconnected.</p>
+  <div class="markdown level1 summary"><p>Gets the heartbeat interval of WebSocket connection in milliseconds.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool LogoutWhenDisconnected { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int HeartbeatIntervalMilliseconds { get; set; }</code></pre>
   </div>
 
 
@@ -376,39 +440,7 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Kook_Webhook_KookWebhookConfig_StartupWaitForChallenge_" data-uid="Kook.Webhook.KookWebhookConfig.StartupWaitForChallenge*"></a>
-
-  <h3 id="Kook_Webhook_KookWebhookConfig_StartupWaitForChallenge" data-uid="Kook.Webhook.KookWebhookConfig.StartupWaitForChallenge">
-  StartupWaitForChallenge
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L24"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the client should wait for a webhook challenge before connecting.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool StartupWaitForChallenge { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -455,7 +487,7 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Webhook_KookWebhookConfig_WebhookProvider" data-uid="Kook.Webhook.KookWebhookConfig.WebhookProvider">
   WebhookProvider
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the provider used to generate new UDP sockets.</p>
