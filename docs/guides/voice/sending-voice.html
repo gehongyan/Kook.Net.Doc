@@ -92,7 +92,7 @@
 <p>Windows 开发者可以在<a href="https://github.com/gehongyan/Kook.Net/tree/master/voice-natives">此处</a> 下载预编译的二进制文件。</p>
 <p>Linux 开发者需要从源码编译 <a href="http://downloads.xiph.org/releases/opus/">Opus</a>，或通过包管理器进行安装。</p>
 <h2 id="加入语音频道">加入语音频道</h2>
-<p>语音推流前需要先加入语音频道，调用 <a class="xref" href="../../api/Kook.Audio.IAudioClient.html">IAudioClient</a> 上的 <a class="xref" href="../../api/Kook.IAudioChannel.html#Kook_IAudioChannel_ConnectAsync_">ConnectAsync</a>，该异步操作会返回一个 <a class="xref" href="../../api/Kook.Audio.IAudioClient.html">IAudioClient</a> 对象，用于后续的语音推流操作。</p>
+<p>语音推流前需要先加入语音频道，调用 <a class="xref" href="../../api/Kook.IAudioChannel.html">IAudioChannel</a> 上的 <a class="xref" href="../../api/Kook.IAudioChannel.html#Kook_IAudioChannel_ConnectAsync_">ConnectAsync</a>，该异步操作会返回一个 <a class="xref" href="../../api/Kook.Audio.IAudioClient.html">IAudioClient</a> 对象，用于后续的语音推流操作。</p>
 <pre><code class="lang-csharp" name="加入语音频道">// The command's Run Mode MUST be set to RunMode.Async, otherwise, being connected to a voice channel will block the gateway thread.
 [Command(&quot;join&quot;, RunMode = RunMode.Async)]
 public async Task JoinChannel(IVoiceChannel channel = null)
