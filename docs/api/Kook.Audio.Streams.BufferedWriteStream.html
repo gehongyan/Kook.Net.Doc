@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class BufferedWriteStream | Kook.Net 文档 ">
       
-      <meta name="description" content="Wraps another stream with a timed buffer.">
+      <meta name="description" content="表示一个定时缓冲的音频写入流，用于将定时缓冲的音频数据写入到下一个音频流中。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Audio_Streams_BufferedWriteStream" data-uid="Kook.Audio.Streams.BufferedWriteStream" class="text-break">
-Class BufferedWriteStream  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class BufferedWriteStream  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Wraps another stream with a timed buffer.</p>
+  <div class="markdown summary"><p>表示一个定时缓冲的音频写入流，用于将定时缓冲的音频数据写入到下一个音频流中。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -324,10 +324,10 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Audio_Streams_BufferedWriteStream_ClearAsync_System_Threading_CancellationToken_" data-uid="Kook.Audio.Streams.BufferedWriteStream.ClearAsync(System.Threading.CancellationToken)">
   ClearAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L188"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Clears the stream, causing all buffered data to be lost.</p>
+  <div class="markdown level1 summary"><p>清空该流.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -338,14 +338,14 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd><p>The cancellation token to be used.</p>
+    <dd><p>用于取消该异步操作的取消令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents an asynchronous clear operation.</p>
+    <dd><p>一个清空操作的异步任务。</p>
 </dd>
   </dl>
 
@@ -355,6 +355,9 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
 
 
 
+  <h4 class="section" id="Kook_Audio_Streams_BufferedWriteStream_ClearAsync_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此操作会导致丢失所有缓冲的数据。</p>
+</div>
 
 
 
@@ -363,7 +366,7 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Audio_Streams_BufferedWriteStream_Dispose_System_Boolean_" data-uid="Kook.Audio.Streams.BufferedWriteStream.Dispose(System.Boolean)">
   Dispose(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Releases the unmanaged resources used by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a> and optionally releases the managed resources.</p>
@@ -396,7 +399,7 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Audio_Streams_BufferedWriteStream_FlushAsync_System_Threading_CancellationToken_" data-uid="Kook.Audio.Streams.BufferedWriteStream.FlushAsync(System.Threading.CancellationToken)">
   FlushAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asynchronously clears all buffers for this stream, causes any buffered data to be written to the underlying device, and monitors cancellation requests.</p>
@@ -441,7 +444,7 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Audio_Streams_BufferedWriteStream_WriteAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_" data-uid="Kook.Audio.Streams.BufferedWriteStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)">
   WriteAsync(byte[], int, int, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.</p>
@@ -510,10 +513,10 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_Audio_Streams_BufferedWriteStream_WriteHeader_System_UInt16_System_UInt32_System_Boolean_" data-uid="Kook.Audio.Streams.BufferedWriteStream.WriteHeader(System.UInt16,System.UInt32,System.Boolean)">
   WriteHeader(ushort, uint, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Writes a header to the stream.</p>
+  <div class="markdown level1 summary"><p>向流中写入一个头部信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -524,13 +527,13 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>seq</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
-    <dd><p>The sequence number of the header.</p>
+    <dd><p>头部的序列号。</p>
 </dd>
     <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>The timestamp of the header.</p>
+    <dd><p>头部的时间戳。</p>
 </dd>
     <dt><code>missed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Whether the header is for a missed packet.</p>
+    <dd><p>头部是否用于标识丢失的数据包。</p>
 </dd>
   </dl>
 
@@ -542,6 +545,12 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>该流不接收头部信息。</p>
+</dd>
+  </dl>
 
 
 
@@ -549,7 +558,7 @@ Class BufferedWriteStream  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Audio/Streams/BufferedWriteStream.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

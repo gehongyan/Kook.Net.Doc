@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class RestGuildUser | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a REST-based guild user.">
+      <meta name="description" content="表示一个基于 REST 的服务器用户。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>Kook.Net.Rest.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a REST-based guild user.</p>
+  <div class="markdown summary"><p>表示一个基于 REST 的服务器用户。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -271,10 +271,10 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Rest_RestGuildUser_ActiveAt" data-uid="Kook.Rest.RestGuildUser.ActiveAt">
   ActiveAt
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets when this user was activated.</p>
+  <div class="markdown level1 summary"><p>获取此用户在该服务器内的最近活跃时间。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -289,8 +289,7 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
-    <dd><p>The time of which the user was activated.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -304,10 +303,10 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Rest_RestGuildUser_Color" data-uid="Kook.Rest.RestGuildUser.Color">
   Color
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the color the user's displayed name is being displayed in.</p>
+  <div class="markdown level1 summary"><p>获取此用户的显示名称的颜色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -322,22 +321,22 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a>?</dt>
-    <dd><p>A <a class="xref" href="Kook.IGuildUser.html#Kook_IGuildUser_Color">Color</a> struct representing the color the user's display name is being displayed in.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
   <h4 class="section" id="Kook_Rest_RestGuildUser_Color_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        At present, the color of a role may be a solid color or a gradient. See <a class="xref" href="Kook.IRole.html#Kook_IRole_ColorType">ColorType</a>,
-        which is guaranteed due to the fact that the guild's user list API endpoint returns the color type
-        and the gradient color information if exists. However, the value of this property is fetched
-        from the guild's user list API endpoint, which does not return the color type and the gradient
-        color information. Hence, the value of this property may be incorrect if the color of a role is
-        a gradient.
-    </p></div>
+  <div class="markdown level1 remarks"><p>如果此用户所拥有的最高角色的颜色类型为渐变色，则此属性返回的颜色是渐变色权益失效后的回退颜色。 <br><div class="WARNING"><h5>warning</h5><p>
+一个角色的颜色可能是纯色或渐变色，参见 <a class="xref" href="Kook.IRole.html#Kook_IRole_ColorType">ColorType</a>。但由于服务器用户列表 API
+及服务器用户详情 API 所返回的用户信息均不包含角色的颜色类型和渐变色信息，因此，如果用户的最高角色的颜色是渐变色，
+则此属性的值可能是不正确的。如需获取该用户的准确的显示名称及颜色，请获取此用户的最高角色实体对象，访问其颜色类型及渐变色属性。</p>
+</div><pre><code class="lang-cs">if (guildUser.RoleIds.Select(x =&gt; guildUser.Guild.GetRole(x)).OfType&lt;IRole&gt;().MinBy(x =&gt; x.Position) is { } topRole)
+          {
+              ColorType colorType = topRole.ColorType;
+              GradientColor? gradientColor = topRole.GradientColor;
+          }</code></pre>
 </div>
 
 
@@ -350,7 +349,7 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the displayed name for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户的显示名称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -365,8 +364,42 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string representing the display name of the user; If the nickname is null, this will be the username.</p>
-</dd>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_Rest_RestGuildUser_DisplayName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户在该服务器内设置了昵称，则此属性返回昵称；否则返回用户名。</p>
+</div>
+
+
+
+
+  <a id="Kook_Rest_RestGuildUser_Guild_" data-uid="Kook.Rest.RestGuildUser.Guild*"></a>
+
+  <h3 id="Kook_Rest_RestGuildUser_Guild" data-uid="Kook.Rest.RestGuildUser.Guild">
+  Guild
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此服务器用户所属的服务器。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGuild Guild { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.IGuild.html">IGuild</a></dt>
+    <dd></dd>
   </dl>
 
 
@@ -380,10 +413,10 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Rest_RestGuildUser_GuildId" data-uid="Kook.Rest.RestGuildUser.GuildId">
   GuildId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the ID of the guild for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户所属服务器的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -398,8 +431,7 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>An <code>ulong</code> representing the identifier of the guild that this user belongs to.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -413,10 +445,10 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Rest_RestGuildUser_GuildPermissions" data-uid="Kook.Rest.RestGuildUser.GuildPermissions">
   GuildPermissions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the guild-level permissions for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户在该服务器内的权限。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -431,9 +463,7 @@ Class RestGuildUser  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.GuildPermissions.html">GuildPermissions</a></dt>
-    <dd><p>A <a class="xref" href="Kook.GuildPermissions.html">GuildPermissions</a> structure for this user, representing what
-permissions this user has in the guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -443,7 +473,7 @@ permissions this user has in the guild.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Resolving permissions requires the parent guild to be downloaded.</p>
+    <dd><p>解析服务器用户的权限需要所属服务器的基础数据已完整下载。</p>
 </dd>
   </dl>
 
@@ -453,10 +483,10 @@ permissions this user has in the guild.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_IsMobileVerified" data-uid="Kook.Rest.RestGuildUser.IsMobileVerified">
   IsMobileVerified
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the mobile number has been verified for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户的手机号码是否已验证。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -471,8 +501,7 @@ permissions this user has in the guild.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
-    <dd><p><code>true</code> if the mobile number has been verified; <code>false</code> otherwise.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -486,10 +515,10 @@ permissions this user has in the guild.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_IsOwner" data-uid="Kook.Rest.RestGuildUser.IsOwner">
   IsOwner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user owns the current guild.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否为当前服务器的所有者。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -504,8 +533,7 @@ permissions this user has in the guild.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
-    <dd><p><code>true</code> if this user owns the current guild; <code>false</code> otherwise.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -519,10 +547,10 @@ permissions this user has in the guild.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_JoinedAt" data-uid="Kook.Rest.RestGuildUser.JoinedAt">
   JoinedAt
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets when this user joined the guild.</p>
+  <div class="markdown level1 summary"><p>获取此用户加入服务器的时间。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -537,8 +565,7 @@ permissions this user has in the guild.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
-    <dd><p>The time of which the user has joined the guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -555,7 +582,7 @@ permissions this user has in the guild.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the nickname for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户在该服务器内的昵称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -570,13 +597,15 @@ permissions this user has in the guild.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string representing the nickname of the user; <code>null</code> if none is set.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_Rest_RestGuildUser_Nickname_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户在该服务器内没有设置昵称，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -585,10 +614,10 @@ permissions this user has in the guild.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_PlainTextMention" data-uid="Kook.Rest.RestGuildUser.PlainTextMention">
   PlainTextMention
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns a special string used to mention this object in plain text formatted text.</p>
+  <div class="markdown level1 summary"><p>获取一个用于在纯文本格式文本中提及此对象的格式化字符串。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -603,8 +632,7 @@ permissions this user has in the guild.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that is recognized by Kook as a mention in plain text formatted text.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -618,10 +646,10 @@ permissions this user has in the guild.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_RoleIds" data-uid="Kook.Rest.RestGuildUser.RoleIds">
   RoleIds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of IDs for the roles that this user currently possesses in the guild.</p>
+  <div class="markdown level1 summary"><p>获取此用户在该服务器内拥有的所有角色的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -636,18 +664,15 @@ permissions this user has in the guild.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
-    <dd><p>A read-only collection of <code>uint</code>, each representing an identifier for a role that
-this user possesses.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
   <h4 class="section" id="Kook_Rest_RestGuildUser_RoleIds_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This property returns a read-only collection of the identifiers of the roles that this user possesses.
-For WebSocket users, a Roles property can be found in place of this property. Due to the REST
-implementation, only a collection of identifiers can be retrieved instead of the full role objects.</p>
+  <div class="markdown level1 remarks"><p>此属性返回此用户所拥有的所有角色的 ID。对于 WebSocket 服务器用户实体，<code>Roles</code> 属性可以用来获取所有角色对象；对于 REST
+服务器用户实体，受限于 KOOK API，在服务器用户实体上仅能直接获取其所拥有的所有角色的 ID。</p>
 </div>
 
 
@@ -661,10 +686,10 @@ implementation, only a collection of identifiers can be retrieved instead of the
 
   <h3 id="Kook_Rest_RestGuildUser_AddRoleAsync_Kook_IRole_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.AddRoleAsync(Kook.IRole,Kook.RequestOptions)">
   AddRoleAsync(IRole, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds the specified role to this user in the guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内授予此用户指定的角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -675,17 +700,17 @@ implementation, only a collection of identifiers can be retrieved instead of the
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>role</code> <a class="xref" href="Kook.IRole.html">IRole</a></dt>
-    <dd><p>The role to be added to the user.</p>
+    <dd><p>要在该服务器内为此用户授予的角色。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous role addition operation.</p>
+    <dd><p>一个表示异步授予操作的任务。</p>
 </dd>
   </dl>
 
@@ -703,10 +728,10 @@ implementation, only a collection of identifiers can be retrieved instead of the
 
   <h3 id="Kook_Rest_RestGuildUser_AddRoleAsync_System_UInt32_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.AddRoleAsync(System.UInt32,Kook.RequestOptions)">
   AddRoleAsync(uint, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds the specified role to this user in the guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内授予此用户指定的角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -717,17 +742,17 @@ implementation, only a collection of identifiers can be retrieved instead of the
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>roleId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>The role to be added to the user.</p>
+    <dd><p>要在该服务器内为此用户授予的角色的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous role addition operation.</p>
+    <dd><p>一个表示异步授予操作的任务。</p>
 </dd>
   </dl>
 
@@ -745,10 +770,10 @@ implementation, only a collection of identifiers can be retrieved instead of the
 
   <h3 id="Kook_Rest_RestGuildUser_AddRolesAsync_System_Collections_Generic_IEnumerable_Kook_IRole__Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.AddRolesAsync(System.Collections.Generic.IEnumerable{Kook.IRole},Kook.RequestOptions)">
   AddRolesAsync(IEnumerable&lt;IRole&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds the specified <code class="paramref">roles</code> to this user in the guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内授予此用户指定的一些角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -759,17 +784,17 @@ implementation, only a collection of identifiers can be retrieved instead of the
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>roles</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IRole.html">IRole</a>&gt;</dt>
-    <dd><p>The roles to be added to the user.</p>
+    <dd><p>要在该服务器内为此用户授予的所有角色。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous role addition operation.</p>
+    <dd><p>一个表示异步授予操作的任务。</p>
 </dd>
   </dl>
 
@@ -787,10 +812,10 @@ implementation, only a collection of identifiers can be retrieved instead of the
 
   <h3 id="Kook_Rest_RestGuildUser_AddRolesAsync_System_Collections_Generic_IEnumerable_System_UInt32__Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.AddRolesAsync(System.Collections.Generic.IEnumerable{System.UInt32},Kook.RequestOptions)">
   AddRolesAsync(IEnumerable&lt;uint&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds the specified <code class="paramref">roleIds</code> to this user in the guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内授予此用户指定的一些角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -801,17 +826,17 @@ implementation, only a collection of identifiers can be retrieved instead of the
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>roleIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
-    <dd><p>The roles to be added to the user.</p>
+    <dd><p>要在该服务器内为此用户授予的所有角色的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous role addition operation.</p>
+    <dd><p>一个表示异步授予操作的任务。</p>
 </dd>
   </dl>
 
@@ -829,10 +854,10 @@ implementation, only a collection of identifiers can be retrieved instead of the
 
   <h3 id="Kook_Rest_RestGuildUser_DeafenAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.DeafenAsync(Kook.RequestOptions)">
   DeafenAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deafen this user in this guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内限制此用户的语音接收。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -843,14 +868,14 @@ implementation, only a collection of identifiers can be retrieved instead of the
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous deafening operation.</p>
+    <dd><p>一个表示异步静音操作的任务。</p>
 </dd>
   </dl>
 
@@ -860,6 +885,9 @@ implementation, only a collection of identifiers can be retrieved instead of the
 
 
 
+  <h4 class="section" id="Kook_Rest_RestGuildUser_DeafenAsync_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此操作会使此用户无法在该服务器内的语音频道中接收来自其他用户的语音。</p>
+</div>
 
 
 
@@ -868,10 +896,10 @@ implementation, only a collection of identifiers can be retrieved instead of the
 
   <h3 id="Kook_Rest_RestGuildUser_GetBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.GetBoostSubscriptionsAsync(Kook.RequestOptions)">
   GetBoostSubscriptionsAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all subscriptions of this user for this guild.</p>
+  <div class="markdown level1 summary"><p>获取此用户在该服务器内的所有服务器助力包订阅信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -882,15 +910,14 @@ implementation, only a collection of identifiers can be retrieved instead of the
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous retrieval operation. The task result contains
-a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>, each representing the subscription information.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含此用户在该服务器内的所有服务器助力包订阅信息。</p>
 </dd>
   </dl>
 
@@ -908,10 +935,10 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
 
   <h3 id="Kook_Rest_RestGuildUser_GetConnectedVoiceChannelsAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.GetConnectedVoiceChannelsAsync(Kook.RequestOptions)">
   GetConnectedVoiceChannelsAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L190"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of voice channels a user.</p>
+  <div class="markdown level1 summary"><p>获取此用户当前所连接到的所有语音频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -922,15 +949,14 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IVoiceChannel.html">IVoiceChannel</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a collection of
-voice channels the user is connected to.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含此用户当前所连接到的所有语音频道。</p>
 </dd>
   </dl>
 
@@ -948,10 +974,10 @@ voice channels the user is connected to.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_GetPermissions_Kook_IGuildChannel_" data-uid="Kook.Rest.RestGuildUser.GetPermissions(Kook.IGuildChannel)">
   GetPermissions(IGuildChannel)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the level permissions granted to this user to a given channel.</p>
+  <div class="markdown level1 summary"><p>获取此用户在指定频道内所拥有的权限。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -962,15 +988,14 @@ voice channels the user is connected to.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>channel</code> <a class="xref" href="Kook.IGuildChannel.html">IGuildChannel</a></dt>
-    <dd><p>The channel to get the permission from.</p>
+    <dd><p>要获取权限的频道。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.ChannelPermissions.html">ChannelPermissions</a></dt>
-    <dd><p>A <a class="xref" href="Kook.ChannelPermissions.html">ChannelPermissions</a> structure representing the permissions that a user has in the
-specified channel.</p>
+    <dd><p>一个表示此用户在指定频道内所拥有的频道权限的权限集。</p>
 </dd>
   </dl>
 
@@ -981,12 +1006,6 @@ specified channel.</p>
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Resolving permissions requires the parent guild to be downloaded.</p>
-</dd>
-  </dl>
 
 
 
@@ -994,10 +1013,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_KickAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.KickAsync(Kook.RequestOptions)">
   KickAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Kicks this user from this guild.</p>
+  <div class="markdown level1 summary"><p>将此用户从此服务器中踢出。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1008,14 +1027,14 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous kick operation.</p>
+    <dd><p>一个表示异步踢出操作的任务。</p>
 </dd>
   </dl>
 
@@ -1033,10 +1052,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_ModifyNicknameAsync_System_String_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.ModifyNicknameAsync(System.String,Kook.RequestOptions)">
   ModifyNicknameAsync(string?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Modifies this user's nickname in this guild.</p>
+  <div class="markdown level1 summary"><p>修改此用户在该服务器内的昵称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1047,17 +1066,17 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The nickname to modify the user with.</p>
+    <dd><p>要设置到此用户在该服务器内的新昵称。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous modification operation.</p>
+    <dd><p>一个表示异步修改操作的任务。</p>
 </dd>
   </dl>
 
@@ -1068,13 +1087,10 @@ specified channel.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestGuildUser_ModifyNicknameAsync_System_String_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method modifies the nickname of current guild user.</p>
-<div class="WARNING"><h5>warning</h5><p>
-    The KOOK API will clear the nickname if the nickname is set to
-    the same as the username at present. Hence either setting the nickname
-    to the same as the username or setting the nickname to null will clear
-    the nickname.
-</p></div>
+  <div class="markdown level1 remarks"><p>此方法使用指定的属性修改当前用户在该服务器内的昵称。 <br>
+如要清除此用户在该服务器内的昵称，请将 <code class="paramref">name</code> 设置为 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。 <br><div class="WARNING"><h5>warning</h5><p>
+如果将昵称设置为与用户名相同，KOOK 也会将该用户在此服务器内的昵称清除，显示名称将跟随用户名，而不是固定为指定的昵称。</p>
+</div>
 </div>
 
 
@@ -1084,10 +1100,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_MuteAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.MuteAsync(Kook.RequestOptions)">
   MuteAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Mute this user in this guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内关闭此用户的语音输入。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1098,14 +1114,14 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous muting operation.</p>
+    <dd><p>一个表示异步关闭操作的任务。</p>
 </dd>
   </dl>
 
@@ -1115,6 +1131,9 @@ specified channel.</p>
 
 
 
+  <h4 class="section" id="Kook_Rest_RestGuildUser_MuteAsync_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此操作会使此用户无法在该服务器内的语音频道中发言。</p>
+</div>
 
 
 
@@ -1123,10 +1142,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_RemoveRoleAsync_Kook_IRole_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.RemoveRoleAsync(Kook.IRole,Kook.RequestOptions)">
   RemoveRoleAsync(IRole, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Removes the specified <code class="paramref">role</code> from this user in the guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内撤销此用户指定的角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1137,17 +1156,17 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>role</code> <a class="xref" href="Kook.IRole.html">IRole</a></dt>
-    <dd><p>The role to be removed from the user.</p>
+    <dd><p>要在该服务器内为此用户撤销的角色。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous role removal operation.</p>
+    <dd><p>一个表示异步撤销操作的任务。</p>
 </dd>
   </dl>
 
@@ -1165,10 +1184,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_RemoveRoleAsync_System_UInt32_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.RemoveRoleAsync(System.UInt32,Kook.RequestOptions)">
   RemoveRoleAsync(uint, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Removes the specified <code class="paramref">roleId</code> from this user in the guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内撤销此用户指定的角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1179,17 +1198,17 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>roleId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>The role to be removed from the user.</p>
+    <dd><p>要在该服务器内为此用户撤销的角色的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous role removal operation.</p>
+    <dd><p>一个表示异步撤销操作的任务。</p>
 </dd>
   </dl>
 
@@ -1207,10 +1226,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_RemoveRolesAsync_System_Collections_Generic_IEnumerable_Kook_IRole__Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.RemoveRolesAsync(System.Collections.Generic.IEnumerable{Kook.IRole},Kook.RequestOptions)">
   RemoveRolesAsync(IEnumerable&lt;IRole&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Removes the specified <code class="paramref">roles</code> from this user in the guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内撤销此用户指定的一些角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1221,17 +1240,17 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>roles</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IRole.html">IRole</a>&gt;</dt>
-    <dd><p>The roles to be removed from the user.</p>
+    <dd><p>要在该服务器内为此用户撤销的所有角色。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous role removal operation.</p>
+    <dd><p>一个表示异步撤销操作的任务。</p>
 </dd>
   </dl>
 
@@ -1249,10 +1268,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_RemoveRolesAsync_System_Collections_Generic_IEnumerable_System_UInt32__Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.RemoveRolesAsync(System.Collections.Generic.IEnumerable{System.UInt32},Kook.RequestOptions)">
   RemoveRolesAsync(IEnumerable&lt;uint&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L166"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Removes the specified <code class="paramref">roleIds</code> from this user in the guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内撤销此用户指定的一些角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1263,17 +1282,17 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>roleIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
-    <dd><p>The roles to be removed from the user.</p>
+    <dd><p>要在该服务器内为此用户撤销的所有角色的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous role removal operation.</p>
+    <dd><p>一个表示异步撤销操作的任务。</p>
 </dd>
   </dl>
 
@@ -1291,10 +1310,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_RequestFriendAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.RequestFriendAsync(Kook.RequestOptions)">
   RequestFriendAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L201"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a friend request to this user.</p>
+  <div class="markdown level1 summary"><p>向此用户发送好友请求。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1305,14 +1324,14 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for sending the friend request.</p>
+    <dd><p>一个表示异步发送操作的任务。</p>
 </dd>
   </dl>
 
@@ -1330,10 +1349,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_UndeafenAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.UndeafenAsync(Kook.RequestOptions)">
   UndeafenAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Undeafen this user in this guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内恢复此用户的语音接收。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1344,14 +1363,14 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous undeafening operation.</p>
+    <dd><p>一个表示异步恢复操作的任务。</p>
 </dd>
   </dl>
 
@@ -1361,6 +1380,9 @@ specified channel.</p>
 
 
 
+  <h4 class="section" id="Kook_Rest_RestGuildUser_UndeafenAsync_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此操作会撤销由于服务器静音而导致的无法在语音频道中接收来自其他用户的语音的状态。</p>
+</div>
 
 
 
@@ -1369,10 +1391,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_UnmuteAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.UnmuteAsync(Kook.RequestOptions)">
   UnmuteAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Unmute this user in this guild.</p>
+  <div class="markdown level1 summary"><p>在该服务器内恢复此用户的语音输入。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1383,14 +1405,14 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous unmuting operation.</p>
+    <dd><p>一个表示异步恢复操作的任务。</p>
 </dd>
   </dl>
 
@@ -1400,6 +1422,9 @@ specified channel.</p>
 
 
 
+  <h4 class="section" id="Kook_Rest_RestGuildUser_UnmuteAsync_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此操作会撤销由于服务器闭麦而导致的在语音频道中无法发言状态。</p>
+</div>
 
 
 
@@ -1408,10 +1433,10 @@ specified channel.</p>
 
   <h3 id="Kook_Rest_RestGuildUser_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestGuildUser.UpdateAsync(Kook.RequestOptions)">
   UpdateAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Users/RestGuildUser.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Updates this object's properties with its current state.</p>
+  <div class="markdown level1 summary"><p>通过 REST API 获取此实体对象的最新状态，并替换当前对象的属性。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1422,14 +1447,14 @@ specified channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents an asynchronous reloading operation.</p>
+    <dd><p>一个表示异步更新操作的任务。</p>
 </dd>
   </dl>
 
@@ -1441,8 +1466,7 @@ specified channel.</p>
 
   <h4 class="section" id="Kook_Rest_RestGuildUser_UpdateAsync_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method will fetch the latest data from REST API,
-        and replace the current object's properties with the new data.
+        此方法将从 KOOK REST API 获取最新数据，并替换当前对象的属性，而非使用指定的属性修改 KOOK 服务端的数据。
     </p></div>
 </div>
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SocketCategoryChannel | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a WebSocket-based category channel.">
+      <meta name="description" content="表示一个基于网关的分组频道。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class SocketCategoryChannel  <a class="header-action link-secondary" title="View
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a WebSocket-based category channel.</p>
+  <div class="markdown summary"><p>表示一个基于网关的分组频道。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -241,10 +241,10 @@ Class SocketCategoryChannel  <a class="header-action link-secondary" title="View
 
   <h3 id="Kook_WebSocket_SocketCategoryChannel_Channels" data-uid="Kook.WebSocket.SocketCategoryChannel.Channels">
   Channels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketCategoryChannel.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketCategoryChannel.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the child channels of this category.</p>
+  <div class="markdown level1 summary"><p>获取所有属于此分组频道的所有子频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -259,9 +259,7 @@ Class SocketCategoryChannel  <a class="header-action link-secondary" title="View
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildChannel.html">SocketGuildChannel</a>&gt;</dt>
-    <dd><p>A read-only collection of <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html">SocketGuildChannel</a> whose
-<a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_CategoryId">CategoryId</a> matches the identifier of this category channel.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -278,7 +276,7 @@ Class SocketCategoryChannel  <a class="header-action link-secondary" title="View
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketCategoryChannel.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of users that are able to view the channel.</p>
+  <div class="markdown level1 summary"><p>获取用户缓存列表中的可以访问此频道的所有用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -293,13 +291,15 @@ Class SocketCategoryChannel  <a class="header-action link-secondary" title="View
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</dt>
-    <dd><p>A read-only collection of users that can access the channel (i.e. the users seen in the user list).</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketCategoryChannel_Users_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此属性仅会返回缓存中可以访问此频道的所有用户，如果未启用用户列表缓存，或者由于网关事件确实导致本地缓存不同步，此属性所返回的用户列表可能不准确。</p>
+</div>
 
 
 
@@ -312,10 +312,10 @@ Class SocketCategoryChannel  <a class="header-action link-secondary" title="View
 
   <h3 id="Kook_WebSocket_SocketCategoryChannel_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketCategoryChannel.GetUser(System.UInt64)">
   GetUser(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketCategoryChannel.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketCategoryChannel.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> from this channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道中的一个服务器用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -326,14 +326,14 @@ Class SocketCategoryChannel  <a class="header-action link-secondary" title="View
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The user's identifier.</p>
+    <dd><p>要获取的服务器用户的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a></dt>
-    <dd><p>A <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> with the provided identifier; <code>null</code> if none is found.</p>
+    <dd><p>如果找到了具有指定 ID 的服务器用户，则返回该用户；否则返回 <code>null</code>。</p>
 </dd>
   </dl>
 

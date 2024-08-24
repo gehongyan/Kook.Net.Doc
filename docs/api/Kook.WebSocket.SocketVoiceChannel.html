@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SocketVoiceChannel | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a WebSocket-based voice channel in a guild.">
+      <meta name="description" content="表示服务器中的一个基于网关的具有语音聊天能力的频道。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a WebSocket-based voice channel in a guild.</p>
+  <div class="markdown summary"><p>表示服务器中的一个基于网关的具有语音聊天能力的频道。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -320,9 +320,6 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <div>
       <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetJumpUrl_Kook_IChannel_">ChannelExtensions.GetJumpUrl(IChannel)</a>
   </div>
-  <div>
-      <a class="xref" href="Kook.WebSocket.SocketVoiceChannelExperimentalExtensions.html#Kook_WebSocket_SocketVoiceChannelExperimentalExtensions_DisconnectUserAsync_Kook_WebSocket_SocketVoiceChannel_Kook_IGuildUser_Kook_RequestOptions_">SocketVoiceChannelExperimentalExtensions.DisconnectUserAsync(SocketVoiceChannel, IGuildUser, RequestOptions?)</a>
-  </div>
   </dd></dl>
 
 
@@ -337,10 +334,10 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_AudioClient" data-uid="Kook.WebSocket.SocketVoiceChannel.AudioClient">
   AudioClient
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a> associated with this guild.</p>
+  <div class="markdown level1 summary"><p>获取在此音频频道上建立的语音客户端。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -369,10 +366,10 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_ConnectedUsers" data-uid="Kook.WebSocket.SocketVoiceChannel.ConnectedUsers">
   ConnectedUsers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of users that are currently connected to this voice channel.</p>
+  <div class="markdown level1 summary"><p>获取当前连接到此语音频道的所有用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -387,8 +384,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</dt>
-    <dd><p>A read-only collection of users that are currently connected to this voice channel.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -396,12 +392,12 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
 
   <h4 class="section" id="Kook_WebSocket_SocketVoiceChannel_ConnectedUsers_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This property may not always return all the members that are connected to this voice channel,
-        because uses may connected this voice channel before the bot has connected to the gateway.
-        To ensure accuracy, you may need to enable <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadVoiceStates">AlwaysDownloadVoiceStates</a>
-        to fetch the full voice states upon startup, or use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadVoiceStatesAsync_Kook_RequestOptions_">DownloadVoiceStatesAsync(RequestOptions?)</a>
-        on the guild this voice channel belongs to to manually download the users voice states,
-        or use <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html#Kook_WebSocket_SocketVoiceChannel_GetConnectedUsersAsync_Kook_CacheMode_Kook_RequestOptions_">GetConnectedUsersAsync(CacheMode, RequestOptions?)</a> to fetch the connected users from the API.
+        此属性可能不会始终返回连接到此语音频道的所有成员，因为用户可能在 Bot 连接到网关之前就连接到了此语音频道。
+        如需准确获取所有连接到此语音频道的成员，可能需要启用
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadVoiceStates">AlwaysDownloadVoiceStates</a>，这可以让 Bot
+        在启动连接到网关时获取完整的语音状态。也可以调用方法
+        <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html#Kook_WebSocket_SocketVoiceChannel_GetConnectedUsersAsync_Kook_CacheMode_Kook_RequestOptions_">GetConnectedUsersAsync(CacheMode, RequestOptions?)</a>
+        访问 API 获取连接到此语音频道的用户。
     </p></div>
 </div>
 
@@ -415,7 +411,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this voice channel is locked by a password.</p>
+  <div class="markdown level1 summary"><p>获取此频道是否已被密码锁定。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -430,8 +426,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>A bool representing whether this voice channel is locked by a password.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -448,7 +443,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the voice region of this audio channel is overwritten.</p>
+  <div class="markdown level1 summary"><p>获取此音频频道的语音区域设置是否覆写了服务器的语音区域设置。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -480,7 +475,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the server url that clients should connect to to join this voice channel.</p>
+  <div class="markdown level1 summary"><p>获取语音客户端连接到此语音频道的语音服务器 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -495,8 +490,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string representing the url that clients should connect to to join this voice channel.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -513,7 +507,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the max number of users allowed to be connected to this channel at once.</p>
+  <div class="markdown level1 summary"><p>获取允许同时连接到此频道的最大用户数。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -528,8 +522,7 @@ Class SocketVoiceChannel  <a class="header-action link-secondary" title="View so
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>An int representing the maximum number of users that are allowed to be connected to this
-channel at once; <code>0</code> if a limit is not set.</p>
+    <dd><p>一个 <code>int</code>，表示允许同时连接到此频道的最大用户数；如果没有限制，则为 <code>0</code>。</p>
 </dd>
   </dl>
 
@@ -544,10 +537,10 @@ channel at once; <code>0</code> if a limit is not set.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_Users" data-uid="Kook.WebSocket.SocketVoiceChannel.Users">
   Users
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of users that are able to view the channel.</p>
+  <div class="markdown level1 summary"><p>获取用户缓存列表中的可以访问此频道的所有用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -562,13 +555,15 @@ channel at once; <code>0</code> if a limit is not set.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</dt>
-    <dd><p>A read-only collection of users that can access the channel (i.e. the users seen in the user list).</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketVoiceChannel_Users_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此属性仅会返回缓存中可以访问此频道的所有用户，如果未启用用户列表缓存，或者由于网关事件确实导致本地缓存不同步，此属性所返回的用户列表可能不准确。</p>
+</div>
 
 
   <dl class="typelist seealso">
@@ -586,7 +581,7 @@ channel at once; <code>0</code> if a limit is not set.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the voice quality that the clients in this voice channel are requested to use.</p>
+  <div class="markdown level1 summary"><p>获取要求此频道中的客户端使用的语音质量。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -601,9 +596,7 @@ channel at once; <code>0</code> if a limit is not set.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.VoiceQuality.html">VoiceQuality</a>?</dt>
-    <dd><p>A <a class="xref" href="Kook.IVoiceChannel.html#Kook_IVoiceChannel_VoiceQuality">VoiceQuality</a> representing the voice quality that this voice channel defines and requests the
-client(s) to use.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -620,7 +613,7 @@ client(s) to use.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the voice region for this audio channel.</p>
+  <div class="markdown level1 summary"><p>获取此音频频道所设置的语音服务器区域。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -643,11 +636,17 @@ client(s) to use.</p>
 
   <h4 class="section" id="Kook_WebSocket_SocketVoiceChannel_VoiceRegion_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This property may be empty if the voice channel is created before this feature was released.
+        对于语音频道区域设置功能发布之前创建的语音频道，该属性可能为空。
     </p></div>
 </div>
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.IGuild.html#Kook_IGuild_Region">Region</a></div>
+    </dd>
+  </dl>
 
 
   <h2 class="section" id="methods">Methods
@@ -658,10 +657,10 @@ client(s) to use.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_ConnectAsync_System_Boolean_System_Boolean_System_String_" data-uid="Kook.WebSocket.SocketVoiceChannel.ConnectAsync(System.Boolean,System.Boolean,System.String)">
   ConnectAsync(bool, bool, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Connects to this audio channel.</p>
+  <div class="markdown level1 summary"><p>连接到此音频频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -672,21 +671,21 @@ client(s) to use.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>external</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Determines whether the audio client is an external one or not.</p>
+    <dd><p>指定语音客户端是否是由外部管理的。当设置为 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> 时，当前方法不会尝试连接到语音频道。</p>
 </dd>
     <dt><code>disconnect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Determines whether the client should send a disconnect call before connecting to a new voice channel.</p>
+    <dd><p>指定语音客户端在连接到新的语音频道之前是否应调用断开连接。</p>
 </dd>
     <dt><code>password</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The password to use when connecting to the audio channel.</p>
+    <dd><p>指定客户端连接到设置了密码的语音频道时所使用的密码。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a>&gt;</dt>
-    <dd><p>A task representing the asynchronous connection operation. The task result contains the
-<a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a> responsible for the connection.</p>
+    <dd><p>一个表示音频连接操作的异步任务。任务的结果是一个负责音频连接的 <a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a> 实例；如果
+<code class="paramref">external</code> 为 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>，则会返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
 </dd>
   </dl>
 
@@ -704,10 +703,10 @@ client(s) to use.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_DisconnectAsync" data-uid="Kook.WebSocket.SocketVoiceChannel.DisconnectAsync">
   DisconnectAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L248"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Disconnects from this audio channel.</p>
+  <div class="markdown level1 summary"><p>断开与此音频频道的连接。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -719,7 +718,7 @@ client(s) to use.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task representing the asynchronous operation for disconnecting from the audio channel.</p>
+    <dd><p>一个表示音频断开连接操作的异步任务。</p>
 </dd>
   </dl>
 
@@ -737,10 +736,10 @@ client(s) to use.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_GetConnectedUsersAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetConnectedUsersAsync(Kook.CacheMode,Kook.RequestOptions)">
   GetConnectedUsersAsync(CacheMode, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of users that are currently connected to this voice channel.</p>
+  <div class="markdown level1 summary"><p>获取连接到此频道的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -751,18 +750,17 @@ client(s) to use.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
-    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+    <dd><p>指示当前方法是否应该仅从缓存中获取结果，还是可以通过 API 请求获取数据。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a read-only collection of users
-that are currently connected to this voice channel.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含连接到此频道的所有服务器用户。</p>
 </dd>
   </dl>
 
@@ -780,10 +778,10 @@ that are currently connected to this voice channel.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(IMessage, Direction, int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -794,23 +792,23 @@ that are currently connected to this voice channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>referenceMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
-    <dd><p>The starting message to get the messages from.</p>
+    <dd><p>要开始获取消息的参考位置的消息。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of the messages to be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -821,15 +819,27 @@ that are currently connected to this voice channel.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in
-<a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions?)</a>.
-Please visit its documentation for more details on this method.</p>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+    </p></div>
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Getting messages from a voice channel is not supported.</p>
+    <dd><p>不支持在语音频道中获取消息。</p>
 </dd>
   </dl>
 
@@ -839,10 +849,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(Guid, Direction, int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -853,23 +863,23 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>referenceMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The ID of the starting message to get the messages from.</p>
+    <dd><p>要开始获取消息的参考位置的消息的 ID。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of the messages to be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -880,15 +890,27 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in
-<a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions?)</a>.
-Please visit its documentation for more details on this method.</p>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+    </p></div>
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Getting messages from a voice channel is not supported.</p>
+    <dd><p>不支持在语音频道中获取消息。</p>
 </dd>
   </dl>
 
@@ -898,10 +920,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的最新的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -912,17 +934,17 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -933,15 +955,27 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketVoiceChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in
-<a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions?)</a>.
-Please visit its documentation for more details on this method.</p>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+    </p></div>
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Getting messages from a voice channel is not supported.</p>
+    <dd><p>不支持在语音频道中获取消息。</p>
 </dd>
   </dl>
 
@@ -951,10 +985,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketVoiceChannel.GetUser(System.UInt64)">
   GetUser(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> from this channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道中的一个服务器用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -965,14 +999,14 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The user's identifier.</p>
+    <dd><p>要获取的服务器用户的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a></dt>
-    <dd><p>A <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> with the provided identifier; <code>null</code> if none is found.</p>
+    <dd><p>如果找到了具有指定 ID 的服务器用户，则返回该用户；否则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -990,10 +1024,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_WebSocket_SocketVoiceChannel_ModifyAsync_System_Action_Kook_ModifyVoiceChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketVoiceChannel.ModifyAsync(System.Action{Kook.ModifyVoiceChannelProperties},Kook.RequestOptions)">
   ModifyAsync(Action&lt;ModifyVoiceChannelProperties&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketVoiceChannel.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Modifies this voice channel.</p>
+  <div class="markdown level1 summary"><p>修改此频道有关语音聊天能力的属性。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1004,17 +1038,17 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.ModifyVoiceChannelProperties.html">ModifyVoiceChannelProperties</a>&gt;</dt>
-    <dd><p>The properties to modify the channel with.</p>
+    <dd><p>一个包含修改有关语音聊天能力的属性的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous modification operation.</p>
+    <dd><p>一个表示异步修改操作的任务。</p>
 </dd>
   </dl>
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IRole | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a generic role object to be given to a guild user.">
+      <meta name="description" content="表示一个基于网关的可授予服务器用户的角色。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a generic role object to be given to a guild user.</p>
+  <div class="markdown summary"><p>表示一个基于网关的可授予服务器用户的角色。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,10 +144,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_Color" data-uid="Kook.IRole.Color">
   Color
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the color given to users of this role.</p>
+  <div class="markdown level1 summary"><p>获取此角色的颜色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -162,13 +162,15 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A <a class="xref" href="Kook.IRole.html#Kook_IRole_Color">Color</a> struct representing the color of this role.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_IRole_Color_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户所拥有的最高角色的颜色类型为渐变色，则此属性返回的颜色是渐变色权益失效后的回退颜色。</p>
+</div>
 
 
 
@@ -177,10 +179,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_ColorType" data-uid="Kook.IRole.ColorType">
   ColorType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the type of the color given to users of this role.</p>
+  <div class="markdown level1 summary"><p>获取此角色的颜色类型。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -195,8 +197,7 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.ColorType.html">ColorType</a></dt>
-    <dd><p>A <a class="xref" href="Kook.IRole.html#Kook_IRole_ColorType">ColorType</a> struct representing the color type of this role.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -210,10 +211,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_GradientColor" data-uid="Kook.IRole.GradientColor">
   GradientColor
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the gradient color given to users of this role.</p>
+  <div class="markdown level1 summary"><p>获取此角色的渐变色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -228,14 +229,16 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.GradientColor.html">GradientColor</a>?</dt>
-    <dd><p>A <a class="xref" href="Kook.IRole.html#Kook_IRole_GradientColor">GradientColor</a> struct representing the gradient color of this role;
-<code>null</code> if the role does not have a gradient color.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_IRole_GradientColor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此角色的颜色类型 <a class="xref" href="Kook.IRole.html#Kook_IRole_ColorType">ColorType</a> 不为
+<a class="xref" href="Kook.ColorType.html#Kook_ColorType_Gradient">Gradient</a>，则此属性会返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -244,10 +247,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_Guild" data-uid="Kook.IRole.Guild">
   Guild
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the guild that owns this role.</p>
+  <div class="markdown level1 summary"><p>获取拥有此角色的服务器。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -262,8 +265,7 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.IGuild.html">IGuild</a></dt>
-    <dd><p>A guild representing the parent guild of this role.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -277,10 +279,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_IsHoisted" data-uid="Kook.IRole.IsHoisted">
   IsHoisted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a value that indicates whether the role can be separated in the user list.</p>
+  <div class="markdown level1 summary"><p>获取拥有此角色的用户是否在用户列表中与普通在线成员分开显示。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -295,8 +297,7 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if users of this role are separated in the user list; otherwise <code>false</code>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -310,10 +311,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_IsMentionable" data-uid="Kook.IRole.IsMentionable">
   IsMentionable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a value that indicates whether the role is mentionable.</p>
+  <div class="markdown level1 summary"><p>获取是否允许任何人提及此角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -328,8 +329,7 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if this role may be mentioned in messages; otherwise <code>false</code>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -343,10 +343,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_Name" data-uid="Kook.IRole.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the name of this role.</p>
+  <div class="markdown level1 summary"><p>获取此角色的名称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -361,8 +361,7 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string containing the name of this role.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -376,10 +375,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_Permissions" data-uid="Kook.IRole.Permissions">
   Permissions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the permissions granted to members of this role.</p>
+  <div class="markdown level1 summary"><p>获取此角色拥有的权限。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -394,8 +393,7 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.GuildPermissions.html">GuildPermissions</a></dt>
-    <dd><p>A <a class="xref" href="Kook.GuildPermissions.html">GuildPermissions</a> struct that this role possesses.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -409,10 +407,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_Position" data-uid="Kook.IRole.Position">
   Position
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets this role's position relative to other roles in the same guild.</p>
+  <div class="markdown level1 summary"><p>获取此角色在服务器角色列表中的位置。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -427,13 +425,15 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> representing the position of the role in the role list of the guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_IRole_Position_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>更小的数值表示更靠近列表顶部的位置。</p>
+</div>
 
 
 
@@ -442,10 +442,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_Type" data-uid="Kook.IRole.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the type of this role.</p>
+  <div class="markdown level1 summary"><p>获取此角色的类型。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -460,8 +460,7 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.RoleType.html">RoleType</a></dt>
-    <dd><p>A <a class="xref" href="Kook.RoleType.html">RoleType</a> representing the type of this role.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -479,10 +478,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_GetUsersAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IRole.GetUsersAsync(Kook.CacheMode,Kook.RequestOptions)">
   GetUsersAsync(CacheMode, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of users with this role.</p>
+  <div class="markdown level1 summary"><p>获取拥有此角色的用户的集合。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -493,17 +492,17 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
-    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+    <dd><p>指示当前方法是否应该仅从缓存中获取结果，还是可以通过 API 请求获取数据。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IGuildUser.html">IGuildUser</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of users with this role.</p>
+    <dd><p>分页的用户集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -513,6 +512,23 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IRole_GetUsersAsync_Kook_CacheMode_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+    </p></div>
+<br>
+    此方法将尝试获取拥有此角色的所有服务器用户。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxUsersPerBatch">MaxUsersPerBatch</a>
+    将请求拆分。换句话说，如果存在 500 个用户拥有此角色，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxUsersPerBatch">MaxUsersPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
+</div>
 
 
 
@@ -521,10 +537,10 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IRole_ModifyAsync_System_Action_Kook_RoleProperties__Kook_RequestOptions_" data-uid="Kook.IRole.ModifyAsync(System.Action{Kook.RoleProperties},Kook.RequestOptions)">
   ModifyAsync(Action&lt;RoleProperties&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/IRole.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Modifies this role.</p>
+  <div class="markdown level1 summary"><p>修改此角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -535,17 +551,17 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.RoleProperties.html">RoleProperties</a>&gt;</dt>
-    <dd><p>A delegate containing the properties to modify the role with.</p>
+    <dd><p>一个包含修改角色属性的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous modification operation.</p>
+    <dd><p>一个表示异步修改操作的任务。</p>
 </dd>
   </dl>
 
@@ -556,8 +572,7 @@ Interface IRole  <a class="header-action link-secondary" title="View source" hre
 
 
   <h4 class="section" id="Kook_IRole_ModifyAsync_System_Action_Kook_RoleProperties__Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method modifies this role with the specified properties. To see an example of this
-method and what properties are available, please refer to <a class="xref" href="Kook.RoleProperties.html">RoleProperties</a>.</p>
+  <div class="markdown level1 remarks"><p>此方法使用指定的属性修改当前角色信息。要查看可用的属性，请参考 <a class="xref" href="Kook.RoleProperties.html">RoleProperties</a>。</p>
 </div>
 
 

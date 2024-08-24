@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SocketSelfUser | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents the logged-in WebSocket-based user.">
+      <meta name="description" content="表示一个基于网关的当前登录的用户信息。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents the logged-in WebSocket-based user.</p>
+  <div class="markdown summary"><p>表示一个基于网关的当前登录的用户信息。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -240,7 +240,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the link to this user's avatar.</p>
+  <div class="markdown level1 summary"><p>获取此用户的头像图像的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -261,6 +261,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_Avatar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户为 BUFF 会员，且以 BUFF 会员权益设置了头像，则此属性返回的 URL 表示的是 BUFF 专属头像权益时效后的回退头像。</p>
+</div>
 
 
 
@@ -272,7 +275,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the link to this user's banner.</p>
+  <div class="markdown level1 summary"><p>获取此用户的横幅图像的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -293,6 +296,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_Banner_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户不是 BUFF 会员，或未以 BUFF 会员权限设置横幅，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -304,7 +310,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the link to this user's BUFF avatar.</p>
+  <div class="markdown level1 summary"><p>获取此用户以 BUFF 会员权益设置的头像图像的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -325,6 +331,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_BuffAvatar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户不是 BUFF 会员，或未以 BUFF 会员权限设置头像，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -336,7 +345,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user's BUFF subscription is annual; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否订阅了年度 BUFF 会员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -357,6 +366,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_HasAnnualBuff_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否订阅了年度 BUFF 会员，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -368,7 +380,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user has subscribed to BUFF; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否订阅了 BUFF 会员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -389,6 +401,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_HasBuff_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否订阅了 BUFF 会员，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -400,7 +415,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the per-username unique ID for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户识别号的数值形式。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -432,7 +447,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>TODO: To be documented.</p>
+  <div class="markdown level1 summary"><p>获取此用户的邀请用户数。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -464,7 +479,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user is banned; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否被封禁。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -485,6 +500,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_IsBanned_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否被封禁，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -496,7 +514,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user is a bot; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否为 Bot。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -517,6 +535,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_IsBot_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否为 Bot，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -528,7 +549,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user enabled denoise feature; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否启用了降噪功能。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -549,6 +570,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_IsDenoiseEnabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否启用了降噪功能，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -560,7 +584,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the mobile number of the logged-in user is verified.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否验证了手机号码。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -592,7 +616,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the mobile number of the logged-in user.</p>
+  <div class="markdown level1 summary"><p>获取此用户的手机号码。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -624,7 +648,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the mobile prefix of the logged-in user.</p>
+  <div class="markdown level1 summary"><p>获取此用户的手机号码前缀。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -656,7 +680,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the nameplates this user has.</p>
+  <div class="markdown level1 summary"><p>获取此用户设置展示的所有铭牌。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -677,6 +701,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_Nameplates_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>用户设置的首个铭牌会展示在该用户聊天消息的用户名的右侧，用户设置的所有铭牌会展示在个人信息面板内的用户名下方。</p>
+</div>
 
 
 
@@ -688,7 +715,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get the tag this user has.</p>
+  <div class="markdown level1 summary"><p>获取此用户的标签信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -709,6 +736,10 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_UserTag_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>用户的标签会显示在服务器用户列表、私信列表、私信消息页、好友列表、个人信息面板、聊天消息的用户名的右侧。 <br>
+如果此用户没有标签，或未知此用户的标签信息，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -720,7 +751,7 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the username for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户的用户名。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -753,10 +784,10 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_WebSocket_SocketSelfUser_StartPlayingAsync_Kook_IGame_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketSelfUser.StartPlayingAsync(Kook.IGame,Kook.RequestOptions)">
   StartPlayingAsync(IGame, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L157"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Starts a new game activity. After this operation, a game activity will be displayed on the currently connected user's profile.</p>
+  <div class="markdown level1 summary"><p>开始一个新的游戏活动。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -767,17 +798,17 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>game</code> <a class="xref" href="Kook.IGame.html">IGame</a></dt>
-    <dd><p>The game to be played.</p>
+    <dd><p>要显示的游戏。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for starting a game activity.</p>
+    <dd><p>一个表示异步开始操作的任务。</p>
 </dd>
   </dl>
 
@@ -787,6 +818,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_StartPlayingAsync_Kook_IGame_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此操作会使当前用户的资料卡片上显式指定的游戏信息。</p>
+</div>
 
 
 
@@ -795,10 +829,10 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_WebSocket_SocketSelfUser_StartPlayingAsync_Kook_Music_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketSelfUser.StartPlayingAsync(Kook.Music,Kook.RequestOptions)">
   StartPlayingAsync(Music, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Starts a new music activity. After this operation, a music activity will be displayed on the currently connected user's profile.</p>
+  <div class="markdown level1 summary"><p>开始一个新的听音乐活动。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -809,17 +843,17 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>music</code> <a class="xref" href="Kook.Music.html">Music</a></dt>
-    <dd><p>The music being listened to be showed.</p>
+    <dd><p>要播放的音乐。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for starting a music activity.</p>
+    <dd><p>一个表示异步开始操作的任务。</p>
 </dd>
   </dl>
 
@@ -829,6 +863,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_StartPlayingAsync_Kook_Music_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此操作会使当前用户的资料卡片上显式指定的音乐信息。</p>
+</div>
 
 
 
@@ -837,10 +874,10 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_WebSocket_SocketSelfUser_StopPlayingAsync_Kook_ActivityType_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketSelfUser.StopPlayingAsync(Kook.ActivityType,Kook.RequestOptions)">
   StopPlayingAsync(ActivityType, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Stops an activity. After this operation, the activity on the currently connected user's profile will disappear.</p>
+  <div class="markdown level1 summary"><p>停止活动。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -851,17 +888,17 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>type</code> <a class="xref" href="Kook.ActivityType.html">ActivityType</a></dt>
-    <dd><p>The type of the activity to stop</p>
+    <dd><p>要停止的活动类型。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for stopping an activity.</p>
+    <dd><p>一个表示异步停止操作的任务。</p>
 </dd>
   </dl>
 
@@ -871,6 +908,9 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_StopPlayingAsync_Kook_ActivityType_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此操作会使当前用户的资料卡片上不再显示指定的活动信息。</p>
+</div>
 
 
 
@@ -879,11 +919,10 @@ Class SocketSelfUser  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_WebSocket_SocketSelfUser_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketSelfUser.UpdateAsync(Kook.RequestOptions)">
   UpdateAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketSelfUser.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Fetches the users data from the REST API to update this object,
-especially the <a class="xref" href="Kook.WebSocket.SocketSelfUser.html#Kook_WebSocket_SocketSelfUser_Username">Username</a> property.</p>
+  <div class="markdown level1 summary"><p>通过 REST API 获取此实体对象的最新状态，并替换当前对象的属性。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -894,14 +933,14 @@ especially the <a class="xref" href="Kook.WebSocket.SocketSelfUser.html#Kook_Web
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous reloading operation.</p>
+    <dd><p>一个表示异步更新操作的任务。</p>
 </dd>
   </dl>
 
@@ -911,6 +950,11 @@ especially the <a class="xref" href="Kook.WebSocket.SocketSelfUser.html#Kook_Web
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketSelfUser_UpdateAsync_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+        此方法将从 KOOK REST API 获取最新数据，并替换当前对象的属性，而非使用指定的属性修改 KOOK 服务端的数据。
+    </p></div>
+</div>
 
 
 

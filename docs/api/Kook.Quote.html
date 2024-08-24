@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Quote | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a quoted message.">
+      <meta name="description" content="表示一个引用的消息。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class Quote  <a class="header-action link-secondary" title="View source" href="h
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a quoted message.</p>
+  <div class="markdown summary"><p>表示一个引用的消息。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -163,10 +163,10 @@ Class Quote  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Kook_Quote__ctor_System_Guid_" data-uid="Kook.Quote.#ctor(System.Guid)">
   Quote(Guid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.Quote.html">Quote</a> class.</p>
+  <div class="markdown level1 summary"><p>使用指定的消息 ID 创建一个新的 <a class="xref" href="Kook.Quote.html">Quote</a> 实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -178,7 +178,7 @@ public Quote(Guid quotedMessageId)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>quotedMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The quoted message identifier.</p>
+    <dd><p>要引用的消息的 ID。</p>
 </dd>
   </dl>
 
@@ -191,6 +191,12 @@ public Quote(Guid quotedMessageId)</code></pre>
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.MessageReference.html#Kook_MessageReference__ctor_System_Guid_">MessageReference</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>)</div>
+    </dd>
+  </dl>
 
 
   <h2 class="section" id="properties">Properties
@@ -201,10 +207,10 @@ public Quote(Guid quotedMessageId)</code></pre>
 
   <h3 id="Kook_Quote_Author" data-uid="Kook.Quote.Author">
   Author
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the author of this message.</p>
+  <div class="markdown level1 summary"><p>获取此引用的消息的作者。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -233,10 +239,10 @@ public Quote(Guid quotedMessageId)</code></pre>
 
   <h3 id="Kook_Quote_Content" data-uid="Kook.Quote.Content">
   Content
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the content of the message this quote refers to.</p>
+  <div class="markdown level1 summary"><p>获取此引用的消息的内容。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -251,14 +257,15 @@ public Quote(Guid quotedMessageId)</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that contains the body of the message;
-note that this field may be empty or the original code if the message is not a text based message.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_Quote_Content_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此引用的消息不是文本消息，则此属性可能为空或包含原始代码。</p>
+</div>
 
 
 
@@ -267,10 +274,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_Quote_CreateAt" data-uid="Kook.Quote.CreateAt">
   CreateAt
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the time this message was sent.</p>
+  <div class="markdown level1 summary"><p>获取此引用的消息的发送时间。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -285,8 +292,7 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
-    <dd><p>Time of when the message was sent.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -300,10 +306,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_Quote_Empty" data-uid="Kook.Quote.Empty">
   Empty
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets an empty quote whose quoted message is null.</p>
+  <div class="markdown level1 summary"><p>获取一个引用的消息为空的引用。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -326,10 +332,16 @@ public static MessageReference Empty { get; }</code></pre>
 
 
   <h4 class="section" id="Kook_Quote_Empty_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Used to delete a quote when modifying a message.</p>
+  <div class="markdown level1 remarks"><p>此属性用于在修改消息时删除引用。</p>
 </div>
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.MessageProperties.html#Kook_MessageProperties_Quote">Quote</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_Quote_QuotedMessageId_" data-uid="Kook.Quote.QuotedMessageId*"></a>
@@ -339,7 +351,7 @@ public static MessageReference Empty { get; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the identifier of the message this quote refers to.</p>
+  <div class="markdown level1 summary"><p>获取此引用所指向的消息的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -371,7 +383,7 @@ public static MessageReference Empty { get; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Quote.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the type of the message this quote refers to.</p>
+  <div class="markdown level1 summary"><p>获取此引用的消息的类型。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

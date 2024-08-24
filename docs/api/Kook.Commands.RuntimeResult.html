@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class RuntimeResult | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents the runtime result of a command execution.">
+      <meta name="description" content="表示命令执行的运行时结果。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class RuntimeResult  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents the runtime result of a command execution.</p>
+  <div class="markdown summary"><p>表示命令执行的运行时结果。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -163,7 +163,7 @@ Class RuntimeResult  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/RuntimeResult.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.RuntimeResult.html">RuntimeResult</a> class with the type of error and reason.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定错误类型和原因的 <a class="xref" href="Kook.Commands.RuntimeResult.html">RuntimeResult</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -174,10 +174,10 @@ Class RuntimeResult  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>error</code> <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a>?</dt>
-    <dd><p>The type of failure, or <code>null</code> if none.</p>
+    <dd><p>错误类型。</p>
 </dd>
     <dt><code>reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The reason of failure.</p>
+    <dd><p>错误原因。</p>
 </dd>
   </dl>
 
@@ -203,7 +203,7 @@ Class RuntimeResult  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/RuntimeResult.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Describes the error type that may have occurred during the operation.</p>
+  <div class="markdown level1 summary"><p>获取在命令执行期间发生的异常信息，如果没有异常则为 <code>null</code>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -218,9 +218,7 @@ Class RuntimeResult  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.CommandError.html">CommandError</a>?</dt>
-    <dd><p>A <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a> indicating the type of error that may have occurred during the operation;
-<code>null</code> if the operation was successful.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -234,10 +232,10 @@ Class RuntimeResult  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Commands_RuntimeResult_IsSuccess" data-uid="Kook.Commands.RuntimeResult.IsSuccess">
   IsSuccess
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/RuntimeResult.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/RuntimeResult.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Indicates whether the operation was successful or not.</p>
+  <div class="markdown level1 summary"><p>获取命令执行的结果是否为成功。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -252,8 +250,7 @@ Class RuntimeResult  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the result is positive; otherwise <code>false</code>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -267,10 +264,10 @@ Class RuntimeResult  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Commands_RuntimeResult_Reason" data-uid="Kook.Commands.RuntimeResult.Reason">
   Reason
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/RuntimeResult.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/RuntimeResult.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Describes the execution reason or result.</p>
+  <div class="markdown level1 summary"><p>获取错误原因。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -303,7 +300,7 @@ Class RuntimeResult  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Commands_RuntimeResult_ToString" data-uid="Kook.Commands.RuntimeResult.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/RuntimeResult.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/RuntimeResult.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>

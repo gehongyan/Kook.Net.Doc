@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MessageExtensions | Kook.Net 文档 ">
       
-      <meta name="description" content="Provides extension methods for  that relates to commands.">
+      <meta name="description" content="提供用于  与命令相关的扩展方法。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides extension methods for <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a> that relates to commands.</p>
+  <div class="markdown summary"><p>提供用于 <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a> 与命令相关的扩展方法。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,10 +157,10 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Commands_MessageExtensions_HasCharPrefix_Kook_IUserMessage_System_Char_System_Int32__" data-uid="Kook.Commands.MessageExtensions.HasCharPrefix(Kook.IUserMessage,System.Char,System.Int32@)">
   HasCharPrefix(IUserMessage, char, ref int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the message starts with the provided character.</p>
+  <div class="markdown level1 summary"><p>获取消息是否以提供的字符开头。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -171,20 +171,20 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>msg</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message to check against.</p>
+    <dd><p>要检查的消息。</p>
 </dd>
     <dt><code>c</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
-    <dd><p>The char prefix.</p>
+    <dd><p>要检查的前导字符。</p>
 </dd>
     <dt><code>argPos</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>References where the command starts.</p>
+    <dd><p>开始检查的位置。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the message begins with the char <code class="paramref">c</code>; otherwise <code>false</code>.</p>
+    <dd><p>如果消息以指定的字符开头，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </dd>
   </dl>
 
@@ -202,10 +202,10 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Commands_MessageExtensions_HasMentionPrefix_Kook_IUserMessage_Kook_IUser_System_Int32__" data-uid="Kook.Commands.MessageExtensions.HasMentionPrefix(Kook.IUserMessage,Kook.IUser,System.Int32@)">
   HasMentionPrefix(IUserMessage, IUser, ref int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the message starts with the user's mention string.</p>
+  <div class="markdown level1 summary"><p>获取消息是否以提供的用户提及开头。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -216,17 +216,21 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>msg</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd></dd>
+    <dd><p>要检查的消息。</p>
+</dd>
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd></dd>
+    <dd><p>要检查的用户。</p>
+</dd>
     <dt><code>argPos</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>开始检查的位置。</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>如果消息以指定的用户提及开头，则为 <code>true</code>；否则为 <code>false</code>。</p>
+</dd>
   </dl>
 
 
@@ -243,10 +247,10 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Commands_MessageExtensions_HasStringPrefix_Kook_IUserMessage_System_String_System_Int32__System_StringComparison_" data-uid="Kook.Commands.MessageExtensions.HasStringPrefix(Kook.IUserMessage,System.String,System.Int32@,System.StringComparison)">
   HasStringPrefix(IUserMessage, string, ref int, StringComparison)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the message starts with the provided string.</p>
+  <div class="markdown level1 summary"><p>获取消息是否以提供的字符串开头。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -257,19 +261,24 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>msg</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd></dd>
+    <dd><p>要检查的消息。</p>
+</dd>
     <dt><code>str</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>要检查的前导字符。</p>
+</dd>
     <dt><code>argPos</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>开始检查的位置。</p>
+</dd>
     <dt><code>comparisonType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></dt>
-    <dd></dd>
+    <dd><p>字符串比较模式。</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>如果消息以指定的字符串开头，则为 <code>true</code>；否则为 <code>false</code>。</p>
+</dd>
   </dl>
 
 
@@ -286,10 +295,10 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Commands_MessageExtensions_TryExpandCardContent_Kook_IUserMessage_System_String__" data-uid="Kook.Commands.MessageExtensions.TryExpandCardContent(Kook.IUserMessage,System.String@)">
   TryExpandCardContent(IUserMessage, out string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Extensions/MessageExtensions.cs/#L193"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Tries to expand the content of the card into a single string.</p>
+  <div class="markdown level1 summary"><p>尝试将卡片的内容展开为单个字符串。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -300,17 +309,17 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>msg</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message to expand the content of.</p>
+    <dd><p>要展开的消息。</p>
 </dd>
     <dt><code>expandedContent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The expanded content of the card.</p>
+    <dd><p>展开的内容。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the content was successfully expanded; otherwise, <code>false</code>.</p>
+    <dd><p>如果成功展开，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </dd>
   </dl>
 

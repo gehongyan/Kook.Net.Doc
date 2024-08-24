@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class PriorityAttribute | Kook.Net 文档 ">
       
-      <meta name="description" content="Sets priority of commands.">
+      <meta name="description" content="标记指定的命令的优先级。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class PriorityAttribute  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Sets priority of commands.</p>
+  <div class="markdown summary"><p>标记指定的命令的优先级。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -264,10 +264,10 @@ public class PriorityAttribute : Attribute</code></pre>
 
   <h3 id="Kook_Commands_PriorityAttribute__ctor_System_Int32_" data-uid="Kook.Commands.PriorityAttribute.#ctor(System.Int32)">
   PriorityAttribute(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/PriorityAttribute.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/PriorityAttribute.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.PriorityAttribute.html">PriorityAttribute</a> attribute with the given priority.</p>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Commands.PriorityAttribute.html">PriorityAttribute</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -278,7 +278,8 @@ public class PriorityAttribute : Attribute</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>priority</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>为命令设置的优先级。</p>
+</dd>
   </dl>
 
 
@@ -288,6 +289,13 @@ public class PriorityAttribute : Attribute</code></pre>
 
 
 
+  <h4 class="section" id="Kook_Commands_PriorityAttribute__ctor_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>更大的数值表示更高的优先级。 <br>
+命令系统在命令匹配时，会根据输入参数的相似度和优先级来选择最匹配的命令。
+例如，通过提及用户传入用户类型的参数，可以为该参数贡献 1.0 的匹配相似分，而仅通过用户昵称传入用户类型的参数则最低只贡献 0.5 的匹配相似分。
+一般地，各个参数的匹配相似分均为不超过 1.0 的正数，命令系统将会对各个匹配的匹配相似分统计算术平均值，此平均值通常不会超过 1.0。
+在此基础上，优先级分数值会被累加到匹配相似分算术平均值的 0.99 倍之上，这表示，通常情况下，为命令之间设置量级超过 1 的优先级均可以使自定义匹配优先级生效。</p>
+</div>
 
 
 
@@ -303,7 +311,7 @@ public class PriorityAttribute : Attribute</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/PriorityAttribute.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the priority which has been set for the command.</p>
+  <div class="markdown level1 summary"><p>获取为命令设置的优先级。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

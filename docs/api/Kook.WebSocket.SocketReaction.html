@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SocketReaction | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a WebSocket-based reaction.">
+      <meta name="description" content="表示一个基于网关的回应。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a WebSocket-based reaction.</p>
+  <div class="markdown summary"><p>表示一个基于网关的回应。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,10 +157,10 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_WebSocket_SocketReaction_Channel" data-uid="Kook.WebSocket.SocketReaction.Channel">
   Channel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the channel where the reaction takes place in.</p>
+  <div class="markdown level1 summary"><p>获取此回应所在的消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -175,13 +175,15 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.ISocketMessageChannel.html">ISocketMessageChannel</a></dt>
-    <dd><p>A WebSocket-based message channel.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketReaction_Channel_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果要获取的频道实体不存在于缓存中，则此属性将返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -190,10 +192,10 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_WebSocket_SocketReaction_Emote" data-uid="Kook.WebSocket.SocketReaction.Emote">
   Emote
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="Kook.IEmote.html">IEmote</a> used in the reaction.</p>
+  <div class="markdown level1 summary"><p>获取此回应所使用的表情符号。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -222,10 +224,10 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_WebSocket_SocketReaction_Message" data-uid="Kook.WebSocket.SocketReaction.Message">
   Message
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the message that has been reacted to if possible.</p>
+  <div class="markdown level1 summary"><p>获取此回应所对应的消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -240,13 +242,15 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
-    <dd><p>A WebSocket-based message where possible; a value is not always returned.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketReaction_Message_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果要获取的消息实体不存在于缓存中，则此属性将返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -255,10 +259,10 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_WebSocket_SocketReaction_MessageId" data-uid="Kook.WebSocket.SocketReaction.MessageId">
   MessageId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the ID of the message that has been reacted to.</p>
+  <div class="markdown level1 summary"><p>获取此回应所对应的消息的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -273,8 +277,7 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>A message Guid associated with the message.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -288,10 +291,10 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_WebSocket_SocketReaction_User" data-uid="Kook.WebSocket.SocketReaction.User">
   User
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the user who added the reaction if possible.</p>
+  <div class="markdown level1 summary"><p>获取添加此回应的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -306,24 +309,14 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>A user object where possible; a value is not always returned.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
   <h4 class="section" id="Kook_WebSocket_SocketReaction_User_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>
-        This property attempts to retrieve a WebSocket-cached user that is responsible for this reaction from
-        the client. In other words, when the user is not in the WebSocket cache, this property may not
-        contain a value, leaving the only identifiable information to be
-        <a class="xref" href="Kook.WebSocket.SocketReaction.html#Kook_WebSocket_SocketReaction_UserId">UserId</a>.
-    </p>
-<p>
-        If you wish to obtain an identifiable user object, consider utilizing
-        <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> which will attempt to retrieve the user from REST.
-    </p>
+  <div class="markdown level1 remarks"><p>如果要获取的用户实体不存在于缓存中，则此属性将返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
 </div>
 
 
@@ -333,10 +326,10 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_WebSocket_SocketReaction_UserId" data-uid="Kook.WebSocket.SocketReaction.UserId">
   UserId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the ID of the user who added the reaction.</p>
+  <div class="markdown level1 summary"><p>获取添加此回应的用户的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -351,18 +344,12 @@ Class SocketReaction  <a class="header-action link-secondary" title="View source
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>A user identifier associated with the user.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
-  <h4 class="section" id="Kook_WebSocket_SocketReaction_UserId_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This property retrieves the identifier of the user responsible for this reaction. This
-property will always contain the user identifier in event that
-<a class="xref" href="Kook.WebSocket.SocketReaction.html#Kook_WebSocket_SocketReaction_User">User</a> cannot be retrieved.</p>
-</div>
 
 
 
@@ -375,7 +362,7 @@ property will always contain the user identifier in event that
 
   <h3 id="Kook_WebSocket_SocketReaction_Equals_System_Object_" data-uid="Kook.WebSocket.SocketReaction.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
@@ -414,7 +401,7 @@ property will always contain the user identifier in event that
 
   <h3 id="Kook_WebSocket_SocketReaction_GetHashCode" data-uid="Kook.WebSocket.SocketReaction.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Messages/SocketReaction.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>

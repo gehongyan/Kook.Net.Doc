@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class RoleProperties | Kook.Net 文档 ">
       
-      <meta name="description" content="Properties that are used to modify an  with the specified changes.">
+      <meta name="description" content="提供用于修改  的属性。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class RoleProperties  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Properties that are used to modify an <a class="xref" href="Kook.IRole.html">IRole</a> with the specified changes.</p>
+  <div class="markdown summary"><p>提供用于修改 <a class="xref" href="Kook.IRole.html">IRole</a> 的属性。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,10 +157,10 @@ Class RoleProperties  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_RoleProperties_Color" data-uid="Kook.RoleProperties.Color">
   Color
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the color of the role.</p>
+  <div class="markdown level1 summary"><p>获取或设置要设置到此角色的颜色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -181,9 +181,6 @@ Class RoleProperties  <a class="header-action link-secondary" title="View source
 
 
 
-  <h4 class="section" id="Kook_RoleProperties_Color_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This value may not be set if the role is an @everyone role.</p>
-</div>
 
 
 
@@ -192,15 +189,16 @@ Class RoleProperties  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_RoleProperties_Hoist" data-uid="Kook.RoleProperties.Hoist">
   Hoist
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets whether this role should be displayed independently in the user list.</p>
+  <div class="markdown level1 summary"><p>获取或设置要设置到此角色拥有此角色的用户是否在用户列表中与普通在线成员分开显示。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? Hoist { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use IsHoisted instead.&quot;)]
+public bool? Hoist { get; set; }</code></pre>
   </div>
 
 
@@ -216,9 +214,70 @@ Class RoleProperties  <a class="header-action link-secondary" title="View source
 
 
 
-  <h4 class="section" id="Kook_RoleProperties_Hoist_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This value may not be set if the role is an @everyone role.</p>
+
+
+
+
+  <a id="Kook_RoleProperties_IsHoisted_" data-uid="Kook.RoleProperties.IsHoisted*"></a>
+
+  <h3 id="Kook_RoleProperties_IsHoisted" data-uid="Kook.RoleProperties.IsHoisted">
+  IsHoisted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取或设置要设置到此角色拥有此角色的用户是否在用户列表中与普通在线成员分开显示。</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsHoisted { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_RoleProperties_IsMentionable_" data-uid="Kook.RoleProperties.IsMentionable*"></a>
+
+  <h3 id="Kook_RoleProperties_IsMentionable" data-uid="Kook.RoleProperties.IsMentionable">
+  IsMentionable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取或设置要设置到此角色是否允许任何人提及此角色。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsMentionable { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
 
 
 
@@ -227,15 +286,16 @@ Class RoleProperties  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_RoleProperties_Mentionable" data-uid="Kook.RoleProperties.Mentionable">
   Mentionable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets whether or not this role can be mentioned.</p>
+  <div class="markdown level1 summary"><p>获取或设置要设置到此角色是否允许任何人提及此角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? Mentionable { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use IsMentionable instead.&quot;)]
+public bool? Mentionable { get; set; }</code></pre>
   </div>
 
 
@@ -251,9 +311,6 @@ Class RoleProperties  <a class="header-action link-secondary" title="View source
 
 
 
-  <h4 class="section" id="Kook_RoleProperties_Mentionable_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This value may not be set if the role is an @everyone role.</p>
-</div>
 
 
 
@@ -262,10 +319,10 @@ Class RoleProperties  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_RoleProperties_Name" data-uid="Kook.RoleProperties.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the name of the role.</p>
+  <div class="markdown level1 summary"><p>获取或设置要设置到此角色的名称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -286,9 +343,6 @@ Class RoleProperties  <a class="header-action link-secondary" title="View source
 
 
 
-  <h4 class="section" id="Kook_RoleProperties_Name_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This value may not be set if the role is an @everyone role.</p>
-</div>
 
 
 
@@ -297,10 +351,10 @@ Class RoleProperties  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_RoleProperties_Permissions" data-uid="Kook.RoleProperties.Permissions">
   Permissions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/RoleProperties.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the role's <a class="xref" href="Kook.GuildPermission.html">GuildPermission</a>.</p>
+  <div class="markdown level1 summary"><p>获取或设置要设置到此角色的权限。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

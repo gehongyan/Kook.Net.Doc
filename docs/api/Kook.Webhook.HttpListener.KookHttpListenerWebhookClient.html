@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class KookHttpListenerWebhookClient | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a KOOK webhook client using HTTP listener.">
+      <meta name="description" content="表示一个使用 HTTP 监听器的 KOOK Webhook 客户端。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class KookHttpListenerWebhookClient  <a class="header-action link-secondary" tit
   <dl><dt>Assembly</dt><dd>Kook.Net.Webhook.HttpListener.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a KOOK webhook client using HTTP listener.</p>
+  <div class="markdown summary"><p>表示一个使用 HTTP 监听器的 KOOK Webhook 客户端。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -374,13 +374,6 @@ Class KookHttpListenerWebhookClient  <a class="header-action link-secondary" tit
     </div>
   </dd></dl>
 
-  <dl class="typelist extensionMethods">
-    <dt>Extension Methods</dt>
-    <dd>
-  <div>
-      <a class="xref" href="Kook.WebSocket.BaseSocketClientExperimentalExtensions.html#Kook_WebSocket_BaseSocketClientExperimentalExtensions_CreateGuildAsync_Kook_WebSocket_BaseSocketClient_System_String_Kook_IVoiceRegion_System_IO_Stream_System_Nullable_System_Int32__Kook_RequestOptions_">BaseSocketClientExperimentalExtensions.CreateGuildAsync(BaseSocketClient, string, IVoiceRegion?, Stream?, int?, RequestOptions?)</a>
-  </div>
-  </dd></dl>
 
 
 
@@ -394,10 +387,11 @@ Class KookHttpListenerWebhookClient  <a class="header-action link-secondary" tit
 
   <h3 id="Kook_Webhook_HttpListener_KookHttpListenerWebhookClient__ctor_Kook_Webhook_HttpListener_KookHttpListenerWebhookConfig_" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient.#ctor(Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig)">
   KookHttpListenerWebhookClient(KookHttpListenerWebhookConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookClient.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookClient.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient.html">KookHttpListenerWebhookClient</a> 类的新实例。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -407,7 +401,8 @@ Class KookHttpListenerWebhookClient  <a class="header-action link-secondary" tit
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>config</code> <a class="xref" href="Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig.html">KookHttpListenerWebhookConfig</a></dt>
-    <dd></dd>
+    <dd><p>用于配置 KOOK Webhook 客户端的 <a class="xref" href="Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig.html">KookHttpListenerWebhookConfig</a>。</p>
+</dd>
   </dl>
 
 
@@ -432,7 +427,7 @@ Class KookHttpListenerWebhookClient  <a class="header-action link-secondary" tit
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookClient.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Starts the WebSocket connection.</p>
+  <div class="markdown level1 summary"><p>启动客户端与 KOOK 之间的连接。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -444,7 +439,7 @@ Class KookHttpListenerWebhookClient  <a class="header-action link-secondary" tit
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous start operation.</p>
+    <dd><p>一个表示异步启动操作的任务。</p>
 </dd>
   </dl>
 
@@ -454,6 +449,11 @@ Class KookHttpListenerWebhookClient  <a class="header-action link-secondary" tit
 
 
 
+  <h4 class="section" id="Kook_Webhook_HttpListener_KookHttpListenerWebhookClient_StartAsync_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>当前方法会初始化客户端与 KOOK 之间的连接。 <br><div class="IMPORTANT"><h5>important</h5><p>
+此方法会在调用后立即返回，因为它会在另一个线程上初始化连接。</p>
+</div>
+</div>
 
 
 
@@ -465,7 +465,7 @@ Class KookHttpListenerWebhookClient  <a class="header-action link-secondary" tit
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookClient.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Stops the WebSocket connection.</p>
+  <div class="markdown level1 summary"><p>停止客户端与 KOOK 之间的连接。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -477,7 +477,7 @@ Class KookHttpListenerWebhookClient  <a class="header-action link-secondary" tit
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous stop operation.</p>
+    <dd><p>一个表示异步停止操作的任务。</p>
 </dd>
   </dl>
 

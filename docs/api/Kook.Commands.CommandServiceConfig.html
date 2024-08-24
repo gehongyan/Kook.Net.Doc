@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class CommandServiceConfig | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a configuration class for .">
+      <meta name="description" content="表示一个用于  的配置类。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class CommandServiceConfig  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a configuration class for <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a>.</p>
+  <div class="markdown summary"><p>表示一个用于 <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a> 的配置类。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,10 +157,10 @@ Class CommandServiceConfig  <a class="header-action link-secondary" title="View 
 
   <h3 id="Kook_Commands_CommandServiceConfig_CaseSensitiveCommands" data-uid="Kook.Commands.CommandServiceConfig.CaseSensitiveCommands">
   CaseSensitiveCommands
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets whether commands should be case-sensitive.</p>
+  <div class="markdown level1 summary"><p>获取或设置命令是否区分大小写。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -189,11 +189,10 @@ Class CommandServiceConfig  <a class="header-action link-secondary" title="View 
 
   <h3 id="Kook_Commands_CommandServiceConfig_DefaultRunMode" data-uid="Kook.Commands.CommandServiceConfig.DefaultRunMode">
   DefaultRunMode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the default <a class="xref" href="Kook.Commands.RunMode.html">RunMode</a> commands should have, if one is not specified on the
-Command attribute or builder.</p>
+  <div class="markdown level1 summary"><p>获取或设置命令的默认运行模式，如果在命令属性或构建器上未指定运行模式，则使用此值。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -214,6 +213,9 @@ Command attribute or builder.</p>
 
 
 
+  <h4 class="section" id="Kook_Commands_CommandServiceConfig_DefaultRunMode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如需在命令上重写默认行为，请使用 <a class="xref" href="Kook.Commands.CommandAttribute.html#Kook_Commands_CommandAttribute_RunMode">RunMode</a> 属性。</p>
+</div>
 
 
 
@@ -222,10 +224,10 @@ Command attribute or builder.</p>
 
   <h3 id="Kook_Commands_CommandServiceConfig_IgnoreExtraArgs" data-uid="Kook.Commands.CommandServiceConfig.IgnoreExtraArgs">
   IgnoreExtraArgs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets a value that indicates whether extra parameters should be ignored.</p>
+  <div class="markdown level1 summary"><p>获取或设置默认情况下是否应忽略额外的参数。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -246,6 +248,11 @@ Command attribute or builder.</p>
 
 
 
+  <h4 class="section" id="Kook_Commands_CommandServiceConfig_IgnoreExtraArgs_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果设置为 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>，则默认情况下命令将忽略额外的参数。否则，将引发
+<a class="xref" href="Kook.Commands.CommandError.html#Kook_Commands_CommandError_BadArgCount">BadArgCount</a>
+错误。如需在命令上重写默认行为，请使用 <a class="xref" href="Kook.Commands.CommandAttribute.html#Kook_Commands_CommandAttribute_IgnoreExtraArgs">IgnoreExtraArgs</a> 属性。</p>
+</div>
 
 
 
@@ -254,10 +261,10 @@ Command attribute or builder.</p>
 
   <h3 id="Kook_Commands_CommandServiceConfig_LogLevel" data-uid="Kook.Commands.CommandServiceConfig.LogLevel">
   LogLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the minimum log level severity that will be sent to the <a class="xref" href="Kook.Commands.CommandService.html#Kook_Commands_CommandService_Log">Log</a> event.</p>
+  <div class="markdown level1 summary"><p>获取或设置将引发 <a class="xref" href="Kook.Commands.CommandService.html#Kook_Commands_CommandService_Log">Log</a> 事件的最低日志级别严重性。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -286,16 +293,10 @@ Command attribute or builder.</p>
 
   <h3 id="Kook_Commands_CommandServiceConfig_QuotationMarkAliasMap" data-uid="Kook.Commands.CommandServiceConfig.QuotationMarkAliasMap">
   QuotationMarkAliasMap
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Collection of aliases for matching pairs of string delimiters.
-The dictionary stores the opening delimiter as a key, and the matching closing delimiter as the value.
-If no value is supplied <a class="xref" href="Kook.Commands.QuotationAliasUtils.html#Kook_Commands_QuotationAliasUtils_DefaultAliasMap">DefaultAliasMap</a> will be used, which contains
-many regional equivalents.
-Only values that are specified in this map will be used as string delimiters, so if &quot; is removed then
-it won't be used.
-If this map is set to null or empty, the default delimiter of &quot; will be used.</p>
+  <div class="markdown level1 summary"><p>获取或设置用于匹配字符串定界符的别名集合。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -316,7 +317,8 @@ If this map is set to null or empty, the default delimiter of &quot; will be use
 
 
   <h4 class="section" id="Kook_Commands_CommandServiceConfig_QuotationMarkAliasMap_examples">Examples</h4>
-  <pre><code class="lang-cs">QuotationMarkAliasMap = new Dictionary&lt;char, char&gt;()
+  <p>以下示例重新设置了定界符所使用的开闭对：</p>
+<pre><code class="lang-cs">QuotationMarkAliasMap = new Dictionary&lt;char, char&gt;()
 {
     {'\"', '\"' },
     {'“', '”' },
@@ -324,6 +326,10 @@ If this map is set to null or empty, the default delimiter of &quot; will be use
 }</code></pre>
 
 
+  <h4 class="section" id="Kook_Commands_CommandServiceConfig_QuotationMarkAliasMap_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果为更改此属性，则将使用默认的内置别名集合，这可能包含了许多地区和 Unicode
+符号中可视为开闭对的符号。也可以在此默认集合的基础上进行修改。如果设置为空字典，则会使用 <code>&quot;</code> 作为默认定界符。</p>
+</div>
 
 
 
@@ -332,10 +338,10 @@ If this map is set to null or empty, the default delimiter of &quot; will be use
 
   <h3 id="Kook_Commands_CommandServiceConfig_SeparatorChar" data-uid="Kook.Commands.CommandServiceConfig.SeparatorChar">
   SeparatorChar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a> that separates an argument with another.</p>
+  <div class="markdown level1 summary"><p>获取或设置用于分隔参数的字符。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -364,10 +370,10 @@ If this map is set to null or empty, the default delimiter of &quot; will be use
 
   <h3 id="Kook_Commands_CommandServiceConfig_ThrowOnError" data-uid="Kook.Commands.CommandServiceConfig.ThrowOnError">
   ThrowOnError
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/CommandServiceConfig.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets whether <a class="xref" href="Kook.Commands.RunMode.html#Kook_Commands_RunMode_Sync">Sync</a> commands should push exceptions up to the caller.</p>
+  <div class="markdown level1 summary"><p>获取或设置同步执行的命令是否应将异常传递给调用者。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -388,6 +394,9 @@ If this map is set to null or empty, the default delimiter of &quot; will be use
 
 
 
+  <h4 class="section" id="Kook_Commands_CommandServiceConfig_ThrowOnError_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>同步命令指的是其运行模式为 <a class="xref" href="Kook.Commands.RunMode.html#Kook_Commands_RunMode_Sync">Sync</a> 的命令。</p>
+</div>
 
 
 

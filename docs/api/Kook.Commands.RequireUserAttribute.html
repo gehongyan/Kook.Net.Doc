@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class RequireUserAttribute | Kook.Net 文档 ">
       
-      <meta name="description" content="Requires the command to be invoked by the specified user.">
+      <meta name="description" content="要求调用命令的用户具有指定的 ID。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Commands_RequireUserAttribute" data-uid="Kook.Commands.RequireUserAttribute" class="text-break">
-Class RequireUserAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L28"><i class="bi bi-code-slash"></i></a>
+Class RequireUserAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class RequireUserAttribute  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Requires the command to be invoked by the specified user.</p>
+  <div class="markdown summary"><p>要求调用命令的用户具有指定的 ID。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -258,8 +258,7 @@ public class RequireUserAttribute : PreconditionAttribute</code></pre>
 
 
   <h2 id="Kook_Commands_RequireUserAttribute_examples">Examples</h2>
-  <p>The following example restricts the command to a set of sensitive commands that only the specified user
-should be able to access.</p>
+  <p>以下代码示例将 admin 命令组限制为仅允许用户 ID 为 2810246202 的用户可以调用。</p>
 <pre><code class="lang-cs">[RequireUser(2810246202)]
 [Group("admin")]
 public class AdminModule : ModuleBase
@@ -267,17 +266,12 @@ public class AdminModule : ModuleBase
     [Command("exit")]
     public async Task ExitAsync()
     {
+        await ReplyTextAsync("Goodbye!");
         Environment.Exit(0);
     }
 }</code></pre>
 
 
-  <h2 id="Kook_Commands_RequireUserAttribute_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>This precondition will restrict the access of the command or module to a specified user.
-If the precondition fails to be met, an erroneous <a class="xref" href="Kook.Commands.PreconditionResult.html">PreconditionResult</a> will be returned with the
-message &quot;Command can only be run by the specified user.&quot; For example, you can pass the owner of this bot
-application to restrict the command to the bot owner to be able to use it.</p>
-</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -288,10 +282,10 @@ application to restrict the command to the bot owner to be able to use it.</p>
 
   <h3 id="Kook_Commands_RequireUserAttribute__ctor_System_UInt64_" data-uid="Kook.Commands.RequireUserAttribute.#ctor(System.UInt64)">
   RequireUserAttribute(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.RequireUserAttribute.html">RequireUserAttribute</a> attribute with the specified user identifier.</p>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Commands.RequireUserAttribute.html">RequireUserAttribute</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -302,7 +296,7 @@ application to restrict the command to the bot owner to be able to use it.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The identifier of the user.</p>
+    <dd><p>所要求调用命令的用户应具有的 ID。</p>
 </dd>
   </dl>
 
@@ -325,13 +319,10 @@ application to restrict the command to the bot owner to be able to use it.</p>
 
   <h3 id="Kook_Commands_RequireUserAttribute_ErrorMessage" data-uid="Kook.Commands.RequireUserAttribute.ErrorMessage">
   ErrorMessage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>When overridden in a derived class, uses the supplied string
-as the error message if the precondition doesn't pass.
-Setting this for a class that doesn't override
-this property is a no-op.</p>
+  <div class="markdown level1 summary"><p>获取或设置错误消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -364,10 +355,10 @@ this property is a no-op.</p>
 
   <h3 id="Kook_Commands_RequireUserAttribute_CheckPermissionsAsync_Kook_Commands_ICommandContext_Kook_Commands_CommandInfo_System_IServiceProvider_" data-uid="Kook.Commands.RequireUserAttribute.CheckPermissionsAsync(Kook.Commands.ICommandContext,Kook.Commands.CommandInfo,System.IServiceProvider)">
   CheckPermissionsAsync(ICommandContext, CommandInfo, IServiceProvider)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Checks if the <code class="paramref">command</code> has the sufficient permission to be executed.</p>
+  <div class="markdown level1 summary"><p>检查命令执行上下文中的此命令是否满足此先决条件。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -378,20 +369,21 @@ this property is a no-op.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>context</code> <a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></dt>
-    <dd><p>The context of the command.</p>
+    <dd><p>命令执行上下文。</p>
 </dd>
     <dt><code>command</code> <a class="xref" href="Kook.Commands.CommandInfo.html">CommandInfo</a></dt>
-    <dd><p>The command being executed.</p>
+    <dd><p>要执行的命令。</p>
 </dd>
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
-    <dd><p>The service collection used for dependency injection.</p>
+    <dd><p>依赖注入服务容器。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Commands.PreconditionResult.html">PreconditionResult</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>一个表示异步检查操作的任务。任务的结果包含先决条件的结果。</p>
+</dd>
   </dl>
 
 
@@ -408,7 +400,7 @@ this property is a no-op.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L28" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/Preconditions/RequireUserAttribute.cs/#L22" class="edit-link">Edit this page</a>
         </div>
 
 

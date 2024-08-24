@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class KookHttpListenerWebhookConfig | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a KOOK webhook client configuration using HTTP listener.">
+      <meta name="description" content="表示一个用于  的配置类。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Webhook_HttpListener_KookHttpListenerWebhookConfig" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig" class="text-break">
-Class KookHttpListenerWebhookConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookConfig.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class KookHttpListenerWebhookConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookConfig.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class KookHttpListenerWebhookConfig  <a class="header-action link-secondary" tit
   <dl><dt>Assembly</dt><dd>Kook.Net.Webhook.HttpListener.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a KOOK webhook client configuration using HTTP listener.</p>
+  <div class="markdown summary"><p>表示一个用于 <a class="xref" href="Kook.Webhook.HttpListener.KookHttpListenerWebhookClient.html">KookHttpListenerWebhookClient</a> 的配置类。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -292,6 +292,9 @@ Class KookHttpListenerWebhookConfig  <a class="header-action link-secondary" tit
 
 
 
+  <h2 id="Kook_Webhook_HttpListener_KookHttpListenerWebhookConfig_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>此配置基于 <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>，在与 Webhook 有关的配置的基础上，定义了有关 HTTP 监听器的配置。</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -302,10 +305,10 @@ Class KookHttpListenerWebhookConfig  <a class="header-action link-secondary" tit
 
   <h3 id="Kook_Webhook_HttpListener_KookHttpListenerWebhookConfig__ctor" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig.#ctor">
   KookHttpListenerWebhookConfig()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookConfig.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookConfig.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig.html">KookHttpListenerWebhookConfig</a> class.</p>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig.html">KookHttpListenerWebhookConfig</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -333,14 +336,10 @@ Class KookHttpListenerWebhookConfig  <a class="header-action link-secondary" tit
 
   <h3 id="Kook_Webhook_HttpListener_KookHttpListenerWebhookConfig_AutoRestartInterval" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig.AutoRestartInterval">
   AutoRestartInterval
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookConfig.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookConfig.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the interval to wait before restarting the HTTP listener after it has been closed.
-The same value to <code>Timeout.InfiniteTimeSpan</code> represents that the client will not restart with
-leaving the application running. Other negative values will cause the client to exit the application.
-The zero value will cause the client to restart immediately. Any positive value will cause the client
-to restart after the specified interval.</p>
+  <div class="markdown level1 summary"><p>获取或设置在 HTTP 监听器关闭后等待重新启动的时间间隔。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -361,6 +360,13 @@ to restart after the specified interval.</p>
 
 
 
+  <h4 class="section" id="Kook_Webhook_HttpListener_KookHttpListenerWebhookConfig_AutoRestartInterval_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>设置为与 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.timeout.infinitetimespan">InfiniteTimeSpan</a>
+相等的值表示客户端将在保持应用程序运行的情况下不重新启动；设置为其它任何负值将导致客户端在 HTTP 监听器关闭后退出应用程序；设置为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a> 将导致客户端在 HTTP
+监听器关闭后立即重新启动；设置为任何正值将导致客户端在指定的时间间隔后重新启动。 <br>
+默认值为 5 秒，即在 HTTP 监听器关闭后 5 秒后重新启动。</p>
+</div>
 
 
 
@@ -369,10 +375,10 @@ to restart after the specified interval.</p>
 
   <h3 id="Kook_Webhook_HttpListener_KookHttpListenerWebhookConfig_UriPrefixes" data-uid="Kook.Webhook.HttpListener.KookHttpListenerWebhookConfig.UriPrefixes">
   UriPrefixes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookConfig.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookConfig.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the URI prefixes to listen for incoming webhook requests.</p>
+  <div class="markdown level1 summary"><p>获取或设置用于监听传入 Webhook 请求的 URI 前缀。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -401,7 +407,7 @@ to restart after the specified interval.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookConfig.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook.HttpListener/KookHttpListenerWebhookConfig.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

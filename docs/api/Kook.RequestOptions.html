@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class RequestOptions | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents options that should be used when sending a request.">
+      <meta name="description" content="表示发送请求时要使用的选项。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class RequestOptions  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents options that should be used when sending a request.</p>
+  <div class="markdown summary"><p>表示发送请求时要使用的选项。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,11 +157,10 @@ Class RequestOptions  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_RequestOptions__ctor" data-uid="Kook.RequestOptions.#ctor">
   RequestOptions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> class with the default request timeout set in
-<a class="xref" href="Kook.KookConfig.html">KookConfig</a>.</p>
+  <div class="markdown level1 summary"><p>使用默认设置创建一个新的 <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> 类的实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -177,6 +176,9 @@ Class RequestOptions  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_RequestOptions__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>默认的请求超时时间是 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_DefaultRequestTimeout">DefaultRequestTimeout</a>。</p>
+</div>
 
 
 
@@ -189,10 +191,10 @@ Class RequestOptions  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_RequestOptions_AuditLogReason" data-uid="Kook.RequestOptions.AuditLogReason">
   AuditLogReason
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the reason for this action in the guild's audit log.</p>
+  <div class="markdown level1 summary"><p>获取或设置要写入到服务器审计日志中的操作原因。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -214,8 +216,7 @@ Class RequestOptions  <a class="header-action link-secondary" title="View source
 
 
   <h4 class="section" id="Kook_RequestOptions_AuditLogReason_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Gets or sets the reason that will be written to the guild's audit log if applicable. This may not apply
-to all actions.</p>
+  <div class="markdown level1 remarks"><p>默认的 API 客户端不支持设置此属性。</p>
 </div>
 
 
@@ -225,10 +226,10 @@ to all actions.</p>
 
   <h3 id="Kook_RequestOptions_CancellationToken" data-uid="Kook.RequestOptions.CancellationToken">
   CancellationToken
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the cancellation token for this request.</p>
+  <div class="markdown level1 summary"><p>获取或设置此请求的取消令牌。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -243,8 +244,7 @@ to all actions.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> for this request.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -258,10 +258,10 @@ to all actions.</p>
 
   <h3 id="Kook_RequestOptions_Default" data-uid="Kook.RequestOptions.Default">
   Default
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> class with its default settings.</p>
+  <div class="markdown level1 summary"><p>使用默认设置创建一个新的 <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> 类的实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -282,6 +282,9 @@ to all actions.</p>
 
 
 
+  <h4 class="section" id="Kook_RequestOptions_Default_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>默认的请求超时时间是 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_DefaultRequestTimeout">DefaultRequestTimeout</a>。</p>
+</div>
 
 
 
@@ -290,10 +293,10 @@ to all actions.</p>
 
   <h3 id="Kook_RequestOptions_RatelimitCallback" data-uid="Kook.RequestOptions.RatelimitCallback">
   RatelimitCallback
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the callback to execute regarding ratelimits for this request.</p>
+  <div class="markdown level1 summary"><p>获取或设置此请求触发速率限制时要执行的回调委托。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -316,16 +319,22 @@ to all actions.</p>
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_DefaultRatelimitCallback">DefaultRatelimitCallback</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_RequestOptions_RetryMode_" data-uid="Kook.RequestOptions.RetryMode*"></a>
 
   <h3 id="Kook_RequestOptions_RetryMode" data-uid="Kook.RequestOptions.RetryMode">
   RetryMode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the retry behavior when the request fails.</p>
+  <div class="markdown level1 summary"><p>获取或设置请求失败时的重试行为；如果为 <code>null</code>，则使用配置的默认的重试行为。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -348,16 +357,22 @@ to all actions.</p>
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_DefaultRetryMode">DefaultRetryMode</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_RequestOptions_Timeout_" data-uid="Kook.RequestOptions.Timeout*"></a>
 
   <h3 id="Kook_RequestOptions_Timeout" data-uid="Kook.RequestOptions.Timeout">
   Timeout
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the maximum time to wait for this request to complete.</p>
+  <div class="markdown level1 summary"><p>获取或设置等待此请求完成的最大时间，以毫秒为单位。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -372,17 +387,15 @@ to all actions.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
-    <dd><p>An int in milliseconds for when the request times out.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
   <h4 class="section" id="Kook_RequestOptions_Timeout_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Gets or set the max time, in milliseconds, to wait for this request to complete. If
-<code>null</code>, a request will not time out. If a rate limit has been triggered for this request's bucket
-and will not be unpaused in time, this request will fail immediately.</p>
+  <div class="markdown level1 remarks"><p>获取或设置等待此请求完成的最大时间，以毫秒为单位。如果为 <code>null</code>，则请求不会超时。
+如果此请求的桶触发了速率限制并且在超时前不会恢复，此请求将立即失败。</p>
 </div>
 
 
@@ -396,10 +409,10 @@ and will not be unpaused in time, this request will fail immediately.</p>
 
   <h3 id="Kook_RequestOptions_Clone" data-uid="Kook.RequestOptions.Clone">
   Clone()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/RequestOptions.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Memberwise clones this <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> object.</p>
+  <div class="markdown level1 summary"><p>Creates a shallow copy of the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -411,7 +424,7 @@ and will not be unpaused in time, this request will fail immediately.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>A cloned <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a> object.</p>
+    <dd><p>A shallow copy of the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>.</p>
 </dd>
   </dl>
 

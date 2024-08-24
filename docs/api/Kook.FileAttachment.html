@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct FileAttachment | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a file attachment.">
+      <meta name="description" content="表示一个文件附件。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_FileAttachment" data-uid="Kook.FileAttachment" class="text-break">
-Struct FileAttachment  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Struct FileAttachment  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a file attachment.</p>
+  <div class="markdown summary"><p>表示一个文件附件。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -153,10 +153,10 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_FileAttachment__ctor_System_IO_Stream_System_String_Kook_AttachmentType_" data-uid="Kook.FileAttachment.#ctor(System.IO.Stream,System.String,Kook.AttachmentType)">
   FileAttachment(Stream, string, AttachmentType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a file attachment from a stream.</p>
+  <div class="markdown level1 summary"><p>通过流创建附件。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -167,13 +167,13 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
-    <dd><p>The stream to create the attachment from.</p>
+    <dd><p>创建附件所使用的流。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the attachment.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the attachment.</p>
+    <dd><p>附件的类型。</p>
 </dd>
   </dl>
 
@@ -192,10 +192,10 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_FileAttachment__ctor_System_String_System_String_Kook_AttachmentType_" data-uid="Kook.FileAttachment.#ctor(System.String,System.String,Kook.AttachmentType)">
   FileAttachment(string, string?, AttachmentType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Create the file attachment from a file path.</p>
+  <div class="markdown level1 summary"><p>通过文件路径创建附件。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -206,13 +206,13 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The path to the file.</p>
+    <dd><p>文件的路径。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the attachment.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the attachment.</p>
+    <dd><p>附件的类型。</p>
 </dd>
   </dl>
 
@@ -224,51 +224,27 @@ Struct FileAttachment  <a class="header-action link-secondary" title="View sourc
 
 
   <h4 class="section" id="Kook_FileAttachment__ctor_System_String_System_String_Kook_AttachmentType__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This file path is NOT validated and is passed directly into a
-<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.file.openread">OpenRead(string)</a>.</p>
+  <div class="markdown level1 remarks"><p>此构造函数不会校验文件路径的格式，<code class="paramref">path</code> 的值将会直接传递给
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.file.openread">OpenRead(string)</a> 方法。</p>
 </div>
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p><code class="paramref">path</code> is a zero-length string, contains only white space, or contains one or
-more invalid characters as defined by <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.path.getinvalidpathchars">GetInvalidPathChars()</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p><code class="paramref">path</code> is <code>null</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.pathtoolongexception">PathTooLongException</a></dt>
-    <dd><p>The specified path, file name, or both exceed the system-defined maximum length. For example, on
-Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260
-characters.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p><code class="paramref">path</code> is in an invalid format.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
-    <dd><p>The specified <code class="paramref">path</code> is invalid, (for example, it is on an unmapped drive).</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></dt>
-    <dd><p><code class="paramref">path</code> specified a directory. -or- The caller does not have the required permission.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
-    <dd><p>The file specified in <code class="paramref">path</code> was not found.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
-    <dd><p>An I/O error occurred while opening the file.</p>
-</dd>
-  </dl>
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.file.openread">OpenRead</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>)</div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_FileAttachment__ctor_" data-uid="Kook.FileAttachment.#ctor*"></a>
 
   <h3 id="Kook_FileAttachment__ctor_System_Uri_System_String_Kook_AttachmentType_" data-uid="Kook.FileAttachment.#ctor(System.Uri,System.String,Kook.AttachmentType)">
   FileAttachment(Uri, string, AttachmentType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Create the file attachment from a URI.</p>
+  <div class="markdown level1 summary"><p>通过 URL 创建附件。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -279,13 +255,13 @@ characters.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>uri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
-    <dd><p>The URI of the file.</p>
+    <dd><p>文件的 URL。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the attachment.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the attachment.</p>
+    <dd><p>附件的类型。</p>
 </dd>
   </dl>
 
@@ -297,20 +273,10 @@ characters.</p>
 
 
   <h4 class="section" id="Kook_FileAttachment__ctor_System_Uri_System_String_Kook_AttachmentType__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This URI path will be validated before being passed into REST API.
-If the resource the URI points to is not stored on KOOK OSS, this constructor will throw an exception.
-Under this circumstance, please create asset in advance.</p>
+  <div class="markdown level1 remarks"><p>URL 应该是指向 KOOK 对象存储服务器上的资源的 URL。如果传入的网络地址不是指向 KOOK 对象存储服务器上的资源的 URL，
+虽然此构造函数不会引发异常，但在发送消息时可能会引发异常。此时，网络资源应先通过转存至 KOOK 对象存储服务器上，再使用此构造函数。</p>
 </div>
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>The URI provided is not an asset on the KOOK OSS.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>The URI provided is blank.</p>
-</dd>
-  </dl>
 
   <dl class="typelist seealso">
     <dt>See Also</dt>
@@ -328,10 +294,10 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_FileName" data-uid="Kook.FileAttachment.FileName">
   FileName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the filename.</p>
+  <div class="markdown level1 summary"><p>获取此附件的文件名。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -360,10 +326,10 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_Mode" data-uid="Kook.FileAttachment.Mode">
   Mode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets how this attachment will be operated.</p>
+  <div class="markdown level1 summary"><p>获取创建此文件附件的方式。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -392,10 +358,10 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_Stream" data-uid="Kook.FileAttachment.Stream">
   Stream
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the stream containing the file content.</p>
+  <div class="markdown level1 summary"><p>获取包含文件内容的流。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -424,10 +390,10 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_Type" data-uid="Kook.FileAttachment.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the type of this attachment.</p>
+  <div class="markdown level1 summary"><p>获取此附件的类型。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -456,10 +422,10 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_Uri" data-uid="Kook.FileAttachment.Uri">
   Uri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the URI of the file.</p>
+  <div class="markdown level1 summary"><p>获取指向文件的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -492,7 +458,7 @@ Under this circumstance, please create asset in advance.</p>
 
   <h3 id="Kook_FileAttachment_Dispose" data-uid="Kook.FileAttachment.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
@@ -519,7 +485,7 @@ Under this circumstance, please create asset in advance.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/FileAttachment.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

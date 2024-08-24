@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum TagHandling | Kook.Net 文档 ">
       
-      <meta name="description" content="Specifies the handling type the tag should use.">
+      <meta name="description" content="表示在转换标签时应进行的操作类型。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -90,7 +90,7 @@
 
 
   <h1 id="Kook_TagHandling" data-uid="Kook.TagHandling" class="text-break">
-Enum TagHandling  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/TagHandling.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Enum TagHandling  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/TagHandling.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,7 @@ Enum TagHandling  <a class="header-action link-secondary" title="View source" hr
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Specifies the handling type the tag should use.</p>
+  <div class="markdown summary"><p>表示在转换标签时应进行的操作类型。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -118,25 +118,25 @@ Enum TagHandling  <a class="header-action link-secondary" title="View source" hr
 </h2>
   <dl class="parameters">
     <dt id="Kook_TagHandling_FullName"><code>FullName = 4</code></dt>
-    <dd><p>Resolves to username with identify number value (e.g. (met)2810246202(met) -&gt; @Someone#1234).</p>
+    <dd><p>转换为名称，包含提及前缀。如果提及标签为用户提及，则还会包含用户的识别号。</p>
 </dd>
     <dt id="Kook_TagHandling_FullNameNoPrefix"><code>FullNameNoPrefix = 5</code></dt>
-    <dd><p>Resolves to username with identify number value without mention prefix (e.g. (met)2810246202(met) -&gt; Someone#1234).</p>
+    <dd><p>转换为名称，但不包含提及前缀。如果提及标签为用户提及，则还会包含用户的识别号。</p>
 </dd>
     <dt id="Kook_TagHandling_Ignore"><code>Ignore = 0</code></dt>
-    <dd><p>Tag handling is ignored. (e.g. (met)2810246202(met) -&gt; (met)2810246202(met))</p>
+    <dd><p>不进行任何处理。</p>
 </dd>
     <dt id="Kook_TagHandling_Name"><code>Name = 2</code></dt>
-    <dd><p>Resolves to username (e.g. (met)2810246202(met) -&gt; @Someone).</p>
+    <dd><p>转换为名称，包含提及前缀。</p>
 </dd>
     <dt id="Kook_TagHandling_NameNoPrefix"><code>NameNoPrefix = 3</code></dt>
-    <dd><p>Resolves to username without mention prefix (e.g. (met)2810246202(met) -&gt; Someone).</p>
+    <dd><p>转换为名称，但不包含提及前缀。</p>
 </dd>
     <dt id="Kook_TagHandling_Remove"><code>Remove = 1</code></dt>
-    <dd><p>Removes the tag entirely.</p>
+    <dd><p>移除标签。</p>
 </dd>
     <dt id="Kook_TagHandling_Sanitize"><code>Sanitize = 6</code></dt>
-    <dd><p>Sanitizes the tag. (e.g. (met)2810246202(met) -&gt; (met)2810246202(met) (an nbsp is inserted before the key)).</p>
+    <dd><p>使用 <code>U+200B</code> 零宽空格字符转义标签。</p>
 </dd>
   </dl>
 
@@ -144,13 +144,12 @@ Enum TagHandling  <a class="header-action link-secondary" title="View source" hr
 
   <h2 id="seealso">See Also</h2>
   <div class="seealso">
-      <div><a class="xref" href="Kook.MentionUtils.html">MentionUtils</a></div>
       <div><a class="xref" href="Kook.IUserMessage.html#Kook_IUserMessage_Resolve_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_">Resolve</a>(<a class="xref" href="Kook.TagHandling.html">TagHandling</a>, <a class="xref" href="Kook.TagHandling.html">TagHandling</a>, <a class="xref" href="Kook.TagHandling.html">TagHandling</a>, <a class="xref" href="Kook.TagHandling.html">TagHandling</a>, <a class="xref" href="Kook.TagHandling.html">TagHandling</a>)</div>
   </div>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/TagHandling.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/TagHandling.cs/#L7" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IMessage | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a message object.">
+      <meta name="description" content="表示一个通用的消息。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a message object.</p>
+  <div class="markdown summary"><p>表示一个通用的消息。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -142,10 +142,10 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_Attachments" data-uid="Kook.IMessage.Attachments">
   Attachments
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the attachment included in this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息中包含的所有附件。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -160,13 +160,15 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IAttachment.html">IAttachment</a>&gt;</dt>
-    <dd><p>The attachment included in this message;</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_IMessage_Attachments_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此属性也会包含从卡片中解析出来的附件信息。</p>
+</div>
 
 
 
@@ -175,10 +177,10 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_Author" data-uid="Kook.IMessage.Author">
   Author
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the author of this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息的作者。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -207,10 +209,10 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_Cards" data-uid="Kook.IMessage.Cards">
   Cards
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all cards included in this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息中包含的所有卡片。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -225,8 +227,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p>A read-only collection of card objects.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -240,10 +241,10 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_Channel" data-uid="Kook.IMessage.Channel">
   Channel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the source channel of the message.</p>
+  <div class="markdown level1 summary"><p>获取此消息的来源频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -275,7 +276,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the clean content for this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息的纯净内容。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -290,8 +291,12 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that contains the body of the message stripped of mentions, markdown, emojis and pings;
-note that this field may be empty or the original code if the message is not a text based message.</p>
+    <dd><p>此属性会对 <a class="xref" href="Kook.IMessage.html#Kook_IMessage_Content">Content</a> 的内容进行两步操作： <br></p>
+<ol>
+<li>使用 <a class="xref" href="Kook.IUserMessage.html#Kook_IUserMessage_Resolve_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_">Resolve(TagHandling, TagHandling, TagHandling, TagHandling, TagHandling)</a>
+方法解析所有标签的完整名称； <br></li>
+<li>使用 <a class="xref" href="Kook.Format.html#Kook_Format_StripMarkdown_System_String_">StripMarkdown(string)</a> 清理所有 KMarkdown 格式字符。</li>
+</ol>
 </dd>
   </dl>
 
@@ -300,16 +305,23 @@ note that this field may be empty or the original code if the message is not a t
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.IUserMessage.html#Kook_IUserMessage_Resolve_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_">Resolve</a>(<a class="xref" href="Kook.TagHandling.html">TagHandling</a>, <a class="xref" href="Kook.TagHandling.html">TagHandling</a>, <a class="xref" href="Kook.TagHandling.html">TagHandling</a>, <a class="xref" href="Kook.TagHandling.html">TagHandling</a>, <a class="xref" href="Kook.TagHandling.html">TagHandling</a>)</div>
+    <div><a class="xref" href="Kook.Format.html#Kook_Format_StripMarkdown_System_String_">StripMarkdown</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>)</div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_IMessage_Content_" data-uid="Kook.IMessage.Content*"></a>
 
   <h3 id="Kook_IMessage_Content" data-uid="Kook.IMessage.Content">
   Content
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the content for this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息的内容。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -324,14 +336,15 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that contains the body of the message;
-note that this field may be empty or the original code if the message is not a text based message.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_IMessage_Content_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果消息不是文本消息，则此属性可能为空或包含原始代码。</p>
+</div>
 
 
 
@@ -340,10 +353,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_EditedTimestamp" data-uid="Kook.IMessage.EditedTimestamp">
   EditedTimestamp
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the time of this message's last edit.</p>
+  <div class="markdown level1 summary"><p>获取此消息最后一次编辑的时间。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -358,14 +371,15 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
-    <dd><p>Time of when the message was last edited;
-<code>null</code> if the message is never edited.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_IMessage_EditedTimestamp_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此消息从未被编辑过，则此属性的值为 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -374,10 +388,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_Embeds" data-uid="Kook.IMessage.Embeds">
   Embeds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all embeds included in this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息中包含的所有嵌入式内容。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -392,8 +406,7 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IEmbed.html">IEmbed</a>&gt;</dt>
-    <dd><p>A read-only collection of embed objects.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -407,10 +420,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_IsPinned" data-uid="Kook.IMessage.IsPinned">
   IsPinned
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the value that indicates whether this message is pinned.</p>
+  <div class="markdown level1 summary"><p>获取此消息是否被置顶。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -425,8 +438,7 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
-    <dd><p><code>true</code> if this message was added to its channel's pinned messages; otherwise <code>false</code>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -440,10 +452,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_MentionedEveryone" data-uid="Kook.IMessage.MentionedEveryone">
   MentionedEveryone
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the value that indicates whether this message mentioned everyone.</p>
+  <div class="markdown level1 summary"><p>获取此消息是否提及了全体成员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -458,8 +470,7 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if this message mentioned everyone; otherwise <code>false</code>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -473,10 +484,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_MentionedHere" data-uid="Kook.IMessage.MentionedHere">
   MentionedHere
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the value that indicates whether this message mentioned online users.</p>
+  <div class="markdown level1 summary"><p>获取此消息是否提及了在线成员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -491,8 +502,7 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if this message mentioned online users; otherwise <code>false</code>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -506,10 +516,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_MentionedRoleIds" data-uid="Kook.IMessage.MentionedRoleIds">
   MentionedRoleIds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the IDs of roles mentioned in this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息中提及的所有角色的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -524,8 +534,7 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
-    <dd><p>A read-only collection of role IDs.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -539,10 +548,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_MentionedUserIds" data-uid="Kook.IMessage.MentionedUserIds">
   MentionedUserIds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the IDs of users mentioned in this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息中提及的所有用户的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -557,8 +566,7 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
-    <dd><p>A read-only collection of user IDs.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -572,10 +580,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_Pokes" data-uid="Kook.IMessage.Pokes">
   Pokes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all poke actions included in this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息中包含的所有 POKE。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -590,8 +598,7 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IPokeAction.html">IPokeAction</a>&gt;</dt>
-    <dd><p>A read-only collection of poke actions objects.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -605,10 +612,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_Reactions" data-uid="Kook.IMessage.Reactions">
   Reactions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all reactions included in this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息中包含的所有回应。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -640,7 +647,7 @@ note that this field may be empty or the original code if the message is not a t
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the source type of this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息的来源。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -669,10 +676,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_Tags" data-uid="Kook.IMessage.Tags">
   Tags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all tags included in this message's content.</p>
+  <div class="markdown level1 summary"><p>获取此消息中解析出的所有标签。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -701,10 +708,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_Timestamp" data-uid="Kook.IMessage.Timestamp">
   Timestamp
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the time this message was sent.</p>
+  <div class="markdown level1 summary"><p>获取此消息的发送时间。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -719,8 +726,7 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
-    <dd><p>Time of when the message was sent.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -737,7 +743,7 @@ note that this field may be empty or the original code if the message is not a t
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the type of this message.</p>
+  <div class="markdown level1 summary"><p>获取此消息的类型。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -770,10 +776,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_AddReactionAsync_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.IMessage.AddReactionAsync(Kook.IEmote,Kook.RequestOptions)">
   AddReactionAsync(IEmote, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a reaction to this message.</p>
+  <div class="markdown level1 summary"><p>向此消息添加一个回应。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -784,17 +790,17 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>emote</code> <a class="xref" href="Kook.IEmote.html">IEmote</a></dt>
-    <dd><p>The emoji used to react to this message.</p>
+    <dd><p>要用于向此消息添加回应的表情符号。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for adding a reaction to this message.</p>
+    <dd><p>一个表示添加添加异步操作的任务。</p>
 </dd>
   </dl>
 
@@ -806,22 +812,16 @@ note that this field may be empty or the original code if the message is not a t
 
 
 
-  <dl class="typelist seealso">
-    <dt>See Also</dt>
-    <dd>
-    <div><a class="xref" href="Kook.IEmote.html">IEmote</a></div>
-    </dd>
-  </dl>
 
 
   <a id="Kook_IMessage_GetReactionUsersAsync_" data-uid="Kook.IMessage.GetReactionUsersAsync*"></a>
 
   <h3 id="Kook_IMessage_GetReactionUsersAsync_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.IMessage.GetReactionUsersAsync(Kook.IEmote,Kook.RequestOptions)">
   GetReactionUsersAsync(IEmote, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all users that reacted to a message with a given emote.</p>
+  <div class="markdown level1 summary"><p>获取所有对消息使用给定表情符号进行回应的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -832,17 +832,17 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>emote</code> <a class="xref" href="Kook.IEmote.html">IEmote</a></dt>
-    <dd><p>The emoji that represents the reaction that you wish to get.</p>
+    <dd><p>要获取其回应用户的表情符号。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;&gt;</dt>
-    <dd><p>Collection of users.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含对消息使用给定表情符号进行回应的所有用户。</p>
 </dd>
   </dl>
 
@@ -860,10 +860,10 @@ note that this field may be empty or the original code if the message is not a t
 
   <h3 id="Kook_IMessage_RemoveReactionAsync_Kook_IEmote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessage.RemoveReactionAsync(Kook.IEmote,Kook.IUser,Kook.RequestOptions)">
   RemoveReactionAsync(IEmote, IUser, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Removes a reaction from message.</p>
+  <div class="markdown level1 summary"><p>从此消息中移除一个回应。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -874,20 +874,20 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>emote</code> <a class="xref" href="Kook.IEmote.html">IEmote</a></dt>
-    <dd><p>The emoji used to react to this message.</p>
+    <dd><p>要从此消息移除的回应的表情符号。</p>
 </dd>
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user that added the emoji.</p>
+    <dd><p>要移除其回应的用户。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for removing a reaction to this message.</p>
+    <dd><p>一个表示异步移除操作的任务。</p>
 </dd>
   </dl>
 
@@ -899,22 +899,16 @@ note that this field may be empty or the original code if the message is not a t
 
 
 
-  <dl class="typelist seealso">
-    <dt>See Also</dt>
-    <dd>
-    <div><a class="xref" href="Kook.IEmote.html">IEmote</a></div>
-    </dd>
-  </dl>
 
 
   <a id="Kook_IMessage_RemoveReactionAsync_" data-uid="Kook.IMessage.RemoveReactionAsync*"></a>
 
   <h3 id="Kook_IMessage_RemoveReactionAsync_Kook_IEmote_System_UInt64_Kook_RequestOptions_" data-uid="Kook.IMessage.RemoveReactionAsync(Kook.IEmote,System.UInt64,Kook.RequestOptions)">
   RemoveReactionAsync(IEmote, ulong, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Removes a reaction from message.</p>
+  <div class="markdown level1 summary"><p>从此消息中移除一个回应。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -925,20 +919,20 @@ note that this field may be empty or the original code if the message is not a t
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>emote</code> <a class="xref" href="Kook.IEmote.html">IEmote</a></dt>
-    <dd><p>The emoji used to react to this message.</p>
+    <dd><p>要从此消息移除的回应的表情符号。</p>
 </dd>
     <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The ID of the user that added the emoji.</p>
+    <dd><p>要移除其回应的用户的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for removing a reaction to this message.</p>
+    <dd><p>一个表示异步移除操作的任务。</p>
 </dd>
   </dl>
 
@@ -950,12 +944,6 @@ note that this field may be empty or the original code if the message is not a t
 
 
 
-  <dl class="typelist seealso">
-    <dt>See Also</dt>
-    <dd>
-    <div><a class="xref" href="Kook.IEmote.html">IEmote</a></div>
-    </dd>
-  </dl>
 
 
 

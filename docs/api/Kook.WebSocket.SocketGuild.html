@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SocketGuild | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a WebSocket-based guild object.">
+      <meta name="description" content="表示一个基于网关的服务器。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a WebSocket-based guild object.</p>
+  <div class="markdown summary"><p>表示一个基于网关的服务器。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -154,16 +154,6 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
     </div>
   </dd></dl>
 
-  <dl class="typelist extensionMethods">
-    <dt>Extension Methods</dt>
-    <dd>
-  <div>
-      <a class="xref" href="Kook.WebSocket.SocketGuildExperimentalExtensions.html#Kook_WebSocket_SocketGuildExperimentalExtensions_DeleteAsync_Kook_WebSocket_SocketGuild_Kook_RequestOptions_">SocketGuildExperimentalExtensions.DeleteAsync(SocketGuild, RequestOptions?)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.WebSocket.SocketGuildExperimentalExtensions.html#Kook_WebSocket_SocketGuildExperimentalExtensions_ModifyAsync_Kook_WebSocket_SocketGuild_System_Action_Kook_GuildProperties__Kook_RequestOptions_">SocketGuildExperimentalExtensions.ModifyAsync(SocketGuild, Action&lt;GuildProperties&gt;, RequestOptions?)</a>
-  </div>
-  </dd></dl>
 
 
 
@@ -173,14 +163,57 @@ Class SocketGuild  <a class="header-action link-secondary" title="View source" h
 </h2>
 
 
+  <a id="Kook_WebSocket_SocketGuild_ActiveBoostSubscriptions_" data-uid="Kook.WebSocket.SocketGuild.ActiveBoostSubscriptions*"></a>
+
+  <h3 id="Kook_WebSocket_SocketGuild_ActiveBoostSubscriptions" data-uid="Kook.WebSocket.SocketGuild.ActiveBoostSubscriptions">
+  ActiveBoostSubscriptions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此服务器内的所有生效中的服务器助力信息。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImmutableDictionary&lt;IUser, IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt; ActiveBoostSubscriptions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketGuild_ActiveBoostSubscriptions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+        当 <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</a> 为 <code>true</code>
+        时，Bot 启动时会自动下载所有服务器的所有助力信息。否则，此属性将为 <code>null</code>。调用
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions?)</a>
+        也可以立即下载服务器的所有助力信息，下载完成后，此属性值将被设定。
+        <br>
+        网关不会发布有关此属性值变更的事件，此属性值可能并不准确。要获取准确的服务器订阅信息，请调用
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_GetActiveBoostSubscriptionsAsync_Kook_RequestOptions_">GetActiveBoostSubscriptionsAsync(RequestOptions?)</a>。
+    </p></div>
+</div>
+
+
+
+
   <a id="Kook_WebSocket_SocketGuild_AudioClient_" data-uid="Kook.WebSocket.SocketGuild.AudioClient*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_AudioClient" data-uid="Kook.WebSocket.SocketGuild.AudioClient">
   AudioClient
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a> associated with this guild.</p>
+  <div class="markdown level1 summary"><p>获取在此服务内的语音频道上建立的语音客户端。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -204,16 +237,22 @@ public IAudioClient? AudioClient { get; }</code></pre>
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.IAudioChannel.html#Kook_IAudioChannel_AudioClient">AudioClient</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_WebSocket_SocketGuild_AudioClients_" data-uid="Kook.WebSocket.SocketGuild.AudioClients*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_AudioClients" data-uid="Kook.WebSocket.SocketGuild.AudioClients">
   AudioClients
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all audio clients in this guild.</p>
+  <div class="markdown level1 summary"><p>获取在此服务内的语音频道上建立的所有语音客户端。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -236,13 +275,19 @@ public IAudioClient? AudioClient { get; }</code></pre>
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.IAudioChannel.html#Kook_IAudioChannel_AudioClient">AudioClient</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_WebSocket_SocketGuild_AutoDeleteTime_" data-uid="Kook.WebSocket.SocketGuild.AutoDeleteTime*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_AutoDeleteTime" data-uid="Kook.WebSocket.SocketGuild.AutoDeleteTime">
   AutoDeleteTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>TODO: To be documented.</p>
@@ -274,10 +319,10 @@ public IAudioClient? AudioClient { get; }</code></pre>
 
   <h3 id="Kook_WebSocket_SocketGuild_Banner" data-uid="Kook.WebSocket.SocketGuild.Banner">
   Banner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the URL of this guild's banner image.</p>
+  <div class="markdown level1 summary"><p>获取此服务器横幅图像的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -292,8 +337,7 @@ public IAudioClient? AudioClient { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A URL pointing to the guild's banner image; <code>null</code> if none is set.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -307,10 +351,10 @@ public IAudioClient? AudioClient { get; }</code></pre>
 
   <h3 id="Kook_WebSocket_SocketGuild_BoostLevel" data-uid="Kook.WebSocket.SocketGuild.BoostLevel">
   BoostLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the level of guild boosting in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的服务器助力等级。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -325,8 +369,7 @@ public IAudioClient? AudioClient { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.BoostLevel.html">BoostLevel</a></dt>
-    <dd><p>The level of guild boosting in this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -340,10 +383,10 @@ public IAudioClient? AudioClient { get; }</code></pre>
 
   <h3 id="Kook_WebSocket_SocketGuild_BoostSubscriptionCount" data-uid="Kook.WebSocket.SocketGuild.BoostSubscriptionCount">
   BoostSubscriptionCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the number of boost subscribers of this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的服务器助力包的数量。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -358,8 +401,7 @@ public IAudioClient? AudioClient { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of boost subscribers of this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -373,10 +415,10 @@ public IAudioClient? AudioClient { get; }</code></pre>
 
   <h3 id="Kook_WebSocket_SocketGuild_BoostSubscriptions" data-uid="Kook.WebSocket.SocketGuild.BoostSubscriptions">
   BoostSubscriptions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a dictionary of all boost subscriptions for this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器内的所有服务器助力信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -391,9 +433,7 @@ public IAudioClient? AudioClient { get; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>&gt;&gt;</dt>
-    <dd><p>A read-only dictionary containing all boost subscription metadata for this guild grouped by users;
-or <code>null</code> if the boost subscription data has never been cached.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -401,37 +441,27 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_BoostSubscriptions_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-  <p>
-            Only when <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</a> is set to <code>true</code>
-            will this property be populated upon startup. Due to the lack of event support for boost subscriptions,
-            this property will never be updated. The changes of <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a> will trigger the update
-            of this property, but KOOK gateway will not publish this event resulting from the changes of total boost subscription
-            count. To fetch the latest boost subscription data, use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions?)</a> or
-            <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)</a> upon a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to
-            manually download the latest boost subscription data, or <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_GetBoostSubscriptionsAsync_Kook_RequestOptions_">GetBoostSubscriptionsAsync(RequestOptions?)</a>.
-        </p>
-</div>
+        当 <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</a> 为 <code>true</code>
+        时，Bot 启动时会自动下载所有服务器的所有助力信息。否则，此属性将为 <code>null</code>。调用
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions?)</a>
+        也可以立即下载服务器的所有助力信息，下载完成后，此属性值将被设定。
+        <br>
+        网关不会发布有关此属性值变更的事件，此属性值可能并不准确。要获取准确的服务器订阅信息，请调用
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_GetBoostSubscriptionsAsync_Kook_RequestOptions_">GetBoostSubscriptionsAsync(RequestOptions?)</a>。
+    </p></div>
 </div>
 
 
-  <dl class="typelist seealso">
-    <dt>See Also</dt>
-    <dd>
-    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_ValidBoostSubscriptions">ValidBoostSubscriptions</a></div>
-    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions?)</a></div>
-    <div><a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;, <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
-    </dd>
-  </dl>
 
 
   <a id="Kook_WebSocket_SocketGuild_BufferBoostSubscriptionCount_" data-uid="Kook.WebSocket.SocketGuild.BufferBoostSubscriptionCount*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_BufferBoostSubscriptionCount" data-uid="Kook.WebSocket.SocketGuild.BufferBoostSubscriptionCount">
   BufferBoostSubscriptionCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the number of boost subscribers who activates buffer of this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器来自拥有 BUFF 会员的用的服务器助力包的数量。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -446,8 +476,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of boost subscribers who activates buffer of this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -461,10 +490,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CategoryChannels" data-uid="Kook.WebSocket.SocketGuild.CategoryChannels">
   CategoryChannels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L190"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all stage channels in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器中的所有分组频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -479,8 +508,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketCategoryChannel.html">SocketCategoryChannel</a>&gt;</dt>
-    <dd><p>A read-only collection of stage channels found within this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -494,10 +522,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_Channels" data-uid="Kook.WebSocket.SocketGuild.Channels">
   Channels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all channels in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的所有频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -512,8 +540,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildChannel.html">SocketGuildChannel</a>&gt;</dt>
-    <dd><p>A read-only collection of generic channels found within this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -527,10 +554,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CurrentUser" data-uid="Kook.WebSocket.SocketGuild.CurrentUser">
   CurrentUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the current logged-in user.</p>
+  <div class="markdown level1 summary"><p>获取当前登录的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -559,10 +586,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_DefaultChannel" data-uid="Kook.WebSocket.SocketGuild.DefaultChannel">
   DefaultChannel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the default text channel for this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的默认文字频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -577,16 +604,12 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a></dt>
-    <dd><p>A <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> representing the default text channel for this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
-  <h4 class="section" id="Kook_WebSocket_SocketGuild_DefaultChannel_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This property retrieves default text channel for this guild.</p>
-</div>
 
 
 
@@ -595,10 +618,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_DefaultChannelId" data-uid="Kook.WebSocket.SocketGuild.DefaultChannelId">
   DefaultChannelId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the default channel ID for this guild.</p>
+  <div class="markdown level1 summary"><p>获取默认文字频道的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -613,8 +636,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>?</dt>
-    <dd><p>A <code>ulong</code> representing the default channel ID for this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -628,10 +650,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_DownloadedMemberCount" data-uid="Kook.WebSocket.SocketGuild.DownloadedMemberCount">
   DownloadedMemberCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the number of members downloaded to the local guild cache.</p>
+  <div class="markdown level1 summary"><p>获取此服务器内已缓存的成员数量。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -660,10 +682,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_Emotes" data-uid="Kook.WebSocket.SocketGuild.Emotes">
   Emotes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all custom emotes for this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的所有自定义表情。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -678,8 +700,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>&gt;</dt>
-    <dd><p>A read-only collection of all custom emotes for this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -687,22 +708,16 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
 
 
-  <dl class="typelist seealso">
-    <dt>See Also</dt>
-    <dd>
-    <div><a class="xref" href="Kook.IGuild.html#Kook_IGuild_GetEmotesAsync_Kook_RequestOptions_">GetEmotesAsync</a>(<a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
-    </dd>
-  </dl>
 
 
   <a id="Kook_WebSocket_SocketGuild_EveryoneRole_" data-uid="Kook.WebSocket.SocketGuild.EveryoneRole*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_EveryoneRole" data-uid="Kook.WebSocket.SocketGuild.EveryoneRole">
   EveryoneRole
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the built-in role containing all users in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器中的 <code>@全体成员</code> 全体成员角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -717,8 +732,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a></dt>
-    <dd><p>A role object that represents an <code>@everyone</code> role in this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -732,10 +746,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_Features" data-uid="Kook.WebSocket.SocketGuild.Features">
   Features
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the features of this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的所有特性。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -750,8 +764,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.GuildFeatures.html">GuildFeatures</a></dt>
-    <dd><p>An array of string representing the features of this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -765,10 +778,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_HasAllMembers" data-uid="Kook.WebSocket.SocketGuild.HasAllMembers">
   HasAllMembers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Indicates whether the client has all the members downloaded to the local guild cache.</p>
+  <div class="markdown level1 summary"><p>获取是否已下载此服务器的所有成员至缓存。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -790,10 +803,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_HasAllMembers_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        If <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_MemberCount">MemberCount</a> is <code>null</code>, this property will always return <code>null</code>,
-        which means that the client is unable to determine whether all the members are downloaded or not.
-    </p></div>
+  <div class="markdown level1 remarks"><p>当如法确定是否已下载此服务器的所有成员，或者服务器的成员数量未知时，此属性将返回 <code>null</code>。</p>
 </div>
 
 
@@ -803,10 +813,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_Icon" data-uid="Kook.WebSocket.SocketGuild.Icon">
   Icon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the URL of this guild's icon.</p>
+  <div class="markdown level1 summary"><p>获取此服务器图标的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -821,8 +831,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A URL pointing to the guild's icon; <code>null</code> if none is set.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -832,14 +841,53 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
 
 
+  <a id="Kook_WebSocket_SocketGuild_IsAvailable_" data-uid="Kook.WebSocket.SocketGuild.IsAvailable*"></a>
+
+  <h3 id="Kook_WebSocket_SocketGuild_IsAvailable" data-uid="Kook.WebSocket.SocketGuild.IsAvailable">
+  IsAvailable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>确定此服务器实体是否已准备就绪以供用户代码访问。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAvailable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketGuild_IsAvailable_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+        此属性仅对基于网关连接的客户端有意义。
+    </p></div>
+    此属性为 <code>true</code> 表示，此服务器实体已完整缓存基础数据，并与网关同步。 <br>
+    缓存基础数据包括服务器基本信息、频道、角色、频道权限重写、当前用户在服务器内的昵称。
+</div>
+
+
+
+
   <a id="Kook_WebSocket_SocketGuild_IsConnected_" data-uid="Kook.WebSocket.SocketGuild.IsConnected*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_IsConnected" data-uid="Kook.WebSocket.SocketGuild.IsConnected">
   IsConnected
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Indicates whether the client is connected to this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器是否已连接至网关。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -868,10 +916,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_IsOpenEnabled" data-uid="Kook.WebSocket.SocketGuild.IsOpenEnabled">
   IsOpenEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this guild is public.</p>
+  <div class="markdown level1 summary"><p>获取此服务器是否为公开服务器。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -886,8 +934,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if this guild is public; <code>false</code> otherwise.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -901,10 +948,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_MaxBitrate" data-uid="Kook.WebSocket.SocketGuild.MaxBitrate">
   MaxBitrate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the max bitrate for voice channels in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器中语音频道的最高比特率。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -919,13 +966,15 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> representing the maximum bitrate value allowed by Kook in this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketGuild_MaxBitrate_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此限制取决于服务器的助力状态。</p>
+</div>
 
 
 
@@ -934,10 +983,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_MaxUploadLimit" data-uid="Kook.WebSocket.SocketGuild.MaxUploadLimit">
   MaxUploadLimit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the upload limit in bytes for this guild. This number is dependent on the guild's boost status.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的文件上传限制，以字节为单位。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -958,6 +1007,9 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketGuild_MaxUploadLimit_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此限制取决于服务器的助力状态。</p>
+</div>
 
 
 
@@ -966,10 +1018,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_MemberCount" data-uid="Kook.WebSocket.SocketGuild.MemberCount">
   MemberCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the number of members.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的成员数。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -991,19 +1043,17 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_MemberCount_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This property retrieves the number of members returned by Kook.</p>
-<div class="TIP"><h5>tip</h5><p><p>
-    Due to how this property is returned by Kook instead of relying on the WebSocket cache, the
-    number here is the most accurate in terms of counting the number of users within this guild.
-</p><p>
-    Use this instead of enumerating the count of the
-    <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_Users">Users</a> collection, as you may see discrepancy
-    between that and this property.
-</p></div><div class="WARNING"><h5>warning</h5><p>
-    Only when <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">AlwaysDownloadUsers</a> is set to <code>true</code>
-    will this property be populated upon startup. Otherwise, this property will be <code>null</code>,
-    and will be populated when <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_">DownloadUsersAsync(RequestOptions?)</a> is called.
-</p></div>
+  <div class="markdown level1 remarks"><div class="TIP"><h5>tip</h5><p>
+        在 <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_Users">Users</a> 属性上计数的结果为所缓存用户的数量，
+        如果缓存不完整，统计结果可能会与此属性值不一致。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        当 <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">AlwaysDownloadUsers</a> 为 <code>true</code> 时。
+        Bot 启动后会自动下载服务器的所有用户，并设定此属性值。否则，此属性将为 <code>null</code>。调用
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_">DownloadUsersAsync(RequestOptions?)</a>
+        也可以立即下载服务器的所有用户，下载完成后，此属性值将被设定。
+    </p></div>
 </div>
 
 
@@ -1016,7 +1066,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the name of this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的名称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1031,8 +1081,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string containing the name of this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1046,10 +1095,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_NotifyType" data-uid="Kook.WebSocket.SocketGuild.NotifyType">
   NotifyType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the default notification type for this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的默认通知类型。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1064,8 +1113,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.NotifyType.html">NotifyType</a></dt>
-    <dd><p>A <a class="xref" href="Kook.IGuild.html#Kook_IGuild_NotifyType">NotifyType</a> representing the default notification type for this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1079,10 +1127,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_OpenId" data-uid="Kook.WebSocket.SocketGuild.OpenId">
   OpenId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the open ID for this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的公开 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1097,14 +1145,16 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
-    <dd><p>A <code>uint</code> representing the open ID for this guild;
-this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.html#Kook_IGuild_IsOpenEnabled">IsOpenEnabled</a> is <code>false</code>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketGuild_OpenId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>当 <a class="xref" href="Kook.IGuild.html#Kook_IGuild_IsOpenEnabled">IsOpenEnabled</a> 为 <code>true</code> 时，此属性应该返回一个有效的公开服务器 ID；
+如果 <a class="xref" href="Kook.IGuild.html#Kook_IGuild_IsOpenEnabled">IsOpenEnabled</a> 为 <code>false</code>，则此属性应该返回 <code>null</code>。</p>
+</div>
 
 
 
@@ -1113,10 +1163,10 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Owner" data-uid="Kook.WebSocket.SocketGuild.Owner">
   Owner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the user that owns this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的所有者。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1137,6 +1187,12 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketGuild_Owner_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+        此属性尝试在缓存的用户列表中获取具有其用户 ID 为 <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_OwnerId">OwnerId</a>
+        的用户。如果该用户不在缓存中，则此属性将返回 <code>null</code>。
+    </p></div>
+</div>
 
 
 
@@ -1148,7 +1204,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the ID of the user that owns this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器所有者的用户 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1163,8 +1219,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>A <code>ulong</code> representing the identifier of the user that owns this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1178,10 +1233,10 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_RecommendInfo" data-uid="Kook.WebSocket.SocketGuild.RecommendInfo">
   RecommendInfo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the recommendation information for this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的推荐信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1196,9 +1251,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Rest.RecommendInfo.html">RecommendInfo</a></dt>
-    <dd><p>A recommendation object that represents the recommendation information for this guild;
-<code>null</code> if the guild does not have a recommendation.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1212,10 +1265,10 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Region" data-uid="Kook.WebSocket.SocketGuild.Region">
   Region
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the default voice region for this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的默认语音服务器区域。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1230,13 +1283,18 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string representing the default voice region for this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketGuild_Region_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>语音服务器区域是指语音服务器所在的地理位置，各个语音服务器区域由一个唯一的字符串表示。 <br>
+可用语音服务器区域参考列表：</p>
+<table><thead><tr><th class="term"> 区域 ID </th><th class="description"> 区域名称 </th></tr></thead><tbody><tr><td class="term"><code>chengdu</code></td><td class="description"> 西南(成都) </td></tr><tr><td class="term"><code>beijing</code></td><td class="description"> 华北(北京) </td></tr><tr><td class="term"><code>shanghai</code></td><td class="description"> 华东(上海) </td></tr><tr><td class="term"><code>shenzhen</code></td><td class="description"> 华南(深圳) </td></tr><tr><td class="term"><code>hk</code></td><td class="description"> 亚太(香港) </td></tr><tr><td class="term"><code>vnga</code></td><td class="description"> 国际专线(助力专享) </td></tr></tbody></table>
+此列表仅供参考。
+</div>
 
 
 
@@ -1245,10 +1303,10 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Roles" data-uid="Kook.WebSocket.SocketGuild.Roles">
   Roles
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L268"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all roles in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的所有角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1263,8 +1321,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a>&gt;</dt>
-    <dd><p>A read-only collection of roles found within this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1272,10 +1329,9 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_Roles_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        Due to the lack of event args which should contains the reordered roles data
-        when roles are reordered, this property may not be completely accurate.
-        To ensure the most accurate results, it is recommended to
-        call <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_UpdateAsync_Kook_RequestOptions_">UpdateAsync(RequestOptions?)</a> before this property is used.
+        由于 KOOK 不会通过网关发布有关服务器角色重新排序的事件，此属性值可能并不准确。
+        要确保获取准确的服务器角色排序信息，请在使用此属性之前调用
+        <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_UpdateAsync_Kook_RequestOptions_">UpdateAsync(RequestOptions?)</a>。
     </p></div>
 </div>
 
@@ -1286,7 +1342,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Status" data-uid="Kook.WebSocket.SocketGuild.Status">
   Status
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>TODO: To be documented.</p>
@@ -1318,10 +1374,10 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_TextChannels" data-uid="Kook.WebSocket.SocketGuild.TextChannels">
   TextChannels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all text channels in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器中所有具有文字聊天能力的频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1336,13 +1392,16 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a>&gt;</dt>
-    <dd><p>A read-only collection of message channels found within this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketGuild_TextChannels_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>语音频道也是一种文字频道，此属性本意用于获取所有具有文字聊天能力的频道，通过此方法获取到的文字频道列表中也包含了语音频道。
+如需获取频道的实际类型，请参考 <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetChannelType_Kook_IChannel_">GetChannelType(IChannel)</a>。</p>
+</div>
 
 
 
@@ -1354,7 +1413,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the topic for the guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的介绍。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1369,8 +1428,7 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The description for the guild; <code>null</code> if none is set.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1384,10 +1442,10 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
 
   <h3 id="Kook_WebSocket_SocketGuild_Users" data-uid="Kook.WebSocket.SocketGuild.Users">
   Users
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of users in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器内缓存的所有用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1402,99 +1460,27 @@ this property should be <code>null</code> if <a class="xref" href="Kook.IGuild.h
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</dt>
-    <dd><p>A collection of guild users found within this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_Users_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This property retrieves all users found within this guild.</p>
-<div class="WARNING"><h5>warning</h5><p><p>
-        This property may not always return all the members for large guilds (i.e. guilds containing
-        100+ users). If you are simply looking to get the number of users present in this guild,
-        consider using <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_MemberCount">MemberCount</a> instead.
-    </p><p>
-        Otherwise, you may need to enable <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">AlwaysDownloadUsers</a> to fetch
-        the full user list upon startup, or use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_">DownloadUsersAsync(RequestOptions?)</a> to manually download
-        the users.
-    </p></div>
+  <div class="markdown level1 remarks"><p>要获取服务器的总成员数量，请访问 <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_MemberCount">MemberCount</a>。</p>
 </div>
 
 
-  <dl class="typelist seealso">
-    <dt>See Also</dt>
-    <dd>
-    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_">DownloadUsersAsync(RequestOptions?)</a></div>
-    <div><a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadUsersAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadUsersAsync</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;, <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
-    </dd>
-  </dl>
-
-
-  <a id="Kook_WebSocket_SocketGuild_ValidBoostSubscriptions_" data-uid="Kook.WebSocket.SocketGuild.ValidBoostSubscriptions*"></a>
-
-  <h3 id="Kook_WebSocket_SocketGuild_ValidBoostSubscriptions" data-uid="Kook.WebSocket.SocketGuild.ValidBoostSubscriptions">
-  ValidBoostSubscriptions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L292"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets a dictionary of all boost subscriptions which have not expired for this guild.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ImmutableDictionary&lt;IUser, IReadOnlyCollection&lt;BoostSubscriptionMetadata&gt;&gt; ValidBoostSubscriptions { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>&gt;&gt;</dt>
-    <dd><p>A read-only dictionary containing all boost subscription metadata which have not expired for this guild grouped by users;
-or <code>null</code> if the boost subscription data has never been cached.</p>
-</dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="Kook_WebSocket_SocketGuild_ValidBoostSubscriptions_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-  <p>
-            Only when <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions">AlwaysDownloadBoostSubscriptions</a> is set to <code>true</code>
-            will this property be populated upon startup. Due to the lack of event support for boost subscriptions,
-            this property will never be updated. The changes of <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a> will trigger the update
-            of this property, but KOOK gateway will not publish this event resulting from the changes of total boost subscription
-            count. To fetch the latest boost subscription data, use <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions?)</a> or
-            <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)</a> upon a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to
-            manually download the latest boost subscription data, or <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_GetBoostSubscriptionsAsync_Kook_RequestOptions_">GetBoostSubscriptionsAsync(RequestOptions?)</a>.
-        </p>
-</div>
-</div>
-
-
-  <dl class="typelist seealso">
-    <dt>See Also</dt>
-    <dd>
-    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptions">BoostSubscriptions</a></div>
-    <div><a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(RequestOptions?)</a></div>
-    <div><a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;, <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
-    </dd>
-  </dl>
 
 
   <a id="Kook_WebSocket_SocketGuild_VoiceChannels_" data-uid="Kook.WebSocket.SocketGuild.VoiceChannels*"></a>
 
   <h3 id="Kook_WebSocket_SocketGuild_VoiceChannels" data-uid="Kook.WebSocket.SocketGuild.VoiceChannels">
   VoiceChannels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all voice channels in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器中所有具有语音聊天能力的频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1509,8 +1495,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a>&gt;</dt>
-    <dd><p>A read-only collection of voice channels found within this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1524,10 +1509,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_WelcomeChannel" data-uid="Kook.WebSocket.SocketGuild.WelcomeChannel">
   WelcomeChannel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L207"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the welcome text channel for this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的欢迎通知频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1542,16 +1527,12 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a></dt>
-    <dd><p>A <a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a> representing the default text channel for this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
-  <h4 class="section" id="Kook_WebSocket_SocketGuild_WelcomeChannel_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This property retrieves default text channel for this guild.</p>
-</div>
 
 
 
@@ -1560,10 +1541,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_WelcomeChannelId" data-uid="Kook.WebSocket.SocketGuild.WelcomeChannelId">
   WelcomeChannelId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the welcome channel ID for this guild.</p>
+  <div class="markdown level1 summary"><p>获取欢迎通知频道的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1578,8 +1559,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>?</dt>
-    <dd><p>A <code>ulong</code> representing the welcome channel ID for this guild.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1597,10 +1577,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_AddBanAsync_Kook_IUser_System_Int32_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.AddBanAsync(Kook.IUser,System.Int32,System.String,Kook.RequestOptions)">
   AddBanAsync(IUser, int, string?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L551"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L475"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Bans the user from this guild and optionally prunes their recent messages.</p>
+  <div class="markdown level1 summary"><p>封禁服务器内的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1611,23 +1591,23 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user to ban.</p>
+    <dd><p>要封禁的用户。</p>
 </dd>
     <dt><code>pruneDays</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of days to remove messages from this user for, and this number must be between [0, 7].</p>
+    <dd><p>要删除此服务器中来自此用户的最近几天的消息，范围为 <code>0</code> 至 <code>7</code>，<code>0</code> 表示不删除。</p>
 </dd>
     <dt><code>reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The reason of the ban to be written in the audit log.</p>
+    <dd><p>封禁原因。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous add operation for the ban.</p>
+    <dd><p>一个表示异步封禁操作的任务。</p>
 </dd>
   </dl>
 
@@ -1641,7 +1621,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p><code class="paramref">pruneDays</code> is not between 0 to 7.</p>
+    <dd><p><code class="paramref">pruneDays</code> 超出了 0 至 7 的范围。</p>
 </dd>
   </dl>
 
@@ -1651,10 +1631,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_AddBanAsync_System_UInt64_System_Int32_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.AddBanAsync(System.UInt64,System.Int32,System.String,Kook.RequestOptions)">
   AddBanAsync(ulong, int, string?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L479"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Bans the user from this guild and optionally prunes their recent messages.</p>
+  <div class="markdown level1 summary"><p>封禁服务器内的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1665,23 +1645,23 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The identifier of the user to ban.</p>
+    <dd><p>要封禁的用户的 ID。</p>
 </dd>
     <dt><code>pruneDays</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of days to remove messages from this user for, and this number must be between [0, 7].</p>
+    <dd><p>要删除此服务器中来自此用户的最近几天的消息，范围为 <code>0</code> 至 <code>7</code>，<code>0</code> 表示不删除。</p>
 </dd>
     <dt><code>reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The reason of the ban to be written in the audit log.</p>
+    <dd><p>封禁原因。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous add operation for the ban.</p>
+    <dd><p>一个表示异步封禁操作的任务。</p>
 </dd>
   </dl>
 
@@ -1695,7 +1675,7 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p><code class="paramref">pruneDays</code> is not between 0 to 7.</p>
+    <dd><p><code class="paramref">pruneDays</code> 超出了 0 至 7 的范围。</p>
 </dd>
   </dl>
 
@@ -1705,10 +1685,10 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateCategoryChannelAsync_System_String_System_Action_Kook_CreateCategoryChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateCategoryChannelAsync(System.String,System.Action{Kook.CreateCategoryChannelProperties},Kook.RequestOptions)">
   CreateCategoryChannelAsync(string, Action&lt;CreateCategoryChannelProperties&gt;?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L646"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L537"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new channel category in this guild.</p>
+  <div class="markdown level1 summary"><p>在此服务器内创建一个新的分组频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1719,21 +1699,20 @@ or <code>null</code> if the boost subscription data has never been cached.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The new name for the category.</p>
+    <dd><p>频道的名称。</p>
 </dd>
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.CreateCategoryChannelProperties.html">CreateCategoryChannelProperties</a>&gt;</dt>
-    <dd><p>The delegate containing the properties to be applied to the channel upon its creation.</p>
+    <dd><p>一个包含要应用到新创建频道的配置的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Rest.RestCategoryChannel.html">RestCategoryChannel</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous creation operation. The task result contains the newly created
-category channel.</p>
+    <dd><p>一个表示异步创建操作的任务。任务的结果包含新创建的分组频道。</p>
 </dd>
   </dl>
 
@@ -1744,12 +1723,6 @@ category channel.</p>
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p><code class="paramref">name</code> is <code>null</code>.</p>
-</dd>
-  </dl>
 
 
 
@@ -1757,10 +1730,10 @@ category channel.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateEmoteAsync_System_String_Kook_Image_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateEmoteAsync(System.String,Kook.Image,Kook.RequestOptions)">
   CreateEmoteAsync(string, Image, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L941"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L777"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> in this guild.</p>
+  <div class="markdown level1 summary"><p>在此服务器内创建一个新的自定义表情。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1771,20 +1744,20 @@ category channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the guild emote.</p>
+    <dd><p>新自定义表情的名称。</p>
 </dd>
     <dt><code>image</code> <a class="xref" href="Kook.Image.html">Image</a></dt>
-    <dd><p>The image of the new emote.</p>
+    <dd><p>新自定义表情的图像信息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous creation operation. The task result contains the created emote.</p>
+    <dd><p>一个表示异步创建操作的任务。任务的结果包含新创建的自定义表情。</p>
 </dd>
   </dl>
 
@@ -1802,10 +1775,10 @@ category channel.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateInviteAsync(Kook.InviteMaxAge,Kook.InviteMaxUses,Kook.RequestOptions)">
   CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L967"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L802"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new invite to this channel.</p>
+  <div class="markdown level1 summary"><p>创建一个到此服务器的新邀请。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1816,21 +1789,20 @@ category channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxAge</code> <a class="xref" href="Kook.InviteMaxAge.html">InviteMaxAge</a></dt>
-    <dd><p>The time until the invite expires. Set to <code>InviteMaxAge.NeverExpires</code> to never expire.</p>
+    <dd><p>邀请链接的有效时长，<a class="xref" href="Kook.InviteMaxAge.html#Kook_InviteMaxAge_NeverExpires">NeverExpires</a> 表示永不过期。</p>
 </dd>
     <dt><code>maxUses</code> <a class="xref" href="Kook.InviteMaxUses.html">InviteMaxUses</a></dt>
-    <dd><p>The max amount of times this invite may be used. Set to <code>InviteMaxUses.Unlimited</code> to have unlimited uses.</p>
+    <dd><p>邀请链接的可用人次，<a class="xref" href="Kook.InviteMaxUses.html#Kook_InviteMaxUses_Unlimited">Unlimited</a> 表示无限制。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous invite creation operation. The task result contains an invite
-metadata object containing information for the created invite.</p>
+    <dd><p>一个表示异步创建操作的任务。任务的结果包含新创建的邀请链接的元数据，其中包含有关邀请链接的信息。</p>
 </dd>
   </dl>
 
@@ -1848,10 +1820,10 @@ metadata object containing information for the created invite.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},Kook.RequestOptions)">
   CreateInviteAsync(int?, int?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L962"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L797"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new invite to this channel.</p>
+  <div class="markdown level1 summary"><p>创建一个到此服务器的新邀请。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1862,21 +1834,20 @@ metadata object containing information for the created invite.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxAge</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
-    <dd><p>The time (in seconds) until the invite expires. Set to <code>null</code> to never expire.</p>
+    <dd><p>邀请链接的有效时长，<code>null</code> 表示永不过期。</p>
 </dd>
     <dt><code>maxUses</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
-    <dd><p>The max amount of times this invite may be used. Set to <code>null</code> to have unlimited uses.</p>
+    <dd><p>邀请链接的可用人次，<code>null</code> 表示无限制。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous invite creation operation. The task result contains an invite
-metadata object containing information for the created invite.</p>
+    <dd><p>一个表示异步创建操作的任务。任务的结果包含新创建的邀请链接的元数据，其中包含有关邀请链接的信息。</p>
 </dd>
   </dl>
 
@@ -1894,10 +1865,10 @@ metadata object containing information for the created invite.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateRoleAsync_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateRoleAsync(System.String,Kook.RequestOptions)">
   CreateRoleAsync(string, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L723"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L584"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new role with the provided name.</p>
+  <div class="markdown level1 summary"><p>在此服务器内创建一个新角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1908,18 +1879,17 @@ metadata object containing information for the created invite.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The new name for the role.</p>
+    <dd><p>角色的名称。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Rest.RestRole.html">RestRole</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous creation operation. The task result contains the newly created
-role.</p>
+    <dd><p>一个表示异步创建操作的任务。任务的结果包含新创建的角色。</p>
 </dd>
   </dl>
 
@@ -1930,12 +1900,6 @@ role.</p>
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p><code class="paramref">name</code> is <code>null</code>.</p>
-</dd>
-  </dl>
 
 
 
@@ -1943,10 +1907,10 @@ role.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateTextChannelAsync_System_String_System_Action_Kook_CreateTextChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateTextChannelAsync(System.String,System.Action{Kook.CreateTextChannelProperties},Kook.RequestOptions)">
   CreateTextChannelAsync(string, Action&lt;CreateTextChannelProperties&gt;?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L616"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L527"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new text channel in this guild.</p>
+  <div class="markdown level1 summary"><p>在此服务器内创建一个新的文字频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1957,21 +1921,20 @@ role.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The new name for the text channel.</p>
+    <dd><p>频道的名称。</p>
 </dd>
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.CreateTextChannelProperties.html">CreateTextChannelProperties</a>&gt;</dt>
-    <dd><p>The delegate containing the properties to be applied to the channel upon its creation.</p>
+    <dd><p>一个包含要应用到新创建频道的配置的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Rest.RestTextChannel.html">RestTextChannel</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous creation operation. The task result contains the newly created
-text channel.</p>
+    <dd><p>一个表示异步创建操作的任务。任务的结果包含新创建的文字频道。</p>
 </dd>
   </dl>
 
@@ -1989,10 +1952,10 @@ text channel.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_CreateVoiceChannelAsync_System_String_System_Action_Kook_CreateVoiceChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.CreateVoiceChannelAsync(System.String,System.Action{Kook.CreateVoiceChannelProperties},Kook.RequestOptions)">
   CreateVoiceChannelAsync(string, Action&lt;CreateVoiceChannelProperties&gt;?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L631"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L532"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new voice channel in this guild.</p>
+  <div class="markdown level1 summary"><p>在此服务器内创建一个新的语音频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2003,21 +1966,20 @@ text channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The new name for the voice channel.</p>
+    <dd><p>频道的名称。</p>
 </dd>
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.CreateVoiceChannelProperties.html">CreateVoiceChannelProperties</a>&gt;</dt>
-    <dd><p>The delegate containing the properties to be applied to the channel upon its creation.</p>
+    <dd><p>一个包含要应用到新创建频道的配置的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Rest.RestVoiceChannel.html">RestVoiceChannel</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous creation operation. The task result contains the newly created
-voice channel.</p>
+    <dd><p>一个表示异步创建操作的任务。任务的结果包含新创建的语音频道。</p>
 </dd>
   </dl>
 
@@ -2028,12 +1990,6 @@ voice channel.</p>
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p><code class="paramref">name</code> is <code>null</code>.</p>
-</dd>
-  </dl>
 
 
 
@@ -2041,10 +1997,10 @@ voice channel.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_DeleteEmoteAsync_Kook_GuildEmote_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.DeleteEmoteAsync(Kook.GuildEmote,Kook.RequestOptions)">
   DeleteEmoteAsync(GuildEmote, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L950"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L785"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deletes an existing <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> from this guild.</p>
+  <div class="markdown level1 summary"><p>删除此服务器内的现有自定义表情。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2055,17 +2011,17 @@ voice channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>emote</code> <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a></dt>
-    <dd><p>The emote to delete.</p>
+    <dd><p>要删除的自定义表情。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous removal operation.</p>
+    <dd><p>一个表示异步删除操作的任务。</p>
 </dd>
   </dl>
 
@@ -2083,10 +2039,10 @@ voice channel.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.DownloadBoostSubscriptionsAsync(Kook.RequestOptions)">
   DownloadBoostSubscriptionsAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L876"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L719"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Downloads all boost subscriptions for this guild.</p>
+  <div class="markdown level1 summary"><p>下载此服务器内的所有服务器助力信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2097,14 +2053,14 @@ voice channel.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous download operation.</p>
+    <dd><p>一个表示异步下载操作的任务。</p>
 </dd>
   </dl>
 
@@ -2115,9 +2071,8 @@ voice channel.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_DownloadBoostSubscriptionsAsync_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method downloads all boost subscriptions for this guild through the Gateway and caches them.
-To download all boost subscriptions, the current user must has the
-<a class="xref" href="Kook.GuildPermission.html#Kook_GuildPermission_ManageGuild">ManageGuild</a> permission.</p>
+  <div class="markdown level1 remarks"><p>此方法会通过网关下载此服务器内的所有服务器助力信息，并缓存它们。
+要下载所有服务器助力信息，当前用户必须具有 <a class="xref" href="Kook.GuildPermission.html#Kook_GuildPermission_ManageGuild">ManageGuild</a> 权限。</p>
 </div>
 
 
@@ -2127,10 +2082,10 @@ To download all boost subscriptions, the current user must has the
 
   <h3 id="Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.DownloadUsersAsync(Kook.RequestOptions)">
   DownloadUsersAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L868"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L711"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Downloads all users for this guild if the current list is incomplete.</p>
+  <div class="markdown level1 summary"><p>下载此服务器内的所有用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2141,14 +2096,14 @@ To download all boost subscriptions, the current user must has the
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous download operation.</p>
+    <dd><p>一个表示异步下载操作的任务。</p>
 </dd>
   </dl>
 
@@ -2159,7 +2114,7 @@ To download all boost subscriptions, the current user must has the
 
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_DownloadUsersAsync_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method downloads all users found within this guild through the Gateway and caches them.</p>
+  <div class="markdown level1 remarks"><p>此方法会下载所有加入到此服务器内的用户，并缓存它们。</p>
 </div>
 
 
@@ -2169,10 +2124,10 @@ To download all boost subscriptions, the current user must has the
 
   <h3 id="Kook_WebSocket_SocketGuild_DownloadVoiceStatesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.DownloadVoiceStatesAsync(Kook.RequestOptions)">
   DownloadVoiceStatesAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L872"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L715"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Downloads all voice states for this guild.</p>
+  <div class="markdown level1 summary"><p>下载此服务器内的所有语音状态。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2183,14 +2138,14 @@ To download all boost subscriptions, the current user must has the
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous download operation.</p>
+    <dd><p>一个表示异步下载操作的任务。</p>
 </dd>
   </dl>
 
@@ -2201,7 +2156,7 @@ To download all boost subscriptions, the current user must has the
 
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_DownloadVoiceStatesAsync_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method downloads all voice states for this guild through the Gateway and caches them.</p>
+  <div class="markdown level1 remarks"><p>此方法会下载此服务器内的所有语音状态，并缓存它们。</p>
 </div>
 
 
@@ -2211,10 +2166,10 @@ To download all boost subscriptions, the current user must has the
 
   <h3 id="Kook_WebSocket_SocketGuild_GetActiveBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetActiveBoostSubscriptionsAsync(Kook.RequestOptions)">
   GetActiveBoostSubscriptionsAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L530"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L454"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets subscriptions which are not expired for this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器所有生效中的服务器助力包。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2225,16 +2180,14 @@ To download all boost subscriptions, the current user must has the
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>&gt;&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous retrieval operation. The task result contains
-a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a> which are not expired,
-each representing the subscriptions information.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果是所有为此服务器助力的用户及所应用的生效中的服务器助力包。</p>
 </dd>
   </dl>
 
@@ -2252,10 +2205,10 @@ each representing the subscriptions information.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetBadgeAsync_Kook_BadgeStyle_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetBadgeAsync(Kook.BadgeStyle,Kook.RequestOptions)">
   GetBadgeAsync(BadgeStyle, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L1154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L986"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a badge which is associated with this guild.</p>
+  <div class="markdown level1 summary"><p>获取与此服务器关联的徽章。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2266,18 +2219,17 @@ each representing the subscriptions information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>style</code> <a class="xref" href="Kook.BadgeStyle.html">BadgeStyle</a></dt>
-    <dd><p>The <a class="xref" href="Kook.BadgeStyle.html">BadgeStyle</a> that specifies the style of the badge.</p>
+    <dd><p>要获取的徽章的样式。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains the stream of the badge
-associated with this guild.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含与此服务器关联的徽章的流。</p>
 </dd>
   </dl>
 
@@ -2295,10 +2247,10 @@ associated with this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetBanAsync_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetBanAsync(Kook.IUser,Kook.RequestOptions)">
   GetBanAsync(IUser, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L543"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L467"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a ban object for a banned user.</p>
+  <div class="markdown level1 summary"><p>获取指定用户在此服务器内当前的封禁信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2309,18 +2261,17 @@ associated with this guild.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The banned user.</p>
+    <dd><p>要获取封禁信息的用户。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Rest.RestBan.html">RestBan</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a ban object, which
-contains the user information and the reason for the ban; <code>null</code> if the ban entry cannot be found.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含该用户在此服务器内的封禁信息；如果该用户当前未被此服务器封禁，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -2338,10 +2289,10 @@ contains the user information and the reason for the ban; <code>null</code> if t
 
   <h3 id="Kook_WebSocket_SocketGuild_GetBanAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetBanAsync(System.UInt64,Kook.RequestOptions)">
   GetBanAsync(ulong, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L471"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a ban object for a banned user.</p>
+  <div class="markdown level1 summary"><p>获取指定用户在此服务器内的封禁信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2352,18 +2303,17 @@ contains the user information and the reason for the ban; <code>null</code> if t
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The identifier for the banned user.</p>
+    <dd><p>要获取封禁信息的用户的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Rest.RestBan.html">RestBan</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a ban object, which
-contains the user information and the reason for the ban; <code>null</code> if the ban entry cannot be found.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含该用户在此服务器内的封禁信息；如果该用户未被此服务器封禁，或封禁已过期或解除，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -2381,10 +2331,10 @@ contains the user information and the reason for the ban; <code>null</code> if t
 
   <h3 id="Kook_WebSocket_SocketGuild_GetBansAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetBansAsync(Kook.RequestOptions)">
   GetBansAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L539"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L463"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all users banned in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的所有封禁信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2395,16 +2345,14 @@ contains the user information and the reason for the ban; <code>null</code> if t
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Rest.RestBan.html">RestBan</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a read-only collection of
-ban objects that this guild currently possesses, with each object containing the user banned and reason
-behind the ban.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含此服务器的所有封禁信息。</p>
 </dd>
   </dl>
 
@@ -2422,10 +2370,10 @@ behind the ban.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetBoostSubscriptionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetBoostSubscriptionsAsync(Kook.RequestOptions)">
   GetBoostSubscriptionsAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L525"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L449"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all subscriptions for this guild.</p>
+  <div class="markdown level1 summary"><p>所有此服务器的所有服务器助力包。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2436,15 +2384,14 @@ behind the ban.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>&gt;&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous retrieval operation. The task result contains
-a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">BoostSubscriptionMetadata</a>, each representing the subscriptions information.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果是所有为此服务器助力的用户及所应用的服务器助力包。</p>
 </dd>
   </dl>
 
@@ -2462,10 +2409,10 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
 
   <h3 id="Kook_WebSocket_SocketGuild_GetCategoryChannel_System_UInt64_" data-uid="Kook.WebSocket.SocketGuild.GetCategoryChannel(System.UInt64)">
   GetCategoryChannel(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L604"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L524"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a category channel in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器内指定的分组频道</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2476,14 +2423,14 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The snowflake identifier for the category channel.</p>
+    <dd><p>要获取的频道的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketCategoryChannel.html">SocketCategoryChannel</a></dt>
-    <dd><p>A category channel associated with the specified <code class="paramref">id</code>; <code>null</code> if none is found.</p>
+    <dd><p>与指定的 <code class="paramref">id</code> 关联的频道；如果未找到，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -2501,10 +2448,10 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
 
   <h3 id="Kook_WebSocket_SocketGuild_GetChannel_System_UInt64_" data-uid="Kook.WebSocket.SocketGuild.GetChannel(System.UInt64)">
   GetChannel(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L577"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L499"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a channel in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器内的频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2515,14 +2462,14 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The identifier for the channel.</p>
+    <dd><p>要获取的频道的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketGuildChannel.html">SocketGuildChannel</a></dt>
-    <dd><p>A generic channel associated with the specified <code class="paramref">id</code>; <code>null</code> if none is found.</p>
+    <dd><p>与指定的 <code class="paramref">id</code> 关联的频道；如果未找到，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -2540,10 +2487,10 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
 
   <h3 id="Kook_WebSocket_SocketGuild_GetEmote_System_String_" data-uid="Kook.WebSocket.SocketGuild.GetEmote(System.String)">
   GetEmote(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L919"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L755"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a guild emoji in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的指定自定义表情。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2554,14 +2501,14 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The identifier for the guild emoji.</p>
+    <dd><p>要获取的自定义表情的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.GuildEmote.html">GuildEmote</a></dt>
-    <dd><p>A guild emoji associated with the specified <code class="paramref">id</code>; <code>null</code> if none is found.</p>
+    <dd><p>与指定的 <code class="paramref">id</code> 关联的自定义表情；如果未找到，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -2579,10 +2526,10 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
 
   <h3 id="Kook_WebSocket_SocketGuild_GetEmoteAsync_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetEmoteAsync(System.String,Kook.RequestOptions)">
   GetEmoteAsync(string, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L937"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L773"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a specific emote from this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的指定自定义表情。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2593,18 +2540,17 @@ a collection of <a class="xref" href="Kook.BoostSubscriptionMetadata.html">Boost
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The identifier for the guild emote.</p>
+    <dd><p>要获取的自定义表情的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains the emote found with the
-specified <code class="paramref">id</code>; <code>null</code> if none is found.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含与指定的 <code class="paramref">id</code> 关联的自定义表情；如果未找到，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -2622,10 +2568,10 @@ specified <code class="paramref">id</code>; <code>null</code> if none is found.<
 
   <h3 id="Kook_WebSocket_SocketGuild_GetEmotesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetEmotesAsync(Kook.RequestOptions)">
   GetEmotesAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L933"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L769"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of emotes from this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的所有自定义表情。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2636,15 +2582,14 @@ specified <code class="paramref">id</code>; <code>null</code> if none is found.<
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.GuildEmote.html">GuildEmote</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a read-only collection
-of emotes found within the guild.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含此服务器的所有自定义表情。</p>
 </dd>
   </dl>
 
@@ -2662,10 +2607,10 @@ of emotes found within the guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetInvitesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetInvitesAsync(Kook.RequestOptions)">
   GetInvitesAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L958"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L793"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all invites in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器内的所有邀请信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2676,15 +2621,14 @@ of emotes found within the guild.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a read-only collection of
-invite, each representing information for an invite found within this guild.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含此服务器内的所有邀请信息。</p>
 </dd>
   </dl>
 
@@ -2702,10 +2646,10 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetRole_System_UInt32_" data-uid="Kook.WebSocket.SocketGuild.GetRole(System.UInt32)">
   GetRole(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L710"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L580"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a role in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器内的角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2716,14 +2660,14 @@ invite, each representing information for an invite found within this guild.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>The identifier for the role.</p>
+    <dd><p>要获取的角色的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketRole.html">SocketRole</a></dt>
-    <dd><p>A role that is associated with the specified <code class="paramref">id</code>; <code>null</code> if none is found.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含与指定的 <code class="paramref">id</code> 关联的角色；如果未找到，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -2741,10 +2685,10 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetTextChannel_System_UInt64_" data-uid="Kook.WebSocket.SocketGuild.GetTextChannel(System.UInt64)">
   GetTextChannel(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L510"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a text channel in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器中所有具有文字聊天能力的频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2755,14 +2699,14 @@ invite, each representing information for an invite found within this guild.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The identifier for the text channel.</p>
+    <dd><p>要获取的频道的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketTextChannel.html">SocketTextChannel</a></dt>
-    <dd><p>A text channel associated with the specified <code class="paramref">id</code>; <code>null</code> if none is found.</p>
+    <dd><p>与指定的 <code class="paramref">id</code> 关联的频道；如果未找到，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -2772,6 +2716,10 @@ invite, each representing information for an invite found within this guild.</p>
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketGuild_GetTextChannel_System_UInt64__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>语音频道也是一种文字频道，此方法本意用于获取具有文字聊天能力的频道。如果通过此方法传入的 ID 对应的频道是语音频道，那么也会返回对应的语音频道实体。
+如需获取频道的实际类型，请参考 <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetChannelType_Kook_IChannel_">GetChannelType(IChannel)</a>。</p>
+</div>
 
 
 
@@ -2780,10 +2728,10 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketGuild.GetUser(System.UInt64)">
   GetUser(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L762"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L617"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a user from this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器内的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2794,14 +2742,14 @@ invite, each representing information for an invite found within this guild.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The identifier of the user.</p>
+    <dd><p>要获取的用户的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a></dt>
-    <dd><p>A guild user associated with the specified <code class="paramref">id</code>; <code>null</code> if none is found.</p>
+    <dd><p>与指定的 <code class="paramref">id</code> 关联的用户；如果未找到，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -2812,11 +2760,7 @@ invite, each representing information for an invite found within this guild.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_GetUser_System_UInt64__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method retrieves a user found within this guild.</p>
-<div class="NOTE"><h5>note</h5><p>
-    This may return <code>null</code> in the WebSocket implementation due to incomplete user collection in
-    large guilds.
-</p></div>
+  <div class="markdown level1 remarks"><p>此方法可能返回 <code>null</code>，因为在大型服务器中，用户列表的缓存可能不完整。</p>
 </div>
 
 
@@ -2826,10 +2770,10 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetUsersAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.GetUsersAsync(Kook.RequestOptions)">
   GetUsersAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L860"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L703"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all users in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器内的所有用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2840,15 +2784,14 @@ invite, each representing information for an invite found within this guild.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IGuildUser.html">IGuildUser</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a collection of guild
-users found within this guild.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含此服务器内的所有用户。</p>
 </dd>
   </dl>
 
@@ -2858,10 +2801,6 @@ users found within this guild.</p>
 
 
 
-  <h4 class="section" id="Kook_WebSocket_SocketGuild_GetUsersAsync_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method retrieves all users found within this guild through REST.</p>
-<p>Users returned by this method are not cached.</p>
-</div>
 
 
 
@@ -2870,10 +2809,10 @@ users found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_GetVoiceChannel_System_UInt64_" data-uid="Kook.WebSocket.SocketGuild.GetVoiceChannel(System.UInt64)">
   GetVoiceChannel(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L595"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L517"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a voice channel in this guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器内指定具有语音聊天能力的频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2884,14 +2823,14 @@ users found within this guild.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The identifier for the voice channel.</p>
+    <dd><p>要获取的频道的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html">SocketVoiceChannel</a></dt>
-    <dd><p>A voice channel associated with the specified <code class="paramref">id</code>; <code>null</code> if none is found.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含与指定的 <code class="paramref">id</code> 关联的频道；如果未找到，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -2909,10 +2848,10 @@ users found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_LeaveAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.LeaveAsync(Kook.RequestOptions)">
   LeaveAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L521"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L445"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Leaves this guild.</p>
+  <div class="markdown level1 summary"><p>退出此服务器。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2923,14 +2862,14 @@ users found within this guild.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous leave operation.</p>
+    <dd><p>一个表示异步退出操作的任务。</p>
 </dd>
   </dl>
 
@@ -2940,12 +2879,6 @@ users found within this guild.</p>
 
 
 
-  <h4 class="section" id="Kook_WebSocket_SocketGuild_LeaveAsync_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method will make the currently logged-in user leave the guild.</p>
-<div class="NOTE"><h5>note</h5><p>
-    If the user is the owner of this guild, use <a class="xref" href="Kook.IDeletable.html#Kook_IDeletable_DeleteAsync_Kook_RequestOptions_">DeleteAsync(RequestOptions?)</a> instead.
-</p></div>
-</div>
 
 
 
@@ -2954,10 +2887,10 @@ users found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_ModifyEmoteNameAsync_Kook_GuildEmote_System_String_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.ModifyEmoteNameAsync(Kook.GuildEmote,System.String,Kook.RequestOptions)">
   ModifyEmoteNameAsync(GuildEmote, string, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L946"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L781"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Modifies an existing <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a> in this guild.</p>
+  <div class="markdown level1 summary"><p>修改此服务器内的现有自定义表情。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2968,21 +2901,20 @@ users found within this guild.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>emote</code> <a class="xref" href="Kook.GuildEmote.html">GuildEmote</a></dt>
-    <dd><p>The emote to be modified.</p>
+    <dd><p>要修改的自定义表情。</p>
 </dd>
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The new name of the emote.</p>
+    <dd><p>新的自定义表情名称。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous modification operation. The task result contains the modified
-emote.</p>
+    <dd><p>一个表示异步修改操作的任务。任务的结果包含修改后的自定义表情。</p>
 </dd>
   </dl>
 
@@ -2993,12 +2925,6 @@ emote.</p>
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p><code class="paramref">name</code> is <code>null</code>.</p>
-</dd>
-  </dl>
 
 
 
@@ -3006,10 +2932,10 @@ emote.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_MoveUsersAsync_System_Collections_Generic_IEnumerable_Kook_IGuildUser__Kook_IVoiceChannel_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.MoveUsersAsync(System.Collections.Generic.IEnumerable{Kook.IGuildUser},Kook.IVoiceChannel,Kook.RequestOptions)">
   MoveUsersAsync(IEnumerable&lt;IGuildUser&gt;, IVoiceChannel, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L904"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L742"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Moves the user to the voice channel.</p>
+  <div class="markdown level1 summary"><p>移动用户到语音频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3020,20 +2946,20 @@ emote.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>users</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IGuildUser.html">IGuildUser</a>&gt;</dt>
-    <dd><p>The users to move.</p>
+    <dd><p>要移动的用户。</p>
 </dd>
     <dt><code>targetChannel</code> <a class="xref" href="Kook.IVoiceChannel.html">IVoiceChannel</a></dt>
-    <dd><p>the channel where the user gets moved to.</p>
+    <dd><p>要移动用户到的语音频道。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for moving a user.</p>
+    <dd><p>一个表示异步移动操作的任务。</p>
 </dd>
   </dl>
 
@@ -3051,10 +2977,10 @@ emote.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_PurgeUserCache" data-uid="Kook.WebSocket.SocketGuild.PurgeUserCache">
   PurgeUserCache()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L826"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L677"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Purges this guild's user cache.</p>
+  <div class="markdown level1 summary"><p>清除此服务器的用户缓存。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3076,23 +3002,23 @@ emote.</p>
 
   <a id="Kook_WebSocket_SocketGuild_PurgeUserCache_" data-uid="Kook.WebSocket.SocketGuild.PurgeUserCache*"></a>
 
-  <h3 id="Kook_WebSocket_SocketGuild_PurgeUserCache_System_Func_Kook_WebSocket_SocketGuildUser_System_Boolean__" data-uid="Kook.WebSocket.SocketGuild.PurgeUserCache(System.Func{Kook.WebSocket.SocketGuildUser,System.Boolean})">
-  PurgeUserCache(Func&lt;SocketGuildUser, bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L832"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_WebSocket_SocketGuild_PurgeUserCache_System_Predicate_Kook_WebSocket_SocketGuildUser__" data-uid="Kook.WebSocket.SocketGuild.PurgeUserCache(System.Predicate{Kook.WebSocket.SocketGuildUser})">
+  PurgeUserCache(Predicate&lt;SocketGuildUser&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L683"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Purges this guild's user cache.</p>
+  <div class="markdown level1 summary"><p>清除此服务器的用户缓存。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PurgeUserCache(Func&lt;SocketGuildUser, bool&gt; predicate)</code></pre>
+    <pre><code class="lang-csharp hljs">public void PurgeUserCache(Predicate&lt;SocketGuildUser&gt; predicate)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>The predicate used to select which users to clear.</p>
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</dt>
+    <dd><p>要清除的用户的筛选条件。</p>
 </dd>
   </dl>
 
@@ -3111,10 +3037,10 @@ emote.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_RemoveBanAsync_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.RemoveBanAsync(Kook.IUser,Kook.RequestOptions)">
   RemoveBanAsync(IUser, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L559"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L483"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Unbans the user if they are currently banned.</p>
+  <div class="markdown level1 summary"><p>解除服务器对用户的封禁。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3125,17 +3051,17 @@ emote.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user to be unbanned.</p>
+    <dd><p>要解除封禁的用户。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous removal operation for the ban.</p>
+    <dd><p>一个表示异步封禁解除操作的任务。</p>
 </dd>
   </dl>
 
@@ -3153,10 +3079,10 @@ emote.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_RemoveBanAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.RemoveBanAsync(System.UInt64,Kook.RequestOptions)">
   RemoveBanAsync(ulong, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L563"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L487"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Unbans the user if they are currently banned.</p>
+  <div class="markdown level1 summary"><p>解除服务器对用户的封禁。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3167,17 +3093,17 @@ emote.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The identifier of the user to be unbanned.</p>
+    <dd><p>要解除封禁的用户的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous removal operation for the ban.</p>
+    <dd><p>一个表示异步封禁解除操作的任务。</p>
 </dd>
   </dl>
 
@@ -3195,11 +3121,10 @@ emote.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_SearchUsersAsync_System_Action_Kook_SearchGuildMemberProperties__System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.SearchUsersAsync(System.Action{Kook.SearchGuildMemberProperties},System.Int32,Kook.RequestOptions)">
   SearchUsersAsync(Action&lt;SearchGuildMemberProperties&gt;, int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L894"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L732"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of users in this guild that the name or nickname contains the
-provided string at <code class="paramref">func</code>.</p>
+  <div class="markdown level1 summary"><p>搜索加入到此服务器内匹配指定搜索条件的所有用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3210,22 +3135,20 @@ provided string at <code class="paramref">func</code>.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.SearchGuildMemberProperties.html">SearchGuildMemberProperties</a>&gt;</dt>
-    <dd><p>A delegate containing the properties to search users with.</p>
+    <dd><p>一个包含要搜索的用户属性及排序条件的委托。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of users to be gotten.</p>
+    <dd><p>搜索结果的最大数量。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Rest.RestGuildUser.html">RestGuildUser</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a collection of guild
-users that matches the properties with the provided <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a>
-at <code class="paramref">func</code>.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含与提供的 <code class="paramref">func</code> 中指定的属性匹配的服务器用户集合。</p>
 </dd>
   </dl>
 
@@ -3236,7 +3159,7 @@ at <code class="paramref">func</code>.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_SearchUsersAsync_System_Action_Kook_SearchGuildMemberProperties__System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The <code class="paramref">limit</code> can not be higher than <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxUsersPerBatch">MaxUsersPerBatch</a>.</p>
+  <div class="markdown level1 remarks"><p>此方法使用指定的属性搜索服务器用户。要查看可用的属性，请参考 <a class="xref" href="Kook.SearchGuildMemberProperties.html">SearchGuildMemberProperties</a>。</p>
 </div>
 
 
@@ -3246,10 +3169,10 @@ at <code class="paramref">func</code>.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_ToString" data-uid="Kook.WebSocket.SocketGuild.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L513"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L437"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the name of the guild.</p>
+  <div class="markdown level1 summary"><p>获取此服务器的名称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3261,8 +3184,7 @@ at <code class="paramref">func</code>.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that resolves to <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_Name">Name</a>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -3279,10 +3201,10 @@ at <code class="paramref">func</code>.</p>
 
   <h3 id="Kook_WebSocket_SocketGuild_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketGuild.UpdateAsync(Kook.RequestOptions)">
   UpdateAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L502"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Guilds/SocketGuild.cs/#L431"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Updates this object's properties with its current state.</p>
+  <div class="markdown level1 summary"><p>通过 REST API 获取此实体对象的最新状态，并替换当前对象的属性。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3293,14 +3215,14 @@ at <code class="paramref">func</code>.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents an asynchronous reloading operation.</p>
+    <dd><p>一个表示异步更新操作的任务。</p>
 </dd>
   </dl>
 
@@ -3312,8 +3234,7 @@ at <code class="paramref">func</code>.</p>
 
   <h4 class="section" id="Kook_WebSocket_SocketGuild_UpdateAsync_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method will fetch the latest data from REST API,
-        and replace the current object's properties with the new data.
+        此方法将从 KOOK REST API 获取最新数据，并替换当前对象的属性，而非使用指定的属性修改 KOOK 服务端的数据。
     </p></div>
 </div>
 

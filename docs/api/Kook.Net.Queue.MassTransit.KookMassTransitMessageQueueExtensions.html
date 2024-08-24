@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class KookMassTransitMessageQueueExtensions | Kook.Net 文档 ">
       
-      <meta name="description" content="Provides extension methods for  to configure MassTransit message queues.">
+      <meta name="description" content="提供用于配置  使用 MassTransit 消息队列的扩展方法。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Net_Queue_MassTransit_KookMassTransitMessageQueueExtensions" data-uid="Kook.Net.Queue.MassTransit.KookMassTransitMessageQueueExtensions" class="text-break">
-Class KookMassTransitMessageQueueExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/KookMessageQueueMassTransitExtensions.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class KookMassTransitMessageQueueExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/KookMessageQueueMassTransitExtensions.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class KookMassTransitMessageQueueExtensions  <a class="header-action link-second
   <dl><dt>Assembly</dt><dd>Kook.Net.MessageQueue.MassTransit.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides extension methods for <a class="xref" href="Kook.Net.DependencyInjection.Microsoft.IKookClientConfigurator-2.html">IKookClientConfigurator&lt;TClient, TConfig&gt;</a> to configure MassTransit message queues.</p>
+  <div class="markdown summary"><p>提供用于配置 <a class="xref" href="Kook.Net.DependencyInjection.Microsoft.IKookClientConfigurator-2.html">IKookClientConfigurator&lt;TClient, TConfig&gt;</a>
+使用 MassTransit 消息队列的扩展方法。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,10 +158,10 @@ Class KookMassTransitMessageQueueExtensions  <a class="header-action link-second
 
   <h3 id="Kook_Net_Queue_MassTransit_KookMassTransitMessageQueueExtensions_AddMessageQueueMassTransitConsumer_MassTransit_IBusRegistrationConfigurator_" data-uid="Kook.Net.Queue.MassTransit.KookMassTransitMessageQueueExtensions.AddMessageQueueMassTransitConsumer(MassTransit.IBusRegistrationConfigurator)">
   AddMessageQueueMassTransitConsumer(IBusRegistrationConfigurator)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/KookMessageQueueMassTransitExtensions.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/KookMessageQueueMassTransitExtensions.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a MassTransit message queue consumer to the <span class="xref">MassTransit.IBusRegistrationConfigurator</span>.</p>
+  <div class="markdown level1 summary"><p>配置一个 MassTransit 消息队列消费者到 <span class="xref">MassTransit.IBusRegistrationConfigurator</span>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -171,14 +172,14 @@ Class KookMassTransitMessageQueueExtensions  <a class="header-action link-second
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>configurator</code> <span class="xref">IBusRegistrationConfigurator</span></dt>
-    <dd><p>The configurator.</p>
+    <dd><p>MassTransit 配置器。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">IBusRegistrationConfigurator</span></dt>
-    <dd><p>The configurator.</p>
+    <dd><p>配置了 MassTransit 消息队列消费者的配置器。</p>
 </dd>
   </dl>
 
@@ -196,10 +197,10 @@ Class KookMassTransitMessageQueueExtensions  <a class="header-action link-second
 
   <h3 id="Kook_Net_Queue_MassTransit_KookMassTransitMessageQueueExtensions_UseMassTransitMessageQueue__2_Kook_Net_DependencyInjection_Microsoft_IKookClientConfigurator___0___1__" data-uid="Kook.Net.Queue.MassTransit.KookMassTransitMessageQueueExtensions.UseMassTransitMessageQueue``2(Kook.Net.DependencyInjection.Microsoft.IKookClientConfigurator{``0,``1})">
   UseMassTransitMessageQueue&lt;TClient, TConfig&gt;(IKookClientConfigurator&lt;TClient, TConfig&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/KookMessageQueueMassTransitExtensions.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/KookMessageQueueMassTransitExtensions.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Configures a Kook client to use a MassTransit message queue.</p>
+  <div class="markdown level1 summary"><p>配置一个 KOOK 客户端配置器使用 MassTransit 消息队列。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -210,23 +211,25 @@ Class KookMassTransitMessageQueueExtensions  <a class="header-action link-second
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>configurator</code> <a class="xref" href="Kook.Net.DependencyInjection.Microsoft.IKookClientConfigurator-2.html">IKookClientConfigurator</a>&lt;TClient, TConfig&gt;</dt>
-    <dd><p>The configurator.</p>
+    <dd><p>KOOK 客户端配置器。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Net.DependencyInjection.Microsoft.IKookClientConfigurator-2.html">IKookClientConfigurator</a>&lt;TClient, TConfig&gt;</dt>
-    <dd><p>The configurator.</p>
+    <dd><p>配置了 MassTransit 消息队列的配置器。</p>
 </dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TClient</code></dt>
-    <dd></dd>
+    <dd><p>客户端的类型。</p>
+</dd>
     <dt><code>TConfig</code></dt>
-    <dd></dd>
+    <dd><p>配置的类型。</p>
+</dd>
   </dl>
 
 
@@ -242,10 +245,10 @@ Class KookMassTransitMessageQueueExtensions  <a class="header-action link-second
 
   <h3 id="Kook_Net_Queue_MassTransit_KookMassTransitMessageQueueExtensions_UseMassTransitMessageQueue__2_Kook_Net_DependencyInjection_Microsoft_IKookClientConfigurator___0___1__System_Action_MassTransit_IBusRegistrationConfigurator__" data-uid="Kook.Net.Queue.MassTransit.KookMassTransitMessageQueueExtensions.UseMassTransitMessageQueue``2(Kook.Net.DependencyInjection.Microsoft.IKookClientConfigurator{``0,``1},System.Action{MassTransit.IBusRegistrationConfigurator})">
   UseMassTransitMessageQueue&lt;TClient, TConfig&gt;(IKookClientConfigurator&lt;TClient, TConfig&gt;, Action&lt;IBusRegistrationConfigurator&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/KookMessageQueueMassTransitExtensions.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/KookMessageQueueMassTransitExtensions.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Configures a Kook client to use a MassTransit message queue.</p>
+  <div class="markdown level1 summary"><p>配置一个 KOOK 客户端配置器使用 MassTransit 消息队列。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -256,26 +259,28 @@ Class KookMassTransitMessageQueueExtensions  <a class="header-action link-second
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>configurator</code> <a class="xref" href="Kook.Net.DependencyInjection.Microsoft.IKookClientConfigurator-2.html">IKookClientConfigurator</a>&lt;TClient, TConfig&gt;</dt>
-    <dd><p>The configurator.</p>
+    <dd><p>KOOK 客户端配置器。</p>
 </dd>
     <dt><code>massTransitConfigure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">IBusRegistrationConfigurator</span>&gt;</dt>
-    <dd><p>The MassTransit configuration action.</p>
+    <dd><p>MassTransit 配置操作。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Net.DependencyInjection.Microsoft.IKookClientConfigurator-2.html">IKookClientConfigurator</a>&lt;TClient, TConfig&gt;</dt>
-    <dd><p>The configurator.</p>
+    <dd><p>配置了 MassTransit 消息队列的配置器。</p>
 </dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TClient</code></dt>
-    <dd></dd>
+    <dd><p>客户端的类型。</p>
+</dd>
     <dt><code>TConfig</code></dt>
-    <dd></dd>
+    <dd><p>配置的类型。</p>
+</dd>
   </dl>
 
 
@@ -291,7 +296,7 @@ Class KookMassTransitMessageQueueExtensions  <a class="header-action link-second
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/KookMessageQueueMassTransitExtensions.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/KookMessageQueueMassTransitExtensions.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IModuleBase | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a generic module base.">
+      <meta name="description" content="表示一个通用的模块基类。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a generic module base.</p>
+  <div class="markdown summary"><p>表示一个通用的模块基类。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -125,10 +125,10 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_Commands_IModuleBase_AfterExecute_Kook_Commands_CommandInfo_" data-uid="Kook.Commands.IModuleBase.AfterExecute(Kook.Commands.CommandInfo)">
   AfterExecute(CommandInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Executed after a command is run in this module base.</p>
+  <div class="markdown level1 summary"><p>当此模块中的命令运行后执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -139,7 +139,7 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>command</code> <a class="xref" href="Kook.Commands.CommandInfo.html">CommandInfo</a></dt>
-    <dd><p>The command that ran.</p>
+    <dd><p>执行的命令。</p>
 </dd>
   </dl>
 
@@ -158,10 +158,10 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_Commands_IModuleBase_AfterExecuteAsync_Kook_Commands_CommandInfo_" data-uid="Kook.Commands.IModuleBase.AfterExecuteAsync(Kook.Commands.CommandInfo)">
   AfterExecuteAsync(CommandInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Executed asynchronously after a command is run in this module base.</p>
+  <div class="markdown level1 summary"><p>当此模块中的命令运行后异步执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -172,14 +172,15 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>command</code> <a class="xref" href="Kook.Commands.CommandInfo.html">CommandInfo</a></dt>
-    <dd><p>The command that's about to run.</p>
+    <dd><p>执行的命令。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>一个表示异步操作的任务。</p>
+</dd>
   </dl>
 
 
@@ -196,10 +197,10 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_Commands_IModuleBase_BeforeExecute_Kook_Commands_CommandInfo_" data-uid="Kook.Commands.IModuleBase.BeforeExecute(Kook.Commands.CommandInfo)">
   BeforeExecute(CommandInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Executed before a command is run in this module base.</p>
+  <div class="markdown level1 summary"><p>当此模块中的命令在运行之前执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -210,7 +211,7 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>command</code> <a class="xref" href="Kook.Commands.CommandInfo.html">CommandInfo</a></dt>
-    <dd><p>The command that's about to run.</p>
+    <dd><p>即将运行的命令。</p>
 </dd>
   </dl>
 
@@ -229,10 +230,10 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_Commands_IModuleBase_BeforeExecuteAsync_Kook_Commands_CommandInfo_" data-uid="Kook.Commands.IModuleBase.BeforeExecuteAsync(Kook.Commands.CommandInfo)">
   BeforeExecuteAsync(CommandInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Executed asynchronously before a command is run in this module base.</p>
+  <div class="markdown level1 summary"><p>当此模块中的命令在运行之前异步执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -243,14 +244,15 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>command</code> <a class="xref" href="Kook.Commands.CommandInfo.html">CommandInfo</a></dt>
-    <dd><p>The command thats about to run.</p>
+    <dd><p>即将运行的命令。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>一个表示异步操作的任务。</p>
+</dd>
   </dl>
 
 
@@ -267,10 +269,10 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_Commands_IModuleBase_OnModuleBuilding_Kook_Commands_CommandService_Kook_Commands_Builders_ModuleBuilder_" data-uid="Kook.Commands.IModuleBase.OnModuleBuilding(Kook.Commands.CommandService,Kook.Commands.Builders.ModuleBuilder)">
   OnModuleBuilding(CommandService, ModuleBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Executed when this module is building.</p>
+  <div class="markdown level1 summary"><p>当构建此模块时执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -281,10 +283,10 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>commandService</code> <a class="xref" href="Kook.Commands.CommandService.html">CommandService</a></dt>
-    <dd><p>The command service that is building this module.</p>
+    <dd><p>创建此模块的命令服务。</p>
 </dd>
     <dt><code>builder</code> <a class="xref" href="Kook.Commands.Builders.ModuleBuilder.html">ModuleBuilder</a></dt>
-    <dd><p>The builder constructing this module.</p>
+    <dd><p>用于构建此模块的构建器。</p>
 </dd>
   </dl>
 
@@ -306,7 +308,7 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/IModuleBase.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sets the context of this module base.</p>
+  <div class="markdown level1 summary"><p>设置此模块基类的上下文。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -317,7 +319,7 @@ Interface IModuleBase  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>context</code> <a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></dt>
-    <dd><p>The context to set.</p>
+    <dd><p>此模块基类的上下文。</p>
 </dd>
   </dl>
 

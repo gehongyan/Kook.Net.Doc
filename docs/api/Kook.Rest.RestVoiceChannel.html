@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class RestVoiceChannel | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a REST-based voice channel in a guild.">
+      <meta name="description" content="表示服务器中一个基于 REST 的具有语音聊天能力的频道。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>Kook.Net.Rest.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a REST-based voice channel in a guild.</p>
+  <div class="markdown summary"><p>表示服务器中一个基于 REST 的具有语音聊天能力的频道。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -222,6 +222,9 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="Kook.Rest.RestGuildChannel.html#Kook_Rest_RestGuildChannel_UserPermissionOverwrites">RestGuildChannel.UserPermissionOverwrites</a>
     </div>
     <div>
+      <a class="xref" href="Kook.Rest.RestGuildChannel.html#Kook_Rest_RestGuildChannel_Guild">RestGuildChannel.Guild</a>
+    </div>
+    <div>
       <a class="xref" href="Kook.Rest.RestGuildChannel.html#Kook_Rest_RestGuildChannel_Type">RestGuildChannel.Type</a>
     </div>
     <div>
@@ -304,15 +307,6 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <div>
       <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetJumpUrl_Kook_IChannel_">ChannelExtensions.GetJumpUrl(IChannel)</a>
   </div>
-  <div>
-      <a class="xref" href="Kook.Rest.RestTextChannelExperimentalExtensions.html#Kook_Rest_RestTextChannelExperimentalExtensions_SyncPermissionsAsync_Kook_Rest_RestTextChannel_Kook_RequestOptions_">RestTextChannelExperimentalExtensions.SyncPermissionsAsync(RestTextChannel, RequestOptions?)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.Rest.RestVoiceChannelExperimentalExtensions.html#Kook_Rest_RestVoiceChannelExperimentalExtensions_DisconnectUserAsync_Kook_Rest_RestVoiceChannel_Kook_IGuildUser_Kook_RequestOptions_">RestVoiceChannelExperimentalExtensions.DisconnectUserAsync(RestVoiceChannel, IGuildUser, RequestOptions?)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.Rest.RestVoiceChannelExperimentalExtensions.html#Kook_Rest_RestVoiceChannelExperimentalExtensions_SyncPermissionsAsync_Kook_Rest_RestVoiceChannel_Kook_RequestOptions_">RestVoiceChannelExperimentalExtensions.SyncPermissionsAsync(RestVoiceChannel, RequestOptions?)</a>
-  </div>
   </dd></dl>
 
 
@@ -330,7 +324,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this voice channel is locked by a password.</p>
+  <div class="markdown level1 summary"><p>获取此频道是否已被密码锁定。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -345,8 +339,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>A bool representing whether this voice channel is locked by a password.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -363,7 +356,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the voice region of this audio channel is overwritten.</p>
+  <div class="markdown level1 summary"><p>获取此音频频道的语音区域设置是否覆写了服务器的语音区域设置。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -395,7 +388,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the server url that clients should connect to to join this voice channel.</p>
+  <div class="markdown level1 summary"><p>获取语音客户端连接到此语音频道的语音服务器 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -410,8 +403,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string representing the url that clients should connect to to join this voice channel.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -428,7 +420,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the max number of users allowed to be connected to this channel at once.</p>
+  <div class="markdown level1 summary"><p>获取允许同时连接到此频道的最大用户数。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -443,8 +435,7 @@ Class RestVoiceChannel  <a class="header-action link-secondary" title="View sour
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>An int representing the maximum number of users that are allowed to be connected to this
-channel at once; <code>0</code> if a limit is not set.</p>
+    <dd><p>一个 <code>int</code>，表示允许同时连接到此频道的最大用户数；如果没有限制，则为 <code>0</code>。</p>
 </dd>
   </dl>
 
@@ -462,7 +453,7 @@ channel at once; <code>0</code> if a limit is not set.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the voice quality that the clients in this voice channel are requested to use.</p>
+  <div class="markdown level1 summary"><p>获取要求此频道中的客户端使用的语音质量。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -477,9 +468,7 @@ channel at once; <code>0</code> if a limit is not set.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.VoiceQuality.html">VoiceQuality</a>?</dt>
-    <dd><p>A <a class="xref" href="Kook.IVoiceChannel.html#Kook_IVoiceChannel_VoiceQuality">VoiceQuality</a> representing the voice quality that this voice channel defines and requests the
-client(s) to use.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -496,7 +485,7 @@ client(s) to use.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the voice region for this audio channel.</p>
+  <div class="markdown level1 summary"><p>获取此音频频道所设置的语音服务器区域。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -519,11 +508,17 @@ client(s) to use.</p>
 
   <h4 class="section" id="Kook_Rest_RestVoiceChannel_VoiceRegion_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This property may be empty if the voice channel is created before this feature was released.
+        对于语音频道区域设置功能发布之前创建的语音频道，该属性可能为空。
     </p></div>
 </div>
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.IGuild.html#Kook_IGuild_Region">Region</a></div>
+    </dd>
+  </dl>
 
 
   <h2 class="section" id="methods">Methods
@@ -534,10 +529,10 @@ client(s) to use.</p>
 
   <h3 id="Kook_Rest_RestVoiceChannel_GetConnectedUsersAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.GetConnectedUsersAsync(Kook.RequestOptions)">
   GetConnectedUsersAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the users connected to this voice channel.</p>
+  <div class="markdown level1 summary"><p>获取连接到此频道的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -548,14 +543,14 @@ client(s) to use.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a collection of users.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含连接到此频道的所有服务器用户。</p>
 </dd>
   </dl>
 
@@ -573,10 +568,10 @@ client(s) to use.</p>
 
   <h3 id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(IMessage, Direction, int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -587,23 +582,23 @@ client(s) to use.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>referenceMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
-    <dd><p>The starting message to get the messages from.</p>
+    <dd><p>要开始获取消息的参考位置的消息。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of the messages to be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Rest.RestMessage.html">RestMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -614,14 +609,27 @@ client(s) to use.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions?)</a>.
-Please visit its documentation for more details on this method.</p>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+    </p></div>
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Getting messages from a voice channel is not supported.</p>
+    <dd><p>不支持在语音频道中获取消息。</p>
 </dd>
   </dl>
 
@@ -631,10 +639,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(Guid, Direction, int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -645,23 +653,23 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>referenceMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The ID of the starting message to get the messages from.</p>
+    <dd><p>要开始获取消息的参考位置的消息的 ID。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of the messages to be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Rest.RestMessage.html">RestMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -672,14 +680,27 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions?)</a>.
-Please visit its documentation for more details on this method.</p>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+    </p></div>
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Getting messages from a voice channel is not supported.</p>
+    <dd><p>不支持在语音频道中获取消息。</p>
 </dd>
   </dl>
 
@@ -689,10 +710,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的最新的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -703,17 +724,17 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Rest.RestMessage.html">RestMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -724,14 +745,27 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_Rest_RestVoiceChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions?)</a>.
-Please visit its documentation for more details on this method.</p>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+    </p></div>
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Getting messages from a voice channel is not supported.</p>
+    <dd><p>不支持在语音频道中获取消息。</p>
 </dd>
   </dl>
 
@@ -741,10 +775,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_Rest_RestVoiceChannel_GetPinnedMessagesAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestVoiceChannel.GetPinnedMessagesAsync(Kook.RequestOptions)">
   GetPinnedMessagesAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of pinned messages in this channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道中的所有置顶消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -755,15 +789,14 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Rest.RestMessage.html">RestMessage</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation for retrieving pinned messages in this channel.
-The task result contains a collection of messages found in the pinned messages.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含此频道中找到的所有置顶消息。</p>
 </dd>
   </dl>
 
@@ -777,7 +810,7 @@ The task result contains a collection of messages found in the pinned messages.<
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Getting messages from a voice channel is not supported.</p>
+    <dd><p>不支持在语音频道中获取消息。</p>
 </dd>
   </dl>
 
@@ -790,7 +823,7 @@ The task result contains a collection of messages found in the pinned messages.<
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Modifies this voice channel.</p>
+  <div class="markdown level1 summary"><p>修改此频道有关语音聊天能力的属性。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -801,17 +834,17 @@ The task result contains a collection of messages found in the pinned messages.<
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.ModifyVoiceChannelProperties.html">ModifyVoiceChannelProperties</a>&gt;</dt>
-    <dd><p>The properties to modify the channel with.</p>
+    <dd><p>一个包含修改有关语音聊天能力的属性的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous modification operation.</p>
+    <dd><p>一个表示异步修改操作的任务。</p>
 </dd>
   </dl>
 
@@ -838,7 +871,7 @@ The task result contains a collection of messages found in the pinned messages.<
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/RestVoiceChannel.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Updates this object's properties with its current state.</p>
+  <div class="markdown level1 summary"><p>通过 REST API 获取此实体对象的最新状态，并替换当前对象的属性。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -849,14 +882,14 @@ The task result contains a collection of messages found in the pinned messages.<
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents an asynchronous reloading operation.</p>
+    <dd><p>一个表示异步更新操作的任务。</p>
 </dd>
   </dl>
 
@@ -868,8 +901,7 @@ The task result contains a collection of messages found in the pinned messages.<
 
   <h4 class="section" id="Kook_Rest_RestVoiceChannel_UpdateAsync_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method will fetch the latest data from REST API,
-        and replace the current object's properties with the new data.
+        此方法将从 KOOK REST API 获取最新数据，并替换当前对象的属性，而非使用指定的属性修改 KOOK 服务端的数据。
     </p></div>
 </div>
 

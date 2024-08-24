@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MessageProperties | Kook.Net 文档 ">
       
-      <meta name="description" content="Properties that are used to modify an  with the specified changes.">
+      <meta name="description" content="提供用于修改  的属性。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class MessageProperties  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Properties that are used to modify an <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a> with the specified changes.</p>
+  <div class="markdown summary"><p>提供用于修改 <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a> 的属性。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,15 +157,16 @@ Class MessageProperties  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_MessageProperties_Cards" data-uid="Kook.MessageProperties.Cards">
   Cards
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/MessageProperties.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/MessageProperties.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the cards of the message.</p>
+  <div class="markdown level1 summary"><p>获取或设置要设置到此消息的卡片。
+修改此值，或修改此 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList&lt;T&gt;</a> 中的成员，可以修改消息中卡片的内容。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ICard&gt;? Cards { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IList&lt;ICard&gt;? Cards { get; set; }</code></pre>
   </div>
 
 
@@ -174,7 +175,7 @@ Class MessageProperties  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -192,7 +193,7 @@ Class MessageProperties  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/MessageProperties.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the content of the message.</p>
+  <div class="markdown level1 summary"><p>获取或设置要设置到此消息的消息内容。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -214,7 +215,7 @@ Class MessageProperties  <a class="header-action link-secondary" title="View sou
 
 
   <h4 class="section" id="Kook_MessageProperties_Content_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This must be less than the constant defined by <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessageSize">MaxMessageSize</a>.</p>
+  <div class="markdown level1 remarks"><p>修改此值为非空字符串可以修改消息的内容；不修改此值或将其设置为 <code>null</code> 可以保持消息的原内容。</p>
 </div>
 
 
@@ -224,10 +225,10 @@ Class MessageProperties  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_MessageProperties_EphemeralUser" data-uid="Kook.MessageProperties.EphemeralUser">
   EphemeralUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/MessageProperties.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/MessageProperties.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the only user that can see this message.</p>
+  <div class="markdown level1 summary"><p>获取或设置要临时更新到此消息的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -248,6 +249,13 @@ Class MessageProperties  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_MessageProperties_EphemeralUser_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>设置此属性会使此用户在本次登录会话中看到的消息内容为本次临时修改的内容，
+该用户在下次登录会话中看到的消息内容仍为原内容。 <br><div class="WARNING"><h5>warning</h5><p>
+仅支持通过设置此属性为指定用户的 ID 来为该用户临时更新消息。 <br>
+设置此属性无法将非临时消息更改为仅指定用户可见的临时消息，也无法为过去发送的临时消息更改可见用户。</p>
+</div>
+</div>
 
 
 
@@ -256,10 +264,10 @@ Class MessageProperties  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_MessageProperties_Quote" data-uid="Kook.MessageProperties.Quote">
   Quote
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/MessageProperties.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/MessageProperties.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the quote of the message.</p>
+  <div class="markdown level1 summary"><p>获取或设置要设置到此消息的消息引用。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -280,8 +288,17 @@ Class MessageProperties  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_MessageProperties_Quote_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>仅支持通过将此属性设置为 <code>MessageReference.Empty</code> 来清除消息引用，不支持更改现有消息引用。</p>
+</div>
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.MessageReference.html#Kook_MessageReference_Empty">Empty</a></div>
+    </dd>
+  </dl>
 
 
   <h2 id="seealso">See Also</h2>

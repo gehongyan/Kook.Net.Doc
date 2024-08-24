@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MessageExtensions | Kook.Net 文档 ">
       
-      <meta name="description" content="Provides extension methods for .">
+      <meta name="description" content="提供用于各种消息实体的扩展方法。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides extension methods for <a class="xref" href="Kook.IMessage.html">IMessage</a>.</p>
+  <div class="markdown summary"><p>提供用于各种消息实体的扩展方法。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,10 +157,10 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_MessageExtensions_AddReactionsAsync_Kook_IUserMessage_System_Collections_Generic_IEnumerable_Kook_IEmote__Kook_RequestOptions_" data-uid="Kook.MessageExtensions.AddReactionsAsync(Kook.IUserMessage,System.Collections.Generic.IEnumerable{Kook.IEmote},Kook.RequestOptions)">
   AddReactionsAsync(IUserMessage, IEnumerable&lt;IEmote&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Add multiple reactions to a message.</p>
+  <div class="markdown level1 summary"><p>向消息添加多个回应。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -171,20 +171,20 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>msg</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message to add reactions to.</p>
+    <dd><p>要添加回应的消息。</p>
 </dd>
     <dt><code>reactions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IEmote.html">IEmote</a>&gt;</dt>
-    <dd><p>An array of reactions to add to the message.</p>
+    <dd><p>要用于向此消息添加回应的所有表情符号。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for adding a reaction to this message.</p>
+    <dd><p>一个表示异步添加操作的任务。</p>
 </dd>
   </dl>
 
@@ -193,14 +193,9 @@ Class MessageExtensions  <a class="header-action link-secondary" title="View sou
 
 
 
-  <h4 class="section" id="Kook_MessageExtensions_AddReactionsAsync_Kook_IUserMessage_System_Collections_Generic_IEnumerable_Kook_IEmote__Kook_RequestOptions__examples">Examples</h4>
-  <pre><code class="lang-cs">IEmote a = new Emoji("🅰");
-IEmote b = new Emoji("🅱");
-await msg.AddReactionsAsync([a, b]);</code></pre>
-
 
   <h4 class="section" id="Kook_MessageExtensions_AddReactionsAsync_Kook_IUserMessage_System_Collections_Generic_IEnumerable_Kook_IEmote__Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method does not bulk add reactions! It will send a request for each reaction included.</p>
+  <div class="markdown level1 remarks"><p>此方法会对每个要添加的回应分别发送请求。</p>
 </div>
 
 
@@ -208,7 +203,6 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
     <dt>See Also</dt>
     <dd>
     <div><a class="xref" href="Kook.IMessage.html#Kook_IMessage_AddReactionAsync_Kook_IEmote_Kook_RequestOptions_">AddReactionAsync</a>(<a class="xref" href="Kook.IEmote.html">IEmote</a>, <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
-    <div><a class="xref" href="Kook.IEmote.html">IEmote</a></div>
     </dd>
   </dl>
 
@@ -217,10 +211,10 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
 
   <h3 id="Kook_MessageExtensions_GetJumpUrl_Kook_IMessage_" data-uid="Kook.MessageExtensions.GetJumpUrl(Kook.IMessage)">
   GetJumpUrl(IMessage)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a URL that jumps to the message.</p>
+  <div class="markdown level1 summary"><p>获取一个跳转到消息的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -231,14 +225,14 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>msg</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
-    <dd><p>The message to jump to.</p>
+    <dd><p>要获取跳转 URL 的消息。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that contains a URL for jumping to the message in chat.</p>
+    <dd><p>一个包含用于在聊天中跳转到消息的 URL 的字符串。</p>
 </dd>
   </dl>
 
@@ -256,10 +250,10 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
 
   <h3 id="Kook_MessageExtensions_MaybeTextImageMixedMessage_Kook_IUserMessage_" data-uid="Kook.MessageExtensions.MaybeTextImageMixedMessage(Kook.IUserMessage)">
   MaybeTextImageMixedMessage(IUserMessage)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the message may be a text image mixed message.</p>
+  <div class="markdown level1 summary"><p>获取此消息是否可能是图文混排消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -270,14 +264,14 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>msg</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message to check against.</p>
+    <dd><p>要判断的消息。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the message may be a text image mixed message; otherwise, <code>false</code>.</p>
+    <dd><p>如果此消息可能是图文混排消息，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </dd>
   </dl>
 
@@ -295,10 +289,10 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
 
   <h3 id="Kook_MessageExtensions_RemoveReactionsAsync_Kook_IUserMessage_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_IEmote__Kook_RequestOptions_" data-uid="Kook.MessageExtensions.RemoveReactionsAsync(Kook.IUserMessage,Kook.IUser,System.Collections.Generic.IEnumerable{Kook.IEmote},Kook.RequestOptions)">
   RemoveReactionsAsync(IUserMessage, IUser, IEnumerable&lt;IEmote&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Remove multiple reactions from a message.</p>
+  <div class="markdown level1 summary"><p>移除消息上的多个回应。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -309,23 +303,23 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>msg</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message to remove reactions from.</p>
+    <dd><p>要添加回应的消息。</p>
 </dd>
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user who removed the reaction.</p>
+    <dd><p>要删除其回应的用户。</p>
 </dd>
     <dt><code>reactions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.IEmote.html">IEmote</a>&gt;</dt>
-    <dd><p>An array of reactions to remove from the message.</p>
+    <dd><p>要从此消息移除的回应的所有表情符号。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for removing a reaction to this message.</p>
+    <dd><p>一个表示异步移除操作的任务。</p>
 </dd>
   </dl>
 
@@ -334,12 +328,9 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
 
 
 
-  <h4 class="section" id="Kook_MessageExtensions_RemoveReactionsAsync_Kook_IUserMessage_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_IEmote__Kook_RequestOptions__examples">Examples</h4>
-  <pre><code class="lang-cs">await msg.RemoveReactionsAsync(currentUser, [A, B]);</code></pre>
-
 
   <h4 class="section" id="Kook_MessageExtensions_RemoveReactionsAsync_Kook_IUserMessage_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_IEmote__Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method does not bulk remove reactions! It will send a request for each reaction included.</p>
+  <div class="markdown level1 remarks"><p>此方法会对每个要移除的回应分别发送请求。</p>
 </div>
 
 
@@ -347,7 +338,6 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
     <dt>See Also</dt>
     <dd>
     <div><a class="xref" href="Kook.IMessage.html#Kook_IMessage_RemoveReactionAsync_Kook_IEmote_Kook_IUser_Kook_RequestOptions_">RemoveReactionAsync</a>(<a class="xref" href="Kook.IEmote.html">IEmote</a>, <a class="xref" href="Kook.IUser.html">IUser</a>, <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a>)</div>
-    <div><a class="xref" href="Kook.IEmote.html">IEmote</a></div>
     </dd>
   </dl>
 
@@ -356,10 +346,10 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
 
   <h3 id="Kook_MessageExtensions_ReplyCardAsync_Kook_IUserMessage_Kook_ICard_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyCardAsync(Kook.IUserMessage,Kook.ICard,System.Boolean,System.Boolean,Kook.RequestOptions)">
   ReplyCardAsync(IUserMessage, ICard, bool, bool, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a card message to the source channel.</p>
+  <div class="markdown level1 summary"><p>向消息所属的频道回复卡片消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -370,19 +360,19 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>message</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message that is being replied on.</p>
+    <dd><p>要回复的消息。</p>
 </dd>
     <dt><code>card</code> <a class="xref" href="Kook.ICard.html">ICard</a></dt>
-    <dd><p>The card to be sent.</p>
+    <dd><p>要发送的卡片。</p>
 </dd>
     <dt><code>isQuote</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>.</p>
+    <dd><p>是否在回复消息时引用被回复的消息。</p>
 </dd>
     <dt><code>isEphemeral</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>.</p>
+    <dd><p>是否以临时消息的方式回复。如果设置为 <code>true</code>，则仅该被回复的消息的作者可以看到此回复消息，否则所有人都可以看到此回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The request options for this <code>async</code> request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
@@ -406,10 +396,10 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
 
   <h3 id="Kook_MessageExtensions_ReplyCardsAsync_Kook_IUserMessage_System_Collections_Generic_IEnumerable_Kook_ICard__System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyCardsAsync(Kook.IUserMessage,System.Collections.Generic.IEnumerable{Kook.ICard},System.Boolean,System.Boolean,Kook.RequestOptions)">
   ReplyCardsAsync(IUserMessage, IEnumerable&lt;ICard&gt;, bool, bool, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a card message to the source channel.</p>
+  <div class="markdown level1 summary"><p>向消息所属的频道回复卡片消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -420,19 +410,19 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>message</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message that is being replied on.</p>
+    <dd><p>要回复的消息。</p>
 </dd>
     <dt><code>cards</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p>The cards to be sent.</p>
+    <dd><p>要发送的卡片。</p>
 </dd>
     <dt><code>isQuote</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>.</p>
+    <dd><p>是否在回复消息时引用被回复的消息。</p>
 </dd>
     <dt><code>isEphemeral</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>.</p>
+    <dd><p>是否以临时消息的方式回复。如果设置为 <code>true</code>，则仅该被回复的消息的作者可以看到此回复消息，否则所有人都可以看到此回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The request options for this <code>async</code> request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
@@ -456,10 +446,10 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
 
   <h3 id="Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Kook_FileAttachment_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage,Kook.FileAttachment,System.Boolean,System.Boolean,Kook.RequestOptions)">
   ReplyFileAsync(IUserMessage, FileAttachment, bool, bool, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends an inline reply of file that references a message.</p>
+  <div class="markdown level1 summary"><p>向消息所属的频道回复文件消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -470,19 +460,19 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>message</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message that is being replied on.</p>
+    <dd><p>要回复的消息。</p>
 </dd>
     <dt><code>attachment</code> <a class="xref" href="Kook.FileAttachment.html">FileAttachment</a></dt>
-    <dd><p>The attachment containing the file.</p>
+    <dd><p>文件的附件信息。</p>
 </dd>
     <dt><code>isQuote</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>.</p>
+    <dd><p>是否在回复消息时引用被回复的消息。</p>
 </dd>
     <dt><code>isEphemeral</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>.</p>
+    <dd><p>是否以临时消息的方式回复。如果设置为 <code>true</code>，则仅该被回复的消息的作者可以看到此回复消息，否则所有人都可以看到此回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
@@ -506,10 +496,10 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
 
   <h3 id="Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_System_IO_Stream_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage,System.IO.Stream,System.String,Kook.AttachmentType,System.Boolean,System.Boolean,Kook.RequestOptions)">
   ReplyFileAsync(IUserMessage, Stream, string, AttachmentType, bool, bool, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends an inline reply of file that references a message.</p>
+  <div class="markdown level1 summary"><p>向消息所属的频道回复文件消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -520,25 +510,25 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>message</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message that is being replied on.</p>
+    <dd><p>要回复的消息。</p>
 </dd>
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
-    <dd><p>Stream of the file to be sent.</p>
+    <dd><p>文件的流。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the file.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the file.</p>
+    <dd><p>文件的媒体类型。</p>
 </dd>
     <dt><code>isQuote</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>.</p>
+    <dd><p>是否在回复消息时引用被回复的消息。</p>
 </dd>
     <dt><code>isEphemeral</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>.</p>
+    <dd><p>是否以临时消息的方式回复。如果设置为 <code>true</code>，则仅该被回复的消息的作者可以看到此回复消息，否则所有人都可以看到此回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
@@ -562,10 +552,10 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
 
   <h3 id="Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_System_String_System_String_Kook_AttachmentType_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyFileAsync(Kook.IUserMessage,System.String,System.String,Kook.AttachmentType,System.Boolean,System.Boolean,Kook.RequestOptions)">
   ReplyFileAsync(IUserMessage, string, string?, AttachmentType, bool, bool, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends an inline reply of file that references a message.</p>
+  <div class="markdown level1 summary"><p>向消息所属的频道回复文件消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -576,25 +566,25 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>message</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message that is being replied on.</p>
+    <dd><p>要回复的消息。</p>
 </dd>
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The file path of the file.</p>
+    <dd><p>文件的路径。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the file.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the file.</p>
+    <dd><p>文件的媒体类型。</p>
 </dd>
     <dt><code>isQuote</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>.</p>
+    <dd><p>是否在回复消息时引用被回复的消息。</p>
 </dd>
     <dt><code>isEphemeral</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>.</p>
+    <dd><p>是否以临时消息的方式回复。如果设置为 <code>true</code>，则仅该被回复的消息的作者可以看到此回复消息，否则所有人都可以看到此回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
@@ -618,10 +608,10 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
 
   <h3 id="Kook_MessageExtensions_ReplyTextAsync_Kook_IUserMessage_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_" data-uid="Kook.MessageExtensions.ReplyTextAsync(Kook.IUserMessage,System.String,System.Boolean,System.Boolean,Kook.RequestOptions)">
   ReplyTextAsync(IUserMessage, string, bool, bool, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/MessageExtensions.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends an inline reply of text that references a message.</p>
+  <div class="markdown level1 summary"><p>向消息所属的频道回复文字消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -632,19 +622,19 @@ await msg.AddReactionsAsync([a, b]);</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>message</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
-    <dd><p>The message that is being replied on.</p>
+    <dd><p>要回复的消息。</p>
 </dd>
     <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Contents of the message.</p>
 </dd>
     <dt><code>isQuote</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the source message will be quoted in this message; otherwise, <code>false</code>.</p>
+    <dd><p>是否在回复消息时引用被回复的消息。</p>
 </dd>
     <dt><code>isEphemeral</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the message to be sent can be seen only by the command invoker; otherwise, <code>false</code>.</p>
+    <dd><p>是否以临时消息的方式回复。如果设置为 <code>true</code>，则仅该被回复的消息的作者可以看到此回复消息，否则所有人都可以看到此回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The request options for this <code>async</code> request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 

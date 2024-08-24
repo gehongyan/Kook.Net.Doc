@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class AsyncEnumerableExtensions | Kook.Net 文档 ">
       
-      <meta name="description" content="An extension class for squashing .">
+      <meta name="description" content="提供用于展开其异步可枚举成员是嵌套的  可枚举对象的  的扩展方法。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_AsyncEnumerableExtensions" data-uid="Kook.AsyncEnumerableExtensions" class="text-break">
-Class AsyncEnumerableExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/AsyncEnumerableExtensions.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class AsyncEnumerableExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/AsyncEnumerableExtensions.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class AsyncEnumerableExtensions  <a class="header-action link-secondary" title="
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>An extension class for squashing <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable&lt;T&gt;</a>.</p>
+  <div class="markdown summary"><p>提供用于展开其异步可枚举成员是嵌套的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> 可枚举对象的
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable&lt;T&gt;</a> 的扩展方法。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -147,11 +148,6 @@ Class AsyncEnumerableExtensions  <a class="header-action link-secondary" title="
 
 
 
-  <h2 id="Kook_AsyncEnumerableExtensions_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>This set of extension methods will squash an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable&lt;T&gt;</a> into a
-single <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>. This is often associated with requests that has a
-set limit when requesting.</p>
-</div>
 
 
   <h2 class="section" id="methods">Methods
@@ -162,10 +158,12 @@ set limit when requesting.</p>
 
   <h3 id="Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___" data-uid="Kook.AsyncEnumerableExtensions.FlattenAsync``1(System.Collections.Generic.IAsyncEnumerable{System.Collections.Generic.IEnumerable{``0}})">
   FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/AsyncEnumerableExtensions.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/AsyncEnumerableExtensions.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Flattens the specified pages into one <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> asynchronously.</p>
+  <div class="markdown level1 summary"><p>获取异步可枚举对象 <code class="paramref">source</code> 的所有 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>
+成员，并将这些可枚举对象 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> 中的所有成员迭代返回为一个
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -204,10 +202,12 @@ set limit when requesting.</p>
 
   <h3 id="Kook_AsyncEnumerableExtensions_Flatten__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___" data-uid="Kook.AsyncEnumerableExtensions.Flatten``1(System.Collections.Generic.IAsyncEnumerable{System.Collections.Generic.IEnumerable{``0}})">
   Flatten&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/AsyncEnumerableExtensions.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/AsyncEnumerableExtensions.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Flattens the specified pages into one <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable&lt;T&gt;</a>.</p>
+  <div class="markdown level1 summary"><p>获取异步可枚举对象 <code class="paramref">source</code> 的所有 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>
+成员，并将这些可枚举对象 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> 中的所有成员迭代返回为一个
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -246,7 +246,7 @@ set limit when requesting.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/AsyncEnumerableExtensions.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/AsyncEnumerableExtensions.cs/#L7" class="edit-link">Edit this page</a>
         </div>
 
 

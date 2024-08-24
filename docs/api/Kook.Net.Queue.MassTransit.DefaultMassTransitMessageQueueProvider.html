@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DefaultMassTransitMessageQueueProvider | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a delegate that provides a new  instance of .">
+      <meta name="description" content="表示一个默认的使用 MassTransit 消息队列的 ，用于创建  实例。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class DefaultMassTransitMessageQueueProvider  <a class="header-action link-secon
   <dl><dt>Assembly</dt><dd>Kook.Net.MessageQueue.MassTransit.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a delegate that provides a new <a class="xref" href="Kook.Net.Queue.IMessageQueue.html">IMessageQueue</a> instance of <a class="xref" href="Kook.Net.Queue.MassTransit.MassTransitMessageQueue.html">MassTransitMessageQueue</a>.</p>
+  <div class="markdown summary"><p>表示一个默认的使用 MassTransit 消息队列的 <a class="xref" href="Kook.Net.Queue.MessageQueueProvider.html">MessageQueueProvider</a>，用于创建 <a class="xref" href="Kook.Net.Queue.MassTransit.MassTransitMessageQueue.html">MassTransitMessageQueue</a> 实例。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,10 +157,10 @@ Class DefaultMassTransitMessageQueueProvider  <a class="header-action link-secon
 
   <h3 id="Kook_Net_Queue_MassTransit_DefaultMassTransitMessageQueueProvider_Create_MassTransit_IBus_" data-uid="Kook.Net.Queue.MassTransit.DefaultMassTransitMessageQueueProvider.Create(MassTransit.IBus)">
   Create(IBus)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/DefaultMassTransitMessageQueueProvider.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.MassTransit/DefaultMassTransitMessageQueueProvider.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a delegate that provides a new <a class="xref" href="Kook.Net.Queue.IMessageQueue.html">IMessageQueue</a> instance of <a class="xref" href="Kook.Net.Queue.MassTransit.MassTransitMessageQueue.html">MassTransitMessageQueue</a>.</p>
+  <div class="markdown level1 summary"><p>创建一个新的用于创建默认的使用 MassTransit 消息队列的 <a class="xref" href="Kook.Net.Queue.MassTransit.MassTransitMessageQueue.html">MassTransitMessageQueue</a> 实例的委托。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -171,15 +171,14 @@ Class DefaultMassTransitMessageQueueProvider  <a class="header-action link-secon
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>bus</code> <span class="xref">IBus</span></dt>
-    <dd><p>The MassTransit bus.</p>
+    <dd><p>用于创建消息队列的 MassTransit 消息总线。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Net.Queue.MessageQueueProvider.html">MessageQueueProvider</a></dt>
-    <dd><p>A new <a class="xref" href="Kook.Net.Queue.IMessageQueue.html">IMessageQueue</a> instance of <a class="xref" href="Kook.Net.Queue.MassTransit.MassTransitMessageQueue.html">MassTransitMessageQueue</a>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -189,12 +188,6 @@ Class DefaultMassTransitMessageQueueProvider  <a class="header-action link-secon
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.platformnotsupportedexception">PlatformNotSupportedException</a></dt>
-    <dd><p>The default <a class="xref" href="Kook.Net.Queue.MassTransit.DefaultMassTransitMessageQueueProvider.html">DefaultMassTransitMessageQueueProvider</a> is not supported on this platform.</p>
-</dd>
-  </dl>
 
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class KookSocketConfig | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a configuration class for .">
+      <meta name="description" content="表示一个用于  的配置类。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_WebSocket_KookSocketConfig" data-uid="Kook.WebSocket.KookSocketConfig" class="text-break">
-Class KookSocketConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L28"><i class="bi bi-code-slash"></i></a>
+Class KookSocketConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class KookSocketConfig  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a configuration class for <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a>.</p>
+  <div class="markdown summary"><p>表示一个用于 <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> 的配置类。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -218,8 +218,7 @@ Class KookSocketConfig  <a class="header-action link-secondary" title="View sour
 
 
   <h2 id="Kook_WebSocket_KookSocketConfig_examples">Examples</h2>
-  <p>The following config enables the message cache and configures the client to always download user upon guild
-availability.</p>
+  <p>以下代码启用了消息缓存，并配置客户端在服务器可用时始终下载用户。</p>
 <pre><code class="lang-cs">var config = new KookSocketConfig
 {
     AlwaysDownloadUsers = true,
@@ -229,8 +228,7 @@ var client = new KookSocketClient(config);</code></pre>
 
 
   <h2 id="Kook_WebSocket_KookSocketConfig_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>This configuration, based on <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>, helps determine several key configurations the
-socket client depend on. For instance, message cache and connection timeout.</p>
+  <div class="markdown level0 remarks"><p>此配置基于 <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>，在与 REST 有关的配置的基础上，定义了有关网关的配置。</p>
 </div>
 
 
@@ -242,10 +240,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig__ctor" data-uid="Kook.WebSocket.KookSocketConfig.#ctor">
   KookSocketConfig()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a> class.</p>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -272,10 +270,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_GatewayEncoding" data-uid="Kook.WebSocket.KookSocketConfig.GatewayEncoding">
   GatewayEncoding
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns the encoding gateway should use.</p>
+  <div class="markdown level1 summary"><p>获取网关使用的数据格式。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -303,10 +301,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_RtcpIntervalMilliseconds" data-uid="Kook.WebSocket.KookSocketConfig.RtcpIntervalMilliseconds">
   RtcpIntervalMilliseconds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the RTCP interval of RTP connection in milliseconds.</p>
+  <div class="markdown level1 summary"><p>获取语音客户端 RTP 连接中发送 RTCP 数据报的时间间隔（毫秒）。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -339,10 +337,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions" data-uid="Kook.WebSocket.KookSocketConfig.AlwaysDownloadBoostSubscriptions">
   AlwaysDownloadBoostSubscriptions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets whether or not all boost subscriptions should be downloaded as guilds come available.</p>
+  <div class="markdown level1 summary"><p>获取或设置是否在服务器可用时始终下载所有服务器的所有服务器助力信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -365,12 +363,12 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h4 class="section" id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadBoostSubscriptions_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
-        Setting this property to <code>true</code> will cause the client to download all boost subscriptions
-        for all guilds upon startup and when <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildUpdated">GuildUpdated</a> is triggered with
-        changes occurring to <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a>.
-        Please note that it can be difficult to fill the cache completely on large guilds depending on the
-        traffic. If you are experiencing issues, try setting this to <code>false</code> and manually call
-        <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)</a> on the guilds you want.
+        当此属性为 <code>true</code> 时，客户端将在启动时下载所有服务器的所有服务器助力信息，并在引发
+        <span class="xref">Kook.WebSocket.KookSocketClient.GuildUpdated</span> 事件时，当 <a class="xref" href="Kook.WebSocket.SocketGuild.html#Kook_WebSocket_SocketGuild_BoostSubscriptionCount">BoostSubscriptionCount</a>
+        发生更改时，也会重新下载所有服务器的所有服务器助力信息。 <br>
+        对于大型服务器，启用此选项可能会导致性能问题。调用
+        <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadBoostSubscriptionsAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadBoostSubscriptionsAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)</a>
+        可以按需下载服务器的所有服务器助力信息。
     </p></div>
 </div>
 
@@ -381,10 +379,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers" data-uid="Kook.WebSocket.KookSocketConfig.AlwaysDownloadUsers">
   AlwaysDownloadUsers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets whether or not all users should be downloaded as guilds come available.</p>
+  <div class="markdown level1 summary"><p>获取或设置是否在服务器可用时始终下载所有用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -407,11 +405,9 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h4 class="section" id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
-        Setting this property to <code>true</code> will cause the client to download all users
-        for all guilds upon startup.
-        Please note that it can be difficult to fill the cache completely on large guilds depending on the
-        traffic. If you are experiencing issues, try setting this to <code>false</code> and manually call
-        <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadUsersAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadUsersAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)</a> on the guilds you want.
+        对于大型服务器，启用此选项可能会导致性能问题。调用
+        <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadUsersAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadUsersAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)</a>
+        可以按需下载服务器用户列表。
     </p></div>
 </div>
 
@@ -422,10 +418,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadVoiceStates" data-uid="Kook.WebSocket.KookSocketConfig.AlwaysDownloadVoiceStates">
   AlwaysDownloadVoiceStates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets whether or not all voice states should be downloaded as guilds come available.</p>
+  <div class="markdown level1 summary"><p>获取或设置是否在服务器可用时始终下载所有语音状态。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -448,11 +444,9 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h4 class="section" id="Kook_WebSocket_KookSocketConfig_AlwaysDownloadVoiceStates_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
-        Setting this property to <code>true</code> will cause the client to download all voice states
-        for all guilds upon startup.
-        Please note that it can be difficult to fill the cache completely on large guilds depending on the
-        traffic. If you are experiencing issues, try setting this to <code>false</code> and manually call
-        <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadVoiceStatesAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)</a> on the guilds you want.
+        对于大型服务器，启用此选项可能会导致性能问题。调用
+        <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_DownloadVoiceStatesAsync_System_Collections_Generic_IEnumerable_Kook_IGuild__Kook_RequestOptions_">DownloadVoiceStatesAsync(IEnumerable&lt;IGuild&gt;?, RequestOptions?)</a>
+        可以按需下载服务器语音状态。
     </p></div>
 </div>
 
@@ -463,10 +457,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_AudioClientIdleTimeout" data-uid="Kook.WebSocket.KookSocketConfig.AudioClientIdleTimeout">
   AudioClientIdleTimeout
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the timeout for the audio client to be considered idle, in milliseconds.</p>
+  <div class="markdown level1 summary"><p>获取或设置音频客户端被视为空闲的超时时间间隔（毫秒）。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -495,10 +489,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_AutoUpdateChannelPositions" data-uid="Kook.WebSocket.KookSocketConfig.AutoUpdateChannelPositions">
   AutoUpdateChannelPositions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets whether to update guild channels via API when gateway publishes sort_channel events.</p>
+  <div class="markdown level1 summary"><p>获取或设置是否在网关发布 <code>sort_channel</code> 事件时通过 API 更新服务器频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -527,10 +521,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_AutoUpdateRolePositions" data-uid="Kook.WebSocket.KookSocketConfig.AutoUpdateRolePositions">
   AutoUpdateRolePositions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets whether to update guild role positions via API when <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildUpdated">GuildUpdated</a> fires.</p>
+  <div class="markdown level1 summary"><p>获取或设置是否在引发 <a class="xref" href="Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildUpdated">GuildUpdated</a> 事件时通过 API 更新服务器角色位置。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -559,10 +553,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_ConnectionTimeout" data-uid="Kook.WebSocket.KookSocketConfig.ConnectionTimeout">
   ConnectionTimeout
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the time, in milliseconds, to wait for a connection to complete before aborting.</p>
+  <div class="markdown level1 summary"><p>获取或设置连接到网关时的超时时间间隔（毫秒）。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -591,11 +585,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_GatewayHost" data-uid="Kook.WebSocket.KookSocketConfig.GatewayHost">
   GatewayHost
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the WebSocket host to connect to. If <code>null</code>, the client will use the
-/gateway endpoint.</p>
+  <div class="markdown level1 summary"><p>获取或设置要连接的网关地址。如果为 <code>null</code>，则客户端将会通过 API 请求获取网关地址。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -624,11 +617,10 @@ socket client depend on. For instance, message cache and connection timeout.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_HandlerTimeout" data-uid="Kook.WebSocket.KookSocketConfig.HandlerTimeout">
   HandlerTimeout
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the timeout for event handlers, in milliseconds, after which a warning will be logged.
-Setting this property to <code>null</code>disables this check.</p>
+  <div class="markdown level1 summary"><p>获取或设置阻塞网关线程的事件处理程序的超时时间间隔（毫秒），超过此时间间隔的阻塞网关线程的事件处理程序会被日志记录警告。将此属性设置为 <code>null</code> 将禁用此检查。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -657,10 +649,10 @@ Setting this property to <code>null</code>disables this check.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_HeartbeatIntervalMilliseconds" data-uid="Kook.WebSocket.KookSocketConfig.HeartbeatIntervalMilliseconds">
   HeartbeatIntervalMilliseconds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the heartbeat interval of WebSocket connection in milliseconds.</p>
+  <div class="markdown level1 summary"><p>获取网关发送心跳包的时间间隔（毫秒）。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -689,10 +681,10 @@ Setting this property to <code>null</code>disables this check.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_JoinedGuildDataFetchingRetryDelay" data-uid="Kook.WebSocket.KookSocketConfig.JoinedGuildDataFetchingRetryDelay">
   JoinedGuildDataFetchingRetryDelay
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the delay in milliseconds between each retry of fetching joined guild data.</p>
+  <div class="markdown level1 summary"><p>获取或设置获取新加入服务器数据每次重试之前所等待的时间间隔（毫秒）。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -717,20 +709,26 @@ Setting this property to <code>null</code>disables this check.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Value must be at least 0.</p>
+    <dd><p>时间间隔不能小于 <code>0</code>。</p>
 </dd>
   </dl>
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MaxJoinedGuildDataFetchingRetryTimes">MaxJoinedGuildDataFetchingRetryTimes</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_WebSocket_KookSocketConfig_LargeNumberOfGuildsThreshold_" data-uid="Kook.WebSocket.KookSocketConfig.LargeNumberOfGuildsThreshold*"></a>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_LargeNumberOfGuildsThreshold" data-uid="Kook.WebSocket.KookSocketConfig.LargeNumberOfGuildsThreshold">
   LargeNumberOfGuildsThreshold
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get or set the threshold quantity considered as joining a large number of guilds.</p>
+  <div class="markdown level1 summary"><p>获取或设置被视为加入大量服务器的阈值数量。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -753,16 +751,22 @@ Setting this property to <code>null</code>disables this check.</p>
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.WebSocket.StartupCacheFetchMode.html#Kook_WebSocket_StartupCacheFetchMode_Auto">Auto</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_WebSocket_KookSocketConfig_MaxJoinedGuildDataFetchingRetryTimes_" data-uid="Kook.WebSocket.KookSocketConfig.MaxJoinedGuildDataFetchingRetryTimes*"></a>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_MaxJoinedGuildDataFetchingRetryTimes" data-uid="Kook.WebSocket.KookSocketConfig.MaxJoinedGuildDataFetchingRetryTimes">
   MaxJoinedGuildDataFetchingRetryTimes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the maximum number of times to retry fetching joined guild data.</p>
+  <div class="markdown level1 summary"><p>获取或设置获取新加入服务器数据的最大重试次数。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -784,10 +788,9 @@ Setting this property to <code>null</code>disables this check.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_KookSocketConfig_MaxJoinedGuildDataFetchingRetryTimes_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Due to the KOOK API cannot return the newly joined guilds immediately well, this property is used to
-control the maximum number of times to retry fetching joined guild data. Each retry will be delayed
-by <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_JoinedGuildDataFetchingRetryDelay">JoinedGuildDataFetchingRetryDelay</a> milliseconds. Set to 0 or negative value to disable
-retrying.</p>
+  <div class="markdown level1 remarks"><p>KOOK API 无法立即返回刚刚新加入的服务器数据，因此此属性用于控制获取加入的服务器数据的最大重试次数。
+每次重试前都会等待 <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_JoinedGuildDataFetchingRetryDelay">JoinedGuildDataFetchingRetryDelay</a>
+毫秒。将当前属性设置为 0 或负值以禁用重试。</p>
 </div>
 
 
@@ -797,11 +800,10 @@ retrying.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_MessageCacheSize" data-uid="Kook.WebSocket.KookSocketConfig.MessageCacheSize">
   MessageCacheSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the number of messages per channel that should be kept in cache. Setting this to zero
-disables the message cache entirely.</p>
+  <div class="markdown level1 summary"><p>获取或设置应在缓存中保留的每个频道的消息数量。将此属性设置为零将完全禁用消息缓存。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -830,10 +832,10 @@ disables the message cache entirely.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_MessageQueueProvider" data-uid="Kook.WebSocket.KookSocketConfig.MessageQueueProvider">
   MessageQueueProvider
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the provider used to generate new message queues.</p>
+  <div class="markdown level1 summary"><p>获取或设置用于创建消息队列的委托。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -862,10 +864,10 @@ disables the message cache entirely.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_SmallNumberOfGuildsThreshold" data-uid="Kook.WebSocket.KookSocketConfig.SmallNumberOfGuildsThreshold">
   SmallNumberOfGuildsThreshold
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the threshold quantity considered as joining a small number of guilds.</p>
+  <div class="markdown level1 summary"><p>获取或设置被视为加入少量服务器的阈值数量。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -888,16 +890,22 @@ disables the message cache entirely.</p>
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.WebSocket.StartupCacheFetchMode.html#Kook_WebSocket_StartupCacheFetchMode_Auto">Auto</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_WebSocket_KookSocketConfig_StartupCacheFetchMode_" data-uid="Kook.WebSocket.KookSocketConfig.StartupCacheFetchMode*"></a>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_StartupCacheFetchMode" data-uid="Kook.WebSocket.KookSocketConfig.StartupCacheFetchMode">
   StartupCacheFetchMode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the startup mode of the socket client.</p>
+  <div class="markdown level1 summary"><p>获取或设置在启动时缓存获取模式。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -918,6 +926,10 @@ disables the message cache entirely.</p>
 
 
 
+  <h4 class="section" id="Kook_WebSocket_KookSocketConfig_StartupCacheFetchMode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此属性用于指定客户端在启动时如何缓存基础数据，并影响 <a class="xref" href="Kook.WebSocket.KookSocketClient.html#Kook_WebSocket_KookSocketClient_Ready">Ready</a> 事件的引发时机。 <br>
+缓存基础数据包括服务器基本信息、频道、角色、频道权限重写、当前用户在服务器内的昵称。</p>
+</div>
 
 
 
@@ -926,10 +938,10 @@ disables the message cache entirely.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_UdpSocketProvider" data-uid="Kook.WebSocket.KookSocketConfig.UdpSocketProvider">
   UdpSocketProvider
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the provider used to generate new UDP sockets.</p>
+  <div class="markdown level1 summary"><p>获取或设置用于创建 UDP 客户端的委托。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -958,10 +970,10 @@ disables the message cache entirely.</p>
 
   <h3 id="Kook_WebSocket_KookSocketConfig_WebSocketProvider" data-uid="Kook.WebSocket.KookSocketConfig.WebSocketProvider">
   WebSocketProvider
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the provider used to generate new WebSocket connections.</p>
+  <div class="markdown level1 summary"><p>获取或设置用于创建 WebSocket 客户端的委托。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -990,7 +1002,7 @@ disables the message cache entirely.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L28" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/KookSocketConfig.cs/#L26" class="edit-link">Edit this page</a>
         </div>
 
 

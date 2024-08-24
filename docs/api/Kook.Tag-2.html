@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class RestVoiceRegion | Kook.Net 文档 </title>
+      <title>Class Tag&lt;TKey, TValue&gt; | Kook.Net 文档 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class RestVoiceRegion | Kook.Net 文档 ">
+      <meta name="title" content="Class Tag&lt;TKey, TValue&gt; | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a REST-based voice region.">
+      <meta name="description" content="Supports all classes in the .NET class hierarchy and provides low-level services to derived classes. This is the ultimate base class of all .NET classes; it is the root of the type hierarchy.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestVoiceRegion.md&amp;value=---%0Auid%3A%20Kook.Rest.RestVoiceRegion%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Tag_2.md&amp;value=---%0Auid%3A%20Kook.Tag%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,44 +84,49 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Kook.Rest.RestVoiceRegion">
+        <article data-uid="Kook.Tag`2">
 
 
 
-  <h1 id="Kook_Rest_RestVoiceRegion" data-uid="Kook.Rest.RestVoiceRegion" class="text-break">
-Class RestVoiceRegion  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/Entities/Guilds/RestVoiceRegion.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Kook_Tag_2" data-uid="Kook.Tag`2" class="text-break">
+Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a>.<a class="xref" href="Kook.Rest.html">Rest</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>Kook.Net.Experimental.dll</dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a REST-based voice region.</p>
+  <div class="markdown summary"><p>Supports all classes in the .NET class hierarchy and provides low-level services to derived classes. This is the ultimate base class of all .NET classes; it is the root of the type hierarchy.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RestVoiceRegion : RestEntity&lt;string&gt;, IEntity&lt;string&gt;, IVoiceRegion</code></pre>
+    <pre><code class="lang-csharp hljs">public class Tag&lt;TKey, TValue&gt; : ITag where TKey : IEquatable&lt;TKey&gt; where TValue : IEntity&lt;TKey&gt;</code></pre>
   </div>
 
 
 
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd></dd>
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
 
   <dl class="typelist inheritance">
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="Kook.Rest.RestEntity-1.html">RestEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</div>
-      <div><span class="xref">RestVoiceRegion</span></div>
+      <div><span class="xref">Tag&lt;TKey, TValue&gt;</span></div>
     </dd>
   </dl>
 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</div>
-      <div><a class="xref" href="Kook.IVoiceRegion.html">IVoiceRegion</a></div>
+      <div><a class="xref" href="Kook.ITag.html">ITag</a></div>
     </dd>
   </dl>
 
@@ -129,9 +134,6 @@ Class RestVoiceRegion  <a class="header-action link-secondary" title="View sourc
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="Kook.Rest.RestEntity-1.html#Kook_Rest_RestEntity_1_Id">RestEntity&lt;string&gt;.Id</a>
-    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -152,34 +154,44 @@ Class RestVoiceRegion  <a class="header-action link-secondary" title="View sourc
     </div>
   </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Kook.TagUtils.html#Kook_TagUtils_AsChannelTag_Kook_ITag_">TagUtils.AsChannelTag(ITag)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.TagUtils.html#Kook_TagUtils_AsEmojiTag_Kook_ITag_">TagUtils.AsEmojiTag(ITag)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.TagUtils.html#Kook_TagUtils_AsRoleTag_Kook_ITag_">TagUtils.AsRoleTag(ITag)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.TagUtils.html#Kook_TagUtils_AsUserTag_Kook_ITag_">TagUtils.AsUserTag(ITag)</a>
+  </div>
+  </dd></dl>
 
 
 
-  <h2 id="Kook_Rest_RestVoiceRegion_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This entity is still in experimental state, which means that it is not for official API implementation
-        usage, may violate the developer rules or policies, not guaranteed to be stable, and may be changed or removed in the future.
-    </p></div>
-</div>
 
 
   <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="Kook_Rest_RestVoiceRegion_Crowding_" data-uid="Kook.Rest.RestVoiceRegion.Crowding*"></a>
+  <a id="Kook_Tag_2_Index_" data-uid="Kook.Tag`2.Index*"></a>
 
-  <h3 id="Kook_Rest_RestVoiceRegion_Crowding" data-uid="Kook.Rest.RestVoiceRegion.Crowding">
-  Crowding
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/Entities/Guilds/RestVoiceRegion.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_Tag_2_Index" data-uid="Kook.Tag`2.Index">
+  Index
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the crowding of this voice region.</p>
+  <div class="markdown level1 summary"><p>获取消息中标签的位置。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public decimal Crowding { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Index { get; }</code></pre>
   </div>
 
 
@@ -188,9 +200,8 @@ Class RestVoiceRegion  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
-    <dd><p>A decimal between <code>0.0</code> and <code>1.0</code> that represents the crowding of this voice region.</p>
-</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
   </dl>
 
 
@@ -200,19 +211,19 @@ Class RestVoiceRegion  <a class="header-action link-secondary" title="View sourc
 
 
 
-  <a id="Kook_Rest_RestVoiceRegion_MinimumBoostLevel_" data-uid="Kook.Rest.RestVoiceRegion.MinimumBoostLevel*"></a>
+  <a id="Kook_Tag_2_Key_" data-uid="Kook.Tag`2.Key*"></a>
 
-  <h3 id="Kook_Rest_RestVoiceRegion_MinimumBoostLevel" data-uid="Kook.Rest.RestVoiceRegion.MinimumBoostLevel">
-  MinimumBoostLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/Entities/Guilds/RestVoiceRegion.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_Tag_2_Key" data-uid="Kook.Tag`2.Key">
+  Key
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the minimum boost level required to use this voice region.</p>
+  <div class="markdown level1 summary"><p>获取标签的键。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BoostLevel MinimumBoostLevel { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TKey Key { get; }</code></pre>
   </div>
 
 
@@ -221,9 +232,8 @@ Class RestVoiceRegion  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Kook.BoostLevel.html">BoostLevel</a></dt>
-    <dd><p>A <a class="xref" href="Kook.BoostLevel.html">BoostLevel</a> that represents the minimum boost level required to use this voice region.</p>
-</dd>
+    <dt><span class="xref">TKey</span></dt>
+    <dd></dd>
   </dl>
 
 
@@ -233,19 +243,19 @@ Class RestVoiceRegion  <a class="header-action link-secondary" title="View sourc
 
 
 
-  <a id="Kook_Rest_RestVoiceRegion_Name_" data-uid="Kook.Rest.RestVoiceRegion.Name*"></a>
+  <a id="Kook_Tag_2_Length_" data-uid="Kook.Tag`2.Length*"></a>
 
-  <h3 id="Kook_Rest_RestVoiceRegion_Name" data-uid="Kook.Rest.RestVoiceRegion.Name">
-  Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/Entities/Guilds/RestVoiceRegion.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_Tag_2_Length" data-uid="Kook.Tag`2.Length">
+  Length
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the name of this voice region.</p>
+  <div class="markdown level1 summary"><p>获取标签的长度。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Length { get; }</code></pre>
   </div>
 
 
@@ -254,9 +264,72 @@ Class RestVoiceRegion  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that represents the human-readable name of this voice region (e.g. <code>Central Europe</code>).</p>
-</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Tag_2_Type_" data-uid="Kook.Tag`2.Type*"></a>
+
+  <h3 id="Kook_Tag_2_Type" data-uid="Kook.Tag`2.Type">
+  Type
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取标签的类型。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TagType Type { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.TagType.html">TagType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Tag_2_Value_" data-uid="Kook.Tag`2.Value*"></a>
+
+  <h3 id="Kook_Tag_2_Value" data-uid="Kook.Tag`2.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取标签的键。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TValue? Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TValue</span></dt>
+    <dd></dd>
   </dl>
 
 
@@ -270,11 +343,11 @@ Class RestVoiceRegion  <a class="header-action link-secondary" title="View sourc
 </h2>
 
 
-  <a id="Kook_Rest_RestVoiceRegion_ToString_" data-uid="Kook.Rest.RestVoiceRegion.ToString*"></a>
+  <a id="Kook_Tag_2_ToString_" data-uid="Kook.Tag`2.ToString*"></a>
 
-  <h3 id="Kook_Rest_RestVoiceRegion_ToString" data-uid="Kook.Rest.RestVoiceRegion.ToString">
+  <h3 id="Kook_Tag_2_ToString" data-uid="Kook.Tag`2.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/Entities/Guilds/RestVoiceRegion.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
@@ -307,7 +380,7 @@ Class RestVoiceRegion  <a class="header-action link-secondary" title="View sourc
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Experimental/Rest/Entities/Guilds/RestVoiceRegion.cs/#L15" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

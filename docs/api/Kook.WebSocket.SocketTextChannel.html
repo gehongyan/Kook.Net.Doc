@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SocketTextChannel | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a WebSocket-based channel in a guild that can send and receive messages.">
+      <meta name="description" content="表示服务器中一个基于网关的具有文字聊天能力的频道，可以发送和接收消息。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a WebSocket-based channel in a guild that can send and receive messages.</p>
+  <div class="markdown summary"><p>表示服务器中一个基于网关的具有文字聊天能力的频道，可以发送和接收消息。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -251,10 +251,10 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_WebSocket_SocketTextChannel_CachedMessages" data-uid="Kook.WebSocket.SocketTextChannel.CachedMessages">
   CachedMessages
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all messages in this channel's cache.</p>
+  <div class="markdown level1 summary"><p>获取此频道缓存的所有消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -269,34 +269,32 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
-    <dd><p>A read-only collection of WebSocket-based messages.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
   <h4 class="section" id="Kook_WebSocket_SocketTextChannel_CachedMessages_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This property is only available if the <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> is set to a value greater than zero.</p>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+        要想通过此属性获取缓存的消息，需要启用缓存功能，否则此属性将始终返回空集合。缓存功能是默认禁用的，要想启用缓存，请参考
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a>。
+    </p></div>
+<br>
+    此属性从本地的内存缓存中获取消息实体，不会向 KOOK 发送额外的 API 请求。所获取的消息也可能是已经被删除的消息。
 </div>
 
 
-  <dl class="typelist seealso">
-    <dt>See Also</dt>
-    <dd>
-    <div><a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a></div>
-    </dd>
-  </dl>
 
 
   <a id="Kook_WebSocket_SocketTextChannel_Category_" data-uid="Kook.WebSocket.SocketTextChannel.Category*"></a>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_Category" data-uid="Kook.WebSocket.SocketTextChannel.Category">
   Category
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the parent (category) of this channel in the guild's channel list.</p>
+  <div class="markdown level1 summary"><p>获取此嵌套频道在服务器频道列表中所属的分组频道的。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -311,13 +309,15 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.ICategoryChannel.html">ICategoryChannel</a></dt>
-    <dd><p>An <a class="xref" href="Kook.ICategoryChannel.html">ICategoryChannel</a> representing the parent of this channel; <code>null</code> if none is set.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketTextChannel_Category_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果当前频道不属于任何分组频道，则会返回 <code>null</code>。</p>
+</div>
 
 
 
@@ -329,7 +329,7 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the parent (category) ID of this channel in the guild's channel list.</p>
+  <div class="markdown level1 summary"><p>获取此嵌套频道在服务器频道列表中所属的分组频道的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -344,14 +344,15 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>?</dt>
-    <dd><p>A <code>ulong</code> representing the identifier of the parent of this channel;
-<code>null</code> if none is set.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketTextChannel_CategoryId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果当前频道不属于任何分组频道，则会返回 <code>null</code>。</p>
+</div>
 
 
 
@@ -360,10 +361,10 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_WebSocket_SocketTextChannel_IsPermissionSynced" data-uid="Kook.WebSocket.SocketTextChannel.IsPermissionSynced">
   IsPermissionSynced
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Specifies whether the permissions of this channel is synchronized with its parent channel.</p>
+  <div class="markdown level1 summary"><p>指示此嵌套频道的权限是否与其所属分组频道同步。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -378,13 +379,15 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
-    <dd><p>A <code>bool</code> indicating whether the permissions of this channel is synchronized with its parent channel.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketTextChannel_IsPermissionSynced_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果权限同步，则此属性返回 <code>true</code>；如果权限不同步，则返回 <code>false</code>；如果无法确定权限是否同步，则返回 <code>null</code>。</p>
+</div>
 
 
 
@@ -393,10 +396,10 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_WebSocket_SocketTextChannel_KMarkdownMention" data-uid="Kook.WebSocket.SocketTextChannel.KMarkdownMention">
   KMarkdownMention
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns a special string used to mention this object in KMarkdown formatted text.</p>
+  <div class="markdown level1 summary"><p>返回一个用于在 KMarkdown 格式文本中提及此对象的格式化字符串。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -411,8 +414,7 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that is recognized by Kook as a mention in KMarkdown formatted text.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -426,10 +428,10 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_WebSocket_SocketTextChannel_PlainTextMention" data-uid="Kook.WebSocket.SocketTextChannel.PlainTextMention">
   PlainTextMention
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns a special string used to mention this object in plain text formatted text.</p>
+  <div class="markdown level1 summary"><p>获取一个用于在纯文本格式文本中提及此对象的格式化字符串。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -444,8 +446,7 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that is recognized by Kook as a mention in plain text formatted text.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -462,7 +463,7 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the current slow-mode delay for this channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道当前设置的慢速模式延迟。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -477,13 +478,17 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>An int representing the time in seconds required before the user can send another message; 0 if disabled.</p>
+    <dd><p>一个 <code>int</code>，表示用户在可以发送另一条消息之前需要等待的时间（以秒为单位）；如果未启用，则为 <code>0</code>。</p>
 </dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketTextChannel_SlowModeInterval_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>拥有 <a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageMessages">ManageMessages</a> 或
+<a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageChannels">ManageChannels</a> 权限的用户不受慢速模式延迟的限制。</p>
+</div>
 
 
 
@@ -495,7 +500,7 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the current topic for this text channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道的说明。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -510,8 +515,7 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string representing the topic set in the channel; <code>null</code> if none is set.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -525,10 +529,10 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_WebSocket_SocketTextChannel_Users" data-uid="Kook.WebSocket.SocketTextChannel.Users">
   Users
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of users that are able to view the channel.</p>
+  <div class="markdown level1 summary"><p>获取用户缓存列表中的可以访问此频道的所有用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -543,13 +547,15 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</dt>
-    <dd><p>A read-only collection of users that can access the channel (i.e. the users seen in the user list).</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketTextChannel_Users_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此属性仅会返回缓存中可以访问此频道的所有用户，如果未启用用户列表缓存，或者由于网关事件确实导致本地缓存不同步，此属性所返回的用户列表可能不准确。</p>
+</div>
 
 
 
@@ -562,10 +568,10 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_WebSocket_SocketTextChannel_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.CreateInviteAsync(Kook.InviteMaxAge,Kook.InviteMaxUses,Kook.RequestOptions)">
   CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L281"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new invite to this channel.</p>
+  <div class="markdown level1 summary"><p>创建一个到此频道新邀请。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -576,21 +582,20 @@ Class SocketTextChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxAge</code> <a class="xref" href="Kook.InviteMaxAge.html">InviteMaxAge</a></dt>
-    <dd><p>The time until the invite expires. Set to <code>InviteMaxAge.NeverExpires</code> to never expire.</p>
+    <dd><p>邀请链接的有效时长，<a class="xref" href="Kook.InviteMaxAge.html#Kook_InviteMaxAge_NeverExpires">NeverExpires</a> 表示永不过期。</p>
 </dd>
     <dt><code>maxUses</code> <a class="xref" href="Kook.InviteMaxUses.html">InviteMaxUses</a></dt>
-    <dd><p>The max amount of times this invite may be used. Set to <code>InviteMaxUses.Unlimited</code> to have unlimited uses.</p>
+    <dd><p>邀请链接的可用人次，<a class="xref" href="Kook.InviteMaxUses.html#Kook_InviteMaxUses_Unlimited">Unlimited</a> 表示无限制。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous invite creation operation. The task result contains an invite
-metadata object containing information for the created invite.</p>
+    <dd><p>一个表示异步邀请创建操作的任务。任务的结果包含所创建的邀请链接的元数据，其中包含有关邀请链接的信息。</p>
 </dd>
   </dl>
 
@@ -608,10 +613,10 @@ metadata object containing information for the created invite.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},Kook.RequestOptions)">
   CreateInviteAsync(int?, int?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new invite to this channel.</p>
+  <div class="markdown level1 summary"><p>创建一个到此频道新邀请。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -622,21 +627,20 @@ metadata object containing information for the created invite.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>maxAge</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
-    <dd><p>The time (in seconds) until the invite expires. Set to <code>null</code> to never expire.</p>
+    <dd><p>邀请链接的有效时长，<code>null</code> 表示永不过期。</p>
 </dd>
     <dt><code>maxUses</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
-    <dd><p>The max amount of times this invite may be used. Set to <code>null</code> to have unlimited uses.</p>
+    <dd><p>邀请链接的可用人次，<code>null</code> 表示无限制。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous invite creation operation. The task result contains an invite
-metadata object containing information for the created invite.</p>
+    <dd><p>一个表示异步邀请创建操作的任务。任务的结果包含所创建的邀请链接的元数据，其中包含有关邀请链接的信息。</p>
 </dd>
   </dl>
 
@@ -654,10 +658,10 @@ metadata object containing information for the created invite.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.DeleteMessageAsync(Kook.IMessage,Kook.RequestOptions)">
   DeleteMessageAsync(IMessage, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L260"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deletes a message based on the provided message in this channel.</p>
+  <div class="markdown level1 summary"><p>删除一条消息.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -668,17 +672,17 @@ metadata object containing information for the created invite.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>message</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
-    <dd><p>The message that would be removed.</p>
+    <dd><p>要删除的消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous removal operation.</p>
+    <dd><p>一个表示异步删除操作的任务。</p>
 </dd>
   </dl>
 
@@ -696,10 +700,10 @@ metadata object containing information for the created invite.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_DeleteMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.DeleteMessageAsync(System.Guid,Kook.RequestOptions)">
   DeleteMessageAsync(Guid, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deletes a message.</p>
+  <div class="markdown level1 summary"><p>删除一条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -710,17 +714,17 @@ metadata object containing information for the created invite.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The identifier of the message that would be removed.</p>
+    <dd><p>要删除的消息的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous removal operation.</p>
+    <dd><p>一个表示异步删除操作的任务。</p>
 </dd>
   </dl>
 
@@ -738,10 +742,10 @@ metadata object containing information for the created invite.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetCachedMessage_System_Guid_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessage(System.Guid)">
   GetCachedMessage(Guid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a cached message from this channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道缓存的消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -752,15 +756,14 @@ metadata object containing information for the created invite.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The Guid of the message.</p>
+    <dd><p>消息的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a></dt>
-    <dd><p>A WebSocket-based message object; <code>null</code> if it does not exist in the cache or if caching is not
-enabled.</p>
+    <dd><p>如果获取到了缓存的消息，则返回该消息实体；否则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -772,14 +775,11 @@ enabled.</p>
 
   <h4 class="section" id="Kook_WebSocket_SocketTextChannel_GetCachedMessage_System_Guid__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-        this method will always return <code>null</code>. Please refer to
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+        要想通过此方法获取缓存的消息，需要启用缓存功能，否则此方法将始终返回 <code>null</code>。缓存功能是默认禁用的，要想启用缓存，请参考
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a>。
     </p></div>
-<p>
-        This method retrieves the message from the local WebSocket cache and does not send any additional
-        request to Kook. This message may be a message that has been deleted.
-    </p>
+<br>
+    此方法从本地的内存缓存中获取消息实体，不会向 KOOK 发送额外的 API 请求。所获取的消息也可能是已经被删除的消息。
 </div>
 
 
@@ -789,34 +789,34 @@ enabled.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessages(Kook.IMessage,Kook.Direction,System.Int32)">
   GetCachedMessages(IMessage, Direction, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L207"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the last N cached messages starting from a certain message in this message channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道缓存的多条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(IMessage fromMessage, Direction dir, int limit = 50)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(IMessage referenceMessage, Direction dir, int limit = 50)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>fromMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
-    <dd><p>The message to start the fetching from.</p>
+    <dt><code>referenceMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
+    <dd><p>要开始获取消息的参考位置的消息。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of which the message should be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of messages to get.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
-    <dd><p>A read-only collection of WebSocket-based messages.</p>
+    <dd><p>获取到的多条缓存消息。</p>
 </dd>
   </dl>
 
@@ -828,16 +828,11 @@ enabled.</p>
 
   <h4 class="section" id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-        this method will always return an empty collection. Please refer to
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+        要想通过此方法获取缓存的消息，需要启用缓存功能，否则此方法将始终返回空集合。缓存功能是默认禁用的，要想启用缓存，请参考
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a>。
     </p></div>
-<p>
-        This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-        request to Kook. This read-only collection may include messages that have been deleted. The
-        maximum number of messages that can be retrieved from this method depends on the
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-    </p>
+<br>
+    此方法从本地的内存缓存中获取消息实体，不会向 KOOK 发送额外的 API 请求。所获取的消息也可能是已经被删除的消息。
 </div>
 
 
@@ -847,34 +842,34 @@ enabled.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_System_Guid_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessages(System.Guid,Kook.Direction,System.Int32)">
   GetCachedMessages(Guid, Direction, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the last N cached messages starting from a certain message in this message channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道缓存的多条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(Guid fromMessageId, Direction dir, int limit = 50)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(Guid referenceMessageId, Direction dir, int limit = 50)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>fromMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The message ID to start the fetching from.</p>
+    <dt><code>referenceMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>要开始获取消息的参考位置的消息的 ID。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of which the message should be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of messages to get.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
-    <dd><p>A read-only collection of WebSocket-based messages.</p>
+    <dd><p>获取到的多条缓存消息。</p>
 </dd>
   </dl>
 
@@ -886,16 +881,11 @@ enabled.</p>
 
   <h4 class="section" id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_System_Guid_Kook_Direction_System_Int32__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-        this method will always return an empty collection. Please refer to
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+        要想通过此方法获取缓存的消息，需要启用缓存功能，否则此方法将始终返回空集合。缓存功能是默认禁用的，要想启用缓存，请参考
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a>。
     </p></div>
-<p>
-        This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-        request to Kook. This read-only collection may include messages that have been deleted. The
-        maximum number of messages that can be retrieved from this method depends on the
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-    </p>
+<br>
+    此方法从本地的内存缓存中获取消息实体，不会向 KOOK 发送额外的 API 请求。所获取的消息也可能是已经被删除的消息。
 </div>
 
 
@@ -905,10 +895,10 @@ enabled.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_System_Int32_" data-uid="Kook.WebSocket.SocketTextChannel.GetCachedMessages(System.Int32)">
   GetCachedMessages(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the last N cached messages from this message channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道缓存的多条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -919,14 +909,14 @@ enabled.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of messages to get.</p>
+    <dd><p>要获取的缓存消息的数量。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
-    <dd><p>A read-only collection of WebSocket-based messages.</p>
+    <dd><p>此频道缓存的所有消息。</p>
 </dd>
   </dl>
 
@@ -937,17 +927,12 @@ enabled.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketTextChannel_GetCachedMessages_System_Int32__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-        this method will always return an empty collection. Please refer to
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
-    </p></div>
-<p>
-        This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-        request to Kook. This read-only collection may include messages that have been deleted. The
-        maximum number of messages that can be retrieved from this method depends on the
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-    </p>
+  <div class="markdown level1 remarks"><p>此重载将会从缓存中获取最新的指定数量的缓存消息实体。
+<br><div class="WARNING"><h5>warning</h5><p>
+要想通过此方法获取缓存的消息，需要启用缓存功能，否则此方法将始终返回空集合。缓存功能是默认禁用的，要想启用缓存，请参考
+<a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a>。</p>
+</div><br>
+此方法从本地的内存缓存中获取消息实体，不会向 KOOK 发送额外的 API 请求。所获取的消息也可能是已经被删除的消息。
 </div>
 
 
@@ -957,10 +942,10 @@ enabled.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetInvitesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetInvitesAsync(Kook.RequestOptions)">
   GetInvitesAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L272"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of all invites from this guild channel.</p>
+  <div class="markdown level1 summary"><p>获取此嵌套频道的所有邀请信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -971,15 +956,14 @@ enabled.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a read-only collection of
-invite, each representing information for an invite found within this guild.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含此频道中找到的所有邀请信息。</p>
 </dd>
   </dl>
 
@@ -997,10 +981,10 @@ invite, each representing information for an invite found within this guild.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessageAsync(System.Guid,Kook.RequestOptions)">
   GetMessageAsync(Guid, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a message from this message channel.</p>
+  <div class="markdown level1 summary"><p>从此消息频道获取一条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1011,18 +995,17 @@ invite, each representing information for an invite found within this guild.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The identifier of the message.</p>
+    <dd><p>消息的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;</dt>
-    <dd><p>A task that represents an asynchronous get operation for retrieving the message. The task result contains
-the retrieved message; <code>null</code> if no message is found with the specified identifier.</p>
+    <dd><p>一个表示异步获取操作的任务。任务结果包含检索到的消息；如果未找到具有指定 ID 的消息，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -1032,10 +1015,6 @@ the retrieved message; <code>null</code> if no message is found with the specifi
 
 
 
-  <h4 class="section" id="Kook_WebSocket_SocketTextChannel_GetMessageAsync_System_Guid_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessageAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_">GetMessageAsync(Guid, CacheMode, RequestOptions?)</a>.
-Please visit its documentation for more details on this method.</p>
-</div>
 
 
 
@@ -1044,10 +1023,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(IMessage, Direction, int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1058,23 +1037,23 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>referenceMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
-    <dd><p>The starting message to get the messages from.</p>
+    <dd><p>要开始获取消息的参考位置的消息。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of the messages to be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -1085,9 +1064,21 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in
-<a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions?)</a>.
-Please visit its documentation for more details on this method.</p>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+    </p></div>
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
 
@@ -1097,10 +1088,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(Guid, Direction, int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1111,23 +1102,23 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>referenceMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The ID of the starting message to get the messages from.</p>
+    <dd><p>要开始获取消息的参考位置的消息的 ID。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of the messages to be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -1138,9 +1129,21 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in
-<a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions?)</a>.
-Please visit its documentation for more details on this method.</p>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+    </p></div>
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
 
@@ -1150,10 +1153,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的最新的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1164,17 +1167,17 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -1185,9 +1188,21 @@ Please visit its documentation for more details on this method.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_SocketTextChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method follows the same behavior as described in
-<a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_">GetMessagesAsync(int, CacheMode, RequestOptions?)</a>.
-Please visit its documentation for more details on this method.</p>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
+    </p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+    </p></div>
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
 
@@ -1197,10 +1212,10 @@ Please visit its documentation for more details on this method.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.GetPinnedMessagesAsync(Kook.RequestOptions)">
   GetPinnedMessagesAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of pinned messages in this channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道中的所有置顶消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1211,15 +1226,14 @@ Please visit its documentation for more details on this method.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Rest.RestMessage.html">RestMessage</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation for retrieving pinned messages in this channel.
-The task result contains a collection of messages found in the pinned messages.</p>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含此频道中找到的所有置顶消息。</p>
 </dd>
   </dl>
 
@@ -1237,10 +1251,10 @@ The task result contains a collection of messages found in the pinned messages.<
 
   <h3 id="Kook_WebSocket_SocketTextChannel_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketTextChannel.GetUser(System.UInt64)">
   GetUser(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L290"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> from this channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道中的一个服务器用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1251,14 +1265,14 @@ The task result contains a collection of messages found in the pinned messages.<
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>The user's identifier.</p>
+    <dd><p>要获取的服务器用户的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a></dt>
-    <dd><p>A <a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a> with the provided identifier; <code>null</code> if none is found.</p>
+    <dd><p>如果找到了具有指定 ID 的服务器用户，则返回该用户；否则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -1276,10 +1290,10 @@ The task result contains a collection of messages found in the pinned messages.<
 
   <h3 id="Kook_WebSocket_SocketTextChannel_ModifyAsync_System_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.ModifyAsync(System.Action{Kook.ModifyTextChannelProperties},Kook.RequestOptions)">
   ModifyAsync(Action&lt;ModifyTextChannelProperties&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Modifies this text channel.</p>
+  <div class="markdown level1 summary"><p>修改此频道有关文字聊天能力的属性。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1290,17 +1304,17 @@ The task result contains a collection of messages found in the pinned messages.<
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.ModifyTextChannelProperties.html">ModifyTextChannelProperties</a>&gt;</dt>
-    <dd><p>The delegate containing the properties to modify the channel with.</p>
+    <dd><p>一个包含修改频道有关文字聊天能力的属性的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous modification operation.</p>
+    <dd><p>一个表示异步修改操作的任务。</p>
 </dd>
   </dl>
 
@@ -1324,10 +1338,10 @@ The task result contains a collection of messages found in the pinned messages.<
 
   <h3 id="Kook_WebSocket_SocketTextChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.ModifyMessageAsync(System.Guid,System.Action{Kook.MessageProperties},Kook.RequestOptions)">
   ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Modifies a message.</p>
+  <div class="markdown level1 summary"><p>修改一条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1338,20 +1352,20 @@ The task result contains a collection of messages found in the pinned messages.<
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The identifier of the message that would be changed.</p>
+    <dd><p>要修改的消息的 ID。</p>
 </dd>
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.MessageProperties.html">MessageProperties</a>&gt;</dt>
-    <dd><p>A delegate containing the properties to modify the message with.</p>
+    <dd><p>一个包含修改消息属性的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous modification operation.</p>
+    <dd><p>一个表示异步修改操作的任务。</p>
 </dd>
   </dl>
 
@@ -1361,22 +1375,24 @@ The task result contains a collection of messages found in the pinned messages.<
 
 
 
-  <h4 class="section" id="Kook_WebSocket_SocketTextChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method modifies this message with the specified properties. To see an example of this
-method and what properties are available, please refer to <a class="xref" href="Kook.MessageProperties.html">MessageProperties</a>.</p>
-</div>
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.MessageProperties.html">MessageProperties</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_WebSocket_SocketTextChannel_SendCardAsync_" data-uid="Kook.WebSocket.SocketTextChannel.SendCardAsync*"></a>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendCardAsync(Kook.ICard,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendCardAsync(ICard, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送卡片消息到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1387,24 +1403,23 @@ method and what properties are available, please refer to <a class="xref" href="
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>card</code> <a class="xref" href="Kook.ICard.html">ICard</a></dt>
-    <dd><p>The card to be sent.</p>
+    <dd><p>要发送的卡片。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -1422,10 +1437,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendCardsAsync(System.Collections.Generic.IEnumerable{Kook.ICard},Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送卡片消息到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1436,24 +1451,23 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>cards</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p>The cards to be sent.</p>
+    <dd><p>要发送的卡片。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -1471,10 +1485,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendFileAsync(Kook.FileAttachment,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendFileAsync(FileAttachment, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L231"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送文件到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1485,24 +1499,23 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>attachment</code> <a class="xref" href="Kook.FileAttachment.html">FileAttachment</a></dt>
-    <dd><p>The attachment containing the file.</p>
+    <dd><p>文件的附件信息。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -1512,9 +1525,6 @@ contains the identifier and timestamp of the sent message.</p>
 
 
 
-  <h4 class="section" id="Kook_WebSocket_SocketTextChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_IUser_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method sends a file as if you are uploading a file directly from your Kook client.</p>
-</div>
 
 
 
@@ -1523,10 +1533,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendFileAsync(System.IO.Stream,System.String,Kook.AttachmentType,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendFileAsync(Stream, string, AttachmentType, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送文件到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1537,30 +1547,29 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
-    <dd><p>The stream of the file.</p>
+    <dd><p>文件的流。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the file.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the file.</p>
+    <dd><p>文件的媒体类型。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -1570,9 +1579,6 @@ contains the identifier and timestamp of the sent message.</p>
 
 
 
-  <h4 class="section" id="Kook_WebSocket_SocketTextChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method sends a file as if you are uploading a file directly from your Kook client.</p>
-</div>
 
 
 
@@ -1581,10 +1587,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendFileAsync(System.String,System.String,Kook.AttachmentType,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendFileAsync(string, string?, AttachmentType, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送文件到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1595,30 +1601,29 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The file path of the file.</p>
+    <dd><p>文件的路径。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the file.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the file.</p>
+    <dd><p>文件的媒体类型。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -1628,9 +1633,6 @@ contains the identifier and timestamp of the sent message.</p>
 
 
 
-  <h4 class="section" id="Kook_WebSocket_SocketTextChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method sends a file as if you are uploading a file directly from your Kook client.</p>
-</div>
 
 
 
@@ -1639,10 +1641,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_SendTextAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SendTextAsync(System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendTextAsync(string, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a text message to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送文本消息到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1653,24 +1655,23 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The message to be sent.</p>
+    <dd><p>要发送的文本。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -1688,10 +1689,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_WebSocket_SocketTextChannel_SyncPermissionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketTextChannel.SyncPermissionsAsync(Kook.RequestOptions)">
   SyncPermissionsAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/SocketTextChannel.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Syncs the permissions of this nested channel with its parent's.</p>
+  <div class="markdown level1 summary"><p>同步此嵌套频道的权限配置与其所属分组频道一致，并保持同步。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1702,14 +1703,14 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for syncing channel permissions with its parent's.</p>
+    <dd><p>一个表示异步频道权限同步操作的任务。</p>
 </dd>
   </dl>
 

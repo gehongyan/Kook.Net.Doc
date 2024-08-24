@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IVoiceState | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a user&#39;s voice connection status.">
+      <meta name="description" content="表示一个通用的用户语音连接状态。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface IVoiceState  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a user's voice connection status.</p>
+  <div class="markdown summary"><p>表示一个通用的用户语音连接状态。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -125,10 +125,10 @@ Interface IVoiceState  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Kook_IVoiceState_IsDeafened" data-uid="Kook.IVoiceState.IsDeafened">
   IsDeafened
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IVoiceState.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IVoiceState.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a value that indicates whether this user is deafened by the guild.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否被服务器静音。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -143,14 +143,15 @@ Interface IVoiceState  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
-    <dd><p><code>true</code> if the user is deafened (i.e. not permitted to listen to or speak to others) by the guild;
-otherwise <code>false</code>; <code>null</code> if unknown.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_IVoiceState_IsDeafened_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>被服务器静音表示无法在语音频道内接收来自其他用户的语音。</p>
+</div>
 
 
 
@@ -159,11 +160,10 @@ otherwise <code>false</code>; <code>null</code> if unknown.</p>
 
   <h3 id="Kook_IVoiceState_IsMuted" data-uid="Kook.IVoiceState.IsMuted">
   IsMuted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IVoiceState.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IVoiceState.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a value that indicates whether this user is muted (i.e. not permitted to speak via voice) by the
-guild.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否被服务器闭麦。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -178,13 +178,15 @@ guild.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
-    <dd><p><code>true</code> if this user is muted by the guild; otherwise <code>false</code>; <code>null</code> if unknown.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_IVoiceState_IsMuted_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>被服务器闭麦表示无法在语音频道内发言。</p>
+</div>
 
 
 
@@ -193,10 +195,10 @@ guild.</p>
 
   <h3 id="Kook_IVoiceState_VoiceChannel" data-uid="Kook.IVoiceState.VoiceChannel">
   VoiceChannel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IVoiceState.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IVoiceState.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the voice channel this user is currently in.</p>
+  <div class="markdown level1 summary"><p>获取此用户当前所连接的语音频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -211,9 +213,39 @@ guild.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.IVoiceChannel.html">IVoiceChannel</a></dt>
-    <dd><p>A generic voice channel object representing the voice channel that the user is currently in; <code>null</code>
-if none.</p>
-</dd>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_IVoiceState_VoiceChannels_" data-uid="Kook.IVoiceState.VoiceChannels*"></a>
+
+  <h3 id="Kook_IVoiceState_VoiceChannels" data-uid="Kook.IVoiceState.VoiceChannels">
+  VoiceChannels
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IVoiceState.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此用户连接的所有语音频道。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;IVoiceChannel&gt; VoiceChannels { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IVoiceChannel.html">IVoiceChannel</a>&gt;</dt>
+    <dd></dd>
   </dl>
 
 

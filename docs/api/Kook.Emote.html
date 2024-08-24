@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Emote | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a guild emote.">
+      <meta name="description" content="表示一个表情符号。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class Emote  <a class="header-action link-secondary" title="View source" href="h
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a guild emote.</p>
+  <div class="markdown summary"><p>表示一个表情符号。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -164,7 +164,7 @@ Class Emote  <a class="header-action link-secondary" title="View source" href="h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="Kook.Emote.html">Emote</a>.</p>
+  <div class="markdown level1 summary"><p>创建一个新的 <a class="xref" href="Kook.Emote.html">Emote</a> 实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -204,7 +204,7 @@ Class Emote  <a class="header-action link-secondary" title="View source" href="h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this emote is animated.</p>
+  <div class="markdown level1 summary"><p>获取此表情符号是否为动态表情。如果无法确定此表情符号是否为动态表情，则为 <code>null</code>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -236,7 +236,7 @@ Class Emote  <a class="header-action link-secondary" title="View source" href="h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the identifier of this emote.</p>
+  <div class="markdown level1 summary"><p>获取此表情符号的唯一标识符。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -268,7 +268,7 @@ Class Emote  <a class="header-action link-secondary" title="View source" href="h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the name of this emote.</p>
+  <div class="markdown level1 summary"><p>获取此表情符号的名称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -340,7 +340,7 @@ Class Emote  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Kook_Emote_GetHashCode" data-uid="Kook.Emote.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serves as the default hash function.</p>
@@ -373,10 +373,10 @@ Class Emote  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Kook_Emote_Parse_System_String_Kook_TagMode_" data-uid="Kook.Emote.Parse(System.String,Kook.TagMode)">
   Parse(string?, TagMode)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Parses an <a class="xref" href="Kook.Emote.html">Emote</a> from its raw format.</p>
+  <div class="markdown level1 summary"><p>从一个表情符号的原始格式中解析出一个 <a class="xref" href="Kook.Emote.html">Emote</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -387,18 +387,19 @@ Class Emote  <a class="header-action link-secondary" title="View source" href="h
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The raw encoding of an emote; for example,
-[:emotename:1991895624896587/hbCFVWhu923k03k] when <code class="paramref">tagMode</code> is <code>TagMode.PlainText</code>,
-or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="paramref">tagMode</code> is <code>TagMode.KMarkdown</code>.</p>
+    <dd><p>表情符号的原始格式。例如：<code class="paramref">tagMode</code> 为 <a class="xref" href="Kook.TagMode.html#Kook_TagMode_PlainText">PlainText</a> 时的
+<code>[:emotename:1991895624896587/hbCFVWhu923k03k]</code>；为 <a class="xref" href="Kook.TagMode.html#Kook_TagMode_KMarkdown">KMarkdown</a> 时的
+<code>(emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k]</code>。</p>
 </dd>
     <dt><code>tagMode</code> <a class="xref" href="Kook.TagMode.html">TagMode</a></dt>
-    <dd></dd>
+    <dd><p>解析标签的语法模式。</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Emote.html">Emote</a></dt>
-    <dd><p>An emote.</p>
+    <dd><p>解析出的 <a class="xref" href="Kook.Emote.html">Emote</a>。</p>
 </dd>
   </dl>
 
@@ -412,7 +413,7 @@ or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="param
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Invalid emote format.</p>
+    <dd><p>无法以 <code class="paramref">tagMode</code> 的语法模式解析 <code class="paramref">text</code> 为一个有效的表情符号。</p>
 </dd>
   </dl>
 
@@ -422,10 +423,10 @@ or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="param
 
   <h3 id="Kook_Emote_ToKMarkdownString" data-uid="Kook.Emote.ToKMarkdownString">
   ToKMarkdownString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a string representation of the emote in KMarkdown format.</p>
+  <div class="markdown level1 summary"><p>获取此表情的 KMarkdown 格式字符串。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -437,7 +438,8 @@ or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="param
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>此表情的 KMarkdown 格式字符串。</p>
+</dd>
   </dl>
 
 
@@ -454,10 +456,10 @@ or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="param
 
   <h3 id="Kook_Emote_ToPlainTextString" data-uid="Kook.Emote.ToPlainTextString">
   ToPlainTextString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a string representation of the emote in plain text format.</p>
+  <div class="markdown level1 summary"><p>获取此表情的纯文本格式字符串。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -469,7 +471,8 @@ or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="param
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>此表情的纯文本格式字符串。</p>
+</dd>
   </dl>
 
 
@@ -486,10 +489,10 @@ or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="param
 
   <h3 id="Kook_Emote_ToString" data-uid="Kook.Emote.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns the raw representation of the emote.</p>
+  <div class="markdown level1 summary"><p>获取此表情的 KMarkdown 格式字符串。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -501,7 +504,7 @@ or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="param
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string representing the raw presentation of the emote (e.g. <code>[:thonkang:282745590985523200]</code>).</p>
+    <dd><p>此表情的 KMarkdown 格式字符串。</p>
 </dd>
   </dl>
 
@@ -515,14 +518,59 @@ or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="param
 
 
 
+  <a id="Kook_Emote_ToString_" data-uid="Kook.Emote.ToString*"></a>
+
+  <h3 id="Kook_Emote_ToString_Kook_TagMode_" data-uid="Kook.Emote.ToString(Kook.TagMode)">
+  ToString(TagMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此表情的字符串表示形式。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(TagMode tagMode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tagMode</code> <a class="xref" href="Kook.TagMode.html">TagMode</a></dt>
+    <dd><p>标签的语法模式。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>此表情的字符串表示形式。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">tagMode</code> 不是有效的标签语法模式。</p>
+</dd>
+  </dl>
+
+
+
   <a id="Kook_Emote_TryParse_" data-uid="Kook.Emote.TryParse*"></a>
 
   <h3 id="Kook_Emote_TryParse_System_String_Kook_Emote__Kook_TagMode_" data-uid="Kook.Emote.TryParse(System.String,Kook.Emote@,Kook.TagMode)">
   TryParse(string?, out Emote?, TagMode)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/Emote.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Tries to parse an <a class="xref" href="Kook.Emote.html">Emote</a> from its raw format.</p>
+  <div class="markdown level1 summary"><p>尝试从一个表情符号的原始格式中解析出一个 <a class="xref" href="Kook.Emote.html">Emote</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -533,21 +581,23 @@ or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="param
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The raw encoding of an emote; for example,
-[:emotename:1991895624896587/hbCFVWhu923k03k] when <code class="paramref">tagMode</code> is <code>TagMode.PlainText</code>,
-or (emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k] when <code class="paramref">tagMode</code> is <code>TagMode.KMarkdown</code>.</p>
+    <dd><p>表情符号的原始格式。例如：<code class="paramref">tagMode</code> 为 <a class="xref" href="Kook.TagMode.html#Kook_TagMode_PlainText">PlainText</a> 时的
+<code>[:emotename:1991895624896587/hbCFVWhu923k03k]</code>；为 <a class="xref" href="Kook.TagMode.html#Kook_TagMode_KMarkdown">KMarkdown</a> 时的
+<code>(emj)emotename(emj)[1991895624896587/hbCFVWhu923k03k]</code>。</p>
 </dd>
     <dt><code>result</code> <a class="xref" href="Kook.Emote.html">Emote</a></dt>
-    <dd><p>An emote.</p>
+    <dd><p>如果解析成功，则为解析出的 <a class="xref" href="Kook.Emote.html">Emote</a>；否则为 <code>null</code>。</p>
 </dd>
     <dt><code>tagMode</code> <a class="xref" href="Kook.TagMode.html">TagMode</a></dt>
-    <dd></dd>
+    <dd><p>解析标签的语法模式。</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>如果解析成功，则为 <code>true</code>；否则为 <code>false</code>。</p>
+</dd>
   </dl>
 
 

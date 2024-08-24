@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class CardMarkupSerializer | Kook.Net 文档 ">
       
-      <meta name="description" content="Serializer for Card Message XML markup">
+      <meta name="description" content="提供用于从 XML 标记语言创建卡片消息的序列化器。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class CardMarkupSerializer  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Kook.Net.CardMarkup.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Serializer for Card Message XML markup</p>
+  <div class="markdown summary"><p>提供用于从 XML 标记语言创建卡片消息的序列化器。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,12 +157,11 @@ Class CardMarkupSerializer  <a class="header-action link-secondary" title="View 
 
   <h3 id="Kook_CardMarkup_CardMarkupSerializer_Deserialize_System_IO_FileInfo_" data-uid="Kook.CardMarkup.CardMarkupSerializer.Deserialize(System.IO.FileInfo)">
   Deserialize(FileInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserialize a Card Message XML markup file to a <a class="xref" href="Kook.ICard.html">ICard</a> list.
-One XML markup file has one card-message element, which can
-contain multiple card elements.</p>
+  <div class="markdown level1 summary"><p>将卡片消息 XML 标记文件反序列化为 <a class="xref" href="Kook.ICard.html">ICard</a> 列表，每个 XML 文件包含一个 <code>card-message</code>
+元素，可以包含多个 <code>card</code> 元素。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -173,14 +172,14 @@ contain multiple card elements.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>file</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">FileInfo</a></dt>
-    <dd><p>UTF-8 encoded XML file</p>
+    <dd><p>UTF-8 编码的 XML 文件</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p><a class="xref" href="Kook.ICard.html">ICard</a> enumerable</p>
+    <dd><p>一个可用于枚举 <a class="xref" href="Kook.ICard.html">ICard</a> 成员的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>。</p>
 </dd>
   </dl>
 
@@ -198,12 +197,11 @@ contain multiple card elements.</p>
 
   <h3 id="Kook_CardMarkup_CardMarkupSerializer_Deserialize_System_IO_Stream_" data-uid="Kook.CardMarkup.CardMarkupSerializer.Deserialize(System.IO.Stream)">
   Deserialize(Stream)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserialize a Card Message XML markup file to a <a class="xref" href="Kook.ICard.html">ICard</a> list.
-One XML markup file has one card-message element, which can
-contain multiple card elements.</p>
+  <div class="markdown level1 summary"><p>将卡片消息 XML 标记文本流反序列化为 <a class="xref" href="Kook.ICard.html">ICard</a> 列表，每个 XML 文件包含一个 <code>card-message</code>
+元素，可以包含多个 <code>card</code> 元素。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -214,14 +212,14 @@ contain multiple card elements.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>xmlStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
-    <dd><p>UTF-8 encoded XML stream</p>
+    <dd><p>UTF-8 编码的 XML 流。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p><a class="xref" href="Kook.ICard.html">ICard</a> enumerable</p>
+    <dd><p>一个可用于枚举 <a class="xref" href="Kook.ICard.html">ICard</a> 成员的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>。</p>
 </dd>
   </dl>
 
@@ -239,12 +237,11 @@ contain multiple card elements.</p>
 
   <h3 id="Kook_CardMarkup_CardMarkupSerializer_Deserialize_System_String_" data-uid="Kook.CardMarkup.CardMarkupSerializer.Deserialize(System.String)">
   Deserialize(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserialize a Card Message XML markup text to a <a class="xref" href="Kook.ICard.html">ICard</a> list.
-One XML markup file has one card-message element, which can
-contain multiple card elements.</p>
+  <div class="markdown level1 summary"><p>将卡片消息 XML 标记文本反序列化为 <a class="xref" href="Kook.ICard.html">ICard</a> 列表，每个 XML 文件包含一个 <code>card-message</code>
+元素，可以包含多个 <code>card</code> 元素。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -255,14 +252,14 @@ contain multiple card elements.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>xmlText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>UTF-8 encoded XML text</p>
+    <dd><p>UTF-8 编码的 XML 文本。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p><a class="xref" href="Kook.ICard.html">ICard</a> enumerable</p>
+    <dd><p>一个可用于枚举 <a class="xref" href="Kook.ICard.html">ICard</a> 成员的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>。</p>
 </dd>
   </dl>
 
@@ -280,12 +277,11 @@ contain multiple card elements.</p>
 
   <h3 id="Kook_CardMarkup_CardMarkupSerializer_DeserializeAsync_System_IO_FileInfo_System_Threading_CancellationToken_" data-uid="Kook.CardMarkup.CardMarkupSerializer.DeserializeAsync(System.IO.FileInfo,System.Threading.CancellationToken)">
   DeserializeAsync(FileInfo, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserialize a Card Message XML markup file to a <a class="xref" href="Kook.ICard.html">ICard</a> list.
-One XML markup file has one card-message element, which can
-contain multiple card elements.</p>
+  <div class="markdown level1 summary"><p>将卡片消息 XML 标记文件反序列化为 <a class="xref" href="Kook.ICard.html">ICard</a> 列表，每个 XML 文件包含一个 <code>card-message</code>
+元素，可以包含多个 <code>card</code> 元素。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -296,17 +292,17 @@ contain multiple card elements.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>file</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">FileInfo</a></dt>
-    <dd><p>UTF-8 encoded XML file</p>
+    <dd><p>UTF-8 编码的 XML 文件</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd><p>Cancellation token</p>
+    <dd><p>取消令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;&gt;</dt>
-    <dd><p><a class="xref" href="Kook.ICard.html">ICard</a> enumerable</p>
+    <dd><p>一个表示异步解析操作的任务。任务的结果包含一个可用于枚举 <a class="xref" href="Kook.ICard.html">ICard</a> 成员的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>。</p>
 </dd>
   </dl>
 
@@ -324,12 +320,11 @@ contain multiple card elements.</p>
 
   <h3 id="Kook_CardMarkup_CardMarkupSerializer_DeserializeAsync_System_IO_Stream_System_Threading_CancellationToken_" data-uid="Kook.CardMarkup.CardMarkupSerializer.DeserializeAsync(System.IO.Stream,System.Threading.CancellationToken)">
   DeserializeAsync(Stream, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserialize a Card Message XML stream to a <a class="xref" href="Kook.ICard.html">ICard</a> list.
-One XML markup file has one card-message element, which can
-contain multiple card elements.</p>
+  <div class="markdown level1 summary"><p>将卡片消息 XML 标记文本流反序列化为 <a class="xref" href="Kook.ICard.html">ICard</a> 列表，每个 XML 文件包含一个 <code>card-message</code>
+元素，可以包含多个 <code>card</code> 元素。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -340,17 +335,17 @@ contain multiple card elements.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>xmlStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
-    <dd><p>UTF-8 encoded XML stream</p>
+    <dd><p>UTF-8 编码的 XML 流。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd><p>Cancellation token</p>
+    <dd><p>取消令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;&gt;</dt>
-    <dd><p><a class="xref" href="Kook.ICard.html">ICard</a> enumerable</p>
+    <dd><p>一个表示异步解析操作的任务。任务的结果包含一个可用于枚举 <a class="xref" href="Kook.ICard.html">ICard</a> 成员的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>。</p>
 </dd>
   </dl>
 
@@ -368,12 +363,11 @@ contain multiple card elements.</p>
 
   <h3 id="Kook_CardMarkup_CardMarkupSerializer_DeserializeAsync_System_String_System_Threading_CancellationToken_" data-uid="Kook.CardMarkup.CardMarkupSerializer.DeserializeAsync(System.String,System.Threading.CancellationToken)">
   DeserializeAsync(string, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserialize a Card Message XML markup text to a <a class="xref" href="Kook.ICard.html">ICard</a> list.
-One XML markup file has one card-message element, which can
-contain multiple card elements.</p>
+  <div class="markdown level1 summary"><p>将卡片消息 XML 标记文本反序列化为 <a class="xref" href="Kook.ICard.html">ICard</a> 列表，每个 XML 文件包含一个 <code>card-message</code>
+元素，可以包含多个 <code>card</code> 元素。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -384,17 +378,17 @@ contain multiple card elements.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>xmlText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>UTF-8 encoded XML text</p>
+    <dd><p>UTF-8 编码的 XML 文本。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd><p>Cancellation token</p>
+    <dd><p>取消令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;&gt;</dt>
-    <dd><p><a class="xref" href="Kook.ICard.html">ICard</a> enumerable</p>
+    <dd><p>一个表示异步解析操作的任务。任务的结果包含一个可用于枚举 <a class="xref" href="Kook.ICard.html">ICard</a> 成员的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>。</p>
 </dd>
   </dl>
 
@@ -412,10 +406,10 @@ contain multiple card elements.</p>
 
   <h3 id="Kook_CardMarkup_CardMarkupSerializer_TryDeserialize_System_IO_FileInfo_System_Collections_Generic_IEnumerable_Kook_ICard___" data-uid="Kook.CardMarkup.CardMarkupSerializer.TryDeserialize(System.IO.FileInfo,System.Collections.Generic.IEnumerable{Kook.ICard}@)">
   TryDeserialize(FileInfo, out IEnumerable&lt;ICard&gt;?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Try to deserialize a Card Message XML markup file to a <a class="xref" href="Kook.ICard.html">ICard</a> list.</p>
+  <div class="markdown level1 summary"><p>尝试将卡片消息 XML 标记文件反序列化为 <a class="xref" href="Kook.ICard.html">ICard</a> 列表。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -426,17 +420,18 @@ contain multiple card elements.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>file</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">FileInfo</a></dt>
-    <dd><p>UTF-8 encoded XML file</p>
+    <dd><p>UTF-8 编码的 XML 文件。</p>
 </dd>
     <dt><code>cards</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p><a class="xref" href="Kook.ICard.html">ICard</a> enumerable, will be null if return value is false</p>
+    <dd><p>如果反序列化操作成功，则为一个可用于枚举 <a class="xref" href="Kook.ICard.html">ICard</a> 成员的
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>；否则为 <code>null</code>。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>True if deserialization is successful, otherwise false</p>
+    <dd><p>如果反序列化操作成功，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </dd>
   </dl>
 
@@ -454,10 +449,10 @@ contain multiple card elements.</p>
 
   <h3 id="Kook_CardMarkup_CardMarkupSerializer_TryDeserialize_System_IO_Stream_System_Collections_Generic_IEnumerable_Kook_ICard___" data-uid="Kook.CardMarkup.CardMarkupSerializer.TryDeserialize(System.IO.Stream,System.Collections.Generic.IEnumerable{Kook.ICard}@)">
   TryDeserialize(Stream, out IEnumerable&lt;ICard&gt;?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L271"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Try to deserialize a Card Message XML markup file to a <a class="xref" href="Kook.ICard.html">ICard</a> list.</p>
+  <div class="markdown level1 summary"><p>尝试将卡片消息 XML 标记文本流反序列化为 <a class="xref" href="Kook.ICard.html">ICard</a> 列表。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -468,17 +463,18 @@ contain multiple card elements.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>xmlStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
-    <dd><p>UTF-8 encoded XML stream</p>
+    <dd><p>UTF-8 编码的 XML 文本流。</p>
 </dd>
     <dt><code>cards</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p><a class="xref" href="Kook.ICard.html">ICard</a> enumerable, will be null if return value is false</p>
+    <dd><p>如果反序列化操作成功，则为一个可用于枚举 <a class="xref" href="Kook.ICard.html">ICard</a> 成员的
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>；否则为 <code>null</code>。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>True if deserialization is successful, otherwise false</p>
+    <dd><p>如果反序列化操作成功，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </dd>
   </dl>
 
@@ -499,7 +495,7 @@ contain multiple card elements.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.CardMarkup/CardMarkupSerializer.cs/#L248"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Try to deserialize a Card Message XML markup file to a <a class="xref" href="Kook.ICard.html">ICard</a> list.</p>
+  <div class="markdown level1 summary"><p>尝试将卡片消息 XML 标记文本反序列化为 <a class="xref" href="Kook.ICard.html">ICard</a> 列表。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -510,17 +506,18 @@ contain multiple card elements.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>xmlText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>UTF-8 encoded XML text</p>
+    <dd><p>UTF-8 编码的 XML 文本。</p>
 </dd>
     <dt><code>cards</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p><a class="xref" href="Kook.ICard.html">ICard</a> enumerable, will be null if return value is false</p>
+    <dd><p>如果反序列化操作成功，则为一个可用于枚举 <a class="xref" href="Kook.ICard.html">ICard</a> 成员的
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>；否则为 <code>null</code>。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>True if deserialization is successful, otherwise false</p>
+    <dd><p>如果反序列化操作成功，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </dd>
   </dl>
 

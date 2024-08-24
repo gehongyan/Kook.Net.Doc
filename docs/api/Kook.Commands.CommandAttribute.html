@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class CommandAttribute | Kook.Net 文档 ">
       
-      <meta name="description" content="Marks the execution information for a command.">
+      <meta name="description" content="为命令标记执行信息。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class CommandAttribute  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Marks the execution information for a command.</p>
+  <div class="markdown summary"><p>为命令标记执行信息。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -264,10 +264,10 @@ public class CommandAttribute : Attribute</code></pre>
 
   <h3 id="Kook_Commands_CommandAttribute__ctor" data-uid="Kook.Commands.CommandAttribute.#ctor">
   CommandAttribute()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute">Attribute</a> class.</p>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Commands.CommandAttribute.html">CommandAttribute</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -291,10 +291,10 @@ public class CommandAttribute : Attribute</code></pre>
 
   <h3 id="Kook_Commands_CommandAttribute__ctor_System_String_" data-uid="Kook.Commands.CommandAttribute.#ctor(System.String)">
   CommandAttribute(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.CommandAttribute.html">CommandAttribute</a> attribute with the specified name.</p>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Commands.CommandAttribute.html">CommandAttribute</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -305,7 +305,7 @@ public class CommandAttribute : Attribute</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the command.</p>
+    <dd><p>命令的基本名称。</p>
 </dd>
   </dl>
 
@@ -323,35 +323,34 @@ public class CommandAttribute : Attribute</code></pre>
   <a id="Kook_Commands_CommandAttribute__ctor_" data-uid="Kook.Commands.CommandAttribute.#ctor*"></a>
 
   <h3 id="Kook_Commands_CommandAttribute__ctor_System_String_System_Boolean_System_String_System_String___System_String_" data-uid="Kook.Commands.CommandAttribute.#ctor(System.String,System.Boolean,System.String,System.String[],System.String)">
-  CommandAttribute(string, bool, string?, string[]?, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  CommandAttribute(string, bool, string?, string?[]?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.CommandAttribute.html">CommandAttribute</a> attribute with the specified name
-and mode of whether to ignore extra arguments.</p>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Commands.CommandAttribute.html">CommandAttribute</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CommandAttribute(string text, bool ignoreExtraArgs, string? summary = null, string[]? aliases = null, string? remarks = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public CommandAttribute(string text, bool ignoreExtraArgs, string? summary = null, string?[]? aliases = null, string? remarks = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the command.</p>
+    <dd><p>命令的基本名称。</p>
 </dd>
     <dt><code>ignoreExtraArgs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Whether to ignore extra arguments.</p>
+    <dd><p>是否忽略此命令的额外参数。</p>
 </dd>
     <dt><code>summary</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The summary of the command.</p>
+    <dd><p>命令的摘要。</p>
 </dd>
     <dt><code>aliases</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd><p>The aliases of the command.</p>
+    <dd><p>命令的别名。</p>
 </dd>
     <dt><code>remarks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The remarks of the command.</p>
+    <dd><p>命令的备注。</p>
 </dd>
   </dl>
 
@@ -374,15 +373,15 @@ and mode of whether to ignore extra arguments.</p>
 
   <h3 id="Kook_Commands_CommandAttribute_Aliases" data-uid="Kook.Commands.CommandAttribute.Aliases">
   Aliases
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Marks the aliases for a command.</p>
+  <div class="markdown level1 summary"><p>获取或设置命令的别名。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[]? Aliases { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string?[]? Aliases { get; set; }</code></pre>
   </div>
 
 
@@ -399,7 +398,7 @@ and mode of whether to ignore extra arguments.</p>
 
 
   <h4 class="section" id="Kook_Commands_CommandAttribute_Aliases_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><a class="xref" href="Kook.Commands.AliasAttribute.html">AliasAttribute</a> extends the base value of this if present.</p>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Kook.Commands.AliasAttribute.html">AliasAttribute</a> 特性的值会与此属性的值合并。</p>
 </div>
 
 
@@ -409,10 +408,10 @@ and mode of whether to ignore extra arguments.</p>
 
   <h3 id="Kook_Commands_CommandAttribute_IgnoreExtraArgs" data-uid="Kook.Commands.CommandAttribute.IgnoreExtraArgs">
   IgnoreExtraArgs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Indicates whether extra arguments should be ignored for this command.</p>
+  <div class="markdown level1 summary"><p>获取或设置是否忽略此命令的额外参数。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -435,16 +434,22 @@ and mode of whether to ignore extra arguments.</p>
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.Commands.CommandServiceConfig.html#Kook_Commands_CommandServiceConfig_IgnoreExtraArgs">IgnoreExtraArgs</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_Commands_CommandAttribute_Remarks_" data-uid="Kook.Commands.CommandAttribute.Remarks*"></a>
 
   <h3 id="Kook_Commands_CommandAttribute_Remarks" data-uid="Kook.Commands.CommandAttribute.Remarks">
   Remarks
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Attaches remarks to your commands.</p>
+  <div class="markdown level1 summary"><p>获取或设置命令的备注。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -466,7 +471,7 @@ and mode of whether to ignore extra arguments.</p>
 
 
   <h4 class="section" id="Kook_Commands_CommandAttribute_Remarks_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><a class="xref" href="Kook.Commands.RemainderAttribute.html">RemainderAttribute</a> overrides the value of this property if present.</p>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Kook.Commands.RemainderAttribute.html">RemainderAttribute</a> 特性重写此属性的值。</p>
 </div>
 
 
@@ -476,10 +481,10 @@ and mode of whether to ignore extra arguments.</p>
 
   <h3 id="Kook_Commands_CommandAttribute_RunMode" data-uid="Kook.Commands.CommandAttribute.RunMode">
   RunMode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Specifies the <a class="xref" href="Kook.Commands.CommandAttribute.html#Kook_Commands_CommandAttribute_RunMode">RunMode</a> of the command. This affects how the command is executed.</p>
+  <div class="markdown level1 summary"><p>获取或设置命令的运行模式。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -502,16 +507,22 @@ and mode of whether to ignore extra arguments.</p>
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.Commands.CommandServiceConfig.html#Kook_Commands_CommandServiceConfig_DefaultRunMode">DefaultRunMode</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_Commands_CommandAttribute_Summary_" data-uid="Kook.Commands.CommandAttribute.Summary*"></a>
 
   <h3 id="Kook_Commands_CommandAttribute_Summary" data-uid="Kook.Commands.CommandAttribute.Summary">
   Summary
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Attaches a summary to your command.</p>
+  <div class="markdown level1 summary"><p>获取或设置命令的摘要。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -533,7 +544,7 @@ and mode of whether to ignore extra arguments.</p>
 
 
   <h4 class="section" id="Kook_Commands_CommandAttribute_Summary_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><a class="xref" href="Kook.Commands.CommandAttribute.html#Kook_Commands_CommandAttribute_Summary">Summary</a> overrides the value of this property if present.</p>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Kook.Commands.SummaryAttribute.html">SummaryAttribute</a> 特性重写此属性的值。</p>
 </div>
 
 
@@ -543,10 +554,10 @@ and mode of whether to ignore extra arguments.</p>
 
   <h3 id="Kook_Commands_CommandAttribute_Text" data-uid="Kook.Commands.CommandAttribute.Text">
   Text
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/CommandAttribute.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the text that has been set to be recognized as a command.</p>
+  <div class="markdown level1 summary"><p>获取此命令的基本名称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -567,6 +578,9 @@ and mode of whether to ignore extra arguments.</p>
 
 
 
+  <h4 class="section" id="Kook_Commands_CommandAttribute_Text_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="Kook.Commands.NameAttribute.html">NameAttribute</a> 特性重写此属性的值。</p>
+</div>
 
 
 

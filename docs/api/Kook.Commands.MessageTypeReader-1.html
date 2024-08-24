@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MessageTypeReader&lt;T&gt; | Kook.Net 文档 ">
       
-      <meta name="description" content="A  for parsing objects implementing .">
+      <meta name="description" content="表示一个用于解析实现了  的对象的类型读取器。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class MessageTypeReader&lt;T&gt;  <a class="header-action link-secondary" title=
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A <a class="xref" href="Kook.Commands.TypeReader.html">TypeReader</a> for parsing objects implementing <a class="xref" href="Kook.IMessage.html">IMessage</a>.</p>
+  <div class="markdown summary"><p>表示一个用于解析实现了 <a class="xref" href="Kook.IMessage.html">IMessage</a> 的对象的类型读取器。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -110,7 +110,7 @@ Class MessageTypeReader&lt;T&gt;  <a class="header-action link-secondary" title=
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type to be checked; must implement <a class="xref" href="Kook.IMessage.html">IMessage</a>.</p>
+    <dd><p>要解析为的消息类型。</p>
 </dd>
   </dl>
 
@@ -167,7 +167,7 @@ Class MessageTypeReader&lt;T&gt;  <a class="header-action link-secondary" title=
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Readers/MessageTypeReader.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Attempts to parse the <code class="paramref">input</code> into the desired type.</p>
+  <div class="markdown level1 summary"><p>尝试将字符串输入解析为指定类型。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -178,20 +178,20 @@ Class MessageTypeReader&lt;T&gt;  <a class="header-action link-secondary" title=
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>context</code> <a class="xref" href="Kook.Commands.ICommandContext.html">ICommandContext</a></dt>
-    <dd><p>The context of the command.</p>
+    <dd><p>命令执行上下文。</p>
 </dd>
     <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The raw input of the command.</p>
+    <dd><p>要解析的字符串输入。</p>
 </dd>
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
-    <dd><p>The service collection used for dependency injection.</p>
+    <dd><p>依赖注入服务容器。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Commands.TypeReaderResult.html">TypeReaderResult</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous parsing operation. The task result contains the parsing result.</p>
+    <dd><p>一个表示异步解析操作的任务。任务的结果包含解析的结果。</p>
 </dd>
   </dl>
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface ISocketMessageChannel | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a generic WebSocket-based channel that can send and receive messages.">
+      <meta name="description" content="表示一个基于网关的消息频道，可以用来发送和接收消息。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface ISocketMessageChannel  <a class="header-action link-secondary" title="
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a generic WebSocket-based channel that can send and receive messages.</p>
+  <div class="markdown summary"><p>表示一个基于网关的消息频道，可以用来发送和接收消息。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -190,10 +190,10 @@ Interface ISocketMessageChannel  <a class="header-action link-secondary" title="
 
   <h3 id="Kook_WebSocket_ISocketMessageChannel_CachedMessages" data-uid="Kook.WebSocket.ISocketMessageChannel.CachedMessages">
   CachedMessages
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all messages in this channel's cache.</p>
+  <div class="markdown level1 summary"><p>获取此频道缓存的所有消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -208,13 +208,20 @@ Interface ISocketMessageChannel  <a class="header-action link-secondary" title="
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
-    <dd><p>A read-only collection of WebSocket-based messages.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_WebSocket_ISocketMessageChannel_CachedMessages_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+        要想通过此属性获取缓存的消息，需要启用缓存功能，否则此属性将始终返回空集合。缓存功能是默认禁用的，要想启用缓存，请参考
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a>。
+    </p></div>
+<br>
+    此属性从本地的内存缓存中获取消息实体，不会向 KOOK 发送额外的 API 请求。所获取的消息也可能是已经被删除的消息。
+</div>
 
 
 
@@ -227,10 +234,10 @@ Interface ISocketMessageChannel  <a class="header-action link-secondary" title="
 
   <h3 id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessage_System_Guid_" data-uid="Kook.WebSocket.ISocketMessageChannel.GetCachedMessage(System.Guid)">
   GetCachedMessage(Guid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a cached message from this channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道缓存的消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -241,15 +248,14 @@ Interface ISocketMessageChannel  <a class="header-action link-secondary" title="
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The Guid of the message.</p>
+    <dd><p>消息的 ID。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a></dt>
-    <dd><p>A WebSocket-based message object; <code>null</code> if it does not exist in the cache or if caching is not
-enabled.</p>
+    <dd><p>如果获取到了缓存的消息，则返回该消息实体；否则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -261,14 +267,11 @@ enabled.</p>
 
   <h4 class="section" id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessage_System_Guid__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-        this method will always return <code>null</code>. Please refer to
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+        要想通过此方法获取缓存的消息，需要启用缓存功能，否则此方法将始终返回 <code>null</code>。缓存功能是默认禁用的，要想启用缓存，请参考
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a>。
     </p></div>
-<p>
-        This method retrieves the message from the local WebSocket cache and does not send any additional
-        request to Kook. This message may be a message that has been deleted.
-    </p>
+<br>
+    此方法从本地的内存缓存中获取消息实体，不会向 KOOK 发送额外的 API 请求。所获取的消息也可能是已经被删除的消息。
 </div>
 
 
@@ -278,34 +281,34 @@ enabled.</p>
 
   <h3 id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.ISocketMessageChannel.GetCachedMessages(Kook.IMessage,Kook.Direction,System.Int32)">
   GetCachedMessages(IMessage, Direction, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the last N cached messages starting from a certain message in this message channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道缓存的多条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(IMessage fromMessage, Direction dir, int limit = 50)</code></pre>
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(IMessage referenceMessage, Direction dir, int limit = 50)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>fromMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
-    <dd><p>The message to start the fetching from.</p>
+    <dt><code>referenceMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
+    <dd><p>要开始获取消息的参考位置的消息。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of which the message should be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of messages to get.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
-    <dd><p>A read-only collection of WebSocket-based messages.</p>
+    <dd><p>获取到的多条缓存消息。</p>
 </dd>
   </dl>
 
@@ -317,16 +320,11 @@ enabled.</p>
 
   <h4 class="section" id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_Kook_IMessage_Kook_Direction_System_Int32__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-        this method will always return an empty collection. Please refer to
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+        要想通过此方法获取缓存的消息，需要启用缓存功能，否则此方法将始终返回空集合。缓存功能是默认禁用的，要想启用缓存，请参考
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a>。
     </p></div>
-<p>
-        This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-        request to Kook. This read-only collection may include messages that have been deleted. The
-        maximum number of messages that can be retrieved from this method depends on the
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-    </p>
+<br>
+    此方法从本地的内存缓存中获取消息实体，不会向 KOOK 发送额外的 API 请求。所获取的消息也可能是已经被删除的消息。
 </div>
 
 
@@ -336,34 +334,34 @@ enabled.</p>
 
   <h3 id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Guid_Kook_Direction_System_Int32_" data-uid="Kook.WebSocket.ISocketMessageChannel.GetCachedMessages(System.Guid,Kook.Direction,System.Int32)">
   GetCachedMessages(Guid, Direction, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the last N cached messages starting from a certain message in this message channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道缓存的多条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(Guid fromMessageId, Direction dir, int limit = 50)</code></pre>
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;SocketMessage&gt; GetCachedMessages(Guid referenceMessageId, Direction dir, int limit = 50)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>fromMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The message ID to start the fetching from.</p>
+    <dt><code>referenceMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>要开始获取消息的参考位置的消息的 ID。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of which the message should be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of messages to get.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
-    <dd><p>A read-only collection of WebSocket-based messages.</p>
+    <dd><p>获取到的多条缓存消息。</p>
 </dd>
   </dl>
 
@@ -375,16 +373,11 @@ enabled.</p>
 
   <h4 class="section" id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Guid_Kook_Direction_System_Int32__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-        this method will always return an empty collection. Please refer to
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
+        要想通过此方法获取缓存的消息，需要启用缓存功能，否则此方法将始终返回空集合。缓存功能是默认禁用的，要想启用缓存，请参考
+        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a>。
     </p></div>
-<p>
-        This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-        request to Kook. This read-only collection may include messages that have been deleted. The
-        maximum number of messages that can be retrieved from this method depends on the
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-    </p>
+<br>
+    此方法从本地的内存缓存中获取消息实体，不会向 KOOK 发送额外的 API 请求。所获取的消息也可能是已经被删除的消息。
 </div>
 
 
@@ -394,10 +387,10 @@ enabled.</p>
 
   <h3 id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Int32_" data-uid="Kook.WebSocket.ISocketMessageChannel.GetCachedMessages(System.Int32)">
   GetCachedMessages(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Channels/ISocketMessageChannel.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the last N cached messages from this message channel.</p>
+  <div class="markdown level1 summary"><p>获取此频道缓存的多条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -408,14 +401,14 @@ enabled.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of messages to get.</p>
+    <dd><p>要获取的缓存消息的数量。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketMessage.html">SocketMessage</a>&gt;</dt>
-    <dd><p>A read-only collection of WebSocket-based messages.</p>
+    <dd><p>此频道缓存的所有消息。</p>
 </dd>
   </dl>
 
@@ -426,17 +419,12 @@ enabled.</p>
 
 
   <h4 class="section" id="Kook_WebSocket_ISocketMessageChannel_GetCachedMessages_System_Int32__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This method requires the use of cache, which is not enabled by default; if caching is not enabled,
-        this method will always return an empty collection. Please refer to
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> for more details.
-    </p></div>
-<p>
-        This method retrieves the message(s) from the local WebSocket cache and does not send any additional
-        request to Kook. This read-only collection may include messages that have been deleted. The
-        maximum number of messages that can be retrieved from this method depends on the
-        <a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a> set.
-    </p>
+  <div class="markdown level1 remarks"><p>此重载将会从缓存中获取最新的指定数量的缓存消息实体。
+<br><div class="WARNING"><h5>warning</h5><p>
+要想通过此方法获取缓存的消息，需要启用缓存功能，否则此方法将始终返回空集合。缓存功能是默认禁用的，要想启用缓存，请参考
+<a class="xref" href="Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_MessageCacheSize">MessageCacheSize</a>。</p>
+</div><br>
+此方法从本地的内存缓存中获取消息实体，不会向 KOOK 发送额外的 API 请求。所获取的消息也可能是已经被删除的消息。
 </div>
 
 

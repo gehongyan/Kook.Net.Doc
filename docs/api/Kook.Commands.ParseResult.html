@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct ParseResult | Kook.Net 文档 ">
       
-      <meta name="description" content="Contains information for the parsing result from the command service&#39;s parser.">
+      <meta name="description" content="表示一个命令的解析结果。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Contains information for the parsing result from the command service's parser.</p>
+  <div class="markdown summary"><p>表示一个命令的解析结果。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -153,7 +153,7 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a read-only collection containing the parsed argument values.</p>
+  <div class="markdown level1 summary"><p>获取所有实参解析结果。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -185,7 +185,7 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Describes the error type that may have occurred during the operation.</p>
+  <div class="markdown level1 summary"><p>获取在命令执行期间发生的异常信息，如果没有异常则为 <code>null</code>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -200,9 +200,7 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.CommandError.html">CommandError</a>?</dt>
-    <dd><p>A <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a> indicating the type of error that may have occurred during the operation;
-<code>null</code> if the operation was successful.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -216,10 +214,10 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_Commands_ParseResult_ErrorParameter" data-uid="Kook.Commands.ParseResult.ErrorParameter">
   ErrorParameter
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Provides information about the parameter that caused the parsing error.</p>
+  <div class="markdown level1 summary"><p>获取在解析过程中导致解析错误的参数信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -234,9 +232,7 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ParameterInfo.html">ParameterInfo</a></dt>
-    <dd><p>A <a class="xref" href="Kook.Commands.ParameterInfo.html">ParameterInfo</a> indicating the parameter info of the error that may have occurred during parsing;
-<code>null</code> if the parsing was successful or the parsing error is not specific to a single parameter.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -253,7 +249,7 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Describes the reason for the error.</p>
+  <div class="markdown level1 summary"><p>获取在命令执行期间发生的异常的原因，如果没有异常则为 <code>null</code>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -268,8 +264,7 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string containing the error reason.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -283,10 +278,10 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_Commands_ParseResult_IsSuccess" data-uid="Kook.Commands.ParseResult.IsSuccess">
   IsSuccess
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Indicates whether the operation was successful or not.</p>
+  <div class="markdown level1 summary"><p>获取命令执行的结果是否为成功。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -301,8 +296,7 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the result is positive; otherwise <code>false</code>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -319,7 +313,7 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a read-only collection containing the parsed parameter values.</p>
+  <div class="markdown level1 summary"><p>获取所有形参解析结果。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -352,10 +346,10 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_Commands_ParseResult_FromError_Kook_Commands_CommandError_System_String_" data-uid="Kook.Commands.ParseResult.FromError(Kook.Commands.CommandError,System.String)">
   FromError(CommandError, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a failed parsing result.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定错误类型和原因的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a> 结构的新实例，表示一个失败的匹配。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -366,17 +360,17 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>error</code> <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a></dt>
-    <dd><p>The error that occurred.</p>
+    <dd><p>命令匹配失败的类型。</p>
 </dd>
     <dt><code>reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The reason for the error.</p>
+    <dd><p>参数解析失败的原因。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a></dt>
-    <dd><p>The parsing result.</p>
+    <dd><p>一个表示解析失败的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a>。</p>
 </dd>
   </dl>
 
@@ -394,10 +388,10 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_Commands_ParseResult_FromError_Kook_Commands_CommandError_System_String_Kook_Commands_ParameterInfo_" data-uid="Kook.Commands.ParseResult.FromError(Kook.Commands.CommandError,System.String,Kook.Commands.ParameterInfo)">
   FromError(CommandError, string, ParameterInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a failed parsing result.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定错误类型和原因的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a> 结构的新实例，表示一个失败的匹配。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -408,20 +402,20 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>error</code> <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a></dt>
-    <dd><p>The error that occurred.</p>
+    <dd><p>命令匹配失败的类型。</p>
 </dd>
     <dt><code>reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The reason for the error.</p>
+    <dd><p>参数解析失败的原因。</p>
 </dd>
     <dt><code>parameterInfo</code> <a class="xref" href="Kook.Commands.ParameterInfo.html">ParameterInfo</a></dt>
-    <dd><p>The parameter info of the error that may have occurred during parsing.</p>
+    <dd><p>导致解析失败的参数信息。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a></dt>
-    <dd><p>The parsing result.</p>
+    <dd><p>一个表示解析失败的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a>。</p>
 </dd>
   </dl>
 
@@ -439,10 +433,10 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_Commands_ParseResult_FromError_Kook_Commands_IResult_" data-uid="Kook.Commands.ParseResult.FromError(Kook.Commands.IResult)">
   FromError(IResult)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a failed parsing result.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定异常的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a> 结构的新实例，表示一个失败的匹配。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -453,14 +447,14 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>result</code> <a class="xref" href="Kook.Commands.IResult.html">IResult</a></dt>
-    <dd><p>The result that contains the error.</p>
+    <dd><p>失败的结果。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a></dt>
-    <dd><p>The parsing result.</p>
+    <dd><p>一个表示匹配失败的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a>。</p>
 </dd>
   </dl>
 
@@ -478,10 +472,10 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_Commands_ParseResult_FromError_Kook_Commands_IResult_Kook_Commands_ParameterInfo_" data-uid="Kook.Commands.ParseResult.FromError(Kook.Commands.IResult,Kook.Commands.ParameterInfo)">
   FromError(IResult, ParameterInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a failed parsing result.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定异常的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a> 结构的新实例，表示一个失败的匹配。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -492,17 +486,17 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>result</code> <a class="xref" href="Kook.Commands.IResult.html">IResult</a></dt>
-    <dd><p>The result that contains the error.</p>
+    <dd><p>失败的结果。</p>
 </dd>
     <dt><code>parameterInfo</code> <a class="xref" href="Kook.Commands.ParameterInfo.html">ParameterInfo</a></dt>
-    <dd><p>The parameter info of the error that may have occurred during parsing.</p>
+    <dd><p>导致解析失败的参数信息。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a></dt>
-    <dd><p>The parsing result.</p>
+    <dd><p>一个表示匹配失败的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a>。</p>
 </dd>
   </dl>
 
@@ -520,10 +514,10 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_Commands_ParseResult_FromError_System_Exception_" data-uid="Kook.Commands.ParseResult.FromError(System.Exception)">
   FromError(Exception)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a failed parsing result.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定异常的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a> 结构的新实例，表示一个失败的匹配。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -534,14 +528,14 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
-    <dd><p>The exception that occurred.</p>
+    <dd><p>导致匹配失败的异常。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a></dt>
-    <dd><p>The parsing result.</p>
+    <dd><p>一个表示匹配失败的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a>。</p>
 </dd>
   </dl>
 
@@ -559,10 +553,10 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_Commands_ParseResult_FromSuccess_System_Collections_Generic_IReadOnlyList_Kook_Commands_TypeReaderResult__System_Collections_Generic_IReadOnlyList_Kook_Commands_TypeReaderResult__" data-uid="Kook.Commands.ParseResult.FromSuccess(System.Collections.Generic.IReadOnlyList{Kook.Commands.TypeReaderResult},System.Collections.Generic.IReadOnlyList{Kook.Commands.TypeReaderResult})">
   FromSuccess(IReadOnlyList&lt;TypeReaderResult&gt;, IReadOnlyList&lt;TypeReaderResult&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a successful parsing result.</p>
+  <div class="markdown level1 summary"><p>初始化一个不包含任何错误的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a> 结构的新实例，表示一个成功的解析。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -573,17 +567,17 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>argValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Kook.Commands.TypeReaderResult.html">TypeReaderResult</a>&gt;</dt>
-    <dd><p>The parsed argument values.</p>
+    <dd><p>实参解析结果。</p>
 </dd>
     <dt><code>paramValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Kook.Commands.TypeReaderResult.html">TypeReaderResult</a>&gt;</dt>
-    <dd><p>The parsed parameter values.</p>
+    <dd><p>形参解析结果。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a></dt>
-    <dd><p>The parsing result.</p>
+    <dd><p>一个表示匹配成功的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a>。</p>
 </dd>
   </dl>
 
@@ -601,10 +595,10 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_Commands_ParseResult_FromSuccess_System_Collections_Generic_IReadOnlyList_Kook_Commands_TypeReaderValue__System_Collections_Generic_IReadOnlyList_Kook_Commands_TypeReaderValue__" data-uid="Kook.Commands.ParseResult.FromSuccess(System.Collections.Generic.IReadOnlyList{Kook.Commands.TypeReaderValue},System.Collections.Generic.IReadOnlyList{Kook.Commands.TypeReaderValue})">
   FromSuccess(IReadOnlyList&lt;TypeReaderValue&gt;, IReadOnlyList&lt;TypeReaderValue&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a successful parsing result.</p>
+  <div class="markdown level1 summary"><p>初始化一个不包含任何错误的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a> 结构的新实例，表示一个成功的解析。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -615,17 +609,17 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>argValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Kook.Commands.TypeReaderValue.html">TypeReaderValue</a>&gt;</dt>
-    <dd><p>The parsed argument values.</p>
+    <dd><p>实参解析结果。</p>
 </dd>
     <dt><code>paramValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Kook.Commands.TypeReaderValue.html">TypeReaderValue</a>&gt;</dt>
-    <dd><p>The parsed parameter values.</p>
+    <dd><p>形参解析结果。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a></dt>
-    <dd><p>The parsing result.</p>
+    <dd><p>一个表示匹配成功的 <a class="xref" href="Kook.Commands.ParseResult.html">ParseResult</a>。</p>
 </dd>
   </dl>
 
@@ -643,7 +637,7 @@ Struct ParseResult  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_Commands_ParseResult_ToString" data-uid="Kook.Commands.ParseResult.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ParseResult.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>

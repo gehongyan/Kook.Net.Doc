@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IVoiceChannel | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a generic voice channel in a guild.">
+      <meta name="description" content="表示服务器中的一个通用的具有语音聊天能力的频道。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a generic voice channel in a guild.</p>
+  <div class="markdown summary"><p>表示服务器中的一个通用的具有语音聊天能力的频道。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -253,6 +253,9 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="Kook.IMessageChannel.html#Kook_IMessageChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions_">IMessageChannel.ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions)</a>
     </div>
     <div>
+      <a class="xref" href="Kook.IAudioChannel.html#Kook_IAudioChannel_AudioClient">IAudioChannel.AudioClient</a>
+    </div>
+    <div>
       <a class="xref" href="Kook.IAudioChannel.html#Kook_IAudioChannel_IsVoiceRegionOverwritten">IAudioChannel.IsVoiceRegionOverwritten</a>
     </div>
     <div>
@@ -298,10 +301,10 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_IVoiceChannel_HasPassword" data-uid="Kook.IVoiceChannel.HasPassword">
   HasPassword
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this voice channel is locked by a password.</p>
+  <div class="markdown level1 summary"><p>获取此频道是否已被密码锁定。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -316,8 +319,7 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>A bool representing whether this voice channel is locked by a password.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -331,10 +333,10 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_IVoiceChannel_UserLimit" data-uid="Kook.IVoiceChannel.UserLimit">
   UserLimit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the max number of users allowed to be connected to this channel at once.</p>
+  <div class="markdown level1 summary"><p>获取允许同时连接到此频道的最大用户数。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -349,8 +351,7 @@ Interface IVoiceChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>An int representing the maximum number of users that are allowed to be connected to this
-channel at once; <code>0</code> if a limit is not set.</p>
+    <dd><p>一个 <code>int</code>，表示允许同时连接到此频道的最大用户数；如果没有限制，则为 <code>0</code>。</p>
 </dd>
   </dl>
 
@@ -365,10 +366,10 @@ channel at once; <code>0</code> if a limit is not set.</p>
 
   <h3 id="Kook_IVoiceChannel_VoiceQuality" data-uid="Kook.IVoiceChannel.VoiceQuality">
   VoiceQuality
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the voice quality that the clients in this voice channel are requested to use.</p>
+  <div class="markdown level1 summary"><p>获取要求此频道中的客户端使用的语音质量。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -383,9 +384,7 @@ channel at once; <code>0</code> if a limit is not set.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.VoiceQuality.html">VoiceQuality</a>?</dt>
-    <dd><p>A <a class="xref" href="Kook.IVoiceChannel.html#Kook_IVoiceChannel_VoiceQuality">VoiceQuality</a> representing the voice quality that this voice channel defines and requests the
-client(s) to use.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -403,32 +402,31 @@ client(s) to use.</p>
 
   <h3 id="Kook_IVoiceChannel_GetConnectedUsersAsync_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IVoiceChannel.GetConnectedUsersAsync(Kook.CacheMode,Kook.RequestOptions)">
   GetConnectedUsersAsync(CacheMode, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the users connected to this voice channel.</p>
+  <div class="markdown level1 summary"><p>获取连接到此频道的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IUser&gt;&gt; GetConnectedUsersAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IGuildUser&gt;&gt; GetConnectedUsersAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
-    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+    <dd><p>指示当前方法是否应该仅从缓存中获取结果，还是可以通过 API 请求获取数据。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;&gt;</dt>
-    <dd><p>A task that represents the asynchronous get operation. The task result contains a collection of
-<a class="xref" href="Kook.IGuildUser.html">IGuildUser</a>s that are connected to this voice channel.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IGuildUser.html">IGuildUser</a>&gt;&gt;</dt>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含连接到此频道的所有服务器用户。</p>
 </dd>
   </dl>
 
@@ -446,10 +444,10 @@ client(s) to use.</p>
 
   <h3 id="Kook_IVoiceChannel_ModifyAsync_System_Action_Kook_ModifyVoiceChannelProperties__Kook_RequestOptions_" data-uid="Kook.IVoiceChannel.ModifyAsync(System.Action{Kook.ModifyVoiceChannelProperties},Kook.RequestOptions)">
   ModifyAsync(Action&lt;ModifyVoiceChannelProperties&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IVoiceChannel.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Modifies this voice channel.</p>
+  <div class="markdown level1 summary"><p>修改此频道有关语音聊天能力的属性。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -460,17 +458,17 @@ client(s) to use.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.ModifyVoiceChannelProperties.html">ModifyVoiceChannelProperties</a>&gt;</dt>
-    <dd><p>The properties to modify the channel with.</p>
+    <dd><p>一个包含修改有关语音聊天能力的属性的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous modification operation.</p>
+    <dd><p>一个表示异步修改操作的任务。</p>
 </dd>
   </dl>
 

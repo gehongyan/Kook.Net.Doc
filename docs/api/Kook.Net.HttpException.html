@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class HttpException | Kook.Net 文档 ">
       
-      <meta name="description" content="The exception that is thrown if an error occurs while processing an Kook HTTP request.">
+      <meta name="description" content="当处理 KOOK HTTP 请求时发生错误时引发的异常。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class HttpException  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The exception that is thrown if an error occurs while processing an Kook HTTP request.</p>
+  <div class="markdown summary"><p>当处理 KOOK HTTP 请求时发生错误时引发的异常。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -194,10 +194,10 @@ Class HttpException  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Net_HttpException__ctor_System_Net_HttpStatusCode_Kook_Net_IRequest_System_Nullable_Kook_KookErrorCode__System_String_Kook_KookJsonError___" data-uid="Kook.Net.HttpException.#ctor(System.Net.HttpStatusCode,Kook.Net.IRequest,System.Nullable{Kook.KookErrorCode},System.String,Kook.KookJsonError[])">
   HttpException(HttpStatusCode, IRequest, KookErrorCode?, string?, KookJsonError[]?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.Net.HttpException.html">HttpException</a> class.</p>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Net.HttpException.html">HttpException</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -208,19 +208,19 @@ Class HttpException  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>httpCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a></dt>
-    <dd><p>The HTTP status code returned.</p>
+    <dd><p>返回的 HTTP 状态码。</p>
 </dd>
     <dt><code>request</code> <a class="xref" href="Kook.Net.IRequest.html">IRequest</a></dt>
-    <dd><p>The request that was sent prior to the exception.</p>
+    <dd><p>引发异常前发送的请求。</p>
 </dd>
     <dt><code>kookCode</code> <a class="xref" href="Kook.KookErrorCode.html">KookErrorCode</a>?</dt>
-    <dd><p>The Kook status code returned.</p>
+    <dd><p>由 KOOK 返回的 JSON 负载中解析出的状态码。</p>
 </dd>
     <dt><code>reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The reason behind the exception.</p>
+    <dd><p>引发异常的原因。</p>
 </dd>
     <dt><code>errors</code> <a class="xref" href="Kook.KookJsonError.html">KookJsonError</a>[]</dt>
-    <dd><p>A collection of json errors describing what went wrong with the request.</p>
+    <dd><p>描述请求错误的所有 JSON 错误。</p>
 </dd>
   </dl>
 
@@ -243,10 +243,10 @@ Class HttpException  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Net_HttpException_Errors" data-uid="Kook.Net.HttpException.Errors">
   Errors
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of json errors describing what went wrong with the request.</p>
+  <div class="markdown level1 summary"><p>获取描述请求失败原因的所有 JSON 错误。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -275,10 +275,10 @@ Class HttpException  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Net_HttpException_HttpCode" data-uid="Kook.Net.HttpException.HttpCode">
   HttpCode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the HTTP status code returned by Kook.</p>
+  <div class="markdown level1 summary"><p>获取 KOOK 返回的 HTTP 状态码。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -293,8 +293,7 @@ Class HttpException  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a></dt>
-    <dd><p>An HTTP status code from Kook.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -308,10 +307,11 @@ Class HttpException  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Net_HttpException_KookCode" data-uid="Kook.Net.HttpException.KookCode">
   KookCode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the JSON error code returned by Kook.</p>
+  <div class="markdown level1 summary"><p>获取由 KOOK 返回的 JSON 负载中的错误代码；也有可能是表示操作成功的代码；
+如果无法从响应中解析出错误代码，则为 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -326,8 +326,7 @@ Class HttpException  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.KookErrorCode.html">KookErrorCode</a>?</dt>
-    <dd><p>A JSON error code from Kook, or <code>null</code> if none.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -341,10 +340,10 @@ Class HttpException  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Net_HttpException_Reason" data-uid="Kook.Net.HttpException.Reason">
   Reason
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the reason of the exception.</p>
+  <div class="markdown level1 summary"><p>获取异常的原因；也有可能是表示操作成功的消息；如果无法从响应中解析出原因，则为 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -373,10 +372,10 @@ Class HttpException  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Kook_Net_HttpException_Request" data-uid="Kook.Net.HttpException.Request">
   Request
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/HttpException.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the request object used to send the request.</p>
+  <div class="markdown level1 summary"><p>获取用于发送请求的请求对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

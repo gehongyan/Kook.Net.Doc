@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class KookWebhookConfig | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a KOOK webhook client configuration.">
+      <meta name="description" content="表示一个用于  的配置类。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Webhook_KookWebhookConfig" data-uid="Kook.Webhook.KookWebhookConfig" class="text-break">
-Class KookWebhookConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class KookWebhookConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Kook.Net.Webhook.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a KOOK webhook client configuration.</p>
+  <div class="markdown summary"><p>表示一个用于 <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> 的配置类。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -280,6 +280,9 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h2 id="Kook_Webhook_KookWebhookConfig_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>此配置基于 <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>，在与网关有关的配置的基础上，定义了有关 Webhook 的配置。</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -290,10 +293,10 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Webhook_KookWebhookConfig__ctor_Kook_Net_Webhooks_WebhookProvider_" data-uid="Kook.Webhook.KookWebhookConfig.#ctor(Kook.Net.Webhooks.WebhookProvider)">
   KookWebhookConfig(WebhookProvider)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a> class.</p>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -304,7 +307,7 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>webhookProvider</code> <a class="xref" href="Kook.Net.Webhooks.WebhookProvider.html">WebhookProvider</a></dt>
-    <dd><p>The provider used to generate new UDP sockets.</p>
+    <dd><p>用于创建 Webhook 客户端的委托。</p>
 </dd>
   </dl>
 
@@ -327,10 +330,10 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Webhook_KookWebhookConfig_AutoLogin" data-uid="Kook.Webhook.KookWebhookConfig.AutoLogin">
   AutoLogin
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the client should try to automatically log in.</p>
+  <div class="markdown level1 summary"><p>获取或设置客户端是否尝试自动登录。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -359,10 +362,10 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Webhook_KookWebhookConfig_AutoLogout" data-uid="Kook.Webhook.KookWebhookConfig.AutoLogout">
   AutoLogout
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the client should try to automatically log out.</p>
+  <div class="markdown level1 summary"><p>获取或设置客户端是否尝试自动退出登录。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -391,10 +394,10 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Webhook_KookWebhookConfig_EncryptKey" data-uid="Kook.Webhook.KookWebhookConfig.EncryptKey">
   EncryptKey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the encryption key used to decrypt the webhook payload.</p>
+  <div class="markdown level1 summary"><p>获取或设置用于解密 Webhook 负载的加密密钥。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -423,10 +426,10 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Webhook_KookWebhookConfig_HeartbeatIntervalMilliseconds" data-uid="Kook.Webhook.KookWebhookConfig.HeartbeatIntervalMilliseconds">
   HeartbeatIntervalMilliseconds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the heartbeat interval of WebSocket connection in milliseconds.</p>
+  <div class="markdown level1 summary"><p>获取或设置网关发送心跳包的时间间隔（毫秒）。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -455,10 +458,10 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Webhook_KookWebhookConfig_VerifyToken" data-uid="Kook.Webhook.KookWebhookConfig.VerifyToken">
   VerifyToken
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the verification token used to verify the webhook request.</p>
+  <div class="markdown level1 summary"><p>获取或设置用于验证 Webhook 请求的验证令牌。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -487,10 +490,10 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_Webhook_KookWebhookConfig_WebhookProvider" data-uid="Kook.Webhook.KookWebhookConfig.WebhookProvider">
   WebhookProvider
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the provider used to generate new UDP sockets.</p>
+  <div class="markdown level1 summary"><p>获取或设置用于创建 Webhook 客户端的委托。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -519,7 +522,7 @@ Class KookWebhookConfig  <a class="header-action link-secondary" title="View sou
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Webhook/KookWebhookConfig.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

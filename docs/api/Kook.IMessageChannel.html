@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IMessageChannel | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a channel that can send and receive messages.">
+      <meta name="description" content="表示一个通用的消息频道，可以用来发送和接收消息。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a channel that can send and receive messages.</p>
+  <div class="markdown summary"><p>表示一个通用的消息频道，可以用来发送和接收消息。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -151,10 +151,10 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_IMessageChannel_DeleteMessageAsync_Kook_IMessage_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.DeleteMessageAsync(Kook.IMessage,Kook.RequestOptions)">
   DeleteMessageAsync(IMessage, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deletes a message based on the provided message in this channel.</p>
+  <div class="markdown level1 summary"><p>删除一条消息.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -165,17 +165,17 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>message</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
-    <dd><p>The message that would be removed.</p>
+    <dd><p>要删除的消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous removal operation.</p>
+    <dd><p>一个表示异步删除操作的任务。</p>
 </dd>
   </dl>
 
@@ -193,10 +193,10 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_IMessageChannel_DeleteMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.DeleteMessageAsync(System.Guid,Kook.RequestOptions)">
   DeleteMessageAsync(Guid, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deletes a message.</p>
+  <div class="markdown level1 summary"><p>删除一条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -207,17 +207,17 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The identifier of the message that would be removed.</p>
+    <dd><p>要删除的消息的 ID。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous removal operation.</p>
+    <dd><p>一个表示异步删除操作的任务。</p>
 </dd>
   </dl>
 
@@ -235,10 +235,10 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
 
   <h3 id="Kook_IMessageChannel_GetMessageAsync_System_Guid_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.GetMessageAsync(System.Guid,Kook.CacheMode,Kook.RequestOptions)">
   GetMessageAsync(Guid, CacheMode, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a message from this message channel.</p>
+  <div class="markdown level1 summary"><p>从此消息频道获取一条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -249,21 +249,20 @@ Interface IMessageChannel  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The identifier of the message.</p>
+    <dd><p>消息的 ID。</p>
 </dd>
     <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
-    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from cache.</p>
+    <dd><p>指示当前方法是否应该仅从缓存中获取结果，还是可以通过 API 请求获取数据。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;</dt>
-    <dd><p>A task that represents an asynchronous get operation for retrieving the message. The task result contains
-the retrieved message; <code>null</code> if no message is found with the specified identifier.</p>
+    <dd><p>一个表示异步获取操作的任务。任务结果包含检索到的消息；如果未找到具有指定 ID 的消息，则返回 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -281,10 +280,10 @@ the retrieved message; <code>null</code> if no message is found with the specifi
 
   <h3 id="Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.CacheMode,Kook.RequestOptions)">
   GetMessagesAsync(IMessage, Direction, int, CacheMode, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -295,27 +294,26 @@ the retrieved message; <code>null</code> if no message is found with the specifi
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>referenceMessage</code> <a class="xref" href="Kook.IMessage.html">IMessage</a></dt>
-    <dd><p>The starting message to get the messages from.</p>
+    <dd><p>要开始获取消息的参考位置的消息。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of the messages to be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
-    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from
-cache.</p>
+    <dd><p>指示当前方法是否应该仅从缓存中获取结果，还是可以通过 API 请求获取数据。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -327,21 +325,20 @@ cache.</p>
 
   <h4 class="section" id="Kook_IMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
-        The returned collection is an asynchronous enumerable object; one must call
-        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a> to access the individual messages as a
-        collection.
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
     </p></div>
+<br>
 <div class="WARNING"><h5>warning</h5><p>
-        Do not fetch too many messages at once! This may cause unwanted preemptive rate limit or even actual
-        rate limit, causing your bot to freeze!
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
     </p></div>
-    This method will attempt to fetch the number of messages specified under <code class="paramref">limit</code> around
-    the message <code class="paramref">referenceMessage</code> depending on the <code class="paramref">dir</code>. The library will
-    attempt to split up the requests according to your <code class="paramref">limit</code> and
-    <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>. In other words, should the user request 500 messages,
-    and the <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> constant is <code>100</code>, the request will
-    be split into 5 individual requests; thus returning 5 individual asynchronous responses, hence the need
-    of flattening.
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
 
@@ -351,10 +348,10 @@ cache.</p>
 
   <h3 id="Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.CacheMode,Kook.RequestOptions)">
   GetMessagesAsync(Guid, Direction, int, CacheMode, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a collection of messages in this channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -365,27 +362,26 @@ cache.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>referenceMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The ID of the starting message to get the messages from.</p>
+    <dd><p>要开始获取消息的参考位置的消息的 ID。</p>
 </dd>
     <dt><code>dir</code> <a class="xref" href="Kook.Direction.html">Direction</a></dt>
-    <dd><p>The direction of the messages to be gotten from.</p>
+    <dd><p>要以参考位置为基准，获取消息的方向。</p>
 </dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
-    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from
-cache.</p>
+    <dd><p>指示当前方法是否应该仅从缓存中获取结果，还是可以通过 API 请求获取数据。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -397,21 +393,20 @@ cache.</p>
 
   <h4 class="section" id="Kook_IMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_CacheMode_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
-        The returned collection is an asynchronous enumerable object; one must call
-        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a> to access the individual messages as a
-        collection.
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
     </p></div>
+<br>
 <div class="WARNING"><h5>warning</h5><p>
-        Do not fetch too many messages at once! This may cause unwanted preemptive rate limit or even actual
-        rate limit, causing your bot to freeze!
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
     </p></div>
-    This method will attempt to fetch the number of messages specified under <code class="paramref">limit</code> around
-    the message <code class="paramref">referenceMessageId</code> depending on the <code class="paramref">dir</code>. The library will
-    attempt to split up the requests according to your <code class="paramref">limit</code> and
-    <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>. In other words, should the user request 500 messages,
-    and the <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> constant is <code>100</code>, the request will
-    be split into 5 individual requests; thus returning 5 individual asynchronous responses, hence the need
-    of flattening.
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
 
@@ -421,10 +416,10 @@ cache.</p>
 
   <h3 id="Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.GetMessagesAsync(System.Int32,Kook.CacheMode,Kook.RequestOptions)">
   GetMessagesAsync(int, CacheMode, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the last N messages from this message channel.</p>
+  <div class="markdown level1 summary"><p>获取此消息频道中的最新的一些消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -435,21 +430,20 @@ cache.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The numbers of message to be gotten from.</p>
+    <dd><p>要获取的消息数量。</p>
 </dd>
     <dt><code>mode</code> <a class="xref" href="Kook.CacheMode.html">CacheMode</a></dt>
-    <dd><p>The <a class="xref" href="Kook.CacheMode.html">CacheMode</a> that determines whether the object should be fetched from
-cache.</p>
+    <dd><p>指示当前方法是否应该仅从缓存中获取结果，还是可以通过 API 请求获取数据。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;&gt;</dt>
-    <dd><p>Paged collection of messages.</p>
+    <dd><p>分页的消息集合的异步可枚举对象。</p>
 </dd>
   </dl>
 
@@ -461,20 +455,20 @@ cache.</p>
 
   <h4 class="section" id="Kook_IMessageChannel_GetMessagesAsync_System_Int32_Kook_CacheMode_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
-        The returned collection is an asynchronous enumerable object; one must call
-        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a> to access the individual messages as a
-        collection.
+        返回的集合是一个异步可枚举对象；调用
+        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+        可以异步枚举所有分页，并将其合并为一个集合。
     </p></div>
+<br>
 <div class="WARNING"><h5>warning</h5><p>
-        Do not fetch too many messages at once! This may cause unwanted preemptive rate limit or even actual
-        rate limit, causing your bot to freeze!
+        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
     </p></div>
-    This method will attempt to fetch the number of messages specified under <code class="paramref">limit</code>. The
-    library will attempt to split up the requests according to your <code class="paramref">limit</code> and
-    <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>. In other words, should the user request 500 messages,
-    and the <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> constant is <code>100</code>, the request will
-    be split into 5 individual requests; thus returning 5 individual asynchronous responses, hence the need
-    of flattening.
+<br>
+    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
 
@@ -484,10 +478,10 @@ cache.</p>
 
   <h3 id="Kook_IMessageChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions_" data-uid="Kook.IMessageChannel.ModifyMessageAsync(System.Guid,System.Action{Kook.MessageProperties},Kook.RequestOptions)">
   ModifyMessageAsync(Guid, Action&lt;MessageProperties&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Modifies a message.</p>
+  <div class="markdown level1 summary"><p>修改一条消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -498,20 +492,20 @@ cache.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
-    <dd><p>The identifier of the message that would be changed.</p>
+    <dd><p>要修改的消息的 ID。</p>
 </dd>
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.MessageProperties.html">MessageProperties</a>&gt;</dt>
-    <dd><p>A delegate containing the properties to modify the message with.</p>
+    <dd><p>一个包含修改消息属性的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous modification operation.</p>
+    <dd><p>一个表示异步修改操作的任务。</p>
 </dd>
   </dl>
 
@@ -521,22 +515,24 @@ cache.</p>
 
 
 
-  <h4 class="section" id="Kook_IMessageChannel_ModifyMessageAsync_System_Guid_System_Action_Kook_MessageProperties__Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method modifies this message with the specified properties. To see an example of this
-method and what properties are available, please refer to <a class="xref" href="Kook.MessageProperties.html">MessageProperties</a>.</p>
-</div>
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.MessageProperties.html">MessageProperties</a></div>
+    </dd>
+  </dl>
 
 
   <a id="Kook_IMessageChannel_SendCardAsync_" data-uid="Kook.IMessageChannel.SendCardAsync*"></a>
 
   <h3 id="Kook_IMessageChannel_SendCardAsync_Kook_ICard_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendCardAsync(Kook.ICard,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendCardAsync(ICard, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送卡片消息到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -547,24 +543,23 @@ method and what properties are available, please refer to <a class="xref" href="
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>card</code> <a class="xref" href="Kook.ICard.html">ICard</a></dt>
-    <dd><p>The card to be sent.</p>
+    <dd><p>要发送的卡片。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -582,10 +577,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_IMessageChannel_SendCardsAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendCardsAsync(System.Collections.Generic.IEnumerable{Kook.ICard},Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendCardsAsync(IEnumerable&lt;ICard&gt;, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a card message to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送卡片消息到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -596,24 +591,23 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>cards</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p>The cards to be sent.</p>
+    <dd><p>要发送的卡片。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -631,10 +625,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_IMessageChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendFileAsync(Kook.FileAttachment,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendFileAsync(FileAttachment, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送文件到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -645,24 +639,23 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>attachment</code> <a class="xref" href="Kook.FileAttachment.html">FileAttachment</a></dt>
-    <dd><p>The attachment containing the file.</p>
+    <dd><p>文件的附件信息。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -672,9 +665,6 @@ contains the identifier and timestamp of the sent message.</p>
 
 
 
-  <h4 class="section" id="Kook_IMessageChannel_SendFileAsync_Kook_FileAttachment_Kook_IQuote_Kook_IUser_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method sends a file as if you are uploading a file directly from your Kook client.</p>
-</div>
 
 
 
@@ -683,10 +673,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_IMessageChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendFileAsync(System.IO.Stream,System.String,Kook.AttachmentType,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendFileAsync(Stream, string, AttachmentType, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送文件到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -697,30 +687,29 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
-    <dd><p>The stream of the file.</p>
+    <dd><p>文件的流。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the file.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the file.</p>
+    <dd><p>文件的媒体类型。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -730,9 +719,6 @@ contains the identifier and timestamp of the sent message.</p>
 
 
 
-  <h4 class="section" id="Kook_IMessageChannel_SendFileAsync_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method sends a file as if you are uploading a file directly from your Kook client.</p>
-</div>
 
 
 
@@ -741,10 +727,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_IMessageChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendFileAsync(System.String,System.String,Kook.AttachmentType,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendFileAsync(string, string?, AttachmentType, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a file to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送文件到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -755,30 +741,29 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The file path of the file.</p>
+    <dd><p>文件的路径。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the file.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the file.</p>
+    <dd><p>文件的媒体类型。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 
@@ -788,9 +773,6 @@ contains the identifier and timestamp of the sent message.</p>
 
 
 
-  <h4 class="section" id="Kook_IMessageChannel_SendFileAsync_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_IUser_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method sends a file as if you are uploading a file directly from your Kook client.</p>
-</div>
 
 
 
@@ -799,10 +781,10 @@ contains the identifier and timestamp of the sent message.</p>
 
   <h3 id="Kook_IMessageChannel_SendTextAsync_System_String_Kook_IQuote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessageChannel.SendTextAsync(System.String,Kook.IQuote,Kook.IUser,Kook.RequestOptions)">
   SendTextAsync(string, IQuote?, IUser?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IMessageChannel.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a text message to this message channel.</p>
+  <div class="markdown level1 summary"><p>发送文本消息到此消息频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -813,24 +795,23 @@ contains the identifier and timestamp of the sent message.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The message to be sent.</p>
+    <dd><p>要发送的文本。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>ephemeralUser</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user only who can see the message. Leave null to let everyone see the message.</p>
+    <dd><p>临时消息的接收者。如果设置为指定的用户，则仅该用户可以看到此消息，否则所有人都可以看到此消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd><p>A task that represents an asynchronous send operation for delivering the message. The task result
-contains the identifier and timestamp of the sent message.</p>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
 </dd>
   </dl>
 

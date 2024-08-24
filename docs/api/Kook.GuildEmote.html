@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GuildEmote | Kook.Net 文档 ">
       
-      <meta name="description" content="An image-based emote that is attached to a guild.">
+      <meta name="description" content="表示一个附属于服务器的基于图片的表情符号。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class GuildEmote  <a class="header-action link-secondary" title="View source" hr
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>An image-based emote that is attached to a guild.</p>
+  <div class="markdown summary"><p>表示一个附属于服务器的基于图片的表情符号。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,6 +157,12 @@ Class GuildEmote  <a class="header-action link-secondary" title="View source" hr
       <a class="xref" href="Kook.Emote.html#Kook_Emote_ToPlainTextString">Emote.ToPlainTextString()</a>
     </div>
     <div>
+      <a class="xref" href="Kook.Emote.html#Kook_Emote_ToString">Emote.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Emote.html#Kook_Emote_ToString_Kook_TagMode_">Emote.ToString(TagMode)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
@@ -183,10 +189,10 @@ Class GuildEmote  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_GuildEmote_CreatorId" data-uid="Kook.GuildEmote.CreatorId">
   CreatorId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/GuildEmote.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/GuildEmote.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the user who created this emote.</p>
+  <div class="markdown level1 summary"><p>获取创建此表情符号的用户的 ID</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -201,14 +207,15 @@ Class GuildEmote  <a class="header-action link-secondary" title="View source" hr
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>?</dt>
-    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> representing the user who created this emote;
-<code>null</code> if unknown.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Kook_GuildEmote_CreatorId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果无法确定创建此表情符号的用户的 ID，则为 <code>null</code>。</p>
+</div>
 
 
 
@@ -217,10 +224,10 @@ Class GuildEmote  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Kook_GuildEmote_GuildId" data-uid="Kook.GuildEmote.GuildId">
   GuildId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/GuildEmote.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/GuildEmote.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The ID of the guild this emote is attached to.</p>
+  <div class="markdown level1 summary"><p>获取此表情符号所属的服务器的 ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -235,46 +242,8 @@ Class GuildEmote  <a class="header-action link-secondary" title="View source" hr
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd><p>A ulong that identifies the guild this emote is attached to.</p>
-</dd>
+    <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Kook_GuildEmote_ToString_" data-uid="Kook.GuildEmote.ToString*"></a>
-
-  <h3 id="Kook_GuildEmote_ToString" data-uid="Kook.GuildEmote.ToString">
-  ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Emotes/GuildEmote.cs/#L43"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the raw representation of the emote.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string representing the raw presentation of the emote.</p>
-</dd>
-  </dl>
-
-
-
 
 
 

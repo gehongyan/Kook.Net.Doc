@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IUser | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a generic user.">
+      <meta name="description" content="表示一个通用的用户。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a generic user.</p>
+  <div class="markdown summary"><p>表示一个通用的用户。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -169,10 +169,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_Avatar" data-uid="Kook.IUser.Avatar">
   Avatar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the link to this user's avatar.</p>
+  <div class="markdown level1 summary"><p>获取此用户的头像图像的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -193,6 +193,9 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IUser_Avatar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户为 BUFF 会员，且以 BUFF 会员权益设置了头像，则此属性返回的 URL 表示的是 BUFF 专属头像权益时效后的回退头像。</p>
+</div>
 
 
 
@@ -201,10 +204,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_Banner" data-uid="Kook.IUser.Banner">
   Banner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the link to this user's banner.</p>
+  <div class="markdown level1 summary"><p>获取此用户的横幅图像的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -225,6 +228,9 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IUser_Banner_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户不是 BUFF 会员，或未以 BUFF 会员权限设置横幅，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -233,10 +239,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_BuffAvatar" data-uid="Kook.IUser.BuffAvatar">
   BuffAvatar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the link to this user's BUFF avatar.</p>
+  <div class="markdown level1 summary"><p>获取此用户以 BUFF 会员权益设置的头像图像的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -257,6 +263,9 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IUser_BuffAvatar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户不是 BUFF 会员，或未以 BUFF 会员权限设置头像，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -265,10 +274,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_HasAnnualBuff" data-uid="Kook.IUser.HasAnnualBuff">
   HasAnnualBuff
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user's BUFF subscription is annual; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否订阅了年度 BUFF 会员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -289,6 +298,9 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IUser_HasAnnualBuff_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否订阅了年度 BUFF 会员，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -297,10 +309,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_HasBuff" data-uid="Kook.IUser.HasBuff">
   HasBuff
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user has subscribed to BUFF; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否订阅了 BUFF 会员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -321,6 +333,9 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IUser_HasBuff_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否订阅了 BUFF 会员，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -332,7 +347,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the per-username unique ID for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户的识别号。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -364,7 +379,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the per-username unique ID for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户识别号的数值形式。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -393,10 +408,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_IsBanned" data-uid="Kook.IUser.IsBanned">
   IsBanned
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user is banned; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否被封禁。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -417,6 +432,9 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IUser_IsBanned_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否被封禁，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -425,10 +443,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_IsBot" data-uid="Kook.IUser.IsBot">
   IsBot
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user is a bot; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否为 Bot。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -449,6 +467,9 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IUser_IsBot_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否为 Bot，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -457,10 +478,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_IsDenoiseEnabled" data-uid="Kook.IUser.IsDenoiseEnabled">
   IsDenoiseEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user enabled denoise feature; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否启用了降噪功能。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -481,6 +502,9 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IUser_IsDenoiseEnabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否启用了降噪功能，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -489,10 +513,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_IsSystemUser" data-uid="Kook.IUser.IsSystemUser">
   IsSystemUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user is a system user.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否为系统用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -521,10 +545,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_Nameplates" data-uid="Kook.IUser.Nameplates">
   Nameplates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the nameplates this user has.</p>
+  <div class="markdown level1 summary"><p>获取此用户设置展示的所有铭牌。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -545,6 +569,9 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IUser_Nameplates_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>用户设置的首个铭牌会展示在该用户聊天消息的用户名的右侧，用户设置的所有铭牌会展示在个人信息面板内的用户名下方。</p>
+</div>
 
 
 
@@ -553,10 +580,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_UserTag" data-uid="Kook.IUser.UserTag">
   UserTag
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get the tag this user has.</p>
+  <div class="markdown level1 summary"><p>获取此用户的标签信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -577,6 +604,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Kook_IUser_UserTag_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>用户的标签会显示在服务器用户列表、私信列表、私信消息页、好友列表、个人信息面板、聊天消息的用户名的右侧。 <br>
+如果此用户没有标签，或未知此用户的标签信息，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -588,7 +619,7 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the username for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户的用户名。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -621,10 +652,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_BlockAsync_Kook_RequestOptions_" data-uid="Kook.IUser.BlockAsync(Kook.RequestOptions)">
   BlockAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the friend state with this user.</p>
+  <div class="markdown level1 summary"><p>屏蔽此用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -635,14 +666,14 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for getting the friend state.</p>
+    <dd><p>一个表示异步屏蔽操作的任务。</p>
 </dd>
   </dl>
 
@@ -660,10 +691,10 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Kook_IUser_CreateDMChannelAsync_Kook_RequestOptions_" data-uid="Kook.IUser.CreateDMChannelAsync(Kook.RequestOptions)">
   CreateDMChannelAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates the direct message channel of this user.</p>
+  <div class="markdown level1 summary"><p>创建一个用于与此用户收发私信的频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -674,15 +705,14 @@ Interface IUser  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IDMChannel.html">IDMChannel</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous operation for getting or creating a DM channel. The task result
-contains the DM channel associated with this user.</p>
+    <dd><p>一个表示异步创建操作的任务。任务结果包含与此用户相关的私信频道。</p>
 </dd>
   </dl>
 
@@ -692,16 +722,6 @@ contains the DM channel associated with this user.</p>
 
 
 
-  <h4 class="section" id="Kook_IUser_CreateDMChannelAsync_Kook_RequestOptions__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This method is used to obtain or create a channel used to send a direct message.</p>
-<div class="WARNING"><h5>warning</h5><p>
-     In event that the current user cannot send a message to the target user, a channel can and will
-     still be created by Kook. However, attempting to send a message will yield a
-     <a class="xref" href="Kook.Net.HttpException.html">HttpException</a> with a 403 as its
-     <a class="xref" href="Kook.Net.HttpException.html#Kook_Net_HttpException_HttpCode">HttpCode</a>. There are currently no official workarounds by
-     Kook.
-</p></div>
-</div>
 
 
 
@@ -710,10 +730,10 @@ contains the DM channel associated with this user.</p>
 
   <h3 id="Kook_IUser_GetIntimacyAsync_Kook_RequestOptions_" data-uid="Kook.IUser.GetIntimacyAsync(Kook.RequestOptions)">
   GetIntimacyAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the intimacy information with this user.</p>
+  <div class="markdown level1 summary"><p>获取与此用户的亲密度信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -724,15 +744,14 @@ contains the DM channel associated with this user.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IIntimacy.html">IIntimacy</a>&gt;</dt>
-    <dd><p>A task that represents the asynchronous operation for getting the intimacy information. The task result
-contains the intimacy information associated with this user.</p>
+    <dd><p>一个表示异步获取操作的任务。任务结果包含与此用户的亲密度信息。</p>
 </dd>
   </dl>
 
@@ -750,10 +769,10 @@ contains the intimacy information associated with this user.</p>
 
   <h3 id="Kook_IUser_RemoveFriendAsync_Kook_RequestOptions_" data-uid="Kook.IUser.RemoveFriendAsync(Kook.RequestOptions)">
   RemoveFriendAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L160"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the friend state with this user.</p>
+  <div class="markdown level1 summary"><p>移除与此用户的好友关系。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -764,14 +783,14 @@ contains the intimacy information associated with this user.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for getting the friend state.</p>
+    <dd><p>一个表示异步移除操作的任务。</p>
 </dd>
   </dl>
 
@@ -789,10 +808,10 @@ contains the intimacy information associated with this user.</p>
 
   <h3 id="Kook_IUser_RequestFriendAsync_Kook_RequestOptions_" data-uid="Kook.IUser.RequestFriendAsync(Kook.RequestOptions)">
   RequestFriendAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a friend request to this user.</p>
+  <div class="markdown level1 summary"><p>向此用户发送好友请求。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -803,14 +822,14 @@ contains the intimacy information associated with this user.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for sending the friend request.</p>
+    <dd><p>一个表示异步发送操作的任务。</p>
 </dd>
   </dl>
 
@@ -828,10 +847,10 @@ contains the intimacy information associated with this user.</p>
 
   <h3 id="Kook_IUser_UnblockAsync_Kook_RequestOptions_" data-uid="Kook.IUser.UnblockAsync(Kook.RequestOptions)">
   UnblockAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the friend state with this user.</p>
+  <div class="markdown level1 summary"><p>取消屏蔽此用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -842,14 +861,14 @@ contains the intimacy information associated with this user.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for getting the friend state.</p>
+    <dd><p>一个表示异步取消操作的任务。</p>
 </dd>
   </dl>
 
@@ -867,10 +886,10 @@ contains the intimacy information associated with this user.</p>
 
   <h3 id="Kook_IUser_UpdateIntimacyAsync_System_Action_Kook_IntimacyProperties__Kook_RequestOptions_" data-uid="Kook.IUser.UpdateIntimacyAsync(System.Action{Kook.IntimacyProperties},Kook.RequestOptions)">
   UpdateIntimacyAsync(Action&lt;IntimacyProperties&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Users/IUser.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Updates the intimacy information with this user.</p>
+  <div class="markdown level1 summary"><p>修改与此用户的亲密度信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -881,17 +900,17 @@ contains the intimacy information associated with this user.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.IntimacyProperties.html">IntimacyProperties</a>&gt;</dt>
-    <dd><p>A delegate containing the properties to modify the <a class="xref" href="Kook.IIntimacy.html">IIntimacy</a> with.</p>
+    <dd><p>一个用于修改亲密度信息的委托。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for updating the intimacy information.</p>
+    <dd><p>一个表示异步修改操作的任务。</p>
 </dd>
   </dl>
 
@@ -901,6 +920,9 @@ contains the intimacy information associated with this user.</p>
 
 
 
+  <h4 class="section" id="Kook_IUser_UpdateIntimacyAsync_System_Action_Kook_IntimacyProperties__Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此方法使用指定的属性修改与此用户的亲密度信息。要查看可用的属性，请参考 <a class="xref" href="Kook.IntimacyProperties.html">IntimacyProperties</a>。</p>
+</div>
 
 
 

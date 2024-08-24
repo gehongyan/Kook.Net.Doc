@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class KookClientConfigurator&lt;TClient, TConfig&gt; | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a configurator for a Kook client.">
+      <meta name="description" content="表示一个 KOOK 客户端配置器基类。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Net_DependencyInjection_Microsoft_KookClientConfigurator_2" data-uid="Kook.Net.DependencyInjection.Microsoft.KookClientConfigurator`2" class="text-break">
-Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action li
   <dl><dt>Assembly</dt><dd>Kook.Net.DependencyInjection.Microsoft.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a configurator for a Kook client.</p>
+  <div class="markdown summary"><p>表示一个 KOOK 客户端配置器基类。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -110,10 +110,10 @@ Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action li
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TClient</code></dt>
-    <dd><p>The type of the client.</p>
+    <dd><p>客户端的类型。</p>
 </dd>
     <dt><code>TConfig</code></dt>
-    <dd><p>The type of the configuration.</p>
+    <dd><p>配置的类型。</p>
 </dd>
   </dl>
 
@@ -133,14 +133,6 @@ Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action li
     </dd>
   </dl>
 
-  <dl class="typelist derived">
-    <dt>Derived</dt>
-    <dd>
-      <div><a class="xref" href="Kook.Net.DependencyInjection.Microsoft.KookRestClientConfigurator.html">KookRestClientConfigurator</a></div>
-      <div><a class="xref" href="Kook.Net.DependencyInjection.Microsoft.KookSocketClientConfigurator.html">KookSocketClientConfigurator</a></div>
-      <div><a class="xref" href="Kook.Net.DependencyInjection.Microsoft.KookWebhookClientConfigurator-2.html">KookWebhookClientConfigurator&lt;TClient, TConfig&gt;</a></div>
-    </dd>
-  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -181,10 +173,10 @@ Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action li
 
   <h3 id="Kook_Net_DependencyInjection_Microsoft_KookClientConfigurator_2_ServiceCollection" data-uid="Kook.Net.DependencyInjection.Microsoft.KookClientConfigurator`2.ServiceCollection">
   ServiceCollection
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the service collection to append services.</p>
+  <div class="markdown level1 summary"><p>获取用于添加服务的服务集合。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -217,10 +209,10 @@ Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action li
 
   <h3 id="Kook_Net_DependencyInjection_Microsoft_KookClientConfigurator_2_AppendConfigure_System_Action_System_IServiceProvider__1__" data-uid="Kook.Net.DependencyInjection.Microsoft.KookClientConfigurator`2.AppendConfigure(System.Action{System.IServiceProvider,`1})">
   AppendConfigure(Action&lt;IServiceProvider, TConfig&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Appends a configuration action, which is executed on the created configuration instance.</p>
+  <div class="markdown level1 summary"><p>添加一个配置操作，该操作将在创建的配置实例上执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -231,14 +223,14 @@ Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action li
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, TConfig&gt;</dt>
-    <dd><p>The configuration action.</p>
+    <dd><p>配置操作。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Net.DependencyInjection.Microsoft.IKookClientConfigurator-2.html">IKookClientConfigurator</a>&lt;TClient, TConfig&gt;</dt>
-    <dd><p>The configurator.</p>
+    <dd><p>添加了配置操作的配置器。</p>
 </dd>
   </dl>
 
@@ -256,10 +248,10 @@ Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action li
 
   <h3 id="Kook_Net_DependencyInjection_Microsoft_KookClientConfigurator_2_AppendService_System_Action_Microsoft_Extensions_DependencyInjection_IServiceCollection__" data-uid="Kook.Net.DependencyInjection.Microsoft.KookClientConfigurator`2.AppendService(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})">
   AppendService(Action&lt;IServiceCollection&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Appends a service action, which is executed on the service collection.</p>
+  <div class="markdown level1 summary"><p>添加一个服务操作，该操作将在服务集合上执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -270,14 +262,14 @@ Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action li
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a>&gt;</dt>
-    <dd><p>The service action.</p>
+    <dd><p>服务操作。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Net.DependencyInjection.Microsoft.IKookClientConfigurator-2.html">IKookClientConfigurator</a>&lt;TClient, TConfig&gt;</dt>
-    <dd><p>The configurator.</p>
+    <dd><p>添加了服务操作的配置器。</p>
 </dd>
   </dl>
 
@@ -295,10 +287,10 @@ Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action li
 
   <h3 id="Kook_Net_DependencyInjection_Microsoft_KookClientConfigurator_2_Complete" data-uid="Kook.Net.DependencyInjection.Microsoft.KookClientConfigurator`2.Complete">
   Complete()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Completes the configuration.</p>
+  <div class="markdown level1 summary"><p>完成配置。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -322,7 +314,7 @@ Class KookClientConfigurator&lt;TClient, TConfig&gt;  <a class="header-action li
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.DependencyInjection.Microsoft/Configurators/KookClientConfigurator.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

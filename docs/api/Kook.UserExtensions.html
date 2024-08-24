@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class UserExtensions | Kook.Net 文档 ">
       
-      <meta name="description" content="An extension class for various Kook user objects.">
+      <meta name="description" content="提供用于各种用户实体的扩展方法。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_UserExtensions" data-uid="Kook.UserExtensions" class="text-break">
-Class UserExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L4"><i class="bi bi-code-slash"></i></a>
+Class UserExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>An extension class for various Kook user objects.</p>
+  <div class="markdown summary"><p>提供用于各种用户实体的扩展方法。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,10 +157,10 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_UserExtensions_BanAsync_Kook_IGuildUser_System_Int32_System_String_Kook_RequestOptions_" data-uid="Kook.UserExtensions.BanAsync(Kook.IGuildUser,System.Int32,System.String,Kook.RequestOptions)">
   BanAsync(IGuildUser, int, string?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Bans the user from the guild and optionally prunes their recent messages.</p>
+  <div class="markdown level1 summary"><p>封禁服务器内的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -171,23 +171,23 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>user</code> <a class="xref" href="Kook.IGuildUser.html">IGuildUser</a></dt>
-    <dd><p>The user to ban.</p>
+    <dd><p>要封禁的用户。</p>
 </dd>
     <dt><code>pruneDays</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of days to remove messages from this <code class="paramref">user</code> for - must be between [0, 7]</p>
+    <dd><p>要删除此服务器中来自此用户的最近几天的消息，范围为 <code>0</code> 至 <code>7</code>，<code>0</code> 表示不删除。</p>
 </dd>
     <dt><code>reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The reason of the ban to be written in the audit log.</p>
+    <dd><p>封禁原因。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation for banning a user.</p>
+    <dd><p>一个表示异步封禁操作的任务。</p>
 </dd>
   </dl>
 
@@ -201,7 +201,7 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p><code class="paramref">pruneDays</code> is not between 0 to 7.</p>
+    <dd><p><code class="paramref">pruneDays</code> 超出了 0 至 7 的范围。</p>
 </dd>
   </dl>
 
@@ -211,10 +211,10 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_UserExtensions_SendCardAsync_Kook_IUser_Kook_ICard_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.UserExtensions.SendCardAsync(Kook.IUser,Kook.ICard,Kook.IQuote,Kook.RequestOptions)">
   SendCardAsync(IUser, ICard, IQuote?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a card message message via DM.</p>
+  <div class="markdown level1 summary"><p>通过私聊发送卡片消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -225,23 +225,24 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user to send the DM to.</p>
+    <dd><p>要发送消息的用户。</p>
 </dd>
     <dt><code>card</code> <a class="xref" href="Kook.ICard.html">ICard</a></dt>
-    <dd><p>The card to be sent.</p>
+    <dd><p>要发送的卡片。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The request options for this <code>async</code> request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
+</dd>
   </dl>
 
 
@@ -258,10 +259,10 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_UserExtensions_SendCardsAsync_Kook_IUser_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.UserExtensions.SendCardsAsync(Kook.IUser,System.Collections.Generic.IEnumerable{Kook.ICard},Kook.IQuote,Kook.RequestOptions)">
   SendCardsAsync(IUser, IEnumerable&lt;ICard&gt;, IQuote?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a card message message via DM.</p>
+  <div class="markdown level1 summary"><p>通过私聊发送卡片消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -272,23 +273,24 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user to send the DM to.</p>
+    <dd><p>要发送消息的用户。</p>
 </dd>
     <dt><code>cards</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
-    <dd><p>The cards to be sent.</p>
+    <dd><p>要发送的卡片。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The request options for this <code>async</code> request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
+</dd>
   </dl>
 
 
@@ -305,10 +307,10 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_UserExtensions_SendFileAsync_Kook_IUser_Kook_FileAttachment_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.UserExtensions.SendFileAsync(Kook.IUser,Kook.FileAttachment,Kook.IQuote,Kook.RequestOptions)">
   SendFileAsync(IUser, FileAttachment, IQuote?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a file via DM.</p>
+  <div class="markdown level1 summary"><p>通过私聊发送文件。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -319,23 +321,24 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user to send the DM to.</p>
+    <dd><p>要发送消息的用户。</p>
 </dd>
     <dt><code>attachment</code> <a class="xref" href="Kook.FileAttachment.html">FileAttachment</a></dt>
-    <dd><p>The attachment containing the file.</p>
+    <dd><p>文件的附件信息。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
+</dd>
   </dl>
 
 
@@ -352,10 +355,10 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_UserExtensions_SendFileAsync_Kook_IUser_System_IO_Stream_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.UserExtensions.SendFileAsync(Kook.IUser,System.IO.Stream,System.String,Kook.AttachmentType,Kook.IQuote,Kook.RequestOptions)">
   SendFileAsync(IUser, Stream, string, AttachmentType, IQuote?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a file via DM.</p>
+  <div class="markdown level1 summary"><p>通过私聊发送文件。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -366,29 +369,30 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user to send the DM to.</p>
+    <dd><p>要发送消息的用户。</p>
 </dd>
     <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
-    <dd><p>The stream of the file.</p>
+    <dd><p>文件的流。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the file.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the file.</p>
+    <dd><p>文件的媒体类型。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
+</dd>
   </dl>
 
 
@@ -405,10 +409,10 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_UserExtensions_SendFileAsync_Kook_IUser_System_String_System_String_Kook_AttachmentType_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.UserExtensions.SendFileAsync(Kook.IUser,System.String,System.String,Kook.AttachmentType,Kook.IQuote,Kook.RequestOptions)">
   SendFileAsync(IUser, string, string?, AttachmentType, IQuote?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a file via DM.</p>
+  <div class="markdown level1 summary"><p>通过私聊发送文件。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -419,29 +423,30 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user to send the DM to.</p>
+    <dd><p>要发送消息的用户。</p>
 </dd>
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The file path of the file.</p>
+    <dd><p>文件的路径。</p>
 </dd>
     <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the file.</p>
+    <dd><p>文件名。</p>
 </dd>
     <dt><code>type</code> <a class="xref" href="Kook.AttachmentType.html">AttachmentType</a></dt>
-    <dd><p>The type of the file.</p>
+    <dd><p>文件的媒体类型。</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
+</dd>
   </dl>
 
 
@@ -458,10 +463,10 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_UserExtensions_SendTextAsync_Kook_IUser_System_String_Kook_IQuote_Kook_RequestOptions_" data-uid="Kook.UserExtensions.SendTextAsync(Kook.IUser,System.String,Kook.IQuote,Kook.RequestOptions)">
   SendTextAsync(IUser, string, IQuote?, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a text message via DM.</p>
+  <div class="markdown level1 summary"><p>通过私聊发送文本消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -472,23 +477,24 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>user</code> <a class="xref" href="Kook.IUser.html">IUser</a></dt>
-    <dd><p>The user to send the DM to.</p>
+    <dd><p>要发送消息的用户。</p>
 </dd>
     <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The KMarkdown content to be sent.</p>
 </dd>
     <dt><code>quote</code> <a class="xref" href="Kook.IQuote.html">IQuote</a></dt>
-    <dd><p>The message quote to be included. Used to reply to specific messages.</p>
+    <dd><p>消息引用，用于回复消息。</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
-    <dd><p>The options to be used when sending the request.</p>
+    <dd><p>发送请求时要使用的选项。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Cacheable-2.html">Cacheable</a>&lt;<a class="xref" href="Kook.IUserMessage.html">IUserMessage</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>一个表示异步发送操作的任务。任务的结果包含所发送消息的可延迟加载的消息对象。</p>
+</dd>
   </dl>
 
 
@@ -505,7 +511,7 @@ Class UserExtensions  <a class="header-action link-secondary" title="View source
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L4" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Extensions/UserExtensions.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct ExecuteResult | Kook.Net 文档 ">
       
-      <meta name="description" content="Contains information of the command&#39;s overall execution result.">
+      <meta name="description" content="表示一个命令的整体执行结果的信息。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Struct ExecuteResult  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Contains information of the command's overall execution result.</p>
+  <div class="markdown summary"><p>表示一个命令的整体执行结果的信息。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -153,7 +153,7 @@ Struct ExecuteResult  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Describes the error type that may have occurred during the operation.</p>
+  <div class="markdown level1 summary"><p>获取在命令执行期间发生的异常信息，如果没有异常则为 <code>null</code>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -168,9 +168,7 @@ Struct ExecuteResult  <a class="header-action link-secondary" title="View source
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.CommandError.html">CommandError</a>?</dt>
-    <dd><p>A <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a> indicating the type of error that may have occurred during the operation;
-<code>null</code> if the operation was successful.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -187,7 +185,7 @@ Struct ExecuteResult  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Describes the reason for the error.</p>
+  <div class="markdown level1 summary"><p>获取在命令执行期间发生的异常的原因，如果没有异常则为 <code>null</code>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -202,8 +200,7 @@ Struct ExecuteResult  <a class="header-action link-secondary" title="View source
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string containing the error reason.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -220,7 +217,7 @@ Struct ExecuteResult  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the exception that may have occurred during the command execution.</p>
+  <div class="markdown level1 summary"><p>获取在命令执行期间发生的异常，如果没有异常则为 <code>null</code>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -252,7 +249,7 @@ Struct ExecuteResult  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Indicates whether the operation was successful or not.</p>
+  <div class="markdown level1 summary"><p>获取命令执行的结果是否为成功。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -267,8 +264,7 @@ Struct ExecuteResult  <a class="header-action link-secondary" title="View source
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the result is positive; otherwise <code>false</code>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -286,11 +282,10 @@ Struct ExecuteResult  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Commands_ExecuteResult_FromError_Kook_Commands_CommandError_System_String_" data-uid="Kook.Commands.ExecuteResult.FromError(Kook.Commands.CommandError,System.String)">
   FromError(CommandError, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> with a specified <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a> and its
-reason, indicating an unsuccessful execution.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定错误类型和原因的 <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> 结构的新实例，表示一个失败的执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -301,17 +296,17 @@ reason, indicating an unsuccessful execution.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>error</code> <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a></dt>
-    <dd><p>The type of error.</p>
+    <dd><p>错误类型。</p>
 </dd>
     <dt><code>reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The reason behind the error.</p>
+    <dd><p>错误原因。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a></dt>
-    <dd><p>A <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> that contains a <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a> and reason.</p>
+    <dd><p>一个表示执行失败的 <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a>。</p>
 </dd>
   </dl>
 
@@ -329,12 +324,11 @@ reason, indicating an unsuccessful execution.</p>
 
   <h3 id="Kook_Commands_ExecuteResult_FromError_Kook_Commands_IResult_" data-uid="Kook.Commands.ExecuteResult.FromError(Kook.Commands.IResult)">
   FromError(IResult)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> with a specified result; this may or may not be an
-successful execution depending on the <a class="xref" href="Kook.Commands.IResult.html#Kook_Commands_IResult_Error">Error</a> and
-<a class="xref" href="Kook.Commands.IResult.html#Kook_Commands_IResult_ErrorReason">ErrorReason</a> specified.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定结果的 <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> 结构的新实例，根据指定的 <a class="xref" href="Kook.Commands.IResult.html#Kook_Commands_IResult_Error">Error</a> 和
+<a class="xref" href="Kook.Commands.IResult.html#Kook_Commands_IResult_ErrorReason">ErrorReason</a>，这可能是一个成功的执行，也可能是一个失败的执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -345,14 +339,14 @@ successful execution depending on the <a class="xref" href="Kook.Commands.IResul
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>result</code> <a class="xref" href="Kook.Commands.IResult.html">IResult</a></dt>
-    <dd><p>The result to inherit from.</p>
+    <dd><p>要包装的结果。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a></dt>
-    <dd><p>A <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> that inherits the <a class="xref" href="Kook.Commands.IResult.html">IResult</a> error type and reason.</p>
+    <dd><p>一个表示执行结果的 <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a>，错误类型和原因与 <code class="paramref">result</code> 相同。</p>
 </dd>
   </dl>
 
@@ -370,11 +364,10 @@ successful execution depending on the <a class="xref" href="Kook.Commands.IResul
 
   <h3 id="Kook_Commands_ExecuteResult_FromError_System_Exception_" data-uid="Kook.Commands.ExecuteResult.FromError(System.Exception)">
   FromError(Exception?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> with a specified exception, indicating an unsuccessful
-execution.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定异常的 <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> 结构的新实例，表示一个失败的执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -385,16 +378,15 @@ execution.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
-    <dd><p>The exception that caused the command execution to fail.</p>
+    <dd><p>导致执行失败的异常。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a></dt>
-    <dd><p>A <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> that contains the exception that caused the unsuccessful execution, along
-with a <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a> of type <code>Exception</code> as well as the exception message as the
-reason.</p>
+    <dd><p>一个包含导致执行失败的异常的 <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a>，其错误类型为
+<a class="xref" href="Kook.Commands.CommandError.html#Kook_Commands_CommandError_Exception">Exception</a>，原因为异常消息。</p>
 </dd>
   </dl>
 
@@ -412,10 +404,10 @@ reason.</p>
 
   <h3 id="Kook_Commands_ExecuteResult_FromSuccess" data-uid="Kook.Commands.ExecuteResult.FromSuccess">
   FromSuccess()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> with no error, indicating a successful execution.</p>
+  <div class="markdown level1 summary"><p>初始化一个不包含任何错误的 <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> 结构的新实例，表示一个成功的执行。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -427,7 +419,7 @@ reason.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a></dt>
-    <dd><p>A <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a> that does not contain any errors.</p>
+    <dd><p>一个表示执行成功的 <a class="xref" href="Kook.Commands.ExecuteResult.html">ExecuteResult</a>。</p>
 </dd>
   </dl>
 
@@ -445,10 +437,10 @@ reason.</p>
 
   <h3 id="Kook_Commands_ExecuteResult_ToString" data-uid="Kook.Commands.ExecuteResult.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/ExecuteResult.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a string that indicates the execution result.</p>
+  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -460,8 +452,7 @@ reason.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p><code>Success</code> if <a class="xref" href="Kook.Commands.ExecuteResult.html#Kook_Commands_ExecuteResult_IsSuccess">IsSuccess</a> is <code>true</code>; otherwise &quot;<a class="xref" href="Kook.Commands.ExecuteResult.html#Kook_Commands_ExecuteResult_Error">Error</a>:
-<a class="xref" href="Kook.Commands.ExecuteResult.html#Kook_Commands_ExecuteResult_ErrorReason">ErrorReason</a>&quot;.</p>
+    <dd><p>The fully qualified type name.</p>
 </dd>
   </dl>
 

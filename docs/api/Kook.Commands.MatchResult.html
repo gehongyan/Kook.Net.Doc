@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MatchResult | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents the match result of a command.">
+      <meta name="description" content="表示一个命令的匹配结果。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents the match result of a command.</p>
+  <div class="markdown summary"><p>表示一个命令的匹配结果。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -163,7 +163,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/MatchResult.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Describes the error type that may have occurred during the operation.</p>
+  <div class="markdown level1 summary"><p>获取在命令执行期间发生的异常信息，如果没有异常则为 <code>null</code>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -178,9 +178,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.CommandError.html">CommandError</a>?</dt>
-    <dd><p>A <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a> indicating the type of error that may have occurred during the operation;
-<code>null</code> if the operation was successful.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -197,7 +195,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/MatchResult.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Describes the reason for the error.</p>
+  <div class="markdown level1 summary"><p>获取在命令执行期间发生的异常的原因，如果没有异常则为 <code>null</code>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -212,8 +210,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string containing the error reason.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -230,7 +227,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/MatchResult.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Indicates whether the operation was successful or not.</p>
+  <div class="markdown level1 summary"><p>获取命令执行的结果是否为成功。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -245,8 +242,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the result is positive; otherwise <code>false</code>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -263,7 +259,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/MatchResult.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the command that may have matched during the command execution.</p>
+  <div class="markdown level1 summary"><p>获取在命令执行期间可能与输入文本匹配的命令。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -295,7 +291,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/MatchResult.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets on which pipeline stage the command may have matched or failed.</p>
+  <div class="markdown level1 summary"><p>获取命令在执行工作流中的阶段。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -331,7 +327,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/MatchResult.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a failed match result.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定错误类型和原因的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a> 类的新实例，表示一个失败的匹配。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -342,17 +338,17 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>error</code> <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a></dt>
-    <dd><p>The error that occurred.</p>
+    <dd><p>命令匹配失败的类型。</p>
 </dd>
     <dt><code>reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The reason for the error.</p>
+    <dd><p>命令匹配失败的原因。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a></dt>
-    <dd><p>The match result.</p>
+    <dd><p>一个表示匹配失败的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a>。</p>
 </dd>
   </dl>
 
@@ -373,7 +369,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/MatchResult.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a failed match result.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定失败结果的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a> 类的新实例，表示一个失败的匹配。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -384,14 +380,14 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>result</code> <a class="xref" href="Kook.Commands.IResult.html">IResult</a></dt>
-    <dd><p>The result that failed.</p>
+    <dd><p>失败的结果。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a></dt>
-    <dd><p>The match result.</p>
+    <dd><p>一个表示匹配失败的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a>。</p>
 </dd>
   </dl>
 
@@ -412,7 +408,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/MatchResult.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a failed match result.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定错误类型和原因的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a> 类的新实例，表示一个失败的匹配。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -423,20 +419,20 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>pipeline</code> <a class="xref" href="Kook.Commands.IResult.html">IResult</a></dt>
-    <dd><p>The pipeline stage on which the command failed.</p>
+    <dd><p>命令执行工作流中的阶段。</p>
 </dd>
     <dt><code>error</code> <a class="xref" href="Kook.Commands.CommandError.html">CommandError</a></dt>
-    <dd><p>The error that occurred.</p>
+    <dd><p>错误类型。</p>
 </dd>
     <dt><code>reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The reason for the error.</p>
+    <dd><p>错误原因。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a></dt>
-    <dd><p>The match result.</p>
+    <dd><p>一个表示匹配失败的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a>。</p>
 </dd>
   </dl>
 
@@ -457,7 +453,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/MatchResult.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a failed match result.</p>
+  <div class="markdown level1 summary"><p>初始化一个包含指定异常的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a> 类的新实例，表示一个失败的匹配。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -468,14 +464,14 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
-    <dd><p>The exception that occurred.</p>
+    <dd><p>导致匹配失败的异常。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a></dt>
-    <dd><p>The match result.</p>
+    <dd><p>一个表示匹配失败的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a>。</p>
 </dd>
   </dl>
 
@@ -496,7 +492,7 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Results/MatchResult.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a successful match result.</p>
+  <div class="markdown level1 summary"><p>初始化一个不包含任何错误的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a> 类的新实例，表示一个成功的匹配。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -507,17 +503,17 @@ Class MatchResult  <a class="header-action link-secondary" title="View source" h
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>match</code> <a class="xref" href="Kook.Commands.CommandMatch.html">CommandMatch</a></dt>
-    <dd><p>The command that matched.</p>
+    <dd><p>命令匹配信息。</p>
 </dd>
     <dt><code>pipeline</code> <a class="xref" href="Kook.Commands.IResult.html">IResult</a></dt>
-    <dd><p>The pipeline stage on which the command matched.</p>
+    <dd><p>命令执行工作流中的阶段。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a></dt>
-    <dd><p>The match result.</p>
+    <dd><p>一个表示匹配成功的 <a class="xref" href="Kook.Commands.MatchResult.html">MatchResult</a>。</p>
 </dd>
   </dl>
 

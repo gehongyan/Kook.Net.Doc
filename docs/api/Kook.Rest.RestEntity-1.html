@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class RestEntity&lt;T&gt; | Kook.Net 文档 </title>
+      <title>Class RestEntity&lt;TId&gt; | Kook.Net 文档 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class RestEntity&lt;T&gt; | Kook.Net 文档 ">
+      <meta name="title" content="Class RestEntity&lt;TId&gt; | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a generic REST-based entity.">
+      <meta name="description" content="表示一个基于 REST 的具有唯一标识符的实体。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Rest_RestEntity_1" data-uid="Kook.Rest.RestEntity`1" class="text-break">
-Class RestEntity&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/RestEntity.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class RestEntity&lt;TId&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/RestEntity.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,34 +97,35 @@ Class RestEntity&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>Kook.Net.Rest.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a generic REST-based entity.</p>
+  <div class="markdown summary"><p>表示一个基于 REST 的具有唯一标识符的实体。</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class RestEntity&lt;T&gt; : IEntity&lt;T&gt; where T : IEquatable&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class RestEntity&lt;TId&gt; : IEntity&lt;TId&gt; where TId : IEquatable&lt;TId&gt;</code></pre>
   </div>
 
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd></dd>
+    <dt><code>TId</code></dt>
+    <dd><p>唯一标识符的类型。</p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">RestEntity&lt;T&gt;</span></div>
+      <div><span class="xref">RestEntity&lt;TId&gt;</span></div>
     </dd>
   </dl>
 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;T&gt;</div>
+      <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;TId&gt;</div>
     </dd>
   </dl>
 
@@ -140,7 +141,6 @@ Class RestEntity&lt;T&gt;  <a class="header-action link-secondary" title="View s
       <div><a class="xref" href="Kook.Rest.RestMessage.html">RestMessage</a></div>
       <div><a class="xref" href="Kook.Rest.RestRole.html">RestRole</a></div>
       <div><a class="xref" href="Kook.Rest.RestUser.html">RestUser</a></div>
-      <div><a class="xref" href="Kook.Rest.RestVoiceRegion.html">RestVoiceRegion</a></div>
     </dd>
   </dl>
 
@@ -186,12 +186,12 @@ Class RestEntity&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/RestEntity.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the unique identifier for this object.</p>
+  <div class="markdown level1 summary"><p>获取此实体的唯一标识符。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T Id { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TId Id { get; }</code></pre>
   </div>
 
 
@@ -200,7 +200,7 @@ Class RestEntity&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
+    <dt><span class="xref">TId</span></dt>
     <dd></dd>
   </dl>
 

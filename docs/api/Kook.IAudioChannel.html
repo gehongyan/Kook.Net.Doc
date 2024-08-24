@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IAudioChannel | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a generic audio channel.">
+      <meta name="description" content="表示一个通用的音频频道。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface IAudioChannel  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a generic audio channel.</p>
+  <div class="markdown summary"><p>表示一个通用的音频频道。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -147,14 +147,46 @@ Interface IAudioChannel  <a class="header-action link-secondary" title="View sou
 </h2>
 
 
+  <a id="Kook_IAudioChannel_AudioClient_" data-uid="Kook.IAudioChannel.AudioClient*"></a>
+
+  <h3 id="Kook_IAudioChannel_AudioClient" data-uid="Kook.IAudioChannel.AudioClient">
+  AudioClient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取在此音频频道上建立的语音客户端。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IAudioClient? AudioClient { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_IAudioChannel_IsVoiceRegionOverwritten_" data-uid="Kook.IAudioChannel.IsVoiceRegionOverwritten*"></a>
 
   <h3 id="Kook_IAudioChannel_IsVoiceRegionOverwritten" data-uid="Kook.IAudioChannel.IsVoiceRegionOverwritten">
   IsVoiceRegionOverwritten
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the voice region of this audio channel is overwritten.</p>
+  <div class="markdown level1 summary"><p>获取此音频频道的语音区域设置是否覆写了服务器的语音区域设置。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -183,10 +215,10 @@ Interface IAudioChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_IAudioChannel_ServerUrl" data-uid="Kook.IAudioChannel.ServerUrl">
   ServerUrl
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the server url that clients should connect to to join this voice channel.</p>
+  <div class="markdown level1 summary"><p>获取语音客户端连接到此语音频道的语音服务器 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -201,8 +233,7 @@ Interface IAudioChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string representing the url that clients should connect to to join this voice channel.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -216,10 +247,10 @@ Interface IAudioChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_IAudioChannel_VoiceRegion" data-uid="Kook.IAudioChannel.VoiceRegion">
   VoiceRegion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the voice region for this audio channel.</p>
+  <div class="markdown level1 summary"><p>获取此音频频道所设置的语音服务器区域。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -242,11 +273,17 @@ Interface IAudioChannel  <a class="header-action link-secondary" title="View sou
 
   <h4 class="section" id="Kook_IAudioChannel_VoiceRegion_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
-        This property may be empty if the voice channel is created before this feature was released.
+        对于语音频道区域设置功能发布之前创建的语音频道，该属性可能为空。
     </p></div>
 </div>
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.IGuild.html#Kook_IGuild_Region">Region</a></div>
+    </dd>
+  </dl>
 
 
   <h2 class="section" id="methods">Methods
@@ -257,10 +294,10 @@ Interface IAudioChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_IAudioChannel_ConnectAsync_System_Boolean_System_Boolean_System_String_" data-uid="Kook.IAudioChannel.ConnectAsync(System.Boolean,System.Boolean,System.String)">
   ConnectAsync(bool, bool, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Connects to this audio channel.</p>
+  <div class="markdown level1 summary"><p>连接到此音频频道。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -271,21 +308,21 @@ Interface IAudioChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>external</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Determines whether the audio client is an external one or not.</p>
+    <dd><p>指定语音客户端是否是由外部管理的。当设置为 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> 时，当前方法不会尝试连接到语音频道。</p>
 </dd>
     <dt><code>disconnect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Determines whether the client should send a disconnect call before connecting to a new voice channel.</p>
+    <dd><p>指定语音客户端在连接到新的语音频道之前是否应调用断开连接。</p>
 </dd>
     <dt><code>password</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The password to use when connecting to the audio channel.</p>
+    <dd><p>指定客户端连接到设置了密码的语音频道时所使用的密码。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a>&gt;</dt>
-    <dd><p>A task representing the asynchronous connection operation. The task result contains the
-<a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a> responsible for the connection.</p>
+    <dd><p>一个表示音频连接操作的异步任务。任务的结果是一个负责音频连接的 <a class="xref" href="Kook.Audio.IAudioClient.html">IAudioClient</a> 实例；如果
+<code class="paramref">external</code> 为 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>，则会返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
 </dd>
   </dl>
 
@@ -303,10 +340,10 @@ Interface IAudioChannel  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Kook_IAudioChannel_DisconnectAsync" data-uid="Kook.IAudioChannel.DisconnectAsync">
   DisconnectAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/IAudioChannel.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Disconnects from this audio channel.</p>
+  <div class="markdown level1 summary"><p>断开与此音频频道的连接。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -318,7 +355,7 @@ Interface IAudioChannel  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task representing the asynchronous operation for disconnecting from the audio channel.</p>
+    <dd><p>一个表示音频断开连接操作的异步任务。</p>
 </dd>
   </dl>
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class KookClientHostExtensions | Kook.Net 文档 ">
       
-      <meta name="description" content="Provides extension methods for Kook.Net to host clients using the .">
+      <meta name="description" content="提供用于与 Microsoft.Extensions.Hosting 集成，注册与配置 Kook.Net 客户端作为服务的扩展方法。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class KookClientHostExtensions  <a class="header-action link-secondary" title="V
   <dl><dt>Assembly</dt><dd>Kook.Net.Hosting.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides extension methods for Kook.Net to host clients using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihost">IHost</a>.</p>
+  <div class="markdown summary"><p>提供用于与 Microsoft.Extensions.Hosting 集成，注册与配置 Kook.Net 客户端作为服务的扩展方法。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -157,11 +157,12 @@ Class KookClientHostExtensions  <a class="header-action link-secondary" title="V
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_Kook_Rest_KookRestConfig_Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,Kook.Rest.KookRestConfig,Kook.TokenType,System.String,System.Boolean)">
   AddHostedKookRestClient(IServiceCollection, KookRestConfig, TokenType, string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
-the specified configuration action and login information.</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -172,26 +173,26 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加 KOOK REST 客户端及服务的服务集合。</p>
 </dd>
     <dt><code>config</code> <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a></dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>.</p>
+    <dd><p>用于配置 KOOK REST 客户端的配置。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了 KOOK REST 客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
@@ -209,11 +210,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_Kook_Rest_KookRestConfig_System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,Kook.Rest.KookRestConfig,System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
   AddHostedKookRestClient(IServiceCollection, KookRestConfig, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
-the specified configuration action and login information.</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -224,26 +226,26 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加 KOOK REST 客户端及服务的服务集合。</p>
 </dd>
     <dt><code>config</code> <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a></dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>.</p>
+    <dd><p>用于配置 KOOK REST 客户端的配置。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了 KOOK REST 客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
@@ -261,11 +263,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Kook_Rest_KookRestConfig__Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Kook.Rest.KookRestConfig},Kook.TokenType,System.String,System.Boolean)">
   AddHostedKookRestClient(IServiceCollection, Action&lt;KookRestConfig&gt;, TokenType, string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
-the specified configuration action and login information.</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -276,26 +279,26 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加 KOOK REST 客户端及服务的服务集合。</p>
 </dd>
     <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>&gt;</dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>.</p>
+    <dd><p>用于配置 KOOK REST 客户端的配置委托。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了 KOOK REST 客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
@@ -313,11 +316,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookRestClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Kook_Rest_KookRestConfig__System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookRestClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Kook.Rest.KookRestConfig},System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
   AddHostedKookRestClient(IServiceCollection, Action&lt;KookRestConfig&gt;, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
-the specified configuration action and login information.</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -328,26 +332,26 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加 KOOK REST 客户端及服务的服务集合。</p>
 </dd>
     <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>&gt;</dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.Rest.KookRestConfig.html">KookRestConfig</a>.</p>
+    <dd><p>用于配置 KOOK REST 客户端的配置委托。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了 KOOK REST 客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
@@ -365,11 +369,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_Kook_WebSocket_KookSocketConfig_Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,Kook.WebSocket.KookSocketConfig,Kook.TokenType,System.String,System.Boolean)">
   AddHostedKookSocketClient(IServiceCollection, KookSocketConfig, TokenType, string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
-the specified configuration action and login information.</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -380,26 +385,26 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
     <dt><code>config</code> <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a></dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>.</p>
+    <dd><p>用于配置 KOOK 网关客户端的配置。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
@@ -417,11 +422,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_Kook_WebSocket_KookSocketConfig_System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,Kook.WebSocket.KookSocketConfig,System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
   AddHostedKookSocketClient(IServiceCollection, KookSocketConfig, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
-the specified configuration action and login information.</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -432,26 +438,26 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
     <dt><code>config</code> <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a></dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>.</p>
+    <dd><p>用于配置 KOOK 网关客户端的配置。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
@@ -469,11 +475,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Kook_WebSocket_KookSocketConfig__Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Kook.WebSocket.KookSocketConfig},Kook.TokenType,System.String,System.Boolean)">
   AddHostedKookSocketClient(IServiceCollection, Action&lt;KookSocketConfig&gt;, TokenType, string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
-the specified configuration action and login information.</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -484,26 +491,26 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
     <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>&gt;</dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>.</p>
+    <dd><p>用于配置 KOOK 网关客户端的配置委托。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
@@ -521,11 +528,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookSocketClient_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Kook_WebSocket_KookSocketConfig__System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookSocketClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Kook.WebSocket.KookSocketConfig},System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
   AddHostedKookSocketClient(IServiceCollection, Action&lt;KookSocketConfig&gt;, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with
-the specified configuration action and login information.</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.WebSocket.KookSocketClient.html">KookSocketClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -536,26 +544,26 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
     <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>&gt;</dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.WebSocket.KookSocketConfig.html">KookSocketConfig</a>.</p>
+    <dd><p>用于配置 KOOK 网关客户端的配置委托。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
@@ -573,10 +581,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider_Microsoft_Extensions_Options_IOptions___1____0__System_Action___1__Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,Microsoft.Extensions.Options.IOptions{``1},``0},System.Action{``1},Kook.TokenType,System.String,System.Boolean)">
   AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(IServiceCollection, Func&lt;IServiceProvider, IOptions&lt;TConfig&gt;, TClient&gt;, Action&lt;TConfig&gt;, TokenType, string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -587,39 +597,39 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加基于 Webhook 的 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
     <dt><code>clientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;TConfig&gt;, TClient&gt;</dt>
-    <dd><p>The factory to create the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+    <dd><p>客户端创建委托。</p>
 </dd>
     <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TConfig&gt;</dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+    <dd><p>用于配置基于 Webhook 的 KOOK 网关客户端的配置委托。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了基于 Webhook 的 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TClient</code></dt>
-    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+    <dd><p>客户端的类型。</p>
 </dd>
     <dt><code>TConfig</code></dt>
-    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+    <dd><p>配置的类型。</p>
 </dd>
   </dl>
 
@@ -636,10 +646,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider_Microsoft_Extensions_Options_IOptions___1____0__System_Action___1__System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,Microsoft.Extensions.Options.IOptions{``1},``0},System.Action{``1},System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
   AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(IServiceCollection, Func&lt;IServiceProvider, IOptions&lt;TConfig&gt;, TClient&gt;, Action&lt;TConfig&gt;, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -650,39 +662,39 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加基于 Webhook 的 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
     <dt><code>clientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;TConfig&gt;, TClient&gt;</dt>
-    <dd><p>The factory to create the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+    <dd><p>客户端创建委托。</p>
 </dd>
     <dt><code>configure</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TConfig&gt;</dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+    <dd><p>用于配置基于 Webhook 的 KOOK 网关客户端的配置委托。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了基于 Webhook 的 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TClient</code></dt>
-    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+    <dd><p>客户端的类型。</p>
 </dd>
     <dt><code>TConfig</code></dt>
-    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+    <dd><p>配置的类型。</p>
 </dd>
   </dl>
 
@@ -699,10 +711,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___1___0____1_Kook_TokenType_System_String_System_Boolean_" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1,``0},``1,Kook.TokenType,System.String,System.Boolean)">
   AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(IServiceCollection, Func&lt;IServiceProvider, TConfig, TClient&gt;, TConfig, TokenType, string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -713,39 +727,39 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加基于 Webhook 的 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
     <dt><code>clientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, TConfig, TClient&gt;</dt>
-    <dd><p>The factory to create the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+    <dd><p>客户端创建委托。</p>
 </dd>
     <dt><code>config</code> <span class="xref">TConfig</span></dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+    <dd><p>用于配置基于 Webhook 的 KOOK 网关客户端的配置。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="Kook.TokenType.html">TokenType</a></dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了基于 Webhook 的 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TClient</code></dt>
-    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+    <dd><p>客户端的类型。</p>
 </dd>
     <dt><code>TConfig</code></dt>
-    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+    <dd><p>配置的类型。</p>
 </dd>
   </dl>
 
@@ -762,10 +776,12 @@ the specified configuration action and login information.</p>
 
   <h3 id="Kook_Net_Hosting_KookClientHostExtensions_AddHostedKookWebhookClient__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___1___0____1_System_Func_System_IServiceProvider_Kook_TokenType__System_Func_System_IServiceProvider_System_String__System_Func_System_IServiceProvider_System_Boolean__" data-uid="Kook.Net.Hosting.KookClientHostExtensions.AddHostedKookWebhookClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1,``0},``1,System.Func{System.IServiceProvider,Kook.TokenType},System.Func{System.IServiceProvider,System.String},System.Func{System.IServiceProvider,System.Boolean})">
   AddHostedKookWebhookClient&lt;TClient, TConfig&gt;(IServiceCollection, Func&lt;IServiceProvider, TConfig, TClient&gt;, TConfig, Func&lt;IServiceProvider, TokenType&gt;, Func&lt;IServiceProvider, string&gt;, Func&lt;IServiceProvider, bool&gt;?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Hosting/KookClientHostExtensions.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> to the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> with</p>
+  <div class="markdown level1 summary"><p>向指定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> 添加
+<a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a> 客户端，并添加包装为
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> 的服务。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -776,39 +792,39 @@ the specified configuration action and login information.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>services</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to add the services.</p>
+    <dd><p>要向其添加基于 Webhook 的 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
     <dt><code>clientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, TConfig, TClient&gt;</dt>
-    <dd><p>The factory to create the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+    <dd><p>客户端创建委托。</p>
 </dd>
     <dt><code>config</code> <span class="xref">TConfig</span></dt>
-    <dd><p>The action to configure the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+    <dd><p>用于配置基于 Webhook 的 KOOK 网关客户端的配置。</p>
 </dd>
     <dt><code>tokenType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="Kook.TokenType.html">TokenType</a>&gt;</dt>
-    <dd><p>The type of token to use.</p>
+    <dd><p>令牌的类型。</p>
 </dd>
     <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The token to use.</p>
+    <dd><p>令牌。</p>
 </dd>
     <dt><code>validateToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd><p>Whether to validate the token before logging in.</p>
+    <dd><p>是否在登录前验证令牌。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> so that additional calls can be chained.</p>
+    <dd><p>添加了基于 Webhook 的 KOOK 网关客户端及服务的服务集合。</p>
 </dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TClient</code></dt>
-    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookClient.html">KookWebhookClient</a>.</p>
+    <dd><p>客户端的类型。</p>
 </dd>
     <dt><code>TConfig</code></dt>
-    <dd><p>The type of the <a class="xref" href="Kook.Webhook.KookWebhookConfig.html">KookWebhookConfig</a>.</p>
+    <dd><p>配置的类型。</p>
 </dd>
   </dl>
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt; | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a cached entity that can be downloaded.">
+      <meta name="description" content="表示一个可延迟加载的缓存实体。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Cacheable_4" data-uid="Kook.Cacheable`4" class="text-break">
-Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L88"><i class="bi bi-code-slash"></i></a>
+Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt;  
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a cached entity that can be downloaded.</p>
+  <div class="markdown summary"><p>表示一个可延迟加载的缓存实体。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -110,16 +110,16 @@ Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt;  
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TCachedEntity</code></dt>
-    <dd><p>The type of entity that is cached.</p>
+    <dd><p>可延迟加载的缓存实体的类型。</p>
 </dd>
     <dt><code>TDownloadableEntity</code></dt>
-    <dd><p>The type of entity that can be downloaded.</p>
+    <dd><p>可从 API 请求下载的实体的类型。</p>
 </dd>
     <dt><code>TRelationship</code></dt>
-    <dd><p>The common type of <code class="typeparamref">TCachedEntity</code> and <code class="typeparamref">TDownloadableEntity</code>.</p>
+    <dd><p>由 <code class="typeparamref">TCachedEntity</code> 和 <code class="typeparamref">TDownloadableEntity</code> 共同继承或实现的类型。</p>
 </dd>
     <dt><code>TId</code></dt>
-    <dd><p>The type of the corresponding entity's ID.</p>
+    <dd><p>可延迟加载的缓存实体的 ID 的类型。</p>
 </dd>
   </dl>
 
@@ -162,10 +162,10 @@ Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt;  
 
   <h3 id="Kook_Cacheable_4_HasValue" data-uid="Kook.Cacheable`4.HasValue">
   HasValue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this entity is cached.</p>
+  <div class="markdown level1 summary"><p>获取此实体是否已缓存。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -194,10 +194,10 @@ Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt;  
 
   <h3 id="Kook_Cacheable_4_Id" data-uid="Kook.Cacheable`4.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the ID of this entity.</p>
+  <div class="markdown level1 summary"><p>获取此实体的唯一标识符。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -226,10 +226,10 @@ Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt;  
 
   <h3 id="Kook_Cacheable_4_Value" data-uid="Kook.Cacheable`4.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the entity if it could be pulled from cache.</p>
+  <div class="markdown level1 summary"><p>如果可以从缓存中获取实体，则获取该实体。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -251,8 +251,7 @@ Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt;  
 
 
   <h4 class="section" id="Kook_Cacheable_4_Value_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This value is not guaranteed to be set; in cases where the entity cannot be pulled from cache, it is
-<code>null</code>.</p>
+  <div class="markdown level1 remarks"><p>此属性不保证非空；在无法从缓存中拉取实体的情况下，此属性返回 <code>null</code>。</p>
 </div>
 
 
@@ -266,10 +265,10 @@ Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt;  
 
   <h3 id="Kook_Cacheable_4_DownloadAsync" data-uid="Kook.Cacheable`4.DownloadAsync">
   DownloadAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Downloads this entity.</p>
+  <div class="markdown level1 summary"><p>将此实体下载到缓存中。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -281,8 +280,8 @@ Struct Cacheable&lt;TCachedEntity, TDownloadableEntity, TRelationship, TId&gt;  
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TDownloadableEntity&gt;</dt>
-    <dd><p>A task that represents the asynchronous download operation. The task result contains the downloaded
-entity.</p>
+    <dd><p>一个表示异步下载操作的任务。任务结果包含下载的实体；如果无法通过 API 请求下载实体，或下载的实体无法转换为
+<code class="typeparamref">TDownloadableEntity</code>，则为 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -293,15 +292,6 @@ entity.</p>
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Kook.Net.HttpException.html">HttpException</a></dt>
-    <dd><p>Thrown when used from a user account.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></dt>
-    <dd><p>Thrown when the entity is deleted.</p>
-</dd>
-  </dl>
 
 
 
@@ -309,10 +299,10 @@ entity.</p>
 
   <h3 id="Kook_Cacheable_4_GetOrDownloadAsync" data-uid="Kook.Cacheable`4.GetOrDownloadAsync">
   GetOrDownloadAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns the cached entity if it exists; otherwise downloads it.</p>
+  <div class="markdown level1 summary"><p>如果实体已存在于缓存中，则返回该实体；否则下载该实体并返回。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -324,8 +314,8 @@ entity.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TRelationship&gt;</dt>
-    <dd><p>A task that represents the asynchronous operation that attempts to get the entity via cache or to
-download the entity. The task result contains the downloaded entity.</p>
+    <dd><p>一个表示异步获取或下载操作的任务。任务结果包含所获取或下载的实体；如果无法通过 API 请求下载实体，或下载的实体无法转换为
+<code class="typeparamref">TDownloadableEntity</code>，则为 <code>null</code>。</p>
 </dd>
   </dl>
 
@@ -336,15 +326,6 @@ download the entity. The task result contains the downloaded entity.</p>
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Kook.Net.HttpException.html">HttpException</a></dt>
-    <dd><p>Thrown when used from a user account.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></dt>
-    <dd><p>Thrown when the entity is deleted and is not in cache.</p>
-</dd>
-  </dl>
 
 
 
@@ -352,7 +333,7 @@ download the entity. The task result contains the downloaded entity.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L88" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Utils/Cacheable.cs/#L83" class="edit-link">Edit this page</a>
         </div>
 
 

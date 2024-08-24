@@ -145,7 +145,7 @@ opus 在同一位置），参见 <a href="https://ffmpeg.org/download.html">FFmp
 </ul>
 <h3 id="由-kooknet-进行编码推流">由 Kook.Net 进行编码推流</h3>
 <p>接下来，要向 KOOK 传输音频，需要由 <a class="xref" href="../../api/Kook.Audio.IAudioClient.html">IAudioClient</a> 创建一个 <a class="xref" href="../../api/Kook.Audio.AudioOutStream.html">AudioOutStream</a>，由于 ffmpeg 命令输出了 PCM
-音频，因此使用 <a class="xref" href="../../api/Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_CreatePcmStream_Kook_Audio_AudioApplication_System_Int32_System_Int32_System_Int32_">IAudioClient.CreatePcmStream</a>。</p>
+音频，因此使用 <a class="xref" href="../../api/Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_CreatePcmStream_Kook_Audio_AudioApplication_System_Nullable_System_Int32__System_Int32_System_Int32_">IAudioClient.CreatePcmStream</a>。</p>
 <p>最后，音频需要从 FFmpeg 的标准输出流传输到你的 AudioOutStream 对象中。
 根据你的业务需要，这个步骤中间可能会进行某些处理，但在大多数情况下，使用 <a href="https://learn.microsoft.com/dotnet/api/system.io.stream.copytoasync">Stream.CopyToAsync</a> 即可。</p>
 <p>如果你正在实现一个点歌机，你可能会希望等待音频停止播放后再继续播放下一首歌，等待 <code>AudioOutStream.FlushAsync</code>

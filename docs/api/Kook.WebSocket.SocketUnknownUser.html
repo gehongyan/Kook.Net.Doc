@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SocketUnknownUser | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a WebSocket-based user that is yet to be recognized by the client.">
+      <meta name="description" content="表示一个基于网关的未知用户。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a WebSocket-based user that is yet to be recognized by the client.</p>
+  <div class="markdown summary"><p>表示一个基于网关的未知用户。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -226,7 +226,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
   <h2 id="Kook_WebSocket_SocketUnknownUser_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>A user may not be recognized due to the user missing from the cache or failed to be recognized properly.</p>
+  <div class="markdown level0 remarks"><p>如果用户未能被识别，或缓存中不存在该用户，则会使用此类型的用户实体设置需要用户实体的属性。</p>
 </div>
 
 
@@ -241,7 +241,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the link to this user's avatar.</p>
+  <div class="markdown level1 summary"><p>获取此用户的头像图像的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -262,6 +262,9 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketUnknownUser_Avatar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户为 BUFF 会员，且以 BUFF 会员权益设置了头像，则此属性返回的 URL 表示的是 BUFF 专属头像权益时效后的回退头像。</p>
+</div>
 
 
 
@@ -273,7 +276,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the link to this user's banner.</p>
+  <div class="markdown level1 summary"><p>获取此用户的横幅图像的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -294,6 +297,9 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketUnknownUser_Banner_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户不是 BUFF 会员，或未以 BUFF 会员权限设置横幅，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -305,7 +311,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the link to this user's BUFF avatar.</p>
+  <div class="markdown level1 summary"><p>获取此用户以 BUFF 会员权益设置的头像图像的 URL。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -326,6 +332,9 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketUnknownUser_BuffAvatar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此用户不是 BUFF 会员，或未以 BUFF 会员权限设置头像，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -337,7 +346,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user's BUFF subscription is annual; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否订阅了年度 BUFF 会员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -358,6 +367,9 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketUnknownUser_HasAnnualBuff_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否订阅了年度 BUFF 会员，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -369,7 +381,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user has subscribed to BUFF; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否订阅了 BUFF 会员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -390,6 +402,9 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketUnknownUser_HasBuff_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否订阅了 BUFF 会员，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -401,7 +416,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the per-username unique ID for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户识别号的数值形式。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -433,7 +448,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user is banned; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否被封禁。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -454,6 +469,9 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketUnknownUser_IsBanned_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否被封禁，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -465,7 +483,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user is a bot; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否为 Bot。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -486,6 +504,9 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketUnknownUser_IsBot_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否为 Bot，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -497,7 +518,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether this user enabled denoise feature; <code>null</code> if unknown.</p>
+  <div class="markdown level1 summary"><p>获取此用户是否启用了降噪功能。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -518,6 +539,9 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketUnknownUser_IsDenoiseEnabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果未知此用户是否启用了降噪功能，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -529,7 +553,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the nameplates this user has.</p>
+  <div class="markdown level1 summary"><p>获取此用户设置展示的所有铭牌。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -550,6 +574,9 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketUnknownUser_Nameplates_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>用户设置的首个铭牌会展示在该用户聊天消息的用户名的右侧，用户设置的所有铭牌会展示在个人信息面板内的用户名下方。</p>
+</div>
 
 
 
@@ -561,7 +588,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get the tag this user has.</p>
+  <div class="markdown level1 summary"><p>获取此用户的标签信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -582,6 +609,10 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section" id="Kook_WebSocket_SocketUnknownUser_UserTag_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>用户的标签会显示在服务器用户列表、私信列表、私信消息页、好友列表、个人信息面板、聊天消息的用户名的右侧。 <br>
+如果此用户没有标签，或未知此用户的标签信息，则此属性返回 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>。</p>
+</div>
 
 
 
@@ -593,7 +624,7 @@ Class SocketUnknownUser  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Entities/Users/SocketUnknownUser.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the username for this user.</p>
+  <div class="markdown level1 summary"><p>获取此用户的用户名。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class NamedArgumentTypeAttribute | Kook.Net 文档 ">
       
-      <meta name="description" content="Instructs the command system to treat command parameters of this type as a collection of named arguments matching to its properties.">
+      <meta name="description" content="指示命令系统将此类型的命令参数视为与其属性匹配的命名参数集合。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Commands_NamedArgumentTypeAttribute" data-uid="Kook.Commands.NamedArgumentTypeAttribute" class="text-break">
-Class NamedArgumentTypeAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/NamedArgumentTypeAttribute.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class NamedArgumentTypeAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/NamedArgumentTypeAttribute.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,8 +97,7 @@ Class NamedArgumentTypeAttribute  <a class="header-action link-secondary" title=
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Instructs the command system to treat command parameters of this type
-as a collection of named arguments matching to its properties.</p>
+  <div class="markdown summary"><p>指示命令系统将此类型的命令参数视为与其属性匹配的命名参数集合。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -251,6 +250,21 @@ public sealed class NamedArgumentTypeAttribute : Attribute</code></pre>
 
 
 
+  <h2 id="Kook_Commands_NamedArgumentTypeAttribute_examples">Examples</h2>
+  <p>以下示例代码中，<code>ArgumentType</code> 中的各个属性将被视为所支持的命名参数。</p>
+<pre><code class="lang-cs">[NamedArgumentType]
+public sealed class ArgumentType
+{
+    public int? Foo { get; set; }
+    public string? Bar { get; set; }
+    public IEnumerable&lt;int&gt;? ManyInts { get; set; }
+}</code></pre>
+<p>命令的参数中可以定义 ArgumentType 类型的参数。</p>
+<pre><code class="lang-cs">[Command("test")]
+public Task TestCommand(ArgumentType arg) =&gt; Task.CompletedTask;</code></pre>
+<p>则可以以以下的命名参数的形式传递参数，调用命令：</p>
+<pre><code class="lang-csharp">foo: 3 bar: hello manyints: "1, 2, 3, 4, 5, 6, 7"</code></pre>
+
 
 
 
@@ -258,7 +272,7 @@ public sealed class NamedArgumentTypeAttribute : Attribute</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/NamedArgumentTypeAttribute.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/NamedArgumentTypeAttribute.cs/#L27" class="edit-link">Edit this page</a>
         </div>
 
 

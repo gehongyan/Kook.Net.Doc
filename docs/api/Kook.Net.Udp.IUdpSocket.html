@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IUdpSocket | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a generic UDP socket.">
+      <meta name="description" content="表示一个通用的 UDP 套接字。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a generic UDP socket.</p>
+  <div class="markdown summary"><p>表示一个通用的 UDP 套接字。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -132,10 +132,10 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Net_Udp_IUdpSocket_Port" data-uid="Kook.Net.Udp.IUdpSocket.Port">
   Port
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the port of the socket.</p>
+  <div class="markdown level1 summary"><p>获取 UDP 套接字的端口号。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -168,10 +168,10 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Net_Udp_IUdpSocket_SendAsync_System_Byte___System_Int32_System_Int32_" data-uid="Kook.Net.Udp.IUdpSocket.SendAsync(System.Byte[],System.Int32,System.Int32)">
   SendAsync(byte[], int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sends a datagram.</p>
+  <div class="markdown level1 summary"><p>发送数据报。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -182,20 +182,20 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
-    <dd><p>The data to send.</p>
+    <dd><p>要发送的数据报的字节数组。</p>
 </dd>
     <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The index of the data to start sending from.</p>
+    <dd><p>要发送的数据报的字节数组的起始位置。</p>
 </dd>
     <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The number of bytes to send.</p>
+    <dd><p>要发送的数据报的字节数组的长度。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation.</p>
+    <dd><p>一个表示异步发送操作的任务。</p>
 </dd>
   </dl>
 
@@ -213,10 +213,10 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Net_Udp_IUdpSocket_SetCancellationToken_System_Threading_CancellationToken_" data-uid="Kook.Net.Udp.IUdpSocket.SetCancellationToken(System.Threading.CancellationToken)">
   SetCancellationToken(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sets the cancellation token.</p>
+  <div class="markdown level1 summary"><p>设置此客户端的取消令牌。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -227,7 +227,7 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd><p>The cancellation token.</p>
+    <dd><p>用于取消任务的取消令牌。</p>
 </dd>
   </dl>
 
@@ -246,10 +246,10 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Net_Udp_IUdpSocket_SetDestination_System_String_System_Int32_" data-uid="Kook.Net.Udp.IUdpSocket.SetDestination(System.String,System.Int32)">
   SetDestination(string, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sets the destination of the socket.</p>
+  <div class="markdown level1 summary"><p>设置 UDP 套接字的目标通信端点，包括 IP 地址和端口号。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -260,10 +260,10 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The IP address of the destination.</p>
+    <dd><p>目标通信端点的 IP 地址。</p>
 </dd>
     <dt><code>port</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The port of the destination.</p>
+    <dd><p>目标通信端点的端口号。</p>
 </dd>
   </dl>
 
@@ -282,10 +282,10 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Net_Udp_IUdpSocket_StartAsync" data-uid="Kook.Net.Udp.IUdpSocket.StartAsync">
   StartAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Starts the socket.</p>
+  <div class="markdown level1 summary"><p>启动套接字。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -297,7 +297,7 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation.</p>
+    <dd><p>一个表示异步启动操作的任务。</p>
 </dd>
   </dl>
 
@@ -315,10 +315,10 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Net_Udp_IUdpSocket_StopAsync" data-uid="Kook.Net.Udp.IUdpSocket.StopAsync">
   StopAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Stops the socket.</p>
+  <div class="markdown level1 summary"><p>停止套接字。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -330,7 +330,7 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task that represents the asynchronous operation.</p>
+    <dd><p>一个表示异步停止操作的任务。</p>
 </dd>
   </dl>
 
@@ -351,10 +351,10 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Net_Udp_IUdpSocket_ReceivedDatagram" data-uid="Kook.Net.Udp.IUdpSocket.ReceivedDatagram">
   ReceivedDatagram
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Udp/IUdpSocket.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Fired when a datagram is received.</p>
+  <div class="markdown level1 summary"><p>当接收到数据报时引发。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -375,6 +375,10 @@ Interface IUdpSocket  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section" id="Kook_Net_Udp_IUdpSocket_ReceivedDatagram_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>事件参数：</p>
+<ol><li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[] 参数是接收到的数据报的字节数组。 </li><li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> 参数是接收到的数据报的字节数组的起始位置。 </li><li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> 参数是接收到的数据报的字节数组的长度。 </li></ol>
+</div>
 
 
 

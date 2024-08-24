@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DefaultWebSocketProvider | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a default  that creates  instances.">
+      <meta name="description" content="表示一个默认的 ，用于创建  的默认实现的实例。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Net_WebSockets_DefaultWebSocketProvider" data-uid="Kook.Net.WebSockets.DefaultWebSocketProvider" class="text-break">
-Class DefaultWebSocketProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Net/DefaultWebSocketClientProvider.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class DefaultWebSocketProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Net/DefaultWebSocketClientProvider.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class DefaultWebSocketProvider  <a class="header-action link-secondary" title="V
   <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a default <a class="xref" href="Kook.Net.WebSockets.WebSocketProvider.html">WebSocketProvider</a> that creates <a class="xref" href="Kook.Net.WebSockets.DefaultWebSocketClient.html">DefaultWebSocketClient</a> instances.</p>
+  <div class="markdown summary"><p>表示一个默认的 <a class="xref" href="Kook.Net.WebSockets.WebSocketProvider.html">WebSocketProvider</a>，用于创建
+<a class="xref" href="Kook.Net.WebSockets.IWebSocketClient.html">IWebSocketClient</a> 的默认实现的实例。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -156,10 +157,11 @@ Class DefaultWebSocketProvider  <a class="header-action link-secondary" title="V
 
   <h3 id="Kook_Net_WebSockets_DefaultWebSocketProvider_Instance" data-uid="Kook.Net.WebSockets.DefaultWebSocketProvider.Instance">
   Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Net/DefaultWebSocketClientProvider.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Net/DefaultWebSocketClientProvider.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>A delegate that creates a default <a class="xref" href="Kook.Net.WebSockets.WebSocketProvider.html">WebSocketProvider</a> instance.</p>
+  <div class="markdown level1 summary"><p>获取一个默认的 <a class="xref" href="Kook.Net.WebSockets.WebSocketProvider.html">WebSocketProvider</a> 委托，用于创建
+<a class="xref" href="Kook.Net.WebSockets.IWebSocketClient.html">IWebSocketClient</a> 的默认实现的实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -192,28 +194,28 @@ Class DefaultWebSocketProvider  <a class="header-action link-secondary" title="V
 
   <h3 id="Kook_Net_WebSockets_DefaultWebSocketProvider_Create_System_Net_IWebProxy_" data-uid="Kook.Net.WebSockets.DefaultWebSocketProvider.Create(System.Net.IWebProxy)">
   Create(IWebProxy?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Net/DefaultWebSocketClientProvider.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Net/DefaultWebSocketClientProvider.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a delegate that creates a new <a class="xref" href="Kook.Net.WebSockets.DefaultWebSocketClient.html">DefaultWebSocketClient</a> instance.</p>
+  <div class="markdown level1 summary"><p>创建一个新的 <a class="xref" href="Kook.Net.WebSockets.WebSocketProvider.html">WebSocketProvider</a> 委托。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WebSocketProvider Create(IWebProxy? proxy = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static WebSocketProvider Create(IWebProxy? useProxy = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>proxy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.iwebproxy">IWebProxy</a></dt>
-    <dd><p>The proxy to use.</p>
+    <dt><code>useProxy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.iwebproxy">IWebProxy</a></dt>
+    <dd><p>是否使用系统代理。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Net.WebSockets.WebSocketProvider.html">WebSocketProvider</a></dt>
-    <dd><p>A delegate that creates a new <a class="xref" href="Kook.Net.WebSockets.DefaultWebSocketClient.html">DefaultWebSocketClient</a> instance.</p>
+    <dd><p>一个新的 <a class="xref" href="Kook.Net.WebSockets.WebSocketProvider.html">WebSocketProvider</a> 委托。</p>
 </dd>
   </dl>
 
@@ -224,12 +226,6 @@ Class DefaultWebSocketProvider  <a class="header-action link-secondary" title="V
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.platformnotsupportedexception">PlatformNotSupportedException</a></dt>
-    <dd><p>The default WebSocketProvider is not supported on this platform.</p>
-</dd>
-  </dl>
 
 
 
@@ -237,7 +233,7 @@ Class DefaultWebSocketProvider  <a class="header-action link-secondary" title="V
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Net/DefaultWebSocketClientProvider.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.WebSocket/Net/DefaultWebSocketClientProvider.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

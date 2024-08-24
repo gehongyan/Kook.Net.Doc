@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class AliasAttribute | Kook.Net 文档 ">
       
-      <meta name="description" content="Marks the aliases for a command.">
+      <meta name="description" content="为命令指定别名。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Commands_AliasAttribute" data-uid="Kook.Commands.AliasAttribute" class="text-break">
-Class AliasAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/AliasAttribute.cs/#L23"><i class="bi bi-code-slash"></i></a>
+Class AliasAttribute  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/AliasAttribute.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class AliasAttribute  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Kook.Net.Commands.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Marks the aliases for a command.</p>
+  <div class="markdown summary"><p>为命令指定别名。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -254,20 +254,17 @@ public class AliasAttribute : Attribute</code></pre>
 
 
   <h2 id="Kook_Commands_AliasAttribute_examples">Examples</h2>
-  <p>In the following example, the command can be triggered with the base name, &quot;stats&quot;, or either &quot;stat&quot; or
-&quot;info&quot;.</p>
+  <p>以下示例中，要调用此命令，除了可以使用基本名称“stats”，还使用“stat”或“info”。</p>
 <pre><code class="lang-cs">[Command("stats")]
 [Alias("stat", "info")]
 public async Task GetStatsAsync(IUser user)
 {
-    // ...pull stats
+    await ReplyTextAsync($"{user.Username} has 1000 score!");
 }</code></pre>
 
 
   <h2 id="Kook_Commands_AliasAttribute_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>This attribute allows a command to have one or multiple aliases. In other words, the base command can have
-multiple aliases when triggering the command itself, giving the end-user more freedom of choices when giving
-hot-words to trigger the desired command. See the example for a better illustration.</p>
+  <div class="markdown level0 remarks"><p>此特性允许命令具有一个或多个别名，在指定命令的基本名称的同时，还可以指定多个别名，以便用户可以使用多个熟悉的词汇来触发相同的命令。</p>
 </div>
 
 
@@ -279,10 +276,10 @@ hot-words to trigger the desired command. See the example for a better illustrat
 
   <h3 id="Kook_Commands_AliasAttribute__ctor_System_String___" data-uid="Kook.Commands.AliasAttribute.#ctor(System.String[])">
   AliasAttribute(params string[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/AliasAttribute.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/AliasAttribute.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Kook.Commands.AliasAttribute.html">AliasAttribute</a> with the given aliases.</p>
+  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Commands.AliasAttribute.html">AliasAttribute</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -315,10 +312,10 @@ hot-words to trigger the desired command. See the example for a better illustrat
 
   <h3 id="Kook_Commands_AliasAttribute_Aliases" data-uid="Kook.Commands.AliasAttribute.Aliases">
   Aliases
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/AliasAttribute.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/AliasAttribute.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the aliases which have been defined for the command.</p>
+  <div class="markdown level1 summary"><p>获取为命令定义的别名。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -347,7 +344,7 @@ hot-words to trigger the desired command. See the example for a better illustrat
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/AliasAttribute.cs/#L23" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Commands/Attributes/AliasAttribute.cs/#L20" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class AudioOutStream | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a generic outgoing audio stream.">
+      <meta name="description" content="表示一个通用的输出音频流。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class AudioOutStream  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a generic outgoing audio stream.</p>
+  <div class="markdown summary"><p>表示一个通用的输出音频流。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -131,8 +131,10 @@ Class AudioOutStream  <a class="header-action link-secondary" title="View source
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="Kook.Audio.Streams.BufferedWriteStream.html">BufferedWriteStream</a></div>
+      <div><a class="xref" href="Kook.Audio.Streams.OpusDecodeStream.html">OpusDecodeStream</a></div>
       <div><a class="xref" href="Kook.Audio.Streams.OpusEncodeStream.html">OpusEncodeStream</a></div>
       <div><a class="xref" href="Kook.Audio.Streams.OutputStream.html">OutputStream</a></div>
+      <div><a class="xref" href="Kook.Audio.Streams.RtpReadStream.html">RtpReadStream</a></div>
       <div><a class="xref" href="Kook.Audio.Streams.RtpWriteStream.html">RtpWriteStream</a></div>
     </dd>
   </dl>
@@ -372,7 +374,7 @@ Class AudioOutStream  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Audio_AudioOutStream_Read_System_Byte___System_Int32_System_Int32_" data-uid="Kook.Audio.AudioOutStream.Read(System.Byte[],System.Int32,System.Int32)">
   Read(byte[], int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Audio/AudioOutStream.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Audio/AudioOutStream.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.</p>
@@ -431,10 +433,7 @@ Class AudioOutStream  <a class="header-action link-secondary" title="View source
     <dd><p>Methods were called after the stream was closed.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Reading this stream is not supported.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Reading this stream is not supported.</p>
+    <dd><p>不支持读取此音频流。</p>
 </dd>
   </dl>
 
@@ -444,7 +443,7 @@ Class AudioOutStream  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Audio_AudioOutStream_Seek_System_Int64_System_IO_SeekOrigin_" data-uid="Kook.Audio.AudioOutStream.Seek(System.Int64,System.IO.SeekOrigin)">
   Seek(long, SeekOrigin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Audio/AudioOutStream.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Audio/AudioOutStream.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>When overridden in a derived class, sets the position within the current stream.</p>
@@ -491,10 +490,7 @@ Class AudioOutStream  <a class="header-action link-secondary" title="View source
     <dd><p>Methods were called after the stream was closed.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Seeking this stream is not supported..</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Seeking this stream is not supported..</p>
+    <dd><p>不支持在此音频流中进行定位操作。</p>
 </dd>
   </dl>
 
@@ -504,7 +500,7 @@ Class AudioOutStream  <a class="header-action link-secondary" title="View source
 
   <h3 id="Kook_Audio_AudioOutStream_SetLength_System_Int64_" data-uid="Kook.Audio.AudioOutStream.SetLength(System.Int64)">
   SetLength(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Audio/AudioOutStream.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Audio/AudioOutStream.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>When overridden in a derived class, sets the length of the current stream.</p>
@@ -542,10 +538,7 @@ Class AudioOutStream  <a class="header-action link-secondary" title="View source
     <dd><p>Methods were called after the stream was closed.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Setting the length to this stream is not supported.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Setting the length to this stream is not supported.</p>
+    <dd><p>不支持为此音频流设置长度。</p>
 </dd>
   </dl>
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct Color | Kook.Net 文档 ">
       
-      <meta name="description" content="Represents a color used in Kook.">
+      <meta name="description" content="表示 KOOK 中使用的颜色。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a color used in Kook.</p>
+  <div class="markdown summary"><p>表示 KOOK 中使用的颜色。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -138,10 +138,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color__ctor_System_Byte_System_Byte_System_Byte_" data-uid="Kook.Color.#ctor(System.Byte,System.Byte,System.Byte)">
   Color(byte, byte, byte)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L239"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a <a class="xref" href="Kook.Color.html">Color</a> struct with the given RGB bytes.</p>
+  <div class="markdown level1 summary"><p>使用指定的 RGB 通道值初始化一个 <a class="xref" href="Kook.Color.html">Color</a> 结构的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -152,13 +152,13 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
-    <dd><p>The byte that represents the red color.</p>
+    <dd><p>红色通道的强度。</p>
 </dd>
     <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
-    <dd><p>The byte that represents the green color.</p>
+    <dd><p>绿色通道的强度。</p>
 </dd>
     <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
-    <dd><p>The byte that represents the blue color.</p>
+    <dd><p>蓝色通道的强度。</p>
 </dd>
   </dl>
 
@@ -169,16 +169,15 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
 
   <h4 class="section" id="Kook_Color__ctor_System_Byte_System_Byte_System_Byte__examples">Examples</h4>
-  <p>The following will create a color that has a value of
-<a href="http://www.color-hex.com/color/607d8b">#607D8B</a>.</p>
-<pre><code class="lang-cs">Color darkGrey = new Color((byte)0b_01100000, (byte)0b_01111101, (byte)0b_10001011);</code></pre>
+  <p>创建 #607D8B（http://www.color-hex.com/color/607d8b）所表示的颜色：</p>
+<pre><code class="lang-cs">Color darkGrey = new Color((byte)0x60, (byte)0x7D, (byte)0x8B);</code></pre>
 
 
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Value exceeds <a class="xref" href="Kook.Color.html#Kook_Color_MaxDecimalValue">MaxDecimalValue</a>.</p>
+    <dd><p>所提供的三个通道的强度值所组成的颜色的原始值超过了 <a class="xref" href="Kook.Color.html#Kook_Color_MaxDecimalValue">MaxDecimalValue</a>。</p>
 </dd>
   </dl>
 
@@ -188,10 +187,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color__ctor_System_Int32_System_Int32_System_Int32_" data-uid="Kook.Color.#ctor(System.Int32,System.Int32,System.Int32)">
   Color(int, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a <a class="xref" href="Kook.Color.html">Color</a> struct with the given RGB value.</p>
+  <div class="markdown level1 summary"><p>使用指定的 RGB 通道值初始化一个 <a class="xref" href="Kook.Color.html">Color</a> 结构的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -202,13 +201,13 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The value that represents the red color. Must be within 0~255.</p>
+    <dd><p>红色通道的强度。</p>
 </dd>
     <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The value that represents the green color. Must be within 0~255.</p>
+    <dd><p>绿色通道的强度。</p>
 </dd>
     <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The value that represents the blue color. Must be within 0~255.</p>
+    <dd><p>蓝色通道的强度。</p>
 </dd>
   </dl>
 
@@ -219,16 +218,15 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
 
   <h4 class="section" id="Kook_Color__ctor_System_Int32_System_Int32_System_Int32__examples">Examples</h4>
-  <p>The following will create a color that has a value of
-<a href="http://www.color-hex.com/color/607d8b">#607D8B</a>.</p>
+  <p>创建 #607D8B（http://www.color-hex.com/color/607d8b）所表示的颜色：</p>
 <pre><code class="lang-cs">Color darkGrey = new Color(96, 125, 139);</code></pre>
 
 
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>The argument value is not between 0 to 255.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>所提供的三个通道的强度值所组成的颜色的原始值超过了 <a class="xref" href="Kook.Color.html#Kook_Color_MaxDecimalValue">MaxDecimalValue</a>。</p>
 </dd>
   </dl>
 
@@ -238,10 +236,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color__ctor_System_Single_System_Single_System_Single_" data-uid="Kook.Color.#ctor(System.Single,System.Single,System.Single)">
   Color(float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L293"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a <a class="xref" href="Kook.Color.html">Color</a> struct with the given RGB float value.</p>
+  <div class="markdown level1 summary"><p>使用指定的 RGB 通道值初始化一个 <a class="xref" href="Kook.Color.html">Color</a> 结构的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -252,13 +250,13 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The value that represents the red color. Must be within 0~1.</p>
+    <dd><p>红色通道的强度。</p>
 </dd>
     <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The value that represents the green color. Must be within 0~1.</p>
+    <dd><p>绿色通道的强度。</p>
 </dd>
     <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The value that represents the blue color. Must be within 0~1.</p>
+    <dd><p>蓝色通道的强度。</p>
 </dd>
   </dl>
 
@@ -269,16 +267,15 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
 
   <h4 class="section" id="Kook_Color__ctor_System_Single_System_Single_System_Single__examples">Examples</h4>
-  <p>The following will create a color that has a value of
-<a href="http://www.color-hex.com/color/607c8c">#607C8C</a>.</p>
+  <p>创建 #607D8B（http://www.color-hex.com/color/607d8b）所表示的颜色：</p>
 <pre><code class="lang-cs">Color darkGrey = new Color(0.38f, 0.49f, 0.55f);</code></pre>
 
 
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>The argument value is not between 0 to 1.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>所提供的三个通道的强度值所组成的颜色的原始值超过了 <a class="xref" href="Kook.Color.html#Kook_Color_MaxDecimalValue">MaxDecimalValue</a>。</p>
 </dd>
   </dl>
 
@@ -288,10 +285,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color__ctor_System_UInt32_" data-uid="Kook.Color.#ctor(System.UInt32)">
   Color(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a <a class="xref" href="Kook.Color.html">Color</a> struct with the given raw value.</p>
+  <div class="markdown level1 summary"><p>使用指定的 24 位无符号整型值初始化一个 <a class="xref" href="Kook.Color.html">Color</a> 结构的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -302,7 +299,7 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rawValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>The raw value of the color (e.g. <code>0x607D8B</code>).</p>
+    <dd><p>颜色的 24 位无符号整型原始值。</p>
 </dd>
   </dl>
 
@@ -313,8 +310,7 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
 
   <h4 class="section" id="Kook_Color__ctor_System_UInt32__examples">Examples</h4>
-  <p>The following will create a color that has a hex value of
-<a href="http://www.color-hex.com/color/607d8b">#607D8B</a>.</p>
+  <p>创建 #607D8B（http://www.color-hex.com/color/607d8b）所表示的颜色：</p>
 <pre><code class="lang-cs">Color darkGrey = new Color(0x607D8B);</code></pre>
 
 
@@ -322,7 +318,7 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Value exceeds <a class="xref" href="Kook.Color.html#Kook_Color_MaxDecimalValue">MaxDecimalValue</a>.</p>
+    <dd><p>颜色原始值超过了 <a class="xref" href="Kook.Color.html#Kook_Color_MaxDecimalValue">MaxDecimalValue</a>。</p>
 </dd>
   </dl>
 
@@ -335,10 +331,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_Blue" data-uid="Kook.Color.Blue">
   Blue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the blue color value.</p>
+  <div class="markdown level1 summary"><p>获取天蓝色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -352,14 +348,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 3498DB.</p> See http://www.color-hex.com/color/3498DB
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_Blue_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>天蓝色 <code>#3498DB</code>（http://www.color-hex.com/color/3498db）。</p>
+</div>
 
 
 
@@ -367,10 +365,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_DarkBlue" data-uid="Kook.Color.DarkBlue">
   DarkBlue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the dark blue color value.</p>
+  <div class="markdown level1 summary"><p>获取深蓝色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -384,14 +382,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 206694.</p> See http://www.color-hex.com/color/206694
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_DarkBlue_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>深蓝色 <code>#206694</code>（http://www.color-hex.com/color/206694）。</p>
+</div>
 
 
 
@@ -399,10 +399,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_DarkGreen" data-uid="Kook.Color.DarkGreen">
   DarkGreen
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the dark green color value.</p>
+  <div class="markdown level1 summary"><p>获取深绿色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -416,14 +416,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 1F8B4C.</p> See http://www.color-hex.com/color/1F8B4C
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_DarkGreen_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>深绿色 <code>#1F8B4C</code>（http://www.color-hex.com/color/1f8b4c）。</p>
+</div>
 
 
 
@@ -431,10 +433,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_DarkGrey" data-uid="Kook.Color.DarkGrey">
   DarkGrey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the dark grey color value.</p>
+  <div class="markdown level1 summary"><p>获取钢蓝色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -448,14 +450,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 607D8B.</p> See http://www.color-hex.com/color/607D8B
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_DarkGrey_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>钢蓝色 <code>#607D8B</code>（http://www.color-hex.com/color/607d8b）。</p>
+</div>
 
 
 
@@ -463,10 +467,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_DarkMagenta" data-uid="Kook.Color.DarkMagenta">
   DarkMagenta
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the dark magenta color value.</p>
+  <div class="markdown level1 summary"><p>获取深粉色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -480,14 +484,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of AD1457.</p> See http://www.color-hex.com/color/AD1457
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_DarkMagenta_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>深粉色 <code>#AD1457</code>（http://www.color-hex.com/color/ad1457）。</p>
+</div>
 
 
 
@@ -495,10 +501,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_DarkOrange" data-uid="Kook.Color.DarkOrange">
   DarkOrange
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the dark orange color value.</p>
+  <div class="markdown level1 summary"><p>获取深橙色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -512,14 +518,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of A84300.</p> See http://www.color-hex.com/color/A84300
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_DarkOrange_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>深橙色 <code>#A84300</code>（http://www.color-hex.com/color/a84300）。</p>
+</div>
 
 
 
@@ -527,10 +535,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_DarkPurple" data-uid="Kook.Color.DarkPurple">
   DarkPurple
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the dark purple color value.</p>
+  <div class="markdown level1 summary"><p>获取深紫色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -544,14 +552,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 71368A.</p> See http://www.color-hex.com/color/71368A
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_DarkPurple_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>深紫色 <code>#71368A</code>（http://www.color-hex.com/color/71368a）。</p>
+</div>
 
 
 
@@ -559,10 +569,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_DarkRed" data-uid="Kook.Color.DarkRed">
   DarkRed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the dark red color value.</p>
+  <div class="markdown level1 summary"><p>获取深红色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -576,14 +586,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 992D22.</p> See http://www.color-hex.com/color/992D22
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_DarkRed_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>深红色 <code>#992D22</code>（http://www.color-hex.com/color/992d22）。</p>
+</div>
 
 
 
@@ -591,10 +603,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_DarkTeal" data-uid="Kook.Color.DarkTeal">
   DarkTeal
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the dark teal color value.</p>
+  <div class="markdown level1 summary"><p>获取深青绿色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -608,14 +620,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 11806A.</p> See http://www.color-hex.com/color/11806A
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_DarkTeal_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>深青绿色 <code>#11806A</code>（http://www.color-hex.com/color/11806a）。</p>
+</div>
 
 
 
@@ -623,10 +637,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_DarkerGrey" data-uid="Kook.Color.DarkerGrey">
   DarkerGrey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the darker grey color value.</p>
+  <div class="markdown level1 summary"><p>获取深青色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -640,14 +654,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 3A4B53.</p> See http://www.color-hex.com/color/3A4B53
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_DarkerGrey_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>深青色 <code>#3A4B53</code>（http://www.color-hex.com/color/3a4b53）。</p>
+</div>
 
 
 
@@ -655,10 +671,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_Default" data-uid="Kook.Color.Default">
   Default
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the default user color value.</p>
+  <div class="markdown level1 summary"><p>获取默认颜色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -686,10 +702,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_Gold" data-uid="Kook.Color.Gold">
   Gold
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the gold color value.</p>
+  <div class="markdown level1 summary"><p>获取金黄色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -703,14 +719,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of F1C40F.</p> See http://www.color-hex.com/color/F1C40F
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_Gold_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>金黄色 <code>#F1C40F</code>（http://www.color-hex.com/color/f1c40f）。</p>
+</div>
 
 
 
@@ -718,10 +736,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_Green" data-uid="Kook.Color.Green">
   Green
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the green color value.</p>
+  <div class="markdown level1 summary"><p>获取绿色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -735,14 +753,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 2ECC71.</p> See http://www.color-hex.com/color/2ECC71
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_Green_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>绿色 <code>#2ECC71</code>（http://www.color-hex.com/color/2ecc71）。</p>
+</div>
 
 
 
@@ -750,10 +770,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_Grey" data-uid="Kook.Color.Grey">
   Grey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the grey color value.</p>
+  <div class="markdown level1 summary"><p>获取暗灰色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -767,14 +787,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 666D71.</p> See http://www.color-hex.com/color/666D71
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_Grey_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>暗灰色 <code>#666D71</code>（http://www.color-hex.com/color/666d71）。</p>
+</div>
 
 
 
@@ -782,10 +804,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_LightGrey" data-uid="Kook.Color.LightGrey">
   LightGrey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L157"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the light grey color value.</p>
+  <div class="markdown level1 summary"><p>获取浅灰色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -799,14 +821,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 95A5A6.</p> See http://www.color-hex.com/color/95A5A6
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_LightGrey_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>浅灰色 <code>#95A5A6</code>（http://www.color-hex.com/color/95a5a6）。</p>
+</div>
 
 
 
@@ -814,10 +838,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_LightOrange" data-uid="Kook.Color.LightOrange">
   LightOrange
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the light orange color value.</p>
+  <div class="markdown level1 summary"><p>获取褐橙色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -831,14 +855,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of C27C0E.</p> See http://www.color-hex.com/color/C27C0E
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_LightOrange_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>褐橙色 <code>#C27C0E</code>（http://www.color-hex.com/color/c27c0e）。</p>
+</div>
 
 
 
@@ -846,10 +872,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_Magenta" data-uid="Kook.Color.Magenta">
   Magenta
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the magenta color value.</p>
+  <div class="markdown level1 summary"><p>获取玫瑰红。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -863,14 +889,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of E91E63.</p> See http://www.color-hex.com/color/E91E63
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_Magenta_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>玫瑰红 <code>#E91E63</code>（http://www.color-hex.com/color/e91e63）。</p>
+</div>
 
 
 
@@ -878,10 +906,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_MaxDecimalValue" data-uid="Kook.Color.MaxDecimalValue">
   MaxDecimalValue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the max decimal value of color.</p>
+  <div class="markdown level1 summary"><p>获取一个 KOOK 颜色的最大值的原始值。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -909,10 +937,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_Orange" data-uid="Kook.Color.Orange">
   Orange
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the orange color value.</p>
+  <div class="markdown level1 summary"><p>获取橙色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -926,14 +954,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of E67E22.</p> See http://www.color-hex.com/color/E67E22
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_Orange_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>橙色 <code>#E67E22</code>（http://www.color-hex.com/color/e67e22）。</p>
+</div>
 
 
 
@@ -941,10 +971,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_Purple" data-uid="Kook.Color.Purple">
   Purple
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the purple color value.</p>
+  <div class="markdown level1 summary"><p>获取紫色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -958,14 +988,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 9B59B6.</p> See http://www.color-hex.com/color/9B59B6
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_Purple_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>紫色 <code>#9B59B6</code>（http://www.color-hex.com/color/9b59b6）。</p>
+</div>
 
 
 
@@ -973,10 +1005,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_Red" data-uid="Kook.Color.Red">
   Red
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the red color value.</p>
+  <div class="markdown level1 summary"><p>获取猩红色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -990,14 +1022,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of E74C3C.</p> See http://www.color-hex.com/color/E74C3C
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_Red_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>猩红色 <code>#E74C3C</code>（http://www.color-hex.com/color/e74c3c）。</p>
+</div>
 
 
 
@@ -1005,10 +1039,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_Teal" data-uid="Kook.Color.Teal">
   Teal
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the teal color value.</p>
+  <div class="markdown level1 summary"><p>获取青绿色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1022,14 +1056,16 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>A color struct with the hex value of 1ABC9C.</p> See http://www.color-hex.com/color/1ABC9C
-</dd>
+    <dd></dd>
   </dl>
 
 
 
 
 
+  <h4 class="section" id="Kook_Color_Teal_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>青绿色 <code>#1ABC9C</code>（http://www.color-hex.com/color/1abc9c）。</p>
+</div>
 
 
 
@@ -1042,10 +1078,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_B" data-uid="Kook.Color.B">
   B
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the blue component for this color.</p>
+  <div class="markdown level1 summary"><p>获取此颜色的蓝色通道的强度。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1074,10 +1110,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_G" data-uid="Kook.Color.G">
   G
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L199"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the green component for this color.</p>
+  <div class="markdown level1 summary"><p>获取此颜色的绿色通道的强度。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1106,10 +1142,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_R" data-uid="Kook.Color.R">
   R
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the red component for this color.</p>
+  <div class="markdown level1 summary"><p>获取此颜色的红色通道的强度。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1138,10 +1174,10 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Kook_Color_RawValue" data-uid="Kook.Color.RawValue">
   RawValue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L189"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the encoded value for this color.</p>
+  <div class="markdown level1 summary"><p>获取此颜色的原始值。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1163,8 +1199,7 @@ Struct Color  <a class="header-action link-secondary" title="View source" href="
 
 
   <h4 class="section" id="Kook_Color_RawValue_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This value is encoded as an unsigned integer value. The most-significant 8 bits contain the red value,
-the middle 8 bits contain the green value, and the least-significant 8 bits contain the blue value.</p>
+  <div class="markdown level1 remarks"><p>颜色以 24 位无符号整型值 RGB 格式进行编码，由高至低的每 8 位分别表示红色、绿色和蓝色通道的强度。</p>
 </div>
 
 
@@ -1178,7 +1213,7 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
   <h3 id="Kook_Color_Equals_System_Object_" data-uid="Kook.Color.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L338"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -1217,7 +1252,7 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
   <h3 id="Kook_Color_GetHashCode" data-uid="Kook.Color.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L342"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -1250,10 +1285,10 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
   <h3 id="Kook_Color_ToString" data-uid="Kook.Color.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L364"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the hexadecimal representation of the color (e.g. <code>#000ccc</code>).</p>
+  <div class="markdown level1 summary"><p>获取此颜色带有 <code>#</code> 前缀的 RGB 十六进制字符串表示形式（例如 <code>#000CCC</code>）。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1265,7 +1300,7 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A hexadecimal string of the color.</p>
+    <dd><p>此颜色带有 <code>#</code> 前缀的 RGB 十六进制字符串表示形式（例如 <code>#000CCC</code>）。</p>
 </dd>
   </dl>
 
@@ -1287,10 +1322,10 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
   <h3 id="Kook_Color_op_Equality_Kook_Color_Kook_Color_" data-uid="Kook.Color.op_Equality(Kook.Color,Kook.Color)">
   operator ==(Color, Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L313"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.Color.html">Color</a> is equal to this instance.</p>
+  <div class="markdown level1 summary"><p>判定两个 <a class="xref" href="Kook.Color.html">Color</a> 是否相等。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1309,7 +1344,7 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.Color.html">Color</a> is equal to this instance; otherwise, <code>false</code> .</p>
+    <dd><p>如果两个 <a class="xref" href="Kook.Color.html">Color</a> 相等，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </dd>
   </dl>
 
@@ -1327,10 +1362,10 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
   <h3 id="Kook_Color_op_Explicit_System_Drawing_Color__Kook_Color" data-uid="Kook.Color.op_Explicit(System.Drawing.Color)~Kook.Color">
   explicit operator Color(Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L357"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Converts the given .NET standard <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> to a Kook.Net-defined <a class="xref" href="Kook.Color.html">Color</a>.</p>
+  <div class="markdown level1 summary"><p>将由 .NET 定义的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> 颜色转换为由 Kook.Net 定义的 <a class="xref" href="Kook.Color.html">Color</a> 颜色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1341,14 +1376,14 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
-    <dd><p>The .NET standard <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> to convert.</p>
+    <dd><p>要进行转换的 .NET <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> 颜色。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>The Kook.Net-defined <a class="xref" href="Kook.Color.html">Color</a> that represents the given .NET standard <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>.</p>
+    <dd><p>与该 .NET <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> 颜色具有相同色值的 <a class="xref" href="Kook.Color.html">Color</a> 颜色。</p>
 </dd>
   </dl>
 
@@ -1366,10 +1401,10 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
   <h3 id="Kook_Color_op_Implicit_Kook_Color__System_Drawing_Color" data-uid="Kook.Color.op_Implicit(Kook.Color)~System.Drawing.Color">
   implicit operator Color(Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L349"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Converts the given Kook.Net-defined <a class="xref" href="Kook.Color.html">Color</a> to a .NET standard <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>.</p>
+  <div class="markdown level1 summary"><p>将由 Kook.Net 定义的 <a class="xref" href="Kook.Color.html">Color</a> 颜色转换为由 .NET 定义的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> 颜色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1380,14 +1415,14 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>color</code> <a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>The Kook.Net-defined <a class="xref" href="Kook.Color.html">Color</a> to convert.</p>
+    <dd><p>要进行转换的 <a class="xref" href="Kook.Color.html">Color</a> 颜色。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
-    <dd><p>The .NET standard <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> that represents the given Kook.Net-defined <a class="xref" href="Kook.Color.html">Color</a>.</p>
+    <dd><p>与该 <a class="xref" href="Kook.Color.html">Color</a> 颜色具有相同色值的 .NET <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> 颜色。</p>
 </dd>
   </dl>
 
@@ -1405,10 +1440,10 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
   <h3 id="Kook_Color_op_Implicit_Kook_Color__System_UInt32" data-uid="Kook.Color.op_Implicit(Kook.Color)~System.UInt32">
   implicit operator uint(Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L335"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Converts the given <a class="xref" href="Kook.Color.html">Color</a> to its raw value of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>.</p>
+  <div class="markdown level1 summary"><p>获取此颜色的原始值。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1419,15 +1454,13 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>color</code> <a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>The <a class="xref" href="Kook.Color.html">Color</a> to convert.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>The raw value of the given <a class="xref" href="Kook.Color.html">Color</a>.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1436,6 +1469,9 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
 
 
+  <h4 class="section" id="Kook_Color_op_Implicit_Kook_Color__System_UInt32_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>颜色以 24 位无符号整型值 RGB 格式进行编码，由高至低的每 8 位分别表示红色、绿色和蓝色通道的强度。</p>
+</div>
 
 
 
@@ -1444,10 +1480,10 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
   <h3 id="Kook_Color_op_Implicit_System_UInt32__Kook_Color" data-uid="Kook.Color.op_Implicit(System.UInt32)~Kook.Color">
   implicit operator Color(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L332"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Converts the given raw value of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a> to a <a class="xref" href="Kook.Color.html">Color</a>.</p>
+  <div class="markdown level1 summary"><p>使用指定的 24 位无符号整型值初始化一个 <a class="xref" href="Kook.Color.html">Color</a> 结构的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1458,15 +1494,14 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rawValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>The raw value of the color.</p>
+    <dd><p>颜色的 24 位无符号整型原始值。</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Kook.Color.html">Color</a></dt>
-    <dd><p>The <a class="xref" href="Kook.Color.html">Color</a> that represents the given raw value.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1474,8 +1509,18 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
 
 
+  <h4 class="section" id="Kook_Color_op_Implicit_System_UInt32__Kook_Color_examples">Examples</h4>
+  <p>创建 #607D8B（http://www.color-hex.com/color/607d8b）所表示的颜色：</p>
+<pre><code class="lang-cs">Color darkGrey = 0x607D8B;</code></pre>
 
 
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>颜色原始值超过了 <a class="xref" href="Kook.Color.html#Kook_Color_MaxDecimalValue">MaxDecimalValue</a>。</p>
+</dd>
+  </dl>
 
 
 
@@ -1483,10 +1528,10 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
 
   <h3 id="Kook_Color_op_Inequality_Kook_Color_Kook_Color_" data-uid="Kook.Color.op_Inequality(Kook.Color,Kook.Color)">
   operator !=(Color, Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Roles/Color.cs/#L319"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="Kook.Color.html">Color</a> is not equal to this instance.</p>
+  <div class="markdown level1 summary"><p>判定两个 <a class="xref" href="Kook.Color.html">Color</a> 是否不相等。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1505,7 +1550,7 @@ the middle 8 bits contain the green value, and the least-significant 8 bits cont
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><code>true</code> if the specified <a class="xref" href="Kook.Color.html">Color</a> is not equal to this instance; otherwise, <code>false</code> .</p>
+    <dd><p>如果两个 <a class="xref" href="Kook.Color.html">Color</a> 不相等，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </dd>
   </dl>
 
