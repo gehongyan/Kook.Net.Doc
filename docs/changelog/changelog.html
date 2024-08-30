@@ -99,15 +99,24 @@
 <li><code>Kook.Net.DependencyInjection.Microsoft</code>：Microsoft.Extensions.DependencyInjection 依赖注入扩展包</li>
 <li><code>Kook.Net.Hosting</code>：主机服务扩展包</li>
 </ul>
-<p><code>Kook.Net</code> 包新增了对 <code>Kook.Net.Webhook</code> 包的引用，移除了对 <code>Kook.Net.CardMarkup</code> 包的引用，如需继续使用有关通过标记语言构建卡片消息的功能，请单独引用 <code>Kook.Net.CardMarkup</code> 包。</p>
+<p><code>Kook.Net</code> 包新增了对 <code>Kook.Net.Webhook</code> 包的引用，移除了对 <code>Kook.Net.CardMarkup</code>
+包的引用，如需继续使用有关通过标记语言构建卡片消息的功能，请单独引用 <code>Kook.Net.CardMarkup</code> 包。</p>
 <p>语音连接与推流功能已变更为由受官方支持的方式实现，新增的接收语音数据流相关的 API 为实验性功能，不受官方支持。</p>
-<p><code>Emote.Parse</code> 在发生错误时会引发的异常从 <code>ArgumentException</code> 变更为 <code>FormatException</code>。<code>Emote.ToString</code> 的返回结果变更为等效于 <code>ToKMarkdownString</code> 的结果。<code>MessageExtensions.GetJumpUrl</code> 所提供的链接格式进行了调整。<code>SocketGuild.ValidBoostSubscriptions</code> 变更为 <code>SocketGuild.ActiveBoostSubscriptions</code>。<code>Tag&lt;T&gt;</code> 变更为 <code>Tag&lt;TKey, TValue&gt;</code>。</p>
+<p><code>Emote.Parse</code> 在发生错误时会引发的异常从 <code>ArgumentException</code> 变更为 <code>FormatException</code>。<code>Emote.ToString</code> 的返回结果变更为等效于
+<code>ToKMarkdownString</code> 的结果。<code>MessageExtensions.GetJumpUrl</code> 所提供的链接格式进行了调整。
+<code>SocketGuild.ValidBoostSubscriptions</code> 变更为 <code>SocketGuild.ActiveBoostSubscriptions</code>。<code>Tag&lt;T&gt;</code> 变更为 <code>Tag&lt;TKey, TValue&gt;</code>。</p>
 <h3 id="新增">新增</h3>
 <ul>
-<li>新增支持自定义消息队列，默认实现为同步消息处理，支持通过安装扩展 NuGet 包并配置 <code>KookSocketConfig.MessageQueueProvider</code> 来设置消息队列提供者。<code>Kook.Net.MessageQueue.InMemory</code> 为内存队列支持包，<code>Kook.Net.MessageQueue.MassTransit</code> 为 MassTransit 队列支持包。用法请参考示例。</li>
-<li>新增支持 Webhook 模式，目前所实现的 Webhook 模式建立在 Socket 实现之上，Kook.Net 所集成的 Webhook 为抽象类 <code>KookWebhookClient</code>。<code>Kook.Net.Webhook.HttpListener</code> 为 HTTP Listener 的 Webhook 实现包，<code>Kook.Net.Webhook.AspNet</code> 为与 ASP.NET 集成的 Webhook 实现包。用法请参考示例。</li>
-<li>新增对 Microsoft.Extensions.DependencyInjection 依赖注入框架的扩展方法包 <code>Kook.Net.DependencyInjection.Microsoft</code>，用于支持快捷添加 Kook.Net 中各种客户端的服务，用法请参考示例。</li>
-<li>新增基于 <code>IHost</code> 及 <code>IHostedService</code> 扩展的主机服务扩展包 <code>Kook.Net.Hosting</code>，用于支持快捷添加 Kook.Net 中各种客户端的主机服务，用法请参考示例。</li>
+<li>新增支持自定义消息队列，默认实现为同步消息处理，支持通过安装扩展 NuGet 包并配置 <code>KookSocketConfig.MessageQueueProvider</code>
+来设置消息队列提供者。<code>Kook.Net.MessageQueue.InMemory</code> 为内存队列支持包，<code>Kook.Net.MessageQueue.MassTransit</code> 为
+MassTransit 队列支持包。用法请参考示例。</li>
+<li>新增支持 Webhook 模式，目前所实现的 Webhook 模式建立在 Socket 实现之上，Kook.Net 所集成的 Webhook 为抽象类
+<code>KookWebhookClient</code>。<code>Kook.Net.Webhook.HttpListener</code> 为 HTTP Listener 的 Webhook 实现包，<code>Kook.Net.Webhook.AspNet</code> 为与
+ASP.NET 集成的 Webhook 实现包。用法请参考示例。</li>
+<li>新增对 Microsoft.Extensions.DependencyInjection 依赖注入框架的扩展方法包 <code>Kook.Net.DependencyInjection.Microsoft</code>
+，用于支持快捷添加 Kook.Net 中各种客户端的服务，用法请参考示例。</li>
+<li>新增基于 <code>IHost</code> 及 <code>IHostedService</code> 扩展的主机服务扩展包 <code>Kook.Net.Hosting</code>，用于支持快捷添加 Kook.Net
+中各种客户端的主机服务，用法请参考示例。</li>
 <li>新增支持接收语音数据流相关的 API。（实验性功能，不受官方支持）</li>
 <li>文本命令框架新增内置支持对 <code>DateOnly</code> 与 <code>TimeOnly</code> 类型的参数解析，新增支持对 <code>Uri</code> 类型的参数解析，新增对图文混排消息的命令解析。</li>
 <li><code>IUserMessage</code> 上新增扩展方法 <code>MaybeTextImageMixedMessage</code>，用于判断是否可能为图文混排消息。</li>
@@ -190,11 +199,10 @@ WebSocket 时进行。</li>
 <li>SocketSelfUser 现在实现了 <code>IUpdateable</code></li>
 <li>添加了 <code>IGuild.RecommendInfo.Certifications</code></li>
 <li><code>IQuote</code> 新增新的实现 <code>MessageReference</code>，这仅包含要被引用的消息 ID，用于在用户代码调用 API 时传入</li>
-<li></li>
-</ul>
-<p>添加了对事件类型 <code>embeds_append</code>、<code>sort_channel</code>、<code>updated_server_type</code>、<code>batch_added_channel</code>、<code>batch_updated_channel</code>、
+<li>添加了对事件类型 <code>embeds_append</code>、<code>sort_channel</code>、<code>updated_server_type</code>、<code>batch_added_channel</code>、<code>batch_updated_channel</code>、
 <code>batch_deleted_channel</code>、<code>live_status_changed</code>、<code>PERSON</code> 类型的 <code>updated_guild</code>、<code>add_guild_mute</code>、<code>delete_guild_mute</code>、
-<code>unread_count_changed</code> 的支持，但暂时无法确认这些事件是否会实际下发。</p>
+<code>unread_count_changed</code> 的支持，但暂时无法确认这些事件是否会实际下发。</li>
+</ul>
 <h3 id="修复-1">修复</h3>
 <ul>
 <li>修复私聊消息的作者不正确的问题</li>
