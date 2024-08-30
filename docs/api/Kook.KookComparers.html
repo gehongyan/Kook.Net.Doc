@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Tag&lt;TKey, TValue&gt; | Kook.Net 文档 </title>
+      <title>Class KookComparers | Kook.Net 文档 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Tag&lt;TKey, TValue&gt; | Kook.Net 文档 ">
+      <meta name="title" content="Class KookComparers | Kook.Net 文档 ">
       
-      <meta name="description" content="Supports all classes in the .NET class hierarchy and provides low-level services to derived classes. This is the ultimate base class of all .NET classes; it is the root of the type hierarchy.">
+      <meta name="description" content="用于比较 KOOK 各种实体的 。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Tag_2.md&amp;value=---%0Auid%3A%20Kook.Tag%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_KookComparers.md&amp;value=---%0Auid%3A%20Kook.KookComparers%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Kook.Tag`2">
+        <article data-uid="Kook.KookComparers">
 
 
 
-  <h1 id="Kook_Tag_2" data-uid="Kook.Tag`2" class="text-break">
-Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Kook_KookComparers" data-uid="Kook.KookComparers" class="text-break">
+Class KookComparers  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Utils/KookComparers.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,38 +97,25 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Supports all classes in the .NET class hierarchy and provides low-level services to derived classes. This is the ultimate base class of all .NET classes; it is the root of the type hierarchy.</p>
+  <div class="markdown summary"><p>用于比较 KOOK 各种实体的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer&lt;T&gt;</a>。</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Tag&lt;TKey, TValue&gt; : ITag where TKey : IEquatable&lt;TKey&gt; where TValue : IEntity&lt;TKey&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static class KookComparers</code></pre>
   </div>
 
 
 
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>TKey</code></dt>
-    <dd></dd>
-    <dt><code>TValue</code></dt>
-    <dd></dd>
-  </dl>
 
   <dl class="typelist inheritance">
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Tag&lt;TKey, TValue&gt;</span></div>
+      <div><span class="xref">KookComparers</span></div>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="Kook.ITag.html">ITag</a></div>
-    </dd>
-  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -152,24 +139,11 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
   </dd></dl>
 
-  <dl class="typelist extensionMethods">
-    <dt>Extension Methods</dt>
-    <dd>
-  <div>
-      <a class="xref" href="Kook.TagUtils.html#Kook_TagUtils_AsChannelTag_Kook_ITag_">TagUtils.AsChannelTag(ITag)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.TagUtils.html#Kook_TagUtils_AsEmojiTag_Kook_ITag_">TagUtils.AsEmojiTag(ITag)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.TagUtils.html#Kook_TagUtils_AsRoleTag_Kook_ITag_">TagUtils.AsRoleTag(ITag)</a>
-  </div>
-  <div>
-      <a class="xref" href="Kook.TagUtils.html#Kook_TagUtils_AsUserTag_Kook_ITag_">TagUtils.AsUserTag(ITag)</a>
-  </div>
-  </dd></dl>
 
 
 
@@ -179,19 +153,19 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 </h2>
 
 
-  <a id="Kook_Tag_2_Index_" data-uid="Kook.Tag`2.Index*"></a>
+  <a id="Kook_KookComparers_ChannelComparer_" data-uid="Kook.KookComparers.ChannelComparer*"></a>
 
-  <h3 id="Kook_Tag_2_Index" data-uid="Kook.Tag`2.Index">
-  Index
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_KookComparers_ChannelComparer" data-uid="Kook.KookComparers.ChannelComparer">
+  ChannelComparer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Utils/KookComparers.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>获取消息中标签的位置。</p>
+  <div class="markdown level1 summary"><p>获取一个用于比较 <a class="xref" href="Kook.IChannel.html">IChannel</a> 的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer&lt;T&gt;</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Index { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEqualityComparer&lt;IChannel&gt; ChannelComparer { get; }</code></pre>
   </div>
 
 
@@ -200,7 +174,7 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer</a>&lt;<a class="xref" href="Kook.IChannel.html">IChannel</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -211,19 +185,19 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 
 
 
-  <a id="Kook_Tag_2_Key_" data-uid="Kook.Tag`2.Key*"></a>
+  <a id="Kook_KookComparers_GuildComparer_" data-uid="Kook.KookComparers.GuildComparer*"></a>
 
-  <h3 id="Kook_Tag_2_Key" data-uid="Kook.Tag`2.Key">
-  Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_KookComparers_GuildComparer" data-uid="Kook.KookComparers.GuildComparer">
+  GuildComparer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Utils/KookComparers.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>获取标签的键。</p>
+  <div class="markdown level1 summary"><p>获取一个用于比较 <a class="xref" href="Kook.IGuild.html">IGuild</a> 的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer&lt;T&gt;</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TKey Key { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEqualityComparer&lt;IGuild&gt; GuildComparer { get; }</code></pre>
   </div>
 
 
@@ -232,7 +206,7 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">TKey</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer</a>&lt;<a class="xref" href="Kook.IGuild.html">IGuild</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -243,19 +217,19 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 
 
 
-  <a id="Kook_Tag_2_Length_" data-uid="Kook.Tag`2.Length*"></a>
+  <a id="Kook_KookComparers_MessageComparer_" data-uid="Kook.KookComparers.MessageComparer*"></a>
 
-  <h3 id="Kook_Tag_2_Length" data-uid="Kook.Tag`2.Length">
-  Length
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_KookComparers_MessageComparer" data-uid="Kook.KookComparers.MessageComparer">
+  MessageComparer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Utils/KookComparers.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>获取标签的长度。</p>
+  <div class="markdown level1 summary"><p>获取一个用于比较 <a class="xref" href="Kook.IMessage.html">IMessage</a> 的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer&lt;T&gt;</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Length { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEqualityComparer&lt;IMessage&gt; MessageComparer { get; }</code></pre>
   </div>
 
 
@@ -264,7 +238,7 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer</a>&lt;<a class="xref" href="Kook.IMessage.html">IMessage</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -275,19 +249,19 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 
 
 
-  <a id="Kook_Tag_2_Type_" data-uid="Kook.Tag`2.Type*"></a>
+  <a id="Kook_KookComparers_RoleComparer_" data-uid="Kook.KookComparers.RoleComparer*"></a>
 
-  <h3 id="Kook_Tag_2_Type" data-uid="Kook.Tag`2.Type">
-  Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_KookComparers_RoleComparer" data-uid="Kook.KookComparers.RoleComparer">
+  RoleComparer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Utils/KookComparers.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>获取标签的类型。</p>
+  <div class="markdown level1 summary"><p>获取一个用于比较 <a class="xref" href="Kook.IRole.html">IRole</a> 的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer&lt;T&gt;</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TagType Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEqualityComparer&lt;IRole&gt; RoleComparer { get; }</code></pre>
   </div>
 
 
@@ -296,7 +270,7 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Kook.TagType.html">TagType</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer</a>&lt;<a class="xref" href="Kook.IRole.html">IRole</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -307,19 +281,19 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 
 
 
-  <a id="Kook_Tag_2_Value_" data-uid="Kook.Tag`2.Value*"></a>
+  <a id="Kook_KookComparers_UserComparer_" data-uid="Kook.KookComparers.UserComparer*"></a>
 
-  <h3 id="Kook_Tag_2_Value" data-uid="Kook.Tag`2.Value">
-  Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_KookComparers_UserComparer" data-uid="Kook.KookComparers.UserComparer">
+  UserComparer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Utils/KookComparers.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>获取标签的键。</p>
+  <div class="markdown level1 summary"><p>获取一个用于比较 <a class="xref" href="Kook.IUser.html">IUser</a> 的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer&lt;T&gt;</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TValue? Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEqualityComparer&lt;IUser&gt; UserComparer { get; }</code></pre>
   </div>
 
 
@@ -328,46 +302,9 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">TValue</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer</a>&lt;<a class="xref" href="Kook.IUser.html">IUser</a>&gt;</dt>
     <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Kook_Tag_2_ToString_" data-uid="Kook.Tag`2.ToString*"></a>
-
-  <h3 id="Kook_Tag_2_ToString" data-uid="Kook.Tag`2.ToString">
-  ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L38"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that represents the current object.</p>
-</dd>
-  </dl>
-
-
-
 
 
 
@@ -380,7 +317,7 @@ Class Tag&lt;TKey, TValue&gt;  <a class="header-action link-secondary" title="Vi
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Entities/Messages/Tag.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.0/src/Kook.Net.Core/Utils/KookComparers.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
