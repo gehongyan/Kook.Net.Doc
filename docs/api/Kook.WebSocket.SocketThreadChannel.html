@@ -1,0 +1,848 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SocketThreadChannel | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SocketThreadChannel | Kook.Net 文档 ">
+      
+      <meta name="description" content="表示服务器中一个基于网关的帖子频道，可以浏览、发布和回复帖子。">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_WebSocket_SocketThreadChannel.md&amp;value=---%0Auid%3A%20Kook.WebSocket.SocketThreadChannel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo/Logo_Small.png" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.WebSocket.SocketThreadChannel">
+
+
+
+  <h1 id="Kook_WebSocket_SocketThreadChannel" data-uid="Kook.WebSocket.SocketThreadChannel" class="text-break">
+Class SocketThreadChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a>.<a class="xref" href="Kook.WebSocket.html">WebSocket</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.WebSocket.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>表示服务器中一个基于网关的帖子频道，可以浏览、发布和回复帖子。</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SocketThreadChannel : SocketGuildChannel, IUpdateable, IThreadChannel, INestedChannel, IGuildChannel, IChannel, IEntity&lt;ulong&gt;, IDeletable, IMentionable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Kook.WebSocket.SocketEntity-1.html">SocketEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</div>
+      <div><a class="xref" href="Kook.WebSocket.SocketChannel.html">SocketChannel</a></div>
+      <div><a class="xref" href="Kook.WebSocket.SocketGuildChannel.html">SocketGuildChannel</a></div>
+      <div><span class="xref">SocketThreadChannel</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Kook.IUpdateable.html">IUpdateable</a></div>
+      <div><a class="xref" href="Kook.IThreadChannel.html">IThreadChannel</a></div>
+      <div><a class="xref" href="Kook.INestedChannel.html">INestedChannel</a></div>
+      <div><a class="xref" href="Kook.IGuildChannel.html">IGuildChannel</a></div>
+      <div><a class="xref" href="Kook.IChannel.html">IChannel</a></div>
+      <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</div>
+      <div><a class="xref" href="Kook.IDeletable.html">IDeletable</a></div>
+      <div><a class="xref" href="Kook.IMentionable.html">IMentionable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_Guild">SocketGuildChannel.Guild</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_Name">SocketGuildChannel.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_Position">SocketGuildChannel.Position</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_Type">SocketGuildChannel.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_CreatorId">SocketGuildChannel.CreatorId</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_Creator">SocketGuildChannel.Creator</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_RolePermissionOverwrites">SocketGuildChannel.RolePermissionOverwrites</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_UserPermissionOverwrites">SocketGuildChannel.UserPermissionOverwrites</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_UpdateAsync_Kook_RequestOptions_">SocketGuildChannel.UpdateAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_ModifyAsync_System_Action_Kook_ModifyGuildChannelProperties__Kook_RequestOptions_">SocketGuildChannel.ModifyAsync(Action&lt;ModifyGuildChannelProperties&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_DeleteAsync_Kook_RequestOptions_">SocketGuildChannel.DeleteAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_GetPermissionOverwrite_Kook_IUser_">SocketGuildChannel.GetPermissionOverwrite(IUser)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_GetPermissionOverwrite_Kook_IRole_">SocketGuildChannel.GetPermissionOverwrite(IRole)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_AddPermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_">SocketGuildChannel.AddPermissionOverwriteAsync(IGuildUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_AddPermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_">SocketGuildChannel.AddPermissionOverwriteAsync(IRole, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_RemovePermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_">SocketGuildChannel.RemovePermissionOverwriteAsync(IGuildUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_RemovePermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_">SocketGuildChannel.RemovePermissionOverwriteAsync(IRole, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_ModifyPermissionOverwriteAsync_Kook_IGuildUser_System_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_">SocketGuildChannel.ModifyPermissionOverwriteAsync(IGuildUser, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_System_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_">SocketGuildChannel.ModifyPermissionOverwriteAsync(IRole, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_ToString">SocketGuildChannel.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.WebSocket.SocketEntity-1.html#Kook_WebSocket_SocketEntity_1_Id">SocketEntity&lt;ulong&gt;.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetChannelType_Kook_IChannel_">ChannelExtensions.GetChannelType(IChannel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetJumpUrl_Kook_IChannel_">ChannelExtensions.GetJumpUrl(IChannel)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Kook_WebSocket_SocketThreadChannel_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><div class="WARNING"><h5>warning</h5><p>
+        网关目前不会下发有关帖子频道信息变更的事件，此实体的信息可能会过时。如需获取最新信息，请先调用
+        <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_UpdateAsync_Kook_RequestOptions_">UpdateAsync(RequestOptions?)</a></p></div>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_Category_" data-uid="Kook.WebSocket.SocketThreadChannel.Category*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_Category" data-uid="Kook.WebSocket.SocketThreadChannel.Category">
+  Category
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此嵌套频道在服务器频道列表中所属的分组频道的。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICategoryChannel? Category { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ICategoryChannel.html">ICategoryChannel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketThreadChannel_Category_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果当前频道不属于任何分组频道，则会返回 <code>null</code>。 <br><div class="WARNING"><h5>warning</h5><p>
+网关目前不会下发有关帖子频道信息变更的事件，此实体的信息可能会过时。如需获取最新信息，请先调用
+<a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_UpdateAsync_Kook_RequestOptions_">UpdateAsync(RequestOptions?)</a></p></div>
+</div>
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_CategoryId_" data-uid="Kook.WebSocket.SocketThreadChannel.CategoryId*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_CategoryId" data-uid="Kook.WebSocket.SocketThreadChannel.CategoryId">
+  CategoryId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此嵌套频道在服务器频道列表中所属的分组频道的 ID。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong? CategoryId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketThreadChannel_CategoryId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果当前频道不属于任何分组频道，则会返回 <code>null</code>。</p>
+</div>
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_IsPermissionSynced_" data-uid="Kook.WebSocket.SocketThreadChannel.IsPermissionSynced*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_IsPermissionSynced" data-uid="Kook.WebSocket.SocketThreadChannel.IsPermissionSynced">
+  IsPermissionSynced
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>指示此嵌套频道的权限是否与其所属分组频道同步。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsPermissionSynced { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketThreadChannel_IsPermissionSynced_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果权限同步，则此属性返回 <code>true</code>；如果权限不同步，则返回 <code>false</code>；如果无法确定权限是否同步，则返回 <code>null</code>。</p>
+</div>
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_KMarkdownMention_" data-uid="Kook.WebSocket.SocketThreadChannel.KMarkdownMention*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_KMarkdownMention" data-uid="Kook.WebSocket.SocketThreadChannel.KMarkdownMention">
+  KMarkdownMention
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>返回一个用于在 KMarkdown 格式文本中提及此对象的格式化字符串。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string KMarkdownMention { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_PlainTextMention_" data-uid="Kook.WebSocket.SocketThreadChannel.PlainTextMention*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_PlainTextMention" data-uid="Kook.WebSocket.SocketThreadChannel.PlainTextMention">
+  PlainTextMention
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取一个用于在纯文本格式文本中提及此对象的格式化字符串。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PlainTextMention { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_PostCreationInterval_" data-uid="Kook.WebSocket.SocketThreadChannel.PostCreationInterval*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_PostCreationInterval" data-uid="Kook.WebSocket.SocketThreadChannel.PostCreationInterval">
+  PostCreationInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此频道设置的发帖速率限制。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PostCreationInterval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>一个 <code>int</code>，表示用户在可以发布另一条帖子之前需要等待的时间（以秒为单位）；如果未启用，则为 <code>0</code>。</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketThreadChannel_PostCreationInterval_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>拥有 <a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageMessages">ManageMessages</a> 或
+<a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageChannels">ManageChannels</a> 权限的用户不受慢速模式延迟的限制。</p>
+</div>
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_ReplyInterval_" data-uid="Kook.WebSocket.SocketThreadChannel.ReplyInterval*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_ReplyInterval" data-uid="Kook.WebSocket.SocketThreadChannel.ReplyInterval">
+  ReplyInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此频道设置的回帖速率限制。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ReplyInterval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>一个 <code>int</code>，表示用户在可以对任意帖子发布另一条回复之前需要等待的时间（以秒为单位）；如果未启用，则为 <code>0</code>。</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketThreadChannel_ReplyInterval_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>拥有 <a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageMessages">ManageMessages</a> 或
+<a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageChannels">ManageChannels</a> 权限的用户不受慢速模式延迟的限制。</p>
+</div>
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_Topic_" data-uid="Kook.WebSocket.SocketThreadChannel.Topic*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_Topic" data-uid="Kook.WebSocket.SocketThreadChannel.Topic">
+  Topic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此频道的说明。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Topic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketThreadChannel_Topic_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+        网关目前不会下发有关帖子频道信息变更的事件，此实体的信息可能会过时。如需获取最新信息，请先调用
+        <a class="xref" href="Kook.WebSocket.SocketGuildChannel.html#Kook_WebSocket_SocketGuildChannel_UpdateAsync_Kook_RequestOptions_">UpdateAsync(RequestOptions?)</a></p></div>
+</div>
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_Users_" data-uid="Kook.WebSocket.SocketThreadChannel.Users*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_Users" data-uid="Kook.WebSocket.SocketThreadChannel.Users">
+  Users
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取用户缓存列表中的可以访问此频道的所有用户。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IReadOnlyCollection&lt;SocketGuildUser&gt; Users { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_WebSocket_SocketThreadChannel_Users_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此属性仅会返回缓存中可以访问此频道的所有用户，如果未启用用户列表缓存，或者由于网关事件确实导致本地缓存不同步，此属性所返回的用户列表可能不准确。</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_CreateInviteAsync_" data-uid="Kook.WebSocket.SocketThreadChannel.CreateInviteAsync*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketThreadChannel.CreateInviteAsync(Kook.InviteMaxAge,Kook.InviteMaxUses,Kook.RequestOptions)">
+  CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>创建一个到此频道新邀请。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(InviteMaxAge maxAge = InviteMaxAge._604800, InviteMaxUses maxUses = InviteMaxUses.Unlimited, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxAge</code> <a class="xref" href="Kook.InviteMaxAge.html">InviteMaxAge</a></dt>
+    <dd><p>邀请链接的有效时长，<a class="xref" href="Kook.InviteMaxAge.html#Kook_InviteMaxAge_NeverExpires">NeverExpires</a> 表示永不过期。</p>
+</dd>
+    <dt><code>maxUses</code> <a class="xref" href="Kook.InviteMaxUses.html">InviteMaxUses</a></dt>
+    <dd><p>邀请链接的可用人次，<a class="xref" href="Kook.InviteMaxUses.html#Kook_InviteMaxUses_Unlimited">Unlimited</a> 表示无限制。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;</dt>
+    <dd><p>一个表示异步邀请创建操作的任务。任务的结果包含所创建的邀请链接的元数据，其中包含有关邀请链接的信息。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_CreateInviteAsync_" data-uid="Kook.WebSocket.SocketThreadChannel.CreateInviteAsync*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketThreadChannel.CreateInviteAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},Kook.RequestOptions)">
+  CreateInviteAsync(int?, int?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>创建一个到此频道新邀请。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IInvite&gt; CreateInviteAsync(int? maxAge = 604800, int? maxUses = null, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxAge</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>邀请链接的有效时长，<code>null</code> 表示永不过期。</p>
+</dd>
+    <dt><code>maxUses</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>邀请链接的可用人次，<code>null</code> 表示无限制。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;</dt>
+    <dd><p>一个表示异步邀请创建操作的任务。任务的结果包含所创建的邀请链接的元数据，其中包含有关邀请链接的信息。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_GetInvitesAsync_" data-uid="Kook.WebSocket.SocketThreadChannel.GetInvitesAsync*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_GetInvitesAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketThreadChannel.GetInvitesAsync(Kook.RequestOptions)">
+  GetInvitesAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此嵌套频道的所有邀请信息。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;IInvite&gt;&gt; GetInvitesAsync(RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IInvite.html">IInvite</a>&gt;&gt;</dt>
+    <dd><p>一个表示异步获取操作的任务。任务的结果包含此频道中找到的所有邀请信息。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_GetUser_" data-uid="Kook.WebSocket.SocketThreadChannel.GetUser*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_GetUser_System_UInt64_" data-uid="Kook.WebSocket.SocketThreadChannel.GetUser(System.UInt64)">
+  GetUser(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此频道中的一个服务器用户。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override SocketGuildUser? GetUser(ulong id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>要获取的服务器用户的 ID。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.WebSocket.SocketGuildUser.html">SocketGuildUser</a></dt>
+    <dd><p>如果找到了具有指定 ID 的服务器用户，则返回该用户；否则返回 <code>null</code>。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_ModifyAsync_" data-uid="Kook.WebSocket.SocketThreadChannel.ModifyAsync*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_ModifyAsync_System_Action_Kook_ModifyThreadChannelProperties__Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketThreadChannel.ModifyAsync(System.Action{Kook.ModifyThreadChannelProperties},Kook.RequestOptions)">
+  ModifyAsync(Action&lt;ModifyThreadChannelProperties&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>修改此频道的属性。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task ModifyAsync(Action&lt;ModifyThreadChannelProperties&gt; func, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.ModifyThreadChannelProperties.html">ModifyThreadChannelProperties</a>&gt;</dt>
+    <dd><p>一个包含修改帖子频道的属性的委托。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步修改操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.ModifyThreadChannelProperties.html">ModifyThreadChannelProperties</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Kook_WebSocket_SocketThreadChannel_SyncPermissionsAsync_" data-uid="Kook.WebSocket.SocketThreadChannel.SyncPermissionsAsync*"></a>
+
+  <h3 id="Kook_WebSocket_SocketThreadChannel_SyncPermissionsAsync_Kook_RequestOptions_" data-uid="Kook.WebSocket.SocketThreadChannel.SyncPermissionsAsync(Kook.RequestOptions)">
+  SyncPermissionsAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>同步此嵌套频道的权限配置与其所属分组频道一致，并保持同步。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task SyncPermissionsAsync(RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步频道权限同步操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.WebSocket/Entities/Channels/SocketThreadChannel.cs/#L17" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

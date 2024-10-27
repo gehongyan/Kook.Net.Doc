@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IThreadChannel | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IThreadChannel | Kook.Net 文档 ">
+      
+      <meta name="description" content="表示服务器中一个通用的帖子频道，可以浏览、发布和回复帖子。">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IThreadChannel.md&amp;value=---%0Auid%3A%20Kook.IThreadChannel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo/Logo_Small.png" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.IThreadChannel">
+
+
+
+  <h1 id="Kook_IThreadChannel" data-uid="Kook.IThreadChannel" class="text-break">
+Interface IThreadChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>表示服务器中一个通用的帖子频道，可以浏览、发布和回复帖子。</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IThreadChannel : INestedChannel, IGuildChannel, IChannel, IEntity&lt;ulong&gt;, IDeletable, IMentionable</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_CategoryId">INestedChannel.CategoryId</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_IsPermissionSynced">INestedChannel.IsPermissionSynced</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_SyncPermissionsAsync_Kook_RequestOptions_">INestedChannel.SyncPermissionsAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_GetCategoryAsync_Kook_CacheMode_Kook_RequestOptions_">INestedChannel.GetCategoryAsync(CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_GetInvitesAsync_Kook_RequestOptions_">INestedChannel.GetInvitesAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_CreateInviteAsync_Kook_InviteMaxAge_Kook_InviteMaxUses_Kook_RequestOptions_">INestedChannel.CreateInviteAsync(InviteMaxAge, InviteMaxUses, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.INestedChannel.html#Kook_INestedChannel_CreateInviteAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__Kook_RequestOptions_">INestedChannel.CreateInviteAsync(int?, int?, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_Guild">IGuildChannel.Guild</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_GuildId">IGuildChannel.GuildId</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_Position">IGuildChannel.Position</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_Type">IGuildChannel.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_CreatorId">IGuildChannel.CreatorId</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_RolePermissionOverwrites">IGuildChannel.RolePermissionOverwrites</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_UserPermissionOverwrites">IGuildChannel.UserPermissionOverwrites</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_ModifyAsync_System_Action_Kook_ModifyGuildChannelProperties__Kook_RequestOptions_">IGuildChannel.ModifyAsync(Action&lt;ModifyGuildChannelProperties&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_GetCreatorAsync_Kook_CacheMode_Kook_RequestOptions_">IGuildChannel.GetCreatorAsync(CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_GetPermissionOverwrite_Kook_IRole_">IGuildChannel.GetPermissionOverwrite(IRole)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_GetPermissionOverwrite_Kook_IUser_">IGuildChannel.GetPermissionOverwrite(IUser)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_RemovePermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_">IGuildChannel.RemovePermissionOverwriteAsync(IRole, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_RemovePermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_">IGuildChannel.RemovePermissionOverwriteAsync(IGuildUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_AddPermissionOverwriteAsync_Kook_IRole_Kook_RequestOptions_">IGuildChannel.AddPermissionOverwriteAsync(IRole, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_AddPermissionOverwriteAsync_Kook_IGuildUser_Kook_RequestOptions_">IGuildChannel.AddPermissionOverwriteAsync(IGuildUser, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_ModifyPermissionOverwriteAsync_Kook_IRole_System_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_">IGuildChannel.ModifyPermissionOverwriteAsync(IRole, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_ModifyPermissionOverwriteAsync_Kook_IGuildUser_System_Func_Kook_OverwritePermissions_Kook_OverwritePermissions__Kook_RequestOptions_">IGuildChannel.ModifyPermissionOverwriteAsync(IGuildUser, Func&lt;OverwritePermissions, OverwritePermissions&gt;, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_GetUsersAsync_Kook_CacheMode_Kook_RequestOptions_">IGuildChannel.GetUsersAsync(CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IGuildChannel.html#Kook_IGuildChannel_GetUserAsync_System_UInt64_Kook_CacheMode_Kook_RequestOptions_">IGuildChannel.GetUserAsync(ulong, CacheMode, RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IChannel.html#Kook_IChannel_Name">IChannel.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IEntity-1.html#Kook_IEntity_1_Id">IEntity&lt;ulong&gt;.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IDeletable.html#Kook_IDeletable_DeleteAsync_Kook_RequestOptions_">IDeletable.DeleteAsync(RequestOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMentionable.html#Kook_IMentionable_PlainTextMention">IMentionable.PlainTextMention</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.IMentionable.html#Kook_IMentionable_KMarkdownMention">IMentionable.KMarkdownMention</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetChannelType_Kook_IChannel_">ChannelExtensions.GetChannelType(IChannel)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.ChannelExtensions.html#Kook_ChannelExtensions_GetJumpUrl_Kook_IChannel_">ChannelExtensions.GetJumpUrl(IChannel)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Kook_IThreadChannel_PostCreationInterval_" data-uid="Kook.IThreadChannel.PostCreationInterval*"></a>
+
+  <h3 id="Kook_IThreadChannel_PostCreationInterval" data-uid="Kook.IThreadChannel.PostCreationInterval">
+  PostCreationInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此频道设置的发帖速率限制。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int PostCreationInterval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>一个 <code>int</code>，表示用户在可以发布另一条帖子之前需要等待的时间（以秒为单位）；如果未启用，则为 <code>0</code>。</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_IThreadChannel_PostCreationInterval_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>拥有 <a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageMessages">ManageMessages</a> 或
+<a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageChannels">ManageChannels</a> 权限的用户不受慢速模式延迟的限制。</p>
+</div>
+
+
+
+
+  <a id="Kook_IThreadChannel_ReplyInterval_" data-uid="Kook.IThreadChannel.ReplyInterval*"></a>
+
+  <h3 id="Kook_IThreadChannel_ReplyInterval" data-uid="Kook.IThreadChannel.ReplyInterval">
+  ReplyInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此频道设置的回帖速率限制。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int? ReplyInterval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>一个 <code>int</code>，表示用户在可以对任意帖子发布另一条回复之前需要等待的时间（以秒为单位）；如果未启用，则为 <code>0</code>。</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_IThreadChannel_ReplyInterval_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>拥有 <a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageMessages">ManageMessages</a> 或
+<a class="xref" href="Kook.ChannelPermission.html#Kook_ChannelPermission_ManageChannels">ManageChannels</a> 权限的用户不受慢速模式延迟的限制。</p>
+</div>
+
+
+
+
+  <a id="Kook_IThreadChannel_Topic_" data-uid="Kook.IThreadChannel.Topic*"></a>
+
+  <h3 id="Kook_IThreadChannel_Topic" data-uid="Kook.IThreadChannel.Topic">
+  Topic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此频道的说明。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Topic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Kook_IThreadChannel_ModifyAsync_" data-uid="Kook.IThreadChannel.ModifyAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_ModifyAsync_System_Action_Kook_ModifyThreadChannelProperties__Kook_RequestOptions_" data-uid="Kook.IThreadChannel.ModifyAsync(System.Action{Kook.ModifyThreadChannelProperties},Kook.RequestOptions)">
+  ModifyAsync(Action&lt;ModifyThreadChannelProperties&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>修改此频道的属性。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ModifyAsync(Action&lt;ModifyThreadChannelProperties&gt; func, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.ModifyThreadChannelProperties.html">ModifyThreadChannelProperties</a>&gt;</dt>
+    <dd><p>一个包含修改帖子频道的属性的委托。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步修改操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.ModifyThreadChannelProperties.html">ModifyThreadChannelProperties</a></div>
+    </dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2024
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
