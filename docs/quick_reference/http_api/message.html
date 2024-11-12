@@ -150,17 +150,22 @@ Stream stream = null; // 要发送的文件的流
 FileAttachment attachment = default; // 要发送的文件的附件
 ICard card = null; // 要发送的卡片
 IEnumerable&lt;ICard&gt; cards = null; // 要发送的卡片列表
+int templateId = default; // 要发送的模板消息的模板 ID
+T parameters = default; // 要发送的模板消息的参数
+JsonSerializerOptions jsonSerializerOptions = null; // 要发送的模板消息的参数的序列化选项
 
 // API 请求，发送文本消息
-Cacheable&lt;IUserMessage,Guid&gt; textMessage = await textChannel.SendTextAsync(text, quote, ephemeralUser);
+Cacheable&lt;IUserMessage, Guid&gt; textMessage = await textChannel.SendTextAsync(text, quote, ephemeralUser);
+Cacheable&lt;IUserMessage, Guid&gt; textMessageFromTemplate = await textChannel.SendTextAsync(templateId, parameters, quote, ephemeralUser, jsonSerializerOptions);
 // API 请求，发送文件消息
-Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromPath = await textChannel.SendFileAsync(filePath, fileName, fileType, quote, ephemeralUser);
-Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromStream = await textChannel.SendFileAsync(stream, fileName, fileType, quote, ephemeralUser);
-Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromAttachment = await textChannel.SendFileAsync(attachment, quote, ephemeralUser);
+Cacheable&lt;IUserMessage, Guid&gt; fileMessageFromPath = await textChannel.SendFileAsync(filePath, fileName, fileType, quote, ephemeralUser);
+Cacheable&lt;IUserMessage, Guid&gt; fileMessageFromStream = await textChannel.SendFileAsync(stream, fileName, fileType, quote, ephemeralUser);
+Cacheable&lt;IUserMessage, Guid&gt; fileMessageFromAttachment = await textChannel.SendFileAsync(attachment, quote, ephemeralUser);
 // API 请求，发送单卡片消息
-Cacheable&lt;IUserMessage,Guid&gt; cardMessage = await textChannel.SendCardAsync(card, quote, ephemeralUser);
+Cacheable&lt;IUserMessage, Guid&gt; cardMessage = await textChannel.SendCardAsync(card, quote, ephemeralUser);
 // API 请求，发送多卡片消息
-Cacheable&lt;IUserMessage,Guid&gt; cardsMessage = await textChannel.SendCardsAsync(cards, quote, ephemeralUser);
+Cacheable&lt;IUserMessage, Guid&gt; cardsMessage = await textChannel.SendCardsAsync(cards, quote, ephemeralUser);
+Cacheable&lt;IUserMessage, Guid&gt; cardsMessageFromTemplate = await textChannel.SendCardsAsync(templateId, parameters, quote, ephemeralUser, jsonSerializerOptions);
 </code></pre>
 <h3 id="更新频道聊天消息"><a href="https://developer.kookapp.cn/doc/http/message#%E6%9B%B4%E6%96%B0%E9%A2%91%E9%81%93%E8%81%8A%E5%A4%A9%E6%B6%88%E6%81%AF">更新频道聊天消息</a></h3>
 <p>POST <code>/api/v3/message/update</code></p>
@@ -168,14 +173,21 @@ Cacheable&lt;IUserMessage,Guid&gt; cardsMessage = await textChannel.SendCardsAsy
 IEnumerable&lt;ICard&gt; cards = null; // 要更新的消息的卡片
 IQuote quote = null; // 要更新的消息的引用
 IUser ephemeralUser = null; // 要更新的瞬态消息的可见用户
+int templateId = default; // 要发送的模板消息的模板 ID
+T parameters = default; // 要发送的模板消息的参数
+JsonSerializerOptions jsonSerializerOptions = null; // 要发送的模板消息的参数的序列化选项
 
 // API 请求
-await userMessage.ModifyAsync(x =&gt;
+// 在更新模板消息时，指定泛型参数 T 可以提高序列化性能，省略泛型参数 T 时，序列化器将以序列化 object 的方式进行序列化
+await userMessage.ModifyAsync&lt;T&gt;(x =&gt;
 {
     x.Content = content;
     x.Cards = cards;
     x.Quote = quote; // 要清除引用，请设置为 Quote.Empty
     x.EphemeralUser = ephemeralUser;
+    x.TemplateId = templateId;
+    x.Parameters = parameters;
+    x.JsonSerializerOptions = jsonSerializerOptions;
 });
 </code></pre>
 <h3 id="删除频道聊天消息"><a href="https://developer.kookapp.cn/doc/http/message#%E5%88%A0%E9%99%A4%E9%A2%91%E9%81%93%E8%81%8A%E5%A4%A9%E6%B6%88%E6%81%AF">删除频道聊天消息</a></h3>

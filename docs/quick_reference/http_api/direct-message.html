@@ -147,30 +147,42 @@ Stream stream = null; // 要发送的文件的流
 FileAttachment attachment = default; // 要发送的文件的附件
 ICard card = null; // 要发送的卡片
 IEnumerable&lt;ICard&gt; cards = null; // 要发送的卡片列表
+int templateId = default; // 要发送的模板消息的模板 ID
+T parameters = default; // 要发送的模板消息的参数
+JsonSerializerOptions jsonSerializerOptions = null; // 要发送的模板消息的参数的序列化选项
 
 // API 请求，发送文本消息
-Cacheable&lt;IUserMessage,Guid&gt; textMessage = await dmChannel.SendTextAsync(text, quote);
+Cacheable&lt;IUserMessage, Guid&gt; textMessage = await dmChannel.SendTextAsync(text, quote);
+Cacheable&lt;IUserMessage, Guid&gt; textMessageFromTemplate = await dmChannel.SendTextAsync(templateId, parameters, quote, jsonSerializerOptions);
 // API 请求，发送文件消息
-Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromPath = await dmChannel.SendFileAsync(filePath, fileName, fileType, quote);
-Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromStream = await dmChannel.SendFileAsync(stream, fileName, fileType, quote);
-Cacheable&lt;IUserMessage,Guid&gt; fileMessageFromAttachment = await dmChannel.SendFileAsync(attachment, quote);
+Cacheable&lt;IUserMessage, Guid&gt; fileMessageFromPath = await dmChannel.SendFileAsync(filePath, fileName, fileType, quote);
+Cacheable&lt;IUserMessage, Guid&gt; fileMessageFromStream = await dmChannel.SendFileAsync(stream, fileName, fileType, quote);
+Cacheable&lt;IUserMessage, Guid&gt; fileMessageFromAttachment = await dmChannel.SendFileAsync(attachment, quote);
 // API 请求，发送单卡片消息
-Cacheable&lt;IUserMessage,Guid&gt; cardMessage = await dmChannel.SendCardAsync(card, quote);
+Cacheable&lt;IUserMessage, Guid&gt; cardMessage = await dmChannel.SendCardAsync(card, quote);
 // API 请求，发送多卡片消息
-Cacheable&lt;IUserMessage,Guid&gt; cardsMessage = await dmChannel.SendCardsAsync(cards, quote);
+Cacheable&lt;IUserMessage, Guid&gt; cardsMessage = await dmChannel.SendCardsAsync(cards, quote);
+Cacheable&lt;IUserMessage, Guid&gt; cardsMessageFromTemplate = await dmChannel.SendCardsAsync(templateId, parameters, quote, jsonSerializerOptions);
 </code></pre>
 <h3 id="更新私信聊天消息"><a href="https://developer.kookapp.cn/doc/http/direct-message#%E6%9B%B4%E6%96%B0%E7%A7%81%E4%BF%A1%E8%81%8A%E5%A4%A9%E6%B6%88%E6%81%AF">更新私信聊天消息</a></h3>
 <p>POST <code>/api/v3/direct-message/update</code></p>
 <pre><code class="lang-csharp">string content = null; // 要更新的消息的文本
 IEnumerable&lt;ICard&gt; cards = null; // 要更新的消息的卡片
 IQuote quote = null; // 要更新的消息的引用
+int templateId = default; // 要发送的模板消息的模板 ID
+T parameters = default; // 要发送的模板消息的参数
+JsonSerializerOptions jsonSerializerOptions = null; // 要发送的模板消息的参数的序列化选项
 
 // API 请求
+// 在更新模板消息时，指定泛型参数 T 可以提高序列化性能，省略泛型参数 T 时，序列化器将以序列化 object 的方式进行序列化
 await userMessage.ModifyAsync(x =&gt;
 {
     x.Content = content;
     x.Cards = cards;
     x.Quote = quote; // 要清除引用，请设置为 Quote.Empty
+    x.TemplateId = templateId;
+    x.Parameters = parameters;
+    x.JsonSerializerOptions = jsonSerializerOptions;
 });
 </code></pre>
 <h3 id="删除私信聊天消息"><a href="https://developer.kookapp.cn/doc/http/direct-message#%E5%88%A0%E9%99%A4%E7%A7%81%E4%BF%A1%E8%81%8A%E5%A4%A9%E6%B6%88%E6%81%AF">删除私信聊天消息</a></h3>

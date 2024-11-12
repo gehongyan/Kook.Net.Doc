@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IUserMessage" data-uid="Kook.IUserMessage" class="text-break">
-Interface IUserMessage  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IUserMessage  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.4/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -225,6 +225,9 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyCardsAsync_Kook_IUserMessage_System_Collections_Generic_IEnumerable_Kook_ICard__System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyCardsAsync(IUserMessage, IEnumerable&lt;ICard&gt;, bool, bool, RequestOptions?)</a>
   </div>
   <div>
+      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyCardsAsync__1_Kook_IUserMessage_System_Int32___0_System_Boolean_System_Boolean_System_Text_Json_JsonSerializerOptions_Kook_RequestOptions_">MessageExtensions.ReplyCardsAsync&lt;T&gt;(IUserMessage, int, T, bool, bool, JsonSerializerOptions?, RequestOptions?)</a>
+  </div>
+  <div>
       <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyFileAsync_Kook_IUserMessage_Kook_FileAttachment_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyFileAsync(IUserMessage, FileAttachment, bool, bool, RequestOptions?)</a>
   </div>
   <div>
@@ -235,6 +238,9 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
   </div>
   <div>
       <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyTextAsync_Kook_IUserMessage_System_String_System_Boolean_System_Boolean_Kook_RequestOptions_">MessageExtensions.ReplyTextAsync(IUserMessage, string, bool, bool, RequestOptions?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.MessageExtensions.html#Kook_MessageExtensions_ReplyTextAsync__1_Kook_IUserMessage_System_Int32___0_System_Boolean_System_Boolean_System_Text_Json_JsonSerializerOptions_Kook_RequestOptions_">MessageExtensions.ReplyTextAsync&lt;T&gt;(IUserMessage, int, T, bool, bool, JsonSerializerOptions?, RequestOptions?)</a>
   </div>
   </dd></dl>
 
@@ -250,7 +256,7 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_IUserMessage_Quote" data-uid="Kook.IUserMessage.Quote">
   Quote
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.4/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取消息的引用。</p>
@@ -286,7 +292,7 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_IUserMessage_ModifyAsync_System_Action_Kook_MessageProperties__Kook_RequestOptions_" data-uid="Kook.IUserMessage.ModifyAsync(System.Action{Kook.MessageProperties},Kook.RequestOptions)">
   ModifyAsync(Action&lt;MessageProperties&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.4/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>修改此消息。</p>
@@ -330,11 +336,65 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
   </dl>
 
 
+  <a id="Kook_IUserMessage_ModifyAsync_" data-uid="Kook.IUserMessage.ModifyAsync*"></a>
+
+  <h3 id="Kook_IUserMessage_ModifyAsync__1_System_Action_Kook_MessageProperties___0___Kook_RequestOptions_" data-uid="Kook.IUserMessage.ModifyAsync``1(System.Action{Kook.MessageProperties{``0}},Kook.RequestOptions)">
+  ModifyAsync&lt;T&gt;(Action&lt;MessageProperties&lt;T&gt;&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.4/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>修改此消息。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ModifyAsync&lt;T&gt;(Action&lt;MessageProperties&lt;T&gt;&gt; func, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Kook.MessageProperties-1.html">MessageProperties</a>&lt;T&gt;&gt;</dt>
+    <dd><p>一个包含修改消息属性的委托。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步修改操作的任务。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>消息的内容类型。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.MessageProperties.html">MessageProperties</a></div>
+    </dd>
+  </dl>
+
+
   <a id="Kook_IUserMessage_Resolve_" data-uid="Kook.IUserMessage.Resolve*"></a>
 
   <h3 id="Kook_IUserMessage_Resolve_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_Kook_TagHandling_" data-uid="Kook.IUserMessage.Resolve(Kook.TagHandling,Kook.TagHandling,Kook.TagHandling,Kook.TagHandling,Kook.TagHandling)">
   Resolve(TagHandling, TagHandling, TagHandling, TagHandling, TagHandling)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.4/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>转换消息文本中的提及与表情符号为可读形式。</p>
@@ -385,7 +445,7 @@ Interface IUserMessage  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.3/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.4/src/Kook.Net.Core/Entities/Messages/IUserMessage.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
