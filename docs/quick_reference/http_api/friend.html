@@ -103,6 +103,12 @@ IReadOnlyCollection&lt;RestFriendRequest&gt; friendRequests = await _restClient.
 
 // API 请求，获取屏蔽用户列表
 IReadOnlyCollection&lt;RestUser&gt; blockedUsers = await _restClient.GetBlockedUsersAsync();
+
+// API 请求，获取亲密关系列表
+IReadOnlyCollection&lt;RestIntimacyRelation&gt; intimacyRequests = await _restClient.GetIntimacyRelationsAsync();
+
+// API 请求，获取亲密关系请求列表
+IReadOnlyCollection&lt;RestIntimacyRelationRequest&gt; intimacyRequests = await _restClient.GetIntimacyRelationRequestsAsync();
 </code></pre>
 <h3 id="好友申请"><a href="https://developer.kookapp.cn/doc/http/friend#%E5%A5%BD%E5%8F%8B%E7%94%B3%E8%AF%B7">好友申请</a></h3>
 <p>POST <code>/api/v3/friend/request</code></p>
@@ -111,8 +117,7 @@ await user.RequestFriendAsync();
 </code></pre>
 <h3 id="处理好友申请"><a href="https://developer.kookapp.cn/doc/http/friend#%E5%A4%84%E7%90%86%E5%A5%BD%E5%8F%8B%E7%94%B3%E8%AF%B7">处理好友申请</a></h3>
 <p>POST <code>/api/v3/friend/handle-request</code></p>
-<pre><code class="lang-csharp">// 好友申请
-RestFriendRequest friendRequest = null;
+<pre><code class="lang-csharp">RestFriendRequest friendRequest = null; // 待处理的好友申请
 
 // API 请求，接受好友申请
 await friendRequest.AcceptAsync();
@@ -125,6 +130,33 @@ await friendRequest.DeclineAsync();
 <pre><code class="lang-csharp">// API 请求
 await user.RemoveFriendAsync();
 </code></pre>
+<h3 id="亲密关系申请">亲密关系申请</h3>
+<p>POST <code>/api/v3/friend/create-relation</code></p>
+<pre><code class="lang-csharp">IntimacyRelationType relationType = default; // 亲密关系类型
+
+// API 请求
+await user.RequestIntimacyRelationAsync(relationType);
+</code></pre>
+<h3 id="处理亲密关系申请">处理亲密关系申请</h3>
+<p>POST <code>/api/v3/friend/handle-relation</code></p>
+<pre><code class="lang-csharp">IIntimacyRelationRequest intimacyRequest = null; // 待处理的亲密关系申请
+
+// API 请求，接受亲密关系申请
+await intimacyRequest.AcceptAsync();
+
+// API 请求，拒绝亲密关系申请
+await intimacyRequest.DeclineAsync();
+</code></pre>
+<h3 id="解除亲密关系">解除亲密关系</h3>
+<p>POST <code>/api/v3/friend/unravel-relation</code></p>
+<pre><code class="lang-csharp">IIntimacyRelation intimacyRelation = null; // 待解除的亲密关系
+bool removeFriend = false; // 是否同时删除好友
+
+// API 请求，在亲密关系实体上调用
+await intimacyRelation.UnravelAsync(removeFriend);
+// API 请求，在用户实体上调用
+await user.UnravelIntimacyRelationAsync(removeFriend);
+</code></pre>
 <h3 id="屏蔽用户"><a href="https://developer.kookapp.cn/doc/http/friend#%E5%B1%8F%E8%94%BD%E7%94%A8%E6%88%B7">屏蔽用户</a></h3>
 <p>POST <code>/api/v3/friend/block</code></p>
 <pre><code class="lang-csharp">// API 请求
@@ -135,6 +167,7 @@ await user.BlockAsync();
 <pre><code class="lang-csharp">// API 请求
 await user.UnblockAsync();
 </code></pre>
+<h3 id="section"></h3>
 
 </article>
 
