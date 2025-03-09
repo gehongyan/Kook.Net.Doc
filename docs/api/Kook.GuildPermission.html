@@ -90,7 +90,7 @@
 
 
   <h1 id="Kook_GuildPermission" data-uid="Kook.GuildPermission" class="text-break">
-Enum GuildPermission  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Permissions/GuildPermission.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Enum GuildPermission  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.7/src/Kook.Net.Core/Entities/Permissions/GuildPermission.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -119,95 +119,155 @@ public enum GuildPermission : uint</code></pre>
 </h2>
   <dl class="parameters">
     <dt id="Kook_GuildPermission_AddReactions"><code>AddReactions = 262144</code></dt>
-    <dd><p>添加回应。</p>
+  <dd><p>添加回应。</p>
+<p>拥有此权限的成员可以对消息添加新的回应。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_Administrator"><code>Administrator = 1</code></dt>
-    <dd><p>管理员。</p>
+  <dd><p>管理员。</p>
+<p>拥有此权限会获得完整的管理权，不受所有其他权限的限制。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_AttachFiles"><code>AttachFiles = 16384</code></dt>
-    <dd><p>上传文件。</p>
+  <dd><p>上传文件。</p>
+<p>拥有此权限的成员可以上传文件（包括图片）。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_BanMembers"><code>BanMembers = 128</code></dt>
-    <dd><p>加入服务器黑名单。</p>
+  <dd><p>加入服务器黑名单。</p>
+<p>拥有此权限的成员可以将其他成员加入服务器黑名单、查看服务器黑名单。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ChangeNickname"><code>ChangeNickname = 512</code></dt>
-    <dd><p>修改昵称。</p>
+  <dd><p>修改昵称。</p>
+<p>拥有此权限的用户可以更改自己的昵称。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_Connect"><code>Connect = 32768</code></dt>
-    <dd><p>语音连接。</p>
+  <dd><p>语音连接。</p>
+<p>拥有此权限的成员可以连接到语音频道。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_CreateInvites"><code>CreateInvites = 8</code></dt>
-    <dd><p>创建邀请。</p>
+  <dd><p>创建邀请。</p>
+<p>拥有此权限的成员可以创建邀请链接。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_DeafenMembers"><code>DeafenMembers = 16777216</code></dt>
-    <dd><p>服务器静音。</p>
+  <dd><p>服务器静音。</p>
+<p>拥有此权限的成员可以限制其他成员在服务器中的语音接收。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_FollowReactions"><code>FollowReactions = 524288</code></dt>
-    <dd><p>跟随添加回应。</p>
+  <dd><p>跟随添加回应。</p>
+<p>拥有此权限的成员可以跟随使用已经添加的回应。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_KickMembers"><code>KickMembers = 64</code></dt>
-    <dd><p>踢出成员。</p>
+  <dd><p>踢出成员。</p>
+<p>拥有此权限的成员可以踢出其他成员。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ManageChannels"><code>ManageChannels = 32</code></dt>
-    <dd><p>频道管理。</p>
+  <dd><p>频道管理。</p>
+<p>拥有此权限的成员可以创建新的频道以及编辑或删除已存在的频道。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ManageEmojis"><code>ManageEmojis = 256</code></dt>
-    <dd><p>管理自定义表情。</p>
+  <dd><p>管理自定义表情。</p>
+<p>拥有此权限的成员可以管理自定义表情。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ManageGuild"><code>ManageGuild = 2</code></dt>
-    <dd><p>管理服务器。</p>
+  <dd><p>管理服务器。</p>
+<p>拥有此权限的成员可以修改服务器名称、头像和区域等设置项，以及未明确的概况设置项，并对服务器安全进行设置。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ManageInvites"><code>ManageInvites = 16</code></dt>
-    <dd><p>管理邀请。</p>
+  <dd><p>管理邀请。</p>
+<p>拥有此权限的成员可以管理服务器邀请。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ManageMessages"><code>ManageMessages = 8192</code></dt>
-    <dd><p>内容管理。</p>
+  <dd><p>内容管理。</p>
+<p>拥有此权限的成员可以在文字频道帖子频道中管理其他成员所发出的内容，这通常包含删除其他成员发出的消息或帖子，以及置顶消息。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ManageNicknames"><code>ManageNicknames = 67108864</code></dt>
-    <dd><p>修改他人昵称。</p>
+  <dd><p>修改他人昵称。</p>
+<p>拥有此权限的用户可以更改他人的昵称。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ManageRoles"><code>ManageRoles = 1024</code></dt>
-    <dd><p>管理角色权限。</p>
+  <dd><p>管理角色权限。</p>
+<p>拥有此权限的成员可以创建新的角色，编辑或删除位次低于该角色的角色。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ManageVoice"><code>ManageVoice = 65536</code></dt>
-    <dd><p>语音管理。</p>
+  <dd><p>语音管理。</p>
+<p>拥有此权限的成员可修改频道发言模式，管理频道成员上麦，将频道成员转移至其他频道和踢出频道。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_MentionEveryone"><code>MentionEveryone = 131072</code></dt>
-    <dd><p>提及全体成员、在线成员和所有角色。</p>
+  <dd><p>提及全体成员、在线成员和所有角色。</p>
+<p>拥有此权限的成员可以使用@全体成员，@在线成员提及该频道中的所有成员，该权限可以绕开&quot;允许任何人@提及此角色&quot;的限制。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_MuteMembers"><code>MuteMembers = 33554432</code></dt>
-    <dd><p>服务器闭麦。</p>
+  <dd><p>服务器闭麦。</p>
+<p>拥有此权限的成员可以限制其他成员在语音频道中发言和共享计算机音频。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_OnlyPushToTalk"><code>OnlyPushToTalk = 2097152</code></dt>
-    <dd><p>仅使用按键说话。</p>
+  <dd><p>仅使用按键说话。</p>
+<p>拥有此限制的成员加入语音频道后，只能使用按键说话。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_PassiveConnect"><code>PassiveConnect = 1048576</code></dt>
-    <dd><p>被动连接语音频道。</p>
+  <dd><p>被动连接语音频道。</p>
+<p>拥有此权限的成员在没有语音连接权限时，可以被动邀请或被人移动进入语音频道。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_PlaySoundtrack"><code>PlaySoundtrack = 134217728</code></dt>
-    <dd><p>共享计算机音频。</p>
+  <dd><p>共享计算机音频。</p>
+<p>拥有此权限的成员可在语音频道中共享计算机音频。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ReplyToPost"><code>ReplyToPost = 536870912</code></dt>
-    <dd><p>发布帖子回复。</p>
+  <dd><p>发布帖子回复。</p>
+<p>拥有此权限的成员可在帖子频道中回复帖子。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_SendMessages"><code>SendMessages = 4096</code></dt>
-    <dd><p>发送文字消息。</p>
+  <dd><p>发送文字消息。</p>
+<p>拥有此权限的成员可以在文字频道中发送消息，也可以在帖子频道中发布帖子。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ShareScreen"><code>ShareScreen = 268435456</code></dt>
-    <dd><p>屏幕分享。</p>
+  <dd><p>屏幕分享。</p>
+<p>拥有此权限的成员可在语音频道中共享计算机画面。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_Speak"><code>Speak = 8388608</code></dt>
-    <dd><p>发言。</p>
+  <dd><p>发言。</p>
+<p>拥有此权限的成员可以在语音频道中发言。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_UseVoiceActivity"><code>UseVoiceActivity = 4194304</code></dt>
-    <dd><p>使用自由麦。</p>
+  <dd><p>使用自由麦。</p>
+<p>没有此权限的成员，必须在频道内使用按键说话。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ViewAuditLog"><code>ViewAuditLog = 4</code></dt>
-    <dd><p>查看管理日志。</p>
+  <dd><p>查看管理日志。</p>
+<p>拥有此权限的成员可以查看服务器的管理日志。</p>
 </dd>
+  
     <dt id="Kook_GuildPermission_ViewChannel"><code>ViewChannel = 2048</code></dt>
-    <dd><p>查看文字与语音频道。</p>
+  <dd><p>查看文字与语音频道。</p>
+<p>拥有此权限的成员可以查看文字、语音频道。</p>
 </dd>
+  
   </dl>
 
 
@@ -215,7 +275,7 @@ public enum GuildPermission : uint</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Permissions/GuildPermission.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.7/src/Kook.Net.Core/Entities/Permissions/GuildPermission.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

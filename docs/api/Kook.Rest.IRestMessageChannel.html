@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Rest_IRestMessageChannel" data-uid="Kook.Rest.IRestMessageChannel" class="text-break">
-Interface IRestMessageChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IRestMessageChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.7/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -199,7 +199,7 @@ Interface IRestMessageChannel  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_Rest_IRestMessageChannel_GetMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.Rest.IRestMessageChannel.GetMessageAsync(System.Guid,Kook.RequestOptions)">
   GetMessageAsync(Guid, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.7/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>从此消息频道获取一条消息。</p>
@@ -241,7 +241,7 @@ Interface IRestMessageChannel  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.IRestMessageChannel.GetMessagesAsync(Kook.IMessage,Kook.Direction,System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(IMessage, Direction, int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.7/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息频道中的一些消息。</p>
@@ -283,20 +283,20 @@ Interface IRestMessageChannel  <a class="header-action link-secondary" title="Vi
 
   <h4 class="section" id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_Kook_IMessage_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
-        返回的集合是一个异步可枚举对象；调用
-        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
-        可以异步枚举所有分页，并将其合并为一个集合。
-    </p></div>
+    返回的集合是一个异步可枚举对象；调用
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    可以异步枚举所有分页，并将其合并为一个集合。
+</p></div>
 <br>
 <div class="WARNING"><h5>warning</h5><p>
-        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
-    </p></div>
+    请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+</p></div>
 <br>
-    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
-    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
-    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
-    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
-    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
+此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+<code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+<a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
 
@@ -306,7 +306,7 @@ Interface IRestMessageChannel  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.IRestMessageChannel.GetMessagesAsync(System.Guid,Kook.Direction,System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(Guid, Direction, int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.7/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息频道中的一些消息。</p>
@@ -348,20 +348,20 @@ Interface IRestMessageChannel  <a class="header-action link-secondary" title="Vi
 
   <h4 class="section" id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_System_Guid_Kook_Direction_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
-        返回的集合是一个异步可枚举对象；调用
-        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
-        可以异步枚举所有分页，并将其合并为一个集合。
-    </p></div>
+    返回的集合是一个异步可枚举对象；调用
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    可以异步枚举所有分页，并将其合并为一个集合。
+</p></div>
 <br>
 <div class="WARNING"><h5>warning</h5><p>
-        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
-    </p></div>
+    请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+</p></div>
 <br>
-    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
-    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
-    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
-    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
-    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
+此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+<code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+<a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
 
@@ -371,7 +371,7 @@ Interface IRestMessageChannel  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions_" data-uid="Kook.Rest.IRestMessageChannel.GetMessagesAsync(System.Int32,Kook.RequestOptions)">
   GetMessagesAsync(int, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.7/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息频道中的最新的一些消息。</p>
@@ -407,20 +407,20 @@ Interface IRestMessageChannel  <a class="header-action link-secondary" title="Vi
 
   <h4 class="section" id="Kook_Rest_IRestMessageChannel_GetMessagesAsync_System_Int32_Kook_RequestOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
-        返回的集合是一个异步可枚举对象；调用
-        <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
-        可以异步枚举所有分页，并将其合并为一个集合。
-    </p></div>
+    返回的集合是一个异步可枚举对象；调用
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    可以异步枚举所有分页，并将其合并为一个集合。
+</p></div>
 <br>
 <div class="WARNING"><h5>warning</h5><p>
-        请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
-    </p></div>
+    请勿一次性获取过多消息，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+</p></div>
 <br>
-    此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
-    将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
-    <code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
-    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
-    方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
+此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条消息。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+将请求拆分。换句话说，如果要获取 500 条消息，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+<code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+<a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
 </div>
 
 
@@ -430,7 +430,7 @@ Interface IRestMessageChannel  <a class="header-action link-secondary" title="Vi
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.7/src/Kook.Net.Rest/Entities/Channels/IRestMessageChannel.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
