@@ -87,8 +87,13 @@
         <article data-uid="Changelog">
 <h1 id="变更日志">变更日志</h1>
 
-<h2 id="v099-2025-06-01">v0.9.9 [2025-06-01]</h2>
+<h2 id="v0910-2025-06-18">v0.9.10 [2025-06-18]</h2>
 <h3 id="修复">修复</h3>
+<ul>
+<li>修复文本命令框架无法正确解析文件、音频、视频的卡片模块作为 <code>Uri</code> 参数的问题。</li>
+</ul>
+<h2 id="v099-2025-06-01">v0.9.9 [2025-06-01]</h2>
+<h3 id="修复-1">修复</h3>
 <ul>
 <li>修复导致文本命令框架无法正确注册枚举类型参数的问题。</li>
 </ul>
@@ -98,7 +103,7 @@
 <li>新增 <code>BaseSocketClient.UnknownDispatchReceived</code>，用于处理未知的事件类型。</li>
 <li>新增 <code>KookSocketConfig.SuppressUnknownDispatchWarnings</code> 用于绕过未知事件类型的警告。</li>
 </ul>
-<h3 id="修复-1">修复</h3>
+<h3 id="修复-2">修复</h3>
 <ul>
 <li>修复 <code>IIntimacyRelation</code> 上的 <code>RelationType</code> 及 <code>CreatedAt</code> 可能为空导致无法获取亲密关系信息的问题，相关属性已变更为可空属性。</li>
 <li>修复 <code>SocketMessage.Update</code> 可能会异常阻塞异步线程的问题。</li>
@@ -113,7 +118,7 @@
 <ul>
 <li>新增 Webhook 客户端多实例注入的支持。</li>
 </ul>
-<h3 id="修复-2">修复</h3>
+<h3 id="修复-3">修复</h3>
 <ul>
 <li>修复 <code>AddKookAspNetWebhookClient</code> 接收 <code>KookAspNetWebhookConfig</code> 的重载未能正确注册客户端实例的问题。</li>
 </ul>
@@ -131,7 +136,7 @@
 <li>管道消息客户端新增支持发送卡片消息，及对消息回复与临时消息可见用户的支持。</li>
 <li><code>ICard</code> 接口添加 <code>Modules</code> 属性。</li>
 </ul>
-<h3 id="修复-3">修复</h3>
+<h3 id="修复-4">修复</h3>
 <ul>
 <li>修正抢先速率限制的速率值。</li>
 <li>修复消息缓存最大容量可能会溢出的问题。</li>
@@ -166,7 +171,7 @@
 </li>
 <li>文本命令框架支持注入键控服务，<code>FromKeyedServicesAttribute</code> 可用于从键控服务中获取服务实例。</li>
 </ul>
-<h3 id="修复-4">修复</h3>
+<h3 id="修复-5">修复</h3>
 <ul>
 <li>修复 <code>SocketGuild.CurrentUser</code> 为空的问题。</li>
 <li>修复私聊消息可能无法正确编辑的问题。</li>
@@ -180,7 +185,7 @@
 表示发布帖子回复的权限，并在各与权限相关的方法中添加对帖子频道权限的支持。</li>
 <li>新增 <code>SocketRole.Members</code>，可用于获取缓存中拥有指定角色的所有用户。</li>
 </ul>
-<h3 id="修复-5">修复</h3>
+<h3 id="修复-6">修复</h3>
 <ul>
 <li>修复 <code>SocketGuildUser.RemoveRolesAsync</code> 方法未能处理 <code>RequestOptions</code> 的问题。</li>
 <li>修复 <code>IChannel.Name</code> 可能为空的问题。</li>
@@ -192,7 +197,7 @@
 <li><code>DefaultRestClient</code> 支持传入 <code>IWebProxy</code> 实例</li>
 <li>为 <code>Color</code>、<code>AlphaColor</code>、<code>GradientColor</code> 实现 <code>IEquatable&lt;T&gt;</code> 接口</li>
 </ul>
-<h3 id="修复-6">修复</h3>
+<h3 id="修复-7">修复</h3>
 <ul>
 <li>修复部分 XML 文档中的符号引用错误</li>
 <li>修复尝试通过发送消息方法返回的可缓存对象获取消息实体时返回 <code>null</code> 的问题</li>
@@ -245,7 +250,7 @@ ASP.NET 集成的 Webhook 实现包。用法请参考示例。</li>
 <li><code>IKookClient</code> 提供 <code>LoginAsync</code> 与 <code>LogoutAsync</code> 方法。</li>
 <li>新增 <code>TagUtil</code>，用于转换 <code>ITag</code> 为 <code>Tag&lt;TKey, TValue&gt;</code>。</li>
 </ul>
-<h3 id="修复-7">修复</h3>
+<h3 id="修复-8">修复</h3>
 <ul>
 <li>修复 <code>AudioClient.ClientDisconnected</code> 事件未能被正确引发的问题。</li>
 <li>修复 <code>Rest/SocketGuildUser</code> 上 <code>IsOwner</code> 可以被确定但值为 <code>null</code> 的问题。</li>
@@ -322,7 +327,7 @@ WebSocket 时进行。</li>
 <code>batch_deleted_channel</code>、<code>live_status_changed</code>、<code>PERSON</code> 类型的 <code>updated_guild</code>、<code>add_guild_mute</code>、<code>delete_guild_mute</code>、
 <code>unread_count_changed</code> 的支持，但暂时无法确认这些事件是否会实际下发。</li>
 </ul>
-<h3 id="修复-8">修复</h3>
+<h3 id="修复-9">修复</h3>
 <ul>
 <li>修复私聊消息的作者不正确的问题</li>
 <li>修复 <code>SocketUserMessage.Quote.Author</code> 可能为空的问题</li>
@@ -372,7 +377,7 @@ WebSocket 时进行。</li>
 <li><code>BaseKookClient</code> 新增 <code>SentRequest</code> 事件</li>
 <li>为卡片消息解析相关的 <code>Try*</code> 方法添加非空结果提示诊断</li>
 </ul>
-<h3 id="修复-9">修复</h3>
+<h3 id="修复-10">修复</h3>
 <ul>
 <li>修正 <code>ConnectionManager</code> 引发 <code>Disconnected</code> 时 <code>State</code> 不正确的问题</li>
 </ul>
@@ -396,7 +401,7 @@ WebSocket 时进行。</li>
 <ul>
 <li>新增语音频道的连接与推流</li>
 </ul>
-<h3 id="修复-10">修复</h3>
+<h3 id="修复-11">修复</h3>
 <ul>
 <li>修复 <code>KookSocketClient</code> 转换为 <code>IKookClient</code> 或 <code>BaseKookClient</code> 时 <code>ConnectionState</code> 不正确的问题</li>
 </ul>
@@ -417,7 +422,7 @@ WebSocket 时进行。</li>
 <li>文本命令框架先决条件新增 <code>RequireRoleAttribute</code></li>
 <li>文本命令框架 <code>CommandAttribute</code> 新增 <code>Aliases</code>、<code>Summary</code>、<code>Remarks</code> 属性及可选参数</li>
 </ul>
-<h3 id="修复-11">修复</h3>
+<h3 id="修复-12">修复</h3>
 <ul>
 <li>修复了 Bot 启动时下载数据的异常没有被正确地输出到日志的问题</li>
 </ul>
@@ -454,7 +459,7 @@ private，用户代码对这些属性的更改可能会导致框架运行异常�
 <li><code>IVoiceChannel.ServerUrl</code> 属性已移动至 <code>IAudioChannel</code> 接口</li>
 <li>移除了部分属性上的意外提供的公开 set 访问器</li>
 </ul>
-<h3 id="修复-12">修复</h3>
+<h3 id="修复-13">修复</h3>
 <ul>
 <li>修复了 <code>SectionModuleBuild</code> 的构建校验条件不正确的问题</li>
 </ul>
@@ -467,7 +472,7 @@ private，用户代码对这些属性的更改可能会导致框架运行异常�
 <h2 id="v052-2023-08-18">v0.5.2 [2023-08-18]</h2>
 <h3 id="更新路线-7">更新路线</h3>
 <p><code>ModifyEmoteNameAsync</code> 方法的参数 <code>Action&lt;string&gt;</code> 已变更为 <code>string</code>，所有使用此方法的用法都需要更新。</p>
-<h3 id="修复-13">修复</h3>
+<h3 id="修复-14">修复</h3>
 <ul>
 <li>修复了 <code>SocketReaction</code> 的比较不正确导致的回应移除时缓存中的消息的回应未能被正确移除的问题</li>
 <li>修复了 Socket 客户端断开连接时未能正确发送关闭代码的问题</li>
@@ -485,7 +490,7 @@ private，用户代码对这些属性的更改可能会导致框架运行异常�
 <ul>
 <li>添加了 <code>SocketGuild.GetCategoryChannel</code> 和 <code>RestGuild.GetCategoryChannelAsync</code> 方法</li>
 </ul>
-<h3 id="修复-14">修复</h3>
+<h3 id="修复-15">修复</h3>
 <ul>
 <li>修复了 <code>GetJumpUrl</code> 方法返回结果不正确的问题</li>
 <li>修复了 <code>KookConfig.MaxMessagesPerBatch</code> 设置不正确的问题</li>
@@ -526,7 +531,7 @@ private，用户代码对这些属性的更改可能会导致框架运行异常�
 <li>变更 <code>KookSocketClient</code> 上的 <code>GetChannelAsync</code>、<code>GetDMChannelAsync</code>、<code>GetDMChannelsAsync</code> 与 <code>GetUserAsync</code>
 的方法返回类型为 <code>Task&lt;*&gt;</code></li>
 </ul>
-<h3 id="修复-15">修复</h3>
+<h3 id="修复-16">修复</h3>
 <ul>
 <li>修复部分 API 对 bool 类型返回字符串 <code>1</code> 或 <code>0</code> 时未能正确解析的问题</li>
 <li>修复 <code>IGuild.DefaultChannelId</code> 未能正确设置为服务器实际配置的默认文字频道的问题</li>
@@ -586,7 +591,7 @@ private，用户代码对这些属性的更改可能会导致框架运行异常�
 <li>新增 <code>Cacheable&lt;SocketUser, ulong&gt;</code> 表示消息的发送者</li>
 </ul>
 <h2 id="v041-2023-04-05">v0.4.1 [2023-04-05]</h2>
-<h3 id="修复-16">修复</h3>
+<h3 id="修复-17">修复</h3>
 <ul>
 <li>修复用户离开服务器或角色被删除时，<code>SocketGuildChannel.UserPermissionOverwrites</code> 与
 <code>SocketGuildChannel.RolePermissionOverwrites</code> 属性未移除对应的权限覆盖项的问题</li>
@@ -640,7 +645,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <li>修正 <code>RestPresence</code> 命名空间为 <code>Kook.Rest</code></li>
 <li>（实验性功能）<code>KookRestClient.GetAdminGuildsAsync</code> 方法现已支持 Bot 类型认证</li>
 </ul>
-<h3 id="修复-17">修复</h3>
+<h3 id="修复-18">修复</h3>
 <ul>
 <li>修复 <code>Format.Quote</code> 与 <code>Format.BlockQuote</code> 方法结果在 KOOK 中显示异常的问题</li>
 <li>修复 <code>CountdownModuleBuilder.Build</code> 抛出异常时的错误信息错误的问题</li>
@@ -773,7 +778,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <li>新增支持通过 <a class="xref" href="../api/Kook.KookConfig.html#Kook_KookConfig_FormatUsersInBidirectionalUnicode">KookConfig.FormatUsersInBidirectionalUnicode</a>
 禁用针对双向 Unicode 格式化用户名字符串</li>
 </ul>
-<h3 id="修复-18">修复</h3>
+<h3 id="修复-19">修复</h3>
 <ul>
 <li>修复 <a class="xref" href="../api/Kook.IUserMessage.html#Kook_IUserMessage_Resolve_">IUserMessage.Resolve</a> 对全体成员与在线成员标签文本化不正确的问题</li>
 <li>修复 <a class="xref" href="../api/Kook.IGuild.html#Kook_IGuild_CreateRoleAsync_">IGuild.CreateRoleAsync</a> 反序列化结果失败的问题</li>
@@ -806,21 +811,21 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <li>为 Bearer 类型认证新增支持 <a class="xref" href="../api/Kook.Rest.KookRestClientExperimentalExtensions.html#Kook_Rest_KookRestClientExperimentalExtensions_GetAdminGuildsAsync_">KookRestClient.GetAdminGuildsAsync</a></li>
 <li>新增 <a class="xref" href="../api/Kook.Format.html#Kook_Format_Colorize_">Format.Colorize</a> 用于 KMarkdown 文本颜色格式化</li>
 </ul>
-<h3 id="修复-19">修复</h3>
+<h3 id="修复-20">修复</h3>
 <ul>
 <li>修复 <a class="xref" href="../api/Kook.Rest.KookRestClient.html#Kook_Rest_KookRestClient_GetGuildsAsync_">KookRestClient.GetGuildsAsync</a> 在服务器数量较大时下载数据过慢的问题</li>
 <li>（实验性功能）修复 <code>KookRestClient.GetGuildsAsync</code> 在 Bearer 类型认证下构造对象失败的问题</li>
 <li>修复 <a class="xref" href="../api/Kook.Color.html">Color</a> 部分值不正确的问题</li>
 </ul>
 <h2 id="v022-2022-12-30">v0.2.2 [2022-12-30]</h2>
-<h3 id="修复-20">修复</h3>
+<h3 id="修复-21">修复</h3>
 <ul>
 <li>修复了 <a class="xref" href="../api/Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendCardAsync_">SocketTextChannel.SendCardAsync</a>
 与 <a class="xref" href="../api/Kook.WebSocket.SocketTextChannel.html#Kook_WebSocket_SocketTextChannel_SendCardsAsync_">SocketTextChannel.SendCardsAsync</a>
 设置 <code>ephemeralUser</code> 参数不生效的问题</li>
 </ul>
 <h2 id="v021-2022-12-25">v0.2.1 [2022-12-25]</h2>
-<h3 id="修复-21">修复</h3>
+<h3 id="修复-22">修复</h3>
 <ul>
 <li>修复了导致启动失败的 JSON 转换器错误</li>
 </ul>
@@ -837,7 +842,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <ul>
 <li>新增 Kook.Net.Experimental 包，用于实现非官方列出的接口</li>
 </ul>
-<h3 id="修复-22">修复</h3>
+<h3 id="修复-23">修复</h3>
 <ul>
 <li>修复了 <a class="xref" href="../api/Kook.IGuild.html#Kook_IGuild_OpenId">IGuild.OpenId</a> 为空时可能导致的空引用异常</li>
 </ul>
@@ -853,7 +858,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <ul>
 <li><a class="xref" href="../api/Kook.WebSocket.KookSocketConfig.html#Kook_WebSocket_KookSocketConfig_AlwaysDownloadUsers">KookSocketConfig.AlwaysDownloadUsers</a> 也将定义是否在启动时加载服务器成员数量</li>
 </ul>
-<h3 id="修复-23">修复</h3>
+<h3 id="修复-24">修复</h3>
 <ul>
 <li>修复了修改语音频道时应用的不正确的先决条件</li>
 <li>修复了不正确的文档</li>
@@ -864,7 +869,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <li>新增 <a class="xref" href="../api/Kook.IGuild.html#Kook_IGuild_GetActiveBoostSubscriptionsAsync_">IGuild.GetActiveBoostSubscriptionsAsync</a></li>
 <li>JSON 反序列化失败时将输出报文本体至日志管理器</li>
 </ul>
-<h3 id="修复-24">修复</h3>
+<h3 id="修复-25">修复</h3>
 <ul>
 <li>修复 <a class="xref" href="../api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_UserUnbanned">BaseSocketClient.UserUnbanned</a> 未能正常触发的问题</li>
 <li>修复 <a class="xref" href="../api/Kook.WebSocket.BaseSocketClient.html#Kook_WebSocket_BaseSocketClient_GuildAvailable">BaseSocketClient.GuildAvailable</a> 事件触发时
