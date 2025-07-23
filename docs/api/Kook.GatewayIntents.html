@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IPermissionOverwrite&lt;TTarget&gt; | Kook.Net 文档 </title>
+      <title>Enum GatewayIntents | Kook.Net 文档 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IPermissionOverwrite&lt;TTarget&gt; | Kook.Net 文档 ">
+      <meta name="title" content="Enum GatewayIntents | Kook.Net 文档 ">
       
-      <meta name="description" content="表示一个通用的频道权限重写设置。">
+      <meta name="description" content="表示网关事件意图的枚举，用于描述网关对 Bot 连接下发的事件类型。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_IPermissionOverwrite_1.md&amp;value=---%0Auid%3A%20Kook.IPermissionOverwrite%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_GatewayIntents.md&amp;value=---%0Auid%3A%20Kook.GatewayIntents%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,13 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Kook.IPermissionOverwrite`1">
+        <article data-uid="Kook.GatewayIntents">
 
 
 
-  <h1 id="Kook_IPermissionOverwrite_1" data-uid="Kook.IPermissionOverwrite`1" class="text-break">
-Interface IPermissionOverwrite&lt;TTarget&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Permissions/IPermissionOverwrite.cs/#L7"><i class="bi bi-code-slash"></i></a>
+
+  <h1 id="Kook_GatewayIntents" data-uid="Kook.GatewayIntents" class="text-break">
+Enum GatewayIntents  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/GatewayIntents.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,105 +98,82 @@ Interface IPermissionOverwrite&lt;TTarget&gt;  <a class="header-action link-seco
   <dl><dt>Assembly</dt><dd>Kook.Net.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>表示一个通用的频道权限重写设置。</p>
+  <div class="markdown summary"><p>表示网关事件意图的枚举，用于描述网关对 Bot 连接下发的事件类型。</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IPermissionOverwrite&lt;TTarget&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[Flags]
+public enum GatewayIntents : byte</code></pre>
   </div>
 
 
 
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>TTarget</code></dt>
-    <dd><p>权限重写设置所应用的目标的实体类型。</p>
-</dd>
-  </dl>
 
 
 
 
 
 
-
-
-
-
-  <h2 class="section" id="properties">Properties
+  <h2 id="fields">Fields
 </h2>
-
-
-  <a id="Kook_IPermissionOverwrite_1_Permissions_" data-uid="Kook.IPermissionOverwrite`1.Permissions*"></a>
-
-  <h3 id="Kook_IPermissionOverwrite_1_Permissions" data-uid="Kook.IPermissionOverwrite`1.Permissions">
-  Permissions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Permissions/IPermissionOverwrite.cs/#L17"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>获取此重写的权限重写配置。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">OverwritePermissions Permissions { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a></dt>
-    <dd></dd>
+    <dt id="Kook_GatewayIntents_All"><code>All = Users | Guilds | GuildRoles | GuildChannels | GuildMessages | GuildMembers | GuildEmojis | DirectMessages</code></dt>
+  
+  <dd><p>表示所有事件意图。</p>
+</dd>
+    <dt id="Kook_GatewayIntents_DirectMessages"><code>DirectMessages = 128</code></dt>
+  <dd><p>私聊消息相关事件。</p>
+<p>添加私聊回应、删除私聊回应、更新私聊消息、删除私聊消息</p>
+</dd>
+  
+    <dt id="Kook_GatewayIntents_GuildChannels"><code>GuildChannels = 8</code></dt>
+  <dd><p>频道相关事件。</p>
+<p>包括新增频道、删除频道、修改频道。</p>
+</dd>
+  
+    <dt id="Kook_GatewayIntents_GuildEmojis"><code>GuildEmojis = 64</code></dt>
+  <dd><p>表情相关事件。</p>
+<p>包括添加表情、删除表情、修改表情。</p>
+</dd>
+  
+    <dt id="Kook_GatewayIntents_GuildMembers"><code>GuildMembers = 32</code></dt>
+  <dd><p>频道成员相关事件。</p>
+<p>包括加入服务器、加入频道、退出服务器、成员离线、成员下线、成员信息更新。</p>
+</dd>
+  
+    <dt id="Kook_GatewayIntents_GuildMessages"><code>GuildMessages = 16</code></dt>
+  <dd><p>频道消息相关事件。</p>
+<p>包括添加回应、删除回应、更新消息、删除消息、置顶消息、取消置顶消息。</p>
+</dd>
+  
+    <dt id="Kook_GatewayIntents_GuildRoles"><code>GuildRoles = 4</code></dt>
+  <dd><p>服务器角色相关事件。</p>
+<p>包括添加角色、删除角色、修改角色。</p>
+</dd>
+  
+    <dt id="Kook_GatewayIntents_Guilds"><code>Guilds = 2</code></dt>
+  <dd><p>服务器相关事件。</p>
+<p>包括更新服务器、解散服务器、拉黑用户、取消拉黑。</p>
+</dd>
+  
+    <dt id="Kook_GatewayIntents_None"><code>None = 0</code></dt>
+  
+  <dd><p>无。</p>
+</dd>
+    <dt id="Kook_GatewayIntents_Users"><code>Users = 1</code></dt>
+  <dd><p>用户相关事件。</p>
+<p>包括用户加入服务器、加入频道、用户退出服务器、退出频道、点击按钮、用户信息更新。</p>
+</dd>
+  
   </dl>
-
-
-
-
-
-
-
-
-  <a id="Kook_IPermissionOverwrite_1_Target_" data-uid="Kook.IPermissionOverwrite`1.Target*"></a>
-
-  <h3 id="Kook_IPermissionOverwrite_1_Target" data-uid="Kook.IPermissionOverwrite`1.Target">
-  Target
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Permissions/IPermissionOverwrite.cs/#L12"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>获取此重写所应用的目标。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TTarget Target { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">TTarget</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Permissions/IPermissionOverwrite.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/GatewayIntents.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

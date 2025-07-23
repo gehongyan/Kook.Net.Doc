@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>帖子相关接口 | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="帖子相关接口 | Kook.Net 文档 ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/blob/master/docs/quick_reference/http_api/thread.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo/Logo_Small.png" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Guides.QuickReference.Http.Thread">
+<h1 id="帖子相关接口">帖子相关接口</h1>
+
+<p>预声明变量</p>
+<pre><code class="lang-csharp">// 帖子接口对于 SocketClient 和 RestClient 的实现是相同的
+readonly RestThreadChannel _channel = null;
+readonly RestThreadCategory _threadCategory = null;
+readonly RestThread _thread = null;
+readonly RestThreadPost _post = null;
+readonly RestThreadReply _reply = null;
+</code></pre>
+<h3 id="获取帖子分区列表"><a href="https://developer.kookapp.cn/doc/http/thread#%E8%8E%B7%E5%8F%96%E5%B8%96%E5%AD%90%E5%88%86%E5%8C%BA%E5%88%97%E8%A1%A8">获取帖子分区列表</a></h3>
+<p>GET <code>/api/v3/category/list</code></p>
+<pre><code class="lang-csharp">// API 请求
+IReadOnlyCollection&lt;RestThreadCategory&gt; threadCategories = await _channel.GetThreadCategoriesAsync();
+</code></pre>
+<h3 id="创建帖子"><a href="https://developer.kookapp.cn/doc/http/thread#%E5%88%9B%E5%BB%BA%E5%B8%96%E5%AD%90">创建帖子</a></h3>
+<p>POST <code>/api/v3/thread/create</code></p>
+<pre><code class="lang-csharp">string title = null; // 要发布的帖子的标题
+string content = null; // 要发布的帖子的正文内容
+bool isKMarkdown = false; // 是否使用 KMarkdown 格式的正文内容
+ICard card = null; // 要发布的帖子的卡片内容
+IEnumerable&lt;ICard&gt; cards = null; // 要发布的帖子的卡片内容列表
+string? cover = null; // 要发布的帖子的封面图片链接
+IEnumerable&lt;ThreadTag&gt;? tags = null; // 要发布的帖子的话题标签列表
+
+// API 请求，在帖子频道中发布帖子
+RestThread thread = await _channel.CreateThreadAsync(title, content, isKMarkdown, cover, threadCategory, tags);
+RestThread thread = await _channel.CreateThreadAsync(title, card, cover, threadCategory, tags);
+RestThread thread = await _channel.CreateThreadAsync(title, cards, cover, threadCategory, tags);
+
+// API 请求，在帖子分区中发布帖子
+RestThread thread = await _threadCategory.CreateThreadAsync(title, content, isKMarkdown, cover, tags);
+RestThread thread = await _threadCategory.CreateThreadAsync(title, card, cover, tags);
+RestThread thread = await _threadCategory.CreateThreadAsync(title, cards, cover, tags);
+</code></pre>
+<h3 id="评论回复"><a href="https://developer.kookapp.cn/doc/http/thread#%E8%AF%84%E8%AE%BA/%E5%9B%9E%E5%A4%8D">评论/回复</a></h3>
+<p>POST <code>/api/v3/thread/reply</code></p>
+<pre><code class="lang-csharp">string content = null; // 要发布的评论或回复的正文内容
+bool isKMarkdown = false; // 是否使用 KMarkdown 格式的正文内容
+ICard card = null; // 要发布的评论或回复的卡片内容
+IEnumerable&lt;ICard&gt; cards = null; // 要发布的评论或回复的卡片内容列表
+
+// API 请求，在帖子中发布评论
+RestThreadPost post = await _thread.CreatePostAsync(content, isKMarkdown);
+RestThreadPost post = await _thread.CreatePostAsync(card);
+RestThreadPost post = await _thread.CreatePostAsync(cards);
+
+// API 请求，在帖子中发布对评论的回复
+RestThreadReply reply = await _post.CreateReplyAsync(content, isKMarkdown);
+RestThreadReply reply = await _post.CreateReplyAsync(card);
+RestThreadReply reply = await _post.CreateReplyAsync(cards);
+
+// API 请求，在帖子中发布对回复的回复
+RestThreadReply reply = await _reply.ReplyAsync(content, isKMarkdown);
+RestThreadReply reply = await _reply.ReplyAsync(card);
+RestThreadReply reply = await _reply.ReplyAsync(cards);
+</code></pre>
+<h3 id="帖子详情"><a href="https://developer.kookapp.cn/doc/http/thread#%E5%B8%96%E5%AD%90%E8%AF%A6%E6%83%85">帖子详情</a></h3>
+<p>GET <code>/api/v3/thread/view</code></p>
+<pre><code class="lang-csharp">ulong id = default; // 要获取详情的帖子 ID
+
+// API 请求
+RestThread thread = await _channel.GetThreadAsync(id);
+</code></pre>
+<h3 id="帖子列表"><a href="https://developer.kookapp.cn/doc/http/thread#%E5%B8%96%E5%AD%90%E5%88%97%E8%A1%A8">帖子列表</a></h3>
+<p>GET <code>/api/v3/thread/list</code></p>
+<pre><code class="lang-csharp">IThread referenceThread = null; // 获取帖子列表所根据的参考帖子位置的
+DateTimeOffset referenceTimestamp = default; // 获取帖子列表所根据的参考帖子位置的创建时间或最后活跃时间，由 sortOrder 决定
+ThreadSortOrder sortOrder = default; // 获取帖子列表的排序方式
+IThreadCategory? category = null; // 获取帖子帖子所在的分区
+int limit = default; // 获取帖子列表的数量
+
+// API 请求
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestThread&gt;&gt; threads = _channel.GetThreadsAsync(limit, category);
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestThread&gt;&gt; threads = _channel.GetThreadsAsync(referenceThread, sortOrder, limit, category);
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;RestThread&gt;&gt; threads = _channel.GetThreadsAsync(referenceTimestamp, sortOrder, limit, category);
+</code></pre>
+<h3 id="帖子评论回复删除"><a href="https://developer.kookapp.cn/doc/http/thread#%E5%B8%96%E5%AD%90/%E8%AF%84%E8%AE%BA/%E5%9B%9E%E5%A4%8D%E5%88%A0%E9%99%A4">帖子/评论/回复删除</a></h3>
+<p>POST <code>/api/v3/thread/delete</code></p>
+<pre><code class="lang-csharp">IThread thread = null; // 帖子
+ulong threadId = default; // 帖子 ID
+IThreadPost post = null; // 评论
+ulong postId = default; // 评论 ID
+IThreadReply reply = null; // 回复
+ulong replyId = default; // 回复 ID
+
+// API 请求，删除帖子
+await _thread.DeleteAsync();
+await _channel.DeleteThreadAsync(thread);
+await _channel.DeleteThreadAsync(threadId);
+
+// API 请求，删除帖子的主楼内容
+await _thread.DeleteContentAsync();
+await _channel.DeleteThreadContentAsync(thread);
+await _channel.DeleteThreadContentAsync(threadId);
+
+// API 请求，删除评论
+await _post.DeleteAsync();
+await _thread.DeletePostAsync(post);
+await _thread.DeletePostAsync(postId);
+
+// API 请求，删除评论回复
+await _reply.DeleteAsync();
+await _post.DeleteReplyAsync(reply);
+await _post.DeleteReplyAsync(replyId);
+</code></pre>
+<h3 id="回复列表"><a href="https://developer.kookapp.cn/doc/http/thread#%E5%9B%9E%E5%A4%8D%E5%88%97%E8%A1%A8">回复列表</a></h3>
+<p>GET <code>/api/v3/thread/post</code></p>
+<pre><code class="lang-csharp">int limit = default; // 获取评论或回复列表的数量
+IThreadPost referencePost = null; // 获取评论列表所根据的参考评论位置的
+IThreadReply referenceReply = null; // 获取回复列表所根据的参考回复位置的
+DateTimeOffset referenceTimestamp = default; // 获取评论或回复列表所根据的参考评论或回复位置的创建时间
+SortMode sortMode = default; // 获取评论或回复列表的排序方式
+
+// API 请求，获取帖子评论列表
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IThreadPost&gt;&gt; posts = _thread.GetPostsAsync(limit);
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IThreadPost&gt;&gt; posts = _thread.GetPostsAsync(referencePost, sortMode, limit);
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IThreadPost&gt;&gt; posts = _thread.GetPostsAsync(referenceTimestamp, sortMode, limit);
+
+// API 请求，获取评论回复列表
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IThreadReply&gt;&gt; replies = _post.GetRepliesAsync(limit);
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IThreadReply&gt;&gt; replies = _post.GetRepliesAsync(referenceReply, sortMode, limit);
+IAsyncEnumerable&lt;IReadOnlyCollection&lt;IThreadReply&gt;&gt; replies = _post.GetRepliesAsync(referenceTimestamp, sortMode, limit);
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/quick_reference/http_api/thread.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2025
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

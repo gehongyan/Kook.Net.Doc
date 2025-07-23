@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_IThreadChannel" data-uid="Kook.IThreadChannel" class="text-break">
-Interface IThreadChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface IThreadChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -228,11 +228,75 @@ Interface IThreadChannel  <a class="header-action link-secondary" title="View so
 </h2>
 
 
+  <a id="Kook_IThreadChannel_DefaultLayout_" data-uid="Kook.IThreadChannel.DefaultLayout*"></a>
+
+  <h3 id="Kook_IThreadChannel_DefaultLayout" data-uid="Kook.IThreadChannel.DefaultLayout">
+  DefaultLayout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此频道设置的帖子默认布局。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ThreadLayout? DefaultLayout { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ThreadLayout.html">ThreadLayout</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_IThreadChannel_DefaultSortOrder_" data-uid="Kook.IThreadChannel.DefaultSortOrder*"></a>
+
+  <h3 id="Kook_IThreadChannel_DefaultSortOrder" data-uid="Kook.IThreadChannel.DefaultSortOrder">
+  DefaultSortOrder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此频道设置的帖子默认排序。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ThreadSortOrder? DefaultSortOrder { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.ThreadSortOrder.html">ThreadSortOrder</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Kook_IThreadChannel_PostCreationInterval_" data-uid="Kook.IThreadChannel.PostCreationInterval*"></a>
 
   <h3 id="Kook_IThreadChannel_PostCreationInterval" data-uid="Kook.IThreadChannel.PostCreationInterval">
   PostCreationInterval
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此频道设置的发帖速率限制。</p>
@@ -269,7 +333,7 @@ Interface IThreadChannel  <a class="header-action link-secondary" title="View so
 
   <h3 id="Kook_IThreadChannel_ReplyInterval" data-uid="Kook.IThreadChannel.ReplyInterval">
   ReplyInterval
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此频道设置的回帖速率限制。</p>
@@ -306,7 +370,7 @@ Interface IThreadChannel  <a class="header-action link-secondary" title="View so
 
   <h3 id="Kook_IThreadChannel_Topic" data-uid="Kook.IThreadChannel.Topic">
   Topic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此频道的说明。</p>
@@ -338,11 +402,629 @@ Interface IThreadChannel  <a class="header-action link-secondary" title="View so
 </h2>
 
 
+  <a id="Kook_IThreadChannel_CreateThreadAsync_" data-uid="Kook.IThreadChannel.CreateThreadAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_CreateThreadAsync_System_String_Kook_ICard_System_String_Kook_IThreadCategory_System_Collections_Generic_IEnumerable_Kook_ThreadTag__Kook_RequestOptions_" data-uid="Kook.IThreadChannel.CreateThreadAsync(System.String,Kook.ICard,System.String,Kook.IThreadCategory,System.Collections.Generic.IEnumerable{Kook.ThreadTag},Kook.RequestOptions)">
+  CreateThreadAsync(string, ICard, string?, IThreadCategory?, IEnumerable&lt;ThreadTag&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>发布一个新的帖子到此帖子频道。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IThread&gt; CreateThreadAsync(string title, ICard card, string? cover = null, IThreadCategory? category = null, IEnumerable&lt;ThreadTag&gt;? tags = null, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>帖子标题。</p>
+</dd>
+    <dt><code>card</code> <a class="xref" href="Kook.ICard.html">ICard</a></dt>
+    <dd><p>帖子的卡片内容。</p>
+</dd>
+    <dt><code>cover</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>帖子封面的图片链接。</p>
+</dd>
+    <dt><code>category</code> <a class="xref" href="Kook.IThreadCategory.html">IThreadCategory</a></dt>
+    <dd><p>帖子的分区。</p>
+</dd>
+    <dt><code>tags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ThreadTag.html">ThreadTag</a>&gt;</dt>
+    <dd><p>帖子的话题标签。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IThread.html">IThread</a>&gt;</dt>
+    <dd><p>一个表示异步修改操作的任务。任务的结果包含新创建的帖子。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_IThreadChannel_CreateThreadAsync_" data-uid="Kook.IThreadChannel.CreateThreadAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_CreateThreadAsync_System_String_System_Collections_Generic_IEnumerable_Kook_ICard__System_String_Kook_IThreadCategory_System_Collections_Generic_IEnumerable_Kook_ThreadTag__Kook_RequestOptions_" data-uid="Kook.IThreadChannel.CreateThreadAsync(System.String,System.Collections.Generic.IEnumerable{Kook.ICard},System.String,Kook.IThreadCategory,System.Collections.Generic.IEnumerable{Kook.ThreadTag},Kook.RequestOptions)">
+  CreateThreadAsync(string, IEnumerable&lt;ICard&gt;, string?, IThreadCategory?, IEnumerable&lt;ThreadTag&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>发布一个新的帖子到此帖子频道。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IThread&gt; CreateThreadAsync(string title, IEnumerable&lt;ICard&gt; cards, string? cover = null, IThreadCategory? category = null, IEnumerable&lt;ThreadTag&gt;? tags = null, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>帖子标题。</p>
+</dd>
+    <dt><code>cards</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
+    <dd><p>帖子的卡片内容。</p>
+</dd>
+    <dt><code>cover</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>帖子封面的图片链接。</p>
+</dd>
+    <dt><code>category</code> <a class="xref" href="Kook.IThreadCategory.html">IThreadCategory</a></dt>
+    <dd><p>帖子的分区。</p>
+</dd>
+    <dt><code>tags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ThreadTag.html">ThreadTag</a>&gt;</dt>
+    <dd><p>帖子的话题标签。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IThread.html">IThread</a>&gt;</dt>
+    <dd><p>一个表示异步修改操作的任务。任务的结果包含新创建的帖子。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_IThreadChannel_CreateThreadAsync_" data-uid="Kook.IThreadChannel.CreateThreadAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_CreateThreadAsync_System_String_System_String_System_Boolean_System_String_Kook_IThreadCategory_System_Collections_Generic_IEnumerable_Kook_ThreadTag__Kook_RequestOptions_" data-uid="Kook.IThreadChannel.CreateThreadAsync(System.String,System.String,System.Boolean,System.String,Kook.IThreadCategory,System.Collections.Generic.IEnumerable{Kook.ThreadTag},Kook.RequestOptions)">
+  CreateThreadAsync(string, string, bool, string?, IThreadCategory?, IEnumerable&lt;ThreadTag&gt;?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>发布一个新的帖子到此帖子频道。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IThread&gt; CreateThreadAsync(string title, string content, bool isKMarkdown = false, string? cover = null, IThreadCategory? category = null, IEnumerable&lt;ThreadTag&gt;? tags = null, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>帖子标题。</p>
+</dd>
+    <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>帖子文本内容，文本将会被包装在无侧边卡片内发送。</p>
+</dd>
+    <dt><code>isKMarkdown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>是否为 KMarkdown 格式。</p>
+</dd>
+    <dt><code>cover</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>帖子封面的图片链接。</p>
+</dd>
+    <dt><code>category</code> <a class="xref" href="Kook.IThreadCategory.html">IThreadCategory</a></dt>
+    <dd><p>帖子的分区。</p>
+</dd>
+    <dt><code>tags</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ThreadTag.html">ThreadTag</a>&gt;</dt>
+    <dd><p>帖子的话题标签。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IThread.html">IThread</a>&gt;</dt>
+    <dd><p>一个表示异步修改操作的任务。任务的结果包含新创建的帖子。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_IThreadChannel_DeleteThreadAsync_" data-uid="Kook.IThreadChannel.DeleteThreadAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_DeleteThreadAsync_Kook_IThread_Kook_RequestOptions_" data-uid="Kook.IThreadChannel.DeleteThreadAsync(Kook.IThread,Kook.RequestOptions)">
+  DeleteThreadAsync(IThread, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>删除一个帖子。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task DeleteThreadAsync(IThread thread, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>thread</code> <a class="xref" href="Kook.IThread.html">IThread</a></dt>
+    <dd><p>要删除的帖子。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步删除操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_IThreadChannel_DeleteThreadAsync_" data-uid="Kook.IThreadChannel.DeleteThreadAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_DeleteThreadAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.IThreadChannel.DeleteThreadAsync(System.UInt64,Kook.RequestOptions)">
+  DeleteThreadAsync(ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>删除一个帖子。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task DeleteThreadAsync(ulong threadId, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>要删除的帖子的 ID。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步删除操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_IThreadChannel_DeleteThreadContentAsync_" data-uid="Kook.IThreadChannel.DeleteThreadContentAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_DeleteThreadContentAsync_Kook_IThread_Kook_RequestOptions_" data-uid="Kook.IThreadChannel.DeleteThreadContentAsync(Kook.IThread,Kook.RequestOptions)">
+  DeleteThreadContentAsync(IThread, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>删除一个帖子的主楼内容。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task DeleteThreadContentAsync(IThread thread, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>thread</code> <a class="xref" href="Kook.IThread.html">IThread</a></dt>
+    <dd><p>要删除其主楼内容的帖子。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步删除操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_IThreadChannel_DeleteThreadContentAsync_Kook_IThread_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>当帖子无任何评论时，删除主楼内容会导致帖子被删除。</p>
+</div>
+
+
+
+
+  <a id="Kook_IThreadChannel_DeleteThreadContentAsync_" data-uid="Kook.IThreadChannel.DeleteThreadContentAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_DeleteThreadContentAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.IThreadChannel.DeleteThreadContentAsync(System.UInt64,Kook.RequestOptions)">
+  DeleteThreadContentAsync(ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>删除一个帖子的主楼内容。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task DeleteThreadContentAsync(ulong threadId, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>要删除其主楼内容的帖子的 ID。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步删除操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_IThreadChannel_DeleteThreadContentAsync_System_UInt64_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>当帖子无任何评论时，删除主楼内容会导致帖子被删除。</p>
+</div>
+
+
+
+
+  <a id="Kook_IThreadChannel_GetThreadAsync_" data-uid="Kook.IThreadChannel.GetThreadAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_GetThreadAsync_System_UInt64_Kook_RequestOptions_" data-uid="Kook.IThreadChannel.GetThreadAsync(System.UInt64,Kook.RequestOptions)">
+  GetThreadAsync(ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>从此帖子频道获取一个帖子。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IThread&gt; GetThreadAsync(ulong id, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>帖子的 ID。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.IThread.html">IThread</a>&gt;</dt>
+    <dd><p>一个表示异步获取操作的任务。任务结果包含具有指定 ID 的帖子。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_IThreadChannel_GetThreadCategoriesAsync_" data-uid="Kook.IThreadChannel.GetThreadCategoriesAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_GetThreadCategoriesAsync_Kook_RequestOptions_" data-uid="Kook.IThreadChannel.GetThreadCategoriesAsync(Kook.RequestOptions)">
+  GetThreadCategoriesAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子频道的所有帖子分区。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IThreadCategory&gt;&gt; GetThreadCategoriesAsync(RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IThreadCategory.html">IThreadCategory</a>&gt;&gt;</dt>
+    <dd><p>一个表示异步修改操作的任务。任务的结果包含此帖子频道的所有帖子分区。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_IThreadChannel_GetThreadsAsync_" data-uid="Kook.IThreadChannel.GetThreadsAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_GetThreadsAsync_Kook_IThread_Kook_ThreadSortOrder_System_Int32_Kook_IThreadCategory_Kook_RequestOptions_" data-uid="Kook.IThreadChannel.GetThreadsAsync(Kook.IThread,Kook.ThreadSortOrder,System.Int32,Kook.IThreadCategory,Kook.RequestOptions)">
+  GetThreadsAsync(IThread, ThreadSortOrder, int, IThreadCategory?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子频道中的一些帖子。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IThread&gt;&gt; GetThreadsAsync(IThread referenceThread, ThreadSortOrder sortOrder = ThreadSortOrder.CreationTime, int limit = 30, IThreadCategory? category = null, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>referenceThread</code> <a class="xref" href="Kook.IThread.html">IThread</a></dt>
+    <dd><p>要开始获取帖子的参考位置的帖子，获取的结果不包含此帖子。</p>
+</dd>
+    <dt><code>sortOrder</code> <a class="xref" href="Kook.ThreadSortOrder.html">ThreadSortOrder</a></dt>
+    <dd><p>获取帖子列表的排序方式。</p>
+</dd>
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>要获取的帖子数量。</p>
+</dd>
+    <dt><code>category</code> <a class="xref" href="Kook.IThreadCategory.html">IThreadCategory</a></dt>
+    <dd><p>要获取的帖子所在的分区，如果为 <code>null</code>，则获取所有分区的帖子。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IThread.html">IThread</a>&gt;&gt;</dt>
+    <dd><p>分页的帖子集合的异步可枚举对象。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_IThreadChannel_GetThreadsAsync_Kook_IThread_Kook_ThreadSortOrder_System_Int32_Kook_IThreadCategory_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+    返回的集合是一个异步可枚举对象；调用
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    可以异步枚举所有分页，并将其合并为一个集合。
+</p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+    请勿一次性获取过多帖子，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+</p></div>
+<br>
+此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条帖子。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a>
+将请求拆分。换句话说，如果要获取 500 条帖子，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxMessagesPerBatch">MaxMessagesPerBatch</a> 的常量为
+<code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+<a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
+</div>
+
+
+
+
+  <a id="Kook_IThreadChannel_GetThreadsAsync_" data-uid="Kook.IThreadChannel.GetThreadsAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_GetThreadsAsync_System_DateTimeOffset_Kook_ThreadSortOrder_System_Int32_Kook_IThreadCategory_Kook_RequestOptions_" data-uid="Kook.IThreadChannel.GetThreadsAsync(System.DateTimeOffset,Kook.ThreadSortOrder,System.Int32,Kook.IThreadCategory,Kook.RequestOptions)">
+  GetThreadsAsync(DateTimeOffset, ThreadSortOrder, int, IThreadCategory?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子频道中的一些帖子。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IThread&gt;&gt; GetThreadsAsync(DateTimeOffset referenceTimestamp, ThreadSortOrder sortOrder = ThreadSortOrder.CreationTime, int limit = 30, IThreadCategory? category = null, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>referenceTimestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>要开始获取帖子的参考位置的帖子的创建时间或最后活跃时间，由 <code class="paramref">sortOrder</code> 参数决定，获取的结果不包含其时间为此值的帖子。</p>
+</dd>
+    <dt><code>sortOrder</code> <a class="xref" href="Kook.ThreadSortOrder.html">ThreadSortOrder</a></dt>
+    <dd><p>获取帖子列表的排序方式。</p>
+</dd>
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>要获取的帖子数量。</p>
+</dd>
+    <dt><code>category</code> <a class="xref" href="Kook.IThreadCategory.html">IThreadCategory</a></dt>
+    <dd><p>要获取的帖子所在的分区，如果为 <code>null</code>，则获取所有分区的帖子。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IThread.html">IThread</a>&gt;&gt;</dt>
+    <dd><p>分页的帖子集合的异步可枚举对象。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_IThreadChannel_GetThreadsAsync_System_DateTimeOffset_Kook_ThreadSortOrder_System_Int32_Kook_IThreadCategory_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+    返回的集合是一个异步可枚举对象；调用
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    可以异步枚举所有分页，并将其合并为一个集合。
+</p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+    请勿一次性获取过多帖子，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+</p></div>
+<br>
+此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条帖子。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxThreadsPerBatch">MaxThreadsPerBatch</a>
+将请求拆分。换句话说，如果要获取 500 条帖子，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxThreadsPerBatch">MaxThreadsPerBatch</a> 的常量为
+<code>50</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+<a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
+</div>
+
+
+
+
+  <a id="Kook_IThreadChannel_GetThreadsAsync_" data-uid="Kook.IThreadChannel.GetThreadsAsync*"></a>
+
+  <h3 id="Kook_IThreadChannel_GetThreadsAsync_System_Int32_Kook_IThreadCategory_Kook_RequestOptions_" data-uid="Kook.IThreadChannel.GetThreadsAsync(System.Int32,Kook.IThreadCategory,Kook.RequestOptions)">
+  GetThreadsAsync(int, IThreadCategory?, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子频道中的最新的一些帖子。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;IReadOnlyCollection&lt;IThread&gt;&gt; GetThreadsAsync(int limit = 30, IThreadCategory? category = null, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>要获取的帖子数量。</p>
+</dd>
+    <dt><code>category</code> <a class="xref" href="Kook.IThreadCategory.html">IThreadCategory</a></dt>
+    <dd><p>要获取的帖子所在的分区，如果为 <code>null</code>，则获取所有分区的帖子。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.IThread.html">IThread</a>&gt;&gt;</dt>
+    <dd><p>分页的帖子集合的异步可枚举对象。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_IThreadChannel_GetThreadsAsync_System_Int32_Kook_IThreadCategory_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+    返回的集合是一个异步可枚举对象；调用
+    <a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+    可以异步枚举所有分页，并将其合并为一个集合。
+</p></div>
+<br>
+<div class="WARNING"><h5>warning</h5><p>
+    请勿一次性获取过多帖子，这可能会导致抢占式速率限制，甚至触发实际的速率限制，从而导致 Bot 服务暂停。
+</p></div>
+<br>
+此方法将尝试获取此频道最新的 <code class="paramref">limit</code> 条帖子。此方法会根据 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxThreadsPerBatch">MaxThreadsPerBatch</a>
+将请求拆分。换句话说，如果要获取 300 条帖子，而 <a class="xref" href="Kook.KookConfig.html#Kook_KookConfig_MaxThreadsPerBatch">MaxThreadsPerBatch</a> 的常量为
+<code>30</code>，则请求将被拆分为 10 个单独请求，因此异步枚举器会异步枚举返回 10 个响应。
+<a class="xref" href="Kook.AsyncEnumerableExtensions.html#Kook_AsyncEnumerableExtensions_FlattenAsync__1_System_Collections_Generic_IAsyncEnumerable_System_Collections_Generic_IEnumerable___0___">FlattenAsync&lt;T&gt;(IAsyncEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a>
+方法可以展开这 10 个响应返回的集合，并将其合并为一个集合。
+</div>
+
+
+
+
   <a id="Kook_IThreadChannel_ModifyAsync_" data-uid="Kook.IThreadChannel.ModifyAsync*"></a>
 
   <h3 id="Kook_IThreadChannel_ModifyAsync_System_Action_Kook_ModifyThreadChannelProperties__Kook_RequestOptions_" data-uid="Kook.IThreadChannel.ModifyAsync(System.Action{Kook.ModifyThreadChannelProperties},Kook.RequestOptions)">
   ModifyAsync(Action&lt;ModifyThreadChannelProperties&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>修改此频道的属性。</p>
@@ -390,7 +1072,7 @@ Interface IThreadChannel  <a class="header-action link-secondary" title="View so
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Channels/IThreadChannel.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

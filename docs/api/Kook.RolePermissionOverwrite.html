@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_RolePermissionOverwrite" data-uid="Kook.RolePermissionOverwrite" class="text-break">
-Class RolePermissionOverwrite  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class RolePermissionOverwrite  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class RolePermissionOverwrite  <a class="header-action link-secondary" title="Vi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RolePermissionOverwrite : IPermissionOverwrite&lt;uint&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class RolePermissionOverwrite : IPermissionOverwrite&lt;IRole, uint&gt;</code></pre>
   </div>
 
 
@@ -119,7 +119,7 @@ Class RolePermissionOverwrite  <a class="header-action link-secondary" title="Vi
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="Kook.IPermissionOverwrite-1.html">IPermissionOverwrite</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</div>
+      <div><a class="xref" href="Kook.IPermissionOverwrite-2.html">IPermissionOverwrite</a>&lt;<a class="xref" href="Kook.IRole.html">IRole</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</div>
     </dd>
   </dl>
 
@@ -155,46 +155,6 @@ Class RolePermissionOverwrite  <a class="header-action link-secondary" title="Vi
 
 
 
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="Kook_RolePermissionOverwrite__ctor_" data-uid="Kook.RolePermissionOverwrite.#ctor*"></a>
-
-  <h3 id="Kook_RolePermissionOverwrite__ctor_System_UInt32_Kook_OverwritePermissions_" data-uid="Kook.RolePermissionOverwrite.#ctor(System.UInt32,Kook.OverwritePermissions)">
-  RolePermissionOverwrite(uint, OverwritePermissions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L21"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.RolePermissionOverwrite.html">RolePermissionOverwrite</a> 类的新实例。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RolePermissionOverwrite(uint targetId, OverwritePermissions permissions)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>targetId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>角色的 ID。</p>
-</dd>
-    <dt><code>permissions</code> <a class="xref" href="Kook.OverwritePermissions.html">OverwritePermissions</a></dt>
-    <dd><p>角色的权限重写配置。</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -203,7 +163,7 @@ Class RolePermissionOverwrite  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_RolePermissionOverwrite_Permissions" data-uid="Kook.RolePermissionOverwrite.Permissions">
   Permissions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此重写的权限重写配置。</p>
@@ -235,7 +195,39 @@ Class RolePermissionOverwrite  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Kook_RolePermissionOverwrite_Target" data-uid="Kook.RolePermissionOverwrite.Target">
   Target
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此重写所应用的角色的。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRole? Target { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.IRole.html">IRole</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_RolePermissionOverwrite_TargetId_" data-uid="Kook.RolePermissionOverwrite.TargetId*"></a>
+
+  <h3 id="Kook_RolePermissionOverwrite_TargetId" data-uid="Kook.RolePermissionOverwrite.TargetId">
+  TargetId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此重写所应用的角色的 ID。</p>
@@ -243,7 +235,7 @@ Class RolePermissionOverwrite  <a class="header-action link-secondary" title="Vi
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Target { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public uint TargetId { get; }</code></pre>
   </div>
 
 
@@ -263,11 +255,43 @@ Class RolePermissionOverwrite  <a class="header-action link-secondary" title="Vi
 
 
 
+  <a id="Kook_RolePermissionOverwrite_TargetType_" data-uid="Kook.RolePermissionOverwrite.TargetType*"></a>
+
+  <h3 id="Kook_RolePermissionOverwrite_TargetType" data-uid="Kook.RolePermissionOverwrite.TargetType">
+  TargetType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此重写所应用的目标的类型。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PermissionOverwriteTarget TargetType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.PermissionOverwriteTarget.html">PermissionOverwriteTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.9.11/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Core/Entities/Permissions/RolePermissionOverwrite.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RestThreadReply | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RestThreadReply | Kook.Net 文档 ">
+      
+      <meta name="description" content="表示一个基于 REST 的帖子评论。">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Rest_RestThreadReply.md&amp;value=---%0Auid%3A%20Kook.Rest.RestThreadReply%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo/Logo_Small.png" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.Rest.RestThreadReply">
+
+
+
+  <h1 id="Kook_Rest_RestThreadReply" data-uid="Kook.Rest.RestThreadReply" class="text-break">
+Class RestThreadReply  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a>.<a class="xref" href="Kook.Rest.html">Rest</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Rest.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>表示一个基于 REST 的帖子评论。</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RestThreadReply : RestEntity&lt;ulong&gt;, IThreadReply, IEntity&lt;ulong&gt;, IDeletable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Kook.Rest.RestEntity-1.html">RestEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</div>
+      <div><span class="xref">RestThreadReply</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Kook.IThreadReply.html">IThreadReply</a></div>
+      <div><a class="xref" href="Kook.IEntity-1.html">IEntity</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</div>
+      <div><a class="xref" href="Kook.IDeletable.html">IDeletable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Kook.Rest.RestEntity-1.html#Kook_Rest_RestEntity_1_Id">RestEntity&lt;ulong&gt;.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Kook.ThreadExtensions.html#Kook_ThreadExtensions_GetJumpUrl_Kook_IThreadReply_">ThreadExtensions.GetJumpUrl(IThreadReply)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kook.ThreadExtensions.html#Kook_ThreadExtensions_TryExtractCardContent_Kook_IThreadReply_System_String__">ThreadExtensions.TryExtractCardContent(IThreadReply, out string?)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Kook_Rest_RestThreadReply_Author_" data-uid="Kook.Rest.RestThreadReply.Author*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_Author" data-uid="Kook.Rest.RestThreadReply.Author">
+  Author
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子的作者。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IUser Author { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.IUser.html">IUser</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_Cards_" data-uid="Kook.Rest.RestThreadReply.Cards*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_Cards" data-uid="Kook.Rest.RestThreadReply.Cards">
+  Cards
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子评论中包含的所有卡片。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;ICard&gt; Cards { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_Content_" data-uid="Kook.Rest.RestThreadReply.Content*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_Content" data-uid="Kook.Rest.RestThreadReply.Content">
+  Content
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子回复的内容。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Content { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_Rest_RestThreadReply_Content_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此属性为卡片内容的原始代码。</p>
+</div>
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_IsEdited_" data-uid="Kook.Rest.RestThreadReply.IsEdited*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_IsEdited" data-uid="Kook.Rest.RestThreadReply.IsEdited">
+  IsEdited
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子回复是否已被编辑。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEdited { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_MentionedChannelIds_" data-uid="Kook.Rest.RestThreadReply.MentionedChannelIds*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_MentionedChannelIds" data-uid="Kook.Rest.RestThreadReply.MentionedChannelIds">
+  MentionedChannelIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子回复中提及的所有频道。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;ulong&gt; MentionedChannelIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_MentionedEveryone_" data-uid="Kook.Rest.RestThreadReply.MentionedEveryone*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_MentionedEveryone" data-uid="Kook.Rest.RestThreadReply.MentionedEveryone">
+  MentionedEveryone
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子回复是否提及了全体成员。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MentionedEveryone { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_MentionedHere_" data-uid="Kook.Rest.RestThreadReply.MentionedHere*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_MentionedHere" data-uid="Kook.Rest.RestThreadReply.MentionedHere">
+  MentionedHere
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子回复是否提及了在线成员。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MentionedHere { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_MentionedRoleIds_" data-uid="Kook.Rest.RestThreadReply.MentionedRoleIds*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_MentionedRoleIds" data-uid="Kook.Rest.RestThreadReply.MentionedRoleIds">
+  MentionedRoleIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子回复中提及的所有角色的 ID。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;uint&gt; MentionedRoleIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_MentionedUserIds_" data-uid="Kook.Rest.RestThreadReply.MentionedUserIds*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_MentionedUserIds" data-uid="Kook.Rest.RestThreadReply.MentionedUserIds">
+  MentionedUserIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子回复中提及的所有用户的 ID。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;ulong&gt; MentionedUserIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_MentionedUsers_" data-uid="Kook.Rest.RestThreadReply.MentionedUsers*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_MentionedUsers" data-uid="Kook.Rest.RestThreadReply.MentionedUsers">
+  MentionedUsers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子中提及的所有用户。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;RestUser&gt; MentionedUsers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Kook.Rest.RestUser.html">RestUser</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_Post_" data-uid="Kook.Rest.RestThreadReply.Post*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_Post" data-uid="Kook.Rest.RestThreadReply.Post">
+  Post
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子回复的回复所在的帖子评论。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IThreadPost Post { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.IThreadPost.html">IThreadPost</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_Thread_" data-uid="Kook.Rest.RestThreadReply.Thread*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_Thread" data-uid="Kook.Rest.RestThreadReply.Thread">
+  Thread
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子回复的回复所在的帖子。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IThread Thread { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.IThread.html">IThread</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_Timestamp_" data-uid="Kook.Rest.RestThreadReply.Timestamp*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_Timestamp" data-uid="Kook.Rest.RestThreadReply.Timestamp">
+  Timestamp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此帖子的发布时间。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset Timestamp { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Kook_Rest_RestThreadReply_DeleteAsync_" data-uid="Kook.Rest.RestThreadReply.DeleteAsync*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_DeleteAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestThreadReply.DeleteAsync(Kook.RequestOptions)">
+  DeleteAsync(RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>删除此实体对象及其所有子实体对象。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task DeleteAsync(RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_ReplyAsync_" data-uid="Kook.Rest.RestThreadReply.ReplyAsync*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_ReplyAsync_Kook_ICard_Kook_RequestOptions_" data-uid="Kook.Rest.RestThreadReply.ReplyAsync(Kook.ICard,Kook.RequestOptions)">
+  ReplyAsync(ICard, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>在此帖子回复所属的帖子评论中回复此帖子回复。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestThreadReply&gt; ReplyAsync(ICard card, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>card</code> <a class="xref" href="Kook.ICard.html">ICard</a></dt>
+    <dd><p>要发布的卡片内容。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Rest.RestThreadReply.html">RestThreadReply</a>&gt;</dt>
+    <dd><p>一个表示新创建帖子评论的回复操作的异步任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_Rest_RestThreadReply_ReplyAsync_Kook_ICard_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>卡片内仅允许包含文本内容。</p>
+</div>
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_ReplyAsync_" data-uid="Kook.Rest.RestThreadReply.ReplyAsync*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_ReplyAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_RequestOptions_" data-uid="Kook.Rest.RestThreadReply.ReplyAsync(System.Collections.Generic.IEnumerable{Kook.ICard},Kook.RequestOptions)">
+  ReplyAsync(IEnumerable&lt;ICard&gt;, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>在此帖子回复所属的帖子评论中回复此帖子回复。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestThreadReply&gt; ReplyAsync(IEnumerable&lt;ICard&gt; cards, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cards</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Kook.ICard.html">ICard</a>&gt;</dt>
+    <dd><p>要发布的卡片内容。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Rest.RestThreadReply.html">RestThreadReply</a>&gt;</dt>
+    <dd><p>一个表示新创建帖子评论的回复操作的异步任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_Rest_RestThreadReply_ReplyAsync_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>卡片内仅允许包含文本内容。</p>
+</div>
+
+
+
+
+  <a id="Kook_Rest_RestThreadReply_ReplyAsync_" data-uid="Kook.Rest.RestThreadReply.ReplyAsync*"></a>
+
+  <h3 id="Kook_Rest_RestThreadReply_ReplyAsync_System_String_System_Boolean_Kook_RequestOptions_" data-uid="Kook.Rest.RestThreadReply.ReplyAsync(System.String,System.Boolean,Kook.RequestOptions)">
+  ReplyAsync(string, bool, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>在此帖子回复所属的帖子评论中回复此帖子回复。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RestThreadReply&gt; ReplyAsync(string content, bool isKMarkdown = false, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>要发布的文本内容。</p>
+</dd>
+    <dt><code>isKMarkdown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>是否为 KMarkdown 格式。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Rest.RestThreadReply.html">RestThreadReply</a>&gt;</dt>
+    <dd><p>一个表示新创建帖子评论的回复操作的异步任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.10.0/src/Kook.Net.Rest/Entities/Threads/RestThreadReply.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2025
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
