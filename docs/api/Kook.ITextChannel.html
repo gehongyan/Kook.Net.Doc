@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_ITextChannel" data-uid="Kook.ITextChannel" class="text-break">
-Interface ITextChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Interface ITextChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.1/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -280,7 +280,7 @@ Interface ITextChannel  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_ITextChannel_SlowModeInterval" data-uid="Kook.ITextChannel.SlowModeInterval">
   SlowModeInterval
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.1/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此频道当前设置的慢速模式延迟。</p>
@@ -317,7 +317,7 @@ Interface ITextChannel  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_ITextChannel_Topic" data-uid="Kook.ITextChannel.Topic">
   Topic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.1/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此频道的说明。</p>
@@ -353,7 +353,7 @@ Interface ITextChannel  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_ITextChannel_GetPinnedMessagesAsync_Kook_RequestOptions_" data-uid="Kook.ITextChannel.GetPinnedMessagesAsync(Kook.RequestOptions)">
   GetPinnedMessagesAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.1/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此频道中的所有置顶消息。</p>
@@ -392,7 +392,7 @@ Interface ITextChannel  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_ITextChannel_ModifyAsync_System_Action_Kook_ModifyTextChannelProperties__Kook_RequestOptions_" data-uid="Kook.ITextChannel.ModifyAsync(System.Action{Kook.ModifyTextChannelProperties},Kook.RequestOptions)">
   ModifyAsync(Action&lt;ModifyTextChannelProperties&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.1/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>修改此频道有关文字聊天能力的属性。</p>
@@ -436,11 +436,179 @@ Interface ITextChannel  <a class="header-action link-secondary" title="View sour
   </dl>
 
 
+  <a id="Kook_ITextChannel_PinMessageAsync_" data-uid="Kook.ITextChannel.PinMessageAsync*"></a>
+
+  <h3 id="Kook_ITextChannel_PinMessageAsync_Kook_IUserMessage_Kook_RequestOptions_" data-uid="Kook.ITextChannel.PinMessageAsync(Kook.IUserMessage,Kook.RequestOptions)">
+  PinMessageAsync(IUserMessage, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.1/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>置顶该频道内的指定消息。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task PinMessageAsync(IUserMessage message, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
+    <dd><p>要置顶的消息。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步置顶操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_ITextChannel_PinMessageAsync_" data-uid="Kook.ITextChannel.PinMessageAsync*"></a>
+
+  <h3 id="Kook_ITextChannel_PinMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.ITextChannel.PinMessageAsync(System.Guid,Kook.RequestOptions)">
+  PinMessageAsync(Guid, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.1/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>置顶该频道内的指定消息。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task PinMessageAsync(Guid messageId, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>messageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>要置顶的消息的 ID。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步置顶操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_ITextChannel_UnpinMessageAsync_" data-uid="Kook.ITextChannel.UnpinMessageAsync*"></a>
+
+  <h3 id="Kook_ITextChannel_UnpinMessageAsync_Kook_IUserMessage_Kook_RequestOptions_" data-uid="Kook.ITextChannel.UnpinMessageAsync(Kook.IUserMessage,Kook.RequestOptions)">
+  UnpinMessageAsync(IUserMessage, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.1/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>取消置顶该频道内的指定消息。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task UnpinMessageAsync(IUserMessage message, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="Kook.IUserMessage.html">IUserMessage</a></dt>
+    <dd><p>要取消置顶的消息。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步取消置顶操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_ITextChannel_UnpinMessageAsync_" data-uid="Kook.ITextChannel.UnpinMessageAsync*"></a>
+
+  <h3 id="Kook_ITextChannel_UnpinMessageAsync_System_Guid_Kook_RequestOptions_" data-uid="Kook.ITextChannel.UnpinMessageAsync(System.Guid,Kook.RequestOptions)">
+  UnpinMessageAsync(Guid, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.1/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>取消置顶该频道内的指定消息。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task UnpinMessageAsync(Guid messageId, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>messageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>要取消置顶的消息的 ID。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步取消置顶操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.10.1/src/Kook.Net.Core/Entities/Channels/ITextChannel.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
