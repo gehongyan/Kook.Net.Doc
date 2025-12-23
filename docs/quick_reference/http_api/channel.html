@@ -258,6 +258,23 @@ IEnumerable&lt;IGuildUser&gt; guildUsers = null;
 // API 请求
 await guild.MoveUsersAsync(guildUsers, voiceChannel);
 </code></pre>
+<h3 id="踢出语音频道中的用户"><a href="https://developer.kookapp.cn/doc/http/channel#%E8%B8%A2%E5%87%BA%E8%AF%AD%E9%9F%B3%E9%A2%91%E9%81%93%E4%B8%AD%E7%9A%84%E7%94%A8%E6%88%B7">踢出语音频道中的用户</a></h3>
+<p>POST <code>/api/v3/channel/kickout</code></p>
+<pre><code class="lang-csharp">IGuildUser guildUser = null; // 要断开连接的服务器用户
+
+// API 请求，通过服务器对象断开指定用户在指定语音频道的连接
+await guild.DisconnectUserAsync(guildUser, voiceChannel);
+// API 请求，通过服务器对象断开指定用户在所有语音频道的连接
+await guild.DisconnectUserAsync(guildUser);
+
+// API 请求，通过语音频道对象断开指定用户的连接
+await voiceChannel.DisconnectUserAsync(guildUser);
+
+// API 请求，通过服务器用户对象断开自身在指定语音频道的连接
+await guildUser.DisconnectAsync(voiceChannel);
+// API 请求，通过服务器用户对象断开自身在所有语音频道的连接
+await guildUser.DisconnectAsync();
+</code></pre>
 <h3 id="获取频道角色权限详情"><a href="https://developer.kookapp.cn/doc/http/channel#%E9%A2%91%E9%81%93%E8%A7%92%E8%89%B2%E6%9D%83%E9%99%90%E8%AF%A6%E6%83%85">获取频道角色权限详情</a></h3>
 <p>GET <code>/api/v3/channel-role/index</code></p>
 <pre><code class="lang-csharp">IRole role = null; // 要获取在该频道的权限覆盖配置的角色

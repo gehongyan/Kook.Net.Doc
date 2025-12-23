@@ -87,6 +87,12 @@
         <article data-uid="Changelog">
 <h1 id="变更日志">变更日志</h1>
 
+<h2 id="v0104-2025-12-23">v0.10.4 [2025-12-23]</h2>
+<h3 id="新增">新增</h3>
+<ul>
+<li>新增支持将服务器用户从语音频道中断开连接。</li>
+<li>新增支持在修改消息时自动传递 <code>reply_msg_id</code> 参数，用于每日消息可发送条数总量消耗折扣。</li>
+</ul>
 <h2 id="v0103-2025-11-15">v0.10.3 [2025-11-15]</h2>
 <h3 id="修复">修复</h3>
 <ul>
@@ -113,7 +119,7 @@
 <li>更新 NuGet 依赖库版本。</li>
 </ul>
 <h2 id="v0101-2025-09-19">v0.10.1 [2025-09-19]</h2>
-<h3 id="新增">新增</h3>
+<h3 id="新增-1">新增</h3>
 <ul>
 <li>新增 <code>KookRestConfig.AutoLogoutBeforeLogin</code>，用于配置在登录到 <code>BaseKookClient</code> 客户端时是否强制登出其他与 KOOK
 网关建立连接的客户端，这可以保证当前客户端的连接不会因为其他客户端的连接而无法接收到任何业务事件。</li>
@@ -125,7 +131,7 @@
 <h2 id="v0100-2025-07-23">v0.10.0 [2025-07-23]</h2>
 <h3 id="更新路线">更新路线</h3>
 <p>本更新涉及部分破坏性变更，请检查变更一节。</p>
-<h3 id="新增-1">新增</h3>
+<h3 id="新增-2">新增</h3>
 <ul>
 <li>新增静态类 <code>KookDebugger</code>，用于支持输出 Kook.Net 底层与 KOOK 服务端有关 API 请求、网关数据报、速率限制、语音日志的调试信息。</li>
 <li>新增对帖子频道 <code>IThreadChannel</code> 内发布、获取与删除帖子、评论、回复的支持，新增支持获取帖子频道的默认布局 <code>DefaultLayout</code>
@@ -162,7 +168,7 @@
 <li>增加帖子相关接口的快速指南文档。</li>
 </ul>
 <h2 id="v0911-2025-06-25">v0.9.11 [2025-06-25]</h2>
-<h3 id="新增-2">新增</h3>
+<h3 id="新增-3">新增</h3>
 <ul>
 <li>新增对消息模板相关 API 的支持。</li>
 <li><code>Debug</code> 模式的日志级别现在会输出网关会话 ID。</li>
@@ -190,7 +196,7 @@
 <li>修复导致文本命令框架无法正确注册枚举类型参数的问题。</li>
 </ul>
 <h2 id="v098-2025-05-20">v0.9.8 [2025-05-20]</h2>
-<h3 id="新增-3">新增</h3>
+<h3 id="新增-4">新增</h3>
 <ul>
 <li>新增 <code>BaseSocketClient.UnknownDispatchReceived</code>，用于处理未知的事件类型。</li>
 <li>新增 <code>KookSocketConfig.SuppressUnknownDispatchWarnings</code> 用于绕过未知事件类型的警告。</li>
@@ -206,7 +212,7 @@
 <li>迁移测试框架至 xunit.v3。</li>
 </ul>
 <h2 id="v097-2025-03-09">v0.9.7 [2025-03-09]</h2>
-<h3 id="新增-4">新增</h3>
+<h3 id="新增-5">新增</h3>
 <ul>
 <li>新增 Webhook 客户端多实例注入的支持。</li>
 </ul>
@@ -222,7 +228,7 @@
 <li>改进 OAuth 示例项目，提供获取所加入服务器的示例代码。</li>
 </ul>
 <h2 id="v096-2025-01-05">v0.9.6 [2025-01-05]</h2>
-<h3 id="新增-5">新增</h3>
+<h3 id="新增-6">新增</h3>
 <ul>
 <li>新增对亲密关系管理的支持。</li>
 <li>管道消息客户端新增支持发送卡片消息，及对消息回复与临时消息可见用户的支持。</li>
@@ -240,7 +246,7 @@
 <li>更新所有外部引用的 NuGet 包至最新版本。</li>
 </ul>
 <h2 id="v095-2024-11-13">v0.9.5 [2024-11-13]</h2>
-<h3 id="新增-6">新增</h3>
+<h3 id="新增-7">新增</h3>
 <ul>
 <li>新增 Kook.Net.Pipe 包，提供 <code>KookPipeClient</code>，用于发送管道消息。</li>
 <li>新增 <code>TokenType.Pipe</code>，但仅用于指示内部 API 客户端以管道令牌类型登录，不应用于用户代码的客户端登录。</li>
@@ -250,7 +256,7 @@
 <li>移除目标框架 .NET 7.0，添加目标框架 .NET 9.0。</li>
 </ul>
 <h2 id="v094-2024-11-12">v0.9.4 [2024-11-12]</h2>
-<h3 id="新增-7">新增</h3>
+<h3 id="新增-8">新增</h3>
 <ul>
 <li>新增支持发送与修改模板消息。
 <ul>
@@ -269,7 +275,7 @@
 <li>修复私聊消息可能无法正确编辑的问题。</li>
 </ul>
 <h2 id="v093-2024-10-27">v0.9.3 [2024-10-27]</h2>
-<h3 id="新增-8">新增</h3>
+<h3 id="新增-9">新增</h3>
 <ul>
 <li>新增对帖子频道的基本支持。新增帖子频道类型 <code>ChannelType.Thread</code>，新增帖子频道相关实体
 <code>IThreadChannel</code>、<code>RestThreadChannel</code>、<code>SocketThreadChannel</code>，新增对帖子频道的获取、创建、修改、删除操作的支持。</li>
@@ -283,7 +289,7 @@
 <li>修复 <code>IChannel.Name</code> 可能为空的问题。</li>
 </ul>
 <h2 id="v092-2024-10-18">v0.9.2 [2024-10-18]</h2>
-<h3 id="新增-9">新增</h3>
+<h3 id="新增-10">新增</h3>
 <ul>
 <li>支持发送无边主题 <code>CardTheme.Invisible</code> 卡片</li>
 <li><code>DefaultRestClient</code> 支持传入 <code>IWebProxy</code> 实例</li>
@@ -321,7 +327,7 @@
 <p><code>Emote.Parse</code> 在发生错误时会引发的异常从 <code>ArgumentException</code> 变更为 <code>FormatException</code>。<code>Emote.ToString</code> 的返回结果变更为等效于
 <code>ToKMarkdownString</code> 的结果。<code>MessageExtensions.GetJumpUrl</code> 所提供的链接格式进行了调整。
 <code>SocketGuild.ValidBoostSubscriptions</code> 变更为 <code>SocketGuild.ActiveBoostSubscriptions</code>。<code>Tag&lt;T&gt;</code> 变更为 <code>Tag&lt;TKey, TValue&gt;</code>。</p>
-<h3 id="新增-10">新增</h3>
+<h3 id="新增-11">新增</h3>
 <ul>
 <li>新增支持自定义消息队列，默认实现为同步消息处理，支持通过安装扩展 NuGet 包并配置 <code>KookSocketConfig.MessageQueueProvider</code>
 来设置消息队列提供者。<code>Kook.Net.MessageQueue.InMemory</code> 为内存队列支持包，<code>Kook.Net.MessageQueue.MassTransit</code> 为
@@ -404,7 +410,7 @@ WebSocket 时进行。</li>
 变更为 <code>Cacheable&lt;IMessage, Guid&gt;</code>；<code>SectionAccessoryMode.Unspecified</code> 现已由 <code>null</code> 代替；<code>Format.StripMarkDown</code>
 被重命名为 <code>StripMarkdown</code>；<code>SendFileAsync</code> 中接收 <code>Steam</code> 类型的重载中的 <code>filename</code>
 参数现在为必选参数。请注意这些变更可能会导致编译错误，应根据实际情况进行修复。</p>
-<h3 id="新增-11">新增</h3>
+<h3 id="新增-12">新增</h3>
 <ul>
 <li><code>KookSocketConfig</code> 新增 <code>StartupCacheFetchMode</code>、<code>LargeNumberOfGuildsThreshold</code> 及 <code>SmallNumberOfGuildsThreshold</code>
 配置项，用于自定义 Bot 的 Socket 客户端在启动时通过 API 获取缓存所需服务器基础数据的方式</li>
@@ -462,7 +468,7 @@ WebSocket 时进行。</li>
 <p>另外，语音频道在 API 层面支持操作 <code>Topic</code> 及 <code>SlowModeInterval</code>，但 KOOK 客户端暂无相关表现。</p>
 <p>创建频道时不支持立即指定 <code>Topic</code>，<code>CreateTextChannelProperties</code> 中的 <code>Topic</code> 属性不生效，现已移除，
 请在创建频道后调用 <code>ITextChannel.ModifyAsync</code> 方法进行修改。</p>
-<h3 id="新增-12">新增</h3>
+<h3 id="新增-13">新增</h3>
 <ul>
 <li>新增支持通过 XML 定义卡片消息</li>
 <li><code>IVoiceChannel</code> 现已继承自 <code>ITextChannel</code>，相关实现已更新</li>
@@ -489,7 +495,7 @@ WebSocket 时进行。</li>
 <p>KOOK 内不支持在文本消息中提及语音频道，即 <code>IVoiceChannel</code> 不可被提及，现已不再派生自 <code>IMentionable</code>
 接口。有关提及 <code>IVoiceChannel</code> 的错误用法应该予以移除或变更。</p>
 <p>有关取消令牌的的名称已从 <code>CancelToken</code> 更改为 <code>CancellationToken</code>，现有关于取消用牌的方法、变量、属性、参数的名称都应该更新。</p>
-<h3 id="新增-13">新增</h3>
+<h3 id="新增-14">新增</h3>
 <ul>
 <li>新增语音频道的连接与推流</li>
 </ul>
@@ -509,7 +515,7 @@ WebSocket 时进行。</li>
 <h2 id="v055-2024-02-02">v0.5.5 [2024-02-02]</h2>
 <h3 id="更新路线-5">更新路线</h3>
 <p><code>RequireUserAttribute</code> 不再支持通过 <code>IUser</code> 参数构造，请改用 <code>IUser.Id</code> 作为参数。</p>
-<h3 id="新增-14">新增</h3>
+<h3 id="新增-15">新增</h3>
 <ul>
 <li>文本命令框架先决条件新增 <code>RequireRoleAttribute</code></li>
 <li>文本命令框架 <code>CommandAttribute</code> 新增 <code>Aliases</code>、<code>Summary</code>、<code>Remarks</code> 属性及可选参数</li>
@@ -527,7 +533,7 @@ WebSocket 时进行。</li>
 <p><code>KookRestApiClient</code> 的 <code>AuthTokenType</code> 与 <code>AuthToken</code> 属性的 set 访问性已更改为
 private，用户代码对这些属性的更改可能会导致框架运行异常，如需使用不同的身份认证登录 KOOK 网关，请在 <code>LogoutAsync</code>
 后重新 <code>LoginAsync</code>。</p>
-<h3 id="新增-15">新增</h3>
+<h3 id="新增-16">新增</h3>
 <ul>
 <li><code>IUser</code> 接口上新增 <code>HasAnnualBuff</code>、<code>IsSystemUser</code>、<code>Nameplates</code> 属性</li>
 <li><code>UserTag</code> 上新增 <code>BackgroundColor</code> 属性</li>
@@ -540,7 +546,7 @@ private，用户代码对这些属性的更改可能会导致框架运行异常�
 <h2 id="v053-2023-11-15">v0.5.3 [2023-11-15]</h2>
 <h3 id="更新路线-7">更新路线</h3>
 <p><code>IVoiceChannel.ServerUrl</code> 属性已移动至 <code>IAudioChannel</code> 接口，所有使用此属性的用法都需要更新。</p>
-<h3 id="新增-16">新增</h3>
+<h3 id="新增-17">新增</h3>
 <ul>
 <li>在 <code>IAudioChannel</code> 接口上新增语音区域相关属性</li>
 <li><code>IVoiceChannel.ModifyAsync</code> 方法参数新增支持修改语音区域相关属性</li>
@@ -578,7 +584,7 @@ private，用户代码对这些属性的更改可能会导致框架运行异常�
 <li>新增了 Visual Basic 及 F# 的调用示例</li>
 </ul>
 <h2 id="v051-2023-07-29">v0.5.1 [2023-07-29]</h2>
-<h3 id="新增-17">新增</h3>
+<h3 id="新增-18">新增</h3>
 <ul>
 <li>添加了 <code>SocketGuild.GetCategoryChannel</code> 和 <code>RestGuild.GetCategoryChannelAsync</code> 方法</li>
 </ul>
@@ -604,7 +610,7 @@ private，用户代码对这些属性的更改可能会导致框架运行异常�
 已被重构为结构体，<code>RoleProperties.Permissions</code> 属性的类型也已被相应变更；<code>RestGuild.Channels</code>
 的类型被错误地声明为值的类型为 <code>RestChannel</code> 的字典，已被修正为值的类型为 <code>RestGuildChannel</code> 的字典；<code>KookSocketClient</code>
 上的部分方法的返回类型为 <code>ValueTask</code>，现已统一为 <code>Task</code>。涉及到以上 <code>API</code> 的用法都需要进行相应的更新。</p>
-<h3 id="新增-18">新增</h3>
+<h3 id="新增-19">新增</h3>
 <ul>
 <li>新增 <code>GuildFeature.Partner</code> 枚举值及 <code>GuildFeatures.IsPartner</code> 属性</li>
 <li>新增 <code>IGuild.Banner</code> 属性</li>
@@ -718,7 +724,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <p><code>IGuild</code> 及 <code>IRecommendInfo</code> 的 <code>Features</code> 属性类型原为 <code>object[]</code>，现已实现为 <code>GuildFeatures</code>
 类型，所有涉及到此属性的调用都需要进行相应的更新。</p>
 <p><code>RestPresence</code> 命名空间已修正为 <code>Kook.Rest</code>。所有涉及到 <code>RestPresence</code> 的调用都需要进行命名空间引用的更新。</p>
-<h3 id="新增-19">新增</h3>
+<h3 id="新增-20">新增</h3>
 <ul>
 <li>新增好友管理与用户屏蔽管理相关方法，变更详情参见文末的附录</li>
 <li>为 <code>Cacheable</code> 与 <code>Quote</code> 类新增调试显示文本</li>
@@ -851,7 +857,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <li><code>IMessage</code> → <code>Cacheable&lt;IMessage, Guid&gt;</code></li>
 </ul>
 <h2 id="v031-2023-03-19">v0.3.1 [2023-03-19]</h2>
-<h3 id="新增-20">新增</h3>
+<h3 id="新增-21">新增</h3>
 <ul>
 <li>新增 <code>ICard.ToJsonString</code>) 及 <code>ICardBuilder.ToJsonString</code>) 以支持卡片 JSON 序列化，新增 <code>CardJsonExtension.Parse</code>) 及
 <code>CardJsonExtension.TryParse</code>) 以支持卡片 JSON 反序列化</li>
@@ -859,7 +865,7 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <h2 id="v030-2023-03-19">v0.3.0 [2023-03-19]</h2>
 <h3 id="更新路线-11">更新路线</h3>
 <p>此版本将 <code>IUserMessage.Resolve</code> 中的默认参数 <code>everyoneHandling</code> 变更为 <code>TagHandling.Name</code>，所有使用此方法的用法都需要留意此变更。</p>
-<h3 id="新增-21">新增</h3>
+<h3 id="新增-22">新增</h3>
 <ul>
 <li><code>IKookClient</code> 接口新增方法重载 <code>GetUserAsync</code>，并为 <code>BaseSocketClient</code> 实现接口 <code>IKookClient</code></li>
 <li>新增支持通过 <code>KookConfig.FormatUsersInBidirectionalUnicode</code> 禁用针对双向 Unicode 格式化用户名字符串</li>
@@ -879,17 +885,17 @@ ID 未知无法通过 Rest 客户端发起 API 请求获取完整数据的问题
 <h3 id="更新路线-12">更新路线</h3>
 <p>此版本为 <code>KookRestClient.GetGamesAsync</code> 方法签名新增了可选可空参数 <code>GameCreationSource</code>，以支持获取指定创建来源的游戏信息。
 所有在向此方法传递位置实参 <code>RequestOptions</code> 的用法都需要更新。</p>
-<h3 id="新增-22">新增</h3>
+<h3 id="新增-23">新增</h3>
 <ul>
 <li>为方法 <code>KookRestClient.GetGamesAsync</code> 新增可选可空参数 <code>GameCreationSource</code></li>
 </ul>
 <h2 id="v024-2023-03-09">v0.2.4 [2023-03-09]</h2>
-<h3 id="新增-23">新增</h3>
+<h3 id="新增-24">新增</h3>
 <ul>
 <li>新增支持解析角色 <code>IRole</code> 的颜色类型 <code>ColorType</code> 及渐变色信息 <code>GradientColor</code></li>
 </ul>
 <h2 id="v023-2023-01-19">v0.2.3 [2023-01-19]</h2>
-<h3 id="新增-24">新增</h3>
+<h3 id="新增-25">新增</h3>
 <ul>
 <li>为 Bearer 类型认证新增支持 <code>KookRestClient.GetAdminGuildsAsync</code></li>
 <li>新增 <code>Format.Colorize</code> 用于 KMarkdown 文本颜色格式化</li>
@@ -918,7 +924,7 @@ Kook.Net.Experimental 包。</p>
 <ul>
 <li>移除了接口定义上的方法 <code>INestedChannel.SyncPermissionsAsync</code>，接口的实现现已移动至 Kook.Net.Experimental 包中</li>
 </ul>
-<h3 id="新增-25">新增</h3>
+<h3 id="新增-26">新增</h3>
 <ul>
 <li>新增 Kook.Net.Experimental 包，用于实现非官方列出的接口</li>
 </ul>
@@ -944,7 +950,7 @@ Kook.Net.Experimental 包。</p>
 <li>修复了不正确的文档</li>
 </ul>
 <h2 id="v011-2022-11-20">v0.1.1 [2022-11-20]</h2>
-<h3 id="新增-26">新增</h3>
+<h3 id="新增-27">新增</h3>
 <ul>
 <li>新增 <code>IGuild.GetActiveBoostSubscriptionsAsync</code></li>
 <li>JSON 反序列化失败时将输出报文本体至日志管理器</li>
