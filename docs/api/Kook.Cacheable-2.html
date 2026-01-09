@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Cacheable_2" data-uid="Kook.Cacheable`2" class="text-break">
-Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.4/src/Kook.Net.Core/Utils/Cacheable.cs/#L15"><i class="bi bi-code-slash"></i></a>
+Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.5/src/Kook.Net.Core/Utils/Cacheable.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -148,6 +148,52 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
 
 
 
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Kook_Cacheable_2__ctor_" data-uid="Kook.Cacheable`2.#ctor*"></a>
+
+  <h3 id="Kook_Cacheable_2__ctor__0__1_System_Boolean_System_Func_System_Threading_Tasks_Task__0___" data-uid="Kook.Cacheable`2.#ctor(`0,`1,System.Boolean,System.Func{System.Threading.Tasks.Task{`0}})">
+  Cacheable(TEntity?, TId, bool, Func&lt;Task&lt;TEntity?&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.5/src/Kook.Net.Core/Utils/Cacheable.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>创建一个新的可延迟加载的缓存实体。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cacheable(TEntity? value, TId id, bool hasValue, Func&lt;Task&lt;TEntity?&gt;&gt; downloadFunc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">TEntity</span></dt>
+    <dd><p>如果可以从缓存中获取实体，则为该实体；否则为 <code>null</code>。</p>
+</dd>
+    <dt><code>id</code> <span class="xref">TId</span></dt>
+    <dd><p>实体的唯一标识符。</p>
+</dd>
+    <dt><code>hasValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>指示实体是否已缓存的值。</p>
+</dd>
+    <dt><code>downloadFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;&gt;</dt>
+    <dd><p>用于下载实体的异步函数。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -156,7 +202,7 @@ Struct Cacheable&lt;TEntity, TId&gt;  <a class="header-action link-secondary" ti
 
   <h3 id="Kook_Cacheable_2_HasValue" data-uid="Kook.Cacheable`2.HasValue">
   HasValue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.4/src/Kook.Net.Core/Utils/Cacheable.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.5/src/Kook.Net.Core/Utils/Cacheable.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此实体是否已缓存。</p>
@@ -189,7 +235,7 @@ public bool HasValue { get; }</code></pre>
 
   <h3 id="Kook_Cacheable_2_Id" data-uid="Kook.Cacheable`2.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.4/src/Kook.Net.Core/Utils/Cacheable.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.5/src/Kook.Net.Core/Utils/Cacheable.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此实体的唯一标识符。</p>
@@ -221,7 +267,7 @@ public bool HasValue { get; }</code></pre>
 
   <h3 id="Kook_Cacheable_2_Value" data-uid="Kook.Cacheable`2.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.4/src/Kook.Net.Core/Utils/Cacheable.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.5/src/Kook.Net.Core/Utils/Cacheable.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>如果可以从缓存中获取实体，则获取该实体。</p>
@@ -260,7 +306,7 @@ public bool HasValue { get; }</code></pre>
 
   <h3 id="Kook_Cacheable_2_DownloadAsync" data-uid="Kook.Cacheable`2.DownloadAsync">
   DownloadAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.4/src/Kook.Net.Core/Utils/Cacheable.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.5/src/Kook.Net.Core/Utils/Cacheable.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>将此实体下载到缓存中。</p>
@@ -294,7 +340,7 @@ public bool HasValue { get; }</code></pre>
 
   <h3 id="Kook_Cacheable_2_GetOrDownloadAsync" data-uid="Kook.Cacheable`2.GetOrDownloadAsync">
   GetOrDownloadAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.4/src/Kook.Net.Core/Utils/Cacheable.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.10.5/src/Kook.Net.Core/Utils/Cacheable.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>如果实体已存在于缓存中，则返回该实体；否则下载该实体并返回。</p>
@@ -328,7 +374,7 @@ public bool HasValue { get; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.10.4/src/Kook.Net.Core/Utils/Cacheable.cs/#L15" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.10.5/src/Kook.Net.Core/Utils/Cacheable.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 
