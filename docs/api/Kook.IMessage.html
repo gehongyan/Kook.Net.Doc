@@ -142,7 +142,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_Attachments" data-uid="Kook.IMessage.Attachments">
   Attachments
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息中包含的所有附件。</p>
@@ -209,7 +209,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_Cards" data-uid="Kook.IMessage.Cards">
   Cards
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息中包含的所有卡片。</p>
@@ -388,7 +388,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_Embeds" data-uid="Kook.IMessage.Embeds">
   Embeds
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息中包含的所有嵌入式内容。</p>
@@ -412,6 +412,44 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
 
 
+
+
+
+
+  <a id="Kook_IMessage_InteractiveEmote_" data-uid="Kook.IMessage.InteractiveEmote*"></a>
+
+  <h3 id="Kook_IMessage_InteractiveEmote" data-uid="Kook.IMessage.InteractiveEmote">
+  InteractiveEmote
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此消息中包含的互动表情符号的随机结果。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">RolledInteractiveEmote? InteractiveEmote { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.RolledInteractiveEmote.html">RolledInteractiveEmote</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_IMessage_InteractiveEmote_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+    KOOK 客户端仅支持在消息中发送一个互动表情符号，但如果通过富文本编辑器或 API 发送了包含了多个互动表情符号的消息，KOOK
+    服务端仅计算最后一个互动表情符号的随机结果，并在消息内容中的所有互动表情符号位置显示该结果，无论前面的互动表情符号实际内容为何。
+</p></div>
+</div>
 
 
 
@@ -580,7 +618,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_Pokes" data-uid="Kook.IMessage.Pokes">
   Pokes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息中包含的所有 POKE。</p>
@@ -612,7 +650,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_Reactions" data-uid="Kook.IMessage.Reactions">
   Reactions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息中包含的所有回应。</p>
@@ -676,7 +714,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_Tags" data-uid="Kook.IMessage.Tags">
   Tags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息中解析出的所有标签。</p>
@@ -700,6 +738,13 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
 
 
+  <h4 class="section" id="Kook_IMessage_Tags_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>标签通常包含消息内容解析出的频道提及、角色提及、用户提及、全体成员提及、在线成员提及、表情符号。<br></p>
+<div class="WARNING"><h5>warning</h5><p>
+    KOOK 客户端仅支持在消息中发送一个互动表情符号，但如果通过富文本编辑器或 API 发送了包含了多个互动表情符号的消息，KOOK
+    服务端仅计算最后一个互动表情符号的随机结果，并在消息内容中的所有互动表情符号位置显示该结果，无论前面的互动表情符号实际内容为何。
+</p></div>
+</div>
 
 
 
@@ -776,7 +821,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_AddReactionAsync_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.IMessage.AddReactionAsync(Kook.IEmote,Kook.RequestOptions)">
   AddReactionAsync(IEmote, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>向此消息添加一个回应。</p>
@@ -818,7 +863,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_GetReactionUsersAsync_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.IMessage.GetReactionUsersAsync(Kook.IEmote,Kook.RequestOptions)">
   GetReactionUsersAsync(IEmote, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取所有对消息使用给定表情符号进行回应的用户。</p>
@@ -860,7 +905,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_RemoveReactionAsync_Kook_IEmote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.IMessage.RemoveReactionAsync(Kook.IEmote,Kook.IUser,Kook.RequestOptions)">
   RemoveReactionAsync(IEmote, IUser, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>从此消息中移除一个回应。</p>
@@ -905,7 +950,7 @@ Interface IMessage  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Kook_IMessage_RemoveReactionAsync_Kook_IEmote_System_UInt64_Kook_RequestOptions_" data-uid="Kook.IMessage.RemoveReactionAsync(Kook.IEmote,System.UInt64,Kook.RequestOptions)">
   RemoveReactionAsync(IEmote, ulong, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Entities/Messages/IMessage.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>从此消息中移除一个回应。</p>

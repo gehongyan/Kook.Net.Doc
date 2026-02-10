@@ -455,11 +455,49 @@ Class RestMessage  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <a id="Kook_Rest_RestMessage_InteractiveEmote_" data-uid="Kook.Rest.RestMessage.InteractiveEmote*"></a>
+
+  <h3 id="Kook_Rest_RestMessage_InteractiveEmote" data-uid="Kook.Rest.RestMessage.InteractiveEmote">
+  InteractiveEmote
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此消息中包含的互动表情符号的随机结果。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual RolledInteractiveEmote? InteractiveEmote { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.RolledInteractiveEmote.html">RolledInteractiveEmote</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_Rest_RestMessage_InteractiveEmote_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+    KOOK 客户端仅支持在消息中发送一个互动表情符号，但如果通过富文本编辑器或 API 发送了包含了多个互动表情符号的消息，KOOK
+    服务端仅计算最后一个互动表情符号的随机结果，并在消息内容中的所有互动表情符号位置显示该结果，无论前面的互动表情符号实际内容为何。
+</p></div>
+</div>
+
+
+
+
   <a id="Kook_Rest_RestMessage_IsPinned_" data-uid="Kook.Rest.RestMessage.IsPinned*"></a>
 
   <h3 id="Kook_Rest_RestMessage_IsPinned" data-uid="Kook.Rest.RestMessage.IsPinned">
   IsPinned
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息是否被置顶。</p>
@@ -650,7 +688,7 @@ Class RestMessage  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_Rest_RestMessage_Reactions" data-uid="Kook.Rest.RestMessage.Reactions">
   Reactions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息中包含的所有回应。</p>
@@ -738,6 +776,13 @@ Class RestMessage  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <h4 class="section" id="Kook_Rest_RestMessage_Tags_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>标签通常包含消息内容解析出的频道提及、角色提及、用户提及、全体成员提及、在线成员提及、表情符号。<br></p>
+<div class="WARNING"><h5>warning</h5><p>
+    KOOK 客户端仅支持在消息中发送一个互动表情符号，但如果通过富文本编辑器或 API 发送了包含了多个互动表情符号的消息，KOOK
+    服务端仅计算最后一个互动表情符号的随机结果，并在消息内容中的所有互动表情符号位置显示该结果，无论前面的互动表情符号实际内容为何。
+</p></div>
+</div>
 
 
 
@@ -814,7 +859,7 @@ Class RestMessage  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_Rest_RestMessage_AddReactionAsync_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.Rest.RestMessage.AddReactionAsync(Kook.IEmote,Kook.RequestOptions)">
   AddReactionAsync(IEmote, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L167"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>向此消息添加一个回应。</p>
@@ -862,7 +907,7 @@ Class RestMessage  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_Rest_RestMessage_DeleteAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestMessage.DeleteAsync(Kook.RequestOptions)">
   DeleteAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>删除此实体对象及其所有子实体对象。</p>
@@ -900,7 +945,7 @@ Class RestMessage  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_Rest_RestMessage_GetReactionUsersAsync_Kook_IEmote_Kook_RequestOptions_" data-uid="Kook.Rest.RestMessage.GetReactionUsersAsync(Kook.IEmote,Kook.RequestOptions)">
   GetReactionUsersAsync(IEmote, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L197"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取所有对消息使用给定表情符号进行回应的用户。</p>
@@ -948,7 +993,7 @@ Class RestMessage  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_Rest_RestMessage_RemoveReactionAsync_Kook_IEmote_Kook_IUser_Kook_RequestOptions_" data-uid="Kook.Rest.RestMessage.RemoveReactionAsync(Kook.IEmote,Kook.IUser,Kook.RequestOptions)">
   RemoveReactionAsync(IEmote, IUser, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>从此消息中移除一个回应。</p>
@@ -999,7 +1044,7 @@ Class RestMessage  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_Rest_RestMessage_RemoveReactionAsync_Kook_IEmote_System_UInt64_Kook_RequestOptions_" data-uid="Kook.Rest.RestMessage.RemoveReactionAsync(Kook.IEmote,System.UInt64,Kook.RequestOptions)">
   RemoveReactionAsync(IEmote, ulong, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L187"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>从此消息中移除一个回应。</p>
@@ -1050,7 +1095,7 @@ Class RestMessage  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_Rest_RestMessage_ToString" data-uid="Kook.Rest.RestMessage.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取此消息的内容。</p>
@@ -1086,7 +1131,7 @@ Class RestMessage  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Kook_Rest_RestMessage_UpdateAsync_Kook_RequestOptions_" data-uid="Kook.Rest.RestMessage.UpdateAsync(Kook.RequestOptions)">
   UpdateAsync(RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Entities/Messages/RestMessage.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>通过 REST API 获取此实体对象的最新状态，并替换当前对象的属性。</p>
