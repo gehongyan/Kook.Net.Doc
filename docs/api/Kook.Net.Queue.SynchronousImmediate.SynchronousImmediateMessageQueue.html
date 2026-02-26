@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Net_Queue_SynchronousImmediate_SynchronousImmediateMessageQueue" data-uid="Kook.Net.Queue.SynchronousImmediate.SynchronousImmediateMessageQueue" class="text-break">
-Class SynchronousImmediateMessageQueue  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class SynchronousImmediateMessageQueue  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -129,7 +129,16 @@ Class SynchronousImmediateMessageQueue  <a class="header-action link-secondary" 
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="Kook.Net.Queue.BaseMessageQueue.html#Kook_Net_Queue_BaseMessageQueue_HandleSequence">BaseMessageQueue.HandleSequence</a>
+    </div>
+    <div>
       <a class="xref" href="Kook.Net.Queue.BaseMessageQueue.html#Kook_Net_Queue_BaseMessageQueue_EventHandler">BaseMessageQueue.EventHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Net.Queue.BaseMessageQueue.html#Kook_Net_Queue_BaseMessageQueue_ReconnectRequested">BaseMessageQueue.ReconnectRequested</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Net.Queue.BaseMessageQueue.html#Kook_Net_Queue_BaseMessageQueue_OnReconnectRequested_Kook_Net_Queue_ReconnectRequestedEventArgs_">BaseMessageQueue.OnReconnectRequested(ReconnectRequestedEventArgs)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -170,9 +179,9 @@ Class SynchronousImmediateMessageQueue  <a class="header-action link-secondary" 
 
   <a id="Kook_Net_Queue_SynchronousImmediate_SynchronousImmediateMessageQueue__ctor_" data-uid="Kook.Net.Queue.SynchronousImmediate.SynchronousImmediateMessageQueue.#ctor*"></a>
 
-  <h3 id="Kook_Net_Queue_SynchronousImmediate_SynchronousImmediateMessageQueue__ctor_System_Func_System_Text_Json_JsonElement_System_Threading_Tasks_Task__" data-uid="Kook.Net.Queue.SynchronousImmediate.SynchronousImmediateMessageQueue.#ctor(System.Func{System.Text.Json.JsonElement,System.Threading.Tasks.Task})">
-  SynchronousImmediateMessageQueue(Func&lt;JsonElement, Task&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_Net_Queue_SynchronousImmediate_SynchronousImmediateMessageQueue__ctor_System_Func_System_Int32_System_Text_Json_JsonElement_System_Threading_Tasks_Task__" data-uid="Kook.Net.Queue.SynchronousImmediate.SynchronousImmediateMessageQueue.#ctor(System.Func{System.Int32,System.Text.Json.JsonElement,System.Threading.Tasks.Task})">
+  SynchronousImmediateMessageQueue(Func&lt;int, JsonElement, Task&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Net.Queue.BaseMessageQueue.html">BaseMessageQueue</a> 类的新实例。</p>
@@ -180,12 +189,12 @@ Class SynchronousImmediateMessageQueue  <a class="header-action link-secondary" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SynchronousImmediateMessageQueue(Func&lt;JsonElement, Task&gt; eventHandler)</code></pre>
+    <pre><code class="lang-csharp hljs">public SynchronousImmediateMessageQueue(Func&lt;int, JsonElement, Task&gt; eventHandler)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>eventHandler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><code>eventHandler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd><p>用于处理消息的事件处理程序。</p>
 </dd>
   </dl>
@@ -209,7 +218,7 @@ Class SynchronousImmediateMessageQueue  <a class="header-action link-secondary" 
 
   <h3 id="Kook_Net_Queue_SynchronousImmediate_SynchronousImmediateMessageQueue_EnqueueAsync_System_Text_Json_JsonElement_System_Int32_System_Threading_CancellationToken_" data-uid="Kook.Net.Queue.SynchronousImmediate.SynchronousImmediateMessageQueue.EnqueueAsync(System.Text.Json.JsonElement,System.Int32,System.Threading.CancellationToken)">
   EnqueueAsync(JsonElement, int, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>将网关消息添加到队列中。</p>
@@ -254,7 +263,7 @@ Class SynchronousImmediateMessageQueue  <a class="header-action link-secondary" 
 
   <h3 id="Kook_Net_Queue_SynchronousImmediate_SynchronousImmediateMessageQueue_StartAsync_System_Threading_CancellationToken_" data-uid="Kook.Net.Queue.SynchronousImmediate.SynchronousImmediateMessageQueue.StartAsync(System.Threading.CancellationToken)">
   StartAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>启动消息队列的处理。</p>
@@ -293,7 +302,7 @@ Class SynchronousImmediateMessageQueue  <a class="header-action link-secondary" 
 
   <h3 id="Kook_Net_Queue_SynchronousImmediate_SynchronousImmediateMessageQueue_StopAsync_System_Threading_CancellationToken_" data-uid="Kook.Net.Queue.SynchronousImmediate.SynchronousImmediateMessageQueue.StopAsync(System.Threading.CancellationToken)">
   StopAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>停止消息队列的处理。</p>
@@ -332,7 +341,7 @@ Class SynchronousImmediateMessageQueue  <a class="header-action link-secondary" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/SynchronousImmediateMessageQueue.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 
@@ -348,7 +357,7 @@ Class SynchronousImmediateMessageQueue  <a class="header-action link-secondary" 
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Kook.Net (c) 2022-2025
+          Kook.Net (c) 2022-2026
         </div>
       </div>
     </footer>

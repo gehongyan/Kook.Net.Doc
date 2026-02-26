@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Net_Rest_DefaultRestClientProvider" data-uid="Kook.Net.Rest.DefaultRestClientProvider" class="text-break">
-Class DefaultRestClientProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Net/DefaultRestClientProvider.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class DefaultRestClientProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Rest/Net/DefaultRestClientProvider.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class DefaultRestClientProvider  <a class="header-action link-secondary" title="
 
   <h3 id="Kook_Net_Rest_DefaultRestClientProvider_Instance" data-uid="Kook.Net.Rest.DefaultRestClientProvider.Instance">
   Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Net/DefaultRestClientProvider.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Rest/Net/DefaultRestClientProvider.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取一个默认的 <a class="xref" href="Kook.Net.Rest.RestClientProvider.html">RestClientProvider</a> 委托，用于创建
@@ -184,6 +184,13 @@ Class DefaultRestClientProvider  <a class="header-action link-secondary" title="
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Kook.Net.Rest.DefaultRestClientProvider.html#Kook_Net_Rest_DefaultRestClientProvider_Create_System_Boolean_System_Net_IWebProxy_">Create(bool, IWebProxy?)</a></div>
+    <div><a class="xref" href="Kook.Net.Rest.DefaultRestClientProvider.html#Kook_Net_Rest_DefaultRestClientProvider_Create_System_Func_System_Net_Http_HttpClient__">Create(Func&lt;HttpClient&gt;)</a></div>
+    </dd>
+  </dl>
 
 
   <h2 class="section" id="methods">Methods
@@ -194,7 +201,7 @@ Class DefaultRestClientProvider  <a class="header-action link-secondary" title="
 
   <h3 id="Kook_Net_Rest_DefaultRestClientProvider_Create_System_Boolean_System_Net_IWebProxy_" data-uid="Kook.Net.Rest.DefaultRestClientProvider.Create(System.Boolean,System.Net.IWebProxy)">
   Create(bool, IWebProxy?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Net/DefaultRestClientProvider.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Rest/Net/DefaultRestClientProvider.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>创建一个新的 <a class="xref" href="Kook.Net.Rest.RestClientProvider.html">RestClientProvider</a> 委托。</p>
@@ -228,6 +235,86 @@ Class DefaultRestClientProvider  <a class="header-action link-secondary" title="
 
 
 
+  <h4 class="section" id="Kook_Net_Rest_DefaultRestClientProvider_Create_System_Boolean_System_Net_IWebProxy__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此方式创建的 <a class="xref" href="Kook.Net.Rest.IRestClient.html">IRestClient</a> 实例将使用默认的 HTTP 客户端实现，并根据提供的参数配置代理设置。内部创建的
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> 实例会启用 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.decompressionmethods#system-net-decompressionmethods-gzip">GZip</a>
+及 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.decompressionmethods#system-net-decompressionmethods-deflate">Deflate</a>，并设置请求头
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.headers.httprequestheaders.acceptencoding">AcceptEncoding</a> 为
+<code>gzip, deflate</code>，以启用对压缩响应的支持。</p>
+</div>
+
+
+
+
+  <a id="Kook_Net_Rest_DefaultRestClientProvider_Create_" data-uid="Kook.Net.Rest.DefaultRestClientProvider.Create*"></a>
+
+  <h3 id="Kook_Net_Rest_DefaultRestClientProvider_Create_System_Func_System_Net_Http_HttpClient__" data-uid="Kook.Net.Rest.DefaultRestClientProvider.Create(System.Func{System.Net.Http.HttpClient})">
+  Create(Func&lt;HttpClient&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Rest/Net/DefaultRestClientProvider.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>创建一个新的 <a class="xref" href="Kook.Net.Rest.RestClientProvider.html">RestClientProvider</a> 委托。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RestClientProvider Create(Func&lt;HttpClient&gt; httpClientFactory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>httpClientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>&gt;</dt>
+    <dd><p>用于创建 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> 实例的工厂方法。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.Net.Rest.RestClientProvider.html">RestClientProvider</a></dt>
+    <dd><p>一个新的 <a class="xref" href="Kook.Net.Rest.RestClientProvider.html">RestClientProvider</a> 委托。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Kook_Net_Rest_DefaultRestClientProvider_Create_System_Func_System_Net_Http_HttpClient___examples">Examples</h4>
+  <p>以下示例代码，在依赖注入环境中，展示了如何使用自定义的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> 工厂方法来创建一个
+<a class="xref" href="Kook.Net.Rest.RestClientProvider.html">RestClientProvider</a>。<br>
+首先在依赖注入容器中注册一个命名的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>，并配置其默认请求头和消息处理程序：</p>
+<pre><code class="lang-cs">HostApplicationBuilder builder = Host.CreateEmptyApplicationBuilder(new HostApplicationBuilderSettings());
+builder.Services.AddHttpClient("KookRestHttpClient")
+    .ConfigureHttpClient(x =&gt;
+    {
+        x.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("gzip"));
+        x.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("deflate"));
+    })
+    .ConfigurePrimaryHttpMessageHandler(() =&gt; new HttpClientHandler
+    {
+        AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate,
+        UseCookies = false,
+    });</code></pre>
+<p>然后在注册 KOOK 客户端的配置中，使用该命名的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> 来创建一个 <a class="xref" href="Kook.Net.Rest.RestClientProvider.html">RestClientProvider</a>：</p>
+<pre><code class="lang-cs">builder.Services.AddSingleton&lt;KookSocketConfig&gt;(provider =&gt;
+{
+    IHttpClientFactory httpClientFactory = provider.GetRequiredService&lt;IHttpClientFactory&gt;();
+    return new KookSocketConfig
+    {
+        RestClientProvider = DefaultRestClientProvider.Create(() =&gt; httpClientFactory.CreateClient("KookRestHttpClient"))
+    };
+});</code></pre>
+
+
+  <h4 class="section" id="Kook_Net_Rest_DefaultRestClientProvider_Create_System_Func_System_Net_Http_HttpClient___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>在使用自定义的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> 工厂方法时，请确保返回的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a>
+实例具有适当的配置，例如正确的超时设置、代理设置等，以确保与 KOOK API 的通信正常进行。Kook.Net
+不会为此方式创建的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> 实例进行任何管理或处理，因此需要开发者自行负责这些实例的生命周期和配置。</p>
+<div class="WARNING"><h5>warning</h5><p>
+    此方式创建的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> 不应设置其 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient.baseaddress">BaseAddress</a> 属性。
+</p></div>
+</div>
 
 
 
@@ -236,7 +323,7 @@ Class DefaultRestClientProvider  <a class="header-action link-secondary" title="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Rest/Net/DefaultRestClientProvider.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Rest/Net/DefaultRestClientProvider.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 
@@ -252,7 +339,7 @@ Class DefaultRestClientProvider  <a class="header-action link-secondary" title="
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Kook.Net (c) 2022-2025
+          Kook.Net (c) 2022-2026
         </div>
       </div>
     </footer>

@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Net_Queue_MessageQueueProvider" data-uid="Kook.Net.Queue.MessageQueueProvider" class="text-break">
-Delegate MessageQueueProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/MessageQueueProvider.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Delegate MessageQueueProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/MessageQueueProvider.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,12 +102,12 @@ Delegate MessageQueueProvider  <a class="header-action link-secondary" title="Vi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate BaseMessageQueue MessageQueueProvider(Func&lt;JsonElement, Task&gt; eventHandler)</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate BaseMessageQueue MessageQueueProvider(Func&lt;int, JsonElement, Task&gt; eventHandler)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>eventHandler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><code>eventHandler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd>表示一个提供新的  实例的委托。</dd>
   </dl>
 
@@ -131,7 +131,7 @@ Delegate MessageQueueProvider  <a class="header-action link-secondary" title="Vi
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/MessageQueueProvider.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/MessageQueueProvider.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 
@@ -147,7 +147,7 @@ Delegate MessageQueueProvider  <a class="header-action link-secondary" title="Vi
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Kook.Net (c) 2022-2025
+          Kook.Net (c) 2022-2026
         </div>
       </div>
     </footer>

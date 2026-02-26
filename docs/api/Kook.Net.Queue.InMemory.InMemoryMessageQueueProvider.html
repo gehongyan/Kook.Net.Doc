@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class InMemoryMessageQueueProvider | Kook.Net 文档 ">
       
-      <meta name="description" content="表示一个默认的使用内存队列的 ，用于创建  实例。">
+      <meta name="description" content="表示一个默认的使用内存队列的 ，用于创建  或带缓冲的  实例。">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Net_Queue_InMemory_InMemoryMessageQueueProvider" data-uid="Kook.Net.Queue.InMemory.InMemoryMessageQueueProvider" class="text-break">
-Class InMemoryMessageQueueProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.InMemory/InMemoryMessageQueueProvider.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class InMemoryMessageQueueProvider  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.MessageQueue.InMemory/InMemoryMessageQueueProvider.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class InMemoryMessageQueueProvider  <a class="header-action link-secondary" titl
   <dl><dt>Assembly</dt><dd>Kook.Net.MessageQueue.InMemory.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>表示一个默认的使用内存队列的 <a class="xref" href="Kook.Net.Queue.MessageQueueProvider.html">MessageQueueProvider</a>，用于创建 <span class="xref">Kook.Net.Queue.InMemory.InMemoryMessageQueue</span> 实例。</p>
+  <div class="markdown summary"><p>表示一个默认的使用内存队列的 <a class="xref" href="Kook.Net.Queue.MessageQueueProvider.html">MessageQueueProvider</a>，用于创建 <span class="xref">Kook.Net.Queue.InMemory.InMemoryMessageQueue</span> 或带缓冲的 <span class="xref">Kook.Net.Queue.InMemory.BufferedInMemoryMessageQueue</span> 实例。</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -156,7 +156,7 @@ Class InMemoryMessageQueueProvider  <a class="header-action link-secondary" titl
 
   <h3 id="Kook_Net_Queue_InMemory_InMemoryMessageQueueProvider_Instance" data-uid="Kook.Net.Queue.InMemory.InMemoryMessageQueueProvider.Instance">
   Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.InMemory/InMemoryMessageQueueProvider.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.MessageQueue.InMemory/InMemoryMessageQueueProvider.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>创建一个新的用于创建默认的使用内存队列的 <span class="xref">Kook.Net.Queue.InMemory.InMemoryMessageQueue</span> 实例的委托。</p>
@@ -184,11 +184,54 @@ Class InMemoryMessageQueueProvider  <a class="header-action link-secondary" titl
 
 
 
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Kook_Net_Queue_InMemory_InMemoryMessageQueueProvider_Create_" data-uid="Kook.Net.Queue.InMemory.InMemoryMessageQueueProvider.Create*"></a>
+
+  <h3 id="Kook_Net_Queue_InMemory_InMemoryMessageQueueProvider_Create_Kook_Net_Queue_InMemory_InMemoryMessageQueueOptions_" data-uid="Kook.Net.Queue.InMemory.InMemoryMessageQueueProvider.Create(Kook.Net.Queue.InMemory.InMemoryMessageQueueOptions)">
+  Create(InMemoryMessageQueueOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.MessageQueue.InMemory/InMemoryMessageQueueProvider.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>使用指定的选项创建一个新的用于创建默认的使用内存队列的 <a class="xref" href="Kook.Net.Queue.MessageQueueProvider.html">MessageQueueProvider</a> 实例。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MessageQueueProvider Create(InMemoryMessageQueueOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Kook.Net.Queue.InMemory.InMemoryMessageQueueOptions.html">InMemoryMessageQueueOptions</a></dt>
+    <dd><p>内存队列配置。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Kook.Net.Queue.MessageQueueProvider.html">MessageQueueProvider</a></dt>
+    <dd><p>用于创建消息队列的委托。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.MessageQueue.InMemory/InMemoryMessageQueueProvider.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.MessageQueue.InMemory/InMemoryMessageQueueProvider.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
@@ -204,7 +247,7 @@ Class InMemoryMessageQueueProvider  <a class="header-action link-secondary" titl
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Kook.Net (c) 2022-2025
+          Kook.Net (c) 2022-2026
         </div>
       </div>
     </footer>

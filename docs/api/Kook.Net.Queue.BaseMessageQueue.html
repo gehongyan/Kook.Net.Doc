@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Net_Queue_BaseMessageQueue" data-uid="Kook.Net.Queue.BaseMessageQueue" class="text-break">
-Class BaseMessageQueue  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class BaseMessageQueue  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -167,9 +167,9 @@ Class BaseMessageQueue  <a class="header-action link-secondary" title="View sour
 
   <a id="Kook_Net_Queue_BaseMessageQueue__ctor_" data-uid="Kook.Net.Queue.BaseMessageQueue.#ctor*"></a>
 
-  <h3 id="Kook_Net_Queue_BaseMessageQueue__ctor_System_Func_System_Text_Json_JsonElement_System_Threading_Tasks_Task__" data-uid="Kook.Net.Queue.BaseMessageQueue.#ctor(System.Func{System.Text.Json.JsonElement,System.Threading.Tasks.Task})">
-  BaseMessageQueue(Func&lt;JsonElement, Task&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Kook_Net_Queue_BaseMessageQueue__ctor_System_Func_System_Int32_System_Text_Json_JsonElement_System_Threading_Tasks_Task__" data-uid="Kook.Net.Queue.BaseMessageQueue.#ctor(System.Func{System.Int32,System.Text.Json.JsonElement,System.Threading.Tasks.Task})">
+  BaseMessageQueue(Func&lt;int, JsonElement, Task&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="Kook.Net.Queue.BaseMessageQueue.html">BaseMessageQueue</a> 类的新实例。</p>
@@ -177,12 +177,12 @@ Class BaseMessageQueue  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected BaseMessageQueue(Func&lt;JsonElement, Task&gt; eventHandler)</code></pre>
+    <pre><code class="lang-csharp hljs">protected BaseMessageQueue(Func&lt;int, JsonElement, Task&gt; eventHandler)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>eventHandler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><code>eventHandler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd><p>用于处理消息的事件处理程序。</p>
 </dd>
   </dl>
@@ -206,7 +206,7 @@ Class BaseMessageQueue  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_Net_Queue_BaseMessageQueue_EventHandler" data-uid="Kook.Net.Queue.BaseMessageQueue.EventHandler">
   EventHandler
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取消息队列的事件处理程序。</p>
@@ -214,7 +214,7 @@ Class BaseMessageQueue  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Func&lt;JsonElement, Task&gt; EventHandler { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected Func&lt;int, JsonElement, Task&gt; EventHandler { get; }</code></pre>
   </div>
 
 
@@ -223,13 +223,50 @@ Class BaseMessageQueue  <a class="header-action link-secondary" title="View sour
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
     <dd></dd>
   </dl>
 
 
 
 
+
+
+
+
+  <a id="Kook_Net_Queue_BaseMessageQueue_HandleSequence_" data-uid="Kook.Net.Queue.BaseMessageQueue.HandleSequence*"></a>
+
+  <h3 id="Kook_Net_Queue_BaseMessageQueue_HandleSequence" data-uid="Kook.Net.Queue.BaseMessageQueue.HandleSequence">
+  HandleSequence
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>消息队列是否处理事件顺序。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HandleSequence { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Kook_Net_Queue_BaseMessageQueue_HandleSequence_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>如果此队列实现维护事件的顺序，则应将此属性设置为 <code>true</code>，网关线程会在 <a class="xref" href="Kook.Net.Queue.BaseMessageQueue.html#Kook_Net_Queue_BaseMessageQueue_EventHandler">EventHandler</a>
+调用时更新所收到的最新事件序号。否则，网关线程会在 <a class="xref" href="Kook.Net.Queue.BaseMessageQueue.html#Kook_Net_Queue_BaseMessageQueue_EnqueueAsync_System_Text_Json_JsonElement_System_Int32_System_Threading_CancellationToken_">EnqueueAsync(JsonElement, int, CancellationToken)</a>
+前就更新最新事件序号。</p>
+</div>
 
 
 
@@ -242,7 +279,7 @@ Class BaseMessageQueue  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_Net_Queue_BaseMessageQueue_EnqueueAsync_System_Text_Json_JsonElement_System_Int32_System_Threading_CancellationToken_" data-uid="Kook.Net.Queue.BaseMessageQueue.EnqueueAsync(System.Text.Json.JsonElement,System.Int32,System.Threading.CancellationToken)">
   EnqueueAsync(JsonElement, int, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>将网关消息添加到队列中。</p>
@@ -283,11 +320,44 @@ Class BaseMessageQueue  <a class="header-action link-secondary" title="View sour
 
 
 
+  <a id="Kook_Net_Queue_BaseMessageQueue_OnReconnectRequested_" data-uid="Kook.Net.Queue.BaseMessageQueue.OnReconnectRequested*"></a>
+
+  <h3 id="Kook_Net_Queue_BaseMessageQueue_OnReconnectRequested_Kook_Net_Queue_ReconnectRequestedEventArgs_" data-uid="Kook.Net.Queue.BaseMessageQueue.OnReconnectRequested(Kook.Net.Queue.ReconnectRequestedEventArgs)">
+  OnReconnectRequested(ReconnectRequestedEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>引发 <a class="xref" href="Kook.Net.Queue.BaseMessageQueue.html#Kook_Net_Queue_BaseMessageQueue_ReconnectRequested">ReconnectRequested</a> 事件。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnReconnectRequested(ReconnectRequestedEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="Kook.Net.Queue.ReconnectRequestedEventArgs.html">ReconnectRequestedEventArgs</a></dt>
+    <dd><p>事件参数。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Kook_Net_Queue_BaseMessageQueue_StartAsync_" data-uid="Kook.Net.Queue.BaseMessageQueue.StartAsync*"></a>
 
   <h3 id="Kook_Net_Queue_BaseMessageQueue_StartAsync_System_Threading_CancellationToken_" data-uid="Kook.Net.Queue.BaseMessageQueue.StartAsync(System.Threading.CancellationToken)">
   StartAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>启动消息队列的处理。</p>
@@ -326,7 +396,7 @@ Class BaseMessageQueue  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Kook_Net_Queue_BaseMessageQueue_StopAsync_System_Threading_CancellationToken_" data-uid="Kook.Net.Queue.BaseMessageQueue.StopAsync(System.Threading.CancellationToken)">
   StopAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>停止消息队列的处理。</p>
@@ -361,11 +431,46 @@ Class BaseMessageQueue  <a class="header-action link-secondary" title="View sour
 
 
 
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Kook_Net_Queue_BaseMessageQueue_ReconnectRequested" data-uid="Kook.Net.Queue.BaseMessageQueue.ReconnectRequested">
+  ReconnectRequested
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当消息队列请求网关重连时发生（如缓冲溢出、等待超时）。订阅方应在网关线程上调用重连逻辑（如 <code>Connection.Error(e.Exception)</code>）。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ReconnectRequestedEventArgs&gt;? ReconnectRequested</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="Kook.Net.Queue.ReconnectRequestedEventArgs.html">ReconnectRequestedEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/doc/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.11.0/src/Kook.Net.Core/Net/Queue/BaseMessageQueue.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 
@@ -381,7 +486,7 @@ Class BaseMessageQueue  <a class="header-action link-secondary" title="View sour
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Kook.Net (c) 2022-2025
+          Kook.Net (c) 2022-2026
         </div>
       </div>
     </footer>
