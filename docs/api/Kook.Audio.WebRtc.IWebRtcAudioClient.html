@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IWebRtcAudioClient | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IWebRtcAudioClient | Kook.Net 文档 ">
+      
+      <meta name="description" content="表示一个基于 WebRTC 的实验性音频客户端。">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/new/master/apiSpec/new?filename=Kook_Audio_WebRtc_IWebRtcAudioClient.md&amp;value=---%0Auid%3A%20Kook.Audio.WebRtc.IWebRtcAudioClient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo/Logo_Small.png" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient">
+
+
+
+  <h1 id="Kook_Audio_WebRtc_IWebRtcAudioClient" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient" class="text-break">
+Interface IWebRtcAudioClient  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Kook.html">Kook</a>.<a class="xref" href="Kook.Audio.html">Audio</a>.<a class="xref" href="Kook.Audio.WebRtc.html">WebRtc</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Kook.Net.Experimental.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>表示一个基于 WebRTC 的实验性音频客户端。</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IWebRtcAudioClient : IAudioClient, IDisposable</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_StreamCreated">IAudioClient.StreamCreated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_StreamDestroyed">IAudioClient.StreamDestroyed</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_Connected">IAudioClient.Connected</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_Disconnected">IAudioClient.Disconnected</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_UdpLatencyUpdated">IAudioClient.UdpLatencyUpdated</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_ConnectionState">IAudioClient.ConnectionState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_UdpLatency">IAudioClient.UdpLatency</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_GetStreams">IAudioClient.GetStreams()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_StopAsync">IAudioClient.StopAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_CreateOpusStream_System_Int32_">IAudioClient.CreateOpusStream(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_CreateDirectOpusStream">IAudioClient.CreateDirectOpusStream()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_CreatePcmStream_Kook_Audio_AudioApplication_System_Nullable_System_Int32__System_Int32_System_Int32_">IAudioClient.CreatePcmStream(AudioApplication, int?, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_CreateDirectPcmStream_Kook_Audio_AudioApplication_System_Nullable_System_Int32__System_Int32_">IAudioClient.CreateDirectPcmStream(AudioApplication, int?, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Kook_Audio_WebRtc_IWebRtcAudioClient_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+    此客户端通过 KOOK 非官方文档化的 WebRTC 语音通道（protoo 信令加 mediasoup）收发音频，
+    与 <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html#Kook_WebSocket_SocketVoiceChannel_ConnectAsync_System_Boolean_System_Boolean_System_String_">ConnectAsync(bool, bool, string?)</a>
+    所使用的基于 UDP 的官方语音接口是两套不同的机制。该机制随时可能变化。
+</p>
+<p>
+    客户端连接成功后默认处于静音状态，需要调用 <a class="xref" href="Kook.Audio.WebRtc.IWebRtcAudioClient.html#Kook_Audio_WebRtc_IWebRtcAudioClient_SetMicrophoneMutedAsync_System_Boolean_">SetMicrophoneMutedAsync(bool)</a>
+    取消静音后，通过 <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_CreatePcmStream_Kook_Audio_AudioApplication_System_Nullable_System_Int32__System_Int32_System_Int32_">CreatePcmStream(AudioApplication, int?, int, int)</a>
+    等方法所创建的音频流写入的音频才会被发送。
+</p>
+<p>
+    <b>同时存在多个语音连接时的行为。</b>
+    <div class="WARNING"><h5>warning</h5><p>
+        下列行为均来自对同一个 Bot 账号的实测，每种组合只测过少数几次，不是 KOOK 的文档化保证，之后可能变化。
+    </p></div>
+    <ul><li>
+        同一个账号同一时间只能有一个 WebRTC 会话。用 WebRTC 连接第二个频道（即使在另一个服务器）时，
+        先连接的客户端会被服务端断开，它会先引发 <a class="xref" href="Kook.Audio.WebRtc.IWebRtcAudioClient.html#Kook_Audio_WebRtc_IWebRtcAudioClient_ServerDisconnected">ServerDisconnected</a>（错误码 <code>41106</code>），
+        随后引发 <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_Disconnected">Disconnected</a>。
+    </li><li>
+        官方的基于 UDP 的语音方案（<a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html#Kook_WebSocket_SocketVoiceChannel_ConnectAsync_System_Boolean_System_Boolean_System_String_">ConnectAsync(bool, bool, string?)</a>）
+        可以让同一个账号同时连接多个频道，不受上一条限制。需要让一个 Bot 同时在多个频道里推流时，请使用 UDP 方案。
+    </li><li>
+        UDP 与 WebRTC 在不同的频道里可以同时存在，互不影响。在同一个频道里则会冲突，UDP 优先：
+        UDP 已经连接时，WebRTC 的加入会被服务端拒绝；WebRTC 已经连接时，随后加入的 UDP 会让它被断开
+        （<a class="xref" href="Kook.Audio.WebRtc.IWebRtcAudioClient.html#Kook_Audio_WebRtc_IWebRtcAudioClient_ServerDisconnected">ServerDisconnected</a> 的错误码为 <code>41106</code>，错误原因为空）。
+    </li></ul>
+
+<p>
+    <b>权限。</b>
+    Bot 需要被授权才能连接语音频道。实测中，一个没有任何服务器角色的 Bot 获取语音网关令牌时会被服务端拒绝（HTTP 403），
+    授予角色后可以正常加入。Bot 无法访问频道所属的服务器时（例如不在该服务器，或者该服务器已不可用），
+    服务端返回 HTTP 400，错误信息为 <code>guild_id does not exist or you do not have permission to access.</code>，
+    不区分「不存在」和「没有权限」。
+</p>
+<p>
+    <b>发送音频。</b>
+    <ul><li> 写入音频流的 PCM 应为 48 kHz、16 位、双声道交错。 </li><li>
+        编码码率默认取服务端在加入时下发的上限，实测在不同频道里见过 32 kbps 和 64 kbps。每个 Opus 包的时长为 60 毫秒。
+    </li><li>
+        <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_CreatePcmStream_Kook_Audio_AudioApplication_System_Nullable_System_Int32__System_Int32_System_Int32_">CreatePcmStream(AudioApplication, int?, int, int)</a>
+        的 <code>packetLoss</code> 参数默认为 <code>30</code>。此客户端在 <code>packetLoss</code> 大于 <code>0</code> 时会启用 Opus 带内 FEC，
+        并为丢包补偿预留码率。在 32 kbps 下对同一段音乐做的离线对比（Concentus 编码后再解码）中，
+        预期丢包 10% 以上并启用 FEC 会使信噪比下降约 2.4 dB，高频能量只剩约一半。网络状况良好时，建议传入
+        <code>packetLoss: 0</code>，此时不会启用 FEC。
+    </li><li> 麦克风处于静音状态时，写入音频流的音频会被丢弃，不会缓存到取消静音之后。 </li></ul>
+
+<p>
+    <b>接收音频。</b>
+    <ul><li>
+        只有开着麦克风的成员才有音频流。成员静音入会、还没有开过麦时没有音频流，他第一次开麦时才会创建。
+    </li><li>
+        成员开关麦克风时，服务端下发的是静音状态变化的通知（<a class="xref" href="Kook.Audio.WebRtc.IWebRtcAudioClient.html#Kook_Audio_WebRtc_IWebRtcAudioClient_PeerMicrophoneMuteChanged">PeerMicrophoneMuteChanged</a>），实测中他的音频流并没有被销毁。
+        成员离开频道后再加入，会得到新的音频流和新的 SSRC，同一个用户在两次会话里的 SSRC 不同。
+        因此应当以用户 ID（<a class="xref" href="Kook.Audio.WebRtc.IWebRtcAudioClient.html#Kook_Audio_WebRtc_IWebRtcAudioClient_TryGetStreamUserId_System_UInt32_System_UInt64__">TryGetStreamUserId(uint, out ulong)</a>）而不是 SSRC 来识别说话的人。
+    </li><li>
+        <a class="xref" href="Kook.Audio.AudioInStream.html">AudioInStream</a> 提供的是解码后的 48 kHz、16 位、双声道 PCM；
+        对方使用单声道的设备（实测的 Android 客户端）时，同样会被解码为双声道。每一帧的时长取决于对方的设备。
+    </li><li>
+        没有被读取的音频流最多缓存 100 帧（约 1 到 2 秒），缓冲区满之后新到的帧会被直接丢弃，所以不会无限占用内存；
+        需要这些音频的话，请及时读取。
+    </li></ul>
+
+<p>
+    <b>不支持自动重连。</b>
+    服务端断开（<a class="xref" href="Kook.Audio.WebRtc.IWebRtcAudioClient.html#Kook_Audio_WebRtc_IWebRtcAudioClient_ServerDisconnected">ServerDisconnected</a>、<a class="xref" href="Kook.Audio.WebRtc.IWebRtcAudioClient.html#Kook_Audio_WebRtc_IWebRtcAudioClient_ClosedByOtherDevice">ClosedByOtherDevice</a>、<a class="xref" href="Kook.Audio.WebRtc.IWebRtcAudioClient.html#Kook_Audio_WebRtc_IWebRtcAudioClient_ReloadRequested">ReloadRequested</a>）
+    或信令连接关闭后，客户端会引发 <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_Disconnected">Disconnected</a>，需要调用方自行重新连接。
+    通过 <code>ConnectWebRtcAsync</code> 创建的客户端不会赋给 <a class="xref" href="Kook.WebSocket.SocketVoiceChannel.html#Kook_WebSocket_SocketVoiceChannel_AudioClient">AudioClient</a>，
+    需要调用方自己持有，并在不再使用时释放。
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Kook_Audio_WebRtc_IWebRtcAudioClient_ChannelId_" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.ChannelId*"></a>
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_ChannelId" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.ChannelId">
+  ChannelId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取此客户端所连接的语音频道的 ID。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ulong ChannelId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Kook_Audio_WebRtc_IWebRtcAudioClient_IsMicrophoneMuted_" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.IsMicrophoneMuted*"></a>
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_IsMicrophoneMuted" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.IsMicrophoneMuted">
+  IsMicrophoneMuted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取一个值，指示此客户端的麦克风是否处于静音状态。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsMicrophoneMuted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Kook_Audio_WebRtc_IWebRtcAudioClient_SetMicrophoneMutedAsync_" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.SetMicrophoneMutedAsync*"></a>
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_SetMicrophoneMutedAsync_System_Boolean_" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.SetMicrophoneMutedAsync(System.Boolean)">
+  SetMicrophoneMutedAsync(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>设置此客户端的麦克风是否静音。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SetMicrophoneMutedAsync(bool muted)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>muted</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>是否静音。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>一个表示异步设置操作的任务。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Kook_Audio_WebRtc_IWebRtcAudioClient_TryGetStreamUserId_" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.TryGetStreamUserId*"></a>
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_TryGetStreamUserId_System_UInt32_System_UInt64__" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.TryGetStreamUserId(System.UInt32,System.UInt64@)">
+  TryGetStreamUserId(uint, out ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>尝试获取指定 SSRC 的音频输入流所属的用户 ID。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryGetStreamUserId(uint ssrc, out ulong userId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ssrc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>RTP 流的 SSRC 同步信源标识符。</p>
+</dd>
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>如果找到，则为音频输入流所属的用户 ID；否则为 <code>0</code>。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>是否找到了该 SSRC 所属的用户。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_TryGetStreamUserId_System_UInt32_System_UInt64___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>与基于 UDP 的官方语音接口不同，WebRTC 语音通道会在下发音频流时同时下发其所属的用户，
+因此在 <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_StreamCreated">StreamCreated</a> 事件被引发时，即可通过此方法获取对应的用户。</p>
+</div>
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_AccompanimentStarted" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.AccompanimentStarted">
+  AccompanimentStarted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当有成员开始播放伴奏时引发。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;ulong, VoiceAccompaniment, Task&gt; AccompanimentStarted</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="Kook.Audio.WebRtc.VoiceAccompaniment.html">VoiceAccompaniment</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_AccompanimentStarted_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>事件参数：</p>
+<ol><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> 参数是播放伴奏的成员的用户 ID。 </li><li> <a class="xref" href="Kook.Audio.WebRtc.VoiceAccompaniment.html">VoiceAccompaniment</a> 参数是伴奏的信息，其属性在服务端没有给出时为 <code>null</code>。 </li></ol>
+</div>
+
+
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_AccompanimentStopped" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.AccompanimentStopped">
+  AccompanimentStopped
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当有成员停止播放伴奏时引发。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;ulong, Task&gt; AccompanimentStopped</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_AccompanimentStopped_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此通知在实测中尚未出现过，其载荷格式是假定的，尚未验证。
+<br>
+事件参数：</p>
+<ol><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> 参数是停止播放伴奏的成员的用户 ID。 </li></ol>
+</div>
+
+
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_AtmosphereReceived" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.AtmosphereReceived">
+  AtmosphereReceived
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当有成员使用氛围道具时引发。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;ulong, ulong?, Task&gt; AtmosphereReceived</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>?, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_AtmosphereReceived_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>事件参数：</p>
+<ol><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> 参数是使用氛围道具的成员的用户 ID。 </li><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable&lt;T&gt;</a> 的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> 参数是氛围道具的 ID，服务端没有给出时为 <code>null</code>。 </li></ol>
+</div>
+
+
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_ClosedByOtherDevice" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.ClosedByOtherDevice">
+  ClosedByOtherDevice
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当服务端通知此客户端已在另一台设备上被关闭时引发，随后会引发 <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_Disconnected">Disconnected</a> 事件。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;Task&gt; ClosedByOtherDevice</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_ClosedByOtherDevice_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此通知在实测中尚未出现过，它的触发条件未知。名称提示它对应「同一账号在别处加入」，但实测中同一个账号用 WebRTC
+连接另一个频道、或者用官方 UDP 方案加入同一个频道时，服务端走的都是 <code>disconnect</code> 通知，
+会引发 <a class="xref" href="Kook.Audio.WebRtc.IWebRtcAudioClient.html#Kook_Audio_WebRtc_IWebRtcAudioClient_ServerDisconnected">ServerDisconnected</a> 而不是此事件。</p>
+</div>
+
+
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_PeerHeadsetMuteChanged" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.PeerHeadsetMuteChanged">
+  PeerHeadsetMuteChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当有成员的耳机静音状态变化时引发。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;ulong, bool, Task&gt; PeerHeadsetMuteChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_PeerHeadsetMuteChanged_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>与 <a class="xref" href="Kook.Audio.WebRtc.IWebRtcAudioClient.html#Kook_Audio_WebRtc_IWebRtcAudioClient_PeerMicrophoneMuteChanged">PeerMicrophoneMuteChanged</a> 一样，此事件有最长约 2 秒的延迟，并且可能晚于该成员离开频道的通知。
+<br>
+事件参数：</p>
+<ol><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> 参数是该成员的用户 ID。 </li><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> 参数指示该成员的耳机是否已静音。 </li></ol>
+</div>
+
+
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_PeerJoined" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.PeerJoined">
+  PeerJoined
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当有成员加入此语音频道时引发。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;VoicePeer, Task&gt; PeerJoined</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Kook.Audio.WebRtc.VoicePeer.html">VoicePeer</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_PeerJoined_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>客户端连接时已经在频道内的成员不会引发此事件。
+<br>
+事件参数：</p>
+<ol><li> <a class="xref" href="Kook.Audio.WebRtc.VoicePeer.html">VoicePeer</a> 参数是加入频道的成员的信息快照。 </li></ol>
+</div>
+
+
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_PeerLeft" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.PeerLeft">
+  PeerLeft
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当有成员离开此语音频道时引发。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;ulong, Task&gt; PeerLeft</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_PeerLeft_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+    成员主动离开与被管理员移出语音频道，服务端下发的通知完全相同，无法区分。
+</p></div>
+<br>
+如果该成员有音频输入流，<a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_StreamDestroyed">StreamDestroyed</a> 事件会先于此事件引发。
+<br>
+事件参数：
+<ol><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> 参数是离开频道的成员的用户 ID。 </li></ol>
+</div>
+
+
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_PeerMicrophoneMuteChanged" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.PeerMicrophoneMuteChanged">
+  PeerMicrophoneMuteChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当有成员的麦克风静音状态变化时引发。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;ulong, bool, Task&gt; PeerMicrophoneMuteChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_PeerMicrophoneMuteChanged_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>warning</h5><p>
+    服务端会把这类状态通知攒成大约每 2 秒一批下发，所以事件会有最长约 2 秒的延迟；
+    同时，某个成员的状态通知可能晚于他离开频道的通知到达，此时事件仍然会引发。
+    这两点是根据实测推断的，服务端并未在文档中说明。
+</p></div>
+<br>
+事件参数：
+<ol><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> 参数是该成员的用户 ID。 </li><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> 参数指示该成员的麦克风是否已静音。 </li></ol>
+</div>
+
+
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_PeerPermissionChanged" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.PeerPermissionChanged">
+  PeerPermissionChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当有成员的语音权限或服务端静音状态变化时引发，成员可以是此客户端自己。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;ulong, VoicePeerPermissions, Task&gt; PeerPermissionChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="Kook.Audio.WebRtc.VoicePeerPermissions.html">VoicePeerPermissions</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_PeerPermissionChanged_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>管理员禁麦、禁听，或者变更角色权限时都会引发此事件。实测中，收回权限并不会导致客户端被断开。
+<br>
+事件参数：</p>
+<ol><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> 参数是该成员的用户 ID。 </li><li> <a class="xref" href="Kook.Audio.WebRtc.VoicePeerPermissions.html">VoicePeerPermissions</a> 参数是该成员变化后的权限。 </li></ol>
+</div>
+
+
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_ReloadRequested" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.ReloadRequested">
+  ReloadRequested
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当服务端要求此客户端重新加入语音频道时引发，随后会引发 <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_Disconnected">Disconnected</a> 事件。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;Task&gt; ReloadRequested</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_ReloadRequested_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此客户端不支持自动重新加入，请在 <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_Disconnected">Disconnected</a> 事件之后重新连接。
+此通知在实测中尚未出现过。</p>
+</div>
+
+
+
+
+
+  <h3 id="Kook_Audio_WebRtc_IWebRtcAudioClient_ServerDisconnected" data-uid="Kook.Audio.WebRtc.IWebRtcAudioClient.ServerDisconnected">
+  ServerDisconnected
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>当服务端通知此客户端被断开时引发，随后会引发 <a class="xref" href="Kook.Audio.IAudioClient.html#Kook_Audio_IAudioClient_Disconnected">Disconnected</a> 事件。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Func&lt;int?, string?, Task&gt; ServerDisconnected</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Kook_Audio_WebRtc_IWebRtcAudioClient_ServerDisconnected_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="IMPORTANT"><h5>important</h5><p>
+    实测中，下列三种情形服务端给出的 <code>errorCode</code> 都是 <code>41106</code>，原因只能靠 <code>errorReason</code> 区分，
+    而且其中一种的 <code>errorReason</code> 是空字符串：被管理员移出语音频道；同一个账号用 WebRTC 又连接了另一个频道，
+    先连上的 WebRTC 会话被断开；同一个账号用官方 UDP 方案加入了同一个频道，WebRTC 会话被断开（<code>errorReason</code> 为空）。
+    <code>errorReason</code> 是中文原文，不保证长期稳定，不要依赖它做精确匹配。
+    <code>errorCode</code> 还可能对应没有测试过的其他原因。
+</p></div>
+<br>
+事件参数：
+<ol><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable&lt;T&gt;</a> 的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> 参数是服务端给出的错误码，没有给出时为 <code>null</code>。 </li><li> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> 参数是服务端给出的错误原因，没有给出时为 <code>null</code>。 </li></ol>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Audio/WebRtc/IWebRtcAudioClient.cs/#L92" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2026
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

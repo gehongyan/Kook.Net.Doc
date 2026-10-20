@@ -89,7 +89,7 @@
 
 
   <h1 id="Kook_Rest_KookRestClientExperimentalExtensions" data-uid="Kook.Rest.KookRestClientExperimentalExtensions" class="text-break">
-Class KookRestClientExperimentalExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.1/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class KookRestClientExperimentalExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class KookRestClientExperimentalExtensions  <a class="header-action link-seconda
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_GetAdminGuildsAsync_Kook_Rest_KookRestClient_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetAdminGuildsAsync(Kook.Rest.KookRestClient,Kook.RequestOptions)">
   GetAdminGuildsAsync(KookRestClient, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.1/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>获取当前用户具有 <a class="xref" href="Kook.GuildPermission.html#Kook_GuildPermission_Administrator">Administrator</a> 权限的服务器的集合。</p>
@@ -195,11 +195,111 @@ Class KookRestClientExperimentalExtensions  <a class="header-action link-seconda
 
 
 
+  <a id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceGatewayTokenAsync_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetVoiceGatewayTokenAsync*"></a>
+
+  <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceGatewayTokenAsync_Kook_Rest_KookRestClient_Kook_IVoiceChannel_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetVoiceGatewayTokenAsync(Kook.Rest.KookRestClient,Kook.IVoiceChannel,Kook.RequestOptions)">
+  GetVoiceGatewayTokenAsync(KookRestClient, IVoiceChannel, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取指定语音频道的语音信令网关令牌。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;VoiceGatewayToken&gt; GetVoiceGatewayTokenAsync(this KookRestClient client, IVoiceChannel channel, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a></dt>
+    <dd><p>KOOK REST 客户端实例。</p>
+</dd>
+    <dt><code>channel</code> <a class="xref" href="Kook.IVoiceChannel.html">IVoiceChannel</a></dt>
+    <dd><p>语音频道。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Audio.WebRtc.VoiceGatewayToken.html">VoiceGatewayToken</a>&gt;</dt>
+    <dd><p>一个表示异步操作的任务，任务的结果包含语音信令网关令牌。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceGatewayTokenAsync_Kook_Rest_KookRestClient_Kook_IVoiceChannel_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此接口并非官方文档化的接口，行为可能随时变化。返回的令牌包含临时鉴权信息，请勿将其写入日志。
+Bot 需要被授权才能获取令牌：实测中，没有任何服务器角色的 Bot 会被拒绝（HTTP 403）。
+通常不需要直接调用此方法，使用 <a class="xref" href="Kook.Audio.WebRtc.SocketVoiceChannelExperimentalExtensions.html#Kook_Audio_WebRtc_SocketVoiceChannelExperimentalExtensions_ConnectWebRtcAsync_Kook_WebSocket_SocketVoiceChannel_System_Action_Kook_Audio_WebRtc_IWebRtcAudioClient__">ConnectWebRtcAsync(SocketVoiceChannel, Action&lt;IWebRtcAudioClient&gt;?)</a> 即可。</p>
+</div>
+
+
+
+
+  <a id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceGatewayTokenAsync_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetVoiceGatewayTokenAsync*"></a>
+
+  <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceGatewayTokenAsync_Kook_Rest_KookRestClient_System_UInt64_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.GetVoiceGatewayTokenAsync(Kook.Rest.KookRestClient,System.UInt64,Kook.RequestOptions)">
+  GetVoiceGatewayTokenAsync(KookRestClient, ulong, RequestOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>获取指定语音频道的语音信令网关令牌。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;VoiceGatewayToken&gt; GetVoiceGatewayTokenAsync(this KookRestClient client, ulong channelId, RequestOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <a class="xref" href="Kook.Rest.KookRestClient.html">KookRestClient</a></dt>
+    <dd><p>KOOK REST 客户端实例。</p>
+</dd>
+    <dt><code>channelId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>语音频道的 ID。</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Kook.RequestOptions.html">RequestOptions</a></dt>
+    <dd><p>发送请求时要使用的选项。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Kook.Audio.WebRtc.VoiceGatewayToken.html">VoiceGatewayToken</a>&gt;</dt>
+    <dd><p>一个表示异步操作的任务，任务的结果包含语音信令网关令牌。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Kook_Rest_KookRestClientExperimentalExtensions_GetVoiceGatewayTokenAsync_Kook_Rest_KookRestClient_System_UInt64_Kook_RequestOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>此接口并非官方文档化的接口，行为可能随时变化。返回的令牌包含临时鉴权信息，请勿将其写入日志。
+Bot 需要被授权才能获取令牌：实测中，没有任何服务器角色的 Bot 会被拒绝（HTTP 403）。
+通常不需要直接调用此方法，使用 <a class="xref" href="Kook.Audio.WebRtc.SocketVoiceChannelExperimentalExtensions.html#Kook_Audio_WebRtc_SocketVoiceChannelExperimentalExtensions_ConnectWebRtcAsync_Kook_WebSocket_SocketVoiceChannel_System_Action_Kook_Audio_WebRtc_IWebRtcAudioClient__">ConnectWebRtcAsync(SocketVoiceChannel, Action&lt;IWebRtcAudioClient&gt;?)</a> 即可。</p>
+</div>
+
+
+
+
   <a id="Kook_Rest_KookRestClientExperimentalExtensions_QueryThreadTagsAsync_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.QueryThreadTagsAsync*"></a>
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_QueryThreadTagsAsync_Kook_Rest_KookRestClient_System_String_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.QueryThreadTagsAsync(Kook.Rest.KookRestClient,System.String,Kook.RequestOptions)">
   QueryThreadTagsAsync(KookRestClient, string, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.1/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>查询与指定关键字相关的帖子话题标签。</p>
@@ -244,7 +344,7 @@ Class KookRestClientExperimentalExtensions  <a class="header-action link-seconda
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardAsync_Kook_Rest_KookRestClient_Kook_ICard_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.ValidateCardAsync(Kook.Rest.KookRestClient,Kook.ICard,Kook.RequestOptions)">
   ValidateCardAsync(KookRestClient, ICard, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.1/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>验证卡片。</p>
@@ -289,7 +389,7 @@ Class KookRestClientExperimentalExtensions  <a class="header-action link-seconda
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardsAsync_Kook_Rest_KookRestClient_System_Collections_Generic_IEnumerable_Kook_ICard__Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.ValidateCardsAsync(Kook.Rest.KookRestClient,System.Collections.Generic.IEnumerable{Kook.ICard},Kook.RequestOptions)">
   ValidateCardsAsync(KookRestClient, IEnumerable&lt;ICard&gt;, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.1/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>验证卡片。</p>
@@ -334,7 +434,7 @@ Class KookRestClientExperimentalExtensions  <a class="header-action link-seconda
 
   <h3 id="Kook_Rest_KookRestClientExperimentalExtensions_ValidateCardsAsync_Kook_Rest_KookRestClient_System_String_Kook_RequestOptions_" data-uid="Kook.Rest.KookRestClientExperimentalExtensions.ValidateCardsAsync(Kook.Rest.KookRestClient,System.String,Kook.RequestOptions)">
   ValidateCardsAsync(KookRestClient, string, RequestOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.1/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>验证卡片。</p>
@@ -379,7 +479,7 @@ Class KookRestClientExperimentalExtensions  <a class="header-action link-seconda
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.11.1/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/gehongyan/Kook.Net/blob/v0.11.2/src/Kook.Net.Experimental/Rest/KookRestClientExperimentalExtensions.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>文档 MCP 服务 | Kook.Net 文档 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="文档 MCP 服务 | Kook.Net 文档 ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/mcp/intro.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo/Logo_Small.png" alt="Kook.Net 文档">
+            Kook.Net 文档
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Guides.Mcp.Intro">
+<h1 id="文档-mcp-服务">文档 MCP 服务</h1>
+
+<p>Kook.Net 提供一个 <a href="https://modelcontextprotocol.io/">MCP</a>（Model Context Protocol）服务，
+将本类库的 API 元数据、源码与指南文档暴露给支持 MCP 的 AI 客户端，如各类 AI 编辑器与命令行工具。
+在开发时让 AI 直接查询 Kook.Net 的类型签名、成员、实现源码和概念文档，
+而不必让它凭记忆臆测或翻阅网页。</p>
+<p>该服务随文档站的发布流程一同更新，每当文档站发布新版本，MCP 服务镜像也会重新构建并部署，
+因此它提供的信息与当前文档版本保持一致。</p>
+<p>该服务以 Streamable HTTP 协议对外提供，公开地址为：</p>
+<pre><code>https://mcp.kooknet.dev/
+</code></pre>
+<h2 id="工具">工具</h2>
+<p>服务内置以下工具，供 AI 客户端调用：</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>search_docs</code></td>
+<td>在整个文档站中全文检索，按关键字找 API 或指南。</td>
+</tr>
+<tr>
+<td><code>find_api</code></td>
+<td>按名称模糊查找 API 条目，返回候选的 uid 与完全限定名。</td>
+</tr>
+<tr>
+<td><code>get_api</code></td>
+<td>按 uid 精确获取类型或成员的签名、摘要、参数与返回值。</td>
+</tr>
+<tr>
+<td><code>get_type_members</code></td>
+<td>列出某个类型的直接成员（方法、属性、事件、字段等）。</td>
+</tr>
+<tr>
+<td><code>get_source</code></td>
+<td>按 uid 返回类型或成员定义处的源码片段。</td>
+</tr>
+<tr>
+<td><code>read_source_file</code></td>
+<td>按仓库相对路径读取某个源码文件的内容。</td>
+</tr>
+<tr>
+<td><code>list_guides</code></td>
+<td>列出指南、速查手册、示例说明与更新日志等概念文档。</td>
+</tr>
+<tr>
+<td><code>read_guide</code></td>
+<td>读取一篇概念文档的原始内容。</td>
+</tr>
+</tbody>
+</table>
+<p>典型的调用链是：先用 <code>search_docs</code> 或 <code>find_api</code> 定位到目标，拿到 uid 后用 <code>get_api</code>
+查看签名与文档，用 <code>get_type_members</code> 展开成员，再用 <code>get_source</code> 查看实现源码；
+概念性问题则走 <code>list_guides</code> 与 <code>read_guide</code>。</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>该服务提供的源码包含 internal / private 等非公开可访问性的实现细节，
+方便 AI 理解类库内部行为。这些细节不会出现在公开的 API 文档站上。</p>
+</div>
+<h2 id="配置">配置</h2>
+<p>在支持 MCP 的客户端里添加一个 Streamable HTTP 类型的服务器，指向 <code>https://mcp.kooknet.dev/</code> 即可。</p>
+<h3 id="github-copilot">GitHub Copilot</h3>
+<p>用 Copilot CLI 添加：</p>
+<pre><code class="lang-bash">copilot mcp add --transport http kook-net-doc https://mcp.kooknet.dev/
+</code></pre>
+<p>对应写入配置后的形式为：</p>
+<pre><code class="lang-json">{
+  &quot;kook-net-doc&quot;: {
+    &quot;type&quot;: &quot;http&quot;,
+    &quot;url&quot;: &quot;https://mcp.kooknet.dev/&quot;,
+    &quot;tools&quot;: [&quot;*&quot;]
+  }
+}
+</code></pre>
+<h3 id="claude-code">Claude Code</h3>
+<p>用 Claude Code CLI 添加远程服务器：</p>
+<pre><code class="lang-bash">claude mcp add --transport http kook-net-doc https://mcp.kooknet.dev/
+</code></pre>
+<p>添加后可用 <code>claude mcp list</code> 查看，或在会话中用 <code>/mcp</code> 查看服务器状态与工具。</p>
+<h3 id="cursor">Cursor</h3>
+<p>在项目的 <code>.cursor/mcp.json</code>（或全局 <code>~/.cursor/mcp.json</code>）中配置：</p>
+<pre><code class="lang-json">{
+  &quot;mcpServers&quot;: {
+    &quot;kook-net-doc&quot;: {
+      &quot;url&quot;: &quot;https://mcp.kooknet.dev/&quot;
+    }
+  }
+}
+</code></pre>
+<p>配置后在 Cursor 设置的 MCP 面板中可看到该服务器及其工具。</p>
+<h3 id="visual-studio-code">Visual Studio Code</h3>
+<p>在工作区的 <code>.vscode/mcp.json</code> 中配置（顶层键为 <code>servers</code>，远程服务器用 <code>type: http</code>）：</p>
+<pre><code class="lang-json">{
+  &quot;servers&quot;: {
+    &quot;kook-net-doc&quot;: {
+      &quot;type&quot;: &quot;http&quot;,
+      &quot;url&quot;: &quot;https://mcp.kooknet.dev/&quot;
+    }
+  }
+}
+</code></pre>
+<p>也可用命令面板的 <strong>MCP: Add Server</strong> 交互添加。启用后在 Agent 模式下即可调用其工具。</p>
+<h3 id="kiro">Kiro</h3>
+<p>用 Kiro CLI 添加：</p>
+<pre><code class="lang-bash">kiro-cli mcp add --name kook-net-doc --url https://mcp.kooknet.dev/
+</code></pre>
+<p>默认写入全局配置（<code>~/.kiro/settings/mcp.json</code>）；加 <code>--scope workspace</code> 则只写入当前工作区（<code>.kiro/settings/mcp.json</code>）。
+也可直接编辑配置文件：</p>
+<pre><code class="lang-json">{
+  &quot;mcpServers&quot;: {
+    &quot;kook-net-doc&quot;: {
+      &quot;url&quot;: &quot;https://mcp.kooknet.dev/&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="antigravity">Antigravity</h3>
+<p>在 Antigravity 的 MCP 配置文件中添加远程服务器：</p>
+<pre><code class="lang-json">{
+  &quot;mcpServers&quot;: {
+    &quot;kook-net-doc&quot;: {
+      &quot;serverUrl&quot;: &quot;https://mcp.kooknet.dev/&quot;
+    }
+  }
+}
+</code></pre>
+<p>也可在设置的 MCP 面板中添加远程服务器并填入上述地址。</p>
+<h3 id="windsurf">Windsurf</h3>
+<p>在 <code>~/.codeium/windsurf/mcp_config.json</code> 中添加远程服务器：</p>
+<pre><code class="lang-json">{
+  &quot;mcpServers&quot;: {
+    &quot;kook-net-doc&quot;: {
+      &quot;serverUrl&quot;: &quot;https://mcp.kooknet.dev/&quot;
+    }
+  }
+}
+</code></pre>
+<p>Windsurf 的远程服务器使用 <code>serverUrl</code> 字段。</p>
+<h3 id="codex">Codex</h3>
+<p>在 <code>~/.codex/config.toml</code> 中添加远程服务器（Codex 使用 TOML 配置）：</p>
+<pre><code class="lang-toml">[mcp_servers.kook-net-doc]
+enabled = true
+type = &quot;http&quot;
+url = &quot;https://mcp.kooknet.dev/&quot;
+</code></pre>
+<h3 id="gemini-cli">Gemini CLI</h3>
+<p>在 <code>~/.gemini/settings.json</code>（或项目内 <code>.gemini/settings.json</code>）中添加远程服务器：</p>
+<pre><code class="lang-json">{
+  &quot;mcpServers&quot;: {
+    &quot;kook-net-doc&quot;: {
+      &quot;httpUrl&quot;: &quot;https://mcp.kooknet.dev/&quot;
+    }
+  }
+}
+</code></pre>
+<p>Gemini CLI 的 Streamable HTTP 服务器使用 <code>httpUrl</code> 字段。</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gehongyan/Kook.Net/blob/master/docs/guides/mcp/intro.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Kook.Net (c) 2022-2026
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
